@@ -1,0 +1,244 @@
+\section{Certificate conditions and the global implication}\label{ms:certificates}
+
+The preceding reductions concern the shape of a proof. To obtain the
+sharp inequality from them, the remaining finite statements must be
+specified and connected to actual probability laws. This section records
+that connection and the present limits of its verification. A checked
+polynomial inequality is one part of this connection; it cannot supply
+compactness, a contact identity, or the validity of a change of index.
+
+\subsection{The mathematical interface}
+
+Write $a_n=C_n-\CE$ and
+$d_n=n(C_{n-1}-C_n)_+$. The symbol $d_n$ here is a scalar loss between
+global constants. It is distinct from the geometric inward displacement
+and from the nonnegative moment defect $D$.
+
+\begin{assumption}[Finite base]\label{ms:base41}
+For every integer $1\le j\le41$, one has $C_j\le\CE$.
+The proof of these statements is independent of the tail implication
+below.
+\end{assumption}
+
+\begin{assumption}[Equality-inclusive local exclusion]\label{ms:local42}
+For every actual integer $n\ge42$, there is no attained positive closed
+maximizing pair satisfying simultaneously
+\begin{equation}\label{ms:local-entry}
+ \begin{gathered}
+ 0\le n(C_n-\CE)\le0.54,\qquad d_n=0,\qquad C_n<0.4226,\\
+ C_{n-1}<0.4253,\qquad C_{n-2}<0.4253.
+ \end{gathered}
+\end{equation}
+This statement includes $C_n=\CE$.
+\end{assumption}
+
+Assumption~\ref{ms:local42} is an \emph{analytic and computational}
+obligation, not a numerical certificate by definition. Its proposed
+derivation has four stages. First, the contact inequality and the moment
+bounds give the initial support interval. Second, an ordered sequence of
+Fourier estimates, moment intersections and support contractions gives
+one closed parameter panel containing the maximizing law. Third, a joint
+defect inequality and a confinement argument bound its conditional noise
+and its support near the two-point skeleton. Fourth, the exact
+conditional-count representation gives a comparison on every remaining
+closed phase and noise cell. The proofs and hypotheses of these stages
+are given in the main text and technical appendices; their inherited
+numerical premises have not been replayed in this manuscript project.
+
+The order is part of the assertion. A support contraction may use a
+moment bound proved from the previous support interval. It may not use
+a moment bound whose proof already assumes the new interval. The law,
+the raw threshold and the sign of the discrepancy must stay fixed through
+the sequence. A deleted convolution is estimated using a global constant
+at the deleted index, but no new maximizing law is substituted into the
+current moment or contact identities.
+
+\begin{theorem}[Conditional all-index bound]\label{ms:conditional-global}
+Suppose Assumptions~\ref{ms:base41} and~\ref{ms:local42} hold, and use the
+fixed-index attainment result of Section~\ref{ms:extremizers} at equality
+as well as at strict exceedance. Then
+\[
+ C_n<\CE\quad(n\ge42),\qquad C^*=\CE.
+\]
+The finite-base conclusions remain the weak inequalities stated in
+Assumption~\ref{ms:base41}.
+\end{theorem}
+\begin{proof}
+If the strict tail conclusion fails, choose the least $n\ge42$ with
+$C_n\ge\CE$. Both predecessors are at most $\CE$: at $n=42$ these are
+exactly the base indices $40$ and $41$. Hence $d_n=0$ and the two
+deleted caps in~\eqref{ms:local-entry} hold. The support-free recurrence
+of Section~\ref{ms:smoothing} gives
+\[
+ 0\le n(C_n-\CE)<\frac{3003}{10250}<0.3,
+ \qquad C_n<\frac{73}{175}<0.4226.
+\]
+Attainment supplies the positive closed maximizing pair. It satisfies
+every premise of Assumption~\ref{ms:local42}, a contradiction. The base
+and tail give $C^*\le\CE$; the fixed Bernoulli limit
+\eqref{ms:bernoulli-limit} gives the reverse inequality.
+\end{proof}
+
+If only a local exclusion for $C_n>\CE$ is available, the same proof,
+using the first strict exceedance, gives the weak global bound. It does
+not justify the strict tail. No eventual two-point optimality or
+classification of all extremizers is asserted in either case.
+
+\subsection{What a finite certificate must establish}
+
+An admissible certificate has three distinct ingredients. Its domain
+description contains every actual parameter tuple allowed by the
+analytic hypotheses. Its local proof establishes the required inequality
+throughout each closed cell. Its coverage proof shows that the cells
+exhaust that domain. All three are needed even when every coefficient is
+an exact rational number.
+
+For a polynomial $P(x)=\sum_{i=0}^d a_i x^i$ on $[l,h]$, the change
+$x=l+(h-l)t$ gives coefficients
+\[
+ q_j=(h-l)^j\sum_{i=j}^d a_i\binom{i}{j}l^{i-j},\qquad
+ b_k=\sum_{j=0}^k q_j\frac{\binom{k}{j}}{\binom{d}{j}}.
+\]
+The identity
+\[
+ t^j=\sum_{k=j}^d\frac{\binom{k}{j}}{\binom{d}{j}}
+                   \binom{d}{k}t^k(1-t)^{d-k}
+\]
+follows by factoring $t^j$ and applying the binomial theorem to the
+remaining power of $t+(1-t)$. Thus $P(l+(h-l)t)$ is a convex combination
+of the $b_k$. Nonnegative coefficients prove nonnegativity on the whole
+closed interval; strictly positive coefficients prove a strict positive
+lower bound. Applying the identity separately in each coordinate gives
+the tensor-product version on a box. A sampled positive value, or a
+floating-point optimizer's infeasibility report, has no such implication.
+
+The same distinction applies to probability majorants. The pointwise
+majorant must cover every sign region and every event-plane collision.
+Its expectation is then evaluated under the product of one common
+marginal law, using the proved moment constraints. Allowing unrelated
+marginals in different terms changes the problem. The count identity
+and majorant argument in Section~\ref{ms:geometry-counts} explain this step;
+the finite-analysis appendix gives the retained small-index forms.
+
+For interval computations, every transcendental evaluation must be
+enclosed outwards and every denominator must be proved positive on the
+entire cell. In the local comparisons, a lower bound for a binomial mass
+may multiply an event bracket only after that bracket is known to be
+negative. An inverse-index correction can be bounded at a floor $N$
+only with the correct sign. Section~\ref{ms:curvature} proves the zero
+clamp needed when the improved curvature estimate changes that sign.
+
+Finally, a closed cover includes both signs of the phase, all admissible
+nearest counts, endpoints of probability panels and seams between noise
+bands. The branch with zero noise is treated separately. If
+$\lambda=n\E U^2=0$, then $U=0$ almost surely and the actual law is the
+matched two-point law; Schulz's finite-binomial theorem applies
+\cite{Schulz2016}. Dividing an estimate by $\lambda$ and then taking a
+limit does not prove this branch.
+
+\subsection{Which computations the reductions can replace}
+
+The changes have different scopes. Table~\ref{ms:replacement-table}
+states those scopes without counting shared computations twice. The
+names in typewriter font are labels used in the accompanying source
+audit; they are not additional mathematical assumptions.
+
+\begin{longtable}{@{}p{.25\textwidth}p{.37\textwidth}p{.31\textwidth}@{}}
+\caption{Conditional replacements and their retained premises.}
+\label{ms:replacement-table}\\
+\toprule
+Reduction & Work that can be bypassed in a new proof & What must remain\\
+\midrule\endfirsthead
+\toprule Reduction & Work that can be bypassed in a new proof & What must remain\\
+\midrule\endhead
+First contrary index & Positive-ceiling propagation, slow-decrement search
+and the separate strong-barrier argument in the tail construction. &
+A genuine independent base, smoothing, attainment and the complete local
+exclusion at the new scope.\\[3pt]
+Elementary support & Radial Bernstein cells for the 65 zero-loss support
+calls; also the intermediate grouped support certificate with 672
+coefficients. & Actual ordered moment bounds, contact, the Gaussian
+remainder and full exterior-ray argument.\\[3pt]
+Exact curvature & The 64-subinterval envelope for the displayed
+one-dimensional supremum. & All other local terms, the mass-sign gate,
+the zero clamp and complete closed-cell coverage.\\[3pt]
+Score-excess charge & The six empty sectors listed in
+Section~\ref{ms:resources}; two whole signed \texttt{LOW} producers
+are among them. & Every acquisition ancestor, confinement, coherent
+joint bounds, all surviving sectors and zero noise.\\[3pt]
+Uniform interpretation at $42$ & A separate \texttt{LOCAL47} package,
+if the complete $42$ package is proved applicable to every $n\ge42$. &
+The parameterized confinement proof, both deleted caps, actual strips,
+signed normalization and all numerical predicates.\\
+\bottomrule
+\end{longtable}
+
+In the inspected upper-module inventory, the earlier redesign reduced
+238 candidate tasks to 171. The two newly empty signed producers reduce
+that number to 169, comprising 150 remaining \texttt{LOW} producers and
+19 other obligations before new composition checks. This is an inventory
+of a specified component, not of the whole repository. It is neither a
+measured speedup nor proof that any acquisition job can be removed.
+In particular, a final parameter row can be excluded only after the
+estimates needed for its exclusion have been acquired.
+
+A separate implementation prototype avoids evaluating each original
+\texttt{LOW} configuration twice. Its synthetic protocol checks use the
+original 152-row contract. That contract does not accept the changed
+curvature values, the new resource bounds or a 150-row inventory. A
+combined implementation needs a new acceptance specification and review;
+the possible savings cannot be multiplied as if such an implementation
+already existed.
+
+\subsection{Present verification status}
+
+The new scalar, elementary-support, curvature and score-charge arguments
+have written derivations and bounded exact checks. Their independent
+reviews checked the stated conditional conclusions. The preserved run
+records distinguish constructor checks from independent calculations.
+For support, the independent calculation reconstructs the boundary
+polynomial and checks all 65 invocations and 390 ray signs. For curvature,
+a separate piecewise oracle covers 8,505 exact test cases, together with
+corrupted variants and false-rule controls. Those tests support the
+implementation of the formula; its continuous-domain justification is
+the proof in Section~\ref{ms:curvature}. The resource calculation covers
+45 left panels and 47 central panels, with independent outward bounds.
+
+The finite base and the remaining native local predicates have not
+received a fresh complete replay in this work. In particular, the
+complete current assembler for the $40$--$42$ base range, named in the
+inherited contract, was unavailable in the inspected source closure.
+An older assembly uses tail and coarse-ceiling inputs. It cannot be
+silently identified with the proposed independent base. This is an
+unresolved dependency, rather than evidence that the new base is false.
+
+Likewise, the literal older local statements retain finite upper limits
+or a floor of $47$. The new support proof removes one such obstruction,
+and the parameterized argument in Appendix~\ref{ms:uniform-bridge}
+explains the required changes. Completion still requires the exact
+selected acquisition and comparison predicates, their analytic
+hypotheses and a complete new composition. The technical appendices make
+the supplied analytic arguments available for review; inclusion in this
+draft is not a claim that their entire chain has been independently
+verified.
+
+\begin{center}
+\begin{tabular}{@{}p{.35\textwidth}p{.29\textwidth}p{.29\textwidth}@{}}
+\toprule
+Result & Mathematical status & Execution status\\
+\midrule
+Scalar recurrence and first-failure bounds & Derived with uniform
+third-moment remainders & Bounded exact checks recorded\\[3pt]
+Support, curvature, score-charge reductions & Proved at their stated
+conditional scopes & Exact checks and independent diagnostics recorded\\[3pt]
+Retained Fourier and finite-base chain & Supplied analytic proof
+candidate with explicit inputs & No full native replay\\[3pt]
+Complete base, uniform local exclusion, global conjecture & Conditional;
+not established by this draft & No end-to-end acceptance\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The reference source revision is preserved. No existing certificate is
+deleted or altered by this manuscript. Source hashes identify the
+material used; they do not certify its mathematical meaning.

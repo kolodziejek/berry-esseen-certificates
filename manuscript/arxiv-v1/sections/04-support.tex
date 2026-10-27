@@ -1,0 +1,221 @@
+\section{An elementary support bound}\label{ms:support}
+
+The contact inequality is most useful once it forces the maximizing law into a short interval. A numerical support proof often bounds a polynomial on many cells. Here the absence of predecessor loss allows a simpler argument: estimate the Gaussian part at one boundary, then show that the contact expression decreases along the entire exterior ray. Only the first boundary needs a sharpened Gaussian estimate.
+
+Throughout this section, the actual integer satisfies $n\ge42$ and the
+attained score satisfies $C_n\ge\CE$. We also assume
+$C_{n-1}\le C_n$, so the positive predecessor loss is zero.
+Set $v=n-1$, $s=\sqrt{n/v}$ and $F_v(x)=\Phi(x/\sqrt v)$. The retained
+contact inequality on the complete closed support is
+\begin{equation}\label{ms:04:contact}
+ 0\le H_n(H,t)+C_n\{-|t|^3+\tfrac32\rho t^2+3\beta t+\rho e_n\},
+\end{equation}
+where
+\[
+ e_n=n\bigl(\sqrt{n/(n-1)}-1\bigr)-\tfrac12<\frac{0.384}{n},
+\]
+and the exact Gaussian expression is
+\[
+ \frac{H_n(H,t)}{n^{3/2}}
+ =F_v(H-t)-F_{v+1}(H)+tF_{v+1}'(H)
+       -\frac{t^2-1}{2}F_{v+1}''(H).
+\]
+The same-owner predecessor score is at most the global predecessor score;
+at zero global decrement the discarded signed-loss term is nonpositive.
+For the numerical bound on $e_n$, rationalization gives
+\[
+ ne_n=\frac{s^2(2s+1)}{2(s+1)^2}.
+\]
+This expression increases for $s\ge1$: its logarithmic derivative is
+$2/s+2/(2s+1)-2/(s+1)>0$. At $s=81/80$ its value is
+$793881/2073680<48/125$. Thus $e_n<0.384/n\le8/875$.
+
+\subsection{Fourth-order expansion with uniform remainder}
+Using $\partial_vF_v=F_v''/2$, expand $F_v(H-t)$ spatially through order
+four, $F_{v+1}$ through second order in variance, and its first and second
+spatial derivatives through first order in variance. The order-zero, linear
+and quadratic spatial terms cancel. The remaining cubic and quartic
+coefficients are $(-t^3+3t)/6$ and $(t^4-6t^2+3)/24$. Thus, for $t=\pm u$,
+\begin{equation}\label{ms:04:expansion}
+ \frac{H_n(H,\pm u)}{s^3}
+  =\pm A(1-z_v^2)\phi(z_v)+B\phi'''(z_v)+R,\qquad z_v=H/\sqrt v,
+\end{equation}
+where
+\[
+ A=\frac{u^3-3u}{6},\qquad B=\frac{u^4-6u^2+3}{24\sqrt v}.
+\]
+For $u\ge5/2$, both are positive. The four Taylor remainders, after division
+by $s^3$, have bounds
+\[
+ \frac{u^5\|\phi^{(4)}\|_\infty}{120v},\quad
+ \frac{\|\phi^{(5)}\|_\infty}{48v^{3/2}},\quad
+ \frac{u\|\phi^{(4)}\|_\infty}{8v},\quad
+ \frac{(u^2-1)\|\phi^{(5)}\|_\infty}{16v^{3/2}}.
+\]
+Gaussian Fourier inversion gives
+$\|\phi^{(4)}\|_\infty\le3\phi(0)<6/5$ and
+$\|\phi^{(5)}\|_\infty\le8/\pi<51/20$. Therefore
+\begin{equation}\label{ms:04:error}
+ |R|\le E_v(u):=\frac{u^5/100+3u/20}{v}
+       +\frac{51(3u^2-2)}{960v^{3/2}}.
+\end{equation}
+Every bound is uniform in the raw threshold $H$. No seventh derivative
+of $F_v$, sixth derivative of $\phi$, or signed fifth-order tangent is used.
+The rational lower bound $\pi>281476/89625>160/51$ suffices for these
+constants and $\phi(0)<2/5$.
+
+\begin{lemma}[Two all-threshold envelopes]\label{ms:04:envelopes}
+For $u\ge5/2$,
+\[
+ H_n(H,\pm u)\le s^3\{\phi(0)(A+2B)+E_v(u)\}.
+\]
+If also $B\le A/4$, then
+\[
+ H_n(H,\pm u)\le
+ s^3\left\{\phi(0)\left(A+\frac{9B^2}{4A}\right)+E_v(u)\right\}.
+\]
+Both assertions hold for every real $H$ and both signs separately.
+\end{lemma}
+\begin{proof}
+The first follows from
+$\|(1-z^2)\phi(z)\|_\infty=\phi(0)$ and
+$\|\phi'''\|_\infty<2\phi(0)$.
+For the latter bound, on $|z|\le\sqrt3$ the polynomial
+$|3z-z^3|$ is at most $2$, with equality only at $|z|=1$ where the
+Gaussian factor is smaller than one. Outside that interval,
+$(|z|^3-3|z|)e^{-z^2/2}\le |z|^3e^{-z^2/2}
+\le3\sqrt3e^{-3/2}<2$. The last inequality follows, for example,
+from $e^{3/2}>1+3/2+9/8+27/48>4$ and $3\sqrt3<8$.
+For the positive sign and $|z_v|\le1$, the retained terms in
+\eqref{ms:04:expansion} are at most
+$\phi(0)(A-Az_v^2+3B|z_v|)$; completing the square proves the sharper bound.
+For $|z_v|>1$ the first term is nonpositive and the second is at most
+$2B\phi(0)\le A\phi(0)/2$.
+For the negative sign, its first term is at most
+$2e^{-3/2}A\phi(0)<A\phi(0)/2$, and the second is at most
+$2B\phi(0)\le A\phi(0)/2$. Add the uniform remainder.
+\end{proof}
+
+\subsection{Rational boundary inequalities and full rays}
+Use
+\[
+ S=81/80,\quad \ell=6,\quad c_0=819/2000<\CE,\quad
+ H_4=u^4-6u^2+3,
+\]
+so $s\le S$, $\sqrt v>\ell$ and $e_n<8/875$. Define
+\begin{align*}
+ E(u)&=\frac{u^5}{4100}+\frac{3u}{820}
+                   +\frac{17(3u^2-2)}{78720},\\
+ Q_{r,b}(u)&=-u^3+\tfrac32ru^2+3bu+\tfrac8{875}r,\\
+ P_{r,b}(u)&=\tfrac25S^3(A+H_4/72)+S^3E(u)+c_0Q_{r,b}(u),\\
+ P^\sharp_{r,b}(u)&=\tfrac25S^3
+       \left(A^2+\frac{H_4^2}{256\cdot41}\right)
+       +S^3E(u)A+c_0Q_{r,b}(u)A.
+\end{align*}
+For acquired $\rho\le r$, $|\beta|\le b$, the contact coefficient is at
+most $Q_{r,b}$. Check $Q_{r,b}<0$ before replacing its actual multiplier
+$C_n$ by the lower constant $c_0$. Lemma~\ref{ms:04:envelopes} then makes
+$P<0$ sufficient at a boundary; $P^\sharp<0$ is sufficient when $B\le A/4$.
+
+To extend a boundary to a whole ray, put
+\[
+ L_{r,b}(u)=\tfrac25(u^2/2+1/2+8/875)+c_0Q'_{r,b}(u).
+\]
+Here the direct derivative bound has a short proof. Put
+$z=H/\sqrt n$ and $y=(H-t)/\sqrt n$. Exact differentiation gives
+\[
+ \partial_tH_n=n\phi(z)+Ht\phi(z)-ns\phi(sy).
+\]
+Taylor's theorem and $\|\phi''\|_\infty=\phi(0)$ imply
+$|n\phi(y)-n\phi(z)-Ht\phi(z)|\le\phi(0)t^2/2$.
+Also $\partial_s[s\phi(sy)]=-\phi''(sy)$, whence
+$|s\phi(sy)-\phi(y)|\le\phi(0)(s-1)$. Since
+$n(s-1)=1/2+e_n$, this proves
+\[
+ |\partial_tH_n|\le\phi(0)(t^2/2+1/2+e_n)
+                    <(2/5)(t^2/2+1/2+e_n).
+\]
+If $Q,Q',Q'',L,L',L''$ are negative at $U$, their required signs persist
+for $u\ge U$, since $Q'''=-6$ and $L''=2/5-6c_0<0$.
+The contact upper bound for each sign then decreases strictly along the
+whole ray. This includes endpoints and atoms.
+
+\paragraph{Initial case.}
+Take $R=96/25$, $r=1841/1000$, $b=321/500$. The retained moment inequalities
+give
+\[
+ \rho<
+ \min\left\{\frac{.3031\cdot.646}{c_0-.3031},
+              \frac{.3322\cdot.429}{c_0-.3322}\right\}
+ =\frac{7361}{4000}<r.
+\]
+The sign-moment inequality in Appendix~\ref{ms:moment-domain} gives
+$|\beta|<b$, using
+\[
+ (1+b^2)^2-r^2(1-b^2)=\frac{93288849}{50000000000}>0.
+\]
+At $u=R<6$,
+$H_4=6uA-3(u^2-1)<36A$ and $B<H_4/144<A/4$. Exact arithmetic gives
+\[
+ -P^\sharp_{r,b}(R)=
+ \frac{2214258283536204102723}{10250000000000000000000}>\frac15.
+\]
+All six ray signs are negative, proving support in $(-R,R)$.
+
+\paragraph{Common LEFT bridge.}
+Take $R=121/40$, $r=143/100$, $b=93/200$, outwardly enclosing the acquired
+common moment maxima $71458741/50000000$ and $46459359/100000000$.
+Then
+\[
+ -P_{r,b}(R)=\frac{2533499510174559}{214958080000000000}>\frac1{100}.
+\]
+All six ray signs are negative.
+
+\paragraph{A continuous family for the other 63 calls.}
+All remaining acquired parameter tuples satisfy
+\[
+ \frac52\le R\le\frac{111}{40},\qquad
+ \rho\le r_R=\frac7{20}R+\frac13,\qquad
+ |\beta|\le b_R=\frac38R-\frac35.
+\]
+Let $p(R)=-P_{r_R,b_R}(R)$ and $w=R-5/2$. The coefficients of
+$p(R)=\sum_{j=0}^5a_jw^j$ are
+\[
+\begin{array}{c|r}
+j&a_j\\ \hline
+0&123579925563/1343488000000\\
+1&-467155860219/1679360000000\\
+2&705959271/13434880000\\
+3&8703567/167936000\\
+4&-7499223/839680000\\
+5&-531441/2099200000
+\end{array}
+\]
+With $h=11/40$, their signs imply throughout $0\le w\le h$
+\[
+ p'(R)\le a_1+2a_2h+3a_3h^2
+       =-\frac{797749885413}{3358720000000}<0.
+\]
+Consequently
+\[
+ p(R)\ge p(111/40)
+       =\frac{4403736280322409}{214958080000000000}>\frac1{50}.
+\]
+For rays, freeze each pair $(r_R,b_R)$. The common larger caps
+$r_*=131/100$, $b_*=441/1000$ have at $u=5/2$ the six signs
+\[
+ -\frac{16991}{700000},\quad-\frac{3801}{500},\quad-\frac{1107}{100},
+ \quad-\frac{11615533}{7000000},\quad-\frac{706633}{200000},
+ \quad-\frac{2057}{1000}.
+\]
+They majorize the corresponding signs and derivative bounds for every fixed
+pair. Combining the negative boundary with these complete rays proves all
+63 calls. Continuing the affine caps along an infinite ray would be invalid.
+
+\begin{theorem}[Conditional elementary support replacement]
+For an actual integer $n\ge42$ and attained score $C_n\ge\CE$, under the
+retained contact, zero-loss and ordered same-law acquisition
+hypotheses, all 65 support conclusions used by the zero-loss LOCAL42 route
+follow from the preceding three cases. This proof uses no polynomial positivity mesh and no signed fifth-order Gaussian tangent. The moment assumptions for each invocation must still be established before the support bound is applied.
+\end{theorem}
+The eighteen common ray inequalities are rational comparisons. The matching of the 65 parameter tuples with these three cases is a finite input-identification task, described in Section~\ref{ms:certificates}. It does not establish the preceding moment estimates, which must be obtained for the same maximizing law.

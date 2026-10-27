@@ -1,0 +1,76 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hyphens]{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+\setlength{\emergencystretch}{2em}
+\setcounter{tocdepth}{1}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{condition}[theorem]{Certificate condition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\CE}{C_{\mathrm E}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\pos}[1]{(#1)_+}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\iid}{\mathrm{iid}}
+\title{Toward the sharp iid Berry--Esseen inequality:\\
+analytic reductions and finite certificates}
+\author{Bartosz Ko{\l}odziejek \and Kacper Rodziewicz}
+\date{First manuscript draft, 27 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The conjectured optimal constant in the iid Berry--Esseen inequality is
+$\CE=(3+\sqrt{10})/(6\sqrt{2\pi})$. A proof must control every summand law
+and every sample size, including discrete laws close to the extremal
+two-point distribution. We develop an analytic framework for reducing this
+problem to explicitly stated finite certificate conditions. At a least
+index of failure beyond a sharp base through $41$, the predecessor loss
+vanishes. A uniform Gaussian smoothing estimate then bounds the current score. This permits a short support
+argument without Bernstein positivity certificates. We also give an exact
+three-candidate formula for a curvature supremum in the conditional-count
+comparison, and show how retaining the score excess strengthens the joint
+defect bound and removes some numerical comparisons. The analytic arguments
+are separated from the certificate conditions and their implementation.
+The global implication is conditional: this draft does not assert completion
+of the finite base, the remaining local certificates, or their full
+composition. The new reductions and their proofs are presented independently
+of such a completion.
+\end{abstract}
+\tableofcontents
+\input{sections/01-introduction}
+\input{sections/02-extremizers}
+\input{sections/03-smoothing}
+\input{sections/04-support}
+\input{sections/05-geometry-counts}
+\input{sections/06-resources}
+\input{sections/07-curvature}
+\input{sections/08-certificates}
+\input{sections/09-discussion}
+\appendix
+\input{appendices/moment-domain}
+\input{appendices/normalization}
+\input{appendices/uniform-bridge}
+\input{appendices/fourier-analysis}
+\input{appendices/finite-analysis}
+\bibliographystyle{plainnat}
+\bibliography{references-classical,references-modern-a,references-modern-b}
+\end{document}

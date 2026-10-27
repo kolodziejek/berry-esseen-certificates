@@ -7,17 +7,8 @@ laws would not justify the later reductions. We therefore begin with a
 fixed-index compactness argument which also treats atoms at the evaluation
 threshold.
 
-Let $\mathcal P$ denote the probability laws on $\R$ satisfying
-$\E X=0$, $\E X^2=1$ and $\rho=\E|X|^3<\infty$. For $P\in\mathcal P$,
-write $F_{n,P}(H)=\Pp(S_n\le H)$, where $S_n$ is the sum of $n$ independent
-variables with the common law $P$. Set
-\[
- \Delta_n(P)=\sup_{H\in\R}|F_{n,P}(H)-\Phi(H/\sqrt n)|,
- \qquad R_n(P)=\frac{\sqrt n\,\Delta_n(P)}{\rho(P)},
- \qquad C_n=\sup_{P\in\mathcal P}R_n(P).
-\]
-The threshold $H$ is in the units of the unnormalized sum. We reserve
-$z=H/\sqrt n$ for its standardized value. Throughout the article,
+Use $\mathcal P$, $F_{n,P}(H)=\Pp(S_n\le H)$, $R_n(P)$ and $C_n$
+as in Section~\ref{ms:introduction}. Throughout the article,
 \[
  \beta=\E[X|X|],\qquad \gamma=\E X^3
 \]
@@ -186,4 +177,3 @@ Rearranging \eqref{ms:contact-formula} gives
 This majorant concerns the same attained marginal at the same raw threshold.
 It supplies necessary constraints; it does not say that an optimizer of
 a moment or event relaxation is a convolution power.
-

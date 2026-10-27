@@ -1,0 +1,54 @@
+\section{Binomial normalization across one half}\label{ms:normalization}
+A phase cell can place the Taylor segment of a binomial mass on both sides of $1/2$. The required derivative estimates remain valid provided the segment lies in an interval $[a,b]$ with $a+b<1$. We give the argument because imposing a one-sided segment would unnecessarily exclude such cells.
+
+\begin{lemma}[Symmetric derivative envelopes]
+If $0<a<1/2$, $a<b<1$, $a+b<1$, then for $r\in[a,b]$,
+\[
+ r(1-r)\ge a(1-a),\qquad
+ \frac{|1-2r|}{[r(1-r)]^j}\le\frac{1-2a}{[a(1-a)]^j}\quad(j=1,2).
+\]
+\end{lemma}
+\begin{proof}
+$[a,b]\subset[a,1-a]$. Set $s=\min(r,1-r)\in[a,1/2]$. The expressions
+are symmetric; $s(1-s)$ increases and $1-2s$ decreases nonnegatively.
+Their positive quotients therefore have their maxima at $a$.
+\end{proof}
+Let $n\ge N\ge1$, $p\in[p_-,p_+]\subset(0,1/2)$, $q=1-p$,
+$1\le k\le n-1$, $\delta=k-np$, $r=k/n$, $v=pq$. Suppose the whole
+segment between $p,r$ lies in $[a,b]$ above. If
+\[
+ E\ge\frac{1-2a}{a^2(1-a)^2},\quad L\ge\frac{1-2a}{a(1-a)},
+ \quad R\ge\frac1{12a(1-a)},
+\]
+then the binomial mass $\pi_k$ satisfies
+\[
+ \sqrt n\,\pi_k=\frac{\phi(0)}{\sqrt v}
+ e^{-\delta^2/(2nv)+\zeta},\qquad
+ n|\zeta|<L|\delta|/2+R+E|\delta|^3/(6N).
+\]
+For proof, relative entropy has $D(p\Vert p)=D'(p\Vert p)=0$,
+$D''(p\Vert p)=1/v$ and
+$D^{(3)}(r\Vert p)=(2r-1)/[r^2(1-r)^2]$.
+Taylor bounds $|nD(r\Vert p)-\delta^2/(2nv)|$ by
+$E|\delta|^3/(6n^2)$; the logarithmic variance prefactor changes by at
+most $L|\delta|/(2n)$. Finite Stirling, $0<s_j<1/(12j)$, gives exactly
+\[
+ \sqrt n\,\pi_k=\frac{\phi(0)}{\sqrt{r(1-r)}}
+ e^{-nD(r\Vert p)+s_n-s_k-s_{n-k}}.
+\]
+Writing $e=s_n-s_k-s_{n-k}$, use the compatible one-sided estimates
+$e<1/(12n)$ and
+$e>-1/(12k)-1/(12(n-k))=-1/[12nr(1-r)]$.
+Thus $|e|<R/n$, and collecting all three errors proves the claim.
+One must not add three incompatible absolute factorial estimates.
+
+The literal code gates take $a=\texttt{left}$, $b=\texttt{right}$,
+$a<p_- -\Delta/N$, $p_++\Delta/N<b$, $a+b<1$.
+For $|\delta|\le\Delta$ they contain the whole segment. Gates
+$Np_- -\Delta-2>0$ and $N(1-p_+)-\Delta-2>0$ ensure interior/adjacent
+factorial domains. Positive $v_f<a(1-a)$ and upward-rounded
+$(1-2a)/v_f^2$, $(1-2a)/v_f$, $1/(12v_f)$ supply $E,L,R$.
+Mass bounds use $e^{-x}\ge1-x$, $e^x\le1/(1-x)$ only on their stated
+positive domains. The original $p$ band remains below $1/2$ when bounding
+$pq$; monotonicity is not assumed on the enlarged Taylor segment.
+This lemma grants no physical acquisition or numerical exclusion.
