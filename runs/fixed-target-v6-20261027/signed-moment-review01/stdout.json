@@ -1,0 +1,16 @@
+{
+  "status": "PASS_INDEPENDENT_INVERSE_CERTIFICATES",
+  "recorded_updates_checked": 144,
+  "negative_normalized_bounds": 144,
+  "nonnegative_normalized_bounds": 0,
+  "rejected_controls": [
+    "wrong root branch",
+    "upward lower-bound rounding"
+  ],
+  "scope": "Rational audit of all recorded inverse lower bounds and coverage; no Fourier or acquisition replay",
+  "input_sha256": {
+    "mathematics/fixed-target-v6/2026-10-27/moment.tex": "655ad13c499bb3d1e83d66e21c66444a0b2375f8f8e1de108893b7069e32c31c",
+    "mathematics/fixed-target-v6/2026-10-27/moment_check.py": "c44f789c35198eabb2d6d07a3843437c4fa29e9b85ebf79505a3bb696987513f",
+    "runs/fixed-target-v6-20261027/moment01/moment.stdout.json": "301a768e1622f0b79161ef2c56225f5035e4d72d683e911f3b152e95ac694a93"
+  }
+}
