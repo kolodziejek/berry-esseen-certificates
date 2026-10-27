@@ -1,0 +1,28 @@
+{
+  "status": "PASS_EDITORIAL_PRESERVATION_AND_DIRECTED_PI",
+  "old_labels": 193,
+  "new_labels": 196,
+  "protected_proofs": [
+    "ms:fourier:afcore:lem:anchor",
+    "ms:fourier:afcore:lem:sine-circle",
+    "ms:fourier:afcore:lem:modulus",
+    "ms:fourier:afcore:lem:rectangle",
+    "ms:fourier:rescore:fourier-early-low",
+    "ms:fourier:rescore:entry189-mills",
+    "ms:fourier:rescore:lem:finite-low",
+    "ms:fourier:rescore:entry201-event",
+    "ms:fourier:rescore:u-asymmetric",
+    "ms:fourier:rescore:u-product",
+    "ms:fourier:rescore:u-phase-interface",
+    "ms:fourier:cut49:shortloc:quartic",
+    "ms:fourier:cut49:shortloc:tails"
+  ],
+  "pi_comparisons": "333/106 < coarse lower; directed 15-place endpoints enclose high-precision interval",
+  "negative_controls": [
+    "missing old label",
+    "duplicate label",
+    "wrong directed upper endpoint",
+    "mutated Gaussian-transfer coefficient"
+  ],
+  "limits": "No cosine Bernstein coefficients or native proof objects executed; no whole analytic chain acceptance."
+}

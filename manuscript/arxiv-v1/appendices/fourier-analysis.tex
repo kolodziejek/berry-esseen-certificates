@@ -1,6 +1,7 @@
-% Retained analytical source arguments; no numerical predicate is asserted accepted.
-% Source and editorial coverage: research/fourier-coverage.md.
-\section{Exact half-line smoothing}
+\section{Half-line smoothing, characteristic functions, and resource enclosures}
+\label{ms:fourier:appendix}
+
+\subsection{Exact half-line smoothing}
 \label{ms:fourier:kernel}
 
 The main conserved identity reduces the problem to bounding explicit
@@ -39,7 +40,7 @@ integral need not converge. The proof below establishes directly that
 including atoms at the boundary, and justifies the expectation identity
 for an integrable random variable.
 
-\subsection{A real-variable Beurling construction}
+\subsubsection{A real-variable Beurling construction}
 
 Set
 
@@ -137,7 +138,7 @@ evenness of \(W\), together with their values at zero, now prove
 This is the required sign-function majorization, with its normalization
 proved rather than assumed.
 
-\subsection{Recovering the exact Fourier kernel}
+\subsubsection{Recovering the exact Fourier kernel}
 
 Elementary integration gives, for every real \(x\),
 
@@ -217,7 +218,7 @@ In particular, the exponent has the \emph{positive} sign and the imaginary
 part of \(K\) has the \emph{positive} sign. The minus sign on \(H_B\) comes
 from taking the real part of \(iR(t)e^{2\pi itx}\).
 
-\subsection{Closed boundary, cardinal values and the minorant}
+\subsubsection{Closed boundary, cardinal values and the minorant}
 
 For \(x<0\), \eqref{ms:fourier:kernel-7} gives \(M(x)\ge1\); for \(x>0\), it gives
 \(M(x)\ge0\). At the boundary, \eqref{ms:fourier:kernel-2} and \(W(0)=1\) give
@@ -253,10 +254,10 @@ The proof also gives the useful global error bound
 At zero the left-hand error is exactly zero; it is not obtained by
 assigning half of an atom to each side. In particular \(0\le M\le2\).
 
-\subsection{Expectations and the compensated identity}
+\subsubsection{Expectations and the compensated identity}
 
-Suppose \(U\) is real and \(\mathbb E|U|<\infty\), and use the convention
-\(\psi_U(t)=\mathbb E e^{2\pi itU}\). Since
+Suppose \(U\) is real and \(\E|U|<\infty\), and use the convention
+\(\psi_U(t)=\E e^{2\pi itU}\). Since
 \(2\int_0^1\operatorname{Re}K(t)\,dt=1/2\), \eqref{ms:fourier:kernel-14} can be written
 
 \begin{equation}
@@ -269,15 +270,15 @@ The complex integral in \eqref{ms:fourier:kernel-19} is absolutely convergent. I
 and
 
 \[
- \mathbb E|e^{2\pi itU}-1|\le2\pi t\,\mathbb E|U|.
+ \E|e^{2\pi itU}-1|\le2\pi t\,\E|U|.
 \]
 
 Consequently
-\(\int_0^1|K(t)|\mathbb E|e^{2\pi itU}-1|\,dt<\infty\), so ordinary
+\(\int_0^1|K(t)|\E|e^{2\pi itU}-1|\,dt<\infty\), so ordinary
 absolute Fubini applies to \eqref{ms:fourier:kernel-19}. Restoring the constant real part gives
 
 \begin{equation}
- \mathbb EM(U)=\frac12+
+ \E M(U)=\frac12+
      2\lim_{\epsilon\downarrow0}\operatorname{Re}
         \int_\epsilon^1K(t)\psi_U(t)\,dt.            \label{ms:fourier:kernel-20}
 \end{equation}
@@ -285,7 +286,7 @@ absolute Fubini applies to \eqref{ms:fourier:kernel-19}. Restoring the constant 
 Since \(\psi_{-U}=\overline{\psi_U}\), conjugation similarly yields
 
 \begin{equation}
- \mathbb E\{1-M(-U)\}=\frac12-
+ \E\{1-M(-U)\}=\frac12-
      2\lim_{\epsilon\downarrow0}\operatorname{Re}
         \int_\epsilon^1\overline{K(t)}\psi_U(t)\,dt.
  \label{ms:fourier:kernel-21}
@@ -298,21 +299,21 @@ absolute moment is a sufficient hypothesis for the stated compensated
 Fourier/Fubini argument. The uncompensated complex integral itself need
 not converge.
 
-\subsection{Scale and sign in the physical ROOT4 formula}
+\subsubsection{Four-summand smoothing normalization}
 
 Let \(Y\) be integrable, let \(h\in\mathbb R\), and let \(T>0\). For
-\(\chi_Y(s)=\mathbb E e^{isY}\), apply \eqref{ms:fourier:kernel-16} and \eqref{ms:fourier:kernel-20} to
+\(\chi_Y(s)=\E e^{isY}\), apply \eqref{ms:fourier:kernel-16} and \eqref{ms:fourier:kernel-20} to
 \(U=T(Y-h)/(2\pi)\). The resulting exact normalization is
 
 \begin{equation}
- \mathbb P(Y\le h)\le\frac12+
+ \Pp(Y\le h)\le\frac12+
   2\lim_{\epsilon\downarrow0}\operatorname{Re}
        \int_\epsilon^1K(t)e^{-iTth}\chi_Y(Tt)\,dt.
  \label{ms:fourier:kernel-22}
 \end{equation}
 
 For the four-summand application,
-\(Z=(X_1+\cdots+X_4)/2\), \(\varphi_P(s)=\mathbb E e^{isX_1}\),
+\(Z=(X_1+\cdots+X_4)/2\), \(\varphi_P(s)=\E e^{isX_1}\),
 and iid summands, choose \(T=6\). Independence gives
 \(\chi_Z(6t)=\varphi_P(3t)^4\). Thus \eqref{ms:fourier:kernel-22} is exactly
 
@@ -327,7 +328,7 @@ the physical four-summand smoothing normalization. Writing \(D=x-Z\) and
 \(S(t)=tR(t)\), its real integrand is exactly
 
 \begin{equation}
- (1-t)\mathbb E\cos(6Dt)+S(t)\mathbb E[6D\operatorname{sinc}(6Dt)],
+ (1-t)\E\cos(6Dt)+S(t)\E[6D\operatorname{sinc}(6Dt)],
  \qquad \operatorname{sinc}(v)=\sin(v)/v,
  \label{ms:fourier:kernel-24}
 \end{equation}
@@ -338,19 +339,19 @@ or continuity-at-the-threshold assumption is needed. For \eqref{ms:fourier:kerne
 independence and integrability are sufficient; the manuscript's bounded
 support assumptions imply integrability.
 
-\section{Characteristic functions and conserved resources}
+\subsection{Characteristic functions and conserved resources}
 \label{ms:fourier:resources}
 
 The following arguments retain the actual marginal law and raw threshold.
 Attainment and contact are inputs where explicitly stated; the numerical
 support, moments and probability panels are acquired hypotheses. The
-finite-state induction at the end justifies a declared schedule of valid
+finite induction at the end justifies a declared schedule of valid
 updates, not the acceptance of any particular schedule. The classical
 four-term Prawitz smoothing inequality is explicitly cited at its use.
 The preceding pointwise construction alone is not substituted for that
 external inequality without deriving its four-term normalization.
 
-\subsection{Elementary characteristic-function bounds}
+\subsubsection{Elementary characteristic-function bounds}
 \label{ms:fourier:afcore:sec:fourier}
 
 Throughout this section, $X$ is real, $\E X=0$, $\E X^2=1$, and
@@ -360,7 +361,7 @@ $\rho=\E|X|^3<\infty$. Write
 \]
 No support, extremality, or predecessor assumption is made here.
 
-\subsubsection{Real and imaginary coordinates}
+\paragraph{Real and imaginary coordinates}
 
 \begin{lemma}[Anchored coordinates]\label{ms:fourier:afcore:lem:anchor}
 For $0\le u\le\pi$,
@@ -497,7 +498,7 @@ satisfying $Z^2+\rho_+Z\le2$ is a valid uniform lower bound for
 $b(\rho)$. Thus no numerical square root is needed to certify this
 part of the imaginary enclosure.
 
-\subsubsection{An explicit scalar certificate and its convex profile}
+\paragraph{An explicit scalar certificate and its convex profile}
 
 \begin{lemma}[Scalar cosine bound]\label{ms:fourier:afcore:lem:cosine}
 Assume the finite Bernstein positivity condition specified in the proof
@@ -543,33 +544,6 @@ The finite arithmetic condition required here is
  \min_{0\le r\le80,\ 0\le k\le13}B_{r,k}
  =B_{63,12}=\frac{2479189}{65585520000}>0.
 \end{equation}
-The following source calculation specifies a reproducible acceptance test;
-it has not been executed as part of this manuscript transcription. It
-evaluates only the coefficients
-in \eqref{ms:fourier:afcore:eq:bernstein-data}.
-\begingroup\small
-\begin{verbatim}
-from fractions import Fraction as F
-from math import comb, factorial
-q = [F(0) for j in range(14)]
-q[0] = F(62, 625)
-for j in range(2, 9):
-    q[2*j-3] = F((-1)**(j+1), factorial(2*j))
-lower = F(2479189, 65585520000)
-minimum = None
-for r in range(81):
-    a, b = ((F(r,16), F(r+1,16)) if r < 80
-            else (F(5), F(625,124)))
-    c = [sum(q[l]*comb(l,j)*a**(l-j)*(b-a)**j
-             for l in range(j,14)) for j in range(14)]
-    for k in range(14):
-        value = sum(c[j]*F(comb(k,j),comb(13,j))
-                    for j in range(k+1))
-        assert value >= lower
-        minimum = value if minimum is None else min(minimum,value)
-assert minimum == lower
-\end{verbatim}
-\endgroup
 The identity
 \[
  Q(a_r+(b_r-a_r)t)
@@ -625,21 +599,8 @@ This proves the required join. The profile majorizes the cosine defect
 by the scalar inequality on $[0,4]$, by $A\le1$ on $[4,2\pi]$,
 and by $\cos v\le1$ thereafter.
 
-For completeness, the only bounds on $\pi$ just used follow without
-a numerical trigonometric evaluation. Set $L(t)=t-t^3/3$ and
-$U(t)=L(t)+t^5/5$. Alternating integration gives
-$L(t)<\arctan t<U(t)$ for $0<t<1$.
-Machin's identity, obtained by tangent addition in $(0,\pi/2)$, yields
-\[
- \frac{25}{8}
- <16L(1/5)-4U(1/239)
- <\pi
- <16U(1/5)-4L(1/239)
- <\frac{22}{7}.
-\]
-The two outer comparisons are rational substitutions. To check the
-angle in Machin's identity, $4\arctan(1/5)-\arctan(1/239)$ is positive,
-less than $4/5<1<\pi/2$, and has tangent one.
+The bounds $25/8<\pi<22/7$ follow from the rational comparisons in
+Lemma~\ref{ms:gaussian-constants}.
 \end{proof}
 
 \begin{lemma}[Whole-law modulus]\label{ms:fourier:afcore:lem:modulus}
@@ -673,7 +634,7 @@ $\E|X-X'|^3\le2\rho+2\E|X|\le2(\rho+1)$.
 No stronger universal independent-copy bound is being asserted.
 \end{proof}
 
-\subsubsection{A pointwise complex-power enclosure}
+\paragraph{A pointwise complex-power enclosure}
 
 \begin{lemma}[Rectangle gate]\label{ms:fourier:afcore:lem:rectangle}
 Let $n\ge2$ be an integer, $a\ge0$, $0<x_0\le x_1$, and $Y\ge0$.
@@ -724,7 +685,7 @@ This is the finite factorization of $z^n-w^n$ and remains valid at equal
 or zero bases. For a signed real interval, both endpoint squares are
 retained when constructing either disk.
 
-\subsubsection{The smoothing interface}
+\paragraph{The smoothing interface}
 
 We use Prawitz's smoothing inequality in the four-term normalization
 of \cite[Lemma~4.1, p.~263]{Shevtsova2012}. This is a cited external inequality,
@@ -763,10 +724,7 @@ Selecting a favorable branch at the midpoint without proving it on
 the entire cell is not. Endpoint pieces and the infinite normal tail
 remain separate obligations in every finite certificate.
 
-% Mathematical resource chapter, flattened from the supplied continuous proofs.
-% No preamble, external inputs, or finite-index success assertions.
-% All project labels introduced here use rescore:.
-\subsection{Complete Fourier remainders and finite resource enclosure}
+\subsubsection{Complete Fourier remainders and finite resource enclosure}
 \label{ms:fourier:rescore:sec:setup}
 Use the contact normalization and the gap quantities of
 Section~\ref{ms:fourier:afcore:sec:conserved}. Thus $C$ is the actual positive
@@ -788,16 +746,31 @@ The elementary constant enclosures used here are
  997/2500<\phi(0)<2/5,\qquad
  0.4095<\CE<0.40974,\qquad 333/106<\pi<22/7.
 \]
-They follow by positive rational squaring from Machin's identity. Put
+The Gaussian and Esseen-constant bounds follow from
+Lemma~\ref{ms:gaussian-constants}. For the slightly sharper lower bound
+on $\pi$ used here, the same alternating sums give
 \[
- A_m(t)=\sum_{j=0}^{m-1}\frac{(-1)^jt^{2j+1}}{2j+1}.
+ \frac{333}{106}
+ <16\sum_{j=0}^{5}\frac{(-1)^j}{(2j+1)5^{2j+1}}-\frac4{239}
+ <\pi.
 \]
-Use
+The first comparison is rational; the second uses exactly the lower
+arctangent truncations in that lemma.
+The fractional-part estimate below requires finer directed bounds.
+With
+\[
+ A_m(t)=\sum_{j=0}^{m-1}\frac{(-1)^jt^{2j+1}}{2j+1},\qquad
+ \epsilon_5=\frac{5^{-65}}{65},\quad
+ \epsilon_{239}=\frac{239^{-21}}{21},
+\]
+the alternating remainders and the same Machin identity give
 \begin{align*}
- A_{32}(1/5)&<\arctan(1/5)<A_{32}(1/5)+5^{-65}/65,\\
- A_{10}(1/239)&<\arctan(1/239)<A_{10}(1/239)+239^{-21}/21.
+ 3.141592653589793
+ &<16A_{32}(1/5)-4\{A_{10}(1/239)+\epsilon_{239}\}<\pi,\\
+ \pi&<16\{A_{32}(1/5)+\epsilon_5\}-4A_{10}(1/239)
+ <3.141592653589794.
 \end{align*}
-The scalar square-root comparisons are between positive quantities.
+The two outer comparisons involve only the displayed rational numbers.
 
 A finite-index profile means
 \begin{equation}\label{ms:fourier:rescore:u-profile}
@@ -812,7 +785,7 @@ actual integer $n$. In particular, no monotonicity of $C_n$ is assumed.
 The quantitative support implication is a separate contact argument,
 not an output of the Fourier integration.
 
-\subsubsection{One complete low-frequency transfer}
+\paragraph{One complete low-frequency transfer}
 Put $f(t)=\E e^{itX}$, $h(t)=e^{-t^2/2-i\gamma t^3/6}$,
 $e_n(t)=e^{-nt^2/2}(1-in\gamma t^3/6)$, and
 \[
@@ -1076,10 +1049,10 @@ lower bound $r_*\le\rho$, are acquired before it is used. The signed
 phase calculation keeps the original $\gamma$; reflection here acts only
 on the auxiliary Fourier norm and both its odd coefficients.
 
-\subsubsection{A finite-window LOW bound at the actual index}
+\paragraph{A low-frequency bound on a finite interval}
 \label{ms:fourier:rescore:sec:finite-low}
 
-The preceding LOW bounds extend positive Gaussian majorants to infinity.
+The preceding low-frequency bounds extend positive Gaussian majorants to infinity.
 At small indices this can be wasteful. The following alternative keeps
 the original integration interval; it uses no physical-gap premise.
 
@@ -1166,19 +1139,19 @@ obtained from
 The integral Taylor remainder of $e^{-x}$ has sign $(-1)^{m+1}$
 for every $x\ge0$, not merely on an alternating-series domain.
 Integrate its polynomial bounds after $x=At^2$.
-An implementation restricted to $A\in[0,8]$ and $0\le j\le16$
-must check those gates before using this particular evaluator.
+A finite table restricted to $A\in[0,8]$ and $0\le j\le16$
+is used only when these conditions hold.
 Every weight in \eqref{ms:fourier:rescore:eq:finite-low-triple} is nonnegative.
-An alternative LOW choice is always one entire valid triple; taking
+An alternative low-frequency choice is always one entire valid triple; taking
 coordinatewise minima of triples is not justified.
 
-\subsubsection{The complete high-frequency integral}
+\paragraph{The complete high-frequency integral}
 For $b,\kappa>0$ and $n>0$, put
 \[
  T_n=\sqrt n\int_b^\infty e^{-n\kappa t^2}t^{-3}\,dt,
  \qquad x=n\kappa b^2.
 \]
-\begin{lemma}[HIGH\_LAGUERRE2]
+\begin{lemma}[Rational Laguerre tail bound]\label{ms:fourier:laguerre}
 For every $x>0$,
 \[
  T_n\le\frac{\sqrt n e^{-x}}{2b^2}
@@ -1222,12 +1195,12 @@ required half-line.
 \end{proof}
 
 
-Let $EX=0$, $EX^2=1$, $EX^4\le M$, and write
-$\gamma=EX^3$, $f(t)=Ee^{itX}$. For independent copies suppose an
+Let $\E X=0$, $\E X^2=1$, $\E X^4\le M$, and write
+$\gamma=\E X^3$, $f(t)=\E e^{itX}$. For independent copies suppose an
 actual event $E$ satisfies
 \[
- P(E)\ge a>0,\qquad |X-X'|\ge d_0>0\text{ on }E,\qquad
- E[(X-X')^2\mid E]\le M_E.
+ \Pp(E)\ge a>0,\qquad |X-X'|\ge d_0>0\text{ on }E,\qquad
+ \E[(X-X')^2\mid E]\le M_E.
 \]
 The event is measured under the product of the same marginal law.
 Define the Taylor comparator
@@ -1253,7 +1226,7 @@ Set
 \]
 The usual damping domain requires $c>0$.
 
-\begin{lemma}[HIGH\_WINDOW50]
+\begin{lemma}[Six-part high-frequency bound]\label{ms:fourier:window50}
 For every integer $n\ge5$, the complete upper bound is
 \begin{align*}
  \sqrt n I_\infty\le{}& A_n
@@ -1314,7 +1287,7 @@ Gaussian-tail lemma, with lower endpoint $1/2$, gives
 For $t\ge b$, conditioning on the actual event and convex Jensen give
 \[
  |f(t)|^n\le e^{-nE\sin^2(t(X-X')/2)}
- \le E[e^{-na\sin^2(td/2)}\mid E],\qquad d=|X-X'|.
+ \le \E[e^{-na\sin^2(td/2)}\mid E],\qquad d=|X-X'|.
 \]
 Positive Tonelli allows a separate partition for every $d>0$.
 Put $\ell=2\pi/d$. The zero cell is $[0,\ell/2]$; the other cells are
@@ -1364,7 +1337,7 @@ For the second, $t\ge1/2$ implies
  =2e^{-n/8}/n.
 \]
 Pearson's elementary identity
-$E[(X^2-1-\gamma X)^2]=EX^4-1-\gamma^2\ge0$
+$\E[(X^2-1-\gamma X)^2]=\E X^4-1-\gamma^2\ge0$
 gives $|\gamma|\le\sqrt{M-1}$ and proves the sixth term.
 Any separately proved upper bound $|\gamma|\le g$ may replace
 $\sqrt{M-1}$ in that term. A permitted choice is
@@ -1395,15 +1368,14 @@ The first row follows from Cauchy using
 $\E[(X-X')^2;E]\ge2-d_0^2$ and
 $\E(X-X')^4=2\mu_4+6$. The second is Lemma~\ref{ms:fourier:rescore:entry201-event}; all its moment and $\alpha<3$ gates are checked at use.
 In the third, $D\le d<2$ ensures a genuine central gap,
-$P(XX'<0)=2pq$, and restriction of the squared distance gives $M_E=2/a$.
+$\Pp(XX'<0)=2pq$, and restriction of the squared distance gives $M_E=2/a$.
 Taking a minimum of \emph{complete} high-frequency bounds is legitimate. No tail is
 dropped and the third construction also allows a cell crossing $1/2$.
 
-% SOURCE: entry/resource_enclosure.tex
-\subsubsection{Keeping compensation inside supported HIGH}
+\paragraph{A compensated high-frequency bound with bounded support}
 \label{ms:fourier:rescore:sec:compensated-high}
 
-Here is a second complete HIGH inequality. It is useful at fixed small
+Here is a second complete high-frequency inequality. It is useful at fixed small
 indices and requires neither a physical gap nor a predecessor estimate.
 Its support and moments are hypotheses, not outputs of the integration.
 
@@ -1493,11 +1465,11 @@ where $D_j$ encloses the explicit derivative on the whole cell and
 \]
 Intersect this interval with the direct scalar enclosure. Both contain
 the same function; no midpoint sampling replaces a remainder bound.
-The minimum of several complete valid HIGH bounds is allowed. Taking
+The minimum of several complete valid high-frequency bounds is allowed. Taking
 selected favorable frequency pieces without proving their whole-cell
 majorants is not.
 
-\subsection{Turning one defect budget into simultaneous enclosures}
+\subsubsection{Turning one defect budget into simultaneous enclosures}
 Lemma~\ref{ms:fourier:rescore:re-weight} gives the unweighted defect
 budget after a first raw ceiling licenses its sign. Corollary~\ref{ms:conserved:phase-resource}
 retains the additional phase curvature under its stated positivity gates.
@@ -1513,7 +1485,7 @@ numerator increases with $1/n$, and division by the positive lower
 $\rho_l$ is outward. Thus the update is valid for every $n\ge N$ and
 uses only the previous raw bound.
 
-\subsubsection{One positive-measure rule}
+\paragraph{One positive-measure rule}
 Suppose zero lies in the gap $(-A,B)$, $A,B>0$. Let
 \[\begin{gathered}
  p=\Pp(X>0),\quad q=1-p,\quad m=\E X_+=\E X_-,\quad V=\E[X\mid\mathbf1_{X>0}],\\
@@ -1559,43 +1531,21 @@ This one rule accounts for the moment, signed Taylor, endpoint movement,
 outer-gap, and confinement-error estimates. In particular, no two costs
 may each spend the full residual and then be added.
 
-\subsubsection{The simultaneous gap budget}
-Let $p_*=(4-\sigma)/2$ and
-$T_+=\E X_+^3-mB^2$, $T_-=\E X_-^3-mA^2$.
-If $J_o=J-m(A+B)^2$, signwise integration gives
+\paragraph{The simultaneous gap bound}
+Use the central-gap notation of Section~\ref{ms:geometry-counts}, with
+$\sigma=\sqrt{10}$, $p_*=(4-\sigma)/2$,
+$T_+=\E X_+^3-mB^2$, $T_-=\E X_-^3-mA^2$ and
+$J_o=J-m(A+B)^2$. Lemma~\ref{ms:physical-defect} gives
 \begin{equation}\label{ms:fourier:rescore:re-gapexact}
  D=m(\sqrt{\sigma+1}A-\sqrt{\sigma-1}B)^2
    +(\sigma-1)T_++(\sigma+1)T_-+3(T_++T_--J_o).
 \end{equation}
-Moreover, writing $R_+=\E[X_+(X_+-B)]$ and similarly $R_-$,
-\[
- T_++T_--J_o\ge2BR_++2AR_-\ge0.
-\]
-If zero belongs to the support, every gap has one sign and $J\le\rho$,
-so $D\ge\sigma\rho-\gamma\ge(\sigma-1)\rho$.
-Otherwise \eqref{ms:fourier:rescore:re-gapexact} proves $D\ge0$.
-Consequently $D<(\sigma-1)\rho$ licenses the actual central gap.
-We also have $J\le\rho+2m\le\rho+1$; if $D<2$, then
-$T_++T_-\le D/2$ and $A+B\ge\sqrt{2-D}$.
-
-To verify the gap estimate, on a positive outer gap $(u,v)$,
-$(v-u)^2\le2\int_u^v(t-B)\,dt$.
-Summing with weights $\tau_g$ and applying Tonelli gives
-$J_o^+\le T_+-2BR_+$; reflect for the other sign.
-Expanding the definition of $D$ gives \eqref{ms:fourier:rescore:re-gapexact}.
-The inequality $AB\le1$ follows by integrating $(X+A)(X-B)\ge0$,
-and $m\le1/2$ follows from $\E|X|\le1$. More explicitly,
-\[
- J=m(A+B)^2+J_o\le m(A^2+B^2)+2m+T_++T_-=\rho+2m.
-\]
-Since $\sigma-1>2$, the gap decomposition gives $T_++T_-\le D/2$.
-Thus, when $D<2$, $m(A^2+B^2)=\rho-T_+-T_-\ge1-D/2$ and
-$m\le1/2$ imply $(A+B)^2\ge A^2+B^2\ge2-D$.
-Finally Cauchy in the form $(\E|X|^2)^2\le\E|X|\,\E|X|^3$
-gives $m\ge1/(2\rho)$, used in the generic gap bounds below.
-
-Conditional expansion about $\bar A,\bar B$ now gives the stronger
-single inequality
+In particular $D\ge0$, and $D<(\sigma-1)\rho$ ensures an actual
+central gap. Its elementary consequences in Section~\ref{ms:geometry-counts}
+are $1/(2\rho)\le m\le1/2$, $AB\le1$, $J\le\rho+2m$,
+$T_++T_-\le D/2$, and $A+B\ge\sqrt{2-D}$ when $D<2$.
+For the conditional means and signed variances defined above,
+Lemma~\ref{ms:simultaneous-gap} gives the simultaneous inequality
 \begin{equation}\label{ms:fourier:rescore:re-joint}
 \begin{split}
  D\ge{}&\frac{(6+2\sigma)(1-\theta)^{3/2}}{\sqrt{pq}}(p-p_*)^2
@@ -1603,22 +1553,11 @@ single inequality
  &+3(\sigma+1)B\theta_++3(\sigma+3)A\theta_-.
 \end{split}
 \end{equation}
-For example
-$\E X_+^3=m\bar B^2+\E[(X+2\bar B)(X-\bar B)^2;X>0]$
-and $R_+=\theta_++m(\bar B-B)$.
-The cubic residual is at least $3B\theta_+$.
-The deterministic shift left after substituting both signs is
-$6m\{\bar A\bar B-AB+B\Delta_B+A\Delta_A\}$, equal to the
-second term above. For the remaining deterministic expression, use $m^2=(1-\theta)pq$ and
-\[
- (\sigma+1)p^2+(\sigma-1)(1-p)^2-6p(1-p)
-                    =(6+2\sigma)(p-p_*)^2,
- \qquad \frac{m^3}{p^2q^2}=\frac{(1-\theta)^{3/2}}{\sqrt{pq}}.
-\]
-These identities give exactly the displayed binary square.
+The same closed support, central endpoints, conditional means and
+signed variances occur here and in those lemmas.
 
-\subsubsection{A state, its update, and its exported resource}
-A state for a closed probability interval $I=[l,u]$ records
+\paragraph{Simultaneous bounds and their refinement}
+For a closed probability interval $I=[l,u]$, suppose the following bounds hold:
 \[
  |X|\le R,\quad C\in[c_0,c_1],\quad\mathcal R\le r,
  \quad nD\le Nd,\quad\theta\le\Theta<1,
@@ -1648,7 +1587,7 @@ The guaranteed inequalities for the actual law are
                   \frac{r_I}{6m_l(A_l+B_l)}\right\}.
  \label{ms:fourier:rescore:re-geometry}
 \end{gather}
-The new stored variance ceiling is an outward upper bound for the first
+The new variance ceiling is an outward upper bound for the first
 right side, and each new endpoint floor is an outward lower bound for its
 right side. They are not arbitrary numbers satisfying an inequality in
 the opposite direction.
@@ -1674,7 +1613,7 @@ unweighted variance ceiling by $N$ would not prove them.
 
 
 \begin{theorem}[Joint inward displacement and noise]\label{ms:fourier:rescore:joint-resource}
-Suppose the same law satisfies $nD\le Nd_D$, $\theta\le\Theta<1$,
+Suppose $n\ge N>0$ and the same law satisfies $nD\le Nd_D$, $\theta\le\Theta<1$,
 $pq\le v_*$, $A+B\ge S_*>0$, and
 \[
  D\ge b+6mS_*(\Delta_A+\Delta_B)+K\theta,
@@ -1692,15 +1631,10 @@ Then the Bernoulli coordinates of this law obey
 If $r<0$ no such law exists. If $r=0$, then $d_Y=\lambda=0$.
 \end{theorem}
 \begin{proof}
-Since $m\ell=1-\theta$ and $n\theta=(1-\theta)\lambda/(pq)$,
-\[
- Nd_D\ge nD\ge nb+6n(1-\theta)S_*d_Y
-                   +K(1-\theta)\lambda/(pq)
- \ge Nb+6N(1-\Theta)S_*d_Y+K(1-\Theta)\lambda/v_*.
-\]
-All weakened coefficients multiply nonnegative quantities. Subtract $Nb$;
-for $r>0$ divide by $Nr$, and for $r\le0$ use positivity of both remaining
-coefficients. This proves all cases without division by zero.
+Apply Theorem~\ref{ms:joint-resource} with the displayed parameters.
+The present $d_Y$, $\theta$, $\lambda$ and $S_*$ are the same count
+coordinates and lower gap bound used there. In particular the input is
+$nD\le Nd_D$, with $n\ge N$, so the theorem applies also when $r\le0$.
 \end{proof}
 The required hypothesis follows from the simultaneous gap budget by taking
 $S_*=A_l+B_l$, $K=\min(K_+,K_-)$ and $b=b_I$, and dropping only the
@@ -1760,7 +1694,7 @@ Intersect every new bound with the previous one. The versions which
 merge $\theta_+$ and $\theta_-$ are obtained by replacing both costs by
 their maximum and both prices by their minimum; they need no new proof.
 
-\subsubsection{The enclosure theorem}\label{ms:fourier:rescore:re-operator}
+\paragraph{The enclosure theorem}\label{ms:fourier:rescore:re-operator}
 On each cell, the formula atlas bounds the four coefficients in
 \eqref{ms:fourier:rescore:re-raw}. The result, for each actual sign $s=\operatorname{sgn}H$,
 is a finite family of quadratics
@@ -1797,7 +1731,7 @@ singleton intersections and arbitrarily small atoms.
 \begin{proof}
 Induct over the schedule. A split preserves the union, intersections use
 necessary inequalities, and an excluded cell contains no feasible law.
-Each callback consumes only earlier hypotheses for that same law.
+Each support or confinement implication uses previously established hypotheses for that law.
 For a scalar raw output, use
 $fh-qh^2\le(f_+)^2/(4q)$ for $h\ge0$, $q>0$; using $f^2$ is a valid
 weaker bound. For a resource output first add \eqref{ms:fourier:rescore:re-extra} to each
@@ -1829,7 +1763,7 @@ lower bound. The binary term decreases in both $p<1/2$ and $\theta$.
 Thus $\max(0,\text{any signed lower bound})$ is a valid lower bound for
 $|\gamma|$ inside this auxiliary Fourier estimate.
 
-\subsection{Coefficient atlas for the enclosure}\label{ms:fourier:rescore:re-atlas}
+\subsubsection{Coefficient atlas for the enclosure}\label{ms:fourier:rescore:re-atlas}
 
 The atlas has four stages. First, signed first, second and third moments
 bound the fourth and fifth moments and the gap integrals before a
@@ -1855,7 +1789,7 @@ These formulas are inequalities for one actual law. They are the two
 coordinate descriptions of the same enclosure: signed moments before a
 probability gap is located, and conditional moments afterwards. A bound
 is used only with its stated gates, and every refinement is an intersection.
-\subsubsection{Signed moments with a common first moment}
+\paragraph{Signed moments with a common first moment}
 Put $a_\pm=(1\pm\beta)/2$, $b_\pm=(\rho\pm\gamma)/2$.
 Both signs have positive probability and positive first moment, since a
 centered variance-one law cannot be supported on one half-line. Thus
@@ -1876,7 +1810,7 @@ the span of $X$ and $|X|$ gives
  \mu_4\ge\rho^2+\frac{(\gamma-\rho\beta)^2}{1-\beta^2}.
 \]
 For completeness, this follows by minimizing the nonnegative expectation
-$E(X|X|-uX-v|X|)^2$ over $u,v$; its Gram matrix has diagonal entries
+$\E(X|X|-uX-v|X|)^2$ over $u,v$; its Gram matrix has diagonal entries
 one and off-diagonal entry $\beta$, and is positive definite.
 
 Two support-localizing moment matrices give the additional upper bounds
@@ -1888,12 +1822,12 @@ $D_\pm=Ra_\pm-b_\pm>0$, then
  \mu_4\le R\rho-\sum_\pm\frac{D_\pm^2}{Rm-a_\pm}.
 \]
 Indeed the first follows by summing the determinant inequalities for
-\[E[(R-|X|)(1,|X|)^{\mathsf T}(1,|X|);\pm X>0].\]
+\[\E[(R-|X|)(1,|X|)^{\mathsf T}(1,|X|);\pm X>0].\]
 The second follows from the corresponding matrices with an additional
 factor $|X|$. One more factor $|X|$ yields, sign by sign,
 \[
- E[X_\pm^5]\le R E[X_\pm^4]
- -\frac{(Rb_\pm-E[X_\pm^4])^2}{D_\pm}.
+ \E[X_\pm^5]\le R \E[X_\pm^4]
+ -\frac{(Rb_\pm-\E[X_\pm^4])^2}{D_\pm}.
 \]
 Zero denominators are treated by dropping their nonnegative correction;
 they never imply exclusion without a separate contradictory numerator.
@@ -1942,7 +1876,7 @@ weighted Cauchy gives $\delta^2\le2mV$. Hence
 The maximum of these three separately valid losses can be subtracted.
 Their sum cannot. A zero atom contributes zero to the weighted measure.
 
-\subsubsection{An actual central gap without assuming $D<2$}
+\paragraph{An actual central gap without assuming $D<2$}
 The already proved gap decomposition \eqref{ms:fourier:rescore:re-gapexact} shows that
 $D<(\sigma-1)\rho$ implies an actual central gap. Use its same
 nonnegative terms, writing $T=T_++T_-$ and
@@ -1971,14 +1905,14 @@ The actual opposite-sign event has probability $2pq$.
 The first two moment constraints give lower bounds for both $p$ and $q$.
 For independent copies one has exactly
 \[
- E[(X-X')^2\mid XX'<0]
+ \E[(X-X')^2\mid XX'<0]
  =\frac{1+\beta(1-2p)+4m^2}{2pq}
  =\frac{1+4m^2+\beta}{2p}
   +\frac{1+4m^2-\beta}{2q}.
 \]
 For an upper bound, use the upper $m$ endpoint and both endpoints of
 $p$ and $\beta$. The expression is convex in $p$ and affine in $\beta$.
-This improves the former $2/P(XX'<0)$ bound inside the complete HIGH
+This improves the former $2/\Pp(XX'<0)$ bound inside the complete high-frequency
 estimate. Both copies still have the same actual marginal.
 
 The gap can also be licensed before the sufficient inequality
@@ -2008,7 +1942,7 @@ This retains an already proved physical gap; it does not license a gap
 from an unsuccessful initialization. In fact the new term alone gives
 $2(6m_l a b)/(3m_u)\le4ab\le(a+b)^2$.
 
-\subsubsection{Preserving central and outer integral costs}
+\paragraph{Preserving central and outer integral costs}
 Let
 \[
  P_1(A,B)=B^3/3+AB^2/2-A^3/6,\quad
@@ -2048,7 +1982,7 @@ bound and $m_l$ for a lower bound; a negative one uses the opposite
 endpoint. For example, the binary endpoints $A=3/2$, $B=2/3$ make this
 maximum negative; the sign switch is necessary even when $D<2$.
 The fourth-moment sign intervals also sharpen
-$K_1=E[X|X|^3]-3\beta-3\rho\gamma/2$.
+$K_1=\E[X|X|^3]-3\beta-3\rho\gamma/2$.
 The complete $K_1,U,\phi$ rectangles are used in the signed expression
 $|CK_1+\phi U|$, without replacing it by two separate absolute values.
 
@@ -2079,14 +2013,14 @@ gives $\int_r^v(R-x)x(x-r)\,dx$. Dividing this integral by $v^2$
 gives exactly the displayed expression. Signwise Tonelli now charges
 $\Gamma\E X_-^3=\Gamma(\rho-\gamma)/2$.
 On positive gaps $(t-a)(\rho-t)\le\rho^2/4$, giving $\rho^2J/8$.
-The implementation uses 64 closed $v$-intervals: on each, maximize the
+Partition the $v$-range into 64 closed intervals: on each, maximize the
 concave quadratic at its clipped vertex $2(R+r)/3$ and the positive
 reciprocal term at the left endpoint. This proves its interval bound.
 The alternative bound $\Gamma\le5/2$ follows at $r=1,R=6$ by
 $3v^4-28v^3+66v^2-11>0$ on $[1,6]$: the endpoint values are $30,205$,
 and the interior critical values are $(85\mp35\sqrt5)/2>0$.
 These monotone enclosing parameters cover all $r\ge1,R\le6$.
-\subsubsection{Moment and gap coefficients for a whole cell}
+\paragraph{Moment and gap coefficients for a whole cell}
 \label{ms:fourier:rescore:mom-conditional-boxes}
 
 The following coefficient rules are collected here to make the finite
@@ -2216,7 +2150,7 @@ $\rho y^2/2-y^3/4$ over $y\ge0$.
 
 
 \paragraph{Compatible weaker resource constants.}
-The implementation also permits the weaker binary charge
+One may also use the weaker binary charge
 $b_I=(616/25)(1-\Theta)^2\operatorname{dist}(p_*,I)^2$.
 It follows from $2(6+2\sigma)>616/25$ and
 $(1-\theta)^{3/2}\ge(1-\theta)^2$.
@@ -2333,7 +2267,7 @@ $\Theta\min(0,L)$ and $\Theta\max(0,U)$ for the lower and upper
 coefficient bounds. It intersects this new interval with the retained
 absolute-error interval; neither need be discarded.
 
-\subsubsection{Generic event and complete central rectangle}
+\paragraph{Generic event and complete central rectangle}
 \begin{lemma}[Generic small-defect event]\label{ms:fourier:rescore:entry201-event}\label{ms:fourier:rescore:mom-third}
 Assume $|X|\le R\le6$ and $\rho\le37/20$. Let $0\le d<2$ and $D\le d$. Define
 \[
@@ -2355,7 +2289,7 @@ If $\alpha=L_*/6\le3$, then
 \]
 For independent copies, the actual event $E=\{XX'<0\}$ obeys
 \[
- P(E)\ge a:=1/(2r_*^2),\quad
+ \Pp(E)\ge a:=1/(2r_*^2),\quad
  |X-X'|\ge d_0:=\sqrt{2-d}\text{ on }E,\quad
  \E[(X-X')^2\mid E]\le2/a.
 \]
@@ -2397,15 +2331,10 @@ Here
 \]
 
 \paragraph{The closed-box Bernstein identity.}\label{ms:fourier:rescore:re-bernstein}
-For a polynomial $P(x)=\sum_{k=0}^dt_kx^k$,
-\[
- P(x)=\sum_{i=0}^d b_i\binom di x^i(1-x)^{d-i},\qquad
- b_i=\sum_{k\le i}t_k\binom ik/\binom dk.
-\]
-Indeed $\binom di\binom ik=\binom dk\binom{d-k}{i-k}$ and the
-binomial theorem recover each monomial $x^k$. The basis terms are
-nonnegative and sum to one on the closed unit interval. Tensor products
-prove the two-variable version below, including all boundary points.
+The Bernstein identity in Section~\ref{ms:certificates} applies after an
+affine change from each closed coordinate interval to $[0,1]$.
+Its tensor-product form includes every face of the resulting closed box.
+We use that identity with coordinate degrees four below.
 
 \begin{lemma}[Complete central rectangle]\label{ms:fourier:rescore:entry201-central}
 Write $G(A_l+(A_u-A_l)x,B_l+(B_u-B_l)y;\rho)
@@ -2434,7 +2363,7 @@ Each endpoint-multiplied coefficient is affine in $\rho$; their maximum
 is convex. No interior stationary point is omitted.
 \end{proof}
 
-\subsubsection{One interval-feedback theorem}
+\paragraph{Refining a rectangular parameter enclosure}
 \label{ms:fourier:rescore:entry-feedback}\label{ms:fourier:rescore:fourier-uniform}
 
 The raw remainder in \eqref{ms:fourier:rescore:re-raw} is
@@ -2448,8 +2377,8 @@ For any one coherent low-frequency triple and complete high-frequency value $K_H
  |E_n|\le K_F+s_F|H|,\quad
  K_F=c_\pi(L_0+K_H+L_2/\sqrt N),\quad s_F=c_\pi L_H,\quad c_\pi\ge2/\pi.
 \end{equation}
-The implementation uses $16/25$ before the signed phase and $212/333$
-afterward; both are valid since $\pi>333/106$.
+Both coefficient choices, $16/25$ before the signed phase and $212/333$
+afterward, are valid since $\pi>333/106$.
 
 \begin{lemma}[Continuous cells and feedback]\label{ms:fourier:rescore:entry-cell-theorem}\label{ms:fourier:rescore:entry-corners}
 Suppose bounds for one actual cell give
@@ -2511,7 +2440,7 @@ its positivity throughout the rectangle from its corners.
 
 \end{proof}
 
-\subsubsection{Signed phase curvature in the resource schedule}
+\paragraph{Signed phase curvature in the resource schedule}
 \label{ms:fourier:rescore:re-signed-phase-repair}
 The auxiliary Fourier orientation does not change the signed third moment
 in the actual transfer identity. The paired phase estimate must therefore
@@ -2521,7 +2450,7 @@ retain its sign. On a fixed resource cell put
  g_0(\rho)=3.16\rho-3-d,\qquad U=0.4,
 \]
 where $r,d$ are the preceding raw and defect upper bounds, and the
-checker requires $0\le L\le U$. The actual density lies in $[L,U]$
+bounds must satisfy $0\le L\le U$. The actual density lies in $[L,U]$
 and the actual signed moment satisfies $\gamma\ge g_0(\rho)$. Consequently
 \begin{equation}\label{ms:fourier:rescore:re-sign-aware-price}
  C\rho+\tfrac12\gamma\phi
@@ -2572,7 +2501,7 @@ permitted. Raw remainders and barrier-subtracted resource budgets remain
 distinct. A threshold-root export uses the same corrected curvature as
 the coefficient envelope from which it is derived.
 
-\subsubsection{The unsigned first-stage cover is the same enclosure}
+\paragraph{The unsigned first-stage cover is the same enclosure}
 \label{ms:fourier:rescore:re-unsigned}
 The first finite barrier uses a cover of $\rho$ alone before introducing
 the signed cover. Here are its exact coefficient choices, so that the
@@ -2590,7 +2519,7 @@ proved by $\rho m\ge a_+^2+a_-^2$ and $m^2\le a_+a_-$.
 If a previous pass licenses $D\le d<2$, the generic-event lemma also
 permits the ceilings $h_*u+Rd/2$ and $h_*^2u+R^2d/2$ for $M,E_5$;
 all dependent quantities are recomputed after taking these minima.
-Use the triangle LOW triple and the minimum of complete permitted HIGH
+Use the triangle low-frequency triple and the minimum of complete permitted high-frequency
 values, with the same moment cap. Put
 \[
  K_F=\tfrac{16}{25}(L_0+K_H+L_2/\sqrt N),\qquad s_F=\tfrac{16}{25}L_H.
@@ -2680,7 +2609,7 @@ term in \eqref{ms:fourier:rescore:re-unsignedbound} by the smaller full rectangl
 All sixteen corners are retained. If $b_0>0$, the opposite-sign event
 also has probability at least $(1+b_0^2)^2/(2u^2)$, from
 $m\ge(1+\beta^2)/(2\rho)$ and $m^2\le pq$. It may improve the complete
-HIGH value. These are intersections with necessary conditions; the cover
+high-frequency value. These are intersections with necessary conditions; the cover
 still examines every $\rho$-cell.
 
 \paragraph{Moving from a small defect to probability coordinates.}
@@ -2717,7 +2646,6 @@ cell update and coefficient atlas. Thus the unsigned first barrier,
 the signed initialization and the final probability refinements are
 three data choices for the same finite-enclosure theorem.
 
-% SOURCE: root/finite.tex
 
 \begin{lemma}[Asymmetric moment and probability restrictions]\label{ms:fourier:rescore:u-asymmetric}
 For a sign subprobability measure supported on $[0,R]$, denote its
@@ -2753,7 +2681,7 @@ zero-over-zero nonnegative correction is a valid weaker bound.
 The two sign masses sum to at most one, and to one after zero is
 excluded from support.  Their necessary probability inequalities are
 therefore valid in both cases.  Finally
-$m^2\le p\mathbb E X_+^2=p(1+\beta)/2$ and
+$m^2\le p\E X_+^2=p(1+\beta)/2$ and
 $m^2\le(1-p)(1-\beta)/2$ prove \eqref{ms:fourier:rescore:u-p-cauchy}.
 \end{proof}
 
@@ -2796,15 +2724,15 @@ denominators in the safe direction and apply on both probability halves.
 They can be intersected with all prior endpoint floors.
 \end{proof}
 
-\subsubsection{One signed resource, three uses}\label{ms:fourier:rescore:u-geometry}
+\paragraph{Three consequences of a signed defect bound}\label{ms:fourier:rescore:u-geometry}
 
 Once the gap is acquired, use the actual conditional representation
 \begin{equation}\label{ms:fourier:rescore:u-coordinates}
- X=\ell(B_0+U-p),\quad\mathbb P(B_0=1)=p,\quad
- \mathbb E(U\mid B_0)=0,\quad
+ X=\ell(B_0+U-p),\quad\Pp(B_0=1)=p,\quad
+ \E(U\mid B_0)=0,\quad
  \ell^2=\frac{1-\theta}{p(1-p)}.
 \end{equation}
-Write $q=1-p$, $s_j=\mathbb E(U^2\mid B_0=j)$,
+Write $q=1-p$, $s_j=\E(U^2\mid B_0=j)$,
 $\lambda=n(qs_0+ps_1)$,
 $\theta_-=q\ell^2s_0$, $\theta_+=p\ell^2s_1$, and
 $\theta=\theta_-+\theta_+$.  The actual endpoints satisfy
@@ -2877,7 +2805,7 @@ Set $a_j=[1-(1-\Theta)^{j/2}]/\Theta$ if $\Theta>0$, and
 $a_j=j/2$ otherwise.  If $\widehat k_\pm>0$ are lower bounds
 for the two prices in \eqref{ms:fourier:rescore:u-moment-price}, then
 \begin{equation}\label{ms:fourier:rescore:u-moment-bound}
- \mathbb E|X|^j\le B_j+T\max\left\{0,
+ \E|X|^j\le B_j+T\max\left\{0,
  \frac{L_+-a_jB_j}{\widehat k_+},
  \frac{L_--a_jB_j}{\widehat k_-}\right\}.
 \end{equation}
@@ -2900,8 +2828,12 @@ In addition,
 \end{equation}
 \end{lemma}
 \begin{proof}
-The identity $\theta=\lambda(1-\theta)/(npq)$ and
-\eqref{ms:fourier:rescore:u-one-resource} prove (i), including the zero cases.
+For (i), use $\theta=\lambda(1-\theta)/(npq)$ in
+\eqref{ms:fourier:rescore:u-one-resource} to obtain the displayed affine
+coefficients. Apply Theorem~\ref{ms:joint-resource} with its index floor
+chosen as the actual $n$, and with $d_D=D_*$, $v_*=v_{\max}$,
+$S_*=S$ and $K=k_*$. The input $nD\le nD_*$ follows from $D\le D_*$;
+this proves the stated joint inequality and both zero cases.
 For (ii), take expectations of
 $(U_0+A_0)(a_0-U_0)\ge0$ and
 $(U_1+a_1)(A_1-U_1)\ge0$.  Conditional centering gives
@@ -2918,7 +2850,7 @@ The original inequality \eqref{ms:fourier:rescore:u-one-resource} remains separa
 The positive-measure Taylor identity
 \eqref{ms:fourier:rescore:re-conditional} gives
 \[
- \mathbb E|X|^j\le(1-\theta)^{j/2}b_j(p)
+ \E|X|^j\le(1-\theta)^{j/2}b_j(p)
                           +L_+\theta_++L_-\theta_-.
 \]
 First replace $b_j(p)$ by $B_j$ in its nonnegative coefficient.
@@ -2954,12 +2886,12 @@ $q\ge1-u$, $p\ge l$ and the upper amplitudes in
 \eqref{ms:fourier:rescore:u-amplitudes}.  When a full two-sided noise amplitude $A^*$ is
 exported, the inward bound $d_0\le A^*$ is also checked.
 Previously acquired fourth and fifth moment bounds may be retained by
-intersection, including $\mathbb E|X|^5\le
-\max(R_-,R_+)\mathbb E X^4$.  The updated variance cap in
+intersection, including $\E|X|^5\le
+\max(R_-,R_+)\E X^4$.  The updated variance cap in
 \eqref{ms:fourier:rescore:u-harmonic} can be rounded upward and intersected with its
 previous value; it does not invalidate any earlier inequality.
 
-\subsubsection{Keeping the score and phase coherent}\label{ms:fourier:rescore:u-phase}
+\paragraph{Keeping the score and phase coherent}\label{ms:fourier:rescore:u-phase}
 
 The raw envelope in \eqref{ms:fourier:rescore:re-quadratics} and its phase
 improvement \eqref{ms:fourier:rescore:re-extra} give
@@ -3033,7 +2965,7 @@ $H=(k+u-np)/\sqrt{pq+\lambda/n}$.  This is the interface to the
 count proof; it prevents independent maximization of count phase and
 moment budget.
 
-\subsubsection{Radius feedback and the final local interface}
+\paragraph{Radius feedback and the final local interface}
 
 In the actual coordinates \eqref{ms:fourier:rescore:u-coordinates}, suppose a
 separate confinement argument has already proved $|U|\le a$ on a
@@ -3086,9 +3018,9 @@ independent scalar bound, produces $T_H$. This operation reuses the
 single resource \eqref{ms:fourier:rescore:re-phaseprice}; it creates no additional
 allowance for the subsequent count argument.
 
-\subsubsection{One propagation theorem for all finite schedules}\label{ms:fourier:rescore:u-propagation}
+\paragraph{Finite sequences of enclosure refinements}\label{ms:fourier:rescore:u-propagation}
 
-\begin{theorem}[Monotone propagation of simultaneous contracts]\label{ms:fourier:rescore:u-contract}
+\begin{theorem}[Preservation of simultaneous bounds]\label{ms:fourier:rescore:u-contract}
 Start with a complete closed probability cover and the actual support
 and scalar hypotheses \eqref{ms:fourier:rescore:u-profile}.  Each surviving panel carries
 simultaneous moment, phase, support and resource inequalities for one
@@ -3149,7 +3081,7 @@ The low-frequency transfer needs $n>2$ and the high-frequency comparator
 $n\ge5$, both satisfied here. There is no residual $n\ge36$
 assumption in the earlier-index moment and Fourier formulas.
 
-\section{Confinement and conditional-count witnesses}
+\subsection{Confinement and conditional-count witnesses}
 \label{ms:fourier:local}
 
 \begin{remark}[Preserved index scope]\label{ms:fourier:scope47}
@@ -3164,11 +3096,11 @@ composition for every $n\ge42$ remain obligations. The former index-$46$ barrier
 and the historical tail-completion assertion are not used here.
 \end{remark}
 
-\subsection{One confinement lemma with two concentration choices}\label{ms:fourier:cut49:conf:re:confinement}
+\subsubsection{One confinement lemma with two concentration choices}\label{ms:fourier:cut49:conf:re:confinement}
 A proved amplitude is used as a support update, never as a premise of
 its own proof. The following derivation applies to every acquired row,
 with the same formulas for the central and left probability ranges.
-\subsubsection{Statement and hypotheses}
+\paragraph{Statement and hypotheses}
 Let $n\ge N=47$, $Y=B+U$, $\Pp(B=1)=p<1/2$ and $\E(U\mid B)=0$.
 Put $q=1-p$, $s=\E U^2$, $\lambda=ns$ and $X=\ell(Y-p)$, where
 $\E X^2=1$. Thus $\ell^2=(1-\theta)/(pq)$ and $\theta=\ell^2s$.
@@ -3256,7 +3188,7 @@ The centered absolute deviation on each class is at most twice its
 mean distance from the inner endpoint, proving the bound on $\epsilon$.
 All quantities refer to the same marginal.
 
-\subsubsection{Concentration from an antichain}
+\paragraph{Concentration from an antichain}
 \begin{lemma}[Strict-gap concentration]
 Suppose $Y=U_0+B(1+U_1-U_0)$, where $B$ is Bernoulli$(p)$ independent
 of the pair $(U_0,U_1)$, and $1+U_1-U_0\ge c>0$ almost surely.
@@ -3269,20 +3201,12 @@ strictly less than $c$,
 The same bound holds after adding any independent random variable.
 \end{lemma}
 \begin{proof}
-Condition on all noise pairs. The sum is a fixed constant plus
-$\sum B_iw_i$, with every $w_i\ge c$. The family $\mathcal F$ of subsets
-whose weighted sums lie in $I$ is an antichain: distinct comparable
-subsets have sums differing by at least $c$, larger than the diameter.
-A uniformly random permutation of $\{1,\ldots,j\}$ defines the maximal
-chain of its initial subsets. The chain contains a fixed $k$-subset with
-probability $1/\binom jk$, and meets an antichain at most once. Hence
-\[
- \sum_{S\in\mathcal F}\binom j{|S|}^{-1}\le1.
-\]
-Multiplying each summand by its binomial level mass proves the bound
-conditionally. Integration removes the conditioning. Conditioning on an
-additional independent variable proves the last assertion. This argument
-includes all atom collisions and any open or closed interval endpoints.
+Apply the conditional random-chain argument in
+Appendix~\ref{ms:uniform-bridge}. That argument uses only independent
+Bernoulli labels and positive increments at least $c$, so it applies to
+the present coupled pairs at every $j$. Its interval diameter is strictly
+less than $c$, including when either endpoint is closed. Conditioning on
+any added independent variable gives the last assertion.
 \end{proof}
 For the actual marginal we may couple the two conditional noises
 independently and then sample an independent label. Since $U_0\le a$ and
@@ -3296,7 +3220,7 @@ Put $J_0=N-2=45$ and define
  r_L=l-(1-l)/J_0,\qquad r_R=h+h/J_0,\qquad
  v_* =\min\{r_L(1-r_L),r_R(1-r_R)\}.
 \]
-The checker verifies $0<r_L\le r_R<1$. Adjacent binomial-mass ratios
+Require $0<r_L\le r_R<1$. Adjacent binomial-mass ratios
 show that any mode $k$ at index $j\ge J_0$ satisfies
 $(j+1)p-1\le k\le(j+1)p$, hence $r=k/j\in[r_L,r_R]$.
 In particular $1\le k\le j-1$. Finite Stirling bounds give
@@ -3324,7 +3248,7 @@ score cap; later central and left schedules use the strict-gap cap.
 For the left panels replace the conditional cubic coefficient 24 below
 by 28; in general any $c_\rho$ satisfying
 $c_\rho^2[l(1-l)]^3>[3(1-l)+0.55]^2$ is valid.
-\subsubsection{Signed deletion, including atoms}
+\paragraph{Signed deletion, including atoms}
 Let $m=n-1$, $Z=x-\sum_{i=1}^mY_i$, $\mu=x-mp$ and let $K=\sum B_i$.
 For a fixed removed label put
 $T_b(I)=\Pp(x-\sum_{i<m}Y_i-b-U_b\in I)$.
@@ -3371,7 +3295,7 @@ Multiplication by $\E U_+=\epsilon/2$ proves the combined bound.
 Closed, open and half-open intervals are all covered by containment in
 the corresponding closed interval. No density or atom separation is used.
 
-\subsubsection{Slope bounds and the two exterior intervals}
+\paragraph{Slope bounds and the two exterior intervals}
 Split $|H|$ into 16 closed equal cells $[h_l,h_h]$ and $\lambda$ into
 24 closed equal cells $[s_l,s_h]$. On each box put
 \[
@@ -3490,7 +3414,7 @@ $r$, while the entire error is constant on the acquired finite strip.
 For the score-derived cap retain the explicit affine slope gate below.
 No assertion outside that strip is needed.
 
-\subsubsection{One budget, two error bounds}
+\paragraph{One budget, two error bounds}
 Let $F_d$ be the strict grid upper bound for
 $\sqrt{\max\{(47/46)^3,47/45\}}$. It simultaneously covers the two
 concentration factors in \eqref{ms:fourier:cut49:conf:concentration} after multiplication by
@@ -3553,7 +3477,7 @@ Consequently a further valid error bound is
  \max_{i\in\{+,-,J\}}\left(v_i+B\frac{N\tau}{(N\tau+t)^2}w_i\right)
  +B\frac{t^2}{(N\tau+t)^2}.
 \]
-The checker takes the minimum of \eqref{ms:fourier:cut49:conf:oldbound} and these eleven
+Take the minimum of \eqref{ms:fourier:cut49:conf:oldbound} and these eleven
 bounds with $t=jG/10$, $j=0,\ldots,10$. Each is individually valid;
 no numerical minimization or derivative of their minimum is assumed.
 
@@ -3582,9 +3506,9 @@ on the left they are $0.375,0.325,0.30$. Intersect each interval with its
 own row's $\Lambda$ and each amplitude with that row's global amplitude.
 The required acceptance checks both signs of $H$, all closed phase/noise
 cells, clipped endpoints, and strict budget exclusions. No proof of
-LOW, MID, or a binomial score comparison is used by this confinement lemma.
+whole-count, nearest-count, or binomial score comparison is used by this confinement lemma.
 
-\subsection{One local comparison theorem}\label{ms:fourier:cut49:shortloc:section}
+\subsubsection{The conditional-count comparison}\label{ms:fourier:cut49:shortloc:section}
 
 A law concentrated near two points has a natural integer count and a small
 centered error. We compare it with its own Bernoulli count. The same exact
@@ -3593,33 +3517,33 @@ right side: discard all but the nearest outgoing count, or retain all counts
 through a random cutoff. The estimates share their normalization, moments,
 and tail bounds; only the final scalar witness changes.
 
-\subsubsection{The identity and the common numerical test}
+\paragraph{The identity and sufficient inequalities}
 
 Let $0<p\le1/2$, $q=1-p$, $v=pq$, and let
 \[
- Y=B+U,\qquad \Pr(B=1)=p,\qquad \mathbb E(U\mid B)=0.
+ Y=B+U,\qquad \Pp(B=1)=p,\qquad \E(U\mid B)=0.
 \]
 The two actual conditional laws $U_0,U_1$ obey
 \begin{equation}\label{ms:fourier:cut49:shortloc:support}
  |U_j|\le A,\quad U_0\le a_0,\quad U_1\ge-a_1,\quad
  a_0,a_1\ge0,\quad d=a_0+a_1\le d_0<\min(p,q),\quad d_0\le A.
 \end{equation}
-Write $s_j=\mathbb E U_j^2$, $s=qs_0+ps_1$, $\lambda=ns$,
+Write $s_j=\E U_j^2$, $s=qs_0+ps_1$, $\lambda=ns$,
 $\ell=(v+s)^{-1/2}$, $\theta=s/(v+s)$ and
-$\rho=\mathbb E|\ell(Y-p)|^3$. At the actual threshold choose
+$\rho=\E|\ell(Y-p)|^3$. At the actual threshold choose
 \[
  x=np+H/\ell=k+u,\qquad k\in\{1,\ldots,n-1\},\quad |u|\le\tfrac12,
  \qquad \delta=k-np=H/\ell-u.
 \]
 Either nearest integer is allowed at a tie. Put
 \[
- \pi_j=\binom njp^jq^{n-j},\quad F_B(j)=\Pr(\operatorname{Bin}(n,p)\le j),
+ \pi_j=\binom njp^jq^{n-j},\quad F_B(j)=\Pp(\operatorname{Bin}(n,p)\le j),
  \qquad \rho_B=(1-2v)/\sqrt v,
 \]
 with $\pi_j=0$ outside $[0,n]$. Let $W_j$ be an independent sum of $j$
 copies of $U_1$ and $n-j$ copies of $U_0$. The signed scores are
 \[
- C=\frac{\sqrt n}{\rho}\{\Pr(\textstyle\sum Y_i\le x)-\Phi(H/\sqrt n)\},
+ C=\frac{\sqrt n}{\rho}\{\Pp(\textstyle\sum Y_i\le x)-\Phi(H/\sqrt n)\},
  \qquad C_B=\frac{\sqrt n}{\rho_B}\{F_B(k)-\Phi(\delta/\sqrt{nv})\}.
 \]
 Throughout this section $C\ge c_*>0$; the selected application uses $c_*=0.4$.
@@ -3627,11 +3551,12 @@ Define
 \begin{align}
  f(u)&=\frac{\Phi((\delta+u)/\sqrt{n(v+s)})-
                     \Phi(\delta/\sqrt{n(v+s)})}{\pi_k},\label{ms:fourier:cut49:shortloc:f}\\
- Q&=\Pr(\textstyle\sum Y_i\le k+u)-F_B(k),\nonumber\\
+ Q&=\Pp(\textstyle\sum Y_i\le k+u)-F_B(k),\nonumber\\
  \mathcal R&=\sqrt n\{\Phi(\delta/\sqrt{nv})-
                  \Phi(\delta/\sqrt{n(v+s)})\}+C(\rho_B-\rho).\nonumber
 \end{align}
-Direct subtraction gives the exact identity
+Equation~\eqref{ms:master-identity}, with $V_j=W_j$ and the same
+interior count $k$, gives the exact identity
 \begin{equation}\label{ms:fourier:cut49:shortloc:master}
  \rho_B(C-C_B)=\sqrt n\pi_k\{Q/\pi_k-f(u)\}+\mathcal R.
 \end{equation}
@@ -3645,8 +3570,8 @@ Either of the following witnesses proves $\rho_B(C-C_B)<-\varepsilon\lambda$.
 \begin{enumerate}
 \item \emph{Nearest-count witness.} Valid bounds $O,T,R_0,\kappa$ satisfy
 \[
- \Pr(W_k>u)+f(u)\ge O,\quad
- \sum_{i\ge1}\Pr(W_{k+i}\le u-i)\le T,\quad
+ \Pp(W_k>u)+f(u)\ge O,\quad
+ \sum_{i\ge1}\Pp(W_{k+i}\le u-i)\le T,\quad
  \pi_{k+i}/\pi_k\le R_0,\quad \mathcal R\le\kappa\lambda/n.
 \]
 Only legal counts occur in the sum; adding positive upper bounds for
@@ -3671,18 +3596,19 @@ separate treatment of $\lambda=0$ therefore suffice for a complete local
 comparison.
 \end{theorem}
 \begin{proof}
-Conditioning on the binomial count gives, with all atom conventions intact,
+The signed count identity \eqref{ms:count-difference}, with $V_j=W_j$, is
 \begin{equation}\label{ms:fourier:cut49:shortloc:count}
- Q=-\sum_{i=0}^{k}\pi_{k-i}\Pr(W_{k-i}>u+i)
-       +\sum_{i=1}^{n-k}\pi_{k+i}\Pr(W_{k+i}\le u-i).
+ Q=-\sum_{i=0}^{k}\pi_{k-i}\Pp(W_{k-i}>u+i)
+       +\sum_{i=1}^{n-k}\pi_{k+i}\Pp(W_{k+i}\le u-i).
 \end{equation}
-Dropping the outgoing terms with $i>0$ gives $Q/\pi_k-f(u)\le-D$.
-Use \eqref{ms:fourier:cut49:shortloc:master} and $D>0$. For the second witness, use
-$B<0$ before replacing $\sqrt n\pi_k$ by $m$, and $I\ge0$ before replacing
-$n$ by $N$. These sign requirements are part of the test, not conventions.
+Apply Proposition~\ref{ms:local-witnesses} with $m_0=m$.
+The legal counts, closed incoming events and strict outgoing events are
+identical. In the second alternative the present hypothesis $I\ge0$
+makes its $\max(0,I)/N$ exactly $I/N$, yielding
+\eqref{ms:fourier:cut49:shortloc:whole-test}.
 \end{proof}
 
-\subsubsection{Normalization and the repair, once for every witness}
+\paragraph{Binomial normalization and the variance correction}
 
 Here is an explicit finite recipe for the constants required above.
 Let $p\in[p_-,p_+]\subset(0,1/2)$, $n\ge N$, $\lambda\le\Lambda$,
@@ -3749,7 +3675,7 @@ finer phase-error bound $|u-f(u)|\le a(B_1\lambda+P_1)/n$.
 
 The exact count variance is
 \begin{equation}\label{ms:fourier:cut49:shortloc:variance}
- t_j=\mathbb E W_j^2=\lambda+(j-np)(s_1-s_0),\qquad
+ t_j=\E W_j^2=\lambda+(j-np)(s_1-s_0),\qquad
  |s_1-s_0|\le s/p\le c_v s,\quad c_v\ge1/p_-.
 \end{equation}
 It gives $\omega_-\lambda\le t_k\le\omega_+\lambda$ with
@@ -3769,8 +3695,8 @@ are at most one. No count outside $[0,n]$ is used in this recursion.
 Finally \eqref{ms:fourier:cut49:shortloc:support} fixes the signs inside the absolute cubic.
 Expansion and centering give
 \[
- \mathbb E|Y-p|^3=v(1-2v)+3pq(s_0+s_1)
-                   +p\mathbb E U_1^3-q\mathbb E U_0^3
+ \E|Y-p|^3=v(1-2v)+3pq(s_0+s_1)
+                   +p\E U_1^3-q\E U_0^3
  \ge v(1-2v)+(3p-d)s.
 \]
 The inequality $(1+z)^{3/2}\le1+3z/2+3z^2/8$ for $z\ge0$ yields
@@ -3790,14 +3716,14 @@ Therefore
 One may take $D_+=D$, but retaining the positive part is often decisive.
 All bounds concern $v+s$, which can exceed $1/4$.
 
-\subsubsection{Two elementary tools for probabilities}
+\paragraph{Two elementary tools for probabilities}
 
 \begin{lemma}[A shifted quartic]\label{ms:fourier:cut49:shortloc:quartic}
 Suppose $W$ is a sum of independent centered variables bounded in absolute
-value by $A$, and $t=\mathbb E W^2$. Let $K_0\ge(9+6\sqrt3)/4$ and $a>0$.
+value by $A$, and $t=\E W^2$. Let $K_0\ge(9+6\sqrt3)/4$ and $a>0$.
 For $r\ge0$ and $\sigma\in\{-1,1\}$,
 \begin{equation}\label{ms:fourier:cut49:shortloc:quarticformula}
- \Pr(W+\sigma r>0)\ge
+ \Pp(W+\sigma r>0)\ge
  \frac{(3a^2-A^2)t-3t^2-4Art-6r^2t-r^4
                       +3a^2r^2+2\sigma a^3r}{K_0a^4}.
 \end{equation}
@@ -3806,8 +3732,8 @@ For $r\ge0$ and $\sigma\in\{-1,1\}$,
 The polynomial $h_a(z)=(-z^4+3a^2z^2+2a^3z)/(K_0a^4)$ is below
 $\mathbf1_{\{z>0\}}$: it is nonpositive for $z\le0$, and its maximum for
 $z>0$ is at $z/a=(1+\sqrt3)/2$ and is at most one. Independence gives
-$|\mathbb E W^3|\le At$ and $\mathbb E W^4\le A^2t+3t^2$.
-Expand $\mathbb Eh_a(W+\sigma r)$ and apply these two inequalities.
+$|\E W^3|\le At$ and $\E W^4\le A^2t+3t^2$.
+Expand $\E h_a(W+\sigma r)$ and apply these two inequalities.
 The value at the threshold is zero, so atoms require no limiting argument.
 \end{proof}
 
@@ -3818,7 +3744,7 @@ for $b>0$, their sum has upper tail bounded by the minimum of one and
  \begin{gathered}
  \frac{V}{V+b^2},\qquad
  \mathcal B(A,V,b)=e^{b/A}\left(\frac{V}{V+Ab}\right)^{b/A+V/A^2},\qquad
- \frac{\mathbb E(P_\mu-j)_+^3}{(b/A+\mu-j)^3},\\
+ \frac{\E(P_\mu-j)_+^3}{(b/A+\mu-j)^3},\\
  \mu=V/A^2,\qquad 0\le j<b/A+\mu.
  \end{gathered}
 \end{equation}
@@ -3828,7 +3754,7 @@ All bounds apply to closed events, hence also to strict events.
 \begin{proof}
 Cantelli's bound follows by applying Markov to $(\sum X_i+V/b)^2$.
 Taylor's integral remainder gives
-$\mathbb E e^{zX_i}\le\exp\{\mathbb E X_i^2(e^{zA}-1-zA)/A^2\}$
+$\E e^{zX_i}\le\exp\{\E X_i^2(e^{zA}-1-zA)/A^2\}$
 for $z\ge0$. Multiply and use $z=A^{-1}\log(1+Ab/V)$ to get $\mathcal B$.
 The zero-variance case is immediate.
 
@@ -3840,8 +3766,8 @@ $\mathcal Af(x)=f(x+A)-f(x)-Af'(x)$, the Taylor quotient
        =\int_0^1(1-r)f''(x+ry)\,dr
 \]
 is nondecreasing in $y$. A centered $X\le A$ of variance $v$ consequently
-satisfies $\mathbb E f(x+X)\le f(x)+(v/A^2)\mathcal Af(x)$.
-For $\mathcal P_zf(x)=\mathbb E f(x+A(P_z-z))$,
+satisfies $\E f(x+X)\le f(x)+(v/A^2)\mathcal Af(x)$.
+For $\mathcal P_zf(x)=\E f(x+A(P_z-z))$,
 $\partial_z\mathcal P_zf=\mathcal P_z\mathcal Af$ and
 \[
  \partial_z^2\mathcal P_zf=\mathcal P_z\mathcal A^2f\ge0,\qquad
@@ -3857,7 +3783,7 @@ third moments. Markov at $t=A(j-\mu)$ proves the displayed bound.
 
 These bounds have finite rational evaluations. For example,
 \begin{align}\label{ms:fourier:cut49:shortloc:poissonfinite}
- \mathbb E(P_\mu-j)_+^3={}&\mu^3+3(1-j)\mu^2+(1-3j+3j^2)\mu-j^3\\
+ \E(P_\mu-j)_+^3={}&\mu^3+3(1-j)\mu^2+(1-3j+3j^2)\mu-j^3\\
  &+e^{-\mu}\sum_{h=0}^{\lfloor j\rfloor}\frac{\mu^h(j-h)^3}{h!}.\nonumber
 \end{align}
 Replacing $e^{-\mu}$ by $(\sum_{h=0}^{24}\mu^h/h!)^{-1}$ enlarges the
@@ -3871,11 +3797,11 @@ bounds for $L$; any positive lower exponential series gives an upper bound
 for $e^{-L}$. Rounding a positive lower $L$ down before exponentiation is
 also valid. These are choices of rational witnesses, not optimization claims.
 
-\subsubsection{The nearest-count witness, including vanishing noise}
+\paragraph{The nearest-count witness, including vanishing noise}
 
 For $u=-r\le0$, add $-h_fr$ to \eqref{ms:fourier:cut49:shortloc:quarticformula} with
 $\sigma=1$; for $u=r\ge0$, add $l_fr$ with $\sigma=-1$.
-Both bound $\Pr(W_k>u)+f(u)$ from below. For a cell
+Both bound $\Pp(W_k>u)+f(u)$ from below. For a cell
 $t\in[t_-,t_+]$, $r\in[r_-,r_+]$, this expression is concave in $t$
 (second derivative $-6/(K_0a^4)$), so only $t_-,t_+$ are needed.
 At each endpoint, bound a monomial with positive coefficient at $r_-$
@@ -3898,8 +3824,8 @@ $B^2/(1-B)$ for $B=\mathcal B(A,V_*U,b_o)<1$. Thus
  D=O-R_0\{T_1+B^2/(1-B)\}>0,\qquad
  mD-\kappa U/N>\varepsilon U
 \end{equation}
-proves the entire cell when $\kappa\ge0$. Each MID normalizer
-must explicitly verify this sign. This is the common central and left MID proof.
+proves the entire cell when $\kappa\ge0$. This sign condition is required on each cell. The argument applies to
+both central and left probability panels.
 
 A cell touching $\lambda=0$ requires estimates proportional to $\lambda$;
 a positive lower endpoint may not be substituted. The following rescaling
@@ -3956,10 +3882,10 @@ proves the whole interval. A rational upper bound for the logarithm
 verifies that gate. On cells using the fixed positive bound $l_fr_-$ instead,
 unscaled endpoint tails suffice: after a positive bracket is checked, divide
 it by $U$ to obtain a lower bound per $\lambda$. These arguments, followed by
-\eqref{ms:fourier:cut49:shortloc:directtest}, prove TINY uniformly down to arbitrary positive
+\eqref{ms:fourier:cut49:shortloc:directtest}, prove the nearest-count comparison uniformly down to arbitrary positive
 noise, including a deterministic conditional component.
 
-\subsubsection{The whole-count witness}
+\paragraph{The whole-count witness}
 
 Assume $c=1-d_0>1/2$. Couple all $2n$ conditional variables independently and
 set $W_j=\sum_{i\le j}U_{1,i}+\sum_{i>j}U_{0,i}$, extending it constantly
@@ -3967,50 +3893,43 @@ outside $[0,n]$. Every increment of $j+W_j$ is at least $c$. Define
 \[
  K=\max\{j\in\mathbb Z:j+W_j\le k+u\},\qquad R=K-k.
 \]
-An independent binomial selector has the correct actual count laws, so
+The coupling of Section~\ref{ms:counts}, with $V_j=W_j$, gives
 \begin{equation}\label{ms:fourier:cut49:shortloc:cutoff}
-                  \Pr(\textstyle\sum Y_i\le k+u)=\mathbb EF_B(k+R).
+                  \Pp(\textstyle\sum Y_i\le k+u)=\E F_B(k+R).
 \end{equation}
 Let $\chi=(n+1)p-k<2$ and $m_B=\max_j\pi_j$. For every integer $r$,
 \begin{equation}\label{ms:fourier:cut49:shortloc:curvature}
  F_B(k+r)-F_B(k)-r\pi_k\le\frac{m_B}{(n+1)v}
  \left[(\chi-1)_+r_++\chi_+\binom{r_-}{2}+\binom{r_-}{3}\right].
 \end{equation}
-Indeed, the positive part of $\pi_{k+i}-\pi_{k+i-1}$ is at most
-$m_B(\chi-i)_+/((n+1)v)$, by
-$\pi_j-\pi_{j-1}=\pi_j((n+1)p-j)/(p(n-j+1))$.
-Double summation gives \eqref{ms:fourier:cut49:shortloc:curvature}: for $r>0$ only $i=1$
-can contribute; for $r=-h<0$ use $(\chi+i)_+\le\chi_++i$ and sum the
-multiplicities $h-1-i$. Zero extension makes the same calculation valid
-outside the legal count range.
+This is Lemma~\ref{ms:crossing-curvature}, with the same zero extension,
+$\chi<2$ and interior count. Its proof requires only an increment lower
+bound $c>1/2$. Here $d\le d_0$ gives increments at least $1-d_0=c$,
+and $c\le1$ follows from $d_0\ge0$.
 
-Write $t=\mathbb EW_k^2$. Crossing monotonicity and Cauchy--Schwarz give
+Write $t=\E W_k^2$. Crossing monotonicity and Cauchy--Schwarz give
 \begin{equation}\label{ms:fourier:cut49:shortloc:crossingmoments}
- \mathbb ER_+\le\frac{t}{(c-u)^2},\quad
- \mathbb E\binom{R_-}{2}\le\frac{t}{[c+\min(u,c/3)]^2},\quad
- \mathbb E\binom{R_-}{3}\le\frac{t\sqrt{A^2+3t}}{(2c-1/2)^3}.
+ \E R_+\le\frac{t}{(c-u)^2},\quad
+ \E\binom{R_-}{2}\le\frac{t}{[c+\min(u,c/3)]^2},\quad
+ \E\binom{R_-}{3}\le\frac{t\sqrt{A^2+3t}}{(2c-1/2)^3}.
 \end{equation}
-For the first, $R=i\ge1$ implies $-W_k\ge ci-u$ and
-$(ci-u)^2\ge i(c-u)^2$. For $R=-h\le-2$, the next count is outside the
-closed event, so $W_k>c(h-1)+u$. Put $j=h-1$.
-The function $j(j+1)/(2(cj+u)^2)$ decreases for $j\ge1$ if $u\le c/3$;
-for larger $u$ reduce to that endpoint. Also
-$(j^3-j)/(6(cj-1/2)^3)$ decreases for $j\ge2$, since its derivative has
-the sign of $2cj-(3j^2-1)/2<0$. These give the last two bounds using
-$\mathbb E(W_k)_+^3\le\sqrt{\mathbb EW_k^2\mathbb EW_k^4}$.
+These are the crossing-moment bounds of Lemma~\ref{ms:crossing-curvature}
+with $A_U=A$, $V_k=W_k$, $|u|\le1/2$ and the increment lower bound
+$c=1-d_0$. The lemma includes the strict outgoing crossing and the
+fourth-moment estimate from independence and conditional centering.
 
 \paragraph{The marked crossing.}
-Let $D_i=U_{1,i}-U_{0,i}$, $\vartheta=\mathbb E(D_i)_+=\mathbb E(D_i)_-$,
-$0<\eta\le1$, and $R_f=\mathbb E\{u+\eta-W_k\}$. The two deleted laws are
+Let $D_i=U_{1,i}-U_{0,i}$, $\vartheta=\E(D_i)_+=\E(D_i)_-$,
+$0<\eta\le1$, and $R_f=\E\{u+\eta-W_k\}$. The two deleted laws are
 \[
  A_0\overset{d}=kU_1+(n-k-1)U_0,\qquad
  A_1\overset{d}=(k-1)U_1+(n-k)U_0.
 \]
 Then
 \begin{align}
- \mathbb ER&\le u+\eta-R_f+J,\label{ms:fourier:cut49:shortloc:mark}\\
+ \E R&\le u+\eta-R_f+J,\label{ms:fourier:cut49:shortloc:mark}\\
  J&=\frac{\vartheta}{\eta}\sum_{i\ge1}
- \{\Pr(A_0\le u+d_0-ci)+\Pr(A_1>u+\eta+i-A)\}.\nonumber
+ \{\Pp(A_0\le u+d_0-ci)+\Pp(A_1>u+\eta+i-A)\}.\nonumber
 \end{align}
 Here are the pathwise details. Put $z=u-W_k$ and mark
 \[
@@ -4073,7 +3992,7 @@ $G^2<c_vNL$, then
 \begin{equation}\label{ms:fourier:cut49:shortloc:theta}
  \vartheta\le\frac{c_vG\lambda}{c_vn\lambda+G^2}.
 \end{equation}
-To prove this, for centered $X\ge-b$, $\mathbb EX^2\le V$ and $b^2\le V$,
+To prove this, for centered $X\ge-b$, $\E X^2\le V$ and $b^2\le V$,
 the quadratic $b(X-V/b)^2/(b+V/b)^2$ majorizes $X_-$ on $[-b,\infty)$.
 Its expectation is at most $bV/(V+b^2)$. Apply this to $D_i\ge-d$,
 using $\operatorname{Var}(D_i)=s_0+s_1\le c_v\lambda/n$, and monotonicity
@@ -4091,15 +4010,15 @@ If each centered summand has support span at most $b<1/2$ and the sum has
 variance $t$, then, for any real $w$ and
 $0<r_*\le2\sin^2(\pi b)/b^2$,
 \begin{equation}\label{ms:fourier:cut49:shortloc:harmonic}
-             \mathbb E\{w-W\}\ge\frac5{23}(1-e^{-r_*t}).
+             \E\{w-W\}\ge\frac5{23}(1-e^{-r_*t}).
 \end{equation}
 Indeed $1-\cos(2\pi x)\le(23/5)x$ for $0\le x\le1$.
 A finite proof of this sole scalar inequality is recorded below.
 For an independent copy $Z'$ of one summand, concavity of sine on
 $[0,\pi b]$ gives
 \[
- |\mathbb Ee^{2\pi iZ}|^2
- =1-2\mathbb E\sin^2\pi(Z-Z')
+ |\E e^{2\pi iZ}|^2
+ =1-2\E\sin^2\pi(Z-Z')
  \le e^{-4\sin^2(\pi b)\operatorname{Var}(Z)/b^2}.
 \]
 Multiply square roots over the independent summands and use periodicity.
@@ -4178,18 +4097,15 @@ Every constant is fixed before $\lambda$ varies. Both $B$ and
 $mB+I/N$ are convex on $\lambda>0$; $I$ is decreasing. Thus their two
 endpoint gates $B<0$, $I>0$, $mB+I/N<-0.001$ prove the entire closed noise
 cell. Thus this argument supplies the analytic implication for each of the three
-LOW variants, conditional on its own complete cover and endpoint gates.
+whole-count estimates, conditional on its own complete cover and endpoint gates.
 
 
-\subsubsection{The zero-noise endpoint and the remaining composition}
+\paragraph{The zero-noise endpoint and the remaining composition}
 \label{ms:fourier:zero-noise}
 If $\lambda=0$, then $p,q>0$ and conditional centering imply
 $U_0=U_1=0$ almost surely. The actual law is its Bernoulli comparison law.
-At an attained positive closed-CDF maximum, a noninteger count threshold
-can be lowered to the preceding atom without changing the CDF and with a
-strict increase in the signed normal difference. Thresholds below the
-first atom have nonpositive score. Hence a maximizing threshold is a
-binomial atom and the comparison has $u=0$ and $C=C_B$.
+The zero-noise argument in Section~\ref{ms:counts} places an attained
+positive closed-CDF maximum at a binomial atom, so $u=0$ and $C=C_B$.
 The external all-probability binomial theorem of
 \cite[Theorem~1]{Schulz2016}, when applied with its stated hypotheses,
 then supplies the strict Bernoulli bound. For positive noise, the local
