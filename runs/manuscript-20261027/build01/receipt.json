@@ -1,0 +1,48 @@
+{
+  "started_utc": "2026-10-27T13:09:52.129179+00:00",
+  "command": [
+    "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v1/manuscript/arxiv-v1/main.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v1/manuscript/arxiv-v1/build/final01",
+    "--json"
+  ],
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v1",
+  "exit_code": 0,
+  "duration_seconds": 4.905971999978647,
+  "source_check_exit_code": 0,
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "input_sha256": {
+    "manuscript/arxiv-v1/main.tex": "54150359098f53267a9b2662f930cda7554a4bbfd2ff351850c0ce1a896208d9",
+    "manuscript/arxiv-v1/sections/01-introduction.tex": "16a321515c75775799165f12d1bde4ee64dd88455f5e2d6c6aea13e7ebaaf68e",
+    "manuscript/arxiv-v1/sections/02-extremizers.tex": "044b29c9957e2543c39368a7cb72ef69d4e60b1d8ec5e563148f95cf24956eca",
+    "manuscript/arxiv-v1/sections/03-smoothing.tex": "dcf5f9e4d5ac501b4d8afaee20e5d2786d349ac31e33dfa86388137911c8723a",
+    "manuscript/arxiv-v1/sections/04-support.tex": "20aea6fddf9429b71e5cb5e5887ee1fe5ffbe4f599faac03b6ddde507e8a1c9a",
+    "manuscript/arxiv-v1/sections/05-geometry-counts.tex": "50d6003d519f23ec50ca67647ce5a6e7763bf7a442c9c86027ae66a8f81040ca",
+    "manuscript/arxiv-v1/sections/06-resources.tex": "b44549aab356b666613ee0329de35a077e8908898d9b9ac4406c6da2f57fa56b",
+    "manuscript/arxiv-v1/sections/07-curvature.tex": "b04c7b121526ee311d70dec727ed31df94b816af7b03ab56c20c18d0c8dff439",
+    "manuscript/arxiv-v1/sections/08-certificates.tex": "2634b8b8b165b226f348dedd9a5fc99e03f93f73a2e600b91d058fe25123c7af",
+    "manuscript/arxiv-v1/sections/09-discussion.tex": "507fffe75b305646a7bfbee9511bcb421f7b7e541da50bdd5fb4019d0970cf7f",
+    "manuscript/arxiv-v1/appendices/finite-analysis.tex": "09a10aa353893d9e0acac73b4baf7e99a31eb6245a3dd97fcf541a017bd754a6",
+    "manuscript/arxiv-v1/appendices/finite-support.tex": "4bc09978e3a7f820f9774fbc537d99cd39051f4cdea3555cc6a46c67d0d098e4",
+    "manuscript/arxiv-v1/appendices/fourier-analysis.tex": "322153fa49b7d5f5bbd042bf0a4823225adc0cd6551308501ba7be0a3751ece8",
+    "manuscript/arxiv-v1/appendices/local42-refinements.tex": "64d17e70e5490223ae58bec07cef44eddc5e61ca59709d92ac76f5975dd7c5b9",
+    "manuscript/arxiv-v1/appendices/moment-domain.tex": "f843059a014dcb13ad61486e92ebfe21fe73276c2bc26852f9c734ad1d2a9cf5",
+    "manuscript/arxiv-v1/appendices/normalization.tex": "d1986afecce85ccccccf2ffc4b09b4b238435002b6ec0b82a323fbef0aa950bf",
+    "manuscript/arxiv-v1/appendices/uniform-bridge.tex": "1af40a192cf9f24c89a25c1ee9d15eaf119006469240fa711675e6b84fa4e7d0",
+    "manuscript/arxiv-v1/references-classical.bib": "d572142ac859fb2ff3a2e4679e33869cb54aa41320df60f23139b149a0a94084",
+    "manuscript/arxiv-v1/references-modern-a.bib": "6375a56e09258d12e6ff5b79eb240d720335f9e9030fe9ba4306a5b210bf304a",
+    "manuscript/arxiv-v1/references-modern-b.bib": "508f3d4000fd3113a26b49647f8a166b00f313e082c83090c51fde256cd475c2"
+  },
+  "versions": {
+    "latexmk": "Latexmk, John Collins, 27 Dec. 2024. Version 4.86a",
+    "pdflatex": "pdfTeX 3.141592653-2.6-1.40.27 (TeX Live 2025)",
+    "bibtex": "BibTeX 0.99d (TeX Live 2025)"
+  },
+  "pages": 163,
+  "pdf_sha256": "00750c63eee6b9cf27b9529279fd6bf59034190d1504e1b1d67e1d978d333132",
+  "layout_and_reference_warnings": []
+}

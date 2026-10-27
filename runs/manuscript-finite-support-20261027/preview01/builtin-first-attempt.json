@@ -1,0 +1,11 @@
+{
+  "kind": "compile-failed",
+  "return_code": 1,
+  "compiler_attempts": [
+    "texlive failed: system Perl library unavailable in sandbox",
+    "tectonic failed: preview newlabel commands were after begin-document"
+  ],
+  "reported_source_error": "main.tex:26: LaTeX Error: Can be used only in preamble.",
+  "source_sha256": "96f18f43039ff41b4f3906994eccf43c33c9148c6cc69ddce4958b72ad24b3f1",
+  "scope": "Preview wrapper error; appendix source was not reached."
+}

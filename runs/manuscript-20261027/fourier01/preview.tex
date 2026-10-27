@@ -1,0 +1,45 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hyphens]{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+\setlength{\emergencystretch}{2em}
+\setcounter{tocdepth}{2}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{condition}[theorem]{Certificate condition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\CE}{C_{\mathrm E}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\pos}[1]{(#1)_+}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\iid}{\mathrm{iid}}
+\title{Toward the sharp iid Berry--Esseen inequality:\\
+analytic reductions and finite certificates}
+\author{Bartosz Ko{\l}odziejek \and Kacper Rodziewicz}
+\date{First manuscript draft, 27 October 2026}
+\begin{document}
+\appendix
+\input{../../../manuscript/arxiv-v1/appendices/fourier-analysis.tex}
+\begin{thebibliography}{9}
+\bibitem{Shevtsova2012} I. Shevtsova, Moment-type estimates with asymptotically optimal structure for the accuracy of the normal approximation, Ann. Math. Inform. 39 (2012), 241--307.
+\bibitem{Schulz2016} J. Schulz, The optimal Berry--Esseen constant in the binomial case, doctoral dissertation, Universit\"at Trier, 2016.
+\end{thebibliography}
+\end{document}

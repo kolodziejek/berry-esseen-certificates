@@ -1,0 +1,4 @@
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/runs/manuscript-finite-v3-20261027/check_source_integrity.py", line 37
+    print(f"{heading}: {len(re.findall(r'\\' + heading + r'\{', new))}")
+                                                                       ^
+SyntaxError: f-string expression part cannot include a backslash

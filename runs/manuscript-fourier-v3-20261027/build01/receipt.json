@@ -1,0 +1,13 @@
+{
+  "command": [
+    "latexmk",
+    "-pdf",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-outdir=../../runs/manuscript-fourier-v3-20261027/build01/texlive",
+    "main.tex"
+  ],
+  "cwd": "manuscript/arxiv-v1",
+  "return_code": 0,
+  "scope": "Local v3 Fourier source build; coordinating task owns final appendix ordering and block paragraph style"
+}

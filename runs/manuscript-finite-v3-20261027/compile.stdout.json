@@ -1,0 +1,123 @@
+{
+  "attempts": [
+    {
+      "command": [
+        "/Library/TeX/texbin/latexmk",
+        "-norc",
+        "-pdf",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-synctex=1",
+        "-outdir=/private/tmp/be-finite-v3-20261027-build",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/main.tex"
+      ],
+      "compiler": "texlive",
+      "exitCode": 0,
+      "log": "d\ne.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod\ne.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.\ncode.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co\nde.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare\nncy.code.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.\ncode.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.\ntex)))\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod\ne.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.\ntex)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version\n-0-65.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version\n-1-18.sty))\n(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty\n(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)\n) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))\n\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod\ne.tex\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan\ndlers.code.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod\ne.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie\ns/tikzlibrarytopaths.code.tex)))\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.\nmeta.code.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie\ns/tikzlibrarypositioning.code.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)\n(/private/tmp/be-finite-v3-20261027-build/main.aux)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg)\n*geometry* driver: auto-detecting\n*geometry* detected driver: pdftex\n(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii\n[Loading MPS to PDF converter (version 2006.09.02).]\n) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty\n(/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))\n(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omslmsy.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omxlmex.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg)\n[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l\nocal/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2\n025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-\ndist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc\n/dvips/lm/lm-mathsy.enc}] (/private/tmp/be-finite-v3-20261027-build/main.toc)\n[2] (./sections/01-introduction.tex\n[3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]\n(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd)\n[4]) (./sections/01b-guide.tex\n[5]\n[6]) (./sections/02-extremizers.tex\n[7]\n[8]\n[9]) (./sections/02b-moment-domain.tex\n[10]) (./sections/03-smoothing.tex\n[11]\n[12]) (./sections/04-support.tex\n[13]\n[14]\n[15]\n[16]) (./sections/05-geometry-counts.tex\n[17]\n[18]\n[19]) (./sections/05b-conserved.tex\n[20]\n[21]\n[22]\n[23]\n[24]) (./sections/06-resources.tex\n[25]\n[26]) (./sections/05c-counts.tex\n[27]\n[28]\n[29]) (./sections/07-curvature.tex\n[30]\n[31]) (./sections/08-certificates.tex\n[32]\n[33]\n[34]\n[35]) (./sections/09-discussion.tex\n[36]) (./appendices/normalization.tex\n[37]) (./appendices/uniform-bridge.tex\n[38]\n[39]\n[40]) (./appendices/finite-support.tex\n[41]\n[42]\n[43]\n[44]\n[45]\n[46]\n[47]) (./appendices/fourier-analysis.tex\n[48] (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-euf.cfg)\n[49]\n[50]\n[51]\n[52]\n[53]\n[54]\n[55]\n[56]\n[57]\n[58]\n[59]\n[60]\n[61]\n[62]\n[63]\n[64]\n[65]\n[66]\n[67]\n[68]\n[69]\n[70]\n[71]\n[72] (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmss.fd)\n[73]\n[74]\n[75]\n[76]\n[77]\n[78]\n[79]\n[80]\n[81]\n[82]\n[83]\n[84]\n[85]\n[86]\n[87]\n[88]\n[89]\n[90]\n[91]\n[92]\n[93]\n[94]\n[95]\n[96]\n[97]\n[98]\n[99]\n[100]\n[101]\n[102]\n[103]\n[104]) (./appendices/local42-refinements.tex\n[105]\n[106]\n[107]\n[108]\n[109]\n[110]\n[111]) (./appendices/finite-analysis.tex\n[112]\n[113]\n[114]\n[115]\n[116]\n[117]\n[118]\n[119]\n[120]\n[121]\n[122]\n[123]\n[124]\n[125]\n[126]\n[127]\n[128]\n[129]\n[130]\n[131]\n[132]\n[133]\n[134]\n[135]\n[136]\n[137]\n[138]\n[139]\n[140]\n[141]\n[142]\n[143]\n[144]\n[145]\n[146]\n[147]\n[148]\n[149]\n[150]\n[151]\n[152]\n[153]\n[154]\n[155]\n[156]\n[157]\n[158]\n[159]) (/private/tmp/be-finite-v3-20261027-build/main.bbl\n[160]\n[161]\n[162])\n[163] (/private/tmp/be-finite-v3-20261027-build/main.aux) )</usr/local/texlive/\n2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texliv\ne/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2025/tex\nmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fo\nnts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/\npublic/lm/lmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/\nlmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><\n/usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/\ntexlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/202\n5/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dis\nt/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/typ\ne1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm\n/lmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></\nusr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/te\nxlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2025\n/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2025/texmf-dist\n/fonts/type1/public/lm/lmss8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type\n1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/l\nm/lmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb\n></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/loc\nal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/\n2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>\nOutput written on /private/tmp/be-finite-v3-20261027-build/main.pdf (163 pages,\n 1295817 bytes).\nSyncTeX written on /private/tmp/be-finite-v3-20261027-build/main.synctex.gz.\nTranscript written on /private/tmp/be-finite-v3-20261027-build/main.log.\nLatexmk: Getting log file '/private/tmp/be-finite-v3-20261027-build/main.log'\nLatexmk: Examining '/private/tmp/be-finite-v3-20261027-build/main.fls'\nLatexmk: Examining '/private/tmp/be-finite-v3-20261027-build/main.log'\nLatexmk: Found input bbl file '/private/tmp/be-finite-v3-20261027-build/main.bbl'\nLatexmk: Log file says output to '/private/tmp/be-finite-v3-20261027-build/main.pdf'\nLatexmk: Log file says output to '/private/tmp/be-finite-v3-20261027-build/main.pdf'\nLatexmk: Found bibliography file(s):\n  ./references-added.bib\n  ./references-classical.bib\n  ./references-modern-a.bib\n  ./references-modern-b.bib\nLatexmk: All targets (/private/tmp/be-finite-v3-20261027-build/main.pdf) are up-to-date\n\n",
+      "pdfExists": true,
+      "pdfPath": "/private/tmp/be-finite-v3-20261027-build/main.pdf"
+    }
+  ],
+  "command": [
+    "/Library/TeX/texbin/latexmk",
+    "-norc",
+    "-pdf",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-synctex=1",
+    "-outdir=/private/tmp/be-finite-v3-20261027-build",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/main.tex"
+  ],
+  "compiler": "texlive",
+  "exitCode": 0,
+  "log": "d\ne.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod\ne.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.\ncode.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co\nde.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare\nncy.code.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.\ncode.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.\ntex)))\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod\ne.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.\ntex)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version\n-0-65.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version\n-1-18.sty))\n(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty\n(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)\n) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))\n\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod\ne.tex\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan\ndlers.code.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod\ne.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie\ns/tikzlibrarytopaths.code.tex)))\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.\nmeta.code.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie\ns/tikzlibrarypositioning.code.tex)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)\n(/private/tmp/be-finite-v3-20261027-build/main.aux)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg)\n*geometry* driver: auto-detecting\n*geometry* detected driver: pdftex\n(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii\n[Loading MPS to PDF converter (version 2006.09.02).]\n) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty\n(/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))\n(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omslmsy.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omxlmex.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg)\n[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l\nocal/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2\n025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-\ndist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc\n/dvips/lm/lm-mathsy.enc}] (/private/tmp/be-finite-v3-20261027-build/main.toc)\n[2] (./sections/01-introduction.tex\n[3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]\n(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd)\n[4]) (./sections/01b-guide.tex\n[5]\n[6]) (./sections/02-extremizers.tex\n[7]\n[8]\n[9]) (./sections/02b-moment-domain.tex\n[10]) (./sections/03-smoothing.tex\n[11]\n[12]) (./sections/04-support.tex\n[13]\n[14]\n[15]\n[16]) (./sections/05-geometry-counts.tex\n[17]\n[18]\n[19]) (./sections/05b-conserved.tex\n[20]\n[21]\n[22]\n[23]\n[24]) (./sections/06-resources.tex\n[25]\n[26]) (./sections/05c-counts.tex\n[27]\n[28]\n[29]) (./sections/07-curvature.tex\n[30]\n[31]) (./sections/08-certificates.tex\n[32]\n[33]\n[34]\n[35]) (./sections/09-discussion.tex\n[36]) (./appendices/normalization.tex\n[37]) (./appendices/uniform-bridge.tex\n[38]\n[39]\n[40]) (./appendices/finite-support.tex\n[41]\n[42]\n[43]\n[44]\n[45]\n[46]\n[47]) (./appendices/fourier-analysis.tex\n[48] (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-euf.cfg)\n[49]\n[50]\n[51]\n[52]\n[53]\n[54]\n[55]\n[56]\n[57]\n[58]\n[59]\n[60]\n[61]\n[62]\n[63]\n[64]\n[65]\n[66]\n[67]\n[68]\n[69]\n[70]\n[71]\n[72] (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmss.fd)\n[73]\n[74]\n[75]\n[76]\n[77]\n[78]\n[79]\n[80]\n[81]\n[82]\n[83]\n[84]\n[85]\n[86]\n[87]\n[88]\n[89]\n[90]\n[91]\n[92]\n[93]\n[94]\n[95]\n[96]\n[97]\n[98]\n[99]\n[100]\n[101]\n[102]\n[103]\n[104]) (./appendices/local42-refinements.tex\n[105]\n[106]\n[107]\n[108]\n[109]\n[110]\n[111]) (./appendices/finite-analysis.tex\n[112]\n[113]\n[114]\n[115]\n[116]\n[117]\n[118]\n[119]\n[120]\n[121]\n[122]\n[123]\n[124]\n[125]\n[126]\n[127]\n[128]\n[129]\n[130]\n[131]\n[132]\n[133]\n[134]\n[135]\n[136]\n[137]\n[138]\n[139]\n[140]\n[141]\n[142]\n[143]\n[144]\n[145]\n[146]\n[147]\n[148]\n[149]\n[150]\n[151]\n[152]\n[153]\n[154]\n[155]\n[156]\n[157]\n[158]\n[159]) (/private/tmp/be-finite-v3-20261027-build/main.bbl\n[160]\n[161]\n[162])\n[163] (/private/tmp/be-finite-v3-20261027-build/main.aux) )</usr/local/texlive/\n2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texliv\ne/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2025/tex\nmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fo\nnts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/\npublic/lm/lmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/\nlmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><\n/usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/\ntexlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/202\n5/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dis\nt/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/typ\ne1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm\n/lmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></\nusr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/te\nxlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2025\n/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2025/texmf-dist\n/fonts/type1/public/lm/lmss8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type\n1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/l\nm/lmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb\n></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/loc\nal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/\n2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>\nOutput written on /private/tmp/be-finite-v3-20261027-build/main.pdf (163 pages,\n 1295817 bytes).\nSyncTeX written on /private/tmp/be-finite-v3-20261027-build/main.synctex.gz.\nTranscript written on /private/tmp/be-finite-v3-20261027-build/main.log.\nLatexmk: Getting log file '/private/tmp/be-finite-v3-20261027-build/main.log'\nLatexmk: Examining '/private/tmp/be-finite-v3-20261027-build/main.fls'\nLatexmk: Examining '/private/tmp/be-finite-v3-20261027-build/main.log'\nLatexmk: Found input bbl file '/private/tmp/be-finite-v3-20261027-build/main.bbl'\nLatexmk: Log file says output to '/private/tmp/be-finite-v3-20261027-build/main.pdf'\nLatexmk: Log file says output to '/private/tmp/be-finite-v3-20261027-build/main.pdf'\nLatexmk: Found bibliography file(s):\n  ./references-added.bib\n  ./references-classical.bib\n  ./references-modern-a.bib\n  ./references-modern-b.bib\nLatexmk: All targets (/private/tmp/be-finite-v3-20261027-build/main.pdf) are up-to-date\n\n",
+  "pdfExists": true,
+  "pdfPath": "/private/tmp/be-finite-v3-20261027-build/main.pdf",
+  "rootFile": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/main.tex",
+  "tectonic": {
+    "checked": [
+      {
+        "path": "/Applications/ChatGPT.app/Contents/Resources/tectonic/tectonic",
+        "source": "app"
+      }
+    ],
+    "path": "/Applications/ChatGPT.app/Contents/Resources/tectonic/tectonic",
+    "reason": "Tectonic executable is available.",
+    "source": "app",
+    "status": "available",
+    "version": "Tectonic 0.17.0"
+  },
+  "tectonicSuitability": {
+    "reasons": [
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/main.tex: bibliography tooling"
+    ],
+    "scannedFiles": [
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/main.tex",
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/appendices/finite-analysis.tex",
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/appendices/local42-refinements.tex",
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/appendices/fourier-analysis.tex",
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/appendices/finite-support.tex",
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/appendices/uniform-bridge.tex",
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/appendices/normalization.tex",
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/sections/09-discussion.tex",
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/sections/08-certificates.tex",
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/sections/07-curvature.tex",
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/sections/05c-counts.tex",
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/sections/06-resources.tex",
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/sections/05b-conserved.tex",
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/sections/05-geometry-counts.tex",
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/sections/04-support.tex",
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/sections/03-smoothing.tex",
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/sections/02b-moment-domain.tex",
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/sections/02-extremizers.tex",
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/sections/01b-guide.tex",
+      "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/sections/01-introduction.tex"
+    ],
+    "suitable": false
+  },
+  "texliveDetection": {
+    "activeBinDir": "/Library/TeX/texbin",
+    "commands": {
+      "biber": {
+        "path": "/Library/TeX/texbin/biber",
+        "version": "present"
+      },
+      "kpsewhich": {
+        "path": "/Library/TeX/texbin/kpsewhich",
+        "version": "kpathsea version 6.4.1"
+      },
+      "latexmk": {
+        "path": "/Library/TeX/texbin/latexmk",
+        "version": "Latexmk, John Collins, 27 Dec. 2024. Version 4.86a"
+      },
+      "lualatex": {
+        "path": "/Library/TeX/texbin/lualatex",
+        "version": "This is LuaHBTeX, Version 1.21.0 (TeX Live 2025)"
+      },
+      "pdflatex": {
+        "path": "/Library/TeX/texbin/pdflatex",
+        "version": "pdfTeX 3.141592653-2.6-1.40.27 (TeX Live 2025)"
+      },
+      "xelatex": {
+        "path": "/Library/TeX/texbin/xelatex",
+        "version": "XeTeX 3.141592653-2.6-0.999997 (TeX Live 2025)"
+      }
+    },
+    "knownTexBinDirs": [
+      "/Library/TeX/texbin",
+      "/usr/local/texlive/2025/bin/universal-darwin",
+      "/usr/local/texlive/2019/bin/x86_64-darwin",
+      "/usr/local/texlive/2018/bin/x86_64-darwin",
+      "/usr/local/texlive/2015/bin/x86_64-darwin",
+      "/usr/local/texlive/2015/bin/universal-darwin",
+      "/usr/local/texlive/2014/bin/x86_64-darwin",
+      "/usr/local/texlive/2014/bin/universal-darwin"
+    ],
+    "missingRecommended": [],
+    "missingRequired": [],
+    "reason": "Required TeX tools are available.",
+    "searchPath": "/Library/TeX/texbin:/usr/local/texlive/2025/bin/universal-darwin:/usr/local/texlive/2019/bin/x86_64-darwin:/usr/local/texlive/2018/bin/x86_64-darwin:/usr/local/texlive/2015/bin/x86_64-darwin:/usr/local/texlive/2015/bin/universal-darwin:/usr/local/texlive/2014/bin/x86_64-darwin:/usr/local/texlive/2014/bin/universal-darwin:/opt/homebrew/bin:/opt/homebrew/sbin:/opt/local/bin:/opt/local/sbin:/anaconda3/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/bkolodziejek/.codex/tmp/arg0-macos/codex-arg01jZaNb:/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/bkolodziejek/miniforge3/bin:/Users/bkolodziejek/opt/anaconda3/condabin:/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS",
+    "status": "existing-usable",
+    "texmfroot": "/usr/local/texlive/2025"
+  }
+}

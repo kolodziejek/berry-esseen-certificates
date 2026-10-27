@@ -1,3 +1,52 @@
+# Third-round corrections and declined shortcuts — 27 October 2026
+
+- Old curvature identity2[3(b−1)+2u+c]/(c−u)^4 is false: at
+  (b,c,u)=(1,3/4,1/4) it gives40 instead of56. Correct u+2c preserves
+  convexity and the maximum theorem. Historical checked status was insufficient.
+- Blanket deletion of supposedly identical appendix proofs is unsafe:
+  actual-index weighting, exact signed integrals and the wider Pearson
+  rectangle need their separate hypotheses and formulas.
+- The short Gaussian bounds do not replace fine directed pi endpoints.
+- Polynomial factors above degree3 require appropriate moments, not necessarily
+  compact support. Here compactness is the proved sufficient source of them.
+- 'Positive maximizing threshold' is ambiguous and can incorrectly impose t>0;
+  the intended statement is a threshold with positive closed-CDF discrepancy.
+- Supplied claims of mandatory author directives, new vendor provenance,
+  unconditional reductions, or completed verification were not treated as facts.
+
+# Rejected revision proposals — 27 October 2026
+
+- Weights `(4 minus/plus sqrt(10))/2` are not a probability pair. Correct
+  `p=(4-sqrt(10))/2`, `q=1-p`.
+- The normalized smoothing recurrence has an additive `O(1/n)` leading
+  error, not `O(n^(-3/2))`.
+- `D >= 0` alone does not license removing the Gaussian weight: the
+  independent review supplies a compactly supported continuous example
+  with `gamma+3J < 0`. The small-remainder gate is essential.
+- An exact mixture identity is not a proof of uniform relative-to-noise
+  remainders; a set of finite-index helper tools is not a cover of 6--41.
+- Removing 1,300 unique atlas lines or declaring all analytical obligations
+  complete would conceal unresolved work. Both proposals were declined.
+- Build01 of this editorial revision failed on a missing TeX delimiter
+  after renaming the strip width (`\lew`); corrected to `\le w`.
+  The failed and successful diagnostics are preserved under the revision run.
+
+# Manuscript review boundaries — 27 October 2026
+
+- Including a supplied analytic proof in a typeset appendix does not make it
+  independently verified. Compiling and visual QA establish presentation only.
+- The direct n5 support ray gates pass, but the coarse all-H Gaussian bound is
+  positive after contact price at all six required radii. It cannot close the
+  whole-H endpoint conditions. This is not a counterexample to support.
+- The n5 structural cutoff equals819/2000 exactly: use a non-strict endpoint
+  comparison, followed by the distinct strict target comparison.
+- Negative cubic gain requires the upper score multiplier, with positive
+  multiplier gates. Clamp the total repair before transporting1/n to1/N.
+- A formalized endpoint with external interfaces is not a discharged sharp
+  theorem. Citation metadata and repository snapshots do not verify proofs.
+- The first built-in combined compilation was stale while renders changed
+  project inputs. The stable retry succeeded; both statuses are distinguished.
+
 # Rejected inferences — 27 October 2026
 
 Second-reduction controls/corrections:

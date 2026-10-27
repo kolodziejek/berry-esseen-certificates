@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python3",
+    "<latex-plugin>/scripts/compile_latex.py",
+    "runs/manuscript-finite-support-20261027/preview01/project/main.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "runs/manuscript-finite-support-20261027/texlive01/build",
+    "--json"
+  ],
+  "python_version": "3.9.6",
+  "return_code": 0,
+  "input_sha256": {
+    "runs/manuscript-finite-support-20261027/preview01/project/main.tex": "e855c4b9b5bf17d9217aeee2f1688d84b8f81c9bcd14b501f510760f0a987f40",
+    "runs/manuscript-finite-support-20261027/preview01/project/finite-support.tex": "f36222ddc38a88e0b0529d94216f8d26087172c8d4bcf32bab7cb37b9600faa1"
+  }
+}

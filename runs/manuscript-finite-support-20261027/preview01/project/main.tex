@@ -1,0 +1,38 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\R}{\mathbb R}
+\newcommand{\CE}{C_{\mathrm E}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\pos}[1]{(#1)_+}
+\makeatletter
+\newlabel{ms:support}{{M4}{}{}{main support theorem}{}}
+\newlabel{ms:contact}{{M2-contact}{}{}{main contact lemma}{}}
+\newlabel{ms:contact-formula}{{M2-contact}{}{}{main contact formula}{}}
+\newlabel{ms:structural-classical}{{M1-structural}{}{}{main structural bounds}{}}
+\newlabel{ms:sign-moment}{{M-sign}{}{}{main sign-moment lemma}{}}
+\newlabel{ms:sharp-third}{{M-third}{}{}{main third-moment theorem}{}}
+\newlabel{ms:gaussian-constants}{{M3-Gaussian}{}{}{main Gaussian constants}{}}
+\newlabel{ms:base41}{{M8-base}{}{}{main finite-base assumption}{}}
+\makeatother
+\begin{document}
+\begin{center}\Large Retained finite-index support: appendix preview\end{center}
+\noindent This compilation checks the appendix in isolation. Cross-references prefixed ``M'' identify results in the main manuscript, whose proofs are not duplicated in this preview.
+
+\appendix
+\input{finite-support}
+\end{document}

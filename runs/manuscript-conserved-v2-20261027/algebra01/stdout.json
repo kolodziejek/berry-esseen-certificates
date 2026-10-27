@@ -1,0 +1,17 @@
+{
+  "status": "PASS_PROMOTED_IDENTITY_ALGEBRA_AND_PRESERVATION",
+  "algebra": "zero-bias contact integral, truncated first moment, second slack, conserved identity and unweighting regrouping",
+  "negative_controls": [
+    "wrong hinge-remainder sign",
+    "missing sqrt(n) scale",
+    "omitted leakage",
+    "upper endpoint atom incorrectly included",
+    "loose defect cap giving negative phase price",
+    "raw ceiling giving nonpositive density floor"
+  ],
+  "preservation": "entire coefficient atlas and following sections unchanged modulo leading zeros",
+  "alias_required_in_root_geometry": [
+    "ms:fourier:afcore:lem:physical-defect"
+  ],
+  "scope": "formal algebra and source-preservation checks; no native certificate or full analytic-chain acceptance"
+}

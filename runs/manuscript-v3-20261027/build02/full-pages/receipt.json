@@ -1,0 +1,38 @@
+{
+  "pages_build01": 158,
+  "pages_build02": 158,
+  "pages_text_changed": [
+    98,
+    102
+  ],
+  "render_commands": [
+    [
+      "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/pdftoppm",
+      "-f",
+      "98",
+      "-l",
+      "98",
+      "-r",
+      "120",
+      "-png",
+      "runs/manuscript-v3-20261027/build02/texlive/main.pdf",
+      "runs/manuscript-v3-20261027/build02/full-pages/page"
+    ],
+    [
+      "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/pdftoppm",
+      "-f",
+      "102",
+      "-l",
+      "102",
+      "-r",
+      "120",
+      "-png",
+      "runs/manuscript-v3-20261027/build02/texlive/main.pdf",
+      "runs/manuscript-v3-20261027/build02/full-pages/page"
+    ]
+  ],
+  "render_exit_codes": [
+    0,
+    0
+  ]
+}

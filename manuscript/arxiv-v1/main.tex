@@ -1,0 +1,104 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hyphens]{url}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\hypersetup{pdftitle={Analytic reductions for the sharp iid Berry--Esseen inequality},
+ pdfauthor={Bartosz Kołodziejek and Kacper Rodziewicz}}
+\setlength{\emergencystretch}{2em}
+\setcounter{tocdepth}{1}
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+  {2.5ex \@plus1ex \@minus.2ex}{0.8ex \@plus.2ex}%
+  {\normalfont\normalsize\bfseries}}
+\makeatother
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{condition}[theorem]{Certificate condition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\CE}{C_{\mathrm E}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\pos}[1]{(#1)_+}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\iid}{\mathrm{iid}}
+\title{Analytic reductions for the sharp iid\\
+Berry--Esseen inequality\thanks{This paper was written with substantial
+assistance from AI systems; see the end of Section~\ref{ms:discussion}.}}
+\author{Bartosz Ko{\l}odziejek \and Kacper Rodziewicz}
+\date{27 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The conjectured optimal constant in the Berry--Esseen inequality for sums
+of i.i.d.\ random variables with finite third moment is
+$\CE=(3+\sqrt{10})/(6\sqrt{2\pi})$, the limiting value for one fixed
+two-point law. We develop an approach to the matching upper bound at every
+sample size. For fixed $n\ge2$ an extremal law exists and satisfies a
+first-order contact condition. Integrating this condition against the
+zero-bias density gives an exact identity that links the
+normal-approximation error to a Fourier remainder and to a nonnegative
+moment defect, which vanishes only at the extremal two-point law.
+Conditioning on the signs of the summands writes the sum exactly as a
+binomial mixture, so that a nearly two-point law can be compared with its
+Bernoulli skeleton. Assuming the sharp bound through $41$, a one-step smoothing recurrence
+controls the first index $n\ge42$ with $C_n\ge\CE$. The sharp predecessor
+bounds then give an elementary support estimate. Retaining the score
+excess sharpens the defect bound, while an exact curvature formula
+simplifies the conditional-count comparison. The global conclusion remains
+conditional on that finite base and a complete local exclusion for every
+$n\ge42$, including equality. The conjecture is not established here.
+\end{abstract}
+\clearpage
+\begingroup\small
+\tableofcontents
+\endgroup
+\clearpage
+\input{sections/01-introduction}
+\input{sections/01b-guide}
+\input{sections/02-extremizers}
+\input{sections/02b-moment-domain}
+\input{sections/03-smoothing}
+\input{sections/04-support}
+\input{sections/05-geometry-counts}
+\input{sections/05b-conserved}
+\input{sections/06-resources}
+\input{sections/05c-counts}
+\input{sections/07-curvature}
+\input{sections/08-certificates}
+\input{sections/09-discussion}
+\appendix
+\setcounter{secnumdepth}{4}
+\input{appendices/fourier-analysis}
+\input{appendices/normalization}
+\input{appendices/uniform-bridge}
+\input{appendices/local42-refinements}
+\input{appendices/finite-support}
+\input{appendices/finite-analysis}
+\begingroup
+\small\raggedright
+\urlstyle{same}
+\bibliographystyle{plainnat}
+\bibliography{references-classical,references-modern-a,references-modern-b,references-added}
+\endgroup
+\end{document}

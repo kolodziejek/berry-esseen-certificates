@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-review/manuscript/arxiv-v1/research/revision3_checks/check_derivatives_constants.py"
+  ],
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "returncode": 0,
+  "elapsed_seconds": 0.019960833,
+  "inputs_sha256": {
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-review/manuscript/arxiv-v1/research/revision3_checks/check_derivatives_constants.py": "da19d4d39230484ae13d054f3735f66e13d0b9af873ecbd413c41986f34a56e4",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-review/manuscript/arxiv-v1/sections/07-curvature.tex": "cc7ec6124a0699a7fd40ea70870f29b065f7353ffdb62bfc7d6c3ee2d1980b56",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-review/manuscript/arxiv-v1/sections/08-certificates.tex": "b44d37e6e07f99d0073f78fc4f1bc0a51920b385c1179eb5e899dfb63314a7a9",
+    "/Users/bkolodziejek/Downloads/deslop.patch": "8f08d86bf9d7eb4617bceb873ab35856e3316dcb6167547d3336e36734ee38ee",
+    "/Users/bkolodziejek/Downloads/main(10).tex": "199fb4fd4f8381f9a9112435b228a59dc8d09cfcf41576b7e773e8e8ba746721",
+    "/Users/bkolodziejek/Downloads/README.md": "6ef91ab04db07ed3d30bea3d2fd085635327d9de40e05ccf5f7c58ea8f31e095",
+    "/Users/bkolodziejek/Downloads/source-arxiv-v1 2/MANUSCRIPT_REVISION_INSTRUCTIONS.md": "c30e271f177b7f2d4e9955399ca06727ef8bb4fc1fa96b169b03aa5adc8e599e"
+  },
+  "outputs_sha256": {
+    "stdout.txt": "9e2e72c070dab3b6e4cb581ce7feb1d797f9f8178a8b6ee50088b6dfe5547a72",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "scope": "Independent exact derivative and scalar-constant checks; no native/local predicate acceptance."
+}

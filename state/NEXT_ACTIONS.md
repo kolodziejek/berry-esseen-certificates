@@ -1,3 +1,49 @@
+# After third manuscript revision — 27 October 2026
+
+1. Review the158page paper and research/revision3-decisions.md. Keep existing
+   PR#3 in draft; the bounded review does not recommend merging as a finished paper.
+2. Use the corrected derivative in the manuscript and reduction2 sources;
+   old PASS logs did not detect the display error and remain historical records.
+3. Continue full independent review of the retained Fourier/finite chain and
+   the BASE41/LOCAL42 obligations. Distinguish these from editorial proof-reference
+   checks. Do not launch native generation or alter certificates without approval.
+
+Next bounded command from this worktree:
+python3 manuscript/arxiv-v1/tools/check_sources.py
+The independent algebra checker is
+manuscript/arxiv-v1/research/revision3_checks/check_derivatives_constants.py.
+
+# After manuscript editorial revision — 27 October 2026
+
+1. Review the new manuscript guide, main Section 5.4 and the disposition
+   report `manuscript/arxiv-v1/research/revision-decisions.md`.
+2. Preserve the explicit raw-remainder and positive phase-price gates when
+   reviewing concrete Fourier resource rows. Promotion into the main text
+   does not establish those numerical premises.
+3. Continue the independent BASE41/provider and uniform LOCAL42 review
+   already described below. No unconditional theorem or complete acceptance
+   contract has been created by this editorial revision.
+4. Keep manuscript PR #3 in draft for author review. No merge, arXiv
+   submission, main push or upstream change without explicit authorization.
+
+# Manuscript next steps — 27 October 2026
+
+1. Review manuscript/arxiv-v1/main.pdf and research/manuscript-review.md.
+   Keep the manuscript PR in draft. Confirm the exposition and prioritize
+   independent mathematical review of the retained Fourier/finite chain.
+2. Close the actual finite-base dependency graph before claiming the global
+   conditional theorem's premises. The n5 direct support lemma leaves six
+   pairs of whole-H endpoint predicates; the n>=42 replacement does not cover
+   them. Preserve the literal n>=36/47 finite-heat/strip scopes as well.
+3. Audit/rebuild a new acceptance contract for changed curvature/resources
+   and150 LOW rows, preserving joint weighted nD and the complete cover.
+4. The source archive is ready for editing and local compilation, not for
+   automatic submission. No heavy campaign, merge or arXiv upload authorized.
+
+Next small runnable source/document check:
+python3 manuscript/arxiv-v1/tools/check_sources.py
+The independent rational diagnostic scripts are in its research/ directory.
+
 # Next actions — 27 October 2026
 
 1. Keep existing draft PR#2 pending explicit merge approval. Independent
