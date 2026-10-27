@@ -1,0 +1,200 @@
+\section{A support-free step and the least contrary index}
+\label{ms:smoothing}
+
+The role of smoothing here is modest but useful. A sharp preceding index
+forces any next contrary score into the narrow resource regime used by the
+local analysis. The estimate applies to every standardized marginal with a
+finite third absolute moment; it does not use contact or support acquisition.
+
+\begin{lemma}[Elementary Gaussian constants]
+\label{ms:gaussian-constants}
+For the standard normal density $\phi$,
+\[
+ \|\phi''\|_\infty=\phi(0)<\frac25,
+ \qquad \|\phi'''\|_\infty\le\frac2\pi,
+ \qquad \frac1{4\pi}<\frac2{25}.
+\]
+Moreover $819/2000<\CE<20487/50000<41/100$.
+\end{lemma}
+\begin{proof}
+Since $\phi''(x)=(x^2-1)\phi(x)$, the norm on $x^2\le1$ is at most
+$\phi(0)$. On $x^2\ge1$, the maximum of
+$(x^2-1)e^{-x^2/2}$ is $2e^{-3/2}<1$, attained when $x^2=3$.
+Thus the norm is exactly $\phi(0)$.
+
+For completeness, the Gaussian transform can be obtained without an
+inversion theorem for the distribution being studied. Differentiating
+$J(t)=\int_\R e^{-x^2/2}e^{itx}\,dx$ under the integral and integrating by
+parts give $J'(t)=-tJ(t)$. The Gaussian integral, evaluated by squaring it
+and using polar coordinates, gives $J(0)=\sqrt{2\pi}$. Hence
+$J(t)=\sqrt{2\pi}e^{-t^2/2}$; applying the same formula with the variables
+interchanged gives
+\[
+ \phi(x)=\frac1{2\pi}\int_\R e^{-t^2/2}e^{-itx}\,dt.
+\]
+Three differentiations are justified by the integrability of
+$|t|^3e^{-t^2/2}$. Consequently
+\[
+ \|\phi'''\|_\infty
+ \le\frac1{2\pi}\int_\R|t|^3e^{-t^2/2}\,dt=\frac2\pi.
+\]
+The last integral equals four after the substitution $w=t^2/2$ on the
+positive half-line.
+
+Here are elementary rational comparisons for all numerical constants used
+in this section. Put $a=\arctan(1/5)$ and $b=\arctan(1/239)$.
+Tangent addition gives $\tan(2a)=5/12$, $\tan(4a)=120/119$ and
+$\tan(4a-b)=1$. Also
+\[
+ 0<4(1/5-1/(3\cdot5^3))-1/239<4a-b<4/5<1<\pi/2.
+\]
+The arctangent inequalities follow by integrating
+$1-t^2<1/(1+t^2)<1$, while $\pi/2=2\arctan(1)>1$ follows by integrating
+$1/(1+t^2)>1/2$ on $[0,1)$. It follows that $\pi=16a-4b$ and
+\[
+ \pi>16(1/5-1/(3\cdot5^3))-4/239
+      =281476/89625>25/8.
+\]
+This proves $\phi(0)<2/5$ and $1/(4\pi)<2/25$.
+
+To bound $\CE$ more closely, define
+\[
+ s_k(x)=\sum_{j=0}^{k-1}\frac{(-1)^jx^{2j+1}}{2j+1},\quad
+ \pi_-=16s_6(1/5)-4s_1(1/239),\quad
+ \pi_+=16s_5(1/5)-4s_2(1/239).
+\]
+The remainder in the finite geometric expansion of $1/(1+t^2)$ has its
+stated alternating sign, so integration gives $\pi_-<\pi<\pi_+$.
+Let $r_-=3162277660/10^9$ and $r_+=3162277661/10^9$. Squaring shows
+$r_-^2<10<r_+^2$. The following comparisons are exact rational ones:
+\[
+ \left(\frac{819}{2000}\right)^2
+ <\frac{19+6r_-}{72\pi_+}
+ <\CE^2=\frac{19+6\sqrt{10}}{72\pi}
+ <\frac{19+6r_+}{72\pi_-}
+ <\left(\frac{20487}{50000}\right)^2.
+\]
+For example, each outer comparison follows by multiplying by its positive
+rational denominator; the displayed finite sums specify those denominators
+completely. All quantities are positive, so taking square roots proves the
+claimed bounds. In particular, $.4095<\CE<.40974<.41$.
+\end{proof}
+
+\begin{theorem}[One-step smoothing]
+\label{ms:one-step}
+For every integer $n\ge2$,
+\begin{equation}
+ C_n\le\sqrt{\frac n{n-1}}C_{n-1}
+       +\frac{\sqrt n}{15(n-1)^{3/2}}
+       +\frac{2\sqrt n}{25(n-1)^2}.
+\label{ms:smoothing-recurrence}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Fix $P\in\mathcal P$ and a raw threshold $H$. Write $v=n-1$ and
+$G_v(x)=\Phi(x/\sqrt v)$. Conditioning on the last summand gives
+\[
+ \left|F_{n,P}(H)-\E G_v(H-X_n)\right|
+ \le C_v\rho/\sqrt v.
+\]
+This uses the defining bound for the same marginal at the preceding index;
+the CDF of the sum is not differentiated.
+
+Taylor's theorem, applied only to the smooth function $G_v$, gives
+\[
+ \left|G_v(H-y)-G_v(H)+yG_v'(H)-\tfrac12y^2G_v''(H)\right|
+ \le\frac{\phi(0)}{6v^{3/2}}|y|^3.
+\]
+Taking expectations and using the first two moments yields
+\[
+ \left|\E G_v(H-X)-G_v(H)-\tfrac12G_v''(H)\right|
+ \le\frac{\phi(0)\rho}{6v^{3/2}}<\frac\rho{15v^{3/2}}.
+\]
+For the change in Gaussian variance, direct differentiation gives
+$\partial_vG_v=G_v''/2$ and $\partial_v^2G_v=G_v^{(4)}/4$.
+Taylor's integral remainder in the variance therefore gives
+\[
+ G_{v+1}(H)-G_v(H)-\tfrac12G_v''(H)
+   =\frac14\int_0^1(1-t)G_{v+t}^{(4)}(H)\,dt.
+\]
+As $G_w^{(4)}(H)=w^{-2}\phi'''(H/\sqrt w)$, its absolute value is at most
+\[
+ \frac{\|\phi'''\|_\infty}{8v^2}
+       \le\frac1{4\pi v^2}<\frac2{25v^2}.
+\]
+Combine the three bounds, multiply by $\sqrt n/\rho$, and use $\rho\ge1$.
+The resulting estimate holds for every $P,H$, so taking both suprema proves
+\eqref{ms:smoothing-recurrence}.
+
+Only a constant multiple of $|X|^3$ was integrated in the non-Gaussian
+remainder. Thus rare remote atoms and unbounded support cause no additional
+assumption. The bound is uniform in $H$ and controls both signs. Strict
+events follow as limits of increasing closed thresholds, with the same
+normal value at the limit.
+\end{proof}
+
+\begin{lemma}[Entry at a sharp predecessor]
+\label{ms:first-failure-entry}
+If $n\ge42$ and $C_{n-1}\le\CE\le C_n$, then
+\[
+ 0\le n(C_n-\CE)<\frac{3003}{10250}<\frac3{10},\qquad
+ C_n<\frac{73}{175}<\frac{2113}{5000},\qquad
+ n(C_{n-1}-C_n)_+=0.
+\]
+For every marginal $P\in\mathcal P$,
+$n(R_{n-1}(P)-C_n)_+=0$ as well.
+\end{lemma}
+\begin{proof}
+Let $s=\sqrt{n/(n-1)}$ and $c=\CE$. From
+\eqref{ms:smoothing-recurrence} and
+$n(s-1)=(n/(n-1))/(s+1)$,
+\[
+ n(C_n-c)\le\frac n{n-1}
+ \left\{\frac c{s+1}+\frac s{15}
+                         +\frac{2s}{25\sqrt{n-1}}\right\}.
+\]
+For $n\ge42$, the ratio $n/(n-1)$ is at most $42/41$,
+$\sqrt{n-1}>6$, and $1<s<81/80$. The latter follows at the endpoint
+from $41\cdot81^2-42\cdot80^2=201>0$ and then from monotonicity.
+Using $c<41/100$ gives the strict bound
+\[
+ n(C_n-c)<\frac{42}{41}
+ \left(\frac{41}{200}+\frac{27}{400}+\frac{27}{2000}\right)
+ =\frac{3003}{10250}.
+\]
+The reserve below $3/10$ is $36/5125$. Consequently
+$C_n<c+.3/n<.41+.3/42=73/175$, whose reserve below $.4226$ is
+$191/35000$. Finally $R_{n-1}(P)\le C_{n-1}\le c\le C_n$, so both
+positive parts vanish.
+\end{proof}
+
+These are entry estimates, not local exclusion theorems. In particular,
+a zero predecessor decrement does not say that the conditional noise,
+the physical defect or a leakage term vanishes.
+
+\begin{proposition}[Equality-inclusive least contrary index]
+\label{ms:least-contrary}
+Assume $C_j\le\CE$ for $1\le j\le41$. If some $C_n\ge\CE$ with
+$n\ge42$, there is a least such index, and at that index
+Lemma~\ref{ms:first-failure-entry} holds, while
+\[
+ C_{n-1},C_{n-2}\le\CE<.41<.4253.
+\]
+Thus any independently established implication excluding an attained
+positive closed witness under these entry conditions excludes that least
+index. If such an implication is valid for every actual $n\ge42$, it gives
+$C_n<\CE$ throughout that range.
+\end{proposition}
+\begin{proof}
+The positive integers are well ordered. Below the least chosen index,
+the indices from42 onward have $C_j<\CE$, and the earlier ones have the
+assumed weak bound. At $n=42$ the required predecessors are41 and40;
+at later indices the same conclusion holds. Apply the scalar lemma and
+then Lemma~\ref{ms:attainment}. Every premise of the stated independent
+exclusion implication is now available, including equality at the current
+score. The contradiction proves the conclusion.
+\end{proof}
+
+Choosing the least index with $C_n>\CE$ would give only a weak conclusion.
+Neither the sharp finite base nor the all-index exclusion implication is
+proved by the least-index argument itself.
