@@ -3,14 +3,12 @@
 \section{Exact half-line smoothing}
 \label{ms:fourier:kernel}
 
-This appendix writes out the analytical arguments used by the Fourier,
-resource and local-comparison interfaces. The material is retained from the
-supplied proof source, with the sign and boundary conventions made explicit.
-It is a collection of proof candidates for those implications, not a claim
-that the complete supplied chain has been independently verified. Each
-numerical positivity, outward enclosure and finite-cover premise below
-remains a certificate condition. The source and coverage ledger identifies
-what was transcribed and what was not checked in preparing this appendix.
+The main conserved identity reduces the problem to bounding explicit
+Fourier integrals and moment expressions. This appendix develops the
+half-line smoothing kernel, characteristic-function enclosures, complete
+low- and high-frequency bounds, and the resource-to-confinement maps
+used in those estimates. Section~\ref{ms:certificates} records their
+certificate conditions and verification status.
 
 Write $\phi$ and $\Phi$ for the standard normal density and distribution
 function. All terminating decimals are exact rational numbers. The
@@ -765,292 +763,6 @@ Selecting a favorable branch at the midpoint without proving it on
 the entire cell is not. Endpoint pieces and the infinite normal tail
 remain separate obligations in every finite certificate.
 
-\subsection{Contact, compensated inversion, and the conserved identity}
-\label{ms:fourier:afcore:sec:conserved}
-
-We now state precisely the contact input needed for the identity.
-Fix an integer $n\ge2$ and a standardized common iid marginal $P$.
-Write $S_j=X_1+\cdots+X_j$, $s=\sqrt n$, $z=H/s$,
-\[
- F=\Pp(S_n\le H),\quad
- C=\frac{s}{\rho}\{F-\Phi(z)\}>0,\quad
- \beta=\E[X|X|],\quad \gamma=\E X^3,\quad \varphi=\phi(z).
-\]
-Suppose that the fixed-index contact argument has supplied
-\begin{equation}\label{ms:fourier:afcore:eq:contact-input}
- h(y):=\Pp(S_{n-1}\le H-y)\le Q_H(y),
- \qquad h(y)=Q_H(y)\quad(y\in\operatorname{supp}P),
-\end{equation}
-where
-\begin{align}
- nQ_H(y)={}&nF+\frac{H\varphi+C\rho}{2s}
- -\left(s\varphi+\frac{3C\beta}{s}\right)y
- -\frac{H\varphi+3C\rho}{2s}y^2+\frac C s|y|^3.
- \label{ms:fourier:afcore:eq:contact-polynomial}
-\end{align}
-These explicit inequalities, rather than an unnamed structural
-assumption, are the hypothesis below. At an unrestricted maximizing
-positive closed-CDF witness they follow from the earlier contamination
-argument.
-
-Because $C>0$, the polynomial grows to $+\infty$ on either support ray.
-Equality in \eqref{ms:fourier:afcore:eq:contact-input}, with $0\le h\le1$,
-therefore gives $|X|\le R$ for some finite $R$.
-Only after this observation do we introduce
-$M_4=\E X^4$ and $M_5=\E|X|^5$.
-
-\subsubsection{The gap quantities and their signs}
-
-Set $\sigma=\sqrt{10}$ and
-$\tau(t)=\E[X\ind_{\{X\ge t\}}]$. Centering gives
-$\tau(t)=-\E[X\ind_{\{X<t\}}]\ge0$ for $t<0$; its nonnegativity
-for $t\ge0$ is immediate. Signwise Fubini gives
-\[
- \int_{\mathbb R}\tau(t)\,dt=1,\qquad
- 2\int_{\mathbb R}|t|\tau(t)\,dt=\rho.
-\]
-For each bounded complementary interval $(a,b)$ of the closed support,
-$\tau$ is constant on its interior; denote that value by $\tau_{a,b}$.
-Let $\nu$ be the law of $H-S_{n-1}$, and define
-\begin{align}
- J&=\sum_{(a,b)}\tau_{a,b}(b-a)^2,\nonumber\\
- J_1&=\sum_{(a,b)}\tau_{a,b}\int_a^b(t-a)t\,dt,\qquad
- J_2=\sum_{(a,b)}\tau_{a,b}\int_a^b(t-a)t|t|\,dt,\nonumber\\
- L&=\sum_{(a,b)}\tau_{a,b}\int_{[a,b)}(t-a)\,d\nu(t),\qquad
- D=(3+\sigma)\rho-\gamma-3J.
- \label{ms:fourier:afcore:eq:gap-definitions}
-\end{align}
-The half-open interval in $L$ is part of its definition.
-There are at most countably many gaps. Their lengths are at most $2R$,
-so
-\[
- J\le2R,\quad |J_1|\le RJ/2,\quad |J_2|\le R^2J/2,
- \quad0\le L\le2R.
-\]
-For the first inequality, use $(b-a)^2\le2R(b-a)$ and $\int\tau=1$.
-For $L$, use $\tau\le\E|X|\le1$ and disjointness of the half-open gaps.
-Thus all the displayed sums are absolutely convergent.
-
-\begin{lemma}[Nonnegative physical defect]\label{ms:fourier:afcore:lem:physical-defect}
-For the quantities in \eqref{ms:fourier:afcore:eq:gap-definitions}, $D\ge0$.
-\end{lemma}
-\begin{proof}
-If zero belongs to the support, each gap lies on one side of zero.
-The inequality $(b-a)^2\le2\int_a^b|t|\,dt$ then gives $J\le\rho$,
-and $D\ge\sigma\rho-\gamma\ge0$.
-
-Otherwise there is a central gap $(-A,B)$ with $A,B>0$. Put
-\[
- m=\E X_+=\E X_-,\quad
- T_+=\E X_+^3-mB^2,\quad T_-=\E X_-^3-mA^2,
- \quad J_o=J-m(A+B)^2.
-\]
-Both $T_+,T_-$ are nonnegative. For a positive outer gap $(a,b)$,
-\[
- (b-a)^2\le2\int_a^b(t-B)\,dt.
-\]
-Tonelli, followed by integration up to $X_+$, gives
-\[
- J_o^+\le T_+-2B\{\E X_+^2-mB\}\le T_+.
-\]
-Reflection gives $J_o^-\le T_-$. Direct expansion, using
-$\sqrt{\sigma+1}\sqrt{\sigma-1}=3$, yields
-\[
- D=m\{\sqrt{\sigma+1}A-\sqrt{\sigma-1}B\}^2
-   +(\sigma-1)T_++(\sigma+1)T_-
-   +3(T_++T_--J_o)\ge0.
-\]
-\end{proof}
-
-\subsubsection{Integrating the same slack in two ways}
-
-Put $\mathcal A=\int\tau(y)\{Q_H(y)-h(y)\}\,dy\ge0$.
-On the support the slack vanishes; outside the convex hull $\tau=0$.
-On a gap, contact at its endpoints gives
-\[
- \nu([a,b))=h(a)-h(b)=Q_H(a)-Q_H(b)
-                         =\int_a^b -Q_H'(t)\,dt.
-\]
-Bounded Fubini consequently gives
-\[
- \int_a^b(Q_H-h)
- =\int_a^b(t-a)(-Q_H'(t))\,dt
-       -\int_{[a,b)}(t-a)\,d\nu(t).
-\]
-In particular a mass at the upper endpoint is not counted as interior.
-Substituting \eqref{ms:fourier:afcore:eq:contact-polynomial} proves
-\begin{equation}\label{ms:fourier:afcore:eq:first-slack}
- \mathcal A=\frac{\varphi J}{2s}+\frac{G}{s^3}-L,
- \quad
- G=\frac32C\beta J+(H\varphi+3C\rho)J_1-3CJ_2.
-\end{equation}
-
-The density $\tau$ is a probability density. If $X^*$ has that density,
-signwise Fubini proves, for every $C^1$ test function on the compact range,
-\[
- \E g'(X^*)=\E[Xg(X)],\qquad
- \E X^*=\gamma/2,\quad \E(X^*)^2=M_4/3,
- \quad\E|X^*|^3=M_5/4.
-\]
-Take $X^*$ independent of $S_{n-1}$. Applying the identity separately to
-the actual iid summands shows that $Z^*=(S_{n-1}+X^*)/s$ has density
-$\tau_Z(t)=\E[Z\ind_{\{Z\ge t\}}]$, where $Z=S_n/s$.
-Its CDF at $z$ is
-\[
- T=\E[(Z^2-zZ)\ind_{\{Z\le z\}}].
-\]
-For example, this formula follows by signwise integration of $\tau_Z$;
-it is unaffected by endpoint atoms. Since $\E h(X^*)=T$, integration
-of the contact polynomial against $\tau$ gives
-\begin{equation}\label{ms:fourier:afcore:eq:second-slack}
- \mathcal A=F-\frac{\gamma\varphi}{2s}
- +\frac{H\varphi(3-M_4)/6+CK_q}{s^3}-T,
- \quad K_q=\frac{M_5}{4}-\frac{\rho M_4}{2}
-                  -\frac{3\beta\gamma}{2}+\frac\rho2.
-\end{equation}
-
-There is one further contact equality. Multiplication by $X$ and
-exchangeability give $n\E[Xh(X)]=\E[S_n\ind_{\{S_n\le H\}}]$.
-Thus, if
-\[
- M=\E[Z\ind_{\{Z\le z\}}],\qquad
- K_1=\E[X|X|^3]-3\beta-\frac32\rho\gamma,
-\]
-then
-\begin{equation}\label{ms:fourier:afcore:eq:truncated-first}
- M+\varphi=-\frac{\gamma z\varphi}{2s}+\frac{CK_1}{n}.
-\end{equation}
-All moments here are legitimate because support was established first.
-
-\subsubsection{Compensated inversion over the entire half-line}
-
-\begin{lemma}[Quadratic hinge inversion]\label{ms:fourier:afcore:lem:inversion}
-Let $\mu$ be a finite signed measure on $\mathbb R$ with zero mass,
-zero first moment, and finite absolute second moment. With
-$\widehat\mu(t)=\int e^{itx}\,d\mu(x)$, for every real $H$,
-\begin{equation}\label{ms:fourier:afcore:eq:inversion}
- \int(x-H)|x-H|\,d\mu(x)
- =-\frac4\pi\int_0^\infty
-        \frac{\Im(e^{-itH}\widehat\mu(t))}{t^3}\,dt.
-\end{equation}
-The right side is absolutely convergent.
-\end{lemma}
-\begin{proof}
-Scaling and integration by parts give
-\[
- \int_0^\infty\frac{ty-\sin(ty)}{t^3}\,dt
- =\frac\pi4 y|y|.
-\]
-For $y\ge0$ the integrand is nonnegative, and for $y<0$ it has the
-opposite sign. Its absolute integral is therefore $\pi y^2/4$.
-To check the constant, one integration by parts reduces it to half of
-$\int_0^\infty(1-\cos t)t^{-2}\,dt$. Since
-$t^{-2}=\int_0^\infty a e^{-at}\,da$, nonnegative Tonelli and elementary
-Laplace integration give
-\[
- \int_0^\infty\frac{1-\cos t}{t^2}\,dt
- =\int_0^\infty a\left\{\frac1a-\frac a{a^2+1}\right\}\,da
- =\int_0^\infty\frac{da}{a^2+1}=\frac\pi2.
-\]
-Absolute Fubini applies to the compensated integrand against $|\mu|$.
-The linear term integrates to zero, since both the mass and first moment
-vanish. This proves the formula and its absolute convergence. No CDF
-inversion or averaging of a jump is used.
-\end{proof}
-
-Let $N$ be standard normal and set
-\[
- q_z(x)=(x-z)|x-z|,\qquad
- \varepsilon=\E q_z(Z)-\E q_z(N)-\frac{2\gamma\varphi}{3s}.
-\]
-Apply Lemma~\ref{ms:fourier:afcore:lem:inversion} to the law of $S_n$ minus the
-scale-$s$ pushforward of the signed density
-\[
- \phi(x)\left\{1+\frac{\gamma}{6s}(x^3-3x)\right\}.
-\]
-That density has mass one and first moment zero. Gaussian integration
-by parts gives its pushed-forward transform
-$e^{-nt^2/2}(1-in\gamma t^3/6)$.
-The hinge correction is $2\gamma\varphi/(3s)$, because
-$(x^3-3x)\phi(x)=-\phi'''(x)$ and
-$-\int q_z\phi'''=4\phi(z)$, with the third derivative of $q_z$
-understood distributionally as $4\delta_z$.
-Since $q_H(sx)=nq_z(x)$, the exact normalization is
-\begin{equation}\label{ms:fourier:afcore:eq:epsilon}
- \varepsilon=-\frac4{\pi n}\int_0^\infty
-        \frac{\Im(e^{-itH}V_n(t))}{t^3}\,dt,
- \quad V_n(t)=f(t)^n-e^{-nt^2/2}(1-in\gamma t^3/6).
-\end{equation}
-In particular the infinite high-frequency part has not been discarded.
-
-\subsubsection{The identity and the error ledger}
-
-\begin{proposition}[Conserved identity]\label{ms:fourier:afcore:prop:conserved}
-Under the explicit contact hypotheses
-\eqref{ms:fourier:afcore:eq:contact-input}--\eqref{ms:fourier:afcore:eq:contact-polynomial},
-put $e=C-\CE$, $w=H^2/(2n)$, and
-$U=J_1+(M_4-3)/6$. Then
-\begin{align}
- ne\rho+n\CE\rho(1-e^{-w})
-  +\frac{n\phi(0)e^{-w}}6D+n^{3/2}L
- ={}&C\{3\beta J/2+3\rho J_1-3J_2-K_q\}\nonumber\\
- &+H(CK_1+\varphi U)
-   -H^2(C\rho+\gamma\varphi/2)+E_n,
- \label{ms:fourier:afcore:eq:conserved}\\
- E_n={}&-n^{3/2}\varepsilon/2.\nonumber
-\end{align}
-If $C\ge\CE$, every term on the left is nonnegative.
-For any split $b>0$, valid complete bounds
-\[
- I_{\rm low}\ge\int_0^b
-       \frac{|\Im(e^{-itH}V_n(t))|}{t^3}\,dt,\qquad
- I_{\rm high}\ge\int_b^\infty\frac{|V_n(t)|}{t^3}\,dt
-\]
-give
-\begin{equation}\label{ms:fourier:afcore:eq:error-ledger}
- |E_n|\le\frac{2\sqrt n}{\pi}(I_{\rm low}+I_{\rm high}).
-\end{equation}
-\end{proposition}
-\begin{proof}
-The pointwise identity
-$q_z(x)=(x-z)^2-2(x-z)^2\ind_{\{x\le z\}}$ gives
-\[
- T-\Phi(z)=-\tfrac12\{\E q_z(Z)-\E q_z(N)\}
-             +z(M+\varphi)-z^2(F-\Phi(z)).
-\]
-Here $\E[N\ind_{\{N\le z\}}]=-\varphi$ and the normal counterpart
-of $T$ is $\Phi(z)$, by one integration by parts.
-Use \eqref{ms:fourier:afcore:eq:truncated-first}, the definition of $\varepsilon$,
-and $F-\Phi(z)=C\rho/s$ in \eqref{ms:fourier:afcore:eq:second-slack}.
-If
-\[
- P_0=H^2(C\rho+\gamma\varphi/2)
-    -H\{CK_1+\varphi(M_4-3)/6\}+CK_q,
-\]
-the result is
-\[
- s\mathcal A=C\rho-\gamma\varphi/6+P_0/n+s\varepsilon/2.
-\]
-Comparison with \eqref{ms:fourier:afcore:eq:first-slack} yields
-\[
- C\rho+sL=\frac{\varphi}{6}(\gamma+3J)
-                     +\frac{G-P_0}{n}-s\varepsilon/2.
-\]
-Finally substitute
-$\gamma+3J=(3+\sqrt{10})\rho-D$,
-$\CE=(3+\sqrt{10})\phi(0)/6$, and
-$\varphi=\phi(0)e^{-w}$, and multiply by $n$.
-This proves \eqref{ms:fourier:afcore:eq:conserved}. Nonnegativity follows from
-Lemma~\ref{ms:fourier:afcore:lem:physical-defect}, $L\ge0$, and $e\ge0$.
-Equation~\eqref{ms:fourier:afcore:eq:epsilon} gives the ledger directly.
-\end{proof}
-
-The proposition is a fixed-index statement for every $n\ge2$.
-It uses neither a limiting expansion nor an eventual theorem.
-Quantitative LOW/HIGH estimates, finite resource induction and count
-coverage remain distinct obligations; the identity itself does not
-establish any numerical support radius or parameter exclusion.
-
 % Mathematical resource chapter, flattened from the supplied continuous proofs.
 % No preamble, external inputs, or finite-index success assertions.
 % All project labels introduced here use rescore:.
@@ -1060,27 +772,21 @@ Use the contact normalization and the gap quantities of
 Section~\ref{ms:fourier:afcore:sec:conserved}. Thus $C$ is the actual positive
 closed-CDF score of one unrestricted attaining law, $H$ is its raw
 sum threshold, $\rho=\E|X|^3$, $\gamma=\E X^3$,
-$\beta=\E[X|X|]$, and $D,J,J_1,J_2,L$ have the definitions in
+$\beta=\E[X|X|]$. The quantities $D,J$ are defined in
+\eqref{ms:physical-defect-definition}, and $J_1,J_2,L$ in
 \eqref{ms:fourier:afcore:eq:gap-definitions}. Let
 $\mu_j=\E X^j$ for even $j$, $\eta_5=\E|X|^5$, and
 $\varphi=\phi(H/\sqrt n)$. Support $[-R_-,R_+]$ is acquired before
 these higher moments are invoked; write $R=\max(R_-,R_+)$.
 In applications below $1\le R\le6$.
-Define the exact raw remainder, without subtracting a score charge, by
-\begin{equation}\label{ms:fourier:rescore:re-raw}
-\begin{aligned}
- \mathcal R={}&C\{3\beta J/2+3\rho J_1-3J_2-K_q\}
- +H(CK_1+\varphi U)\\
- &-H^2(C\rho+\gamma\varphi/2)+E_n,\qquad
- U=J_1+(\mu_4-3)/6.
-\end{aligned}
-\end{equation}
-The definitions of $K_q,K_1,E_n$ and the exact identity for
-$\mathcal R$ are in Section~\ref{ms:fourier:afcore:sec:conserved}.
+The exact raw remainder $\mathcal R$ is defined in
+\eqref{ms:fourier:rescore:re-raw}; its contact derivation, compensated
+inversion and phase price are proved in Section~\ref{ms:conserved}.
+Here we bound its Fourier and moment terms on explicit domains.
 The elementary constant enclosures used here are
 \[
  997/2500<\phi(0)<2/5,\qquad
- .4095<\CE<.40974,\qquad 333/106<\pi<22/7.
+ 0.4095<\CE<0.40974,\qquad 333/106<\pi<22/7.
 \]
 They follow by positive rational squaring from Machin's identity. Put
 \[
@@ -1097,7 +803,7 @@ A finite-index profile means
 \begin{equation}\label{ms:fourier:rescore:u-profile}
 \begin{gathered}
  N\le n\le L,\qquad n(C-\CE)\ge K\ge0,\qquad C\in[c_0,c_1],\\
- n(C_{n-1}-C)_+\le q_*,\qquad c_0=.4095+K/L.
+ n(C_{n-1}-C)_+\le q_*,\qquad c_0=0.4095+K/L.
 \end{gathered}
 \end{equation}
 A band-uniform bound is used only under the explicit monotonicity
@@ -1680,7 +1386,7 @@ from the same fourth moment in each case:
 \begin{array}{c|c|c|c}
  \text{event}&a&d_0&M_E\\\hline
  (X-X')^2\ge9/25 &(2-9/25)^2/(2M+6)&3/5&2/a\\
- XX'<0, D\le d\le.8 &1/(2r_*^2)&\sqrt{2-d}&4r_*^2\\
+ XX'<0, D\le d\le0.8 &1/(2r_*^2)&\sqrt{2-d}&4r_*^2\\
  XX'<0, p\in[l,u] &2\min(l(1-l),u(1-u))
  &\max(A_l+B_l,\sqrt{2-d})&2/a
 \end{array}
@@ -1792,56 +1498,20 @@ selected favorable frequency pieces without proving their whole-cell
 majorants is not.
 
 \subsection{Turning one defect budget into simultaneous enclosures}
-\begin{lemma}[Removing the Gaussian weight]\label{ms:fourier:rescore:re-weight}
-Suppose a first complete pass proves $\mathcal R<r<2N/5$, where
-$C\rho\ge c_0>2/5$. In particular $r<Nc_0$.
-Every later valid upper bound $\mathcal R\le r'$ then gives
-\begin{equation}\label{ms:fourier:rescore:re-unweighted}
- ne\rho+n\phi(0)D/6+n^{3/2}L\le\mathcal R,
- \quad e^{-w}\ge1-\frac{5r'}{2n},
- \quad nD\le\frac{15000r'}{997}.
-\end{equation}
-The last two bounds use $C_E\rho>2/5$ and $\phi(0)>997/2500$.
-\end{lemma}
-\begin{proof}
-Rearrange the exact identity before changing its Gaussian weight:
-$\varphi(\gamma+3J)/6=C\rho+\sqrt nL-\mathcal R/n>0$.
-Thus $C_E\rho-\phi(0)D/6>0$. Replacing $e^{-w}$ by one in
-\eqref{ms:fourier:afcore:eq:conserved} lowers its left side, proving the first assertion.
-The original nonnegative phase term proves
-$1-e^{-w}\le r'/(nC_E\rho)<5r'/(2n)$. The defect bound follows from
-the first assertion. The initial sign license is proved before any
-feedback is used.
-\end{proof}
+Lemma~\ref{ms:fourier:rescore:re-weight} gives the unweighted defect
+budget after a first raw ceiling licenses its sign. Corollary~\ref{ms:conserved:phase-resource}
+retains the additional phase curvature under its stated positivity gates.
 
 The same identity also gives a useful score update. If this cell forces
 $D\ge d_l\ge0$ and a preceding pass gives raw ceiling $r$, then
 \[
- C\le .40974+
- \frac{r/N-.3988(1-5r/(2N))d_l/6}{\rho_l}.
+ C\le 0.40974+
+ \frac{r/N-0.3988(1-5r/(2N))d_l/6}{\rho_l}.
 \]
 A negative numerator excludes the cell because $e\ge0$. Otherwise its
 numerator increases with $1/n$, and division by the positive lower
 $\rho_l$ is outward. Thus the update is valid for every $n\ge N$ and
 uses only the previous raw bound.
-
-For later local comparisons we retain the sharper phase resource.
-If previous bounds give $\mathcal R\le r$, $nD\le Nd$, then
-\begin{equation}\label{ms:fourier:rescore:re-phaseprice}
- ne\rho+\kappa nD+n^{3/2}L
- \le \mathcal B(H),\qquad \kappa=997/15000,
-\end{equation}
-where an upper bound for $\mathcal B$ is obtained from the raw
-quadratic by increasing its curvature by
-\begin{equation}\label{ms:fourier:rescore:re-extra}
- q_{\rm extra}(\rho)=\frac{1-5r/(2N)}2
-                         \left(.4095\rho-\frac d{15}\right)>0.
-\end{equation}
-Indeed the subtracted exact phase term is
-$n(1-e^{-w})(C_E\rho-\phi(0)D/6)$.
-Use $1-e^{-w}\ge we^{-w}$, $D\le d$, $\phi(0)<.4$, and the
-previous density floor. The retained resource curvature includes
-\eqref{ms:fourier:rescore:re-extra}; it must not be charged a second time.
 
 \subsubsection{One positive-measure rule}
 Suppose zero lies in the gap $(-A,B)$, $A,B>0$. Let
@@ -2160,6 +1830,27 @@ Thus $\max(0,\text{any signed lower bound})$ is a valid lower bound for
 $|\gamma|$ inside this auxiliary Fourier estimate.
 
 \subsection{Coefficient atlas for the enclosure}\label{ms:fourier:rescore:re-atlas}
+
+The atlas has four stages. First, signed first, second and third moments
+bound the fourth and fifth moments and the gap integrals before a
+probability panel is known. Second, an acquired central gap and its
+conditional variances price the same expressions more sharply.
+Third, signed phase bounds combine those moment prices with the complete
+Fourier error into an affine-in-score quadratic in $|H|$. Finally,
+probability and support feedback export one joint displacement/noise
+budget to the count comparison.
+
+The Fourier part is assembled before choosing these moment coordinates:
+the low-frequency transfer treats the compensated Taylor terms, the
+high-frequency formulas bound the entire complementary integral including
+its infinite tail, and the contact identity supplies the signed
+constant, linear and quadratic moment terms. The formulas below preserve
+those separate contributions and state the gates for each alternative
+bound. In particular, a lattice characteristic function is not assumed
+to decay on the whole high-frequency half-line. The final output is the
+quadratic family in \eqref{ms:fourier:rescore:re-quadratics}, with the
+phase addition of \eqref{ms:fourier:rescore:re-extra} made once.
+
 These formulas are inequalities for one actual law. They are the two
 coordinate descriptions of the same enclosure: signed moments before a
 probability gap is located, and conditional moments afterwards. A bound
@@ -2426,10 +2117,10 @@ $L_3>r_B,g_B$, $L_4>2(1/s_0-3)$ and $L_5>2e_B$.
 The exact binary factors are $v^{3/2},v,v^2,v^{5/2}$; the upper bounds
 use $v^{3/2}\le v$ and $v^{5/2}\le v^2$. Thus cells crossing $1/2$ and
 zero conditional variances are included. The same cubic expansion, in the
-later domain $p\in[.37,.47]$, $A\ge.75$, $B\ge1.05$, gives
+later domain $p\in[0.37,0.47]$, $A\ge0.75$, $B\ge1.05$, gives
 \begin{equation}\label{ms:fourier:rescore:mom-rho-lower}
  \rho\ge v^{3/2}\rho_B(p)+3\min(A,B)\theta
-       \ge\rho_B(p)+.45\theta,\qquad
+       \ge\rho_B(p)+0.45\theta,\qquad
  \rho_B(p)=\frac{1-2pq}{\sqrt{pq}}.
 \end{equation}
 Indeed $\rho_B<1.11$ there and $v^{3/2}\ge1-3\theta/2$.
@@ -2779,7 +2470,7 @@ Define
  B(c)&=\max_{k\in\{k_l,k_u\},\,u\in\{u_l,u_u\},\,
                       \psi\in\{\varphi_-,2/5\}}|ck+\psi u|,\\
  Q(c,r)&=cr+\tfrac12\varphi_-(3.16r-3-d)
-       -\tfrac12(2/5-\varphi_-)(d-.16)_+.
+       -\tfrac12(2/5-\varphi_-)(d-0.16)_+.
 \end{align*}
 If all four corner values of $Q$ are positive, then, for every real $H$,
 \begin{align}
@@ -2808,7 +2499,7 @@ Lemma~\ref{ms:fourier:rescore:entry201-central}, and~\eqref{ms:fourier:rescore:m
 \]
 This follows from $A\le\bar a$, $B\le\bar b$, $m^2=(1-\theta)pq$;
 it is used only in the charge $3|\beta|J/2$. Since $\gamma\ge3.16\rho-3-d$, its negative
-part is at most $(d-.16)_+$. Using the upper density only for that negative
+part is at most $(d-0.16)_+$. Using the upper density only for that negative
 part gives $C\rho+\gamma\varphi/2\ge Q$. Absolute value is separately
 convex in each coordinate of $ck+\psi u$, proving the formula for $B$.
 For fixed $r$ and $|H|$, the resulting upper bound is convex in $c$.
@@ -2827,7 +2518,7 @@ in the actual transfer identity. The paired phase estimate must therefore
 retain its sign. On a fixed resource cell put
 \[
  L=\frac{997}{2500}\left(1-\frac{5r}{2N}\right),\qquad
- g_0(\rho)=3.16\rho-3-d,\qquad U=.4,
+ g_0(\rho)=3.16\rho-3-d,\qquad U=0.4,
 \]
 where $r,d$ are the preceding raw and defect upper bounds, and the
 checker requires $0\le L\le U$. The actual density lies in $[L,U]$
@@ -2871,10 +2562,10 @@ unless its certificate supplies a separate license for a simpler
 specialization.
 
 There is also a convenient cell-constant correction. Since $\rho\ge1$,
-$(-g_0(\rho))_+\le(d-.16)_+$, so the weaker price
+$(-g_0(\rho))_+\le(d-0.16)_+$, so the weaker price
 \[
  C\rho+\tfrac12L g_0(\rho)
-       -\tfrac12(U-L)(d-.16)_+
+       -\tfrac12(U-L)(d-0.16)_+
 \]
 is valid. This weaker cell-constant form and the exact sign-aware form are both
 permitted. Raw remainders and barrier-subtracted resource budgets remain
@@ -2940,8 +2631,8 @@ The constant coefficient of the raw identity is bounded by
 This is the coarse gap bound above together with the two bounds for
 $-K_q$. The density coefficient obeys
 \[
- v_H=\min\{.4j+.4\max(2,M-3)/6,
-                     .4\max(1/2,2M/3-1/2)\},
+ v_H=\min\{0.4j+0.4\max(2,M-3)/6,
+                     0.4\max(1/2,2M/3-1/2)\},
 \]
 where $j=3(u+1)$ initially; the generic-gap choice is
 $j=\alpha(u+1)+(3-\alpha)d/2$, with its checked $\alpha<3$.
@@ -2955,7 +2646,7 @@ where initially $q_*=c_-l-g/5$. After feedback use the larger of that
 quantity and
 \[
  c_-l+\varphi_-(3.16l-3-d)/2
-                  -(2/5-\varphi_-)(d-.16)_+/2.
+                  -(2/5-\varphi_-)(d-0.16)_+/2.
 \]
 The score endpoints are the lower score floor and the upper allowed
 score cap; if the latter depends on $\rho$, use its values at $u,l$
@@ -2983,7 +2674,7 @@ the clipped kink $l$, and the clipped vertex
 $l+(R/2-3l/2)(1-b_0)$. Intersect with $[-k,k]$ and replace the linear
 term in \eqref{ms:fourier:rescore:re-unsignedbound} by the smaller full rectangle bound
 \[
- \max_{c=c_-,c_+;,k=k_l,k_u;,\psi=\varphi_-,.4;,
+ \max_{c=c_-,c_+;,k=k_l,k_u;,\psi=\varphi_-,0.4;,
              v=-1/2,\,2M/3-1/2}|ck+\psi v|+s_F.
 \]
 All sixteen corners are retained. If $b_0>0$, the opposite-sign event
@@ -2993,7 +2684,7 @@ HIGH value. These are intersections with necessary conditions; the cover
 still examines every $\rho$-cell.
 
 \paragraph{Moving from a small defect to probability coordinates.}
-For $0<d\le.7$, start with
+For $0<d\le0.7$, start with
 \[
  A_l=\frac{1.47\sqrt{2-d}-\sqrt{3.7d}}{3.52},\qquad
  B_l=\frac{2.04\sqrt{2-d}-\sqrt{3.7d}}{3.52}.
@@ -3068,10 +2759,10 @@ $m^2\le(1-p)(1-\beta)/2$ prove \eqref{ms:fourier:rescore:u-p-cauchy}.
 
 All occurrences of the signed third moment remain signed.  In particular,
 with a prior raw bound $r$ and defect bound $d_D$, set
-$L_\phi=.3988(1-5r/(2N))$ and $g_0(\rho)=3.16\rho-3-d_D$.
+$L_\phi=0.3988(1-5r/(2N))$ and $g_0(\rho)=3.16\rho-3-d_D$.
 The safe lower phase price is
 \begin{equation}\label{ms:fourier:rescore:u-signed-price}
- C\rho+\tfrac12\min\{L_\phi g_0(\rho),\ .4g_0(\rho)\}.
+ C\rho+\tfrac12\min\{L_\phi g_0(\rho),\ 0.4g_0(\rho)\}.
 \end{equation}
 This is precisely \eqref{ms:fourier:rescore:re-sign-aware-price}:
 a negative lower bound for $\gamma$ must be multiplied by the upper
@@ -3280,25 +2971,25 @@ improvement \eqref{ms:fourier:rescore:re-extra} give
 The curvature $Q$ already includes the extra phase price
 \[
  \frac12\left(1-\frac{5r}{2N}\right)
-                   \left(.4095\rho-\frac{d_D}{15}\right).
+                   \left(0.4095\rho-\frac{d_D}{15}\right).
 \]
 It is not added a second time.  The signed price
 \eqref{ms:fourier:rescore:u-signed-price} is retained before any square completion.
 
 A positive barrier uses the charge $K\rho$.  The selected
 zero-barrier probability refinements also retain the actual score and
-the fixed rational upper bound $C_{\mathrm E}<.40974$:
+the fixed rational upper bound $C_{\mathrm E}<0.40974$:
 \begin{equation}\label{ms:fourier:rescore:u-actual-charge}
  n(C-C_{\mathrm E})\rho\ge\chi(C)\rho,
- \qquad\chi(C)=n(C-.40974)_+.
+ \qquad\chi(C)=n(C-0.40974)_+.
 \end{equation}
-Split the score interval at $.40974$ when that point is inside.
+Split the score interval at $0.40974$ when that point is inside.
 The rectangle proof above is separately convex in the
 actual $C$ and $\rho$.  On either closed score piece,
 $\chi(C)\rho$ is affine in either variable when the other is fixed;
 its subtraction preserves that convexity.  Hence both moment endpoints
 at each score endpoint give a valid coherent corner envelope.
-The selected score endpoints $.4095,.40974,c_1$ give six
+The selected score endpoints $0.4095,0.40974,c_1$ give six
 corners.  Keeping only the two extreme score endpoints would miss the
 kink and is not this argument. Raw remainders and the first unweighted passes continue to use their
 uncharged envelope.  Actual-score charging here is a refinement of the
@@ -3484,7 +3175,7 @@ $\E X^2=1$. Thus $\ell^2=(1-\theta)/(pq)$ and $\theta=\ell^2s$.
 The conditional label-zero support is at most $a\ge0$ and the label-one
 support is at least $b\le1$, where $a,b$ are support points and
 $b-a=1-d$. In particular $0\le a\le d$, $1-d\le b\le1$.
-Assume the initial strip $\operatorname{supp}Y\subset(-.55,1.55)$.
+Assume the initial strip $\operatorname{supp}Y\subset(-0.55,1.55)$.
 Write $\rho=\E|X|^3$, $\beta=\E[X|X|]$ and $\epsilon=\E|U|$.
 
 Select an acquired closed probability panel $[l,h]$.
@@ -3494,7 +3185,7 @@ $H$. Assume
 \[
  \theta\le\Theta,\quad d\le d_0,\quad \rho\le\rho_0,
  \quad \beta_-\le\beta\le\beta_+,\quad 0\le\lambda\le\Lambda,
- \quad .4<C\le C_0=.4253.
+ \quad 0.4<C\le C_0=0.4253.
 \]
 For the positive sign $0\le H\le H_+$; for the negative sign
 $-H_-\le H\le0$. Let $x=np+H/\ell$ and
@@ -3536,7 +3227,7 @@ The bounds use the grid $10^{-6}$, with an extra unit outward. Define
  c_+&=2(5.16)E^2(1-h-d_0)^2,&
  c_-&=2(7.16)E^2(l-d_0)^2,\\
  b_*&=\min\{3(4.16)E(1-h-d_0),3(6.16)E(l-d_0)\},\\
- P&=m_0E^2\pos{3.5\operatorname{dist}([l,h],[.41886,.41887])-2.041d_0}^2.
+ P&=m_0E^2\pos{3.5\operatorname{dist}([l,h],[0.41886,0.41887])-2.041d_0}^2.
 \end{align*}
 The simultaneous moment inequality has the following usable form:
 \begin{equation}\label{ms:fourier:cut49:conf:moment}
@@ -3612,14 +3303,14 @@ In particular $1\le k\le j-1$. Finite Stirling bounds give
 \[
  \sqrt j\binom jk p^k(1-p)^{j-k}
  \le\frac{\exp(1/(12j)-jD(r\Vert p))}{\sqrt{2\pi r(1-r)}}
- <\frac{.4}{\sqrt{v_*}(1-1/(12J_0))}.
+ <\frac{0.4}{\sqrt{v_*}(1-1/(12J_0))}.
 \]
 Here $D(r\Vert p)\ge0$ follows from Jensen's inequality for the logarithm;
 $\exp x\le(1-x)^{-1}$ for $0\le x<1$ follows term by term from the
 power series. The finite Stirling inequalities used are
 $\sqrt{2\pi m}(m/e)^m<m!<\sqrt{2\pi m}(m/e)^m\exp(1/(12m))$.
 Choose the strict $10^{-6}$ grid upper square root $M$ of
-$.16/[v_*(1-1/(12J_0))^2]$. Thus, whenever $w<1-d$,
+$0.16/[v_*(1-1/(12J_0))^2]$. Thus, whenever $w<1-d$,
 \begin{equation}\label{ms:fourier:cut49:conf:antichainconcentration}
  Q_j(w)<M/\sqrt j,\qquad j\ge n-2\ge J_0.
 \end{equation}
@@ -3632,7 +3323,7 @@ an interval where its hypotheses hold. The first confinement uses the
 score cap; later central and left schedules use the strict-gap cap.
 For the left panels replace the conditional cubic coefficient 24 below
 by 28; in general any $c_\rho$ satisfying
-$c_\rho^2[l(1-l)]^3>[3(1-l)+.55]^2$ is valid.
+$c_\rho^2[l(1-l)]^3>[3(1-l)+0.55]^2$ is valid.
 \subsubsection{Signed deletion, including atoms}
 Let $m=n-1$, $Z=x-\sum_{i=1}^mY_i$, $\mu=x-mp$ and let $K=\sum B_i$.
 For a fixed removed label put
@@ -3695,30 +3386,30 @@ Here $\rho_B(p)=(1-2p(1-p))/\sqrt{p(1-p)}$. Write $s_i=\E U_i^2$. Conditional ce
  \rho=\ell^3\{pq(1-2pq)+3pq(s_0+s_1)
                   +p\E U_1^3-q\E U_0^3\}.
 \]
-The initial strip and $d_0<.55$ imply $|U_i|<.55$.
-Thus $\rho\le\rho_B+\ell^3(3q+.55)s\le\rho_B+24s$; the last
+The initial strip and $d_0<0.55$ imply $|U_i|<0.55$.
+Thus $\rho\le\rho_B+\ell^3(3q+0.55)s\le\rho_B+24s$; the last
 coefficient inequality is checked as
-$24^2[l(1-l)]^3>[3(1-l)+.55]^2$.
+$24^2[l(1-l)]^3>[3(1-l)+0.55]^2$.
 Similarly $\beta=(1-\theta)(1-2p)+\ell^2(ps_1-qs_0)$, and
 $|\ell^2(ps_1-qs_0)|\le\theta$. These identities prove the stated
 outward bounds on $\rho$ and $\beta$.
-Set $f=.4F_\ell$, $\varphi_-=.39886(1-h_h^2/(2N))>0$.
+Set $f=0.4F_\ell$, $\varphi_-=0.39886(1-h_h^2/(2N))>0$.
 The exact upper bound for $H\phi(H/\sqrt n)$ used below is
 \[
- v_+=\begin{cases}.4h_h&H\ge0,\\-\varphi_-h_l&H\le0.\end{cases}
+ v_+=\begin{cases}0.4h_h&H\ge0,\\-\varphi_-h_l&H\le0.\end{cases}
 \]
 For all $t\le0$, completing the square in \eqref{ms:fourier:cut49:conf:derivative} gives
 \[
- \mathcal M_-=F_\ell\pos{(v_++3C_0\rho_*)^2/(12(.4))-3(.4)b_-},
+ \mathcal M_-=F_\ell\pos{(v_++3C_0\rho_*)^2/(12(0.4))-3(0.4)b_-},
  \qquad L_-=E\varphi_- -\mathcal M_-/N.
 \]
 A positive bound $B_*>\sqrt{(1-l)/l}$ gives valid central-gap lower
 and positive-half-line upper slope bounds
 \begin{align*}
- \mathcal M_+&=F_\ell\pos{.4h_hB_*+3C_0B_*(B_*-1)-1.2b_-},\\
+ \mathcal M_+&=F_\ell\pos{0.4h_hB_*+3C_0B_*(B_*-1)-1.2b_-},\\
  L_g&=E\varphi_--\max(\mathcal M_-,\mathcal M_+)/N,\\
  U_+&=f+\frac{F_\ell}{N}
- \left\{3C_0b_++\frac{(.4h_h+3C_0\rho_*)^2}{12(.4)}\right\}.
+ \left\{3C_0b_++\frac{(0.4h_h+3C_0\rho_*)^2}{12(0.4)}\right\}.
 \end{align*}
 They follow by completing a square on the positive half-line and using
 $t(t-1)\le B_*(B_*-1)$ for $1\le t\le B_*$; on $0\le t\le1$ that
@@ -3734,7 +3425,7 @@ Write $B(t)=b_-+\rho_*t+t^2$ and
 $B_*^{\min}=B(\min(t_*,-\rho_*/2))$. For the actual $C$ and $t\le t_*$,
 \[
  3C(\beta+\rho t+t^2)+H\phi t
- \ge1.2B(t)+v_+t+3(C_0-.4)\min(0,B_*^{\min}).
+ \ge1.2B(t)+v_+t+3(C_0-0.4)\min(0,B_*^{\min}).
 \]
 The inequality uses $t<0$ and separates the possible negative part of
 $B(t)$ before varying $C$. Minimize the right side at the clipped vertex
@@ -3753,8 +3444,8 @@ short parts of the interval.
 \paragraph{Lower interval geometry.}
 Its translate is $I^+=[a-r+1-d,b-\eta]$, of width $r-\eta$.
 The initial strip implies $I^+\subset[a+g,b)$,
-$g=1-.55-2d_0>0$, hence $\nu(I^+)\le J/g$.
-The intervals are disjoint throughout $r\le.55+d_0$, since
+$g=1-0.55-2d_0>0$, hence $\nu(I^+)\le J/g$.
+The intervals are disjoint throughout $r\le0.55+d_0$, since
 $\inf I^+-\sup I=1-r+\tau_-+\eta>0$.
 At $r=r_0$, concentration and directed distance bounds are
 \begin{align*}
@@ -3775,7 +3466,7 @@ $I^+\subset[b,y)$ and disjointness. Contact, including the atom at $b$,
 and the leakage definition give
 \[
  \sqrt n\nu(I)\ge L_g(1-d)-\sqrt nJ/\tau_+,\qquad
- \sqrt n\nu(I^+)\le U_+(.55+d).
+ \sqrt n\nu(I^+)\le U_+(0.55+d).
 \]
 Use
 \begin{align*}
@@ -3787,8 +3478,8 @@ Use
 The upper side deliberately keeps the absolute phase bound.
 
 \paragraph{The strict-gap alternative.}
-If $1-.55-2d_0>0$ and the displayed lower intervals have width below
-$1-d$ throughout $r\in[r_0,.55+d_0]$, take $Q_I=Q_J=M$.
+If $1-0.55-2d_0>0$ and the displayed lower intervals have width below
+$1-d$ throughout $r\in[r_0,0.55+d_0]$, take $Q_I=Q_J=M$.
 For the upper intervals the corresponding gate is
 $1-2d_0-2\tau_+>0$; then again $Q_I=Q_J=M$.
 Use the same directed distances. Their concentration caps are now
@@ -3876,7 +3567,7 @@ $n\epsilon<E_*=2T/(\kappa E\min(c_+,c_-))$. The sufficient slope gate is
  +\frac{E_*}{2}\left(1/l+1/(1-h)\right)\right\}+F_dfB_\tau.
 \]
 Using the uncoupled increment is safe even when the hull bound was used
-at $r_0$. The upper contradiction is $L_g-.55U_+>\mathcal E$.
+at $r_0$. The upper contradiction is $L_g-0.55U_+>\mathcal E$.
 Thus no support point lies below $a-r_0$ or above $1+r_0$.
 Since $a\ge0$, $b\ge1-d_0$ and $d_0<r_0$, the label-zero and label-one
 supports both satisfy $|U|<r_0$.
@@ -3886,8 +3577,8 @@ The ordinary, central-antichain, and left-antichain certificates substitute
 their recorded $r_0$ into these same gates. Noise-dependent amplitudes
 are the same theorem with a positive lower noise endpoint in
 $R=T_*/\kappa-b_*E^2s_l$. In the central rows the additional amplitudes
-are $.35,.30,.275$ on $[.05,.08],[.08,.10],[.10,\Lambda]$;
-on the left they are $.375,.325,.30$. Intersect each interval with its
+are $0.35,0.30,0.275$ on $[0.05,0.08],[0.08,0.10],[0.10,\Lambda]$;
+on the left they are $0.375,0.325,0.30$. Intersect each interval with its
 own row's $\Lambda$ and each amplitude with that row's global amplitude.
 The required acceptance checks both signs of $H$, all closed phase/noise
 cells, clipped endpoints, and strict budget exclusions. No proof of
@@ -3931,7 +3622,7 @@ copies of $U_1$ and $n-j$ copies of $U_0$. The signed scores are
  C=\frac{\sqrt n}{\rho}\{\Pr(\textstyle\sum Y_i\le x)-\Phi(H/\sqrt n)\},
  \qquad C_B=\frac{\sqrt n}{\rho_B}\{F_B(k)-\Phi(\delta/\sqrt{nv})\}.
 \]
-Throughout this section $C\ge c_*>0$; the selected application uses $c_*=.4$.
+Throughout this section $C\ge c_*>0$; the selected application uses $c_*=0.4$.
 Define
 \begin{align}
  f(u)&=\frac{\Phi((\delta+u)/\sqrt{n(v+s)})-
@@ -4028,12 +3719,12 @@ and Taylor-expanding $D$ and the logarithmic prefactor proves
 
 Consequently a valid mass lower bound is any positive
 \begin{equation}\label{ms:fourier:cut49:shortloc:m}
- m<\frac{.39886}{\sqrt{p_+(1-p_+)}}
+ m<\frac{0.39886}{\sqrt{p_+(1-p_+)}}
           \left[1-\frac{\Delta^2/(2v_*)+Z(\Delta)}N\right].
 \end{equation}
 The same formula at a mode proves $\sqrt n\max_j\pi_j<1$ whenever
-$v_*[1-Z(\Delta)/N]^2>.4^2$ and $Z(\Delta)<N$.
-The rational bounds $.39886<\phi(0)<.4$ follow, for example, by the
+$v_*[1-Z(\Delta)/N]^2>0.4^2$ and $Z(\Delta)<N$.
+The rational bounds $0.39886<\phi(0)<0.4$ follow, for example, by the
 alternating arctangent series in Machin's identity.
 
 Differentiating \eqref{ms:fourier:cut49:shortloc:f} gives
@@ -4090,11 +3781,11 @@ The inequality $(1+z)^{3/2}\le1+3z/2+3z^2/8$ for $z\ge0$ yields
 Let $Q_*>0$ be a lower bound for the bracket and
 $m_c\le c_*/[p_+(1-p_+)+\Lambda/N]^{3/2}$.
 The normal variance correction is nonpositive for $\delta\le0$;
-for $\delta>0$ its derivative in $s$ is at most $.4\delta/(2v^{3/2})$.
+for $\delta>0$ its derivative in $s$ is at most $0.4\delta/(2v^{3/2})$.
 Therefore
 \begin{equation}\label{ms:fourier:cut49:shortloc:repair}
  \mathcal R\le(P_*D_+-m_cQ_*)\lambda/n,
- \qquad P_*\ge\frac{.4}{2v_*^{3/2}},\quad D_+\ge\delta_+.
+ \qquad P_*\ge\frac{0.4}{2v_*^{3/2}},\quad D_+\ge\delta_+.
 \end{equation}
 One may take $D_+=D$, but retaining the positive part is often decisive.
 All bounds concern $v+s$, which can exceed $1/4$.
@@ -4485,7 +4176,7 @@ witness with
 We used $|u-f(u)|\le a(B_1\lambda+P_1)/n$ and $\sqrt n\pi_k\le1$.
 Every constant is fixed before $\lambda$ varies. Both $B$ and
 $mB+I/N$ are convex on $\lambda>0$; $I$ is decreasing. Thus their two
-endpoint gates $B<0$, $I>0$, $mB+I/N<-.001$ prove the entire closed noise
+endpoint gates $B<0$, $I>0$, $mB+I/N<-0.001$ prove the entire closed noise
 cell. Thus this argument supplies the analytic implication for each of the three
 LOW variants, conditional on its own complete cover and endpoint gates.
 

@@ -1,0 +1,385 @@
+\subsection{From contact slack to a conserved phase resource}
+\label{ms:conserved}\label{ms:fourier:afcore:sec:conserved}
+
+The physical defect measures how far the gap and third-moment geometry
+are from the extremal two-point configuration. To bound that defect, we
+integrate the contact slack in two ways. Integrating over support gaps
+reveals $J$ and a nonnegative leakage $L$. Integrating against the
+zero-bias law instead turns the same slack into a quadratic-hinge
+expectation for the sum. A compensated Fourier formula then compares
+that expectation with its Gaussian and cubic terms. Equating the two
+expressions gives an exact identity in which score excess, defect,
+phase displacement and leakage share one remainder.
+
+
+We now state precisely the contact input needed for the identity.
+Fix an integer $n\ge2$ and a common iid marginal $P\in\mathcal P$.
+Write $S_j=X_1+\cdots+X_j$ and $z=H/\sqrt n$,
+\[
+ F=\Pp(S_n\le H),\quad
+ C=\frac{\sqrt n}{\rho}\{F-\Phi(z)\}>0,\quad
+ \beta=\E[X|X|],\quad \gamma=\E X^3,\quad \varphi=\phi(z).
+\]
+Suppose that the fixed-index contact argument has supplied
+\begin{equation}\label{ms:fourier:afcore:eq:contact-input}
+ h_P(y):=\Pp(S_{n-1}\le H-y)\le Q_H(y),
+ \qquad h_P(y)=Q_H(y)\quad(y\in\operatorname{supp}P),
+\end{equation}
+where
+\begin{align}
+ nQ_H(y)={}&nF+\frac{H\varphi+C\rho}{2\sqrt n}
+ -\left(\sqrt n\varphi+\frac{3C\beta}{\sqrt n}\right)y
+ -\frac{H\varphi+3C\rho}{2\sqrt n}y^2+\frac{C}{\sqrt n}|y|^3.
+ \label{ms:fourier:afcore:eq:contact-polynomial}
+\end{align}
+At an unrestricted maximizing positive closed-CDF witness, these
+relations follow from Lemma~\ref{ms:contact}. They will be the precise
+contact hypotheses throughout the derivation.
+
+Because $C>0$, the polynomial grows to $+\infty$ on either support ray.
+Equality in \eqref{ms:fourier:afcore:eq:contact-input}, with $0\le h_P\le1$,
+therefore gives $|X|\le R$ for some finite $R$.
+Only after this observation do we introduce
+$M_4=\E X^4$ and $M_5=\E|X|^5$.
+
+\subsubsection{Auxiliary gap integrals and leakage}
+
+Use the zero-bias density $\tau$, gap functional $J$ and physical defect
+$D$ of \eqref{ms:tau-moments} and
+\eqref{ms:physical-defect-definition}. Lemma~\ref{ms:physical-defect}
+gives $D\ge0$. To evaluate the contact slack we need two more weighted
+gap integrals and one nonnegative leakage term. Let $\nu$ be the law of
+$H-S_{n-1}$ and set
+\begin{align}
+ J_1&=\sum_{(a,b)}\tau_{a,b}\int_a^b(t-a)t\,dt,\qquad
+ J_2=\sum_{(a,b)}\tau_{a,b}\int_a^b(t-a)t|t|\,dt,\nonumber\\
+ L&=\sum_{(a,b)}\tau_{a,b}\int_{[a,b)}(t-a)\,d\nu(t).
+ \label{ms:fourier:afcore:eq:gap-definitions}
+\end{align}
+The sums run over the same bounded complementary intervals of the closed
+support as in $J$. The half-open interval is essential: an atom at the
+upper endpoint is not an interior crossing of the gap.
+If the support lies in $[-R,R]$, then
+\[
+ |J_1|\le RJ/2,\qquad |J_2|\le R^2J/2,
+ \qquad 0\le L\le2R.
+\]
+For the first two bounds use $|t|\le R$ and
+$\int_a^b(t-a)\,dt=(b-a)^2/2$. For the last, use
+$\tau_{a,b}\le\E|X|\le1$, $t-a\le2R$, and disjointness of the
+half-open gaps. Together with $J\le2R$, these bounds prove absolute
+convergence of every sum.
+
+\subsubsection{Integrating the same slack in two ways}
+
+Put $\mathcal A=\int\tau(y)\{Q_H(y)-h_P(y)\}\,dy\ge0$.
+On the support the slack vanishes; outside the convex hull $\tau=0$.
+On a gap, contact at its endpoints gives
+\[
+ \nu([a,b))=h_P(a)-h_P(b)=Q_H(a)-Q_H(b)
+                         =\int_a^b -Q_H'(t)\,dt.
+\]
+Bounded Fubini consequently gives
+\[
+ \int_a^b(Q_H-h_P)
+ =\int_a^b(t-a)(-Q_H'(t))\,dt
+       -\int_{[a,b)}(t-a)\,d\nu(t).
+\]
+In particular a mass at the upper endpoint is not counted as interior.
+Substituting \eqref{ms:fourier:afcore:eq:contact-polynomial} proves
+\begin{equation}\label{ms:fourier:afcore:eq:first-slack}
+ \mathcal A=\frac{\varphi J}{2\sqrt n}+\frac{G}{n^{3/2}}-L,
+ \quad
+ G=\frac32C\beta J+(H\varphi+3C\rho)J_1-3CJ_2.
+\end{equation}
+
+The density $\tau$ is a probability density. If $X^*$ has that density,
+signwise Fubini proves, for every $C^1$ test function on the compact range,
+\[
+ \E g'(X^*)=\E[Xg(X)],\qquad
+ \E X^*=\gamma/2,\quad \E(X^*)^2=M_4/3,
+ \quad\E|X^*|^3=M_5/4.
+\]
+Indeed, after subtracting $g(0)$, integration from zero to $X$ gives
+$\E[Xg(X)]=\int\tau(t)g'(t)\,dt$ by signwise Fubini. This proves the
+identity and the three moment formulas, using the relevant polynomial
+or absolute-power test function.
+Take $X^*$ independent of $S_{n-1}$. For a continuously differentiable
+$g$, conditional application of that identity gives
+\[
+ \E g'((S_{n-1}+X^*)/\sqrt n)
+ =\sqrt n\,\E[X_n g(S_n/\sqrt n)]
+ =\E[Zg(Z)],\qquad Z=S_n/\sqrt n.
+\]
+The last equality is exchangeability. Hence
+$Z^*=(S_{n-1}+X^*)/\sqrt n$ has the zero-bias density
+$\tau_Z(t)=\E[Z\ind_{\{Z\ge t\}}]$, where $Z=S_n/\sqrt n$.
+Indeed the same signwise Fubini formula for $Z$ identifies its integral
+against every continuous test function, by taking that function as $g'$.
+Its CDF at $z$ is
+\[
+ T=\E[(Z^2-zZ)\ind_{\{Z\le z\}}].
+\]
+For example, this formula follows by signwise integration of $\tau_Z$;
+it is unaffected by endpoint atoms. Since $\E h_P(X^*)=T$, integration
+of the contact polynomial against $\tau$ gives
+\begin{equation}\label{ms:fourier:afcore:eq:second-slack}
+ \mathcal A=F-\frac{\gamma\varphi}{2\sqrt n}
+ +\frac{H\varphi(3-M_4)/6+CK_q}{n^{3/2}}-T,
+ \quad K_q=\frac{M_5}{4}-\frac{\rho M_4}{2}
+                  -\frac{3\beta\gamma}{2}+\frac\rho2.
+\end{equation}
+
+There is one further contact equality. Multiplication by $X$ and
+exchangeability give $n\E[Xh_P(X)]=\E[S_n\ind_{\{S_n\le H\}}]$.
+Thus, if
+\[
+ M=\E[Z\ind_{\{Z\le z\}}],\qquad
+ K_1=\E[X|X|^3]-3\beta-\frac32\rho\gamma,
+\]
+then
+\begin{equation}\label{ms:fourier:afcore:eq:truncated-first}
+ M+\varphi=-\frac{\gamma z\varphi}{2\sqrt n}+\frac{CK_1}{n}.
+\end{equation}
+All moments here are legitimate because support was established first.
+
+\subsubsection{Compensated inversion over the entire half-line}
+
+\begin{lemma}[Quadratic hinge inversion]\label{ms:fourier:afcore:lem:inversion}
+Let $\mu$ be a finite signed measure on $\mathbb R$ with zero mass,
+zero first moment, and finite absolute second moment. With
+$\widehat\mu(t)=\int e^{itx}\,d\mu(x)$, for every real $H$,
+\begin{equation}\label{ms:fourier:afcore:eq:inversion}
+ \int(x-H)|x-H|\,d\mu(x)
+ =-\frac4\pi\int_0^\infty
+        \frac{\Im(e^{-itH}\widehat\mu(t))}{t^3}\,dt.
+\end{equation}
+The right side is absolutely convergent.
+\end{lemma}
+\begin{proof}
+Scaling and integration by parts give
+\[
+ \int_0^\infty\frac{ty-\sin(ty)}{t^3}\,dt
+ =\frac\pi4 y|y|.
+\]
+For $y\ge0$ the integrand is nonnegative, and for $y<0$ it has the
+opposite sign. Its absolute integral is therefore $\pi y^2/4$.
+To check the constant, one integration by parts reduces it to half of
+$\int_0^\infty(1-\cos t)t^{-2}\,dt$. Since
+$t^{-2}=\int_0^\infty a e^{-at}\,da$, nonnegative Tonelli and elementary
+Laplace integration give
+\[
+ \int_0^\infty\frac{1-\cos t}{t^2}\,dt
+ =\int_0^\infty a\left\{\frac1a-\frac a{a^2+1}\right\}\,da
+ =\int_0^\infty\frac{da}{a^2+1}=\frac\pi2.
+\]
+Absolute Fubini applies to the compensated integrand against $|\mu|$.
+Its iterated absolute integral is
+$\pi\int(x-H)^2\,d|\mu|(x)/4<\infty$.
+The linear term integrates to zero, since both the mass and first moment
+vanish. This proves the formula and its absolute convergence. No CDF
+inversion or averaging of a jump is used.
+\end{proof}
+
+Let $Z_0$ be standard normal, write $f(t)=\E e^{itX}$, and set
+\[
+ q_z(x)=(x-z)|x-z|,\qquad
+ \varepsilon=\E q_z(Z)-\E q_z(Z_0)-\frac{2\gamma\varphi}{3\sqrt n}.
+\]
+Apply Lemma~\ref{ms:fourier:afcore:lem:inversion} to the law of $S_n$ minus the
+scale-$\sqrt n$ pushforward of the signed density
+\[
+ \phi(x)\left\{1+\frac{\gamma}{6\sqrt n}(x^3-3x)\right\}.
+\]
+That density has mass one and first moment zero. Gaussian integration
+by parts gives its pushed-forward transform
+$e^{-nt^2/2}(1-in\gamma t^3/6)$.
+The hinge correction is $2\gamma\varphi/(3\sqrt n)$, because
+$(x^3-3x)\phi(x)=-\phi'''(x)$ and
+$-\int q_z\phi'''=4\phi(z)$, with the third derivative of $q_z$
+understood distributionally as $4\delta_z$.
+Since $q_H(\sqrt n\,x)=nq_z(x)$, the exact normalization is
+\begin{equation}\label{ms:fourier:afcore:eq:epsilon}
+ \varepsilon=-\frac4{\pi n}\int_0^\infty
+        \frac{\Im(e^{-itH}V_n(t))}{t^3}\,dt,
+ \quad V_n(t)=f(t)^n-e^{-nt^2/2}(1-in\gamma t^3/6).
+\end{equation}
+In particular the infinite high-frequency part has not been discarded.
+
+\subsubsection{The identity and the error ledger}
+
+\begin{proposition}[Conserved identity]\label{ms:fourier:afcore:prop:conserved}
+Under the explicit contact hypotheses
+\eqref{ms:fourier:afcore:eq:contact-input}--\eqref{ms:fourier:afcore:eq:contact-polynomial},
+put $e=C-\CE$, $w=H^2/(2n)$, and
+$U=J_1+(M_4-3)/6$. Then
+\begin{align}
+ ne\rho+n\CE\rho(1-e^{-w})
+  +\frac{n\phi(0)e^{-w}}6D+n^{3/2}L
+ ={}&C\{3\beta J/2+3\rho J_1-3J_2-K_q\}\nonumber\\
+ &+H(CK_1+\varphi U)
+   -H^2(C\rho+\gamma\varphi/2)+E_n,
+ \label{ms:fourier:afcore:eq:conserved}\\
+ E_n={}&-n^{3/2}\varepsilon/2.\nonumber
+\end{align}
+If $C\ge\CE$, every term on the left is nonnegative.
+For any split $b>0$, valid complete bounds
+\[
+ I_{\rm low}\ge\int_0^b
+       \frac{|\Im(e^{-itH}V_n(t))|}{t^3}\,dt,\qquad
+ I_{\rm high}\ge\int_b^\infty\frac{|V_n(t)|}{t^3}\,dt
+\]
+give
+\begin{equation}\label{ms:fourier:afcore:eq:error-ledger}
+ |E_n|\le\frac{2\sqrt n}{\pi}(I_{\rm low}+I_{\rm high}).
+\end{equation}
+\end{proposition}
+\begin{proof}
+The pointwise identity
+$q_z(x)=(x-z)^2-2(x-z)^2\ind_{\{x\le z\}}$ gives
+\[
+ T-\Phi(z)=-\tfrac12\{\E q_z(Z)-\E q_z(Z_0)\}
+             +z(M+\varphi)-z^2(F-\Phi(z)).
+\]
+Here $\E[Z_0\ind_{\{Z_0\le z\}}]=-\varphi$ and the normal counterpart
+of $T$ is $\Phi(z)$, by one integration by parts.
+Use \eqref{ms:fourier:afcore:eq:truncated-first}, the definition of $\varepsilon$,
+and $F-\Phi(z)=C\rho/\sqrt n$ in \eqref{ms:fourier:afcore:eq:second-slack}.
+If
+\[
+ P_0=H^2(C\rho+\gamma\varphi/2)
+    -H\{CK_1+\varphi(M_4-3)/6\}+CK_q,
+\]
+the result is
+\[
+ \sqrt n\mathcal A=C\rho-\gamma\varphi/6+P_0/n+\sqrt n\varepsilon/2.
+\]
+Comparison with \eqref{ms:fourier:afcore:eq:first-slack} yields
+\[
+ C\rho+\sqrt n\,L=\frac{\varphi}{6}(\gamma+3J)
+                     +\frac{G-P_0}{n}-\sqrt n\varepsilon/2.
+\]
+Finally substitute
+$\gamma+3J=(3+\sqrt{10})\rho-D$,
+$\CE=(3+\sqrt{10})\phi(0)/6$, and
+$\varphi=\phi(0)e^{-w}$, and multiply by $n$.
+This proves \eqref{ms:fourier:afcore:eq:conserved}. Nonnegativity follows from
+Lemma~\ref{ms:physical-defect}, $L\ge0$, and $e\ge0$.
+Equation~\eqref{ms:fourier:afcore:eq:epsilon} gives the ledger directly.
+\end{proof}
+
+The identity holds at each actual index $n\ge2$. When $C\ge\CE$,
+its four nonnegative terms have a direct interpretation: score excess, Gaussian phase cost,
+physical defect, and leakage into complementary support gaps. The next
+step turns a complete bound on the right side into a quantitative budget.
+
+\subsubsection{Removing the Gaussian weight and retaining its phase cost}
+
+Define the exact raw remainder, without subtracting a score charge, by
+\begin{equation}\label{ms:fourier:rescore:re-raw}
+\begin{aligned}
+ \mathcal R={}&C\{3\beta J/2+3\rho J_1-3J_2-K_q\}
+ +H(CK_1+\varphi U)\\
+ &-H^2(C\rho+\gamma\varphi/2)+E_n,\qquad
+ U=J_1+(M_4-3)/6.
+\end{aligned}
+\end{equation}
+
+The exact conserved identity can be regrouped as
+\begin{equation}\label{ms:conserved:regrouped}
+ \mathcal R=ne\rho+\frac{n\phi(0)}6D+n^{3/2}L
+ +n(1-e^{-w})\left(\CE\rho-\frac{\phi(0)}6D\right).
+\end{equation}
+The last coefficient must be positive before the Gaussian weight can
+be removed. A first complete remainder bound provides that sign.
+
+\begin{lemma}[Removing the Gaussian weight]\label{ms:fourier:rescore:re-weight}
+Suppose $C\ge\CE$, $n\ge N\ge2$, and an established bound gives
+$\mathcal R\le r_0<2N/5$. Then
+\begin{equation}\label{ms:fourier:rescore:re-unweighted}
+ ne\rho+\frac{n\phi(0)}6D+n^{3/2}L\le\mathcal R.
+\end{equation}
+Consequently any later bound $\mathcal R\le r$ gives
+\[
+ e^{-w}\ge1-\frac{5r}{2n},\qquad
+ nD\le\frac{15000r}{997}.
+\]
+\end{lemma}
+\begin{proof}
+The identity before substitution of $D$ gives
+\[
+ \frac{\varphi}{6}(\gamma+3J)
+ =C\rho+\sqrt n\,L-\frac{\mathcal R}{n}
+ >C\rho-\frac25>0,
+\]
+using $\rho\ge1$ and $C\ge\CE>2/5$. Thus
+$\CE\rho-\phi(0)D/6=\phi(0)(\gamma+3J)/6>0$.
+Dropping the last nonnegative term of
+\eqref{ms:conserved:regrouped} proves
+\eqref{ms:fourier:rescore:re-unweighted}.
+In the original conserved identity all four terms are nonnegative,
+so $n\CE\rho(1-e^{-w})\le r$. Since $\CE\rho>2/5$, this proves
+the density floor. Finally $\phi(0)>997/2500$ gives the bound on $nD$.
+If a purported upper bound has $r<0$, the same inequalities already
+exclude the parameter cell.
+\end{proof}
+
+The constant comparisons used here follow from
+Lemma~\ref{ms:gaussian-constants}. In particular the additional bound
+$\phi(0)>997/2500$ follows from $\pi<22/7$ and
+$(997/2500)^2<7/44$.
+
+\begin{corollary}[Conserved phase resource]\label{ms:conserved:phase-resource}
+Under the preceding hypotheses, suppose established bounds give
+\[
+ \mathcal R\le r<2N/5,\qquad nD\le Nd_D,\qquad
+ a_{\rm ph}(\rho):=0.4095\rho-d_D/15>0.
+\]
+Suppose also that on the current signed phase cell the raw remainder
+has a pointwise quadratic envelope
+\[
+ \mathcal R(H)\le A(C,\rho)+F_{\operatorname{sgn}H}(C,\rho)|H|
+                  -Q_{\rm raw}(C,\rho)H^2.
+\]
+Set
+\begin{equation}\label{ms:fourier:rescore:re-extra}
+ q_{\rm extra}(\rho)=\frac{1-5r/(2N)}2
+                   \left(0.4095\rho-\frac{d_D}{15}\right)>0
+\end{equation}
+and
+\[
+ \mathcal B(H)=A(C,\rho)+F_{\operatorname{sgn}H}(C,\rho)|H|
+                -\{Q_{\rm raw}(C,\rho)+q_{\rm extra}(\rho)\}H^2.
+\]
+Then, with $\kappa=997/15000$,
+\begin{equation}\label{ms:fourier:rescore:re-phaseprice}
+ n(C-\CE)\rho+\kappa nD+n^{3/2}L\le\mathcal B(H).
+\end{equation}
+The same assertion holds if the quadratic envelope is a maximum of
+several valid corner quadratics, after adding the phase price to each
+corresponding curvature.
+\end{corollary}
+\begin{proof}
+Because $n\ge N$, the weighted defect bound implies $D\le d_D$.
+The sign assumptions, $\CE>0.4095$ and $\phi(0)<2/5$ yield
+\[
+ \CE\rho-\phi(0)D/6\ge0.4095\rho-d_D/15>0.
+\]
+Also $e^{-w}\ge1-5r/(2n)\ge1-5r/(2N)>0$.
+For $w\ge0$, the inequality $e^w\ge1+w$ gives
+$1-e^{-w}\ge we^{-w}$. The last term in
+\eqref{ms:conserved:regrouped} is therefore at least
+$q_{\rm extra}(\rho)H^2$. Subtract this term from the raw upper bound
+and use $\phi(0)/6>\kappa$ to obtain
+\eqref{ms:fourier:rescore:re-phaseprice}.
+\end{proof}
+
+This corollary specifies how the Fourier remainder enters the resource
+calculation. Complete low- and high-frequency bounds in
+Appendix~\ref{ms:fourier:rescore:sec:setup} control $E_n$; moment and gap
+bounds control the other terms of $\mathcal R$. The coefficient atlas in
+Appendix~\ref{ms:fourier:rescore:re-atlas} organizes these enclosures into
+the signed quadratics above. Once a phase price has been included in
+$Q_{\rm raw}+q_{\rm extra}$, it is not added again. The charge
+$n(C-\CE)\rho$ remains on the left throughout, ready for the convex
+score argument that follows.
