@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/Users/bkolodziejek/miniforge3/bin/python",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/local-kernel/mathematics/reduction2/2026-10-27/check_local_curvature.py",
+    "--archive",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/local-kernel/verification/finite-tail/sources/backend.zip"
+  ],
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/local-kernel",
+  "started_utc": "2026-10-27T10:25:33.343731+00:00",
+  "elapsed_seconds": 2.6163178340066224,
+  "return_code": 0,
+  "python": "3.12.12 | packaged by conda-forge | (main, Oct 22 2025, 23:34:53) [Clang 19.1.7 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "optimized": 0,
+  "input_sha256": {
+    "mathematics/reduction2/2026-10-27/check_local_curvature.py": "2658d4944009ec8c9e75fef3ff6f8bd5a54d2b2e310d0d3d35043ae2b226b5f8",
+    "verification/finite-tail/sources/backend.zip": "43b606138f826b47e3f174957088285349aebc82a928627e9e66fe370471be52"
+  },
+  "stdout_sha256": "b29d60ff7adb230821fa5731a17cae663aeae6a20aa137602df4d85b6afd85a5",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "New bounded Fraction-only diagnostic; no archived module imported or executed."
+}
