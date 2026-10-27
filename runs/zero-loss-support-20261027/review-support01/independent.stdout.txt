@@ -1,0 +1,45 @@
+{
+  "status": "PASS_INDEPENDENT_SUPPORT_LIFT_ALGEBRA_AND_ANCESTRY",
+  "native_programs_executed": 0,
+  "old_polynomial_signs_checked": false,
+  "polynomial_degree_bound": 11,
+  "distinct_points_per_identity": 12,
+  "identities": 130,
+  "exact_identity_evaluations": 1560,
+  "left_support_calls": 64,
+  "route_sha256": "df1631620cf1135a5bb6fb9cd28f6c514f6a0451f7c1699ad55054fa1b23dcd0",
+  "initial_sha256": "bd2a808005703ac1fbdb5fb17bc63637f48ebb568f65220f99c47692108a23e0",
+  "initial_margin": "3679155107/47000000000",
+  "left_margin": "17940880361/3008000000000",
+  "initial_ray_gates": [
+    "-585203/35000",
+    "-2761/100",
+    "-393/20",
+    "-10604493/1400000",
+    "-254667/40000",
+    "-2057/1000"
+  ],
+  "left_ray_gates": [
+    "-269259/14000",
+    "-1329/50",
+    "-189/10",
+    "-5347197/700000",
+    "-123591/20000",
+    "-2057/1000"
+  ],
+  "scale_margin": "118707/42875000",
+  "negative_controls": [
+    "retain_full_old_loss",
+    "positive_loss01_in_broad_left_rectangle",
+    "blind_left_splice45",
+    "ray_r_cap4",
+    "broken_coarse_ancestry",
+    "missing_support_edge",
+    "changed_parent_moment",
+    "reversed_radius_schedule"
+  ],
+  "r_min": "116242091/100000000",
+  "r_max": "71458741/50000000",
+  "b_max": "46459359/100000000",
+  "conclusion": "Conditional implication review only; no numerical LOCAL42 or global proof acceptance."
+}
