@@ -2,7 +2,7 @@
 
 Reviewed the new `phase.tex` in the separate `phase-resource-v6` worktree. Its exact source hash is recorded in `runs/fixed-target-v6-20261027/phase-review01/receipt.json`. The reviewer did not construct this phase argument. No shared source was edited.
 
-**Verdict:** the analytic implication is sound under its stated global quadratic-envelope gate. The finite-endpoint positive-part simplification and the elementary global concavity test are valid. There is one minor wording issue and one integration condition to preserve; neither requires weakening the lemma. The numerical claim about all 24 original cells is not independently accepted by this review.
+**Verdict:** the analytic implication is sound under its stated global quadratic-envelope gate. The finite-endpoint positive-part simplification and the elementary global concavity test are valid. A minor wording issue was corrected during review; an integration condition must still be preserved. Neither requires weakening the lemma. The numerical claim about all 24 original cells is not independently accepted by this review.
 
 | Item | Mathematical status | Execution status |
 |---|---|---|
@@ -71,7 +71,7 @@ If A,F,q,b are affine in one formal coefficient, P_N(h) is affine in that coeffi
 
 ## Findings and integration cautions
 
-1. **Minor wording:** the inspected phrase “its unique maximum is either zero (when F=0)” should say “its maximum is attained at h=0 when F=0.” The maximum *value* can be A=1, for example. This was reported to the constructor.
+1. **Minor wording, resolved:** the initial phrase “its unique maximum is either zero (when F=0)” needed “its maximum is attained at h=0 when F=0.” The maximum *value* can be A=1, for example. The constructor corrected this before the version hashed in the execution receipt; the corrected text was checked directly.
 2. **Preserve the envelope gate.** A prior raw bound obtained by taking the minimum of several enclosures proves `R<=T`; it need not prove that a newly selected quadratic r satisfies `r(h)<=T`. Before reversing the exponential estimate, check `sup_h r(h)<Nb` for that quadratic, or explicitly handle `min(r(h),T)` piecewise. A first-pass T computed as the maximum of that same quadratic is valid. This is not a defect in the written theorem, which states the stronger premise explicitly.
 3. **The improvement is on U.** The polynomial maximum must not be fed back as a raw ceiling for R. A subsequent density license still uses a valid raw bound, unless a separate argument proves a new one.
 4. **Concavity is not automatic from the raw gate.** The example `N=q=1,A=0,F=20,b=101` has `sup r=100<101`, but `P_N''(5)=663/4>0`. The new scalar concavity gate is sufficient and useful; it must not be silently dropped. Its failure alone does not imply nonconcavity for every other parameter set.
