@@ -16,6 +16,11 @@
  pdfauthor={Bartosz Kołodziejek and Kacper Rodziewicz}}
 \setlength{\emergencystretch}{2em}
 \setcounter{tocdepth}{1}
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+  {2.5ex \@plus1ex \@minus.2ex}{0.8ex \@plus.2ex}%
+  {\normalfont\normalsize\bfseries}}
+\makeatother
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
@@ -38,28 +43,31 @@
 \newcommand{\ind}{\mathbf 1}
 \newcommand{\iid}{\mathrm{iid}}
 \title{Analytic reductions for the sharp iid\\
-Berry--Esseen inequality}
+Berry--Esseen inequality\thanks{This paper was written with substantial
+assistance from AI systems; see the end of Section~\ref{ms:discussion}.}}
 \author{Bartosz Ko{\l}odziejek \and Kacper Rodziewicz}
-\date{Revised draft, 27 October 2026}
+\date{27 October 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
-The conjectured optimal constant in the iid Berry--Esseen inequality is
-$\CE=(3+\sqrt{10})/(6\sqrt{2\pi})$, approached by a fixed two-point law.
-We study analytic reductions for proving the matching upper bound at
-every sample size. A least contrary index removes the predecessor loss
-from the variational contact inequality. A Gaussian smoothing estimate
-then gives a short support proof using boundary inequalities and
-monotonicity. To analyze laws close to the extremal two-point law, we
-combine a nonnegative moment defect, an integrated contact identity and
-an exact binomial-mixture representation. Retaining the score excess
-sharpens the joint bound on conditional noise and support displacement;
-a piecewise derivative calculation replaces a curvature mesh by at most
-three candidates. We give the proofs of these reductions, explain their
-connection with the longer Fourier and finite-index arguments, and state
-the remaining analytic and certificate obligations. The global conclusion
-is conditional on an independent sharp base through $41$ and a complete
-local exclusion for every $n\ge42$.
+The conjectured optimal constant in the Berry--Esseen inequality for sums
+of i.i.d.\ random variables with finite third moment is
+$\CE=(3+\sqrt{10})/(6\sqrt{2\pi})$, the limiting value for one fixed
+two-point law. We develop an approach to the matching upper bound at every
+sample size. For fixed $n\ge2$ an extremal law exists and satisfies a
+first-order contact condition. Integrating this condition against the
+zero-bias density gives an exact identity that links the
+normal-approximation error to a Fourier remainder and to a nonnegative
+moment defect, which vanishes only at the extremal two-point law.
+Conditioning on the signs of the summands writes the sum exactly as a
+binomial mixture, so that a nearly two-point law can be compared with its
+Bernoulli skeleton. Assuming the sharp bound through $41$, a one-step smoothing recurrence
+controls the first index $n\ge42$ with $C_n\ge\CE$. The sharp predecessor
+bounds then give an elementary support estimate. Retaining the score
+excess sharpens the defect bound, while an exact curvature formula
+simplifies the conditional-count comparison. The global conclusion remains
+conditional on that finite base and a complete local exclusion for every
+$n\ge42$, including equality. The conjecture is not established here.
 \end{abstract}
 \clearpage
 \begingroup\small
@@ -80,11 +88,12 @@ local exclusion for every $n\ge42$.
 \input{sections/08-certificates}
 \input{sections/09-discussion}
 \appendix
+\setcounter{secnumdepth}{4}
+\input{appendices/fourier-analysis}
 \input{appendices/normalization}
 \input{appendices/uniform-bridge}
-\input{appendices/finite-support}
-\input{appendices/fourier-analysis}
 \input{appendices/local42-refinements}
+\input{appendices/finite-support}
 \input{appendices/finite-analysis}
 \begingroup
 \small\raggedright

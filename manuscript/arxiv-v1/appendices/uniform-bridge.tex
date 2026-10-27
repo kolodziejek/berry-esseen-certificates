@@ -1,19 +1,15 @@
 \section{The index changes required at the floor 42}\label{ms:uniform-bridge}
 
-The support proof in Section~\ref{ms:support} is uniform for all
-$n\ge42$. Other parts of a local argument also depend on its index
-floor. We spell out these dependencies rather than replacing a printed
-``$47$'' by ``$42$'' in an older theorem. This appendix establishes the
-displayed parameter changes conditional on the contact, phase-resource
-and local-comparison identities retained in the technical appendices.
-It does not assert that the full numerical package has been accepted
-under a new composition.
+The support proof in Section~\ref{ms:support} is uniform for $n\ge42$.
+The other estimates also depend on the lower bound for $n$. We derive
+the changes needed in concentration, confinement and normalization,
+assuming the contact, phase-resource and local-comparison identities
+stated in the preceding sections.
 
 \subsection{Conditional moments and strict-gap concentration}
 The concentration argument uses the antichain method of
 Littlewood--Offord theory~\cite{Erdos1945} in its random-chain
 form~\cite{Lubell1966}.
-
 
 Let $n\ge N=42$ and use the same coordinates
 $X=\ell(B_0+U-p)$ as in Section~\ref{ms:geometry-counts}. Suppose an
@@ -156,7 +152,6 @@ whose right side minus left side is
 \]
 The two error bounds are each valid with nonnegative coefficients and
 the same resource simplex. Taking their minimum is then legitimate.
-No monotonicity of a minimum of unrelated numerical functions is used.
 
 \subsection{Uniform assembly, conditional on the full inputs}
 
@@ -177,16 +172,11 @@ export, noise-profile acquisition, and local count comparison. Closed
 phase and noise seams and all admissible counts remain part of the
 cover. The local signed cubic correction uses the actual upper score
 when its coefficient is negative. The combined inverse-index correction
-is clamped at zero before the floor substitution. At positive noise
-the comparison contradicts the maximizing score; at zero noise the
-separate finite-binomial theorem gives the contradiction. These are
+is clamped at zero before the floor substitution. At positive noise the comparison excludes the maximizing score; at zero
+noise the finite-binomial comparison is used. These are
 exactly the inputs needed for Assumption~\ref{ms:local42}.
 
-This is a conditional implication between specified mathematical
-interfaces. Some source wrappers still declare only $42\le n\le48$,
-and the older confinement statement begins at $47$. Those statements
-are unchanged. A new acceptance procedure must bind the selected
-formulas, their domains and their complete predicates to the uniform
-interpretation above. The bounded source audit checks the locations
-and index dependencies; it does not replace the remaining numerical
-acceptances or a full review of the retained analytic chain.
+To obtain Assumption~\ref{ms:local42}, the finite inequalities and the
+analytic bounds supporting them must be verified on these uniform domains.
+This includes the ordered support contractions, both deleted indices,
+the signed phase cells and all positive-noise and zero-noise comparisons.

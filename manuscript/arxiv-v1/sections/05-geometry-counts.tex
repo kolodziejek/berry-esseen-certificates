@@ -1,12 +1,11 @@
-\section{The two-point skeleton and its moment defect}
+\section{The two-point skeleton and the conserved identity}
 \label{ms:geometry-counts}
 
 Every centered law can be separated into its positive and nonpositive
 parts. Replacing each part by its conditional mean gives a two-point law;
 the remaining conditional fluctuations measure its departure from that
 law. We first make this decomposition exact, then identify a moment
-defect that vanishes at Esseen's extremal distribution. All quantities
-in the construction belong to the same marginal $P$.
+defect that vanishes at Esseen's extremal distribution.
 
 \subsection{The sign split and its units}
 
@@ -22,7 +21,7 @@ nonpositive class. Define $V=\E[X\mid B_0]$ and $W=X-V$, so that
  \theta=\E W^2=1-m^2/v<1.
 \]
 Write $\theta_-=\E[W^2;B_0=0]$ and $\theta_+=\E[W^2;B_0=1]$.
-The physical distance between the two conditional means is
+The distance between the two conditional means is
 \[
  \ell=m/v=\sqrt{(1-\theta)/v}>0.
 \]
@@ -37,16 +36,14 @@ Let $U_0,U_1$ have the two conditional laws, and put
  s=qw_0+pw_1=\frac{v\theta}{1-\theta},\quad
  \lambda=ns,\quad \ell=(v+s)^{-1/2}.
 \]
-The moments $\mu_i$ are finite under the original third-moment assumption.
-Higher moments used later require bounded support or a separate proved
-moment bound. At a selected extremizer, bounded support is available from
-Lemma~\ref{ms:contact}; a quantitative support radius remains a further step.
+The moments $\mu_i$ are finite because $\rho<\infty$. Higher moments are
+used only for extremal laws, which have compact support by
+Lemma~\ref{ms:contact}.
 
 If $s=0$, both nonnegative conditional variances vanish, so $U_0=U_1=0$
 almost surely. This is exactly the standardized Bernoulli law. If $s>0$,
 the parameter $\alpha=pw_1/s$ lies in $[0,1]$ and gives
-$w_0=s(1-\alpha)/q$, $w_1=s\alpha/p$. No division by $s$ is used on the
-zero-noise face.
+$w_0=s(1-\alpha)/q$, $w_1=s\alpha/p$.
 
 The signs of $X$ are still those defining the two classes, so expansion
 of the actual conditional moments gives
@@ -59,10 +56,9 @@ of the actual conditional moments gives
 For example, on the nonpositive class $|X|^3=\ell^3(p-U_0)^3$;
 on the positive class it is $\ell^3(q+U_1)^3$. Conditional centering removes
 the linear terms and gives the first identity; the other two follow in
-the same way. The common pair $(\mu_0,\mu_1)$ must be retained whenever
-several such identities are used together.
+the same way. The three identities share the same pair $(\mu_0,\mu_1)$.
 
-\subsection{A nonnegative physical defect}
+\subsection{A nonnegative moment defect}
 
 We now suppose the support is compact. Define
 \[
@@ -87,7 +83,7 @@ There are at most countably many gaps. If the support lies in $[-R,R]$,
 then $J\le2R\int\tau=2R$, so this sum converges. Endpoint atoms do not
 alter the Lebesgue integrals defining its weights.
 
-\begin{lemma}[Physical defect and the central gap]
+\begin{lemma}[The moment defect and the central gap]
 \label{ms:physical-defect}
 \label{ms:fourier:afcore:lem:physical-defect}
 The quantity $D$ in \eqref{ms:physical-defect-definition} is nonnegative.
@@ -117,8 +113,7 @@ Summing and using Tonelli bounds its total contribution by
  J_o^+\le2\int_B^\infty(t-B)\tau(t)\,dt
        =\E[X_+(X_+-B)^2]=T_+-2BR_+\le T_+.
 \]
-Reflection of this integral calculation, without changing the fixed law,
-gives $J_o^-\le T_--2AR_-\le T_-$. Expansion of $D$ yields the identity
+The same calculation on the negative half-line gives $J_o^-\le T_--2AR_-\le T_-$. Expansion of $D$ yields the identity
 \begin{align}
  D={}&m\{\sqrt{\sigma+1}A-\sqrt{\sigma-1}B\}^2
        +(\sigma-1)T_++(\sigma+1)T_-\notag\\
@@ -167,14 +162,11 @@ then
  m(A^2+B^2)=\rho-T_+-T_-\ge1-D/2,
  \qquad A+B\ge\sqrt{2-D}.
 \]
-These are necessary conditions of the same physical law, rather than
-additional definitions of a relaxed defect.
 
 \subsection{One joint budget for endpoint motion and noise}
 
 Let $\bar A=m/q$, $\bar B=m/p$ be the conditional mean magnitudes, and
 let $\Delta_A=\bar A-A$, $\Delta_B=\bar B-B$. They are nonnegative.
-Define $p_*=(4-\sqrt{10})/2$.
 
 \begin{lemma}[Simultaneous gap inequality]
 \label{ms:simultaneous-gap}
@@ -212,8 +204,7 @@ For the first, use $m^2=(1-\theta)pq$ and the exact identity
 \[
  (\sigma+1)p^2+(\sigma-1)q^2-6pq=(6+2\sigma)(p-p_*)^2.
 \]
-This proves the displayed inequality, with one residual paying for all
-the nonnegative costs simultaneously.
+This proves the displayed inequality.
 \end{proof}
 
 In count coordinates the inward displacements are
@@ -227,7 +218,7 @@ $\Delta_A+\Delta_B$ and the count displacement $d_Y$ differ by $\ell$.
 
 \begin{theorem}[Weighted joint resource]
 \label{ms:joint-resource}
-Suppose $n\ge N>0$ and established bounds for this same law give
+Suppose $n\ge N>0$ and
 \[
  nD\le Nd_D,\quad \theta\le\Theta<1,\quad pq\le v_*,\quad
  D\ge b+6mS_*(\Delta_A+\Delta_B)+K\theta,
@@ -271,11 +262,6 @@ floors $A\ge A_l>0$, $B\ge B_l>0$ and $\theta\le\Theta$ supply
 These choices follow from Lemma~\ref{ms:simultaneous-gap} by dropping the
 nonnegative product $6m\Delta_A\Delta_B$. Rational lower enclosures for
 $b,K,S_*$ and an upper enclosure for $v_*$ preserve the implication.
-The preceding theorem assumes the weighted statement $nD\le Nd_D$;
-an unweighted $D\le d_D$ cannot be multiplied by $N$ when $n>N$.
 
 On a band $L\le\lambda\le U\le\Lambda$, the joint plane gives
-$d_Y\le d_*(1-L/\Lambda)$. Either positive intercept may be enlarged
-outward. A separate smaller marginal noise bound does not, by itself,
-replace $\Lambda$ in this joint plane. The two intercepts must still come
-from a proved simultaneous inequality.
+$d_Y\le d_*(1-L/\Lambda)$. Either intercept may be replaced by a larger value.

@@ -1,17 +1,19 @@
 \subsection{An exact curvature calculation}\label{ms:curvature}
 
-The remaining local comparison contains a one-dimensional supremum. Its apparent numerical difficulty comes from positive parts and a truncated denominator. Resolving the smooth pieces shows that no mesh is needed: a maximum occurs at an endpoint or at one explicitly known interior point.
+The local comparison contains the supremum of the phase function of
+Section~\ref{ms:counts} over an interval. Despite the positive parts and
+the truncated denominator, it is attained at an endpoint or at one
+explicit interior point.
 
 For real $b$, $1/2<c\le1$ and $[l,h]\subseteq[-1/2,1/2]$, define
 \[
  f(u)=\frac{\pos{b+u-1}}{(c-u)^2}
        +\frac{\pos{b+u}}{[c+\min(u,c/3)]^2},\qquad u_*=c-2b.
 \]
-All denominators are strictly positive. In the conditional-count comparison $c=1-d_L$, where $d_L$ is an acquired upper bound for $d_Y$ on
+All denominators are strictly positive. In the conditional-count comparison $c=1-d_L$, where $d_L$ is an upper bound for $d_Y$ on
 the current noise band, and
 $b=p_+-\min(H/\ell)$, where the minimum uses all four signed endpoint
-quotients. The variable $b$ is not a probability and cannot be freely
-reflected.
+quotients.
 
 \begin{theorem}[Exact three-candidate supremum]\label{ms:curvature-thm}
 The supremum of $f$ over $[l,h]$ is the maximum of $f(l)$, $f(h)$, and
@@ -26,9 +28,9 @@ intervals, coincident kinks and $c=1$.
 \begin{proof}
 Write $f=r+g$ for the two summands. On $b+u>1$,
 \[
- r''=\frac{2[3(b-1)+2u+c]}{(c-u)^4}>0,
+ r''=\frac{2[3(b-1)+u+2c]}{(c-u)^4}>0,
 \]
-since its bracket is $3(b+u-1)+(c-u)>0$. Where $u<c/3$ and $b+u>0$,
+since its bracket is $3(b+u-1)+2(c-u)>0$. Where $u<c/3$ and $b+u>0$,
 \[
  g'=\frac{c-2b-u}{(c+u)^3},\qquad
  g''=\frac{2(3b+u-2c)}{(c+u)^4}.
@@ -47,23 +49,22 @@ Continuity handles boundaries and collisions; constant segments contribute
 a value already attained at an endpoint or a listed maximizer.
 \end{proof}
 
-For an old grid interval $[a,d]$ and every $u\in[a,d]$,
+For any subinterval $[a,d]\subseteq[l,h]$ and $u\in[a,d]$, monotonicity
+of the numerators and positivity of the denominators give
 \[
  f(u)\le \frac{\pos{b+d-1}}{(c-d)^2}
        +\frac{\pos{b+d}}{[c+\min(a,c/3)]^2}.
 \]
-Therefore the exact maximum is at most the 64-interval outward bound used in the existing implementation.
-For fixed $b,u$, $f$ is nonincreasing in $c$. CENTRAL's first cached band
-has the smallest $c$, so its cached envelope also dominates later exact
-values; this requires the original band order and joint-gap relation.
-LEFT retains its band-dependent cache.
+The exact maximum is therefore no larger than the largest of these bounds
+over a subdivision of the interval. For fixed $b$ and $u$, $f$ is nonincreasing in $c$, so a bound computed
+with the smallest admissible $c$ remains valid for larger ones.
 
-\subsubsection{Why the final correction needs a zero clamp}
-The curvature improvement can make the recomputed inverse-index correction
-negative. One must not assume the old assertion $I>0$ remains true.
-Within a fixed positive-noise cell, the actual forms are
+\subsubsection{The inverse-index correction}
+With the exact curvature bound the inverse-index correction may be
+negative. Within a fixed positive-noise cell, the bracket and the
+correction have the forms
 \[
- B(\lambda)=z_{\rm mark}+\frac{q}{a\lambda+G^2}+s\lambda-t,\qquad
+ B(\lambda)=c_{\rm mark}+\frac{q}{a\lambda+G^2}+s\lambda-t,\qquad
  I_{\rm new}(\lambda)=A_0+\frac{A_1}{\lambda},
  \quad q\ge0,\ a>0,\ A_1\ge0.
 \]
@@ -75,16 +76,9 @@ $I_+(\lambda)=\max(0,I_{\rm new}(\lambda))$. For $n\ge N$,
 \]
 Both $B$ and the right-hand expression are convex for $\lambda>0$,
 including a possible interior zero-clamp kink, where $m_0>0$ is a lower bound for $\sqrt n\,\pi_k$.
-The quantity $z_{\rm mark}$ is constant within the cell and is unrelated
-to the standardized threshold $H/\sqrt n$.
-Endpoint checks thus cover the closed interval. At an accepted old endpoint,
-\[
- I_{\rm new}\le I_{\rm old},\ I_{\rm old}>0
- \quad\Longrightarrow\quad 0\le I_+\le I_{\rm old}.
-\]
-The original strict target $m_0B+I_{\rm old}/N<-1/1000$ is preserved.
-The separate $B<0$ gate remains necessary to use the mass lower bound.
-
-Thus an already accepted cell keeps its strict comparison margin under
-this replacement. The curvature calculation requires at most three
-candidates, while the other terms and sign conditions are unchanged.
+Here $c_{\rm mark}$ is constant within the cell.
+Endpoint checks thus cover the closed interval. If an earlier correction
+$I_{\rm old}\ge I_{\rm new}$ with $I_{\rm old}>0$ satisfies
+$m_0B+I_{\rm old}/N<-1/1000$ at an endpoint, then $0\le I_+\le I_{\rm old}$
+and the same strict inequality holds with $I_+$. The condition $B<0$ is
+still needed to use the lower bound for the binomial mass.

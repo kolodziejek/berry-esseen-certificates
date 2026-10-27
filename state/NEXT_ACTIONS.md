@@ -1,3 +1,18 @@
+# After third manuscript revision — 27 October 2026
+
+1. Review the158page paper and research/revision3-decisions.md. Keep existing
+   PR#3 in draft; the bounded review does not recommend merging as a finished paper.
+2. Use the corrected derivative in the manuscript and reduction2 sources;
+   old PASS logs did not detect the display error and remain historical records.
+3. Continue full independent review of the retained Fourier/finite chain and
+   the BASE41/LOCAL42 obligations. Distinguish these from editorial proof-reference
+   checks. Do not launch native generation or alter certificates without approval.
+
+Next bounded command from this worktree:
+python3 manuscript/arxiv-v1/tools/check_sources.py
+The independent algebra checker is
+manuscript/arxiv-v1/research/revision3_checks/check_derivatives_constants.py.
+
 # After manuscript editorial revision — 27 October 2026
 
 1. Review the new manuscript guide, main Section 5.4 and the disposition

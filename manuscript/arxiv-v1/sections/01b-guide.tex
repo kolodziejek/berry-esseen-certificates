@@ -6,7 +6,7 @@ sum with the corresponding binomial sum accurately enough to detect even
 a very small improvement. The first job uses contact and Fourier
 analysis; the second uses the discrete count structure.
 
-\paragraph{Start at the first contrary index.}
+\paragraph{Start at the first failure of the strict bound.}
 Assume a sharp base through $41$, and choose the least $n\ge42$ with
 $C_n\ge\CE$. Then $C_{n-1},C_{n-2}\le\CE\le C_n$, so
 $d_n=n(C_{n-1}-C_n)_+=0$. The uniform smoothing bound is
@@ -33,9 +33,9 @@ where $Q_H$ is the explicit piecewise cubic function in
 \eqref{ms:contact-majorant}. Its cubic growth first gives compact support.
 The quantitative step estimates the Gaussian part of contact at a radius
 $R$, then proves that the upper bound decreases along both exterior rays.
-At zero predecessor loss, this yields the three support bounds of
-Section~\ref{ms:support}; their moment hypotheses are supplied in the
-order in which the bounds are used.
+Since the predecessor term vanishes, this yields the three support bounds
+of Section~\ref{ms:support}, provided their moment bounds have been proved
+in the order in which they are used.
 
 \paragraph{Measure the departure from the extremal two-point law.}
 Let $p=\Pp(X>0)$, $q=1-p$, and $m=\E X_+=\E X_-$.
@@ -55,11 +55,14 @@ It is constant on each gap $(a,b)$ in the support. Consequently
 \]
 is the expected length of the gap containing a zero-biased observation,
 with gap length zero on the support. For a two-point law this is just
-its span. The inequality
+its span $\ell$, and for the law of~\eqref{ms:bernoulli-limit} the quantity
+$\phi(0)(\gamma+3\ell)/(6\rho)$ is exactly the limit displayed there. The
+inequality
 \[
  D=(3+\sqrt{10})\rho-\gamma-3J\ge0
 \]
-extends the extremal moment inequality to arbitrary compact support.
+says that $\phi(0)(\gamma+3J)/6$, which extends this first-order lattice
+term to arbitrary support gaps, never exceeds $\CE\rho$.
 Its equality case is exactly Esseen's oriented two-point law
 (Corollary~\ref{ms:zero-defect}). More usefully, its nonnegative
  decomposition bounds the sign probability, inward endpoint movement
@@ -76,8 +79,8 @@ been controlled, one obtains a resource inequality of the form
 \[
  n(C_n-\CE)\rho+\kappa nD+n^{3/2}L\le\mathcal B(H).
 \]
-This is the source of the joint bounds used later; it is not an extra
-assumption about how close a maximizing law ought to be to a lattice.
+Together with the defect decomposition, this inequality bounds the noise
+and the inward displacement.
 Retaining the first term, instead of discarding it, sharpens the budget.
 
 \paragraph{Compare sums with the same Bernoulli skeleton.}
@@ -106,7 +109,7 @@ one of them.
              text width=66mm,inner sep=5pt},
  input/.style={box,text width=48mm,dashed},
  arr/.style={-{Stealth[length=2mm]},semithick}]
-\node[box] (entry) {Least contrary index $n\ge42$\\
+\node[box] (entry) {First index with $C_n\ge\CE$, $n\ge42$\\
   sharp predecessors and zero loss};
 \node[box,below=of entry] (contact) {Attainment and contact\\
   initial support bound};
@@ -121,7 +124,7 @@ one of them.
 \node[input,right=12mm of resource] (fourier) {Valid Fourier enclosures\\
   and ordered moment bounds};
 \node[input,right=12mm of count] (local) {Complete signed local cover\\
-  at the actual index};
+  at the index};
 \draw[arr] (entry)--(contact);
 \draw[arr] (contact)--(resource);
 \draw[arr] (resource)--(count);
@@ -130,10 +133,9 @@ one of them.
 \draw[arr,dashed] (fourier)--(resource);
 \draw[arr,dashed] (local)--(count);
 \end{tikzpicture}
-\caption{The proposed route to the local exclusion. Dashed boxes are
-required inputs, including the analytic scope of their finite checks.
-The diagram gives the dependency order; verification status is recorded
-in Section~\ref{ms:certificates}.}
+\caption{The proposed route to the local exclusion. Dashed boxes show
+required auxiliary bounds; their verification status is recorded in
+Section~\ref{ms:certificates}.}
 \label{ms:fig:dependencies}
 \end{figure}
 
@@ -151,13 +153,12 @@ $W$, $U=W/\ell$ & Physical and count-scale conditional noise.\\
 $\theta$, $s$, $\lambda$ & $\E W^2$, $\E U^2$, and $ns$; $\theta=s/(pq+s)$.\\
 $D$, $d_n$, $d_Y$ & Moment defect, predecessor score decrement, and inward count-gap displacement.\\
 $k,u$ & Nearest integer count and phase: $np+H/\ell=k+u$, $|u|\le1/2$.\\
-$\sigma=\sqrt{10}$ & Constant in the defect decomposition; strip width is written $w_{\rm strip}$.\\\bottomrule
+$\sigma=\sqrt{10}$ & Constant in the defect decomposition.\\\bottomrule
 \end{tabular}
 \end{center}
 
 Sections~\ref{ms:extremizers}--\ref{ms:counts} contain the analytic
-narrative, including the integrated contact identity. Readers concerned
-with the remaining proof obligations can then turn to
-Section~\ref{ms:certificates}. The appendices provide the longer Fourier
-bounds, the finite-index variants and the explicit comparison formulas;
-they follow the same order of inputs and consequences.
+argument, and Section~\ref{ms:certificates} the conditional global theorem
+and the status of the remaining conditions. The appendices contain the
+longer Fourier estimates, the finite-index arguments and the explicit
+comparison formulas.

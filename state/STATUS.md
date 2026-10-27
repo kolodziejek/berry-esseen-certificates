@@ -1,3 +1,28 @@
+# Third manuscript revision — 27 October 2026
+
+Starting manuscript6299d97, immutable reference6346fc1; root branch
+manuscript/editorial-v3-20261027 with separate Fourier, finite and independent
+review branches. Review target remains existing draft PR#3 in the user's
+fork. No merge, main push, force push or upstream modification is authorized.
+
+Deliverables: manuscript/arxiv-v1/main.pdf (158pages), editable TeX and
+source-arxiv-v1.zip. Main exposition pp3–33, six appendices. The decision
+index is research/revision3-decisions.md. Bounded proof substitutions retain
+all mathematical labels; only the software-inventory table label is removed.
+
+| Result | Mathematical status | Execution status |
+|---|---|---|
+| Curvature derivative erratum | Independently rederived; three-candidate theorem unchanged | Exact polynomial test rejects old formula; corrected small proof compiled |
+| Local-exclusion rewrite and duplicate-proof references | Equivalence and hypotheses checked at stated scopes | Bounded source/rational checks pass |
+| Manuscript layout and portable sources | Editorial artifact | Clean158page TeX build; page review and isolated rebuild recorded |
+| BASE41, full LOCAL42 and whole Fourier/finite chain | Still open or not fully independently reviewed | No new complete certificate acceptance |
+
+Corrected r''=2[3(b−1)+u+2c]/(c−u)^4 in the article and reduction2 note,
+TeX and PDF. The prior display is false but the needed convexity still holds.
+All original baseline objects, certificates and predicate targets remain.
+Evidence: runs/manuscript-v3-20261027, manuscript-{fourier,finite,review}-v3-20261027,
+and runs/reduction2-20261027/curvature-erratum01. No heavy native campaign.
+
 # Manuscript editorial revision — 27 October 2026
 
 The supplied Opus/Argon suggestions have been independently assessed and

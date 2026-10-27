@@ -1,22 +1,19 @@
-\subsection{Retaining the score-excess charge}\label{ms:resources}
+\subsection{Keeping the excess term}\label{ms:resources}
 
-An estimate can lose useful information by being solved for one coordinate too early. In the conserved phase inequality below, the score excess and the geometric defect both consume the same upper bound. Keeping this coupling gives a better bound on the defect even though the score excess itself may vanish.
+In~\eqref{ms:fourier:rescore:re-phaseprice} the excess $n(C-\CE)\rho$ and
+the defect term $\kappa nD$ are bounded by the same quantity $\mathcal B(H)$,
+which depends on $C$. Keeping the excess term, instead of discarding it,
+compensates for this dependence and improves the bound on the defect.
 
-Let the actual integer satisfy $n\ge N=42$. Put $c=\CE$, with actual score $C\ge c$,
-$\rho=E|X|^3\ge1$, and $\kappa=997/15000$. Retain the source phase resource
+Let $n\ge N=42$, $c=\CE$, $C\ge c$ and $\kappa=997/15000$, and assume the
+conclusion of Corollary~\ref{ms:conserved:phase-resource},
 \begin{equation}\label{ms:06:resource}
  n(C-c)\rho+\kappa nD+n^{3/2}L\le\mathcal B(H),\qquad L\ge0,
 \end{equation}
-with its original same-law geometry, support, signed phase, concentration,
-moment and deleted-score hypotheses. In particular the conserved phase
-curvature is not charged twice.
-The retained derivation and its coefficient bounds are written out in
-Section~\ref{ms:fourier:afcore:sec:conserved} and
-\eqref{ms:fourier:rescore:u-conserved}; the required Fourier enclosures
-and acquired geometry remain hypotheses here.
+under the hypotheses stated there.
 
-For each of two acquired moment corners $j$ and each phase sign, its
-quadratic upper envelope is
+For each of the two moment corners $j$ of a panel and each sign of $H$,
+the quadratic upper envelope is
 \[
  A_j(C)+F_{j,\pm}(C)|H|-Q_j(C)|H|^2.
 \]
@@ -50,20 +47,18 @@ values. Take the maximum. This includes $C=c$ without assigning a
 positive charge at equality.
 \end{proof}
 
-For LEFT, $C_0=0.4095$, $C_1=0.4226$ and $\chi=0.40974$.
-Exact arithmetic on all 45 rows gives $B_*=G(\chi)$.
+On the $45$ left probability panels $p\in[(145+i)/500,(146+i)/500]$,
+$0\le i\le44$, we take $C_0=0.4095$, $C_1=0.4226$ and $\chi=0.40974$;
+exact arithmetic gives $B_*=G(\chi)$ on each of them.
 The bounds $C_0<\CE<\chi$ follow from Lemma~\ref{ms:gaussian-constants}.
 
-\subsubsection{Keep one joint residual}
-The old weighted bound is $nD\le Nd_{\rm old}$; define
+\subsubsection{The joint bound on noise and displacement}
+If a previously established bound gives $nD\le Nd_{\rm old}$, define
 \[
  d_{\rm new}=\min\{d_{\rm old},B_*/(\kappa N)\}.
 \]
-Thus $nD\le N d_{\rm new}$. This is a weighted bound on $nD$;
-it is not obtained by multiplying an unweighted bound on $D$ by $N$.
-In this section, write $A,B>0$ for acquired lower bounds on the two
-central-gap endpoints, and retain the variance bound $\Theta<1$ and closed probability panel
-$[l,u]$. Write $s_l=3.162277660$, $s_u=3.162277661$, and set
+Thus $nD\le N d_{\rm new}$. Let $A,B>0$ be lower bounds for the two central-gap endpoints,
+$\Theta<1$ an upper bound for $\theta$, and $[l,u]$ the probability panel. Write $s_l=3.162277660$, $s_u=3.162277661$, and set
 \begin{align*}
  v_*&=\max_{p\in[l,u]}p(1-p),\\
  \delta_*&=\max\{0,(4-s_u)/2-u,\ l-(4-s_l)/2\},\\
@@ -73,12 +68,12 @@ $[l,u]$. Write $s_l=3.162277660$, $s_u=3.162277661$, and set
  K&=\min\{3(s_l+1)B,\ 3(s_l+3)A\}>0,\qquad
  r=d_{\rm new}-b_* .
 \end{align*}
-The retained same-law inequality is
+Lemma~\ref{ms:simultaneous-gap} gives
 \[
  nD\ge Nb_*+6N(1-\Theta)(A+B)d_Y
                  +\frac{K(1-\Theta)}{v_*}\lambda.
 \]
-If $r<0$, the row is impossible. If $r>0$, put
+If $r<0$, the panel contains no extremal law. If $r>0$, put
 \[
  \Lambda_{\rm new}=\frac{Nv_*r}{K(1-\Theta)},\qquad
  d_{{\rm new,in}}=\frac{r}{6(1-\Theta)(A+B)}.
@@ -88,52 +83,42 @@ Then the \emph{single} residual gives
  \frac{d_Y}{d_{{\rm new,in}}}
        +\frac{\lambda}{\Lambda_{\rm new}}\le1.
 \]
-It is not spent independently on noise and inward displacement. No tested
-row has $r=0$; that case would require a separate zero-noise join.
+If $r=0$, Theorem~\ref{ms:joint-resource} gives $d_Y=\lambda=0$.
+For the coefficient bounds used below, none of the panels has $r=0$.
 
-CENTRAL exports upward-rounded $A,F$ and downward-rounded $Q$, and only an
-outward raw resource remainder ceiling. Its source rounding contract gives
-$\mathrm{raw}_{\rm exact}\in[\mathrm{raw}_{\rm out}-2\cdot10^{-6},
-\mathrm{raw}_{\rm out}]$. Accordingly its high score endpoint belongs to
+On the $47$ central panels $p\in[(190+i)/500,(191+i)/500]$,
+$0\le i\le46$, the coefficients are known only through outward roundings:
+upper bounds for $A_j$ and $F$, lower bounds for $Q_j$, and an enclosure
+$R_{\rm cap}\in[\mathcal R_{\rm out}-2\cdot10^{-6},\mathcal R_{\rm out}]$
+for the exact value of the chosen remainder bound $R_{\rm cap}$.
+The upper score endpoint therefore lies in
 \[
- [\,\min(0.4247,\chi+(\mathrm{raw}_{\rm out}-2\cdot10^{-6})/42),
-    \min(0.4247,\chi+\mathrm{raw}_{\rm out}/42)\,].
+ [\,\min(0.4247,\chi+(\mathcal R_{\rm out}-2\cdot10^{-6})/42),
+    \min(0.4247,\chi+\mathcal R_{\rm out}/42)\,].
 \]
-Enclose the chord weight over this interval; use upper $A,F$, lower $Q$,
-and the lower high-score endpoint in the subtraction in
-Lemma~\ref{ms:06:charge}. This gives valid outward budgets for all 47 central rows.
+We apply Lemma~\ref{ms:06:charge} with the chord weights enclosed over
+this interval and with its left endpoint in the subtraction.
 
-\subsubsection{Exact removable sectors}
-The following decimal ceilings are rounded upwards from exact fractions.
-For precise identification, LEFT row $i$, $0\le i\le44$, corresponds to
-$p\in[(145+i)/500,(146+i)/500]$; CENTRAL row $i$, $0\le i\le46$,
-corresponds to $p\in[(190+i)/500,(191+i)/500]$. These are the acquired
-probability panels in the retained input table. The full 92-row scan establishes all newly crossed
-thresholds among $0.05,0.08,0.10,0.12$.
+\subsubsection{Empty noise bands}
+Using the coefficient bounds and moment intervals for these panels gives
+the following consequences. They are conditional on establishing those
+inputs for the extremal law. The decimal bounds are rounded up from
+exact fractions.
 \begin{center}
-\begin{tabular}{@{}llP{69mm}@{}}
+\begin{tabular}{@{}llP{62mm}@{}}
 \toprule
-Row & New conclusion & Consequence after acquisition\\
+Probability panel & New bound & Consequence\\
 \midrule
-LEFT 0 & $r<-0.0003$ & Entire final row excluded; TINY comparison unnecessary.\\
-LEFT 5 & $\lambda\le0.049944478$ & MID domain above $0.05$ empty.\\
-LEFT 8 & $\lambda\le0.077273055$ & Both signed LOW producers above $0.08$ unnecessary.\\
-LEFT 10 & $\lambda\le0.094055578$ & Domain above $0.10$ empty; two profile calls on $[0.10,0.12]$ unnecessary.\\
-LEFT 13 & $\lambda\le0.117287323$ & Domain above $0.12$ empty; two profile calls on $[0.12,0.30]$ unnecessary.\\
-CENTRAL 28 & $\lambda\le0.099809552$ & Comparison sector above $0.10$ empty; profile already inherited.\\
+$p\in[0.290,0.292]$ & $r<-0.0003$ & no extremal law\\
+$p\in[0.300,0.302]$ & $\lambda\le0.049944478$ & no extremal law with $\lambda>0.05$\\
+$p\in[0.306,0.308]$ & $\lambda\le0.077273055$ & no extremal law with $\lambda>0.08$\\
+$p\in[0.310,0.312]$ & $\lambda\le0.094055578$ & no extremal law with $\lambda>0.10$\\
+$p\in[0.316,0.318]$ & $\lambda\le0.117287323$ & no extremal law with $\lambda>0.12$\\
+$p\in[0.436,0.438]$ & $\lambda\le0.099809552$ & no extremal law with $\lambda>0.10$\\
 \bottomrule
 \end{tabular}
 \end{center}
-Restriction of the old complete cover to these smaller same-law domains
-preserves signs, nearest counts, closed phase seams and probability
-endpoints. Each removed closed noise band has its lower endpoint strictly
-above the new ceiling. The separate $\lambda=0$ Bernoulli theorem remains.
-LEFT 6, 9 and 14 and CENTRAL 38 still exceed their relevant thresholds;
-this method does not justify deleting them.
-
-Thus a newly named upper-module contract could use 150 LOW producers
-(78 CENTRAL, 72 LEFT), with 19 native obligations still retained. The
-candidate task count becomes 169, before new joins. This is not a count
-for the whole repository or a measured runtime saving. In particular,
-row 0 is excluded only after its final resources have been acquired:
-none of its acquisition or confinement ancestors is removed.
+In each case the excluded noise band starts strictly above the new bound,
+so the remaining cells still cover the panel. On the other panels the new
+bounds do not cross the endpoint of a noise band. The case $\lambda=0$ is
+treated separately by Schulz's theorem.

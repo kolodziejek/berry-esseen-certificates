@@ -3,12 +3,14 @@
 **Authors:** Bartosz Kołodziejek and Kacper Rodziewicz. Affiliations, email
 addresses and ORCIDs are intentionally omitted at the authors' request.
 
-`main.tex` is the editable manuscript. The revised guide and dependency diagram
+`main.tex` is the editable manuscript. The guide and dependency diagram
 introduce the full contact/conserved-identity argument. The main chapters explain the
 extremizer/contact method, first-failure reduction, elementary support,
 joint physical defect, conditional-count identity, improved resource bound,
 exact curvature maximum and conditional global assembly. The appendices
-typeset the retained analytic derivations at their actual scopes.
+typeset the retained analytic derivations at their actual scopes, grouped into
+six coherent appendices. Shared proofs are referenced after matching their
+hypotheses; distinct finite-index and Fourier refinements remain explicit.
 
 This is a review draft, not a claim that the sharp conjecture is proved.
 The finite base, complete local predicates, their scope and the full new
@@ -54,17 +56,27 @@ a draft for review, without merging.
 
 ## Delivered review artifacts
 
-- `main.pdf`: 164-page revised draft; main exposition precedes the
+- `main.pdf`: 158-page revised draft; main exposition on pages 3–33 precedes the
   technical appendices. Explicit certificate conditions and AI disclosure.
 - `source-arxiv-v1.zip`: portable source package, rebuilt in a fresh directory
   with shell escape disabled; it is not an arXiv submission.
 - `research/revision-decisions.md`: disposition of the supplied proposals,
   reorganization, independent review and preserved limitations.
+- `research/revision3-decisions.md`: the next editorial round, selective proof
+  deduplication, corrected curvature derivative and retained hypotheses.
+- `research/revision3-independent-review.md`, `revision3-fourier.md` and
+  `revision3-finite.md`: bounded independent review and exact substitution maps.
 - `research/manuscript-review.md`: original combined coverage, independent review
   outcomes, remaining limitations and actual validation.
 
 The recommendation is author review, with the PR kept in draft. No final
 publication, complete proof acceptance or merge is recommended at this stage.
+
+The third round starts from manuscript commit `6299d97`. Its corrected
+curvature derivative is also propagated to the earlier reduction note and
+its PDF. The theorem and certificate predicates are unchanged. Compilation,
+page-review and portable rebuild receipts are under
+`runs/manuscript-v3-20261027/` at the repository root.
 
 Draft review: https://github.com/kolodziejek/berry-esseen-certificates/pull/3
 (stacked on audit PR #2; no merge or submission performed).

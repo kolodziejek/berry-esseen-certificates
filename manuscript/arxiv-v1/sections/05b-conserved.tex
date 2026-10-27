@@ -1,8 +1,8 @@
-\subsection{From contact slack to a conserved phase resource}
+\subsection{The conserved identity}
 \label{ms:conserved}\label{ms:fourier:afcore:sec:conserved}
 
-The physical defect measures how far the gap and third-moment geometry
-are from the extremal two-point configuration. To bound that defect, we
+The moment defect measures how far the gaps and third moments of $P$ are
+from those of the extremal two-point law. To bound that defect, we
 integrate the contact slack in two ways. Integrating over support gaps
 reveals $J$ and a nonnegative leakage $L$. Integrating against the
 zero-bias law instead turns the same slack into a quadratic-hinge
@@ -11,9 +11,7 @@ that expectation with its Gaussian and cubic terms. Equating the two
 expressions gives an exact identity in which score excess, defect,
 phase displacement and leakage share one remainder.
 
-
-We now state precisely the contact input needed for the identity.
-Fix an integer $n\ge2$ and a common iid marginal $P\in\mathcal P$.
+Fix an integer $n\ge2$ and $P\in\mathcal P$.
 Write $S_j=X_1+\cdots+X_j$ and $z=H/\sqrt n$,
 \[
  F=\Pp(S_n\le H),\quad
@@ -32,19 +30,17 @@ where
  -\frac{H\varphi+3C\rho}{2\sqrt n}y^2+\frac{C}{\sqrt n}|y|^3.
  \label{ms:fourier:afcore:eq:contact-polynomial}
 \end{align}
-At an unrestricted maximizing positive closed-CDF witness, these
-relations follow from Lemma~\ref{ms:contact}. They will be the precise
-contact hypotheses throughout the derivation.
+At an extremal pair these relations hold by
+Lemma~\ref{ms:contact}; they are the only contact hypotheses used below.
 
 Because $C>0$, the piecewise cubic function grows to $+\infty$ on either support ray.
 Equality in \eqref{ms:fourier:afcore:eq:contact-input}, with $0\le h_P\le1$,
 therefore gives $|X|\le R$ for some finite $R$.
-Only after this observation do we introduce
-$M_4=\E X^4$ and $M_5=\E|X|^5$.
+In particular $M_4=\E X^4$ and $M_5=\E|X|^5$ are finite.
 
 \subsubsection{Auxiliary gap integrals and leakage}
 
-Use the zero-bias density $\tau$, gap functional $J$ and physical defect
+Use the zero-bias density $\tau$, gap functional $J$ and moment defect
 $D$ of \eqref{ms:tau-moments} and
 \eqref{ms:physical-defect-definition}. Lemma~\ref{ms:physical-defect}
 gives $D\ge0$. To evaluate the contact slack we need two more weighted
@@ -85,7 +81,7 @@ Bounded Fubini consequently gives
  =\int_a^b(t-a)(-Q_H'(t))\,dt
        -\int_{[a,b)}(t-a)\,d\nu(t).
 \]
-In particular a mass at the upper endpoint is not counted as interior.
+
 Substituting \eqref{ms:fourier:afcore:eq:contact-polynomial} proves
 \begin{equation}\label{ms:fourier:afcore:eq:first-slack}
  \mathcal A=\frac{\varphi J}{2\sqrt n}+\frac{G}{n^{3/2}}-L,
@@ -141,7 +137,6 @@ then
 \begin{equation}\label{ms:fourier:afcore:eq:truncated-first}
  M+\varphi=-\frac{\gamma z\varphi}{2\sqrt n}+\frac{CK_1}{n}.
 \end{equation}
-All moments here are legitimate because support was established first.
 
 \subsubsection{Compensated inversion over the entire half-line}
 
@@ -177,8 +172,7 @@ Absolute Fubini applies to the compensated integrand against $|\mu|$.
 Its iterated absolute integral is
 $\pi\int(x-H)^2\,d|\mu|(x)/4<\infty$.
 The linear term integrates to zero, since both the mass and first moment
-vanish. This proves the formula and its absolute convergence. No CDF
-inversion or averaging of a jump is used.
+vanish. This proves the formula and its absolute convergence.
 \end{proof}
 
 Let $Z_0$ be standard normal, write $f(t)=\E e^{itX}$, and set
@@ -204,9 +198,8 @@ Since $q_H(\sqrt n\,x)=nq_z(x)$, the exact normalization is
         \frac{\Im(e^{-itH}V_n(t))}{t^3}\,dt,
  \quad V_n(t)=f(t)^n-e^{-nt^2/2}(1-in\gamma t^3/6).
 \end{equation}
-In particular the infinite high-frequency part has not been discarded.
 
-\subsubsection{The identity and the error ledger}
+\subsubsection{The identity}
 
 \begin{proposition}[Conserved identity]\label{ms:fourier:afcore:prop:conserved}
 Under the explicit contact hypotheses
@@ -223,7 +216,7 @@ $U=J_1+(M_4-3)/6$. Then
  E_n={}&-n^{3/2}\varepsilon/2.\nonumber
 \end{align}
 If $C\ge\CE$, every term on the left is nonnegative.
-For any split $b>0$, valid complete bounds
+For any $b>0$, bounds
 \[
  I_{\rm low}\ge\int_0^b
        \frac{|\Im(e^{-itH}V_n(t))|}{t^3}\,dt,\qquad
@@ -265,17 +258,18 @@ $\CE=(3+\sqrt{10})\phi(0)/6$, and
 $\varphi=\phi(0)e^{-w}$, and multiply by $n$.
 This proves \eqref{ms:fourier:afcore:eq:conserved}. Nonnegativity follows from
 Lemma~\ref{ms:physical-defect}, $L\ge0$, and $e\ge0$.
-Equation~\eqref{ms:fourier:afcore:eq:epsilon} gives the ledger directly.
+Equation~\eqref{ms:fourier:afcore:eq:epsilon} gives the error bound directly.
 \end{proof}
 
-The identity holds at each actual index $n\ge2$. When $C\ge\CE$,
-its four nonnegative terms have a direct interpretation: score excess, Gaussian phase cost,
-physical defect, and leakage into complementary support gaps. The next
-step turns a complete bound on the right side into a quantitative budget.
+The identity holds at each index $n\ge2$. When $C\ge\CE$,
+its four terms are nonnegative: the excess of the ratio over $\CE$, a
+Gaussian cost of an off-centre threshold, the moment defect, and a weighted leakage
+of $H-S_{n-1}$ into support gaps. A bound on the right side therefore
+bounds each of them.
 
-\subsubsection{Removing the Gaussian weight and retaining its phase cost}
+\subsubsection{Removing the Gaussian weight}
 
-Define the exact raw remainder, without subtracting a score charge, by
+Denote the right side of~\eqref{ms:fourier:afcore:eq:conserved} by
 \begin{equation}\label{ms:fourier:rescore:re-raw}
 \begin{aligned}
  \mathcal R={}&C\{3\beta J/2+3\rho J_1-3J_2-K_q\}
@@ -290,8 +284,8 @@ The exact conserved identity can be regrouped as
  \mathcal R=ne\rho+\frac{n\phi(0)}6D+n^{3/2}L
  +n(1-e^{-w})\left(\CE\rho-\frac{\phi(0)}6D\right).
 \end{equation}
-The last coefficient must be positive before the Gaussian weight can
-be removed. A first complete remainder bound provides that sign.
+The last coefficient must be shown to be positive; a first bound on the
+remainder provides this.
 
 \begin{lemma}[Removing the Gaussian weight]\label{ms:fourier:rescore:re-weight}
 Suppose $C\ge\CE$, $n\ge N\ge2$, and an established bound gives
@@ -320,8 +314,7 @@ Dropping the last nonnegative term of
 In the original conserved identity all four terms are nonnegative,
 so $n\CE\rho(1-e^{-w})\le r$. Since $\CE\rho>2/5$, this proves
 the density floor. Finally $\phi(0)>997/2500$ gives the bound on $nD$.
-If a purported upper bound has $r<0$, the same inequalities already
-exclude the parameter cell.
+If $r<0$, no extremal pair has these parameters.
 \end{proof}
 
 The constant comparisons used here follow from
@@ -372,12 +365,8 @@ and use $\phi(0)/6>\kappa$ to obtain
 \eqref{ms:fourier:rescore:re-phaseprice}.
 \end{proof}
 
-This corollary specifies how the Fourier remainder enters the resource
-calculation. Complete low- and high-frequency bounds in
-Appendix~\ref{ms:fourier:rescore:sec:setup} control $E_n$; moment and gap
-bounds control the other terms of $\mathcal R$. The coefficient atlas in
-Appendix~\ref{ms:fourier:rescore:re-atlas} organizes these enclosures into
-the signed quadratics above. Once a phase price has been included in
-$Q_{\rm raw}+q_{\rm extra}$, it is not added again. The charge
-$n(C-\CE)\rho$ remains on the left throughout, ready for the convex
-score argument that follows.
+In applications, the low- and high-frequency bounds of
+Appendix~\ref{ms:fourier:rescore:sec:setup} control $E_n$, moment and gap
+bounds control the other terms of $\mathcal R$, and the coefficient tables
+of Appendix~\ref{ms:fourier:rescore:re-atlas} assemble them into the
+quadratic envelopes above.

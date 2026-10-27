@@ -1,12 +1,15 @@
 \section{An elementary support bound}\label{ms:support}
 
-The contact inequality is most useful once it forces the maximizing law into a short interval. A numerical support proof often bounds a polynomial on many cells. Here the absence of predecessor loss allows a simpler argument: estimate the Gaussian part at one boundary, then show that the contact expression decreases along the entire exterior ray. Only the first boundary needs a sharpened Gaussian estimate.
+We now show that the contact inequality confines an extremal law to a
+short interval. Because the predecessor term vanishes, it suffices to bound
+the Gaussian part of the contact inequality at one radius and to show that
+the resulting upper bound decreases along each exterior ray.
 
-Throughout this section, the actual integer satisfies $n\ge42$ and the
-attained score satisfies $C_n\ge\CE$. We also assume
+Throughout this section $n\ge42$, $(P,H)$ is an
+extremal pair, and $C_n\ge\CE$. We also assume
 $C_{n-1}\le C_n$, so the positive predecessor loss is zero.
-Set $v=n-1$, $s=\sqrt{n/v}$ and $F_v(x)=\Phi(x/\sqrt v)$. The retained
-contact inequality on the complete closed support is
+Set $v=n-1$, $s=\sqrt{n/v}$ and $F_v(x)=\Phi(x/\sqrt v)$. For every $t$ in
+the support of $P$, the contact equality of Lemma~\ref{ms:contact} gives
 \begin{equation}\label{ms:04:contact}
  0\le H_n(H,t)+C_n\{-|t|^3+\tfrac32\rho t^2+3\beta t+\rho e_n\},
 \end{equation}
@@ -20,8 +23,8 @@ and the exact Gaussian expression is
  =F_v(H-t)-F_{v+1}(H)+tF_{v+1}'(H)
        -\frac{t^2-1}{2}F_{v+1}''(H).
 \]
-The same-owner predecessor score is at most the global predecessor score;
-at zero global decrement the discarded signed-loss term is nonpositive.
+Here we used $R_{n-1}(P)\le C_{n-1}\le C_n$: the term involving the
+predecessor constant is then nonpositive and has been dropped.
 For the numerical bound on $e_n$, rationalization gives
 \[
  ne_n=\frac{s^2(2s+1)}{2(s+1)^2}.
@@ -60,8 +63,7 @@ $\|\phi^{(5)}\|_\infty\le8/\pi<51/20$. Therefore
        +\frac{51(3u^2-2)}{960v^{3/2}}.
 \end{equation}
 Every remainder bound is uniform in the raw threshold $H$.
-The rational lower bound $\pi>281476/89625>160/51$ suffices for these
-constants and $\phi(0)<2/5$.
+Here we used $\pi>160/51$.
 
 \begin{lemma}[Two all-threshold envelopes]\label{ms:04:envelopes}
 For $u\ge5/2$,
@@ -97,15 +99,14 @@ $2B\phi(0)\le A\phi(0)/2$. Add the uniform remainder.
 
 \subsection{Three support bounds}
 The first radius uses only the global moment cap. Later contractions use
-sharper moment bounds on probability panels. We state the three bounds in
-terms of those moments, before identifying their uses in the finite schedule.
+sharper moment bounds on probability panels. We state them in terms of the moment bounds they require.
 
 Use
 \[
- S=81/80,\quad \ell=6,\quad c_0=819/2000<\CE,\quad
+ S=81/80,\quad  c_0=819/2000<\CE,\quad
  H_4=u^4-6u^2+3,
 \]
-so $s\le S$, $\sqrt v>\ell$ and $e_n<8/875$. Define
+so $s\le S$, $\sqrt v>6$ and $e_n<8/875$. Define
 \begin{align*}
  E(u)&=\frac{u^5}{4100}+\frac{3u}{820}
                    +\frac{17(3u^2-2)}{78720},\\
@@ -115,7 +116,7 @@ so $s\le S$, $\sqrt v>\ell$ and $e_n<8/875$. Define
        \left(A^2+\frac{H_4^2}{256\cdot41}\right)
        +S^3E(u)A+c_0Q_{r,b}(u)A.
 \end{align*}
-For acquired $\rho\le r$, $|\beta|\le b$, the contact coefficient is at
+If $\rho\le r$ and $|\beta|\le b$, the contact coefficient is at
 most $Q_{r,b}$. Check $Q_{r,b}<0$ before replacing its actual multiplier
 $C_n$ by the lower constant $c_0$. Lemma~\ref{ms:04:envelopes} then makes
 $P<0$ sufficient at a boundary; $P^\sharp<0$ is sufficient when $B\le A/4$.
@@ -124,7 +125,7 @@ To extend a boundary to a whole ray, put
 \[
  L_{r,b}(u)=\tfrac25(u^2/2+1/2+8/875)+c_0Q'_{r,b}(u).
 \]
-Here the direct derivative bound has a short proof. Put
+To bound the derivative of $H_n$, put
 $z=H/\sqrt n$ and $y=(H-t)/\sqrt n$. Exact differentiation gives
 \[
  \partial_tH_n=n\phi(z)+Ht\phi(z)-ns\phi(sy).
@@ -141,7 +142,7 @@ $n(s-1)=1/2+e_n$, this proves
 If $Q,Q',Q'',L,L',L''$ are negative at $U$, their required signs persist
 for $u\ge U$, since $Q'''=-6$ and $L''=2/5-6c_0<0$.
 The contact upper bound for each sign then decreases strictly along the
-whole ray. This includes endpoints and atoms.
+whole ray.
 
 \begin{proposition}[Support from moment bounds]\label{ms:04:three-bounds}
 Under the contact and zero-loss hypotheses of this section, each of the
@@ -158,8 +159,7 @@ moment bounds in \textup{(i)} whenever $C_n\ge\CE$.
 \begin{proof}
 \emph{The initial radius.}
 
-Take $R=96/25$, $r=1841/1000$, $b=321/500$. The retained moment inequalities
-give
+Take $R=96/25$, $r=1841/1000$, $b=321/500$. The structural inequalities~\eqref{ms:structural-classical} give
 \[
  \rho<
  \min\left\{\frac{0.3031\cdot0.646}{c_0-0.3031},
@@ -229,15 +229,17 @@ pair. Combining the negative boundary estimate with these ray bounds proves
 \textup{(iii)}. The moment caps are fixed while moving along a ray.
 \end{proof}
 
-\begin{theorem}[Conditional elementary support replacement]
-For an actual integer $n\ge42$ and attained score $C_n\ge\CE$, under the
-retained contact, zero-loss and ordered same-law acquisition
-hypotheses, all 65 support conclusions in the proposed local exclusion follow from
-Proposition~\ref{ms:04:three-bounds}: one initial radius, one first
-contraction, and 63 instances of the continuous family. This proof uses no polynomial positivity mesh and no signed fifth-order Gaussian tangent. The moment assumptions for each invocation must still be established before the support bound is applied.
+\begin{theorem}[Elementary support replacement]\label{ms:04:replacement}
+Let $n\ge42$ and let $(P,H)$ be an attained maximizing pair with
+$C_n\ge\CE$ and $C_{n-1}\le C_n$. Once the corresponding moment bounds
+have been proved for $P$, Proposition~\ref{ms:04:three-bounds} gives all
+$65$ support contractions in the proposed local exclusion: one initial
+radius $96/25$, one contraction to $121/40$, and $63$ applications of the
+affine family with $5/2\le R\le111/40$.
 \end{theorem}
-The first contraction encloses the schedule's moment maxima
-$71458741/50000000$ and $46459359/100000000$. The other 63 tuples satisfy
-the displayed affine moment bounds. Matching these tuples and establishing
-the preceding moment estimates are the finite inputs described in
-Section~\ref{ms:certificates}.
+The structural inequalities~\eqref{ms:structural-classical} give the
+first moment bounds. The second application covers the moment maxima
+$71458741/50000000$ and $46459359/100000000$. The other $63$ parameter
+triples satisfy the affine bounds of Proposition~\ref{ms:04:three-bounds};
+they are listed in the accompanying data. Each contraction uses moment
+bounds obtained before that contraction is applied.

@@ -1,3 +1,19 @@
+# Third-round corrections and declined shortcuts — 27 October 2026
+
+- Old curvature identity2[3(b−1)+2u+c]/(c−u)^4 is false: at
+  (b,c,u)=(1,3/4,1/4) it gives40 instead of56. Correct u+2c preserves
+  convexity and the maximum theorem. Historical checked status was insufficient.
+- Blanket deletion of supposedly identical appendix proofs is unsafe:
+  actual-index weighting, exact signed integrals and the wider Pearson
+  rectangle need their separate hypotheses and formulas.
+- The short Gaussian bounds do not replace fine directed pi endpoints.
+- Polynomial factors above degree3 require appropriate moments, not necessarily
+  compact support. Here compactness is the proved sufficient source of them.
+- 'Positive maximizing threshold' is ambiguous and can incorrectly impose t>0;
+  the intended statement is a threshold with positive closed-CDF discrepancy.
+- Supplied claims of mandatory author directives, new vendor provenance,
+  unconditional reductions, or completed verification were not treated as facts.
+
 # Rejected revision proposals — 27 October 2026
 
 - Weights `(4 minus/plus sqrt(10))/2` are not a probability pair. Correct

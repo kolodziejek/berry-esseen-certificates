@@ -5,9 +5,8 @@ Berry--Esseen inequality asks how far that description can be from the
 truth at a specified sample size. Even when the summands have the same
 distribution, the best universal constant is a delicate question: the
 largest errors come from the interaction of skewness with the jumps of a
-lattice distribution. A proof of the sharp inequality must retain both
-effects without allowing exceptional laws to escape as the sample size
-changes.
+lattice distribution. A proof of the sharp inequality must control both
+effects uniformly in the law and in the sample size.
 
 Let $\mathcal P$ denote the probability laws on $\R$ satisfying
 $\E X=0$, $\E X^2=1$, and $\rho(P):=\E|X|^3<\infty$. For independent
@@ -24,9 +23,8 @@ density. The conjecture is
  C^*=\CE,\qquad
  \CE=\frac{3+\sqrt{10}}{6\sqrt{2\pi}}=0.409732\ldots.
 \end{equation}
-Throughout, $H$ is a threshold for the \emph{raw sum}; $H/\sqrt n$ is its
-standardized version. A later Bernoulli coordinate introduces a third
-threshold, and we will keep the three distinct. All terminating decimals
+Throughout, $H$ is a threshold for the \emph{raw sum} $S_n$ and
+$H/\sqrt n$ its standardized version. All terminating decimals
 in numerical inequalities mean exact rational numbers.
 
 The normalization costs no generality. If $Z$ has mean $\mu$, variance
@@ -66,8 +64,8 @@ Consequently every constant smaller than $\CE$ fails for a sufficiently
 large sum of this one fixed Bernoulli law. This proves $C^*\ge\CE$;
 it supplies no upper bound for other laws. Hipp and Mattner settled the symmetric binomial case
 \cite{HippMattner2008}; Schulz's dissertation~\cite{Schulz2016} proves
-the sharp upper bound for the entire binomial family at every sample size. That finite-binomial theorem and the
-fixed-law lower asymptotic have different roles in the argument below.
+the sharp upper bound for the entire binomial family at every sample size. We use Schulz's theorem for the noiseless case in
+Section~\ref{ms:counts}.
 
 Upper estimates developed through increasingly precise smoothing and
 characteristic-function inequalities. Zolotarev's work and van Beek's
@@ -79,8 +77,8 @@ $0.7056$~\cite{Shevtsova2007}, the bound $0.5129$ of Korolev and
 Shevtsova~\cite{KorolevShevtsova2010}, Tyurin's bound $0.4785$ obtained
 using zero-bias estimates and characteristic-function bounds~\cite{Tyurin2010}, and Shevtsova's bounds
 $0.4748$ and $0.4690$~\cite{Shevtsova2011,Shevtsova2013}.
-These estimates also give useful information before the absolute constant
-is extracted. For example, the structural inequalities
+Their structural forms are more informative than the constants alone.
+For example, the inequalities
 \begin{equation}\label{ms:structural-classical}
  \sqrt n\,\Delta_n(P)\le
  \min\{0.4690\rho,\ 0.3322(\rho+0.429),\
@@ -96,10 +94,9 @@ Several recent projects combine analytic inequalities with extensive
 computation. Xiao and Li report a global iid upper bound of $0.4395$;
 Lin reports $0.423$ using a refinement of their analytic framework
 \cite{xiao2026berryesseen,lin2026berryesseen}. Both supply Lean
-developments and exact finite certificates. Their finite checks use Lean's native evaluation mechanism. Tao and contributors' \emph{Optimization Constants in Mathematics},
+developments and exact finite certificates. Tao and contributors' \emph{Optimization Constants in Mathematics},
 especially Problem~19a, records this work and its verification status
-\cite{tao2026berryesseenregistry}. The registry links the manuscripts, implementations and verification
-discussions.
+\cite{tao2026berryesseenregistry}.
 
 He and Cheng's preprint~\cite{hecheng2026eventually} reports the sharp
 inequality for every
@@ -109,35 +106,20 @@ inequality for every
 with a threshold independent of the summand law. This uniform quantifier
 is essential. A theorem for each fixed law, with a law-dependent
 threshold, would not exclude a sequence of counterexamples whose laws
-change with $n$. Their eventual theorem also leaves a finite range to be
-addressed; it is not an all-index proof. We cite version~3 explicitly,
-since the title and argument changed between versions.
+change with $n$. A finite but astronomically large range of $n$ remains.
 
-Bell's collection considers independent summands without the iid
-restriction. It reports a universal upper bound below $0.44988$, finite
-array results, and sharp bounds in a small-Lyapunov regime
-\cite{BellIndependent2026,BellFinite2026,BellSmall2026}.
-The collection's extremizer and structural papers
-\cite{BellExtremizers2026,BellStructural2026} distinguish the distribution
-of a sum from the third-moment cost of an independent factorization of
-that distribution. They also distinguish an extremal value from a
-classification or uniqueness theorem. These distinctions matter here:
-a necessary contact condition does not establish that a relaxed optimizer
-is an iid convolution. In the independent setting, zero padding can also
-change the number of summands without changing the normalized sum, so
-sample-size assertions must be compared with care. The cited papers are
-from collection version~0.7.0; the Primal Space project page describes an
-earlier version of the same collection, not a separate result.\footnote{Project overview: \url{https://www.primalspace.me/projects/independent-berry-esseen-bounds/}.}
+Bell's collection treats independent, not necessarily identically
+distributed, summands. It reports a universal upper bound below
+$0.44988$, results for finite arrays, and sharp bounds when the Lyapunov
+ratio is small \cite{BellIndependent2026,BellFinite2026,BellSmall2026};
+its structural papers study extremizers in that
+setting~\cite{BellExtremizers2026,BellStructural2026}.
 
-Formalization offers another way to expose the exact hypotheses of a
-result. Yan's \emph{ProbabilityApproximation} formalizes classical
-nonuniform scalar and multivariate normal-approximation theorems in Lean
-\cite{Yan2026ProbabilityApproximation}; it is not a formal proof of the
-sharp iid constant. The \emph{BerryEsseenLean} project accompanying He
-and Cheng has eventual-sharpness endpoints with explicitly listed external
-mathematical inputs~\cite{BerryEsseenLean2026}. Its inspected September
-snapshot accompanies an earlier manuscript version. The scope of these formal statements is therefore determined by their
-external hypotheses as well as their conclusions.
+In Lean, Yan's \emph{ProbabilityApproximation} formalizes classical
+nonuniform and multivariate normal-approximation
+theorems~\cite{Yan2026ProbabilityApproximation}, and the
+\emph{BerryEsseenLean} project formalizes an eventual-sharpness framework accompanying an earlier version of He
+and Cheng, relative to explicitly listed external mathematical inputs~\cite{BerryEsseenLean2026}.
 
 \subsection{The present approach and its scope}\label{ms:scope}
 
@@ -153,14 +135,19 @@ The sign decomposition then turns the original sum into an exact binomial
 mixture. Related zero-bias methods appear in Tyurin's work and, for
 independent summands, in Bell's transport paper~\cite{Tyurin2010,BellTransport2026}.
 
-Our main reductions simplify three parts of this program. At a first
-contrary index, the predecessor loss in contact is zero. This permits
-an elementary support argument using boundary estimates and monotonicity,
-in place of support positivity meshes. Retaining the score excess in
-the defect budget excludes additional comparison sectors. Finally, an
-exact three-candidate maximization replaces the phase-curvature mesh.
-These are the results of Sections~\ref{ms:support}, \ref{ms:resources}
-and~\ref{ms:curvature}.
+The reductions developed here address four parts of the argument.
+The one-step recurrence of Theorem~\ref{ms:one-step} controls the first
+index $n\ge42$ with $C_n\ge\CE$, assuming a sharp base through $41$;
+Lemma~\ref{ms:first-failure-entry} then gives zero predecessor loss and
+$0\le n(C_n-\CE)<3003/10250$. Proposition~\ref{ms:04:three-bounds}
+uses this zero loss to prove support bounds by boundary estimates and
+monotonicity. Retaining $n(C_n-\CE)\rho$ in the conserved identity
+sharpens the joint bound on noise and endpoint displacement
+(Corollary~\ref{ms:conserved:phase-resource} and
+Lemma~\ref{ms:06:charge}). Finally, Theorem~\ref{ms:curvature-thm}
+replaces the curvature maximization by at most three explicit candidates.
+The support and resource statements keep their stated moment and
+Fourier hypotheses.
 
 The all-index conclusion remains conditional. Theorem~\ref{ms:conditional-global}
 shows that an independent sharp base $C_j\le\CE$ for $1\le j\le41$,
@@ -174,10 +161,7 @@ complete finite certificates. The new reductions do not by themselves
 establish that assumption or the finite base. Section~\ref{ms:certificates}
 records their verification status in one place.
 
-An earlier working draft is available on Hexagon
-\cite{rodziewiczkolodziejek2026momentdefects}. The present manuscript
-reorganizes its analytic material and gives the reductions above, while
-keeping the unverified parts of the longer Fourier and finite-index chain
-explicit. We cite recent computational and formal projects as related
-work; none of their newly reported bounds is used as a premise here.
-The bibliography and accompanying source notes identify the versions used.
+An earlier, AI-assisted working draft is available on
+Hexagon~\cite{rodziewiczkolodziejek2026momentdefects}; the present paper
+reorganizes that material and develops the reductions above. None of the
+bounds reported in the recent works cited above is used here.

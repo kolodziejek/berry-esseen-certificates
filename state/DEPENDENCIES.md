@@ -1,3 +1,19 @@
+# Third-round proof-reference dependencies — 27 October 2026
+
+- The scalar LOCAL42 reformulation is equivalent only because positive
+  closed attainment makes the extremal-pair set nonempty and its conjunction
+  has no omitted pair-dependent premise. Equality remains included.
+- The Fourier affine-resource specialization with D<=D_* uses N=n in the
+  weighted theorem. The floor-N version still requires nD<=N d_D.
+- Coarse Gaussian constants do not establish the fifteen-decimal pi endpoints;
+  the finer Machin/alternating-series recipes remain explicit.
+- The finite paired rectangle retains R<2g, M>=3 and its signed exact Gaussian
+  integral. Only common polynomial/norm derivations are cross-referenced.
+- The strict-gap concentration proof is index-independent; its separate
+  floor47/J0=45 mass bound remains. No reference extends it to floor42 by itself.
+- Curvature convexity uses corrected bracket3(b+u−1)+2(c−u)>0; other pieces
+  still require c<=1 and u<=1/2. The theorem's domain and zero-clamp gates stay.
+
 # Manuscript revision dependency clarifications — 27 October 2026
 
 - The exact conserved identity requires one common actual iid marginal,

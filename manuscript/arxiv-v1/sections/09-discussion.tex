@@ -1,59 +1,36 @@
-\section{Remaining work and provenance}\label{ms:discussion}
+\section{Discussion}\label{ms:discussion}
 
-The main obstacle is now the connection between a short analytic
-reduction and a complete collection of finite statements at their actual
-scopes. The scalar argument does not require an astronomical terminal
-index. Its force comes from the order of the integers: at a first
-contrary index the predecessor estimates are already sharp. To use this
-observation, however, the finite base must be independent of the tail
-that it is meant to initiate, and the local comparison must be uniform
-at the new floor. Establishing those two facts is more consequential
-than reducing a numerical cutoff without changing the proof structure.
+The argument reduces the conjecture to two conditions: the bound
+$C_j\le\CE$ for $j\le41$, proved independently of the tail argument,
+and the local
+exclusion for every $n\ge42$. The induction needs no astronomically large
+terminal index: at the least $n\ge42$ with $C_n\ge\CE$, the bounds at
+$n-1$ and $n-2$ are already sharp.
 
-The next mathematical review should follow the dependencies in that
-order. It should close the finite-base source graph, check the retained
-Fourier and confinement arguments with their signs and constants, and
-then verify that the numerical cover expresses those exact hypotheses.
-The comparison near zero defect deserves particular attention: an
-absolute error of order $n^{-3/2}$ is not automatically small relative
-to an arbitrarily small defect. The explicit conditional-count formulas
-are intended to retain the relative information that this regime needs.
-
-The new reductions also suggest a practical principle for computational
-proofs. A numerical search should begin after the analytic dependencies
-have been simplified. Here an elementary Gaussian estimate removes a
-support positivity calculation, a piecewise derivative calculation removes
-a curvature mesh, and a conserved score term makes some parameter cells
-empty. These conclusions are useful even before the full sharp theorem
-is available, because their proofs describe precisely which work is
-unnecessary and which assumptions still have to be supplied.
+The most delicate part of the local exclusion is the comparison near the
+two-point law. An absolute error of order $n^{-3/2}$ is not small compared
+with an arbitrarily small defect, so the estimates must be relative to the
+conditional noise $\lambda$. The exact count identities of
+Section~\ref{ms:counts} are designed for this purpose; the uniform
+relative bounds they require are part of the local exclusion.
 
 \subsection*{Use of artificial intelligence}
 
-AI systems were used extensively in the research and in preparing this
+AI systems were used extensively in the research and preparation of this
 manuscript. ChatGPT and Codex assisted with mathematical exploration,
-code for exact checks, source comparisons, bibliography work, and drafting
-and revising the exposition. This revision also considered model-generated
-editorial suggestions supplied by the authors. Proposed arguments and
-citations were checked before adoption; suggestions that changed a claim's
-scope were not treated as editorial corrections.
+programs for exact checks, source and bibliography comparisons, and
+drafting and revising the exposition. Other AI systems assisted with
+editorial review. The authors take responsibility for the mathematical
+content and presentation.
 
-The earlier working draft~\cite{rodziewiczkolodziejek2026momentdefects}
-records the project's prior AI-assisted development. The present paper
-separates the new analytic reductions from the remaining proof and
-certificate obligations. The authors are responsible for the final
-mathematical content; this draft remains subject to their review.
+The work builds in part on an earlier AI-assisted draft deposited on
+Hexagon~\cite{rodziewiczkolodziejek2026momentdefects}. The present paper
+reorganizes that material and gives the analytic reductions above, with
+the remaining analytic and finite-certificate obligations stated in
+Section~\ref{ms:certificates}.
 
-\subsection*{Source and computational material}
+\subsection*{Code and data}
 
-The editable source, bibliography, source correspondence and bounded
-check records are maintained in the authors' review fork,
+The certificates, the programs that check them, and the source of this
+paper are available at
 \url{https://github.com/kolodziejek/berry-esseen-certificates}.
-The immutable reference revision for this audit is
-\path{6346fc1b4432bc5982822aa696eb566ed9e1e1ee}; this draft starts from
-the reviewed reduction state
-\path{8989ba054eda36f63e469832f1e00f7e6a7a9084}.
-The accompanying source notes identify the specific versions of recent
-online manuscripts and formalization projects. No correspondence with
-their authors or independent replay of their full proof programs is
-claimed.

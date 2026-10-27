@@ -35,7 +35,6 @@ Choosing a nearest integer gives $|u|\le1/2$, with either integer allowed
 at a tie. Restricting to legal counts $0\le k\le n$ requires either
 $-1/2\le np+H/\ell\le n+1/2$ or a separate treatment of the remaining
 thresholds. Interior-count normalizations further require $1\le k\le n-1$.
-None of these range conditions follows merely from the notation.
 
 The own-count variance is
 \[
@@ -48,8 +47,7 @@ $|\delta|\le\Delta$ and $c_v\ge1/\min(p,q)$ gives, for $n\ge N$,
  (1-c_v\Delta/N)\lambda\le t\le(1+c_v\Delta/N)\lambda.
 \label{ms:own-count-variance}
 \end{equation}
-A positive lower multiplier is a separate necessary gate when the lower
-bound is used in a denominator.
+When the lower bound is used in a denominator, $1-c_v\Delta/N$ must be positive.
 
 For the comparison with the same Bernoulli count, set
 \[
@@ -74,8 +72,7 @@ Direct subtraction, using $H/\sqrt n=(\delta+u)/\sqrt{n(v+s)}$, yields
  \rho_B(C-C_B)=\sqrt n\pi_k\{Q/\pi_k-f(u)\}+\mathcal R.
 \label{ms:master-identity}
 \end{equation}
-This identity is exact; estimates for its two terms must preserve the same
-phase, signed threshold and conditional marginal.
+Both terms on the right must be estimated for the same law, threshold and phase.
 
 \begin{proposition}[Two conditional local witnesses]
 \label{ms:local-witnesses}
@@ -109,24 +106,19 @@ mass replacement, and $I/n\le\max(0,I)/N$ holds for either sign of $I$.
 Multiplication by $\lambda>0$ gives the asserted strict inequality.
 \end{proof}
 
-The proposition separates the exact comparison identity from the estimates
-needed to use it. Outgoing and incoming probabilities, confinement and
-the repair term must all be bounded for the same law and phase. With
-these bounds in hand, Schulz's theorem $C_B\le\CE$ turns $C<C_B$
+Given these bounds, Schulz's theorem $C_B\le\CE$ turns $C<C_B$
 into the required exclusion~\cite{Schulz2016}.
 
-For clarity, the zero-noise threshold convention is elementary. At an
-attained positive closed maximum for a Bernoulli law, the threshold must
-be a binomial atom. Between consecutive atoms, lowering the threshold
+At zero noise the threshold may be taken at a lattice point: at an attained
+positive maximum for a Bernoulli law, the threshold is a binomial atom. Between consecutive atoms, lowering the threshold
 to the preceding atom preserves the CDF and strictly improves the normal
 subtraction. Above the final atom the same argument applies, while below
 the first atom the discrepancy is nonpositive. Thus $u=0$ and $C=C_B$
-at such a maximum. This identifies the endpoint to which the finite-binomial theorem applies.
+at such a maximum.
 
 \subsection{Whole-count coupling and its curvature term}
 
-The whole-count witness has a useful part which follows directly from the
-same conditional marginal. Suppose an acquired gap gives
+Part of the whole-count estimate follows from a coupling. Suppose
 $U_0\le a_0$, $U_1\ge-a_1$, where $d_Y=a_0+a_1<1/2$, and put $c=1-d_Y$.
 Independently realize all $2n$ variables in the definition of $V_j$ above,
 and extend $V_j$ constantly for $j<0$ and $j>n$. The increments of
@@ -210,8 +202,8 @@ $b=p_+-\min(H/\ell)$ yields precisely the phase function
  +\frac{(b+u)_+}{[c+\min(u,c/3)]^2}.
 \]
 We maximize this function in Section~\ref{ms:curvature}.
-The condition $\chi<2$, a positive own-variance multiplier, and any
-normalization such as $\sqrt n\,m_B\le1$ remain separate gates.
+The conditions $\chi<2$ and $1-c_v\Delta/N>0$, and any normalization
+such as $\sqrt n\,m_B\le1$, must be checked separately.
 The marked-crossing estimates needed to bound the remaining linear term
 $\pi_k\E R$ in \eqref{ms:whole-count-cutoff} are given in Section~\ref{ms:fourier:local}; they form a separate part
 of the local comparison.
