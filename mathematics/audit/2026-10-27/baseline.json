@@ -1,0 +1,23 @@
+{
+  "schema": "be.dependency-audit-baseline/1",
+  "date": "2026-10-27",
+  "repository": "https://github.com/kolodziejek/berry-esseen-certificates",
+  "commit": "6346fc1b4432bc5982822aa696eb566ed9e1e1ee",
+  "baseline_tag": "audit-baseline-20261027",
+  "scope": "Read-only source/interface audit and new scalar proof; no certificate replay or proof-component deletion.",
+  "files": {
+    "README.md": "87464da75ddf4719979e76365b6e8b472d48c623daef30e5dbf56df85d74165b",
+    "paper/main.tex": "1bc15cf4823ea58666d1e7cae8636b3f2b90fbd622f5ab04cbe61cd8a6b92b67",
+    "paper/analytic-supplement.txt": "dad4a3558b01bda4acfdfc9120a50ecbcd7a6f2389886ba3ce72a6602ec39018",
+    "paper/analytic-supplement-index.json": "c261cd20bf009eaf0ced0cb1a8285b73a61a315379b026183b2c6e085f0ad8db",
+    "mathematics/global-contract.json": "3b33be2e68e56cb2cca9796426f19a6a4cae038ea12a1d5739bb9046245c7387",
+    "verification/finite-tail/TASKS.json": "297e5e44513fa8abda9faa61497721dd5a6fe2bfb3131fd5c99ffe6248ce545e",
+    "verification/finite-tail/replay.py": "17cef15fc39a7bb2d0d3d68e2ae56027cca1ac97b0a7cf63c9dda52c4850d9cd",
+    "verification/finite-tail/README.md": "a59019d84f2ef946776855f76de2bab5744da461deafdc4268d8d79a8b7cc358",
+    "verification/finite-tail/sources/BE_cutoff49_20260930.zip": "ecdb9acca0db29efc9fe2bf496c0bcc61b4881aecdcbc91a4eb6ad49b920c72e",
+    "verification/finite-tail/sources/backend.zip": "43b606138f826b47e3f174957088285349aebc82a928627e9e66fe370471be52",
+    "formal/README.md": "4d95a13646d3a8b4275173cc4f85db1484b2fa3514f2f3afe5a7abf092dcf697",
+    "formal/BEMap/TailAssembly.lean": "474926091faa6d1239b686ccb880ed150d6dccdfedb88789abb24570ad0e549a",
+    "formal/BEMap/UniformTail.lean": "4a4aed84a2c03b94a1cdeb2ed3c08560853540d91053d384a31e90eed26bcf6b"
+  }
+}

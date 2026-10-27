@@ -1,0 +1,20 @@
+{
+  "baseline_commit": "6346fc1b4432bc5982822aa696eb566ed9e1e1ee",
+  "command": [
+    "python3",
+    "-B",
+    "mathematics/audit/2026-10-27/check_scalar.py"
+  ],
+  "elapsed_seconds": 0.036920625000000006,
+  "input_sha256": {
+    "mathematics/audit/2026-10-27/check_scalar.py": "74b1fab6630ae1393f5389085fc33371eb2ef12a63364aa0930dd7a4640b86df",
+    "mathematics/audit/2026-10-27/scalar-review.md": "ce48a86bf3822f55dc6220bc43c8b8af7b9c6da65136fbdf36067fe2c43df85d",
+    "paper/analytic-supplement.txt": "dad4a3558b01bda4acfdfc9120a50ecbcd7a6f2389886ba3ce72a6602ec39018",
+    "paper/main.tex": "1bc15cf4823ea58666d1e7cae8636b3f2b90fbd622f5ab04cbe61cd8a6b92b67"
+  },
+  "mathematical_scope": "finite rational algebra only; analytic obligations in scalar-review.md; no LOCAL47 or source certificate replay",
+  "platform": "Darwin",
+  "python_version": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "return_code": 0,
+  "working_directory": "."
+}

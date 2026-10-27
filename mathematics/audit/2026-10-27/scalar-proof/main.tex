@@ -1,0 +1,227 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}[lemma]{Proposition}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\CE}{C_{\mathrm E}}
+\title{\vspace{-1.5em}Smoothing and first-counterexample scalar gates}
+\author{}
+\date{27 October 2026}
+\begin{document}
+\maketitle
+\vspace{-2.5em}
+\noindent\textbf{Scope.}
+This note independently checks the scalar step of a proposed proof redesign.
+It does not establish the acquisition or local-exclusion theorems, verify their
+certificates, or authorize removal of a proof component. Baseline:
+\texttt{6346fc1b4432bc5982822aa696eb566ed9e1e1ee} in the fork
+\texttt{kolodziejek/berry-esseen-certificates}.
+
+Let $\mathcal P$ be all real laws with mean zero, variance one and finite
+$\rho(P)=\E_P|X|^3$. For iid $X_i$ with law $P$, put
+\[
+ S_n=\sum_{i=1}^nX_i,\qquad
+ \Delta_n(P)=\sup_{H\in\mathbb R}
+       |\Pp_P(S_n\le H)-\Phi(H/\sqrt n)|.
+\]
+\[
+ C_n=\sup_{P\in\mathcal P}\frac{\sqrt n\,\Delta_n(P)}{\rho(P)},\qquad
+ \CE=\frac{3+\sqrt{10}}{6\sqrt{2\pi}}.
+\]
+Thus $H$ always denotes a raw sum threshold. All terminating decimals below
+denote exact rationals. Lyapunov's inequality gives $\rho(P)\ge1$.
+
+\begin{lemma}[Support-free smoothing]\label{lem:smooth}
+For every integer $n\ge2$,
+\begin{equation}\label{eq:smooth}
+ C_n\le\sqrt{\frac n{n-1}}\,C_{n-1}
+       +\frac{\sqrt n}{15(n-1)^{3/2}}
+       +\frac{2\sqrt n}{25(n-1)^2}.
+\end{equation}
+No bounded support, extremizer or higher moment is assumed.
+\end{lemma}
+\begin{proof}
+Fix $P\in\mathcal P$ and $H\in\mathbb R$, write $v=n-1\ge1$, and set
+$F_v(t)=\Phi(t/\sqrt v)$. Conditioning on $X_n$ and applying the defining
+bound for $C_v$ to the same marginal at every threshold gives
+\begin{equation}\label{eq:condition}
+ |\Pp_P(S_n\le H)-\E F_v(H-X_n)|\le C_v\rho/\sqrt v.
+\end{equation}
+Only the smooth Gaussian function is expanded. Taylor's theorem gives
+\[
+ |F_v(H-y)-F_v(H)+yF'_v(H)-\tfrac12 y^2F''_v(H)|
+ \le\frac{\|\phi''\|_\infty}{6v^{3/2}}|y|^3.
+\]
+In fact $\|\phi''\|_\infty=\phi(0)$: since
+$\phi''(z)=(z^2-1)\phi(z)$, the assertion is immediate on $z^2\le1$;
+on $u=z^2\ge1$, $(u-1)e^{-u/2}$ is maximized at $u=3$, with value
+$2e^{-3/2}<1$. Taking expectation therefore yields
+\begin{equation}\label{eq:spatial}
+ |\E F_v(H-X_n)-F_v(H)-\tfrac12F_v''(H)|
+ \le\frac{\phi(0)\rho}{6v^{3/2}}<\frac{\rho}{15v^{3/2}}.
+\end{equation}
+The elementary bound $\phi(0)<2/5$ is established below.
+
+Direct differentiation in the variance gives
+$\partial_vF_v=F_v''/2$ and $\partial_v^2F_v=F_v^{(4)}/4$, where primes
+differentiate the raw argument. Hence
+\[
+ F_{v+1}(H)-F_v(H)-\tfrac12F_v''(H)
+ =\frac14\int_0^1(1-t)F_{v+t}^{(4)}(H)\,dt.
+\]
+Since $F_w^{(4)}(H)=w^{-2}\phi'''(H/\sqrt w)$, its absolute value is at most
+$\|\phi'''\|_\infty/(8v^2)$. The elementary Gaussian Fourier identity,
+differentiated under its absolutely convergent integral, implies
+\[
+ \|\phi'''\|_\infty\le
+ \frac1{2\pi}\int_{\mathbb R}|t|^3e^{-t^2/2}\,dt=\frac2\pi.
+\]
+Indeed the positive-half-line integral is $2$, by $u=t^2/2$.
+The heat remainder is consequently at most
+$1/(4\pi v^2)<2/(25v^2)$. Combine this with
+\eqref{eq:condition}--\eqref{eq:spatial}, multiply by $\sqrt n/\rho$,
+and use $\rho\ge1$. The resulting estimate is uniform in $H$ and $P$,
+so both suprema are legitimate.
+
+For a strict event, let $H_j\uparrow H$: its probability is the limit of the
+closed-event probabilities, while $\Phi$ is continuous. Thus the same
+bound covers both jump edges and reflection. Neither an indicator nor
+the distribution function of $S_v$ was differentiated. Rare remote atoms
+need only the assumed third absolute moment.
+\end{proof}
+
+\begin{lemma}[Elementary constants]\label{lem:constants}
+One has $\pi>157/50>25/8$ and $0<\CE<41/100$.
+\end{lemma}
+\begin{proof}
+Let $a=\arctan(1/5)$ and $b=\arctan(1/239)$. Tangent addition gives
+$\tan(2a)=5/12$, $\tan(4a)=120/119$, and $\tan(4a-b)=1$.
+Integrating $1-t^2<1/(1+t^2)<1$ on positive intervals gives
+\[
+ 0<4(1/5-1/(3\cdot5^3))-1/239<4a-b<4/5<1<\pi/2.
+\]
+Here $\pi/2>1$ follows from $\arctan(1)>1/2$.
+Thus $4a-b=\pi/4$ and
+\[
+ \pi>16(1/5-1/(3\cdot5^3))-4/239
+       =\frac{281476}{89625}>\frac{157}{50}>\frac{25}{8}.
+\]
+This also proves $\phi(0)<2/5$ and $1/(4\pi)<2/25$.
+Since $\sqrt{10}<19/6$,
+\[
+ \CE^2=\frac{19+6\sqrt{10}}{72\pi}
+ <\frac{1900}{11304}<\frac{1681}{10000}.
+\]
+The last difference is $2024/113040000>0$.
+\end{proof}
+
+\begin{lemma}[Scalar entry from sharp predecessors]\label{lem:gates}
+Put $c=\CE$. If $n\ge47$, $C_{n-1},C_{n-2}\le c$ and $C_n\ge c$, then
+\[
+ d_n:=n(C_{n-1}-C_n)_+=0,\qquad
+ 0\le n(C_n-c)<\frac{335909}{1150000}<\frac3{10},
+\]
+and
+\[
+ C_n<.4247,\qquad C_{n-1},C_{n-2}<.4253.
+\]
+If $C_n>c$, the lower bound on the excess is strict.
+\end{lemma}
+\begin{proof}
+Set $s=\sqrt{n/(n-1)}>1$. From \eqref{eq:smooth} and
+$s-1=1/((n-1)(s+1))$,
+\[
+ n(C_n-c)\le\frac n{n-1}
+       \left(\frac c{s+1}+\frac s{15}
+                         +\frac{2s}{25\sqrt{n-1}}\right).
+\]
+For all $n\ge47$, $n/(n-1)\le47/46$, $\sqrt{n-1}>6$ and
+$s<1011/1000$; the last assertion follows from
+$46\cdot1011^2-47\cdot1000^2=17566>0$. Hence
+\[
+ n(C_n-c)<
+ \frac{47}{46}\left(\frac{41}{200}
+                  +\frac{1011}{15000}+\frac{1011}{75000}\right)
+ =\frac{335909}{1150000}<\frac3{10}.
+\]
+The margin below $3/10$ is $9091/1150000$. Also
+\[
+ C_n<\frac{41}{100}+\frac3{470}
+     =\frac{1957}{4700}<\frac{4247}{10000},
+ \qquad
+ C_{n-j}\le c<\frac{41}{100}<\frac{4253}{10000}\quad(j=1,2).
+\]
+The own-index-cap margin is $3909/470000$. The predecessor sign gives
+$d_n=0$. Every comparison includes the endpoint $n=47$.
+\end{proof}
+
+\noindent\textbf{Conditional exclusion interface.}
+For the next two propositions, an exclusion input includes: attainment
+of an oriented positive closed extremum; acquisition of all required
+same-law support, probability, moment and resource bounds; and the complete
+local exclusion, with every sign, normalization, parameter-domain and
+numerical-certificate hypothesis discharged.
+Scalar entry alone does not establish this interface.
+
+\begin{proposition}[Weak global assembly]\label{prop:weak}
+Assume $C_j\le c=\CE$ for $1\le j\le46$. Suppose the exclusion interface
+excludes every selected owner at an index $n\ge47$ satisfying
+\[
+ 0<C_n-c\le.7/n,\quad d_n\le.19,\quad
+ C_n<.4247,\quad C_{n-1},C_{n-2}<.4253.
+\]
+Then $C_n\le c$ for every positive integer $n$.
+\end{proposition}
+\begin{proof}
+If some $C_n>c$, choose the least such $n$. Then $n\ge47$ and both
+predecessors are at most $c$. Lemma~\ref{lem:gates} supplies all the
+scalar gates, contradicting the stipulated exclusion.
+\end{proof}
+
+\begin{proposition}[Separately named equality-inclusive strict tail]
+\label{prop:strict}
+Assume the same weak prefix through $46$. Suppose the exclusion interface
+instead applies also at equality, replacing $0<C_n-c$ above by
+$0\le C_n-c$, and excludes those owners as well.
+Then $C_n<c$ for every $n\ge47$.
+\end{proposition}
+\begin{proof}
+If the set $\{n\ge47:C_n\ge c\}$ is nonempty, take its least member.
+All earlier tail values are $<c$; prefix values are $\le c$.
+Both predecessors are therefore at most $c$.
+Lemma~\ref{lem:gates} again supplies the scalar gates, including when
+$C_n=c$, contradicting the equality-inclusive exclusion.
+\end{proof}
+
+The two propositions have different hypotheses and contrary sets.
+Proposition~\ref{prop:weak} does not imply strictness: the constant
+sequence $C_n=c$ itself satisfies the scalar recurrence.
+For Proposition~\ref{prop:strict}, the least $\ge c$ failure is chosen
+only within the tail; equality inside the weak prefix is permitted.
+
+\smallskip
+\noindent\textbf{Source and verification boundary.}
+At the frozen baseline, the recurrence is
+\path{paper/analytic-supplement.txt}, physical lines 6479--6522
+(label \texttt{cut49:global:smoothing}, original M7458--7506).
+The existing tail assembly is \texttt{paper/main.tex}, lines 460--510.
+The supplied attainment proof expressly includes equality at lines
+107--136; supplement lines 719--755 also permit zero excess in a support
+refinement. These observations do not establish equality compatibility
+of every intervening acquisition edge. The local comparison and its
+binomial input are at supplement lines 7153--7197 and 7748--7768.
+
+The accompanying \texttt{check\_scalar.py} uses only exact integers and
+rational arithmetic to check the finite comparisons. Its fresh run
+\texttt{runs/least-counterexample-20261027/scalar01/} returned zero;
+all thirteen negative controls rejected. That arithmetic PASS proves
+neither the analytic steps nor the exclusion interface. This note
+identifies a conditional replacement for scalar-entry computations,
+not a certificate-deletion list.
+\end{document}
