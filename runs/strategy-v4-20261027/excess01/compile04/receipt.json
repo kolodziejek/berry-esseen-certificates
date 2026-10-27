@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4-excess/mathematics/strategy-v4/2026-10-27/excess-main.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4-excess/runs/strategy-v4-20261027/excess01/compile04/build",
+    "--json"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 1.02419925,
+  "source_sha256": {
+    "excess-main.tex": "1c7ed8dbed417c1f6a82c16f81e7ac256b08e2dc3b706285d0e7d0d307956b29",
+    "excess.tex": "a7105d57f4f353a7fcdd32947b1feae044b3df5dc29558afb48c575e9ea4a2d0"
+  }
+}
