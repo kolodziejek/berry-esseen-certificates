@@ -7,10 +7,12 @@
 \usepackage{booktabs,longtable,array,enumitem}
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage[hyphens]{url}
+\usepackage{xurl}
 \usepackage[hidelinks]{hyperref}
 \usepackage{bookmark}
 \setlength{\emergencystretch}{2em}
 \setcounter{tocdepth}{1}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
@@ -71,6 +73,10 @@ of such a completion.
 \input{appendices/uniform-bridge}
 \input{appendices/fourier-analysis}
 \input{appendices/finite-analysis}
+\begingroup
+\small\raggedright
+\urlstyle{same}
 \bibliographystyle{plainnat}
 \bibliography{references-classical,references-modern-a,references-modern-b}
+\endgroup
 \end{document}

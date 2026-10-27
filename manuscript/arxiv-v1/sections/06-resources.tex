@@ -10,6 +10,10 @@ $\rho=E|X|^3\ge1$, and $\kappa=997/15000$. Retain the source phase resource
 with its original same-law geometry, support, signed phase, concentration,
 moment and deleted-score hypotheses. In particular the conserved phase
 curvature is not charged twice.
+The retained derivation and its coefficient bounds are written out in
+Appendix~\ref{ms:fourier:afcore:sec:conserved} and
+\eqref{ms:fourier:rescore:u-conserved}; the required Fourier enclosures
+and acquired geometry remain hypotheses here.
 
 For each of two acquired moment corners $j$ and each phase sign, its
 quadratic upper envelope is
@@ -63,7 +67,8 @@ The old weighted bound is $nD\le Nd_{\rm old}$; define
 \[
  d_{\rm new}=\min\{d_{\rm old},B_*/(\kappa N)\}.
 \]
-This is a bound on $nD$, not a bare bound on $D$ subsequently rescaled.
+Thus $nD\le N d_{\rm new}$. This is a weighted bound on $nD$;
+it is not obtained by multiplying an unweighted bound on $D$ by $N$.
 In this section, write $A,B>0$ for acquired lower bounds on the two
 central-gap endpoints, and retain the variance bound $\Theta<1$ and closed probability panel
 $[l,u]$. Write $s_l=3.162277660$, $s_u=3.162277661$, and set
@@ -108,10 +113,13 @@ Lemma~\ref{ms:06:charge}. This gives valid outward budgets for all 47 central ro
 
 \subsection{Exact removable sectors}
 The following decimal ceilings are rounded upwards from exact fractions.
-Rows are zero-based. The full 92-row scan establishes all newly crossed
+For precise identification, LEFT row $i$, $0\le i\le44$, corresponds to
+$p\in[(145+i)/500,(146+i)/500]$; CENTRAL row $i$, $0\le i\le46$,
+corresponds to $p\in[(190+i)/500,(191+i)/500]$. These are the acquired
+probability panels in the retained input table. The full 92-row scan establishes all newly crossed
 thresholds among $.05,.08,.10,.12$.
 \begin{center}
-\begin{tabular}{@{}llp{69mm}@{}}
+\begin{tabular}{@{}llP{69mm}@{}}
 \toprule
 Row & New conclusion & Consequence after acquisition\\
 \midrule

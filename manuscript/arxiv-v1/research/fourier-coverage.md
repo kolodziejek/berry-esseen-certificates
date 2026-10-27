@@ -26,7 +26,7 @@ These are supplement line numbers, distinct from its original-manuscript
 | S3, 1219--1507 | Contact slack, its two integrations, compensated inversion, exact conserved identity and explicit remainder ledger; `ms:fourier:afcore:sec:conserved` | Supplied proof candidate, conditional on its contact witness and integrability hypotheses | No independent numerical or optimizer verification |
 | S3, 1508--2236 | Paired LOW, actual-index finite LOW, complete HIGH, supported compensated HIGH; `ms:fourier:rescore:sec:setup` | Supplied analytical transfer arguments with explicit domains and divisors | No quadrature or native checker executed |
 | S3, 2237--2602 | Positive-measure rule, simultaneous gap budget, state/update/export, enclosure theorem; `ms:fourier:rescore:re-operator` | Supplied conditional implications for one common law and one conserved budget | No enclosure schedule accepted |
-| S3, 2603--3897 | Signed moment atlas, gap/outer costs, common-moment boxes, event/rectangle bounds, feedback, signed phase and all finite-schedule propagation; `ms:fourier:rescore:re-atlas` through `ms:fourier:rescore:u-propagation` | Supplied conditional derivations; support callbacks and every finite gate remain premises | No resource table or coverage replay |
+| S3, 2603--3898 | Signed moment atlas, gap/outer costs, common-moment boxes, event/rectangle bounds, feedback, signed phase and all finite-schedule propagation; `ms:fourier:rescore:re-atlas` through `ms:fourier:rescore:u-propagation` | Supplied conditional derivations; support callbacks and every finite gate remain premises | No resource table or coverage replay |
 | S8, 6529--6946 | Confinement with two concentration choices, antichain, signed deletion, slopes and two budget error bounds; `ms:fourier:cut49:conf:re:confinement` | Supplied proof candidate at the stated floor **47**, using both actual deleted laws | No confinement certificate accepted |
 | S8, 7099--7196 | Exact local identity and parameterized strict comparison theorem; `ms:fourier:cut49:shortloc:theorem` | Supplied analytical implication conditional on the displayed witnesses and signs | No local endpoint test run |
 | S8, 7197--7473 | Binomial normalization, common repair, quartic/Poisson/Bennett estimates and nearest-count witness, including small positive noise | Supplied candidate arguments; normalization and tail gates are explicit | No TINY or MID finite cover accepted |
@@ -67,7 +67,7 @@ The parameterized local identity can be stated for a formal floor (N), but
 this does not prove that the supplied confinement constants, normalizers,
 resource acquisition or finite covers apply at (N=42). The appendix's
 scope remark makes that distinction explicit. The coordinator's separate
-uniform-floor bridge may be cross-referenced after integration; its
+uniform-floor bridge is now cross-referenced in the integrated manuscript; its
 conditional input obligations must not disappear in that cross-reference.
 
 ## Editorial changes and omissions
