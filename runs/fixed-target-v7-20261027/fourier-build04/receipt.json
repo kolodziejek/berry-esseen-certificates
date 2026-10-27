@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/fourier-audit-v7/mathematics/fixed-target-v7/2026-10-27/fourier-main.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/fourier-audit-v7/runs/fixed-target-v7-20261027/fourier-build04",
+    "--json"
+  ],
+  "cwd": "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8",
+  "returncode": 0,
+  "elapsed_seconds": 0.999767209,
+  "inputs": {
+    "mathematics/fixed-target-v7/2026-10-27/fourier-main.tex": "cd0fd9eb13435c4ddb50b268e216daf75ff6b976fd1bf6cf67f9ba3fb4be708e",
+    "mathematics/fixed-target-v7/2026-10-27/fourier-closure.tex": "200716d430c5d0058978d415da397e07a348a7742636607d6a4bbf3ea6e47109"
+  }
+}
