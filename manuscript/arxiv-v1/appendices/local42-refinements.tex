@@ -1,0 +1,529 @@
+\section{Signed refinements of the local comparison}\label{ms:local42-refinements}
+The refinements in this appendix apply to an already acquired common-law
+resource panel. They preserve the actual count while integrating a Gaussian
+increment, and retain the sign of the cubic correction. These are needed
+for the proposed comparison with floor $42$; the earlier floor-$47$ formulas
+alone do not supply them. Every numerical positivity and coverage statement
+below is an acceptance condition. Whenever a normalized binomial mass or
+a Stirling expression is used, assume $n\ge N\ge2$ and an interior
+integer count $1\le k\le n-1$, so that $\pi_k>0$. No acquisition or complete local acceptance
+is inferred from including these analytic proofs.
+
+The symbol $h$ in the signed Gaussian calculation means $H/\ell$, the raw
+threshold in Bernoulli coordinates; it is not the reciprocal span used in
+the finite-count appendix. The normalization constants are supplied by
+Appendix~\ref{ms:normalization}. The underlying count identities, moment
+and tail comparisons are in Section~\ref{ms:geometry-counts} and
+Appendix~\ref{ms:fourier:local}.
+
+\subsection{Notation and the information that must be retained}
+Let $Y=B+U$, where $\Pp(B=1)=p$, $\E(U\mid B)=0$,
+$v=p(1-p)$, $s=\E U^2$, $\lambda=ns$, and
+$\ell=(v+s)^{-1/2}$. The actual threshold has the form
+\[
+ x=np+H/\ell=k+u,\qquad |u|\le\tfrac12,
+ \qquad \delta=k-np=H/\ell-u.
+\]
+The integer $k$ and the value $\delta$ stay fixed when integrating a function
+of a new variable $t$ below. Write $\pi_k=\Pp(\operatorname{Bin}(n,p)=k)$ and
+\[
+ f(t)=\frac{\Phi((\delta+t)/\sqrt{n(v+s)})-
+                   \Phi(\delta/\sqrt{n(v+s)})}{\pi_k}.
+\]
+The conditional errors satisfy $|U_j|\le A$, $U_0\le a_0$,
+$U_1\ge-a_1$, with $a_0,a_1\ge0$ and $d=a_0+a_1$.
+All quantities in an application refer to the same iid marginal.
+
+\begin{lemma}[A joint budget on a noise interval]\label{ms:local42:lem:joint}
+Suppose the acquired same-law resource inequality is
+\[
+        \frac d{d_*}+\frac\lambda\Lambda\le1,
+        \qquad d_*>0,\quad\Lambda>0.
+\]
+On a closed noise interval $L\le\lambda\le U\le\Lambda$ one may use
+\[
+                d\le d_L:=d_*(1-L/\Lambda).
+\]
+Every conditional support, cubic-moment, tail-distance and characteristic
+function bound whose hypothesis is $d\le d_0$ may therefore be applied with
+$d_0=d_L$ on that interval.
+\end{lemma}
+\begin{proof}
+Rearrange the displayed resource inequality and use $\lambda\ge L$.
+The substitution is valid separately on every noise interval. Neither the
+pair of inequalities $d\le d_*$, $\lambda\le\Lambda$ nor independently
+maximized numerical coordinates imply the joint resource inequality.
+Its acquisition is a separate obligation.
+\end{proof}
+
+For example, the whole-count kernel uses $c=1-d_0$. Its moment coefficients
+are recomputed as
+\[
+ \alpha=6m_0\ell_-^2(1-d_0),\qquad
+ \beta=\min\{3(4.16)\ell_-(1-p_+-d_0),
+                  3(6.16)\ell_-(p_--d_0)\},
+\]
+where $m_0,\ell_-$ are the previously justified moment and scale lower
+bounds. The ordinary cubic correction is recomputed with the same $d_0$.
+Likewise, a noise amplitude bound $A$ gives a conditional support span at
+most $A+d_0$; the characteristic-function rate is recomputed from that span.
+These substitutions are licensed only when the original coefficient
+inequalities and positivity gates hold for the acquired moment and scale
+bounds. They do not acquire those bounds.
+
+\subsection{A binomial mass bound on the actual phase cell}
+Suppose the finite Stirling argument has supplied positive constants
+$E,L_0,R$ on a fixed segment containing every $k/n$ under consideration, with
+\[
+ \sqrt n\,\pi_k=\frac{\phi(0)}{\sqrt v}
+       \exp\{-\delta^2/(2nv)+\zeta\},\qquad
+ n|\zeta|\le Z_N(|\delta|),\qquad
+ Z_N(t)=\frac{L_0t}{2}+R+\frac{Et^3}{6N},
+ \quad n\ge N.
+\]
+The constants may have been computed on a much wider global phase range.
+Let $0<v_-\le v\le v_+$ and let $q_+\ge\sqrt{v_+}$.
+\begin{lemma}[Mass localization]\label{ms:local42:lem:mass}
+On any smaller closed cell where $|\delta|\le D$,
+\[
+ \sqrt n\,\pi_k\ge
+ \frac{.39886}{q_+}
+ \left[1-\frac{D^2/(2v_-)+Z_N(D)}N\right].
+\]
+The maximum of this expression and any previously proved mass lower bound
+is also a valid mass lower bound. There is no requirement $D\ge1$.
+\end{lemma}
+\begin{proof}
+The lower bound $\phi(0)>.39886$ follows from $\pi<22/7$ and
+$(.39886)^2<7/44$. Set $A_*=D^2/(2v_-)+Z_N(D)\ge0$. The logarithmic formula gives
+$\sqrt n\pi_k\ge(.39886/q_+)e^{-A_*/n}$.
+Now $e^{-z}\ge1-z$ and $n\ge N$. If the bracket is negative the displayed
+inequality still holds, and the previously positive bound can be retained.
+The global Stirling segment, rather than the smaller value $D$, continues
+to justify $E,L_0,R$.
+\end{proof}
+
+\subsection{A sharper elementary harmonic constant}
+\begin{lemma}\label{ms:local42:lem:cos}
+Assume the finite rational positivity condition in the proof below.
+Then, for every $x\ge0$,
+\[
+               1-\cos(2\pi x)\le\frac{4553}{1000}x.
+\]
+\end{lemma}
+\begin{proof}
+Put $K=4553/1000$. For $x\ge2/K$ the assertion follows from
+$1-\cos\le2$. On $[0,2/K]$ take the degree-fourteen alternating upper
+Taylor polynomial $Q(x)$ for $1-\cos(2\pi x)$. Its remainder is nonpositive:
+the first omitted term is negative, and the remaining term magnitudes
+decrease, since $(4\pi/K)^2<16\cdot15$.
+
+Use the directed endpoints
+\[
+ \pi_-=3.141592653589793<\pi<3.141592653589794=\pi_+.
+\]
+In each positive coefficient of $Q$ replace $\pi$ by $\pi_+$; in each
+negative coefficient replace it by $\pi_-$. This only increases $Q$.
+The exact checker expands $P(x)=K-Q(x)/x$, a polynomial of degree thirteen,
+on each of the64 intervals $[2j/(64K),2(j+1)/(64K)]$. If
+$P(x)=\sum_{h=0}^{13}p_hx^h$, its Bernstein coefficients on $[a,a+w]$ are
+\[
+ b_k=\sum_{i=0}^k\frac{\binom ki}{\binom{13}i}
+        \sum_{h=i}^{13}p_h\binom hi a^{h-i}w^i,
+               \qquad k=0,\ldots,13.
+\]
+The remaining certificate condition is that all 896 rational coefficients
+are positive. The source specifies the stronger margin $.00012312$; this
+margin is not asserted here as a fresh computation. Under that condition,
+$P>0$ on the full interval. The value at zero follows by
+continuity (or directly).
+
+For completeness the stated $\pi$ endpoints are checked using alternating
+series for $\arctan(1/5)$ (32 terms) and $\arctan(1/239)$ (12 terms).
+The tangent addition formula gives
+$\tan(4\arctan(1/5)-\arctan(1/239))=1$.
+The angle lies between zero and $4/5<\pi/2$, so it equals $\pi/4$.
+The positivity follows already from
+$4(1/5-1/(3\cdot5^3))-1/239>0$; the upper bound follows from
+$\arctan z<z$. This proves Machin's identity on the correct branch.
+The finite recipe uses only rational operations and the Bernstein identity
+proved in Section~\ref{ms:certificates}; sampled positivity would not suffice.
+\end{proof}
+
+If the original characteristic-function argument gives
+$|\E e^{2\pi iW}|\le e^{-rt}$, Lemma~\ref{ms:local42:lem:cos} upgrades its fractional
+part estimate from $(5/23)(1-e^{-rt})$ to
+\[
+                 \frac{1000}{4553}(1-e^{-rt}).
+\]
+Consequently every occurrence of $5/23$ and $5/46$ in that harmonic gain is
+replaced by $1000/4553$ and $500/4553$, respectively. The existing degree-six
+Taylor gain and its monotonicity argument remain unchanged.
+
+\subsection{The Gaussian derivative knows the sign of the threshold}
+\begin{lemma}[Positive phase, with a fixed actual count]\label{ms:local42:lem:mid}
+Assume $u\in[a,b]\subset[0,1/2]$, $H/\ell\le h_*$, $|\delta|\le D$,
+$v\ge v_->0$, $\lambda\le U$, and the Stirling remainder bound above.
+Set
+\[
+ G=\max\left(0,\max_{z\in[a,b]}(2h_*z-z^2)\right),\qquad
+ \eta=\frac{U+G}{2v_-}+Z_N(D).
+\]
+Then $f(u)\ge u(1-\eta/N)$ for every $n\ge N$.
+The inner maximum is attained at the projection of $h_*$ onto $[a,b]$.
+If $H\le0$, one may take $h_*=0$, hence $G=0$.
+\end{lemma}
+\begin{proof}
+For a fixed actual law and threshold, differentiate while keeping
+$\delta=k-np$ fixed:
+\[
+ \log f'(t)=-\tfrac12\log(1+s/v)
+       +\frac{\delta^2}{2nv}-\frac{(\delta+t)^2}{2n(v+s)}-\zeta.
+\]
+For $0\le t\le u$, use $\log(1+s/v)\le s/v$ and $v+s\ge v$ to obtain
+\[
+ \log f'(t)\ge-\frac{\lambda+2\delta t+t^2}{2nv}-\zeta.
+\]
+The convex function $t\mapsto2\delta t+t^2$ attains its maximum on
+$[0,u]$ at an endpoint. Since the actual relation is $\delta=H/\ell-u$,
+\[
+ 2\delta t+t^2\le\max(0,2(H/\ell)u-u^2)\le G.
+\]
+Thus $\log f'(t)\ge-\eta/n$, and
+$f'(t)\ge e^{-\eta/n}\ge1-\eta/N$. Integrate from zero to the actual $u$.
+This argument does not change $\delta$ when $t$ varies and does not reflect
+the distribution.
+\end{proof}
+
+In the code the signed $H$ interval supplies the bound $D$. If $H\ge0$,
+one can use $h_*=H_+/\ell_-$ and $D=\max(b,h_*-a)$; if $H\le0$,
+use $D=H_-/\ell_-+b$. The new lower derivative constant is maximized with
+the older valid constant. Every resulting bound is checked positive.
+
+The normal variance and cubic-moment repair is localized separately.
+On a phase cell, use its actual upper bound for $\delta_+$, rather than
+$|\delta|$. If the resulting coefficient is $\kappa$, replace it by
+$\max(0,\kappa)$ before using $\kappa/n\le\kappa/N$.
+That sign condition is essential for an all-index conclusion.
+
+\subsection{Coverage and a conservative cache}
+The selected resource table has47 probability cells covering $[.38,.474]$.
+Zero noise is handled by the Bernoulli theorem. TINY covers all phases for
+$0<\lambda\le\min(.05,\Lambda)$. Above $.05$, the LOW phase radii are
+$.09,.14,.19,.29,.5$ on noise bands separated by $.06,.08,.10,.12$.
+MID covers the complementary positive and negative phase intervals through
+$.12$. All intervals are closed at shared boundaries and all actual-event
+conventions are inherited from the exact count identity.
+
+The LOW implementation caches a curvature bound at fixed probability,
+$H$ and phase intervals. The cache key in the selected version omits $c$.
+This is conservative here: noise bands are traversed in increasing order,
+so Lemma~\ref{ms:local42:lem:joint} makes $c=1-d_L$ increase. Each denominator in the
+cached terms $(c-u)^{-2}$ and $(c+\min(u,c/3))^{-2}$ increases with $c$
+on the checked positive domain. The numerators are nonnegative and
+independent of $c$. Thus an older cache entry remains an upper bound.
+Other $c$-dependent quantities are recomputed in each noise band.
+
+Every table statement is conditional on the stated same-law resources,
+including the joint inequality and amplitude profiles. A fresh arithmetic
+PASS does not establish their acquisition. Acceptance of the complete
+cutoff requires those independent edges as well.
+
+\subsection{Signed Gaussian corrections on both phase halves}
+Let $n\ge N$, $v=p(1-p)>0$, $s\ge0$, $\lambda=ns$, and let the
+actual nearest count and phase satisfy
+\[
+ \delta=k-np=h-u,\qquad
+ f(t)=\frac{\Phi((\delta+t)/\sqrt{n(v+s)})-
+                   \Phi(\delta/\sqrt{n(v+s)})}{\pi_k}.
+\]
+The actual $k$ and $\delta$ are held fixed when $t$ varies. Assume the
+proved finite Stirling formula on this count range is
+\[
+ \sqrt n\,\pi_k=\frac{\phi(0)}{\sqrt v}
+       \exp\{-\delta^2/(2nv)+\zeta\},\qquad
+ n|\zeta|\le Z_N(D),\quad |\delta|\le D.
+\]
+Write $v\ge v_->0$ and $Z=Z_N(D)\ge0$.
+
+\begin{lemma}[Negative phase]
+Suppose $u=-r$, $0\le a\le r\le b$, and $h\le h_*$. Define
+\[
+ t_*=\max(0,\min(b,h_*+b)),\qquad G_-=2(h_*+b)t_*-t_*^2,\qquad
+ \eta_-=G_-/(2v_-)+Z.
+\]
+If $D^2\le Nv_-$ and $\eta_-<N$, then
+\[
+ f'(-t)\le\frac1{1-\eta_-/N}\quad(0\le t\le r),\qquad
+ u-f(u)\le\frac{b\eta_-}{n(1-\eta_-/N)}.
+\]
+\end{lemma}
+\begin{proof}
+Direct differentiation and the Stirling formula give
+\[
+ \log f'(-t)=-\tfrac12\log(1+s/v)
+ +\frac{\delta^2s}{2nv(v+s)}
+ +\frac{2\delta t-t^2}{2n(v+s)}-\zeta.
+\]
+Since $\log(1+x)\ge x/(1+x)$ for $x\ge0$, the first two terms are at most
+\[
+ \frac{s}{2(v+s)}\left(\frac{\delta^2}{nv}-1\right)\le0.
+\]
+This cancellation removes the variance term from the upper derivative
+bound. Because $\delta=h+r$, $r\le b$ and $0\le t\le r\le b$,
+\[
+ 2\delta t-t^2\le 2(h_*+b)t-t^2\le G_-.
+\]
+The last maximum is the concave quadratic maximum on $[0,b]$, achieved
+at the displayed projection $t_*$. It is nonnegative because $t=0$ is
+available. Therefore $\log f'(-t)\le\eta_-/n$.
+Using $e^x\le(1-x)^{-1}$ for $0\le x<1$ gives
+\[
+ f'(-t)-1\le\frac{\eta_-/n}{1-\eta_-/n}
+             \le\frac{\eta_-}{n(1-\eta_-/N)}.
+\]
+Integrate $u-f(u)=\int_0^r(f'(-t)-1)\,dt$.
+\end{proof}
+
+Equivalently, $G_-=b^2+2h_*b$ for $h_*\ge0$, and
+$G_-=\max(0,h_*+b)^2$ for $h_*<0$. This sharper vertex is used in the
+selected LEFT42 LOW implementation.
+
+\begin{lemma}[Positive phase]
+Suppose $u\in[a,b]\subset[0,1/2]$, $h\le h_*$, and define
+\[
+ G_+=\max\left(0,\max_{z\in[a,b]}(2h_*z-z^2)\right).
+\]
+Then
+\[
+ u-f(u)\le\frac b n
+       \left(\frac\lambda{2v_-}+\frac{G_+}{2v_-}+Z\right).
+\]
+The inner maximum is at the projection of $h_*$ onto $[a,b]$.
+\end{lemma}
+\begin{proof}
+The exact derivative identity and $\log(1+s/v)\le s/v$ give
+\[
+ \log f'(t)\ge-\frac{\lambda+2\delta t+t^2}{2nv}-\zeta.
+\]
+For fixed actual $u$, the function $2\delta t+t^2$ is convex on $[0,u]$.
+Its maximum is at an endpoint, and $\delta=h-u$ gives
+\[
+ 2\delta t+t^2\le\max(0,2hu-u^2)\le G_+.
+\]
+Use $e^{-x}\ge1-x$ and integrate from zero to $u$.
+\end{proof}
+
+\paragraph{Whole-count insertion and interval coverage.}
+The whole-count identity is split as
+$Q/\pi_k-f(u)=(Q/\pi_k-u)+(u-f(u))$.
+Thus one needs an upper bound on the signed correction $u-f(u)$;
+an absolute-value estimate is unnecessary. After division by $\lambda$,
+the new coefficients replacing the old Gaussian correction are
+\[
+ \begin{array}{ll}
+ u\ge0:&\displaystyle
+ \frac b{2v_-}+\frac{b\{G_+/(2v_-)+Z\}}\lambda,\\[6pt]
+ u\le0:&\displaystyle
+ \frac{b\eta_-}{(1-\eta_-/N)\lambda}.
+ \end{array}
+\]
+On each fixed phase cell these have the form $A+B/\lambda$ with
+$A,B\ge0$. They therefore preserve the original convex endpoint check on
+each closed noise interval. Every phase cell is confined to one half-line;
+zero is a shared closed endpoint. The count displacement bound $D$ comes
+from the same actual $h-u$ cell, and the Stirling constants continue to
+come from the already proved global count segment.
+
+The other all-index steps are unchanged: the event bracket is checked
+negative before substituting a binomial mass lower bound, and the entire
+inverse-$n$ correction is checked positive before replacing $n$ by $N$.
+The inverse correction is $I(\lambda)=K+A+B/\lambda$, hence decreases with $\lambda$; positivity at both endpoints (in particular the upper endpoint) licenses the all-index step throughout the interval. The final score is convex in $\lambda$: its event fraction is a positive constant divided by an affine positive function, its $B/\lambda$ coefficient is nonnegative, and its remaining terms are affine or constant. These are independent gates in the exact kernel. The formulas apply to
+both signs of $h$ without reflecting the law or changing the count during
+integration. They also supply an improved upper derivative for the
+negative-phase MID inequalities.
+\paragraph{A complete phase cover below the whole-count threshold.}
+For $\lambda\in[.05,.08]$, the selected shifted-quartic MID comparisons
+must be checked on every closed phase interval of length $.001$ in
+$[0,1/2]$, for both phase signs. The shifted-quartic polynomial and
+nearest-count identity are defined at phase zero, so the two closed covers
+include $u=0$ directly. This permits the whole-count LOW comparison to
+start at $\lambda=.08$. The four MID bands use phase starts
+$0,0,.19,.27$ at noise bands $[.05,.06]$, $[.06,.08]$,
+$[.08,.10]$, and $[.10,.12]$, respectively.
+
+\subsection{Conditional centering and the exact cubic bound}
+Let $B$ be Bernoulli with parameter $0<p<1/2$, put $q=1-p$ and $v=pq$,
+and write $Y=B+U$, with $\E(U\mid B)=0$.
+Let $U_0,U_1$ denote the conditional laws of $U$, and assume
+\[
+ U_0\le a_0<p,\qquad U_1\ge-a_1>-(1-p),\qquad
+ a_0,a_1\ge0,\qquad d=a_0+a_1.
+\]
+Put $s_j=\E U_j^2$, $s=qs_0+ps_1$, $\lambda=ns$, and
+\[
+ X=\frac{Y-p}{\sqrt{v+s}},\quad
+ \rho=\E|X|^3,\quad
+ \rho_B=\frac{1-2v}{\sqrt v}.
+\]
+Finite third moments are assumed. The support conditions fix the sign of
+$Y-p$ in each class, which is necessary for the following expansion.
+
+\begin{lemma}[No positivity assumption on the cubic bracket]\label{ms:local42:cubic}
+With the preceding notation,
+\begin{equation}\label{ms:local42:bracket}
+ (v+s)^{3/2}(\rho-\rho_B)\ge sQ,\qquad
+ Q=6p-3p^2-\frac32-d-\frac{3(1-2v)s}{8v}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Expanding within each sign class and using conditional centering gives
+\[
+ \E|Y-p|^3=v(1-2v)+3pq(s_0+s_1)
+                         +p\E U_1^3-q\E U_0^3.
+\]
+The one-sided support bounds imply
+$\E U_1^3\ge-a_1s_1$ and $\E U_0^3\le a_0s_0$.
+Moreover $3pq(s_0+s_1)\ge3p(qs_0+ps_1)=3ps$, because $q\ge p$.
+Consequently
+\[
+                         \E|Y-p|^3\ge v(1-2v)+(3p-d)s.
+\]
+For $z\ge0$, Taylor's formula gives
+$(1+z)^{3/2}\le1+3z/2+3z^2/8$: the third derivative is negative.
+Subtract
+\[
+ \rho_B(v+s)^{3/2}
+ =v(1-2v)(1+s/v)^{3/2}
+ \le v(1-2v)+\tfrac32(1-2v)s+\frac{3(1-2v)s^2}{8v}
+\]
+from the preceding moment lower bound and use
+$3p-\tfrac32(1-2v)=6p-3p^2-\tfrac32$.
+\end{proof}
+
+\subsection{The coefficient must be bounded in the correct direction}
+Suppose $n\ge N$, $p\in[p_-,p_+]\subset(0,1/2)$,
+$0\le d\le d_0$, and $0\le\lambda\le\Lambda$.
+Choose $0<v_*\le p_-(1-p_-)$ and put
+\[
+ V^*=p_+(1-p_+)+\Lambda/N,\qquad
+ Q_*=6p_--3p_-^2-\frac32-d_0
+                     -\frac{3(1-2v_*)\Lambda}{8v_*N}.
+\]
+Then $Q\ge Q_*$: the first term increases with $p$, and
+$(1-2v)/v$ decreases with $v$. In particular, $Q_*$ may be negative.
+Already with $d=s=0$ its sign changes at $p=1-1/\sqrt2$.
+
+Let $C$ be the score multiplying the moment correction, and assume
+$0<c_*\le C\le c^*$. Choose positive multipliers satisfying
+\[
+        0<m_-\le\frac{c_*}{(V^*)^{3/2}},\qquad
+        m_+\ge\frac{c^*}{v_*^{3/2}},
+\]
+and define the signed gain
+\begin{equation}\label{ms:local42:gain}
+             G_*:=\min\{m_-Q_*,m_+Q_*\}.
+\end{equation}
+
+\begin{proposition}[Signed gain and nonnegative repair]\label{ms:local42:repair}
+Let $\Phi$ denote the standard normal distribution function. For an actual
+count displacement $\delta$, set
+\[
+ \mathcal R=\sqrt n\left\{
+ \Phi\!\left(\frac{\delta}{\sqrt{nv}}\right)
+ -\Phi\!\left(\frac{\delta}{\sqrt{n(v+s)}}\right)\right\}
+                         +C(\rho_B-\rho).
+\]
+If $D_+\ge\max(\delta,0)$ and $P_*\ge .4/(2v_*^{3/2})$, then
+\begin{equation}\label{ms:local42:repair_bound}
+ \mathcal R\le(P_*D_+-G_*)\frac{\lambda}{n}
+ \le \kappa\frac{\lambda}{N},\qquad
+ \kappa=\max\{0,P_*D_+-G_*\}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Write $A=C/(v+s)^{3/2}$. The hypotheses give
+$0<m_-\le A\le m_+$. By Lemma~\ref{ms:local42:cubic},
+$C(\rho-\rho_B)\ge sAQ\ge sAQ_*$.
+If $Q_*\ge0$, $AQ_*\ge m_-Q_*$; if $Q_*<0$,
+$AQ_*\ge m_+Q_*$. This proves $C(\rho-\rho_B)\ge sG_*$
+in both cases. One must use the \emph{upper} multiplier in the negative
+case.
+
+The normal part is nonpositive when $\delta\le0$.
+For $\delta>0$, differentiation with respect to an intermediate variance
+$t\in[0,s]$ gives
+\[
+ \frac{d}{dt}\left[-\sqrt n\,
+ \Phi\!\left(\frac{\delta}{\sqrt{n(v+t)}}\right)\right]
+ =\frac{\delta}{2(v+t)^{3/2}}
+   \phi\!\left(\frac{\delta}{\sqrt{n(v+t)}}\right)
+ \le\frac{.4\delta}{2v_*^{3/2}}\le P_*D_+.
+\]
+Integrate over $[0,s]$, and combine with the moment bound.
+Finally $s=\lambda/n$ and $\kappa\ge0$, so
+$(P_*D_+-G_*)\lambda/n\le\kappa\lambda/n\le\kappa\lambda/N$.
+The clamp at zero is needed before replacing $n$ by its lower bound.
+\end{proof}
+
+\subsection{Exact checks and the finite application}
+The new LEFT42 normalization uses
+\[
+                    N=42,\qquad c_*=.4,\qquad c^*=.4226.
+\]
+These are hypotheses supplied by the surrounding finite-index proof.
+The required rational multiplier inequalities are
+\[
+ (m_-)^2(V^*)^3<c_*^2,\qquad
+ (m_+)^2v_*^3>(c^*)^2,
+\]
+\emph{together with positivity of both multipliers}. Squaring without
+those positivity checks would accept a false negative coefficient.
+The normal multiplier is checked similarly using
+$4P_*^2v_*^3>.4^2$ and $P_*>0$.
+
+An admissible certificate must recompute the minimum in \eqref{ms:local42:gain} from the same input
+row, then verify a rational upper enclosure of the nonnegative
+coefficient in \eqref{ms:local42:repair_bound}. Altering the sign, the score cap,
+or the acquired probability/noise row is not a licensed change of
+hypotheses. If the exact finite inequalities pass,
+Lemma~\ref{ms:local42:cubic} and Proposition~\ref{ms:local42:repair} explain why they imply the
+probabilistic correction.
+
+\subsection{The finite comparison cover at floor $42$}\label{ms:local42-cover}
+The proposed acquisition first excludes the closed probability ranges
+$[0,.23]$, $[.23,.29]$, $[.474,.48]$ and $[.48,.63]$, together with
+$[.63,1]$. Different bounds may establish adjacent exclusions, so their
+common endpoints must be retained. The remaining grids are the 45 LEFT
+panels in $[.29,.38]$ and 47 CENTRAL panels in $[.38,.474]$, each of width
+$.002$. These are the rows defined in Section~\ref{ms:resources}.
+The impossible endpoints $p=0,1$ are excluded by centering and unit variance.
+Each exclusion and each acquired row is a separate certificate obligation;
+the partition itself is not an exclusion proof.
+
+On a surviving row, intersect every noise interval with its acquired
+ceiling $\Lambda$. The following table specifies the original comparison
+cover. A LOW radius $r$ means $|u|\le r$; MID covers the complementary
+closed phase intervals up to $|u|=1/2$. Both signs of $H$ are checked
+separately. At $\lambda=0$, the actual law is Bernoulli and the separately
+cited binomial theorem applies.
+\begin{center}
+\begin{tabular}{@{}lll@{}}\toprule
+Noise interval & CENTRAL & LEFT\\\midrule
+$(0,.05]$ & TINY, all phases & TINY, all phases\\
+$[.05,.06]$ & LOW radius $.09$, MID complement & MID, all phases\\
+$[.06,.08]$ & LOW radius $.14$, MID complement & MID, all phases\\
+$[.08,.10]$ & LOW radius $.19$, MID complement & LOW radius $.19$, MID complement\\
+$[.10,.12]$ & LOW radius $.29$, MID complement & LOW radius $.27$, MID complement\\
+$[.12,\Lambda]$ & LOW, all phases & LOW, all phases\\\bottomrule
+\end{tabular}
+\end{center}
+All seams are closed and shared. The comparison's amplitude caps must also
+be acquired: on the four bands ending at $.08,.10,.12,\Lambda$, the
+CENTRAL caps are $.375,.325,.275,.25$ and the LEFT caps are
+$.40,.35,.30,.275$, respectively, intersected with the row's global cap.
+A narrower cap is an output of confinement before it can be used here.
+The joint gap cap is recomputed from the same weighted resource in every
+band. The additional exclusions of Section~\ref{ms:resources} prune this
+cover only after their acquisition ancestors are established. No table
+entry asserts that its numerical comparison has passed.
