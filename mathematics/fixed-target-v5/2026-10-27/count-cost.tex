@@ -1,0 +1,165 @@
+\section{A smaller cost for count crossings}
+\label{v5cc:section}
+
+The whole-count comparison contains a discrete Taylor remainder of the
+binomial CDF. Its present bound pays separately for positive and negative
+crossings, although those events are disjoint. It also uses a third-moment
+estimate for crossings that can occur only beyond a fixed positive distance.
+Both losses can be removed without changing the law or the comparison target.
+
+Here is the coupling, including its endpoint convention. Let $U_{0,i}$ and
+$U_{1,i}$, $1\le i\le n$, be independent centered residuals, with
+$U_{0,i}\le a_0$, $U_{1,i}\ge-a_1$ and
+$c=1-a_0-a_1\in(1/2,1]$. Put
+\[
+ V_j=\sum_{i\le j}U_{1,i}+\sum_{i>j}U_{0,i},\qquad0\le j\le n,
+\]
+and extend $V_j$ constantly outside $[0,n]$. The sequence $j+V_j$ is
+strictly increasing, with increments at least $c$. For a legal count $k$
+and $|u|\le1/2$, define
+\[
+ K=\max\{j\in\mathbb Z:j+V_j\le k+u\},\quad R=K-k,
+ \quad t=\E V_k^2.
+\]
+If an independent selector has law $\operatorname{Bin}(n,p)$, its closed
+event occurs exactly when the selector is at most $K$. Thus the mixture CDF
+is $\E F_B(k+R)$. This construction uses the actual conditional laws; it
+does not replace the convolution by independent choices of moment bounds.
+
+Write $v=p(1-p)$, $\pi_j=\binom njp^j(1-p)^{n-j}$, with zero extension,
+$m_B=\max_j\pi_j$, and $\chi=(n+1)p-k$. Assume $\chi<2$. For integer $r$,
+the binomial difference identity and double summation give
+\begin{equation}\label{v5cc:discrete}
+ F_B(k+r)-F_B(k)-r\pi_k\le
+ \frac{m_B}{(n+1)v}
+ \left\{(\chi-1)_+r_++\chi_+\binom{r_-}{2}
+                                      +\binom{r_-}{3}\right\}.
+\end{equation}
+For completeness,
+$\pi_j-\pi_{j-1}=\pi_j((n+1)p-j)/(p(n-j+1))$.
+When its numerator is positive, the denominator is at least $(n+1)v$.
+For $r>0$, the positive differences have weights $r-i+1$ at $j=k+i$;
+only $i=1$ can contribute positively because $\chi<2$.
+For $r=-h$, the weights are $h-1-i$ at $j=k-i$, $0\le i\le h-2$.
+The bound $(\chi+i)_+\le\chi_++i$ gives the two binomial coefficients
+in \eqref{v5cc:discrete}. Zero extension handles counts outside $[0,n]$.
+
+\begin{lemma}[Disjoint costs and a fourth-moment bound]
+\label{v5cc:crossings}
+Put $d=2c-1/2>0$ and
+\[
+ M_2(\chi,c,u)=\max\left\{
+ \frac{(\chi-1)_+}{(c-u)^2},\,
+ \frac{\chi_+}{[c+\min(u,c/3)]^2}\right\}.
+\]
+Then, pointwise,
+\begin{align}
+ (\chi-1)_+R_++\chi_+\binom{R_-}{2}
+       &\le M_2(\chi,c,u)V_k^2,\\
+ \binom{R_-}{3}&\le (V_k)_+^3/d^3,
+ \qquad \binom{R_-}{3}\le (V_k)_+^4/d^4.
+ \label{v5cc:fourth}
+\end{align}
+If also $|U_{s,i}|\le A$ and $t\le T$, then
+\begin{equation}\label{v5cc:expected}
+ \E\{F_B(k+R)-F_B(k)-R\pi_k\}
+ \le\frac{m_Bt}{(n+1)v}
+ \left[M_2(\chi,c,u)+
+ \min\left\{\frac{\sqrt{A^2+3T}}{d^3},
+                   \frac{A^2+3T}{d^4}\right\}\right].
+\end{equation}
+\end{lemma}
+\begin{proof}
+On $R=r\ge1$, crossing monotonicity gives $-V_k\ge cr-u$.
+The difference
+$(cr-u)^2-r(c-u)^2=(r-1)(c^2r-u^2)$ is nonnegative.
+On $R=-h\le-2$, the count immediately above $K$ is outside the closed
+event, so $V_k>c(h-1)+u$. Set $j=h-1\ge1$.
+For $u\le c/3$, the function
+$j(j+1)/(2(cj+u)^2)$ decreases for $j\ge1$: its derivative has the sign
+of $j(2u-c)+u\le0$. Its maximum is $1/(c+u)^2$.
+For $u>c/3$, lower $u$ to $c/3$ in this bound.
+The positive and negative crossing events are disjoint. Hence the two
+quadratic prices use a maximum, not their sum. When $R=0$ or $-1$,
+both costs vanish.
+
+For $h\ge3$, put $j=h-1\ge2$. Since $u\ge-1/2$,
+\[
+ \frac{\binom h3}{[c(h-1)+u]^3}
+ \le\frac{j^3-j}{6(cj-1/2)^3}\le\frac1{(2c-1/2)^3}.
+\]
+For the last inequality the derivative numerator has the sign of
+$2cj-(3j^2-1)/2<0$, using $c\le1$ and $j\ge2$; equality of the
+last bound occurs at $j=2$. This proves the cubic estimate.
+On this same event $V_k>d$, so $(V_k)_+^3/d^3\le(V_k)_+^4/d^4$.
+For the other values of $R$, the left side is zero. Thus the quartic
+estimate is pointwise too; no approximation at a crossing atom is used.
+
+Independence and centering give, with variances $s_i$ of the $n$ terms,
+\[
+ \E V_k^4=\sum_i\E Z_i^4+6\sum_{i<j}s_is_j
+ \le A^2t+3t^2\le t(A^2+3T).
+\]
+Cauchy--Schwarz also gives $\E(V_k)_+^3\le t\sqrt{A^2+3T}$.
+Take expectations in the three pointwise estimates and then in
+\eqref{v5cc:discrete}. The result includes $t=0$.
+\end{proof}
+
+The fourth-moment price is smaller whenever
+$A^2+3T<(2c-1/2)^2$. It uses a moment bound already present in the
+old proof. In that domain the square root is unnecessary for this term.
+For larger noise retain the cubic price; taking the minimum preserves
+both regimes. Dropping the individual fourth moments $A^2t$ would be
+false, even for a centered three-point variable with rare nonzero values.
+
+\subsection{The phase maximum still has three candidates}
+
+In a closed scalar cell, $\chi\le b+u$. Define
+\[
+ g(u)=\max\left\{
+ \frac{(b+u-1)_+}{(c-u)^2},\,
+ \frac{(b+u)_+}{[c+\min(u,c/3)]^2}\right\},
+ \qquad u_*=c-2b.
+\]
+For $[l,h]\subseteq[-1/2,1/2]$, its exact maximum is
+\begin{equation}\label{v5cc:phase}
+ \max\left\{g(l),g(h),
+ \left.\frac1{4(c-b)}\;\right|\;
+ c>b,\ l\le u_*\le h,\ u_*\le c/3\right\}.
+\end{equation}
+An ineligible third value is omitted. To prove this, the first summand
+inside the maximum is nondecreasing: on its positive region its derivative
+has positive numerator $c+u+2b-2>c-u>0$.
+Below $c/3$, the positive part of the second has derivative
+$(c-2b-u)/(c+u)^3$; above $c/3$ it is nondecreasing.
+Its only possible interior maximum is therefore $u_*$, with value
+$1/[4(c-b)]$. At that point $b+u_*=(c+u_*)/2\le3/4$, so the first
+term vanishes. The supremum of a maximum is the maximum of the two
+suprema. This proves \eqref{v5cc:phase}, including singleton intervals,
+kinks and $c=1$.
+
+For every allowed parameter, $g$ is bounded by the old sum of these two
+terms. Both terms are nonincreasing in $c$. Consequently a conservative
+cache at a smaller acquired $c$ is still valid, and the new exact phase
+maximum is no larger than either the previous exact sum maximum or its
+64-cell outward bound.
+
+\subsection{What this changes in the local comparison}
+
+Use the same acquired amplitude $A$, upper own-count variance $T$ and
+lower gap coefficient $c$ as the current cell. Replace its curvature
+coefficient by \eqref{v5cc:expected}, maximizing the phase by
+\eqref{v5cc:phase}. All other terms, including the marked-crossing linear
+term $\pi_k\E R$, the Gaussian repair and the actual binomial mass bound,
+are retained. The new coefficient is never larger than the old one.
+When passing from $1/n$ to $1/N$, clamp the complete improved inverse-index
+correction at zero; its old strict positivity need not survive an improvement.
+The existing negative event bracket is still required before using a lower
+binomial mass bound.
+
+For a fixed noise band, $A,T,c$ are frozen valid bounds. Hence this
+replacement changes only the constant part of the inverse-index correction;
+the existing convex endpoint argument in the noise parameter is unchanged.
+It does not prove the acquisition of those bounds, cover all count cells,
+or replace the separate zero-noise binomial theorem. It supplies a smaller
+curvature contribution under exactly the old moment and coupling hypotheses.

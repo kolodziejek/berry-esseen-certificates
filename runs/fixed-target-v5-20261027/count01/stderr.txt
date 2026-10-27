@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/count-cost-v5/mathematics/fixed-target-v5/2026-10-27/count_cost.py", line 184, in <module>
+    main()
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/count-cost-v5/mathematics/fixed-target-v5/2026-10-27/count_cost.py", line 132, in main
+    key=(family,row['index'],sign); job=jobs[key]; seen.add(key)
+KeyError: ('central42_v2', 39, -1)
