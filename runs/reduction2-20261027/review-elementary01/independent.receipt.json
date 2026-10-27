@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/Users/bkolodziejek/miniforge3/bin/python",
+    "-I",
+    "-B",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/review-elementary/mathematics/reduction2/2026-10-27/reviews/check_elementary_independent.py"
+  ],
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/review-elementary",
+  "started_utc": "2026-10-27T10:40:14.358177+00:00",
+  "elapsed_seconds": 0.08194204198662192,
+  "return_code": 0,
+  "python": "3.12.12 | packaged by conda-forge | (main, Oct 22 2025, 23:34:53) [Clang 19.1.7 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "input_sha256": {
+    "mathematics/reduction2/2026-10-27/reviews/check_elementary_independent.py": "0328bd9065e7d4a05a1077c499eb86df49c68f22c098ccd5a7205e399454b0bc",
+    "verification/finite-tail/sources/backend.zip": "43b606138f826b47e3f174957088285349aebc82a928627e9e66fe370471be52",
+    "mathematics/reduction2/2026-10-27/elementary-support.md": "813c832a125e1db0587ffc9e045806634ae64ff4525d52a18c748ee00c9817ca"
+  },
+  "stdout_sha256": "ee08b8820560d439270b7d403b098e3c1316719a40c924fd7854d1f66c204848",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "Bounded exact support review, no archived code imports or native programs."
+}
