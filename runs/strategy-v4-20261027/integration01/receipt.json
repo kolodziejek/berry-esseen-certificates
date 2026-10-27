@@ -1,0 +1,83 @@
+{
+  "status": "PASS_BOUNDED_V4_INTEGRATION",
+  "python": "3.9.6",
+  "checks": [
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/strategy-v4/2026-10-27/check_geometry.py"
+      ],
+      "returncode": 0,
+      "source_sha256": "1c5004dac9b42381a54e5c327ac80b57d16fc02485b5a5443e7d06fb41987c4a"
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/strategy-v4/2026-10-27/argon-audit.py"
+      ],
+      "returncode": 0,
+      "source_sha256": "1aa24b572339b222fc3577c9e52ccb0617632616fe0eb51b0b9c41a985cc4d36"
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/strategy-v4/2026-10-27/excess-check.py"
+      ],
+      "returncode": 0,
+      "source_sha256": "8a6e79facf25497219809f2b7bbfc9d4181699fe56ddd1c93ad097bf5af1d2ee"
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/strategy-v4/2026-10-27/excess-transport-check.py"
+      ],
+      "returncode": 0,
+      "source_sha256": "11f309049be2403bbf51b65e381506d97791eacc1381469e820f9583143cf58b"
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/strategy-v4/2026-10-27/opus_exact_checks.py"
+      ],
+      "returncode": 0,
+      "source_sha256": "045b0343efc722ea9ce8bce877f4a8c0383d559d8e9fc11e6f253f2fd73f9914"
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/strategy-v4/2026-10-27/opus_adversarial.py"
+      ],
+      "returncode": 0,
+      "source_sha256": "9be4e41907416b149ddea63317b95007ce269bd500c6dde158fe8b36abb4faac"
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/runs/strategy-v4-20261027/transport-review01/check_review.py"
+      ],
+      "returncode": 0,
+      "source_sha256": "374a99855dd2b76c2ff5a0682a856166e589c0dd17a94bcdc29c4fa33e6d4ca8"
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/manuscript/arxiv-v1/tools/check_sources.py"
+      ],
+      "returncode": 0,
+      "source_sha256": "31e77ebb57e78a45f0050820338a374a7d692dd7cd19112fe64c9637d400b009"
+    }
+  ],
+  "baseline_entries_unchanged": 2748,
+  "manuscript_labels": 478,
+  "manuscript_references": 271,
+  "companion_labels": 17,
+  "mathematical_scope": "Checks supplement the written arguments; no full BASE41, LOCAL42 or Lean acceptance.",
+  "note_sources": {
+    "main.tex": "3abb4598cae42af267bef9c9e5917ca8d66862f80c4a5d793a1cba9a6f300962",
+    "excess.tex": "a7105d57f4f353a7fcdd32947b1feae044b3df5dc29558afb48c575e9ea4a2d0",
+    "geometry.tex": "aa7886c63cc666b7712b0f8752f9f2cd5542931e2facd47c702f909cbdde4eb5",
+    "alternatives.tex": "9c98505bdfeb5033650462d6682de606ba74c23527edf58ebd4ff7a63e5c37c2",
+    "inversion.tex": "f572b9190e01bd592f5d9b6e6db954d609d8dd36eabeb2a1cf17a33672eb2a09",
+    "references.bib": "6dfc87d38845841f619019a7a185e4399530e51f37cf95d734730dc27dcd9f4f"
+  }
+}
