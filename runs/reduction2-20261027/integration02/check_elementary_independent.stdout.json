@@ -1,0 +1,36 @@
+{
+  "status": "PASS_INDEPENDENT_ELEMENTARY_SUPPORT_ARITHMETIC",
+  "scope": "conditional support component; no acquisition, attainment, base or global proof",
+  "source_pins": {
+    "proof": "419ba79a8967665c998602dc421300ae8ee6f5c59901880175b9618f63c27393",
+    "route": "df1631620cf1135a5bb6fb9cd28f6c514f6a0451f7c1699ad55054fa1b23dcd0",
+    "initial_caller": "343046eaf0a3e6b2e140644cee19b7764d76b4171b844eaac27fb1a288b12d2e",
+    "left_caller": "a565247f6587f3bb07dd67ef2100d08f70aebbe7543937f1ab98f8d09cf31eb6"
+  },
+  "method": "direct rational scalar envelopes and Vandermonde reconstruction; no constructor imports",
+  "heat_cancellation_points": 9,
+  "radius_polynomial_coefficients_at_5_2": [
+    "123579925563/1343488000000",
+    "-467155860219/1679360000000",
+    "705959271/13434880000",
+    "8703567/167936000",
+    "-7499223/839680000",
+    "-531441/2099200000"
+  ],
+  "polynomial_holdouts": 4,
+  "radius_derivative_upper": "-797749885413/3358720000000",
+  "radius_endpoint_reserve": "4403736280322409/214958080000000000",
+  "initial_reserve_times_A": "2214258283536204102723/10250000000000000000000",
+  "common_reserve": "2533499510174559/214958080000000000",
+  "scale_margin": "118707/42875000",
+  "source_bound_support_calls": 65,
+  "individually_checked_ray_gates": 390,
+  "negative_controls": [
+    "different preceding moment",
+    "missing planned support edge",
+    "reordered fine cells",
+    "duplicate JSON key"
+  ],
+  "refuted_coarse_shortcuts": 2,
+  "native_programs_executed": 0
+}

@@ -1,0 +1,131 @@
+{
+  "scope": "bounded new arithmetic and synthetic protocol only; no native LOW/acquisition run",
+  "archive_sha256": "43b606138f826b47e3f174957088285349aebc82a928627e9e66fe370471be52",
+  "source_hashes": {
+    "mathematics/reduction2/2026-10-27/check_local_curvature.py": "3e3a35c30af20201fc5b3143f40f1439c235b7bfd4dd702f4fa8348356ff70dc",
+    "mathematics/reduction2/2026-10-27/onepass_low_test.py": "a1a15b59382b84c2beec38d2c7b40659fb641e03e164ea89d40a0848e46e973e",
+    "mathematics/reduction2/2026-10-27/check_tighter_resources.py": "068f2f32d03f4085aa739dae2ffc93432bff0e943db40a176fe37ce115c7bf82",
+    "mathematics/reduction2/2026-10-27/check_elementary_support.py": "13c5129d7fa07c7cdadfe0a233e9276b245cd17c309a039a265c5103b8f7a542",
+    "mathematics/reduction2/2026-10-27/discover_heat.py": "b5ccb31cfd976f686f7291d453e3b50c9d9ad36ee80be37fa15064cbb82eab0e",
+    "mathematics/reduction2/2026-10-27/onepass_low.py": "107b755a2abdb43f65f2db821789dc6b73f3090d03798e1e2a67659ec72c1cf9",
+    "mathematics/reduction2/2026-10-27/reviews/check_curvature_independent.py": "46b7fba7e26c9db2b9c87892009269e478d97be395df8596d8006d41a6859e0b",
+    "mathematics/reduction2/2026-10-27/reviews/check_elementary_independent.py": "0328bd9065e7d4a05a1077c499eb86df49c68f22c098ccd5a7205e399454b0bc",
+    "mathematics/reduction2/2026-10-27/reviews/check_resources_independent.py": "f0626274e150150beac0bd494e289efe82ac173b62e2f51ba82f115e36037959"
+  },
+  "runs": [
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "-S",
+        "mathematics/reduction2/2026-10-27/check_elementary_support.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.257301834,
+      "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "script_sha256": "13c5129d7fa07c7cdadfe0a233e9276b245cd17c309a039a265c5103b8f7a542",
+      "stdout_sha256": "36568a0524f041ea09d8bbc645d78621b4a0ce39f021b42c952819a2799af83b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "-S",
+        "mathematics/reduction2/2026-10-27/check_local_curvature.py",
+        "--archive",
+        "verification/finite-tail/sources/backend.zip"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 4.619179917,
+      "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "script_sha256": "3e3a35c30af20201fc5b3143f40f1439c235b7bfd4dd702f4fa8348356ff70dc",
+      "stdout_sha256": "f50972b9da86850f19e5b8540eb7f6823cff4f02cd4468848241f84582a6184d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "-S",
+        "mathematics/reduction2/2026-10-27/check_tighter_resources.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.20298308299999945,
+      "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "script_sha256": "068f2f32d03f4085aa739dae2ffc93432bff0e943db40a176fe37ce115c7bf82",
+      "stdout_sha256": "c5d641395a4c9d8e6a08d5d2b8345a73c978fca5af76d9f0493f041e9b0d8d0f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "-S",
+        "mathematics/reduction2/2026-10-27/onepass_low_test.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.6959922919999997,
+      "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "script_sha256": "a1a15b59382b84c2beec38d2c7b40659fb641e03e164ea89d40a0848e46e973e",
+      "stdout_sha256": "c496aaa0006c7d1c987ddf0659e85b40edffc1d581353d9d3f9271e66ec2a038",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "-S",
+        "mathematics/reduction2/2026-10-27/reviews/check_elementary_independent.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.13842666700000006,
+      "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "script_sha256": "0328bd9065e7d4a05a1077c499eb86df49c68f22c098ccd5a7205e399454b0bc",
+      "stdout_sha256": "ee08b8820560d439270b7d403b098e3c1316719a40c924fd7854d1f66c204848",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "-S",
+        "mathematics/reduction2/2026-10-27/reviews/check_curvature_independent.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.7305040839999997,
+      "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "script_sha256": "46b7fba7e26c9db2b9c87892009269e478d97be395df8596d8006d41a6859e0b",
+      "stdout_sha256": "bbb3d2b3892c3ec5cb33acecacd3226e54c54a89f96359836aeeffa8cbeb4ffc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "-S",
+        "mathematics/reduction2/2026-10-27/reviews/check_resources_independent.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.1428298339999996,
+      "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "script_sha256": "f0626274e150150beac0bd494e289efe82ac173b62e2f51ba82f115e36037959",
+      "stdout_sha256": "0ef5281a4ffbf0c00d037d980046637b1fc8156f3143c4fa7db916b3475f5897",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

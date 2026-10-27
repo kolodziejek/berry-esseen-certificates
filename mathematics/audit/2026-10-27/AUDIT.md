@@ -17,7 +17,7 @@ bootstrap. The equality-compatible version of LOCAL47 even gives a separately
 stated strict tail from 47. These are conditional composition results, not a
 fresh proof of the Berry--Esseen conjecture or of the numerical LOCAL47 premise.
 
-The immediate computational saving is narrower than the roadmap might suggest:
+The conditional computational saving is narrower than the roadmap might suggest:
 the dedicated strong-46 support/barrier calculations are candidates for bypass
 in a new global assembly. The coarse ceiling branch still has a finite43--48
 consumer. There are no separate per-index 47 and 48 task families to discard:
@@ -56,6 +56,15 @@ argument without assuming the roadmap's calculation. The coordinator read the
 displayed proofs and the archived entry and local-exclusion statements directly.
 Agreement between reviewers is not a proof, and no new scalar or inventory PASS
 is interpreted as a native certificate PASS.
+
+The subsequent [independent review](reviews/REVIEW.md) is complete with no
+blocking findings for this audit-only change. It checks component integration,
+independently rederives the scalar argument, and cross-checks the acquisition
+interfaces and shared computation consumers. The audit-only review additions
+are recommended for merge after explicit owner approval. PR #1 was merged
+outside this agent's actions before the review commits were pushed; the owner
+authorized a single follow-up draft. This is not acceptance of the retained
+native predicates or of a production simplification.
 
 ## The precise new composition
 

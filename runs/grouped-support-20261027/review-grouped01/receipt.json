@@ -1,0 +1,45 @@
+{
+  "run_id": "review-grouped01",
+  "git_head": "65c1beb002988a6ceefdfcc2d067def6eedfa80e",
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/review-grouped",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "python_executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+  "records": [
+    {
+      "label": "submitted",
+      "argv": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/review-grouped/mathematics/simplification/2026-10-27/check_grouped_support.py"
+      ],
+      "started_utc": "2026-10-27T10:04:11.298212+00:00",
+      "elapsed_seconds": 0.11998091699999999,
+      "returncode": 0,
+      "script_sha256": "52f12e2206148824da587014a1b362399cd0e91f37f0983b7106085dde4d566c",
+      "stdout_sha256": "edb6cbb76ebeab1a172dc70b228736c731e8795b70e1883e8ba3f9f8b7f411d2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "independent",
+      "argv": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/review-grouped/runs/grouped-support-20261027/review-grouped01/independent_bernstein.py"
+      ],
+      "started_utc": "2026-10-27T10:04:11.418876+00:00",
+      "elapsed_seconds": 0.456552458,
+      "returncode": 0,
+      "script_sha256": "b34ad035cc8e9a7c89b5c881cd64b17ae0e87fb01eeeadf90775ef9f5d1c6587",
+      "stdout_sha256": "aaa7dccb282492f848677fbc128426952dab4d2baa5e366fd2222e2c13412332",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "inputs": {
+    "mathematics/simplification/2026-10-27/grouped-support.md": "e6205fc50e80bbaefd49021302d17f9e3ef2c86213ecef6bdda0be621e370c51",
+    "mathematics/simplification/2026-10-27/check_support_lift.py": "3cf1ec45f3abc69c308bc9819493d09fd1851c91d67f1ea72384d260e3edf59e",
+    "paper/analytic-supplement.txt": "dad4a3558b01bda4acfdfc9120a50ecbcd7a6f2389886ba3ce72a6602ec39018",
+    "verification/finite-tail/sources/backend.zip": "43b606138f826b47e3f174957088285349aebc82a928627e9e66fe370471be52"
+  },
+  "native_programs_executed": 0
+}

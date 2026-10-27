@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "runs/least-counterexample-20261027/review-provider01/inspect.py"
+  ],
+  "elapsed_seconds": 0.146676584,
+  "input_sha256": {
+    "mathematics/global-contract.json": "3b33be2e68e56cb2cca9796426f19a6a4cae038ea12a1d5739bb9046245c7387",
+    "runs/least-counterexample-20261027/review-provider01/inspect.py": "f10c88a6513058824def2c4a7c65cbad9d69b121d2e58c571b34b05d1a3bf64e",
+    "verification/finite-tail/sources/BE_cutoff49_20260930.zip": "ecdb9acca0db29efc9fe2bf496c0bcc61b4881aecdcbc91a4eb6ad49b920c72e",
+    "verification/finite-tail/sources/backend.zip": "43b606138f826b47e3f174957088285349aebc82a928627e9e66fe370471be52"
+  },
+  "python_version": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "return_code": 0,
+  "scope": "Read-only exact-byte source location search; no native proof execution",
+  "working_directory": "."
+}

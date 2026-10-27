@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<disposable-new-checker-copy>", line 237, in <module>
+    main()
+  File "<disposable-new-checker-copy>", line 188, in main
+    rows = bind_left_rows(proof)
+  File "<disposable-new-checker-copy>", line 142, in bind_left_rows
+    need(proof['N'] == N and proof['L'] == LAST and F(proof['cap']) == F(2113, 5000),
+  File "<disposable-new-checker-copy>", line 33, in need
+    raise Rejected(message)
+__main__.Rejected: unchanged finite acquisition scope

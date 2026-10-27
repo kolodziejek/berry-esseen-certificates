@@ -1,16 +1,25 @@
 # Next actions — 27 October 2026
 
-1. Review `mathematics/audit/2026-10-27/AUDIT.md` and exact acquisition/computation
-   appendices. Retain the existing finite theorem through48 in the first redesign.
-2. Locate the actual public final provider implementations named by
-   `mathematics/global-contract.json`; pins alone do not permit a behavior audit.
-3. Implement a separately named BASE48 + full LOCAL47 composition contract and
-   mutation tests for missing support, acquired resources, deleted caps, signed
-   gates, zero noise and full coverage. This is the next bounded experiment.
-4. Only after reviewing that graph, propose a new global replay selection that
-   bypasses dedicated strong46 work while retaining shared coarse/phase work.
-   Preserve the original independent-tail theorem, certificates and targets.
+1. Keep existing draft PR#2 pending explicit merge approval. Independent
+   component review and all seven bounded integrated checks are complete;
+   reduction2/2026-10-27/reviews/REVIEW.md records exact scope. No main push,
+   force push, branch deletion or upstream mutation.
+2. Design a newly named acceptance contract for the150-row cover and exact
+   curvature/clamp formula, with explicit same-law resource joins and complete
+   sign/phase/probability/noise coverage. Only then adapt the one-pass protocol;
+   its old152-row index/output pins cannot be reused for changed arithmetic.
+   Start with small synthetic integration controls; no heavy run is authorized.
+3. Locate the pinned current4042_low_mathematical_assembly_v2.py provider
+   (aa819f3fff77d4cdad2b7a8b5c69be2719b8e9df26c85ba5041aa7c0b8bd2d7b)
+   and genuine38/39 parents. The old62F base join consumes tail43/early/single39;
+   do not erase these base dependencies based on an unavailable new provider.
+4. A further analytic target is the remaining marked-tail/count comparison,
+   or stronger strict confinement using deleted-score caps. Current proofs
+   remove no remaining whole native acquisition/confinement job. Preserve
+   zero-noise Bernoulli and equality-compatible attainment obligations.
 
-Reproduction of new scalar arithmetic is documented in
-`mathematics/audit/2026-10-27/scalar-review.md`. No expensive campaign, removal
-or theorem weakening is authorized by this audit.
+Next small runnable reproduction from repository root:
+python3 -I -B mathematics/reduction2/2026-10-27/check_elementary_support.py
+Other bounded reproductions and exact sources are in that directory's README.
+Do not run onepass_low.py run-family or any native generation campaign without
+explicit approval. Existing certificates and alternative proof routes remain.

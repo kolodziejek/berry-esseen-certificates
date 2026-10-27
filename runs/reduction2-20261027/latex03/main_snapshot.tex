@@ -1,0 +1,526 @@
+\documentclass[11pt]{article}
+\usepackage[margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,array,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\CE}{C_{\mathrm E}}
+\newcommand{\pos}[1]{(#1)_+}
+\newcommand{\R}{\mathbb R}
+\title{Three further reductions for the conditional LOCAL42 route}
+\author{Research and independent audit in the user's fork}
+\date{27 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give an elementary replacement for all 65 zero-loss support calls, an
+exact three-candidate formula for the LOW curvature supremum, and a tighter
+resource argument that removes two selected LOW producers. These are
+conditional components, not a proof of the sharp iid Berry--Esseen
+conjecture. The full acquisition, equality-compatible attainment, contact,
+local-comparison and finite-base obligations remain. No original certificate,
+target or production checker is changed. A separate one-pass execution
+prototype is discussed only at its tested protocol scope.
+\end{abstract}
+
+\section{Scope and preserved premises}
+The user's fork is \path{kolodziejek/berry-esseen-certificates}.
+The immutable reference and this continuation's starting commit are,
+respectively:
+\begin{center}\small\ttfamily
+6346fc1b4432bc5982822aa696eb566ed9e1e1ee\\
+42433b448d9389359e642a3384a949ffdd87b903
+\end{center}
+Exact source paths, hashes and literal line locations are in the companion
+notes:
+\begin{quote}\ttfamily
+elementary-support.md\\
+local-kernel.md\\
+tighter-resources.md
+\end{quote}
+Their small checkers read the pinned source
+archive without executing its native arithmetic kernels.
+
+The earlier reduction retains a genuine sharp base through 41. At a least
+index $n\ge42$ with $C_n\ge\CE$, both required predecessors are sharp,
+the global predecessor decrement is zero, and support-free smoothing gives
+\[
+ n(C_n-\CE)<\frac{3003}{10250}<0.3,\qquad
+ C_n<\frac{73}{175}<0.4226.
+\]
+Both deleted-score caps are below $0.4253$. Those scalar conclusions alone
+do not establish LOCAL42. In particular they do not imply zero conditional
+noise, compact support, attainment, or a numerical certificate.
+
+The support result below applies to an attained positive closed maximizing
+pair $(P,H)$ with standardized iid marginal, third absolute moment
+$\rho=E|X|^3$, and signed moment $\beta=E[X|X|]$. All moment and same-law
+contact premises are retained. The resource result is applied only
+\emph{after} the corresponding confinement and acquisition. Its extension
+from the literal finite $42$--$48$ source scope requires the separate
+uniform42 bridge; the floor $42$ alone does not prove that extension.
+
+\section{Elementary support without a positivity mesh}
+Throughout this section, the actual integer satisfies $n\ge42$ and the
+attained score satisfies $C_n\ge\CE$.
+Set $v=n-1$, $s=\sqrt{n/v}$ and $F_v(x)=\Phi(x/\sqrt v)$. The retained
+contact inequality on the complete closed support is
+\begin{equation}\label{contact}
+ 0\le H_n(H,t)+C_n\{-|t|^3+\tfrac32\rho t^2+3\beta t+\rho e_n\},
+\end{equation}
+where
+\[
+ e_n=n\bigl(\sqrt{n/(n-1)}-1\bigr)-\tfrac12<\frac{0.384}{n},
+\]
+and the exact Gaussian expression is
+\[
+ \frac{H_n(H,t)}{n^{3/2}}
+ =F_v(H-t)-F_{v+1}(H)+tF_{v+1}'(H)
+       -\frac{t^2-1}{2}F_{v+1}''(H).
+\]
+The same-owner predecessor score is at most the global predecessor score;
+at zero global decrement the discarded signed-loss term is nonpositive.
+
+\subsection{Fourth-order expansion with uniform remainder}
+Using $\partial_vF_v=F_v''/2$, expand $F_v(H-t)$ spatially through order
+four, $F_{v+1}$ through second order in variance, and its first and second
+spatial derivatives through first order in variance. The order-zero, linear
+and quadratic spatial terms cancel. The remaining cubic and quartic
+coefficients are $(-t^3+3t)/6$ and $(t^4-6t^2+3)/24$. Thus, for $t=\pm u$,
+\begin{equation}\label{expansion}
+ \frac{H_n(H,\pm u)}{s^3}
+  =\pm A(1-z^2)\phi(z)+B\phi'''(z)+R,\qquad z=H/\sqrt v,
+\end{equation}
+where
+\[
+ A=\frac{u^3-3u}{6},\qquad B=\frac{u^4-6u^2+3}{24\sqrt v}.
+\]
+For $u\ge5/2$, both are positive. The four Taylor remainders, after division
+by $s^3$, have bounds
+\[
+ \frac{u^5\|\phi^{(4)}\|_\infty}{120v},\quad
+ \frac{\|\phi^{(5)}\|_\infty}{48v^{3/2}},\quad
+ \frac{u\|\phi^{(4)}\|_\infty}{8v},\quad
+ \frac{(u^2-1)\|\phi^{(5)}\|_\infty}{16v^{3/2}}.
+\]
+Gaussian Fourier inversion gives
+$\|\phi^{(4)}\|_\infty\le3\phi(0)<6/5$ and
+$\|\phi^{(5)}\|_\infty\le8/\pi<51/20$. Therefore
+\begin{equation}\label{error}
+ |R|\le E_v(u):=\frac{u^5/100+3u/20}{v}
+       +\frac{51(3u^2-2)}{960v^{3/2}}.
+\end{equation}
+Every bound is uniform in the raw threshold $H$. No seventh derivative
+of $F_v$, sixth derivative of $\phi$, or signed fifth-order tangent is used.
+The rational lower bound $\pi>281476/89625>160/51$ suffices for these
+constants and $\phi(0)<2/5$.
+
+\begin{lemma}[Two all-threshold envelopes]\label{envelopes}
+For $u\ge5/2$,
+\[
+ H_n(H,\pm u)\le s^3\{\phi(0)(A+2B)+E_v(u)\}.
+\]
+If also $B\le A/4$, then
+\[
+ H_n(H,\pm u)\le
+ s^3\left\{\phi(0)\left(A+\frac{9B^2}{4A}\right)+E_v(u)\right\}.
+\]
+Both assertions hold for every real $H$ and both signs separately.
+\end{lemma}
+\begin{proof}
+The first follows from
+$\|(1-z^2)\phi(z)\|_\infty=\phi(0)$ and
+$\|\phi'''\|_\infty<2\phi(0)$.
+For the positive sign and $|z|\le1$, the retained terms in
+\eqref{expansion} are at most
+$\phi(0)(A-Az^2+3B|z|)$; completing the square proves the sharper bound.
+For $|z|>1$ the first term is nonpositive and the second is at most
+$2B\phi(0)\le A\phi(0)/2$.
+For the negative sign, its first term is at most
+$2e^{-3/2}A\phi(0)<A\phi(0)/2$, and the second is at most
+$2B\phi(0)\le A\phi(0)/2$. Add the uniform remainder.
+\end{proof}
+
+\subsection{Rational boundary inequalities and full rays}
+Use
+\[
+ S=81/80,\quad \ell=6,\quad c_0=819/2000<\CE,\quad
+ H_4=u^4-6u^2+3,
+\]
+so $s\le S$, $\sqrt v>\ell$ and $e_n<8/875$. Define
+\begin{align*}
+ E(u)&=\frac{u^5}{4100}+\frac{3u}{820}
+                   +\frac{17(3u^2-2)}{78720},\\
+ Q_{r,b}(u)&=-u^3+\tfrac32ru^2+3bu+\tfrac8{875}r,\\
+ P_{r,b}(u)&=\tfrac25S^3(A+H_4/72)+S^3E(u)+c_0Q_{r,b}(u),\\
+ P^\sharp_{r,b}(u)&=\tfrac25S^3
+       \left(A^2+\frac{H_4^2}{256\cdot41}\right)
+       +S^3E(u)A+c_0Q_{r,b}(u)A.
+\end{align*}
+For acquired $\rho\le r$, $|\beta|\le b$, the contact coefficient is at
+most $Q_{r,b}$. Check $Q_{r,b}<0$ before replacing its actual multiplier
+$C_n$ by the lower constant $c_0$. Lemma~\ref{envelopes} then makes
+$P<0$ sufficient at a boundary; $P^\sharp<0$ is sufficient when $B\le A/4$.
+
+To extend a boundary to a whole ray, put
+\[
+ L_{r,b}(u)=\tfrac25(u^2/2+1/2+8/875)+c_0Q'_{r,b}(u).
+\]
+The retained direct derivative bound is
+$|\partial_tH_n|\le(2/5)(t^2/2+1/2+e_n)$.
+If $Q,Q',Q'',L,L',L''$ are negative at $U$, their required signs persist
+for $u\ge U$, since $Q'''=-6$ and $L''=2/5-6c_0<0$.
+The contact upper bound for each sign then decreases strictly along the
+whole ray. This includes endpoints and atoms.
+
+\paragraph{Initial case.}
+Take $R=96/25$, $r=1841/1000$, $b=321/500$. The retained moment inequalities
+give
+\[
+ \rho<
+ \min\left\{\frac{.3031\cdot.646}{c_0-.3031},
+              \frac{.3322\cdot.429}{c_0-.3322}\right\}
+ =\frac{7361}{4000}<r.
+\]
+The sign-moment inequality gives $|\beta|<b$, using
+\[
+ (1+b^2)^2-r^2(1-b^2)=\frac{93288849}{50000000000}>0.
+\]
+At $u=R<6$,
+$H_4=6uA-3(u^2-1)<36A$ and $B<H_4/144<A/4$. Exact arithmetic gives
+\[
+ -P^\sharp_{r,b}(R)=
+ \frac{2214258283536204102723}{10250000000000000000000}>\frac15.
+\]
+All six ray signs are negative, proving support in $(-R,R)$.
+
+\paragraph{Common LEFT bridge.}
+Take $R=121/40$, $r=143/100$, $b=93/200$, outwardly enclosing the acquired
+common moment maxima $71458741/50000000$ and $46459359/100000000$.
+Then
+\[
+ -P_{r,b}(R)=\frac{2533499510174559}{214958080000000000}>\frac1{100}.
+\]
+All six ray signs are negative.
+
+\paragraph{A continuous family for the other 63 calls.}
+All remaining acquired parameter tuples satisfy
+\[
+ \frac52\le R\le\frac{111}{40},\qquad
+ \rho\le r_R=\frac7{20}R+\frac13,\qquad
+ |\beta|\le b_R=\frac38R-\frac35.
+\]
+Let $p(R)=-P_{r_R,b_R}(R)$ and $w=R-5/2$. The coefficients of
+$p(R)=\sum_{j=0}^5a_jw^j$ are
+\[
+\begin{array}{c|r}
+j&a_j\\ \hline
+0&123579925563/1343488000000\\
+1&-467155860219/1679360000000\\
+2&705959271/13434880000\\
+3&8703567/167936000\\
+4&-7499223/839680000\\
+5&-531441/2099200000
+\end{array}
+\]
+With $h=11/40$, their signs imply throughout $0\le w\le h$
+\[
+ p'(R)\le a_1+2a_2h+3a_3h^2
+       =-\frac{797749885413}{3358720000000}<0.
+\]
+Consequently
+\[
+ p(R)\ge p(111/40)
+       =\frac{4403736280322409}{214958080000000000}>\frac1{50}.
+\]
+For rays, freeze each pair $(r_R,b_R)$. The common larger caps
+$r_*=131/100$, $b_*=441/1000$ have at $u=5/2$ the six signs
+\[
+ -\frac{16991}{700000},\quad-\frac{3801}{500},\quad-\frac{1107}{100},
+ \quad-\frac{11615533}{7000000},\quad-\frac{706633}{200000},
+ \quad-\frac{2057}{1000}.
+\]
+They majorize the corresponding signs and derivative bounds for every fixed
+pair. Combining the negative boundary with these complete rays proves all
+63 calls. Continuing the affine caps along an infinite ray would be invalid.
+
+\begin{theorem}[Conditional elementary support replacement]
+For an actual integer $n\ge42$ and attained score $C_n\ge\CE$, under the
+retained contact, zero-loss and ordered same-law acquisition
+hypotheses, all 65 support conclusions used by the zero-loss LOCAL42 route
+follow from the preceding three cases. The old radial Bernstein cells,
+the newer 14-group/672-coefficient support certificate, the signed
+fifth-order identity, its fourth-derivative lower tangent and its associated
+domination gates are unnecessary for this alternative support component.
+\end{theorem}
+The input bindings and eighteen common ray signs are checked by the script
+\begin{center}\ttfamily check\_elementary\_support.py\end{center}
+These arithmetic facts do not prove
+the acquired moment inequalities themselves.
+
+\section{Exact curvature maximization and safe transport}
+For real $b$, $1/2<c\le1$ and $[l,h]\subseteq[-1/2,1/2]$, define
+\[
+ f(u)=\frac{\pos{b+u-1}}{(c-u)^2}
+       +\frac{\pos{b+u}}{[c+\min(u,c/3)]^2},\qquad u_*=c-2b.
+\]
+All denominators are strictly positive. In the kernels $c=1-d_L$ and
+$b=p_+-\min(H/\ell)$, where the minimum uses all four signed endpoint
+quotients. The variable $b$ is not a probability and cannot be freely
+reflected.
+
+\begin{theorem}[Exact three-candidate supremum]
+The supremum of $f$ over $[l,h]$ is the maximum of $f(l)$, $f(h)$, and
+the value $1/[4(c-b)]$ if
+\[
+ c>b,\qquad l\le u_*\le h,\qquad
+ u_*\le c/3,\qquad u_*\le1-b.
+\]
+An ineligible third value is omitted. The formula includes singleton
+intervals, coincident kinks and $c=1$.
+\end{theorem}
+\begin{proof}
+Write $f=r+g$ for the two summands. On $b+u>1$,
+\[
+ r''=\frac{2[3(b-1)+2u+c]}{(c-u)^4}>0,
+\]
+since its bracket is $3(b+u-1)+(c-u)>0$. Where $u<c/3$ and $b+u>0$,
+\[
+ g'=\frac{c-2b-u}{(c+u)^3},\qquad
+ g''=\frac{2(3b+u-2c)}{(c+u)^4}.
+\]
+If also $r>0$, then $3b+u-2c>3-2u-2c\ge0$, so $f$ is convex there.
+For $u>c/3$, $g$ is convex piecewise linear. At each of
+$-b$, $1-b$ and $c/3$, the derivative jumps upwards; simultaneous jumps
+add. Thus none is a strict interior maximum.
+
+Where $r=0$, either $g=0$, or below $c/3$ its derivative changes from
+positive to negative only at $u_*=c-2b$. Its positive numerator condition
+is $c>b$, and $r=0$ there is equivalent to $u_*\le1-b$.
+Its value is $1/[4(c-b)]$. Above $c/3$, $g$ is nondecreasing.
+These cases locate a global maximum among the stated candidates.
+Continuity handles boundaries and collisions; constant segments contribute
+a value already attained at an endpoint or a listed maximizer.
+\end{proof}
+
+For an old grid interval $[a,d]$ and every $u\in[a,d]$,
+\[
+ f(u)\le \frac{\pos{b+d-1}}{(c-d)^2}
+       +\frac{\pos{b+d}}{[c+\min(a,c/3)]^2}.
+\]
+Therefore the exact maximum is at most the old 64-interval outward bound.
+For fixed $b,u$, $f$ is nonincreasing in $c$. CENTRAL's first cached band
+has the smallest $c$, so its cached envelope also dominates later exact
+values; this requires the original band order and joint-gap relation.
+LEFT retains its band-dependent cache.
+
+\subsection{Why the final correction needs a zero clamp}
+The curvature improvement can make the old inverse-index correction
+negative. One must not assume the old assertion $I>0$ remains true.
+Within a fixed positive-noise cell, the actual forms are
+\[
+ B(\lambda)=z+\frac{q}{a\lambda+G^2}+s\lambda-t,\qquad
+ I_{\rm new}(\lambda)=A_0+\frac{A_1}{\lambda},
+ \quad q\ge0,\ a>0,\ A_1\ge0.
+\]
+Only the curvature contribution to $A_0$ decreases. Put
+$I_+(\lambda)=\max(0,I_{\rm new}(\lambda))$. For $n\ge N$,
+\[
+ mB(\lambda)+\frac{I_{\rm new}(\lambda)}n
+ \le mB(\lambda)+\frac{I_+(\lambda)}N.
+\]
+Both $B$ and the right-hand expression are convex for $\lambda>0$,
+including a possible interior zero-clamp kink, since $m>0$.
+Endpoint checks thus cover the closed interval. At an accepted old endpoint,
+\[
+ I_{\rm new}\le I_{\rm old},\ I_{\rm old}>0
+ \quad\Longrightarrow\quad 0\le I_+\le I_{\rm old}.
+\]
+The original strict target $mB+I_{\rm old}/N<-1/1000$ is preserved.
+The separate $B<0$ gate remains necessary to use the mass lower bound.
+
+This is conditional transport from an accepted old cell, not a full replay
+or a suppression of an old assertion. A new implementation replaces 64
+candidate values by at most three per curvature cache miss. All marked-tail,
+normalization, mass, joint-resource and other comparison work remains.
+
+\section{Retaining the score-excess charge}
+Let $N=42$, $c=\CE$, $C\ge c$ be the actual score,
+$\rho=E|X|^3\ge1$, and $\kappa=997/15000$. Retain the source phase resource
+\begin{equation}\label{resource}
+ n(C-c)\rho+\kappa nD+n^{3/2}L\le\mathcal B(H),\qquad L\ge0,
+\end{equation}
+with its original same-law geometry, support, signed phase, concentration,
+moment and deleted-score hypotheses. In particular the conserved phase
+curvature is not charged twice.
+
+For each of two acquired moment corners $j$ and each phase sign, its
+quadratic upper envelope is
+\[
+ A_j(C)+F_{j,\pm}(C)|H|-Q_j(C)|H|^2.
+\]
+Here $A_j,Q_j$ are affine in $C$, and each signed $F$ is a finite maximum
+of affine functions plus a score-independent slope. On the endpoint-score
+interval $[C_0,C_1]$, its chord $\widehat F$ majorizes $F$.
+The supremum of these chord quadratics is
+\[
+ G(C)=\max_j\left\{A_j(C)+
+ \frac{\max(0,\widehat F_{j,+}(C),\widehat F_{j,-}(C))^2}{4Q_j(C)}
+ \right\}.
+\]
+Positive endpoint $Q_j$ gives positivity throughout. As a supremum of
+affine functions of $C$ indexed by $j$, sign and $|H|\ge0$, $G$ is convex.
+
+\begin{lemma}[Two-interval score charge]\label{charge}
+Suppose $C_0<c<\chi<C_1$ and the actual score is at most $C_1$.
+Then \eqref{resource} implies
+\[
+ \kappa nD\le
+ B_*=\max\{G(C_0),G(\chi),G(C_1)-N(C_1-\chi)\}.
+\]
+\end{lemma}
+\begin{proof}
+For actual $C\in[c,\chi]$, discard its nonnegative excess charge and
+bound $G(C)$ by the endpoints of the larger formal interval $[C_0,\chi]$.
+For $C\in[\chi,C_1]$,
+$n(C-c)\rho\ge N(C-\chi)$, using only $\rho\ge1$.
+The convex function $G(C)-N(C-\chi)$ is bounded above by its endpoint
+values. Take the maximum. This includes $C=c$ without assigning a
+positive charge at equality.
+\end{proof}
+
+For LEFT, $C_0=.4095$, $C_1=.4226$ and $\chi=.40974$.
+Exact arithmetic on all 45 rows gives $B_*=G(\chi)$.
+For completeness, with
+$s_k(x)=\sum_{i=0}^{k-1}(-1)^ix^{2i+1}/(2i+1)$, the alternating-series
+bounds and Machin's tangent-addition identity give
+\[
+ 16s_6(1/5)-4s_1(1/239)<\pi
+ <16s_5(1/5)-4s_2(1/239).
+\]
+Together with $3.162277660<\sqrt{10}<3.162277661$ and
+$c^2=(19+6\sqrt{10})/(72\pi)$ these prove $C_0<c<\chi$ using rationals.
+
+\subsection{Keep one joint residual}
+The old weighted bound is $nD\le Nd_{\rm old}$; define
+\[
+ d_{\rm new}=\min\{d_{\rm old},B_*/(\kappa N)\}.
+\]
+This is a bound on $nD$, not a bare bound on $D$ subsequently rescaled.
+Retain the acquired geometry $\Theta,A,B$ and closed probability panel
+$[l,u]$. Write $s_l=3.162277660$, $s_u=3.162277661$, and set
+\begin{align*}
+ v_*&=\max_{p\in[l,u]}p(1-p),\\
+ \delta_*&=\max\{0,(4-s_u)/2-u,\ l-(4-s_l)/2\},\\
+ b_*&=(6+2s_l)
+   \frac{\sqrt{(1-\Theta)^3}_{\,\rm lower}}
+        {\sqrt{v_*}_{\,\rm upper}}\,\delta_*^2,\\
+ K&=\min\{3(s_l+1)B,\ 3(s_l+3)A\}>0,\qquad
+ r=d_{\rm new}-b_* .
+\end{align*}
+The retained same-law inequality is
+\[
+ nD\ge Nb_*+6N(1-\Theta)(A+B)d_{\rm in}
+                 +\frac{K(1-\Theta)}{v_*}\lambda.
+\]
+If $r<0$, the row is impossible. If $r>0$, put
+\[
+ \Lambda_{\rm new}=\frac{Nv_*r}{K(1-\Theta)},\qquad
+ d_{{\rm new,in}}=\frac{r}{6(1-\Theta)(A+B)}.
+\]
+Then the \emph{single} residual gives
+\[
+ \frac{d_{\rm in}}{d_{{\rm new,in}}}
+       +\frac{\lambda}{\Lambda_{\rm new}}\le1.
+\]
+It is not spent independently on noise and inward displacement. No tested
+row has $r=0$; that case would require a separate zero-noise join.
+
+CENTRAL exports upward-rounded $A,F$ and downward-rounded $Q$, and only an
+outward raw score quantity. Its source rounding contract gives
+$\mathrm{raw}_{\rm exact}\in[\mathrm{raw}_{\rm out}-2\cdot10^{-6},
+\mathrm{raw}_{\rm out}]$. Accordingly its high score endpoint belongs to
+\[
+ [\,\min(.4247,\chi+(\mathrm{raw}_{\rm out}-2\cdot10^{-6})/42),
+    \min(.4247,\chi+\mathrm{raw}_{\rm out}/42)\,].
+\]
+Enclose the chord weight over this interval; use upper $A,F$, lower $Q$,
+and the lower high-score endpoint in the subtraction in
+Lemma~\ref{charge}. This gives valid outward budgets for all 47 central rows.
+
+\subsection{Exact removable sectors}
+The following decimal ceilings are rounded upwards from exact fractions.
+Rows are zero-based. The full 92-row scan establishes all newly crossed
+thresholds among $.05,.08,.10,.12$.
+\begin{center}
+\begin{tabular}{@{}llp{69mm}@{}}
+\toprule
+Row & New conclusion & Consequence after acquisition\\
+\midrule
+LEFT 0 & $r<-.0003$ & Entire final row excluded; TINY comparison unnecessary.\\
+LEFT 5 & $\lambda\le.049944478$ & MID domain above $.05$ empty.\\
+LEFT 8 & $\lambda\le.077273055$ & Both signed LOW producers above $.08$ unnecessary.\\
+LEFT 10 & $\lambda\le.094055578$ & Domain above $.10$ empty; two profile calls on $[.10,.12]$ unnecessary.\\
+LEFT 13 & $\lambda\le.117287323$ & Domain above $.12$ empty; two profile calls on $[.12,.30]$ unnecessary.\\
+CENTRAL 28 & $\lambda\le.099809552$ & Comparison sector above $.10$ empty; profile already inherited.\\
+\bottomrule
+\end{tabular}
+\end{center}
+Restriction of the old complete cover to these smaller same-law domains
+preserves signs, nearest counts, closed phase seams and probability
+endpoints. Each removed closed noise band has its lower endpoint strictly
+above the new ceiling. The separate $\lambda=0$ Bernoulli theorem remains.
+LEFT 6, 9 and 14 and CENTRAL 38 still exceed their relevant thresholds;
+this method does not justify deleting them.
+
+Thus a newly named upper-module contract could use 150 LOW producers
+(78 CENTRAL, 72 LEFT), with 19 native obligations still retained. The
+candidate task count becomes 169, before new joins. This is not a count
+for the whole repository or a measured runtime saving. In particular,
+row 0 is excluded only after its final resources have been acquired:
+none of its acquisition or confinement ancestors is removed.
+
+\section{One-pass protocol and compatibility boundary}
+The old selected plan evaluates 152 LOW configurations in producers and
+evaluates them again in binders. The separately named prototype
+\texttt{onepass\_low.py} retains the original 152 configurations, source
+pins, serialized rows, index hashes, coverage and nine binder controls per
+family. It owns fresh evaluator outputs in memory, runs the original
+non-replay binder validations, and compares read-back bytes and summaries
+to those fresh outputs. It does not accept user-supplied rows or receipts
+as a replacement for fresh evaluation.
+
+Synthetic fixtures using the small original binder bodies produce identical
+legacy rows, indices and summaries with 152 rather than 304 evaluator calls;
+14 further rejection controls pass. The native source-loading and full
+arithmetic path has not been executed, so this is protocol evidence, not
+a production acceptance result.
+
+The curvature formula and the tighter resources change numerical outputs
+or the selected labels. They therefore do \emph{not} satisfy the prototype's
+old output/index contract. Combining the three changes requires a new,
+complete contract and independent review. Their potential savings must not
+be multiplied into an unsupported overall speedup.
+
+\section{Evidence and remaining obligations}
+The component reports and \texttt{runs/reduction2-20261027/} separate
+mathematical and execution status. The support checker supplies exact
+three-case inequalities, all 65 source bindings and negative controls.
+The curvature checker tests 3,648 calls on the actual manifest grids,
+with 62,942 exact point diagnostics; these finite checks supplement the
+continuous proof, not replace it. Its first workload count used defaults
+and was corrected using actual producer settings, preserving the old run.
+The resource checker reconstructs both old LEFT intercepts on all 45 rows,
+then calculates 92 outward consequences with 12 rejection controls.
+
+Independent reviews use separate worktrees and disclose construction roles.
+Their reports contain independent support algebra, curvature adversarial
+checks, alternative outward resource arithmetic, and the root's protocol
+review. Review agreement is not an additional mathematical premise.
+
+The genuine base provider, equality-compatible attainment, same-law
+contact and moment analysis, strict confinement, Fourier bounds, remaining
+local acceptances, zero-noise Bernoulli input, lower approximation and
+complete composition contract remain obligations. No full LOCAL42,
+whole-proof PASS, or proof of the conjecture is asserted here.
+\end{document}

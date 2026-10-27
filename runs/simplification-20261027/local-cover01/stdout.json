@@ -1,0 +1,93 @@
+{
+  "all_law_provider": false,
+  "candidate_bypassed_native": [
+    "61.native.44.entry.accept4044_01",
+    "61.native.44.entry.accept41_01",
+    "61.native.44.entry.accept4248_01",
+    "61.native.44.entry.support4044_01",
+    "61.native.44.entry.support41_01",
+    "61.native.44.entry.support4248_01",
+    "61.native.43.anchor_support01",
+    "61.native.43.anchor_accept01",
+    "61.native.43.initial_support01",
+    "61.native.43.scalar01",
+    "61.native.43.left_fixed01",
+    "61.native.43.central_fixed01"
+  ],
+  "candidate_kept_native": [
+    "61.native.44.acquisition.local42_initial_support01",
+    "61.native.44.acquisition.initial42_accept02",
+    "61.native.44.acquisition.central42_accept02",
+    "61.native.44.acquisition.central42_confinement_accept01",
+    "61.native.44.acquisition.central42_profiles_accept01",
+    "61.native.44.acquisition.central42_interface01",
+    "61.native.44.acquisition.central42_profile_interface01",
+    "61.native.44.acquisition.upper42_accept01",
+    "61.native.44.local.central42_v2_tiny_accept01",
+    "61.native.44.local.central42_v2_mid_phase_accept02",
+    "61.native.44.local.central42_low_fresh_replay01",
+    "61.native.44.local.left42_tiny_actual_accept01",
+    "61.native.44.entry.harmonic_interpolation01",
+    "61.native.44.local.left42_source_bind01",
+    "61.native.44.local.left42_mid_exact01",
+    "61.native.44.local.left42_low_accept01",
+    "61.native.44.package_audit.left42_accept02",
+    "61.native.44.package_audit.left42_confinement_accept01",
+    "61.native.44.package_audit.left42_profiles_accept01"
+  ],
+  "finite42": [
+    {
+      "first_low_index": 0,
+      "last_low_index": 38,
+      "low_rows": 78,
+      "maximum_noise": "1777/10000",
+      "partition_checks": 7925,
+      "probability_rows": 47,
+      "side": "central"
+    },
+    {
+      "first_low_index": 8,
+      "last_low_index": 44,
+      "low_rows": 74,
+      "maximum_noise": "231/1250",
+      "partition_checks": 6139,
+      "probability_rows": 45,
+      "side": "left"
+    }
+  ],
+  "full_proof_pass": false,
+  "mathematical_status": "Conditional finite rectangle cover; no acquired-law or score proof",
+  "missing_reference_low_families": [
+    "central42_v2",
+    "left42_final"
+  ],
+  "native_arithmetic_executed": false,
+  "negative_controls": [
+    "missing_positive_phase",
+    "noise_gap",
+    "missing_upper_endpoint"
+  ],
+  "public_tasks": 240,
+  "source_hashes": {
+    "finite61/finite61_batch.py": "083719edb1ef05aac45a2380b94364591a06667dac0d5019f1886d54b23d336a",
+    "finite61/finite61_worker.py": "15e4d3d14dc4e8323ac561e0e65f788ff1268110c26bff6306edc5febf93234f",
+    "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2/bind_low42.py": "37d902cf45ce826a4fcd97aa9674790f4c16fa6be8ad6c91ba7d6960e6e78f5b",
+    "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2/central42_contract.py": "de30acd375d9d53d6a7068cd4b5397da6c775c21be29aca2e5c6b5da5f65a39f",
+    "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2/central42_kernel.py": "9dc0754fe2dd4f2f7057247d3d62f3b71472c65a49d46f67d35fb0d66e3f8673",
+    "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2/mid42_contract.py": "032b6c479f33f4bfe5e4ba9ea991ea2ba75ac026ed4d2123c6f86022808c0b8d",
+    "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2/new_central42_targets.json": "c281ad46d97c0c5054609a88727c079e509fa1e07837bb856d470d7e2171f1c0",
+    "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final/actual_float_targets.json": "9244aee2e0eef320915fb41d1ac3fccaaf1300c25ca686f361602a251d8ec563",
+    "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final/bind_low42.py": "b21670bda62bcc2a97dad1f58a4e89eaf4e3e0907ba1b5de192f4c2f1617ec3c",
+    "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final/central42_contract.py": "10868c085cf69e6a0b1db01b6bcf638e2a13863db088bc966754ae44c22e2167",
+    "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final/central42_kernel.py": "d025529aa2690c3cfc0f1c34a6af385d6fa69db8e069543057f29475cbb133c3",
+    "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final/mid42_contract.py": "e3ff07f66e35a24028a4d7136cb4b36149646da1046efbd48541da918cdd4956"
+  },
+  "source_manifest_sha256": "c8d6228d6a1abd0b25a2f69ed35ae78f1e719a58e27e4fedf5af28e942469cdf",
+  "status": "PASS_STRUCTURAL_COVER_ONLY",
+  "unresolved": [
+    "all-index acquisition including support lifts",
+    "explicit N42 confinement theorem scope",
+    "all required current numerical acceptance receipts",
+    "new source-bound all-index composition"
+  ]
+}

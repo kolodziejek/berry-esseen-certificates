@@ -1,0 +1,140 @@
+{
+  "status": "PASS_ONEPASS_PROTOCOL_FIXTURES_ONLY",
+  "native_low_arithmetic_executed": false,
+  "unchanged_binder_functions_executed_on_synthetic_data": true,
+  "full_proof_pass": false,
+  "inventory": {
+    "status": "SOURCE_INVENTORY_ONLY",
+    "families": [
+      {
+        "family": "central42_v2",
+        "rows": 78,
+        "source_pins": {
+          "tiny42_normalization.py": "3650f39f618def7615d8be20ce8b9efd28e16202102fb8fa76dd8687deff4a6c",
+          "central42_contract.py": "de30acd375d9d53d6a7068cd4b5397da6c775c21be29aca2e5c6b5da5f65a39f",
+          "central42_kernel.py": "9dc0754fe2dd4f2f7057247d3d62f3b71472c65a49d46f67d35fb0d66e3f8673",
+          "bind_low42.py": "37d902cf45ce826a4fcd97aa9674790f4c16fa6be8ad6c91ba7d6960e6e78f5b",
+          "new_central42_targets.json": "c281ad46d97c0c5054609a88727c079e509fa1e07837bb856d470d7e2171f1c0"
+        },
+        "expected_index_sha256": "a02638ae22a0efbcb5dd1a8e1e9b233fd1f957c8fc46ba32aef2270cc874519e",
+        "recorded_strict_gates": 19842356
+      },
+      {
+        "family": "left42_final",
+        "rows": 74,
+        "source_pins": {
+          "tiny42_normalization.py": "3650f39f618def7615d8be20ce8b9efd28e16202102fb8fa76dd8687deff4a6c",
+          "central42_contract.py": "10868c085cf69e6a0b1db01b6bcf638e2a13863db088bc966754ae44c22e2167",
+          "central42_kernel.py": "d025529aa2690c3cfc0f1c34a6af385d6fa69db8e069543057f29475cbb133c3",
+          "bind_low42.py": "b21670bda62bcc2a97dad1f58a4e89eaf4e3e0907ba1b5de192f4c2f1617ec3c",
+          "actual_float_targets.json": "9244aee2e0eef320915fb41d1ac3fccaaf1300c25ca686f361602a251d8ec563"
+        },
+        "expected_index_sha256": "aca7d7ac16a43a35750ddb173d5a30e169f7d80f61d68472e46934f10835cd52",
+        "recorded_strict_gates": 3671330
+      }
+    ],
+    "native_arithmetic_executed": false,
+    "full_proof_pass": false
+  },
+  "families": [
+    {
+      "family": "central42_v2",
+      "legacy_fixture_evaluations": 156,
+      "onepass_fixture_evaluations": 78,
+      "saved_fixture_evaluations": 78,
+      "all_row_bytes_identical": true,
+      "index_bytes_identical": true,
+      "unchanged_binder_controls": [
+        "missing",
+        "duplicate",
+        "reordered",
+        "boolean_index",
+        "boolean_sign",
+        "extra_scope",
+        "path_traversal",
+        "duplicate_JSON_key",
+        "corrupted_row_hash"
+      ],
+      "empty_left_fixture_included": false
+    },
+    {
+      "family": "left42_final",
+      "legacy_fixture_evaluations": 148,
+      "onepass_fixture_evaluations": 74,
+      "saved_fixture_evaluations": 74,
+      "all_row_bytes_identical": true,
+      "index_bytes_identical": true,
+      "unchanged_binder_controls": [
+        "missing",
+        "duplicate",
+        "reordered",
+        "boolean_index",
+        "boolean_sign",
+        "extra_scope",
+        "path_traversal",
+        "duplicate_JSON_key",
+        "corrupted_row_hash"
+      ],
+      "empty_left_fixture_included": true
+    }
+  ],
+  "additional_rejections": [
+    {
+      "name": "mutated_configuration",
+      "reason": "kernel mutated input configuration"
+    },
+    {
+      "name": "wrong_contract",
+      "reason": "original frozen index hash"
+    },
+    {
+      "name": "nonfinite_output",
+      "reason": "Out of range float values are not JSON compliant: nan"
+    },
+    {
+      "name": "partial_exception",
+      "reason": "intentional synthetic gate failure"
+    },
+    {
+      "name": "postcheck_row_corruption",
+      "reason": "whole output still equals the result computed in this invocation"
+    },
+    {
+      "name": "postcheck_index_corruption",
+      "reason": "index unchanged"
+    },
+    {
+      "name": "lost_control",
+      "reason": "all original binder negative controls"
+    },
+    {
+      "name": "changed_source",
+      "reason": "fixture binder source changed"
+    },
+    {
+      "name": "wrong_index_pin",
+      "reason": "original frozen index hash"
+    },
+    {
+      "name": "wrong_summary",
+      "reason": "all original numerical summary fields"
+    },
+    {
+      "name": "fixture_cannot_meet_native_index",
+      "reason": "original frozen index hash"
+    },
+    {
+      "name": "missing_row",
+      "reason": "original frozen index hash"
+    },
+    {
+      "name": "supplied_receipt",
+      "reason": "native entry has no receipt input"
+    },
+    {
+      "name": "changed_archive",
+      "reason": "fixed archive hash"
+    }
+  ],
+  "native_execution_and_production_integration": "NOT RUN / NOT ACCEPTED"
+}

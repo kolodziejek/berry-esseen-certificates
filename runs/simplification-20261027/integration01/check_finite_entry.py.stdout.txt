@@ -1,0 +1,150 @@
+{
+  "status": "PASS_BOUNDED_FINITE_ENTRY_SCALAR_AND_INVENTORY",
+  "mathematical_scope": "Exact scalar arithmetic and static source identity only; conditional theorem proved in prose; native/local predicates not executed or certified.",
+  "scalar": {
+    "n_floor": 43,
+    "sqrt_upper": "253/250",
+    "square_surplus": 878,
+    "excess_upper": "102469/350000",
+    "excess_margin": "2531/350000",
+    "own_upper": "1793/4300"
+  },
+  "scalar42": {
+    "n_floor": 42,
+    "sqrt_upper": "81/80",
+    "square_surplus": 201,
+    "excess_upper": "3003/10250",
+    "excess_margin": "36/5125",
+    "own_upper": "73/175"
+  },
+  "negative_controls": [
+    "same sqrt bound at42",
+    "old1.011 sqrt bound at43",
+    "this coarse bound proves .29",
+    "support window extends49"
+  ],
+  "source_manifest_sha256": "c8d6228d6a1abd0b25a2f69ed35ae78f1e719a58e27e4fedf5af28e942469cdf",
+  "sources": [
+    {
+      "path": "work/toward40_20261007/audit43/capsule/proofs/cutoff44.tex",
+      "sha256": "41af93935e4ebe64e38670bab222b1f8447b5dd7d95b3dc205ffc97236114f2b",
+      "lines": 332
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/check_local42_support.py",
+      "sha256": "343046eaf0a3e6b2e140644cee19b7764d76b4171b844eaac27fb1a288b12d2e",
+      "lines": 19
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/heat_support50.py",
+      "sha256": "650d7f3617775102fe92977605dfda5fb68a11e0ad738eb799aab77bc4a79e18",
+      "lines": 121
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/fifth_heat50.py",
+      "sha256": "09a6e27ef42847cef0ac258504546eaef3a3035e83171143f1c2fd848736ac6c",
+      "lines": 66
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/accept_initial42.py",
+      "sha256": "aa759c74fbd9ad39618264ef51b961f13c7833faa77a7f7b33309c27a7cee032",
+      "lines": 89
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/local_signed_core.py",
+      "sha256": "f0c2df790b794413e7fd08c4f3fc20f79c15c27a6456c8eae5013b96eb093c11",
+      "lines": 153
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/central42_acquisition_core.py",
+      "sha256": "edd75b67061e484ba62e0266101c9fe3f98af8d15ac26218a259c630261b37ce",
+      "lines": 78
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/panel_exterior.py",
+      "sha256": "98894be48c3523c6f2e8d9f25d45d008ef1bc361f6ca9c00355c16939c86f0b7",
+      "lines": 119
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/central42_confinement_core.py",
+      "sha256": "6c70e17dd81811d16f4bcc267db2a5a3aaac39f95552c065e93411ef79a79c8c",
+      "lines": 65
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/central42_profile_core.py",
+      "sha256": "b015459decb4dc7d17423ee4361fe8f105706fafa9b08568bd3f3953dafeecb3",
+      "lines": 44
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/package_audit/left42_exact/accept_acquisition.py",
+      "sha256": "a565247f6587f3bb07dd67ef2100d08f70aebbe7543937f1ab98f8d09cf31eb6",
+      "lines": 109
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/package_audit/left42_exact/panel_exterior42.py",
+      "sha256": "98dbde39a9eb1464293eba2949d74f010313b7ea6abe5bdaef96174a988c6942",
+      "lines": 119
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/package_audit/left42_confinement/confinement_core.py",
+      "sha256": "c42762298dbb32dacf8c10e777c26c24dc38616f46c702679257aeb2a3d289af",
+      "lines": 46
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2/central42_contract.py",
+      "sha256": "de30acd375d9d53d6a7068cd4b5397da6c775c21be29aca2e5c6b5da5f65a39f",
+      "lines": 31
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final/central42_contract.py",
+      "sha256": "10868c085cf69e6a0b1db01b6bcf638e2a13863db088bc966754ae44c22e2167",
+      "lines": 31
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/entry/check_support42_48.py",
+      "sha256": "a51a70f459a4f3cd1fb5d2cbd561baa2cd6fdfadd30aa132222dbd04dbc4ca7d",
+      "lines": 19
+    }
+  ],
+  "retained_native": [
+    "44.acquisition/local42_initial_support01",
+    "44.acquisition/initial42_accept02",
+    "44.acquisition/central42_accept02",
+    "44.acquisition/central42_confinement_accept01",
+    "44.acquisition/central42_profiles_accept01",
+    "44.acquisition/central42_interface01",
+    "44.acquisition/central42_profile_interface01",
+    "44.acquisition/upper42_accept01",
+    "44.local/central42_v2_tiny_accept01",
+    "44.local/central42_v2_mid_phase_accept02",
+    "44.local/central42_low_fresh_replay01",
+    "44.local/left42_tiny_actual_accept01",
+    "44.entry/harmonic_interpolation01",
+    "44.local/left42_source_bind01",
+    "44.local/left42_mid_exact01",
+    "44.local/left42_low_accept01",
+    "44.package_audit/left42_accept02",
+    "44.package_audit/left42_confinement_accept01",
+    "44.package_audit/left42_profiles_accept01"
+  ],
+  "bypassed_native_in_new_composition": [
+    "44.entry/accept4044_01",
+    "44.entry/accept41_01",
+    "44.entry/accept4248_01",
+    "44.entry/support4044_01",
+    "44.entry/support41_01",
+    "44.entry/support4248_01",
+    "43.anchor_support01",
+    "43.anchor_accept01",
+    "43.initial_support01",
+    "43.scalar01",
+    "43.left_fixed01",
+    "43.central_fixed01"
+  ],
+  "retained_low": {
+    "central42_v2": 78,
+    "left42_final": 74,
+    "total": 152
+  },
+  "native_programs_executed": 0
+}

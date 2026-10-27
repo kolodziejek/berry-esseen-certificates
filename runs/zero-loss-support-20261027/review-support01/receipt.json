@@ -1,0 +1,46 @@
+{
+  "run_id": "review-support01",
+  "git_head": "341c1e3f77806a4aaa178051f6f8c80c13bd63ac",
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/review-support",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "python_executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+  "records": [
+    {
+      "label": "submitted",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/review-support/mathematics/simplification/2026-10-27/check_support_lift.py"
+      ],
+      "started_utc": "2026-10-27T09:52:10.558296+00:00",
+      "elapsed_seconds": 0.369209417,
+      "returncode": 0,
+      "script_sha256": "3cf1ec45f3abc69c308bc9819493d09fd1851c91d67f1ea72384d260e3edf59e",
+      "stdout_sha256": "e91ed23c36a90172ae6098f60e5962ba3f40b02a5b9593a5984273a259d3a87f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "independent",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/review-support/runs/zero-loss-support-20261027/review-support01/independent_check.py"
+      ],
+      "started_utc": "2026-10-27T09:52:10.928001+00:00",
+      "elapsed_seconds": 0.326861334,
+      "returncode": 0,
+      "script_sha256": "928ef9a3ebd98b424db7f9d2f80b9aa1de093a193d258ea6567e402399c80c3c",
+      "stdout_sha256": "c5d8edea840e2cb5b94e85b0a2c914f1c47afca699d08a009c9a2ada1e80f8b0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "inputs": {
+    "mathematics/simplification/2026-10-27/zero-loss-support.md": "12a659c019bd1a95f09199aa57442da75f7b34b55aab6009bf243f0deaf19282",
+    "mathematics/simplification/2026-10-27/uniform42.md": "bf4d9c4ea5965efd992e955fd747fd3da2a2de924876232b402eb949d7daa427",
+    "paper/analytic-supplement.txt": "dad4a3558b01bda4acfdfc9120a50ecbcd7a6f2389886ba3ce72a6602ec39018",
+    "verification/finite-tail/sources/backend.zip": "43b606138f826b47e3f174957088285349aebc82a928627e9e66fe370471be52"
+  },
+  "native_programs_executed": 0
+}

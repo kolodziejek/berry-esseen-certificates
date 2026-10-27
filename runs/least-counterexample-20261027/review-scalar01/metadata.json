@@ -1,0 +1,35 @@
+{
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/review-scalar",
+  "diagnostic_sha256": "414dd31bad6503ee0ebb1e9dac83b65303da0a5b4ac3ae0514cb432fa73eaecd",
+  "inherited_native_checkers_run": false,
+  "input_sha256": {
+    "mathematics/audit/2026-10-27/check_scalar.py": "74b1fab6630ae1393f5389085fc33371eb2ef12a63364aa0930dd7a4640b86df",
+    "mathematics/audit/2026-10-27/scalar-proof/main.tex": "f4173c5ef1a0beed109f048c36766cf9eb6f9db46a7ca89370f50fa061033e3a",
+    "mathematics/audit/2026-10-27/scalar-review.md": "ce48a86bf3822f55dc6220bc43c8b8af7b9c6da65136fbdf36067fe2c43df85d",
+    "verification/finite-tail/sources/BE_cutoff49_20260930.zip": "ecdb9acca0db29efc9fe2bf496c0bcc61b4881aecdcbc91a4eb6ad49b920c72e"
+  },
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "results": [
+    {
+      "argv": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/review-scalar/mathematics/audit/2026-10-27/check_scalar.py"
+      ],
+      "name": "scalar-checker",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/review-scalar/runs/least-counterexample-20261027/review-scalar01/independent_diagnostics.py"
+      ],
+      "name": "independent-diagnostics",
+      "returncode": 0
+    }
+  ]
+}

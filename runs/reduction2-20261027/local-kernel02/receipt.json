@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/Users/bkolodziejek/miniforge3/bin/python",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/local-kernel/mathematics/reduction2/2026-10-27/check_local_curvature.py",
+    "--archive",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/local-kernel/verification/finite-tail/sources/backend.zip"
+  ],
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/local-kernel",
+  "started_utc": "2026-10-27T10:32:33.728192+00:00",
+  "elapsed_seconds": 2.597033709054813,
+  "return_code": 0,
+  "python": "3.12.12 | packaged by conda-forge | (main, Oct 22 2025, 23:34:53) [Clang 19.1.7 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "optimized": 0,
+  "input_sha256": {
+    "mathematics/reduction2/2026-10-27/check_local_curvature.py": "3e3a35c30af20201fc5b3143f40f1439c235b7bfd4dd702f4fa8348356ff70dc",
+    "verification/finite-tail/sources/backend.zip": "43b606138f826b47e3f174957088285349aebc82a928627e9e66fe370471be52"
+  },
+  "stdout_sha256": "f50972b9da86850f19e5b8540eb7f6823cff4f02cd4468848241f84582a6184d",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "Actual manifest-selected grid diagnostic, superseding workload interpretation of run01; no archived module imported or executed."
+}

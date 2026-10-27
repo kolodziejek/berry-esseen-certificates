@@ -1,22 +1,40 @@
 # Dependency checkpoint — 27 October 2026
 
-Proposed conditional route:
+Proposed upper-index route, retaining exact hypotheses:
 
-    genuine weak finite base through46 (conservatively through48)
-      + support-free smoothing
-      -> first contrary index has d_n=q_n=0, n(C_n-CE)<.3,
-         own cap .4247 and both deleted caps .4253
-      + attained same-law contact
-      + full support / INITIAL / signed acquisition / confinement predicates
-      + complete LOCAL47 phase-noise cover and finite Bernoulli theorem
-      -> weak global upper bound (and separately strict tail from47)
-      + independent lower approximation -> sharp global constant.
+    genuine BASE41 + support-free smoothing + equality-compatible attainment
+      -> least n>=42 with C_n>=C_E: zero predecessor decrement,
+         n(C_n-C_E)<3003/10250, own cap73/175, both deleted caps<.4253
+    zero loss + attained same-law contact + actual ordered moment resources
+      + Gaussian derivative norms through5 + direct derivative bound
+      -> elementary three-case support for all65 calls at actual n>=42
+    complete original resources/confinement + signed phase quadratic envelope
+      + retained score-excess charge + original same-law joint geometry
+      -> tighter coherent inward/noise intercepts, specified empty sectors
+    full whole-count comparison + original LOW gates
+      -> exact3-candidate curvature + zero-clamp transport of strict target
+    surviving TINY/MID/150LOW + zero-noise Bernoulli + new complete join
+      -> conditional LOCAL42; first failure then gives strict tail42.
 
-Exact source/interface edges: `mathematics/audit/2026-10-27/AUDIT.md` and
-`acquisition-review.md`. Execution/consumer edges: `computations-review.md`.
+Read mathematics/reduction2/2026-10-27/{elementary-support,local-kernel,
+tighter-resources}.md for exact statements, source hashes/lines, and edge
+hypotheses. Earlier uniform42.md carries all-index interface obligations.
+No truth of actual acquired resources follows from static JSON/hash binding.
 
-Retained finite43–48 support acquisition consumes coarse .7/j caps at45..48.
-Thus bypassing strong46/base49 does not remove the whole coarse ceiling branch.
-LOCAL47 still consumes corrected PREP/complement and later phase-domain gates.
-Current public final joins/full_pass remain incomplete. Any defect in a retained
-analytic or numerical input propagates to the proposed global composition.
+Removals for this NEW alternative support argument: old radial Bernstein,
+new14-group672-coefficient support positivity, fifth-order signed identity,
+fourth-derivative tangent and its domination gates. Contact, scale inequality,
+initial moment inequalities, actual acquisition and remaining local work stay.
+Resource pruning occurs only AFTER acquisition; no ancestor is removed.
+
+Candidate upper-module legacy count238->171->169, before new joins; final169
+is19 native+150 LOW. Four signed profile calls and TINY/MID sectors are internal
+work, not additional whole task savings. Current BASE41 provider closure and
+shared consumers remain unresolved; no whole-repository dead-code conclusion.
+
+Separate one-pass prototype: original152 fresh outputs + original pinned
+serialization/coverage/indices + binder controls -> same old output contract
+without duplicate evaluation. Changed curvature/resources/150 labels require
+a new contract; old byte pins intentionally reject them. Native path untested.
+Any defect in retained analytic/numerical premises propagates to all downstream
+claims. Global sharpness also requires the independent lower approximation.
