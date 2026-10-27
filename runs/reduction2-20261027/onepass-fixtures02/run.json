@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "-I",
+    "-B",
+    "-S",
+    "mathematics/reduction2/2026-10-27/onepass_low_test.py"
+  ],
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/onepass-low",
+  "python_version": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "started_utc": "2026-10-27T10:28:43.880563+00:00",
+  "finished_utc": "2026-10-27T10:28:44.674793+00:00",
+  "return_code": 0,
+  "starting_head": "42433b448d9389359e642a3384a949ffdd87b903",
+  "reference_baseline": "6346fc1b4432bc5982822aa696eb566ed9e1e1ee",
+  "input_sha256": {
+    "mathematics/reduction2/2026-10-27/onepass_low_test.py": "a1a15b59382b84c2beec38d2c7b40659fb641e03e164ea89d40a0848e46e973e",
+    "mathematics/reduction2/2026-10-27/onepass_low.py": "107b755a2abdb43f65f2db821789dc6b73f3090d03798e1e2a67659ec72c1cf9",
+    "verification/finite-tail/sources/backend.zip": "43b606138f826b47e3f174957088285349aebc82a928627e9e66fe370471be52"
+  },
+  "stdout_sha256": "c496aaa0006c7d1c987ddf0659e85b40edffc1d581353d9d3f9271e66ec2a038",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "Protocol fixtures: unchanged binder functions with fake contract/kernel. No original normalization, selection or LOW kernel execution. No native run-family invocation."
+}

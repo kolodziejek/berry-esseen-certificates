@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/onepass-low/mathematics/reduction2/2026-10-27/onepass_low_test.py", line 246, in <module>
+    main()
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/onepass-low/mathematics/reduction2/2026-10-27/onepass_low_test.py", line 215, in main
+    exercise(replacement or fixture, root / ('bad-%02d' % number), name)
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/onepass-low/mathematics/reduction2/2026-10-27/onepass_low_test.py", line 167, in exercise
+    result = adapter._one_pass(plan, directory, contract, kernel, binder, guard)
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/onepass-low/mathematics/reduction2/2026-10-27/onepass_low.py", line 197, in _one_pass
+    controls = binder.controls(parsed(raw_index))
+  File "/var/folders/yh/phr5l7rd0hsdn7g16s_hjf2r0000gn/T/be-onepass-fixtures-n42g53lh/bad-07/bind_low42.py", line 56, in controls
+TypeError: check() got an unexpected keyword argument 'load'
