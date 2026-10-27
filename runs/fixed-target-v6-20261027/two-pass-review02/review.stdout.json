@@ -1,0 +1,41 @@
+{
+  "name": "INDEPENDENT_TWO_PASS_REVIEW_V1",
+  "summaries": [
+    {
+      "pass_number": 1,
+      "max_raw": "66409450799/5000000000",
+      "max_resource": "54665305127/5000000000",
+      "max_defect": "39164138937/10000000000",
+      "max_weighted_nD": "411223458829/2500000000",
+      "actual_gap_cells": 23,
+      "min_gap_margin": "-20775474737/1600000000000"
+    },
+    {
+      "pass_number": 2,
+      "max_raw": "115164967977/10000000000",
+      "max_resource": "99790315907/10000000000",
+      "max_defect": "17873319227/5000000000",
+      "max_weighted_nD": "1501358815051/10000000000",
+      "actual_gap_cells": 24,
+      "min_gap_margin": "526024602543/1600000000000"
+    }
+  ],
+  "source_pins": {
+    "mathematics/fixed-target-v6/2026-10-27/signed-two-pass-check.py": "a2b9309998191c2d7e4477a969cd55ecb516440f56dfa3cf97df5ccddac1e76d",
+    "mathematics/fixed-target-v6/2026-10-27/signed-two-pass-proof/signed-two-pass.tex": "ce1ef706ccf4c134d194a1b13bee96ded0d296a629715e8d68cb8ef7a6fab074",
+    "runs/fixed-target-v6-20261027/signed-two-pass02/stdout.json": "c52122bea63beaed83de741a347863a39fb0faeaa34dec5dc4b2741a0a88594a",
+    "runs/fixed-target-v6-20261027/signed02/stdout.json": "3376557f83874f571ed1c7cfad10b82930e736427ba597b5c8ed76b3c46b1944",
+    "runs/fixed-target-v5-20261027/cell02/check.stdout.json": "7525713bd06a30b9c13693d01949d4f186890128eed3432771953ef9eafef082"
+  },
+  "rejected_controls": [
+    "missing cell",
+    "wrong pass order",
+    "raw replaced by resource",
+    "understated resource",
+    "false first-pass gap",
+    "altered signed curvature"
+  ],
+  "cell_passes": 48,
+  "endpoint_quadratics": 96,
+  "shared_checker_or_fourier_execution": false
+}

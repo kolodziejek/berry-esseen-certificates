@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/moment-coupling-v6/mathematics/fixed-target-v6/2026-10-27/two_pass_review_check.py", line 102, in <module>
+    if __name__=='__main__':main()
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/moment-coupling-v6/mathematics/fixed-target-v6/2026-10-27/two_pass_review_check.py", line 83, in main
+    for p,h in PINS.items():need(sha256(blobs[p]).hexdigest()==h,'source pin '+p)
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/moment-coupling-v6/mathematics/fixed-target-v6/2026-10-27/two_pass_review_check.py", line 17, in need
+    if not x:raise ValueError(s)
+ValueError: source pin mathematics/fixed-target-v6/2026-10-27/signed-two-pass-proof/signed-two-pass.tex
