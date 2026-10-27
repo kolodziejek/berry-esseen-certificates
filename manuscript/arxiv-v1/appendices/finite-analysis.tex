@@ -1,37 +1,49 @@
 % Analytic finite-index material; no standalone preamble.
 % Source: paper/analytic-supplement.txt S4, S6, A3--A18 at baseline 6346fc1.
-\section{Scope and inputs of the finite-index appendices}
+\section{Finite-index reductions and their inputs}
 \label{ms:finite:scope}
-The following arguments concern a single standardized iid marginal at a
-fixed actual index unless another scope is stated explicitly. We retain the
-supplied analytic derivations, but separate them from their finite acceptance
-conditions. In particular, none of the conditions below is a claim of a fresh
-numerical verification, a certified base through $41$, or a universal base
-reducer. The source-location and coverage ledger accompanying this appendix
-records the precise remaining obligations. Write $S_n=X_1+\cdots+X_n$ and
-$R_n(P)=\sqrt n\,\Delta_n(P)/\rho(P)$; $C_n$ denotes its supremum over
-standardized laws. Thus $R_n(P)$ and the notation $C_n(P)$ below are identical.
-The symbols $m$ and $h$ are local coordinates: in count calculations $m=\E X_+$,
-whereas in index-transfer statements $m$ denotes the actual integer index;
-those statements explicitly name their first absolute moment separately.
+The finite-index arguments use one standardized iid marginal at each actual
+index, with the notation $S_n=X_1+\cdots+X_n$ and
+$R_n(P)=\sqrt n\,\Delta_n(P)/\rho(P)$. The notation $C_n(P)$ below
+also denotes $R_n(P)$; $C_n$ is its supremum over standardized laws.
+The numerical conclusions are conditional on the stated certificate conditions.
+
+The first part develops the conditional-count bounds shared by several
+finite-index comparisons. The small-index reductions then proceed by a
+closed cubic dual at $n=1$ (Section~\ref{ms:finite:n1}), a rational tensor
+majorant at $n=2$ (Section~\ref{ms:finite:n2:section}), independence-null
+polynomials at $n=3$ (Section~\ref{ms:finite:n3:section}), a canonical
+reference law and physical Prawitz comparison at $n=4$
+(Section~\ref{ms:finite:n4all:section}), and a moment-domain cover with a
+gap-free count comparison at $n=5$ (Section~\ref{ms:finite:five:section}).
+The later sections supply signed moment and gap refinements, an exact phase
+helper for $n\in\{6,7,8,9\}$, a B1 sine interface for $n=26,\ldots,30$,
+and conditional resource transfers at floors $25$, $31$ and $40$.
+These tools retain their individual index domains; together they do not
+supply a complete cover of $6\le n\le41$. That coverage remains part of
+the finite-base condition in the main theorem.
+
+In count calculations $m=\E X_+$ and $h$ is the reciprocal span.
+In the later index-transfer section $m$ denotes the actual integer index,
+and the first positive mean is written $\mu$. The symmetrization section
+states its separate first-absolute-moment convention for $h$.
 
 \begin{assumption}[Analytic inputs and their scope]
 \label{ms:finite:inputs}
-When invoked, the following inputs must be available at the actual index and
-with the actual common marginal, signed branch, raw threshold and moments.
-Their statement here records dependencies and is not a proof of them.
+Each application requires the following inputs at its actual index, for the
+same marginal, signed branch, raw threshold and moments.
 \begin{enumerate}
 \item\label{ms:finite:input:cut49:global:attainment}
 \label{ms:finite:input:cut49:global:contact}
 \label{ms:finite:input:cut49:global:finitecaps}
 Global contrary-witness attainment, positive closed-edge orientation,
-contamination contact, and the stated numerical global caps. A maximizer in
-an artificially constrained parameter cell cannot substitute for this owner.
+contamination contact, and the stated global caps, for the unrestricted
+maximizing law.
 \item\label{ms:finite:input:cut49:support:theorem}
 The actual-index contact exclusion on both complete support rays and the
-whole threshold line, with every Taylor remainder and tail included. No
-finite-index favourable coefficient is silently replaced by a floor-index
-coefficient. The separate two- and three-index support proofs are given below.
+whole threshold line, with every Taylor remainder and tail included and
+favourable coefficients evaluated on their stated index domains. The separate
+two- and three-index support proofs are given below.
 \item\label{ms:finite:input:orig:thm:defect}
 The sharp moment-domain inequality
 $\rho^2(\gamma^2+4)\ge(\gamma^2+2)^2$, together with its stated moment
@@ -61,89 +73,68 @@ Directed rational enclosures of elementary constants, Gaussian functions and
 trigonometric functions, with analytic remainder bounds and their domain gates.
 \end{enumerate}
 \end{assumption}
-Cross-references to these inputs below identify the required item; they do not
-turn its source label or a historical success record into a mathematical
-premise already discharged. The corresponding arguments are located as follows. The attainment and
+The corresponding analytic arguments are located as follows. The attainment and
 contact proofs are in Section~\ref{ms:extremizers}; the external moment caps
 are in \eqref{ms:structural-classical}; and the sharp moment domain is proved
 in Appendix~\ref{ms:moment-domain}. The Prawitz construction, Fourier
 bounds, conserved identity and resource enclosure are in
 Appendices~\ref{ms:fourier:kernel} and~\ref{ms:fourier:afcore:sec:fourier},
 including \ref{ms:fourier:afcore:sec:conserved} and
-\ref{ms:fourier:rescore:re-enclosure}. Their numerical conditions and
-literal index restrictions remain in force. A composition must match
-those hypotheses to its actual use; an available argument at a larger
-index is not a substitute for a required smaller-index input.
+\ref{ms:fourier:rescore:re-enclosure}. Every application also retains the numerical conditions and index restrictions
+of the result it uses.
 
 \section{The conditional count comparison}
 \label{ms:finite:countcore:sec}
 
-This section proves the probability inequalities used after the support and
-resource reductions. The marginal is fixed throughout. No point in a moment
-relaxation is assumed to be the moment vector of a probability law.
+We develop the outgoing and incoming probability bounds used after support
+and resource acquisition, keeping the same marginal throughout.
 
 \subsection{One marginal, all conditional counts}
 
-Fix an integer \(n\ge2\). Let \(\E X=0\), \(\E X^2=1\), and
-\(\rho=\E|X|^3<\infty\). Put
+Fix $n\ge2$ and a standardized marginal with $\rho<\infty$. Use the sign coordinates of
+\eqref{ms:bernoulli-coordinates}: $p=\Pp(X>0)$, $q=1-p$, $v=pq$,
+$m=\E X_+=\E X_->0$, with zero atoms assigned to the nonpositive
+class. In the reciprocal-span notation,
 \[
- p=\Pp(X>0),\quad q=1-p,\quad v=pq,\quad
- m=\E X_+=\E X_->0,\quad h=v/m.
+ h=\ell^{-1}=v/m=\sqrt{v+s},\qquad I=B_0.
 \]
-Both \(p\) and \(q\) are positive. Assign a possible atom at zero to the
-nonpositive class, and write
+Thus the main representation becomes
 \begin{equation}
- I=\mathbf1_{\{X>0\}},\qquad hX=I-p+U,
- \qquad \E(U\mid I)=0.
+ hX=I-p+U,\qquad \E(U\mid I)=0.
  \label{ms:finite:countcore:representation}
 \end{equation}
-Write \(U_0,U_1\) for the two conditional laws and set
-\[
- w_i=\E U_i^2,\quad \mu_i=\E U_i^3,\quad
- s=qw_0+pw_1=h^2-v,\quad \lambda=ns.
-\]
-Higher conditional moments below are used only when the acquired support
-is bounded. If \(s>0\), put \(\alpha=pw_1/s\); then
-\[
- w_0=\frac{s(1-\alpha)}q,\qquad w_1=\frac{s\alpha}p,
- \qquad 0\le\alpha\le1.
-\]
-If \(s=0\), both conditional laws are zero and any \(\alpha\in[0,1]\)
-may be used without division by \(s\).
+Retain the same conditional laws $U_0,U_1$ and moments
+$w_i=\E U_i^2$, $\mu_i=\E U_i^3$. Their total noise is
+$s=qw_0+pw_1=h^2-v$ and $\lambda=ns$. If $s>0$, write
+$\alpha=pw_1/s\in[0,1]$, so that
+$w_0=s(1-\alpha)/q$ and $w_1=s\alpha/p$.
+At $s=0$ both conditional laws vanish and any $\alpha\in[0,1]$
+is allowed, without division by $s$. Higher moments below require the
+stated bounded-support hypotheses.
 
-For independent copies let \(K=\sum_{i=1}^n I_i\) and
-\(b_j(p)=\binom njp^jq^{n-j}\). Conditional on \(K=j\), the sum of
-the residuals has the law of
-\[
- W_j=U_{0,1}+\cdots+U_{0,n-j}+U_{1,1}+\cdots+U_{1,j},
-\]
-with all variables independent. Indeed, conditioning first on the whole
-sign vector gives independent conditional marginals; all sign vectors
-with the same count give the same sum law. In particular
+Use the conditional sums $W_j$ from \eqref{ms:count-identity}, and write
+$b_j(p)=\binom njp^jq^{n-j}$. Conditional independence gives
 \begin{equation}
  V_j:=\E W_j^2=(n-j)w_0+jw_1
  =\lambda\left(1+\frac{(j-np)(\alpha-p)}{npq}\right).
  \label{ms:finite:countcore:variance}
 \end{equation}
 
-\begin{lemma}[Closed count identity]
+\begin{lemma}[Closed count comparison]
 \label{ms:finite:countcore:countidentity}
 For \(z=np+hH=k+u\), with \(0\le k\le n\),
-\begin{align}
+\begin{equation}
  \Pp(S_n\le H)
- &=\sum_{j=0}^n b_j(p)\Pp(W_j\le k+u-j)\notag\\
- &\le F_{\mathrm{Bin}(n,p)}(k)-b_k(p)\Pp(W_k>u)
+ \le F_{\mathrm{Bin}(n,p)}(k)-b_k(p)\Pp(W_k>u)
        +\sum_{j>k}b_j(p)\Pp(W_j\le u-(j-k)).
  \label{ms:finite:countcore:countineq}
-\end{align}
+\end{equation}
 The outgoing event is strict and every incoming event is closed.
 \end{lemma}
 \begin{proof}
-Equation~\eqref{ms:finite:countcore:representation} gives
-\(hS_n=K-np+\sum U_i\). Condition on \(K\), retain the \(j=k\)
-term exactly, and replace the terms \(j<k\) by their full masses.
-The identity \(\Pp(W_k\le u)=1-\Pp(W_k>u)\) retains every atom
-on the event plane.
+In the exact signed identity \eqref{ms:count-difference}, discard the
+nonpositive outgoing terms with count $j<k$ and retain the $j=k$ term.
+The strict/closed conventions in that identity include every event-plane atom.
 \end{proof}
 
 All ensuing formulas hold on either probability half. On a closed interval
@@ -186,8 +177,8 @@ For the cubic bounds use respectively
 \((T+L)(R-T)\ge0\) by \(T^2\). If either endpoint is zero,
 centering forces \(T=0\); all corresponding moment terms vanish.
 
-Expanding the sign-conditioned powers in
-\eqref{ms:finite:countcore:representation} yields the exact identities
+For later substitutions, the identities \eqref{ms:conditional-moments}
+read as follows in reciprocal-span units:
 \begin{align}
  \rho h^3&=v(1-2v)+3v(w_0+w_1)-q\mu_0+p\mu_1,
        \label{ms:finite:countcore:rhoidentity}\\
@@ -197,10 +188,9 @@ Expanding the sign-conditioned powers in
  m=\frac v{\sqrt{v+s}},
        \label{ms:finite:countcore:betaidentity}
 \end{align}
-where \(\gamma=\E X^3\) and \(\beta=\E[X|X|]\). The sign of
-\(\mu_0\) in \eqref{ms:finite:countcore:rhoidentity} differs from its sign in
-\eqref{ms:finite:countcore:gammaidentity}. The first identity uses the actual
-physical sign restrictions, not an arbitrary mixture representation.
+Here $\gamma=\E X^3$ and $\beta=\E[X|X|]$; the differing signs
+of $\mu_0$ follow from the two actual sign classes. The expressions for
+$\beta$ and $m$ use $pw_1-qw_0=s(2\alpha-1)$ and $h^2=v+s$.
 
 These identities give necessary closed-domain contractions. For example,
 if \(m_-\le m\le m_+\), then
@@ -278,29 +268,16 @@ this optional floor is simply omitted.
 
 \subsection{The physical-defect halfplane}
 
-This refinement requires a genuine central gap \((-A,B)\) of the support
-of \(X\), with \(A,B>0\). Let
-\[
- \tau(t)=\E[X\mathbf1_{\{X\ge t\}}],\qquad
- J=\sum_{(c,d)}\tau_{c,d}(d-c)^2,\qquad
- D=(3+\sigma)\rho-\gamma-3J,\quad \sigma=\sqrt{10},
-\]
-where the sum runs over bounded complementary support intervals and
-\(\tau_{c,d}\) is the constant value on that interval. Define
-\[
- T_+=\E X_+^3-mB^2,\quad T_-=\E X_-^3-mA^2,
- \qquad R_+=\E X_+^2-mB,\quad R_-=\E X_-^2-mA.
-\]
-All four quantities are nonnegative. On a positive outer gap,
-\((d-c)^2\le2\int_c^d(t-B)\,dt\). Summation and Tonelli give
-\(J_o^+\le T_+-2BR_+\); the reflected inequality gives the negative
-part. Since the central contribution is \(m(A+B)^2\), expansion gives
+Assume compact support and a genuine central gap $(-A,B)$, with
+$A,B>0$. Use $\tau,J,D$ from \eqref{ms:physical-defect-definition},
+$\sigma=\sqrt{10}$, and the nonnegative residuals $T_\pm,R_\pm$ of
+Lemma~\ref{ms:physical-defect}. Its outer-gap estimates and the
+identity \eqref{ms:defect-decomposition} give
 \begin{equation}
  D\ge\sigma\rho-\gamma-6mAB+6BR_++6AR_-.
  \label{ms:finite:countcore:physicalD}
 \end{equation}
-Bounded support ensures convergence of these sums. This is the same
-physical \(D\) as in the resource argument, not a substitute moment defect.
+We now express this inequality in the common conditional cubic moments.
 
 Now \(A=(p-a_0)/h\), \(B=(q-a_1)/h\). Substitution in
 \eqref{ms:finite:countcore:physicalD}, followed by
@@ -859,8 +836,8 @@ verified, then for every standardized law $P$ with finite third absolute moment,
 \]
 Equivalently, $C_2\le K<\CE$.
 \end{theorem}
-The analytic reduction is proved below. The finite positivity assertions are certificate obligations;
-the numerical conclusion is conditional on their exact verification. The finite certificate proves the stated upper bound, not an identification of the exact value of $C_2$.
+The analytic reduction below gives the stated upper bound conditional on
+exact verification of the finite positivity assertions.
 
 The sole external numerical probability estimate is Shevtsova's published
 structural inequality \cite{Shevtsova2013}:
@@ -1149,9 +1126,8 @@ verified, then every standardized law with finite third absolute moment satisfie
 \]
 Consequently $C_3\le59\sqrt3/250<\CE$.
 \end{theorem}
-The analytic reduction and the finite-certificate implication are proved
-below. The polynomial inequalities are finite certificate obligations,
-to be checked by exact arithmetic over their complete domains. This upper bound does not identify the exact value of $C_3$.
+The analytic reduction below gives the stated upper bound conditional on
+exact verification of the polynomial inequalities over their complete domains.
 
 The sole external numerical probability bound is Shevtsova's structural
 estimate \cite{Shevtsova2013}:
@@ -1374,7 +1350,8 @@ The rows form an exact consecutive partition of $[-7/2,3/2]$ and satisfy
       \Phi(a_j/\sqrt3)+\Lambda\rho
        &&((\gamma,\rho)\in\mathcal D).\label{ms:finite:n3:eq:scalar}
 \end{align}
-These are certificate conditions. The algorithm in Section~\ref{ms:finite:n3:sec:check} describes sufficient exact tests; its description alone does not establish their successful completion.
+Section~\ref{ms:finite:n3:sec:check} gives sufficient exact tests for these
+continuous-domain inequalities.
 \end{condition}
 
 \begin{proof}[Proof of Theorem~\ref{ms:finite:n3:thm:main}]
@@ -2132,10 +2109,8 @@ or numerical conclusion is used in its place.
 The certificate condition requires a disposition for every one of the
 260 closed parent rectangles: a proved necessary-condition contradiction,
 a complete direct comparison, or complete comparisons on all four children.
-No number of successfully closed rectangles is asserted here. In particular,
-the finite scheme alone does not establish that the unresolved inventory is
-empty. The complete rational inequalities and their reconstruction remain
-separate proof obligations.
+Acceptance requires the complete rational inequalities and their
+reconstruction, with no unresolved rectangle.
 All elementary operations
 are outward rational enclosures; square roots are checked by integer
 squaring. Trigonometric, Gaussian and cotangent values are enclosed
@@ -2185,11 +2160,8 @@ No equality case $C_4=T$ is excluded.
 
 This section specializes the common contact, Fourier, resource and count
 arguments to five summands and proves a separate support-free comparison
-for the remaining moment corner. The finite partitions and numerical
-enclosures specified below are certificate obligations, not assertions
-that their complete proof objects have already been supplied or checked.
-Completion and release of those objects remain separate from this
-mathematical and algorithmic description.
+for the remaining moment corner. Its conclusion is conditional on the finite partitions and numerical
+enclosures specified below.
 
 \subsection{The contrary witness and its predecessor allowance}
 
@@ -2303,8 +2275,8 @@ $n=5$, zero predecessor allowance, and
 For the six rows in their displayed order, take $r$ to be the upper
 $\rho$ endpoint and take the respective upper bounds on $|\beta|$ to be
 \[
- .389174,\quad .478710,\quad .525521,\quad .565414,\quad
- .600001,\quad .641563.
+ 0.389174,\quad 0.478710,\quad 0.525521,\quad 0.565414,\quad
+ 0.600001,\quad 0.641563.
 \]
 They follow from the signed-second-moment inequality, since in each row
 $(1+b^2)^2>r^2(1-b^2)$ and $0<b<1$. Exact substitution gives
@@ -2324,8 +2296,7 @@ at this step.
 The Fourier certificate must then majorize all four terms of
 the Prawitz bound in Assumption~\ref{ms:finite:inputs}, item~\ref{ms:finite:input:afcore:eq:prawitz}, including endpoint pieces and the infinite
 normal tail, on a complete closed strip cover. Its required conclusion
-is an upper score below $c_0:=4097/10000$. No successful finite-strip
-maximum is asserted here.
+is an upper score below $c_0:=4097/10000$.
 
 For the remaining moment tail the published iid structural estimate
 \cite{Shevtsova2013} gives
@@ -2646,11 +2617,8 @@ All shared boundaries, in particular $\rho=477/400$, $\rho=6/5$
 and $\beta=17/50$, remain included. Hence no contrary maximizer exists.
 \end{proof}
 
-This is a finite-index implication, not a monotonicity theorem for $C_n$.
-It supplies no conclusion from an incomplete finite cover. In the
-present mathematics-and-algorithm version, the finite certificate
-completion and public computational release required by
-Theorem~\ref{ms:finite:five:thm:composition} remain pending.
+The finite certificate conditions of
+Theorem~\ref{ms:finite:five:thm:composition} remain to be completed.
 
 \section{Signed moment and physical-gap refinements}
 \label{ms:finite:signed-refinements}
@@ -2951,11 +2919,9 @@ of a concave quadratic. With $\phi$ enclosed by its positive endpoint
 density bounds, replacing $P,Q$ by $P_*,Q_*$ enlarges the ratio.
 It is again fractional-affine in $\phi$, so its two endpoints suffice.
 The maximum over the complete inventory is a valid upper $D$; a negative
-maximum is a contradiction. The finite Gaussian implementation in the
-source additionally requires $L^2/(2n)\le7$. These manipulations do not
-prove \eqref{ms:finite:phase-input} or $H_{\max}$, and without the
-latter they do not cover an unbounded threshold line. Their algebra
-is not an automatic extension of the original actual-index contract.
+maximum is a contradiction. Application requires the conserved input \eqref{ms:finite:phase-input}
+and the complete threshold bound $H_{\max}$ at the stated actual index.
+The finite Gaussian implementation additionally requires $L^2/(2n)\le7$.
 
 \subsection{The central signed price may be negative}
 Suppose an already acquired genuine central gap gives, for the same law,
@@ -3203,10 +3169,9 @@ normal tail, source hypotheses and strict comparisons are verified.
 \end{condition}
 There are 115 integral obligations. Under this condition every actual row
 and every moment in it belongs to a closed strip and is excluded by its
-whole-strip comparison. Mesh construction alone does not establish a bound;
-unresolved cells reject. Resource acquisition and applicable sharp
-predecessors remain premises. This gives no B0 conclusion and cannot be
-widened to $31$--$39$ merely from a source heading mentioning that range.
+whole-strip comparison, provided resource acquisition and the applicable
+sharp predecessors hold. Every unresolved cell rejects. The conclusion is
+restricted to B1 at $n=26,\ldots,30$.
 \section{Conditional reuse of finite floor-index resource sequences}
 \label{ms:finite:floor-transfer}
 The following statements explain an analytic interpretation of a fixed,
@@ -3362,7 +3327,7 @@ at the upper-density endpoint. This proves the floor direction without
 calling a negative coefficient positive. Every original positivity gate,
 the check against the original valid curvature, both signed linear endpoints,
 and the conserved addition with positive coefficient
-$(.4095\rho-d/15)(1-2.5r/N)/2$ remain mandatory.
+$(0.4095\rho-d/15)(1-2.5r/N)/2$ remain mandatory.
 
 For a sharp contrary score $C>\CE$ and certified
 $\CE<40974/100000$, one has
@@ -3383,12 +3348,12 @@ is at least $997Nd/15000$ on its acquired phase interval; its actual
 bound $15000Q(H)/(997m)$ transfers as well. Its artificial curvature
 is not a new physical assertion.
 
-\subsection{The distinct floor25 and floor31 contracts}
+\subsection{The contracts at floors 25 and 31}
 \label{ms:finite:floor25-31}
-The floor25 source review has the literal analytic implementation gate
+The floor $25$ source review has the literal analytic implementation gate
 $20\le n\le40$ and proposed transfer scope $25\le m\le40$;
 the intended finite consumers are $m=26,\ldots,30$, with sharp actual
-predecessors. Its completed old INITIAL variant used the older gap distance;
+predecessors. Its retained INITIAL variant uses the older gap distance;
 a product-gap formula from a different family is not retroactively part of
 that arithmetic. A new exact family must establish its own complete arithmetic
 before the preceding finite induction can consume it.
@@ -3398,10 +3363,9 @@ incoming states and every actual support radius are independently licensed.
 Its source composition requires all twelve selected support states at each
 of the five actual indices, complete initial/resource/local covers, and all
 terminal necessary-condition exclusions. If those covers are all empty,
-no count forest is needed; that is a conditional consequence of complete
-emptiness, not a declaration that the relevant acceptance has run here.
+no count forest is needed.
 
-For floor31, the eight-pass INITIAL argument uses $N=31$, $K=0$ and
+For floor $31$, the eight-pass INITIAL argument uses $N=31$, $K=0$ and
 an acquired own-score cap at most $432313/10^6$. The scalar directions in
 Sections~\ref{ms:finite:floor-envelopes}--\ref{ms:finite:floor-phase}
 prove the INITIAL weighted interpretation for $m\ge31$ on its same
@@ -3409,14 +3373,13 @@ moment/support branch. They do not prove every later resource callback.
 The intended finite bridge is $31$--$39$, and still requires actual-index
 support acquisition, its contact allowance, a valid actual own cap, every
 downstream refinement, and complete actual-index counts for surviving rows.
-A support calculation at 31 is not a calculation at 32 or at 39. The index
-range of a complete composition is the intersection of all its inputs.
+The composition applies on the intersection of all these index domains.
 
 \subsection{Literal CENTRAL40 support and local comparisons}
 \label{ms:finite:floor40}
 The following retained contract is only for $m\in\{40,41,42\}$.
 It assumes genuine global sharp bounds through 39 (including 38), then uses
-increasing weak40/41 induction for the next predecessors. Consequently the
+successive weak bounds at $40$ and $41$ for the next predecessors. Consequently the
 same-owner predecessor decrement is zero. A conservative scalar witness
 retains the older allowance $19/100$ and gives
 \[
@@ -3426,8 +3389,8 @@ retains the older allowance $19/100$ and gives
 \[
  \begin{gathered}
  U=\frac{10131}{10000}\left(\frac{40974}{100000}+\frac{19}{4000}\right)+e
- =\frac{1371664491931}{3249000000000}<.4226,\\
- 42(U-.4095)=\frac{288392943517}{541500000000}<.54.
+ =\frac{1371664491931}{3249000000000}<0.4226,\\
+ 42(U-0.4095)=\frac{288392943517}{541500000000}<0.54.
  \end{gathered}
 \]
 The inputs $\sqrt m<13/2$, $\sqrt{m-1}>6$ and $m-1\ge38$ hold
@@ -3435,23 +3398,24 @@ on these literal indices. These computations supply the owner/comparison
 caps only with the separate predecessor-smoothing theorem. They do not
 assume the desired bound at the current index.
 
-The first support primitive is a separate two-pass indexed proof at floor40,
-upper index42, zero allowance and radius $3.84$. Every later CENTRAL
+The first support primitive is a separate two-pass indexed proof at floor $40$,
+upper index $42$, zero allowance and radius $3.84$. Every later CENTRAL
 Gaussian support cell instead has the form
 \begin{align}
- B_m={}&L_P+\frac{.54 Q_+}{m}
- +.4\left(\sum_{j=1}^5\frac{M_j}{m^j}+\frac{T}{m^6}\right)
- +\rho\left(\sqrt{\frac m{m-1}}\delta_m+\frac{.384\cdot.4226}{m}\right),
+ B_m={}&L_P+\frac{0.54 Q_+}{m}
+ +0.4\left(\sum_{j=1}^5\frac{M_j}{m^j}+\frac{T}{m^6}\right)
+ +\rho\left(\sqrt{\frac m{m-1}}\delta_m+\frac{0.384\cdot0.4226}{m}\right),
  \label{ms:finite:central-support}
 \end{align}
 where $Q_+,M_j,T\ge0$, $L_P$ is index-free and may be negative,
-and $\delta_m\le.19$. Holding the same acquired moment, support,
+and $\delta_m\le0.19$. Holding the same acquired moment, support,
 signed-beta and threshold cell bounds fixed, every positive term decreases,
 so $B_m\le B_{40}<0$ on each whole closed cell. The prior support
 closes the exterior remainder. This argument has discarded favourable
 Gaussian terms. It does not justify a primitive retaining such a term;
 that is why the indexed initial proof is separate. LEFT has its own
-explicit finite40--42/zero-allowance support proof at every selected radius.
+explicit zero-allowance support proof for $40\le m\le42$ at every
+selected radius.
 
 For later Sperner confinement and profiles, preserve the complete gates:
 $p$ separated from zero and $1/2$, $\theta<1$, positive gaps, support,
@@ -3463,7 +3427,7 @@ $j=m-2$, with the original variance and Stirling bounds. This containment
 and the analytic mode estimate are explicit prerequisites; no mode is omitted.
 Fixed valid derivative bounds $L,U$ remain such bounds: all subtracted
 errors have nonnegative numerator divided by $m$, and all added errors
-are bounded above by their floor40 versions. The lower-ray proof integrates
+are bounded above by their floor $40$ versions. The lower-ray proof integrates
 the same $L$ on both intervals with positive checked width; the upper ray
 retains the positive allocation denominator $L+U$.
 
@@ -3473,7 +3437,7 @@ source error has the upper form
 \[
  (zr_0+\mathrm{Dist})/m-zP+\mathrm{Bad}\,b_m.
 \]
-Only the nonnegative inverse numerator is weakened to floor40; the term
+Only the nonnegative inverse numerator is weakened to floor $40$; the term
 $-zP$ is retained unchanged. A floor test $r_0-40P\le0$ is safe
 with the original strict-margin convention. The bad-pair fraction has
 $d\ge0$, $\tau>0$, and
@@ -3509,36 +3473,33 @@ sign-sensitive maxima are essential. They do not prove an all-index LOW
 extension. The binomial gap is the minimum of the three actual-index gaps,
 not a substituted zero-noise Bernoulli theorem.
 
-The complete local union is TINY on $0<\lambda\le.05$; MID on
-$.05$--$.08$ at every phase; on $.08$--$.10$, MID covers absolute phase
-$.19$--$.5$ and LOW its complement; on $.10$--$.12$ the seam is $.27$;
-above $.12$ LOW covers all phases. Intersect every interval with the same
+The complete local union is TINY on $0<\lambda\le0.05$; MID on
+$0.05$--$0.08$ at every phase; on $0.08$--$0.10$, MID covers absolute phase
+$0.19$--$0.5$ and LOW its complement; on $0.10$--$0.12$ the seam is $0.27$;
+above $0.12$ LOW covers all phases. Intersect every interval with the same
 row's noise cap, retain both signs of $H$ and phase and all closed seams.
 Zero noise is covered by the separate Bernoulli theorem. No smaller-noise
 interval is lost at zero.
 
-\begin{condition}[Finite floor40 composition]\label{ms:finite:floor40-condition}
+\begin{condition}[Finite composition at floor 40]\label{ms:finite:floor40-condition}
 Supply the actual predecessors, the separate high-moment theorem restricted
 to $40,41,42$, all ten original acquisition component predicates with their
 complete interfaces, the separate indexed INITIAL-support primitive, the
 complete LOW row predicates and both binders, and every TINY/MID/binomial/
 coverage companion. Establish all analytic prerequisites and inequalities
 used above for the active source implementations and the same owner.
-The source inventory has 304 LOW row processes; no reduction of this number
-is asserted by this condition. The complete original acquisition dispositions
+The condition retains all 304 LOW row processes. The complete acquisition dispositions
 must cover every probability panel outside LEFT $[141/500,19/50]$ and
 CENTRAL $[19/50,119/250]$ as well as all moment panels, including the
 shared $\rho=6/5$ boundary.
 \end{condition}
-Under this condition, finite induction excludes the owner at 40, then 41,
-then 42, without a tail43 premise. The installed HIGH window, extended
+Under this condition, finite induction excludes the owner successively at
+$40$, $41$ and $42$, without a tail theorem starting at $43$. The installed HIGH window, extended
 paired LOW, signed-variance wrapper and corrected phase callback must be the
 ones whose inequalities were used. In particular, the inactive base damping
 $43/96$ and an uninstalled paired domain cannot substitute for the active
 $(45-M)/96$ domain. The signed-variance wrapper has no extra sample-index
 term, but requires its same-law signed moment/support gates, positive residual
-weights and correct root directions. This source interpretation supplies no
-fresh row acceptance, does not relabel a single40 numerical object as an
-actual41 run, and does not extend the local conclusion beyond42. Any further
-unproved lower-index restriction in a consumed analytic lemma remains an
-unresolved applicability condition.
+weights and correct root directions. Numerical predicates retain their
+original evaluation indices; the analytic transfer above is restricted to
+$m=40,41,42$. Every consumed analytic lemma must hold at these indices.
