@@ -2,7 +2,7 @@
 
 1. Independent audit review is complete. PR #1 was merged before review commits
    were pushed; the owner authorized one follow-up draft for those reports and
-   evidence. Keep the follow-up draft pending explicit merge approval. Read
+   evidence. Keep draft PR #2 pending explicit merge approval. Read
    `mathematics/audit/2026-10-27/reviews/REVIEW.md` for the audit-only recommendation
    and retained limitations. Do not merge automatically.
    Retain the existing finite theorem through48 in the first redesign.

@@ -20,8 +20,9 @@ The original acquisition, scalar and computation results are in
 [merged PR #1](https://github.com/kolodziejek/berry-esseen-certificates/pull/1).
 GitHub records its merge at 2026-10-27T09:02:18Z, head ac7bd06, merge commit
 2c418e73dc93b0622ab2b4e95ba042201d37604d. The agent issued no merge operation.
-The owner authorized a single follow-up draft for the subsequent review reports,
-evidence and status corrections, on audit/independent-review-20261027.
+The owner authorized [draft PR #2](https://github.com/kolodziejek/berry-esseen-certificates/pull/2)
+for the subsequent review reports, evidence and status corrections, on
+audit/independent-review-20261027. It is open, draft and unmerged.
 Recommendation: the follow-up is ready to merge as audit-only material after
 explicit approval. Review scope and limitations:
 `mathematics/audit/2026-10-27/reviews/REVIEW.md`.

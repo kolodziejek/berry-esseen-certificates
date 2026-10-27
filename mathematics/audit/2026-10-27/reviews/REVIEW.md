@@ -15,8 +15,9 @@ During publication of this review, GitHub reported that PR #1 had been merged
 at `2026-10-27T09:02:18Z`, with head `ac7bd06` and merge commit
 `2c418e73dc93b0622ab2b4e95ba042201d37604d`. The agent issued no merge operation.
 The subsequent review commits are not in that closed PR's merged diff. The
-owner explicitly authorized one follow-up draft PR for the review reports,
-evidence and status corrections, on `audit/independent-review-20261027`.
+owner explicitly authorized [draft PR #2](https://github.com/kolodziejek/berry-esseen-certificates/pull/2)
+for the review reports, evidence and status corrections, on
+`audit/independent-review-20261027`.
 
 The reviewers were separate agents working on separate branches/worktrees.
 This is an internal mathematical/source cross-review, not an external human
