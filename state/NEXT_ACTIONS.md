@@ -1,8 +1,10 @@
 # Next actions — 27 October 2026
 
-1. Independent audit review is complete; retain draft PR #1 pending the owner's
-   merge decision. Read `mathematics/audit/2026-10-27/reviews/REVIEW.md` for the
-   audit-only recommendation and retained limitations. Do not merge automatically.
+1. Independent audit review is complete. PR #1 was merged before review commits
+   were pushed; the owner authorized one follow-up draft for those reports and
+   evidence. Keep the follow-up draft pending explicit merge approval. Read
+   `mathematics/audit/2026-10-27/reviews/REVIEW.md` for the audit-only recommendation
+   and retained limitations. Do not merge automatically.
    Retain the existing finite theorem through48 in the first redesign.
 2. Locate the actual public final provider implementations named by
    `mathematics/global-contract.json`; pins alone do not permit a behavior audit.

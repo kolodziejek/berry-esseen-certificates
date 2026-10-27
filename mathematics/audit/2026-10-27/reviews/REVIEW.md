@@ -4,12 +4,19 @@ Date: 27 October 2026. Fork: `kolodziejek/berry-esseen-certificates`.
 Reviewed audit head: `ac7bd069c9d5afe6d0dfe5a9c86c9a095644ff99`.
 Immutable source baseline: `6346fc1b4432bc5982822aa696eb566ed9e1e1ee`.
 
-**The bounded independent review is complete. Recommend merging the audit-only
-addition after the owner's explicit approval.** No blocking defect was found
+**The bounded independent review is complete. The audit-only additions are
+ready for merge after the owner's explicit approval.** No blocking defect was found
 in the scalar proof, conditional interface substitution, or integration of the
-three component audits. PR #1 remains a draft and has not been merged. This
-recommendation does not establish the full conjecture, accept the native
+three component audits. This recommendation does not establish the full
+conjecture, accept the native
 certificates, implement a new production assembly, or authorize pruning.
+
+During publication of this review, GitHub reported that PR #1 had been merged
+at `2026-10-27T09:02:18Z`, with head `ac7bd06` and merge commit
+`2c418e73dc93b0622ab2b4e95ba042201d37604d`. The agent issued no merge operation.
+The subsequent review commits are not in that closed PR's merged diff. The
+owner explicitly authorized one follow-up draft PR for the review reports,
+evidence and status corrections, on `audit/independent-review-20261027`.
 
 The reviewers were separate agents working on separate branches/worktrees.
 This is an internal mathematical/source cross-review, not an external human
@@ -35,8 +42,9 @@ run evidence are present. The only difference from the scalar component is two
 TeX layout edits: splitting a display and using `\path` for a long source path.
 The definitions and inequalities are unchanged. All 2,748 baseline tree entries
 retain their original object identity and mode. All 240 unique task declarations
-remain unchanged. The review reports and new evidence are added to this same PR;
-there are no component pull requests.
+remain unchanged. The original component results are in merged PR #1. The
+review reports and new evidence are in the single authorized follow-up; there
+are no component pull requests.
 
 ## Findings and checks actually performed
 

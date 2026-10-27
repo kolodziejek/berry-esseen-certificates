@@ -60,9 +60,11 @@ is interpreted as a native certificate PASS.
 The subsequent [independent review](reviews/REVIEW.md) is complete with no
 blocking findings for this audit-only change. It checks component integration,
 independently rederives the scalar argument, and cross-checks the acquisition
-interfaces and shared computation consumers. The recommendation is to merge
-the audit after explicit owner approval; PR #1 remains a draft. This is not
-acceptance of the retained native predicates or of a production simplification.
+interfaces and shared computation consumers. The audit-only review additions
+are recommended for merge after explicit owner approval. PR #1 was merged
+outside this agent's actions before the review commits were pushed; the owner
+authorized a single follow-up draft. This is not acceptance of the retained
+native predicates or of a production simplification.
 
 ## The precise new composition
 
