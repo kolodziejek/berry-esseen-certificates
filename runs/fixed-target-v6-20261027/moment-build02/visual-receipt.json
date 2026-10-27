@@ -1,0 +1,16 @@
+{
+  "pdf_sha256": "199fa775cccefbc40ac0f3eedd4b3241b88bb1df173f38c57b552ad31e5135c2",
+  "render_command": "pdftoppm -r 100 -png runs/fixed-target-v6-20261027/moment-build02/texlive/moment-main.pdf runs/fixed-target-v6-20261027/moment-build02/render/page",
+  "pages_inspected": [
+    1,
+    2,
+    3
+  ],
+  "render_sha256": {
+    "runs/fixed-target-v6-20261027/moment-build02/render/page-1.png": "ce71e1b7725ae2dbff3442909a53736b00b9af03acf57a633d5336990b4813de",
+    "runs/fixed-target-v6-20261027/moment-build02/render/page-2.png": "5a2c31933b1bee3120d6e75e4af2569b1cbf1bb27c34a6464011417d7cef7f15",
+    "runs/fixed-target-v6-20261027/moment-build02/render/page-3.png": "8eae9788475bd9391541d2847de406f45c90a52e568f3775f8668ee7e0fe6fe0"
+  },
+  "inspection": "All three final pages viewed using view_image; no clipping, overlap, missing symbols, or unresolved references observed. Build01 long inline CE interval caused an overfull line and was changed to a display; final log has no overfull/underfull or undefined-reference entries.",
+  "scope": "Visual QA only; not mathematical acceptance."
+}
