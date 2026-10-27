@@ -1,5 +1,7 @@
 # Fixed-target continuation — 27 October 2026
 
+PR #5 updated and verified open/draft, unmerged, at proof commit157db04.
+Description records actual checks, scoped review and remaining five-cell obstacle.
 Existing draft PR #5 is the review target; branch manuscript/strategy-v4-20261027.
 Starting point78f0b7c; reference6346fc1 remains preserved. New proof:
 mathematics/fixed-target-v5/2026-10-27/main.pdf (15pages), with portable sources.
