@@ -1,0 +1,598 @@
+\section{Retained support and strip arguments for finite-index proofs}
+\label{ms:legacy-support:section}
+
+The finite-index proofs use support information before they enter a
+Fourier or conditional-count calculation. Some of those implications
+allow a positive predecessor loss, a positive score excess, or an index
+below $42$. They are not consequences of the zero-loss theorem in
+Section~\ref{ms:support}. This appendix supplies their analytic arguments
+with their literal index domains. The numerical polynomial inequalities,
+moment rows and threshold enclosures remain separately stated certificate
+premises. Their historical margins below are not new acceptance results.
+
+We use the attained positive closed pair and contact identity of
+Lemma~\ref{ms:contact}. Thus the law is fixed throughout every deletion,
+moment estimate and support contraction; $H$ is its raw sum threshold.
+The structural bounds \eqref{ms:structural-classical}, the sign-moment
+inequality of Lemma~\ref{ms:sign-moment}, and, when used to acquire a
+signed moment row, Theorem~\ref{ms:sharp-third}, retain their stated
+hypotheses. Qualitative attainment and compactness are not reproved here.
+Write $C=C_n$ for the attained score, $\rho=\E|X|^3$ and
+$\beta=\E[X|X|]$. Every certificate below must contain the same law's
+parameters and the whole closed domain on which it is applied.
+
+\subsection{The scale correction}
+Write $\phi_0=\phi(0)$.
+We use the rational comparisons of Lemma~\ref{ms:gaussian-constants}.
+The additional lower bound $\phi_0>.3988$ follows from the same
+arctangent series, since
+\[
+ \pi<16\left(\frac15-\frac1{3\cdot5^3}+\frac1{5\cdot5^5}\right)
+ -4\left(\frac1{239}-\frac1{3\cdot239^3}\right)<\frac{22}{7},
+ \qquad (.3988)^2<\frac7{44}<\phi_0^2.
+\]
+For $n>1$ put $s_n=\sqrt{n/(n-1)}$ and
+$e_n=n(s_n-1)-1/2$.
+\begin{lemma}\label{ms:legacy-support:scale}
+For every integer $n\ge36$, one has $0<e_n<.384/n$.
+\end{lemma}
+\begin{proof}
+Put $x=1/n$ and $c=.384=48/125$. Direct expansion gives
+\[
+ (1-x)(1+x/2+cx^2)^2-1
+ =x^2\{(2c-3/4)-(c+1/4)x+(c^2-c)x^2-c^2x^3\}.
+\]
+The bracket is decreasing for $x\ge0$, since $0<c<1$.
+At $x=1/36$ its exact rational value is $823/4050000>0$.
+Squaring positive quantities gives
+$s_n<1+x/2+cx^2$ for $0<x\le1/36$. Similarly
+$(1-x)(1+x/2)^2-1=-3x^2/4-x^3/4<0$, which gives the lower bound.
+\end{proof}
+
+\subsection{A signed Gaussian envelope}
+Define, for every real $H,t$ and $n>1$,
+\[
+ \mathcal H_n(H,t)=n^{3/2}\{\Phi((H-t)/\sqrt{n-1})-
+             \Phi(H/\sqrt n)\}
+       +nt\phi(H/\sqrt n)+\tfrac H2(t^2-1)\phi(H/\sqrt n).
+\]
+\begin{lemma}[Direct support at every index]\label{ms:legacy-support:direct}
+Let \(n\ge2\), and let \((P,H)\) be an unrestricted attained
+positive closed maximizing pair, with \(C=C_n>0\).
+Put \(s=\sqrt{n/(n-1)}\), \(e=n(s-1)-1/2\),
+\(A=\sqrt{n-1}\,\Delta_{n-1}(P)/\rho\), and \(d_P=n(A-C)\).
+Suppose \(q\ge0\), \(S>0\), \(E\ge0\), \(r>0\), \(b\ge0\),
+\((d_P)_+\le q\), \(s\le S\), \(e\le E\),
+\(\rho\le r\), \(|\beta|\le b\), and \(0<c\le C\).
+Define
+\[
+ Q(v)=-v^3+\tfrac32rv^2+3bv+rE,\qquad
+ L(v)=\tfrac25(v^2/2+1/2+E)+cQ'(v).
+\]
+If \(R>0\) satisfies
+\[
+ Q(R),Q'(R),Q''(R),L(R),L'(R)<0,\qquad 1/5-3c<0,
+\]
+and, for both \(\eta\in\{-1,1\}\),
+\[
+ \sup_{H\in\R}\mathcal H_n(H,\eta R)+cQ(R)+rSq<0,
+\]
+then \(\supp P\subset(-R,R)\).
+\end{lemma}
+\begin{proof}
+The contact identity~\eqref{ms:contact-formula}, the active
+discrepancy \(C\rho/\sqrt n\), and the predecessor estimate
+for this same law imply, at every support point \(t\),
+\[
+ 0\le\mathcal H_n(H,t)
+ +C\{-|t|^3+\tfrac32\rho t^2+3\beta t+\rho e\}
+ +\rho s d_P.
+\]
+Here \(n(sA-C)=s d_P+n(s-1)C\); the scale correction has
+no omitted term. Also \(A\le C_{n-1}\), hence
+\((d_P)_+\le n(C_{n-1}-C)_+\).
+Put \(z=H/\sqrt n\), \(y=(H-t)/\sqrt n\).
+Exact differentiation gives
+\[
+ \partial_t\mathcal H_n=n\phi(z)+Ht\phi(z)-ns\phi(sy).
+\]
+Taylor's theorem and \(\|\phi''\|_\infty=\phi(0)\) give
+\( |n\phi(y)-n\phi(z)-Ht\phi(z)|\le\phi(0)t^2/2\).
+Moreover \(\partial_s[s\phi(sy)]=-\phi''(sy)\), so
+\(|s\phi(sy)-\phi(y)|\le\phi(0)(s-1)\). Therefore
+\[
+ |\partial_t\mathcal H_n(H,t)|
+ \le\phi(0)(t^2/2+1/2+e)
+ \qquad(n\ge2,\ H,t\in\R).
+\]
+The norm identity follows by maximizing
+\((x^2-1)e^{-x^2/2}\); its interior extrema occur at
+\(0,\pm\sqrt3\).
+Since \(Q'''=-6\), its first three gates imply \(Q(v)<0\)
+for every \(v\ge R\). At \(t=\eta v\), the bracket multiplying
+\(C\) is at most \(Q(v)\), so its multiplier may be replaced
+by \(c\). The signed predecessor term is at most \(rSq\).
+The contact expression is consequently bounded by
+\(\mathcal H_n(H,\eta v)+cQ(v)+rSq\), whose derivative
+in \(v\) is at most \(L(v)\). Since
+\(L''=2/5-6c<0\) and \(L(R),L'(R)<0\), this envelope strictly
+decreases on the entire closed ray. Its strict endpoint upper
+bound contradicts contact on both rays, including endpoints,
+exterior atoms and exterior accumulation points.
+\end{proof}
+
+\paragraph{The whole threshold line.}
+No sampled threshold maximum is needed in this lemma.
+For \(R>0\), Gaussian differentiation gives
+\[
+ |\partial_H^2\mathcal H_n(H,R)|\le M,\qquad
+ M=\frac{\sqrt n}{4}\left(\frac n{n-1}+1\right)
+       +\frac25R+\frac{2|R^2-1|}{5\sqrt n}.
+\]
+This follows from \(\|\phi'\|_\infty<1/4\),
+\(\|\phi''\|_\infty<2/5\), and
+\(\|\phi'''\|_\infty\le2/\pi<4/5\).
+For a closed threshold cell of midpoint \(m\) and halfwidth \(w\),
+Taylor's theorem bounds both signs by
+\[
+ \pm\mathcal H_n(H,R)
+ \le\pm\mathcal H_n(m,R)
+       +|\partial_H\mathcal H_n(m,R)|w+Mw^2/2.
+\]
+If \(H_0\ge5\sqrt n\), \(H_0-R\ge5\sqrt{n-1}\), and
+\(\tau\ge\Phi(-5)\), Mills' bound and monotonicity of
+\(H\phi(H/\sqrt n)\) give, on both threshold tails,
+\[
+ |\mathcal H_n(H,R)|\le n\sqrt n\,\tau
+ +(nR+H_0|R^2-1|/2)\phi(H_0/\sqrt n),\qquad |H|\ge H_0.
+\]
+Finally \(\mathcal H_n(H,-R)=-\mathcal H_n(-H,R)\).
+Finite rational CDF, density and square-root enclosures on all
+closed cells, together with these two tails, therefore certify
+the displayed whole-line endpoint bounds.
+
+In particular the positive-budget support certificate at index 27
+uses
+\[
+ \begin{gathered}
+ R=13/5,\quad q=813/2000,\quad c=8171/18000,\quad
+ r=6413121/5478500,\\
+ b=326352124353/10^{12},\quad E=14331929737/10^{12},\quad
+ S=1019049330731/10^{12}.
+ \end{gathered}
+\]
+The contrary hypothesis \(C_{27}\ge \CE+2/45\), the finite
+cap and the signed-moment inequality supply these bounds.
+Its retained numerical premise checks every polynomial gate and both strict endpoint inequalities
+on 580 adjacent closed threshold cells covering \([-29,29]\),
+and on the two tails. Conditional on those complete checks and the stated moment bounds, this support
+implication applies at 27 without extending an estimate proved only for \(n\ge36\).
+
+Write $v=n-1$, $s=\sqrt{n/v}$, $u=|t|$, and
+\[
+ A=\frac{u^3-3u}{6},\quad B=\frac{u^4-6u^2+3}{24\sqrt v},
+ \quad D=\frac{u^5-15u}{120v}.
+\]
+\begin{lemma}[Fifth-order identity with a uniform finite remainder]
+\label{ms:legacy-support:fifth}
+If $u>\sqrt3$, then, with $z_v=H/\sqrt v$,
+\[
+ \frac{\mathcal H_n(H,\pm u)}{s^3}
+ =\pm A(1-z_v^2)\phi(z_v)+B\phi^{(3)}(z_v)
+                  \mp D\phi^{(4)}(z_v)+R,
+\]
+where the sign of the remainder need not be fixed and
+\[
+ |R|\le E^{(5)}_v(u):=
+ \frac{51u^6}{14400v^{3/2}}
+ +\frac{51(3u^2-2)}{960v^{3/2}}+\frac{u}{8v^2}.
+\]
+This statement is uniform over every real $H$.
+\end{lemma}
+\begin{proof}
+Let $F_w(x)=\Phi(x/\sqrt w)$, with primes denoting $x$ derivatives.
+The heat identity $\partial_w F_w=F_w''/2$ and ordinary Taylor's theorem
+give, with unlabelled derivatives at $(v,H)$,
+\begin{align*}
+ F_{v+1}&=F_v+F_v''/2+F_v^{(4)}/8+R_0,
+ &|R_0|&\le\sup_{w\in[v,v+1]}\|F_w^{(6)}\|_\infty/48,\\
+ F_{v+1}'&=F_v'+F_v'''/2+F_v^{(5)}/8+R_1,
+ &|R_1|&\le\sup_{w\in[v,v+1]}\|F_w^{(7)}\|_\infty/48,\\
+ F_{v+1}''&=F_v''+F_v^{(4)}/2+R_2,
+ &|R_2|&\le\sup_{w\in[v,v+1]}\|F_w^{(6)}\|_\infty/8.
+\end{align*}
+Expand $F_v(H-t)$ through degree five, with remainder at most
+$u^6\|F_v^{(6)}\|_\infty/720$. In
+\[
+ \frac{\mathcal H_n}{n^{3/2}}=
+ F_v(H-t)-F_{v+1}(H)+tF_{v+1}'(H)
+             -\frac{t^2-1}{2}F_{v+1}''(H),
+\]
+the first three derivative coefficients cancel. The next three are
+\[
+ \left(\frac t2-\frac{t^3}6\right)F_v'''
+ +\frac{t^4-6t^2+3}{24}F_v^{(4)}
+ +\left(\frac t8-\frac{t^5}{120}\right)F_v^{(5)}.
+\]
+The remaining absolute value is bounded by
+\[
+ \left\{\frac{u^6}{720}+\frac1{48}+\frac{u^2-1}{16}\right\}
+       \sup_{w\in[v,v+1]}\|F_w^{(6)}\|_\infty
+ +\frac u{48}\sup_{w\in[v,v+1]}\|F_w^{(7)}\|_\infty.
+\]
+Fourier inversion of the Gaussian, differentiated under its absolutely
+integrable Fourier transform, gives
+\[
+ \|\phi^{(k)}\|_\infty
+ \le\frac1\pi\int_0^\infty y^k e^{-y^2/2}\,dy.
+\]
+Integration by parts yields
+$\|\phi^{(5)}\|_\infty\le8/\pi<2.55$ and
+$\|\phi^{(6)}\|_\infty\le15\phi_0<6$.
+Since $F_w^{(j)}=w^{-j/2}\phi^{(j-1)}$, the displayed remainder
+becomes $s^3E^{(5)}_v(u)$ after multiplication by $n^{3/2}$.
+The three retained derivative coefficients give the identity.
+\end{proof}
+
+\begin{lemma}[A lower tangent bound for the fourth Gaussian derivative]
+\label{ms:legacy-support:gaussian-tangent}
+For every real $z$,
+\[
+ \phi^{(4)}(z)\ge\phi_0(3-15z^2/2).
+\]
+\end{lemma}
+\begin{proof}
+The same Gaussian Fourier integral gives
+$\phi^{(4)}(z)=\pi^{-1}\int_0^\infty
+y^4e^{-y^2/2}\cos(yz)\,dy$.
+Use the globally valid inequality $\cos w\ge1-w^2/2$ inside
+this integral. Its fourth and sixth Gaussian moments are $3\phi_0$
+and $15\phi_0$, respectively.
+\end{proof}
+
+\begin{lemma}[Uniform signed fifth-order envelope]\label{ms:legacy-support:envelope}
+Suppose $u>\sqrt3$ and $A,B,D\ge0$. If
+$W=A-15D/2>0$, put
+\[
+ T=A-3D+\frac{9B^2}{4W}.
+\]
+If $T\ge A/2+2B+3D$, then, for every real $H$ and either sign,
+\[
+ \mathcal H_n(H,\pm u)\le s^3\{\phi_0 T+E^{(5)}_v(u)\}.
+\]
+\end{lemma}
+\begin{proof}
+Put $z_v=H/\sqrt v$. For positive $t=u$ and $|z_v|\le1$, divide the retained terms by
+$\phi_0$ and use the preceding tangent bound to obtain
+\[
+ A-3D-(A-15D/2)z_v^2+3B|z_v|
+ \le A-3D+9B^2/(4W).
+\]
+Here $(1-z_v^2)\phi(z_v)\le(1-z_v^2)\phi_0$ and
+$|\phi^{(3)}(z_v)|\le3|z_v|\phi_0$ on this interval.
+For $|z_v|\ge1$ the first term is nonpositive, and the Fourier bounds
+$\|\phi^{(3)}\|_\infty<2\phi_0$ and
+$\|\phi^{(4)}\|_\infty\le3\phi_0$ give $2B+3D$.
+For negative $t=-u$, the first term has global upper bound
+$2e^{-3/2}A\phi_0<A\phi_0/2$, and the other terms give
+$(2B+3D)\phi_0$. The hypothesis on $T$ covers both exterior cases.
+The inequality $2e^{-3/2}<1/2$ follows from four positive terms of
+the exponential series at $3/2$. Finally add the uniform remainder.
+\end{proof}
+
+\subsection{A direct Gaussian bound on both complete rays}
+\label{ms:legacy-support:far-gaussian-section}
+
+\begin{lemma}[A global cubic Gaussian bound]\label{ms:legacy-support:far-gaussian}
+For every integer $n\ge2$ and all real $H,t$,
+\[
+ |\mathcal H_n(H,t)|<\frac{|t|^3}{15}+\frac{|t|}{5}+\frac12.
+\]
+\end{lemma}
+\begin{proof}
+Put $z=H/\sqrt n$, $u=z-t/\sqrt n$, and
+$f(\lambda)=\Phi(u/\sqrt{1-\lambda})$. Taylor expansion in the spatial
+variable through degree two gives
+\[
+ n^{3/2}\{\Phi(u)-\Phi(z)\}
+ =-nt\phi(z)-\tfrac12Ht^2\phi(z)+R_{\rm tr},\qquad
+ |R_{\rm tr}|\le\phi(0)|t|^3/6,
+\]
+using $\|\phi''\|_\infty=\phi(0)$. Expansion of $f$ through degree
+one at zero gives
+\[
+ n^{3/2}\{f(1/n)-f(0)\}
+ =\tfrac12\sqrt n\,u\phi(u)+R_{\rm sc}.
+\]
+For $0\le\lambda\le1/2$, writing
+$r=u/\sqrt{1-\lambda}$, differentiation gives
+\[
+ f''(\lambda)=\frac{r(3-r^2)\phi(r)}{4(1-\lambda)^2}.
+\]
+The exact maxima of $|r|\phi(r)$ and $|r|^3\phi(r)$ are
+$\phi(0)e^{-1/2}<1/4$ and
+$3\sqrt3\,\phi(0)e^{-3/2}<1/2$ respectively. These strict rational
+bounds follow from $\phi(0)<2/5$, $e>8/3>64/25$,
+$e^{3/2}>21/5$, and $3\sqrt3<21/4$; the exponential inequalities follow
+from finite positive terms of their series. Therefore
+$\|f''\|_{[0,1/2]}<5/4$, and
+\[
+ |R_{\rm sc}|<\frac5{8\sqrt n}\le\frac5{8\sqrt2}<\frac12.
+\]
+Substitution in the definition of $\mathcal H_n$ cancels the terms in
+$nt$ and $Ht^2$, leaving
+\[
+ \mathcal H_n(H,t)=R_{\rm tr}+R_{\rm sc}
+       +\tfrac12\sqrt n\{u\phi(u)-z\phi(z)\}.
+\]
+Since $(x\phi(x))'=-\phi''(x)$, the last term has absolute value at
+most $\phi(0)|t|/2<|t|/5$ for $t\ne0$, and is zero at $t=0$.
+Together with $\phi(0)/6<1/15$ and the strict scale-remainder bound,
+this proves the assertion for both signs and every threshold. In
+particular there is no restriction to sampled thresholds or to a
+bounded part of a support ray.
+\end{proof}
+
+\subsection{Finite bands and the exact support polynomial}\label{ms:legacy-support:polynomial}
+For integers $36\le N\le L$ and tested radii $u\ge5/2$, use the
+simultaneous endpoint bounds
+\[
+ B_+=\frac{u^4-6u^2+3}{24\sqrt{N-1}},\quad
+ D_+=\frac{u^5-15u}{120(N-1)},\quad
+ D_-=\frac{u^5-15u}{120(L-1)}.
+\]
+For an infinite index range, set $D_-=0$ instead. Put
+\[
+ W_*=A-15D_+/2,\qquad
+ T_*=A-3D_-+\frac{9B_+^2}{4W_*}.
+\]
+The proof of Lemma~\ref{ms:legacy-support:envelope} applies uniformly on the whole band
+if $W_*>0$ and $T_*\ge A/2+2B_++3D_+$. The restriction $u\ge5/2$
+ensures that all the displayed $A,B_+,D_+,D_-$ are nonnegative. In particular the favorable
+term is frozen at the upper index endpoint, and the adverse terms at
+the lower one. No monotonicity of a signed coefficient is assumed.
+
+Let $(P,H)$ be an attained positive closed maximizing pair, standardized
+to mean zero and variance one. Write $C=C_n\ge \CE$,
+$\rho=\mathbb E|X|^3$, $\beta=\mathbb E[X|X|]$, and
+$d=n(C_{n-1}-C_n)_+$. The finite contact/predecessor bound is
+\[
+ \rho I(t)\le\mathcal H_n(H,t)+
+ C\{-|t|^3+3\rho t^2/2+3\beta t+\rho e_n\}+\rho s_nd,
+\]
+with $I=0$ on the entire closed support. Suppose also, for a finite
+band, that $C_n-\CE\ge K/n$, where $K>0$. The published finite cap gives
+\[
+ c=.4095+K/L<C_n,\qquad
+ \rho<r=\min\left\{\frac{.3031(.646)}{c-.3031},
+                        \frac{.3322(.429)}{c-.3322}\right\}.
+\]
+For the unrestricted nonnegative case put $K=0$, $c=.4095$.
+The sign-moment inequality
+$\rho\ge(1+\beta^2)/\sqrt{1-\beta^2}$ supplies $|\beta|<b$ whenever
+$(1+b^2)^2>r^2(1-b^2)$ and $0<b<1$. All these statements concern the
+same current law. The lower endpoint cannot replace $L$ in $K/L$.
+
+When a preceding resource enclosure supplies sharper actual bounds
+$\rho\le r$ and $|\beta|\le b$, these may instead be used in the
+same polynomials. Their validity is the only extra premise.
+
+Use positive rational $\ell,S$ with $\ell^2\le N-1$ and $S^2>N/(N-1)$. For $u=|t|$ define
+\[
+ Q(u)=-u^3+3ru^2/2+3bu+.384r/N.
+\]
+First check $Q<0$, before replacing $C$ by its lower bound $c$.
+Replace $1/\sqrt{N-1}$ by $1/\ell$ in the adverse remainder and use
+$\widehat B_+=(u^4-6u^2+3)/(24\ell)\ge B_+$ in the linear term of
+the domination gate. Explicitly, a sufficient rational remainder is
+\[
+ E_*(u)=\frac{51u^6}{14400(N-1)\ell}
+       +\frac{51(3u^2-2)}{960(N-1)\ell}
+       +\frac{u}{8(N-1)^2}.
+\]
+The finite-band formulas are used only where their denominators and
+listed sign gates have been proved. Strict negative contact for every $n$ in the band follows
+from the polynomial inequality
+\[
+ \frac25S^3\left\{(A-3D_-)W_*+
+              \frac{(u^4-6u^2+3)^2}{256(N-1)}\right\}
+ +S^3E_*W_*+\{cQ+rSq\}W_*<0.
+\]
+The second polynomial gate is $W_*>0$. The third is
+\[
+ \{A/2-3D_--3D_+-2\widehat B_+\}W_*+
+         \frac{(u^4-6u^2+3)^2}{256(N-1)}>0.
+\]
+This is a rational sufficient version of the cleared-denominator
+domination hypothesis; its quadratic $B_+^2$ term still uses the exact
+factor $1/(N-1)$.
+The bound on $T_*$ is positive, so the replacement $\phi_0<.4$ and
+$s_n<S$ both have their correct direction.
+
+The retained exact acceptance condition tests these polynomials on all adjacent closed intervals
+of length $.05$ from $R$ to $4.5$. Positive Bernstein coefficients prove
+their signs on every point of each cell, including endpoints. On the
+rays $u\ge4.5$ use Lemma~\ref{ms:legacy-support:far-gaussian},
+$|\mathcal H_n(H,t)|< u^3/15+u/5+1/2$.
+The ray certificate must prove that the resulting cubic and its first three
+derivatives are strictly negative at $4.5$, and that the coefficient $Q$
+and its derivative gates permit replacing $C$ by $c$ on the whole ray.
+This excludes the whole rays. Thus, if $d\le q$, actual support is in
+$(-R,R)$, including exclusion of arbitrarily small exterior atoms and
+exterior accumulation points.
+
+\subsection{Retained support rows and their application domains}
+\label{ms:legacy-support:rows}
+The older local route specified $K=0$, $R=3.84$, $q=.19$ on
+\[
+[45,49],\ [50,59],\ [60,89],\ [90,134],\ [135,199],\ [200,\infty).
+\]
+That route used only indices at least 47; this paragraph records its
+literal support premises and makes no global exclusion claim. The last row uses $D_-=0$;
+there is no upper index restriction. A complete acceptance must reconstruct all closed $u$ cells and both exterior rays. Missing an index band
+or the infinite row is an acceptance failure.
+
+The older finite-index route specified five further support rows:
+\[
+\begin{array}{c|c|c|c}
+[N,L]&K&R&q\\\hline
+{[40,40]}&1.5&3.3&.88\\
+{[41,49]}&1.5&2.9&1.5/40\\
+{[45,45]}&.7&3.5&.8341\\
+{[46,98]}&.7&3.5&.7/45\\
+{[46,46]}&.54&3.4&79/450
+\end{array}
+\]
+The second and fourth are used only on $41\le n\le45$ and
+$46\le n\le50$, respectively. Retaining their originally certified
+upper endpoints makes their inequalities weaker, so restricting the
+application introduces no new arithmetic assertion. These are support
+implications, not yet exclusions: the separately proved and accepted
+resource calculation would supply the latter. They are not an independent
+proof of Assumption~\ref{ms:base41}.
+
+\subsection{One bounded-threshold series}\label{ms:legacy-support:series}
+Put $c_k=(-1)^k/[2^kk!(2k+1)]$, and let $(x)_j$ denote the rising
+factorial. Define the following rational polynomials:
+\begin{align*}
+ P_j(H,t)={}&\sum_{k=0}^{j+1}
+ \frac{c_k(k+1/2)_{j+1-k}}{(j+1-k)!}(H-t)^{2k+1}
+       -c_{j+1}H^{2j+3}\\
+ &+\frac{(-1)^{j+1}tH^{2j+2}}{2^{j+1}(j+1)!}
+       +\frac{(-1)^jH^{2j+1}(t^2-1)}{2^{j+1}j!}.
+\end{align*}
+In particular,
+\[
+ P_0=(t^3-3t)/6,\qquad
+ P_1=\frac{3t-t^3}{4}H^2+\frac{t^4-6t^2+3}{8}H
+                  +\frac{-t^5+10t^3-15t}{40}.
+\]
+Fix $h>0$, $E(x)=(193/71)^{\lceil x\rceil}$, and
+\[
+ B_r=\frac{7(h+r)}6E((h+r)^2/6)
+       +\left(h+r+\frac{h(r^2+1)}8\right)E(h^2/8).
+\]
+\begin{lemma}\label{ms:legacy-support:finite-series}
+For every $n\ge4$, $|H|\le h$ and $|t|\le r$,
+\[
+ \left|\mathcal H_n/\phi(0)-\sum_{j=0}^5P_j/n^j\right|
+       \le4^7B_r/n^6.
+\]
+\end{lemma}
+\begin{proof}
+Put $z=1/n$. Integration of the Gaussian exponential series gives
+$\mathcal H_n/\phi(0)=S(z)/z$, where
+\begin{align*}
+ S(z)={}&\sum_{k\ge0}c_k\{(H-t)^{2k+1}(1-z)^{-k-1/2}
+                                  -H^{2k+1}\}z^k\\
+ &+te^{-H^2z/2}+\tfrac12zH(t^2-1)e^{-H^2z/2}.
+\end{align*}
+Its constant coefficient vanishes, and expansion of the binomial factor
+gives $[z^{j+1}]S=P_j$. At $z_0=1/4$, the sum obtained by replacing
+all coefficients by their absolute-value majorants is at most $B_r$:
+use $(1-z_0)^{-1/2}<7/6$, $1/(2k+1)\le1$, and $e<193/71$.
+The latter bound follows, for example, by summing the exponential series
+through degree six and bounding the rest by a geometric series with
+ratio $1/8$. All products and rearrangements are therefore absolutely
+convergent. The discarded terms have degrees at least seven in $S$,
+so their sum at $0\le z\le z_0$ is at most $(z/z_0)^7B_r$.
+Divide by $z$ to get the result. This proves a finite uniform bound,
+including every threshold in the stated interval and every $n\ge4$.
+\end{proof}
+
+\subsection{A common contact test for radius and strip refinement}
+\label{ms:legacy-support:panels}
+Suppose $n\ge47$, $0\le C-\CE\le.7/n$,
+$d=n(C_{n-1}-C)_+\le.19$ and
+$|X|\le R_0$. A previously acquired row gives
+\[
+ \rho\le r,\quad 0\le b_l\le\beta\le b_u<1,\quad |H|\le h.
+\]
+Define $Q(t)=-|t|^3+3\rho t^2/2+3\beta t$ and
+$L_P(t)=\CE Q(t)+\phi(0)(t^3-3t)/6$.
+For $t>0$, upper polynomials for $L_P(t),Q(t)$ are
+\[
+ (1/15-.4095)t^3+1.5(.40974)rt^2+(3(.40974)b_u-.3988/2)t,
+ \quad -t^3+1.5rt^2+3b_ut.
+\]
+For $t<0$, write $u=|t|$ and use
+\[
+ (-.3988/6-.4095)u^3+1.5(.40974)ru^2+(.2-3(.4095)b_l)u,
+ \quad -u^3+1.5ru^2-3b_lu.
+\]
+These coefficient choices are valid because $b_l\ge0$ is checked first.
+On any closed cell of one sign, let $L_J$ be an upper bound for the
+first polynomial and let $Q_J\ge0$ bound the positive part of the second.
+For $j=1,2,3$, take $m_j$ to be the positive part of the largest tensor
+Bernstein coefficient of $P_j$ on $[-h,h]\times J$. For $j=4,5$, the
+absolute monomial bound
+$\sum_{a,b}|[H^at^b]P_j|h^aR_J^b$ suffices, where
+$R_J=\max_{t\in J}|t|$. The support contact is then bounded above by
+\begin{equation}\label{ms:legacy-support:paneltest}
+ L_J+\frac{.7Q_J}{47}
+ +.4\left(\sum_{j=1}^5\frac{m_j}{47^j}
+                +\frac{4^7B_{R_J}}{47^6}\right)
+ +r\left(.19S+\frac{.384(.425)}{47}\right),
+ \qquad S>\sqrt{47/46}.
+\end{equation}
+Indeed substitute the finite series in contact, split $C=\CE+(C-\CE)$,
+and use $C<.40974+.7/47<.425$. Every error retained in
+\eqref{ms:legacy-support:paneltest} is nonnegative and decreases with $n$.
+A strictly negative rational result therefore excludes the entire cell
+for every integer $n\ge47$, including atoms and accumulation points.
+
+For a coordinate strip, conditional centering gives
+\[
+ X=\ell(Y-p),\quad
+ \ell=\sqrt{(1-\theta)/(p(1-p))},\quad
+ \beta=(1-\theta)(1-2p)+\kappa,\quad |\kappa|\le\theta.
+\]
+If $p\in[p_l,p_u]\subset(0,1/2)$ and $\theta\le\Theta$, put
+$\ell_l\le\sqrt{(1-\Theta)/(p_u(1-p_u))}$.
+The forbidden strip $Y\notin(-.55,1.55)$ maps into
+\[
+ X\le-\ell_l(p_l+.55),\qquad X\ge\ell_l(1.55-p_u).
+\]
+Apply \eqref{ms:legacy-support:paneltest} between these thresholds and $\pm R_0$.
+An interval beyond the known radius is empty; an equal endpoint is a
+singleton that is still checked. If only an upper $\beta$ bound is given,
+use $b_l=(1-\Theta)(1-2p_u)-\Theta$, after checking its nonnegativity.
+
+The retained schedule lists the following conditional consequences; each
+requires the complete numerical tests just described:
+\[
+\begin{array}{l|c|c|r}
+\text{input rows}&\text{prior radius}&\text{conclusion}&\text{closed cells}\\\hline
+10\text{ central preparation rows}&3.84&|X|<2.5&1080\\
+45\text{ central rows}&2.5&-.55<Y<1.55&1431\\
+38\text{ left rows}&2.7&-.55<Y<1.55&3073
+\end{array}
+\]
+The source records respective largest contact bounds below $-.084$, $-.097$
+and $-.01658$. These are historical numerical claims, not fresh
+verification by this appendix. These implications acquire no row by themselves: each is
+used only after its input row is proved by the preceding resource step.
+The left radii are applications of the all-threshold support polynomial,
+with $(N,L,K,q)=(47,\infty,0,.19)$ and the actual moment caps
+\[
+ (r,b,R)=(1.390,.430,3),\qquad (1.2563,.3926,2.7).
+\]
+Conditional on the corresponding polynomial checks, the same heat proof
+supplies the initial radius, both left contractions, and the five finite-base rows. The bounded-threshold
+series supplies the central contraction and both coordinate strips.
+
+
+
+\subsection{What the new support replacement does and does not remove}
+\label{ms:legacy-support:retention}
+
+Section~\ref{ms:support} replaces the selected 65 support invocations in
+the proposed uniform local package when their zero-loss and ordered
+same-law moment hypotheses hold. It does not prove the positive-loss
+index-27 condition, the five positive-excess finite-band rows above, or
+any finite-base strip whose inputs have not yet been acquired. Those
+remain ancestors of a finite-base proof until an independently justified
+replacement covers their exact domains. No complete finite base, local
+exclusion or global theorem follows from the support implications alone.
+Their numerical premises require their own exact closed-cell acceptance,
+and the retained analytic chain remains subject to independent review.
