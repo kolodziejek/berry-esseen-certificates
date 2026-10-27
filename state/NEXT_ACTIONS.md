@@ -1,3 +1,26 @@
+# Next after fixed-target entry — 27 October 2026
+
+1. Read mathematics/fixed-target-v5/2026-10-27/README.md and main.pdf.
+2. Close the named sixth-order low and complete six-part high Fourier inputs
+   analytically; shared source arithmetic is not independent validation.
+3. Improve the joint moment/charge estimate on rho cell23=[173303/96000,7361/4000].
+   The present raw17.0698618559 yields resource13.9304183554. To license D<4
+   with phi_lower997/2500 at N42, need resource<11.1664. Its gamma lower cap
+   remains-1.84025; simply repeating the same update does not sharpen it.
+   The coarse constant A=10.6950063918, Fourier constant2.5463772487 and
+   absolute K1 cap5.8704858542 identify where a coherent response may help.
+4. The count-cost theorem can be joined to existing acquired domains only
+   with all other strict LOW gates and the inverse-index zero clamp retained.
+   Do not infer full acceptance from its3648sampledcells.
+5. CENTRAL19 combined response still leaves the actual-gap baseline and full
+   E_n. Do not replace these gaps by conditional-mean/Bernoulli gaps.
+6. Preserve finite-base and zero-noise obligations. No dense/native campaign
+   or certificate deletion without approval. Keep existing PR#5 draft; no merge.
+
+Next bounded reproduction, using an unused run id:
+python3 mathematics/fixed-target-v5/2026-10-27/run_checks.py next-review
+This is eight bounded checks and preservation, not a full proof acceptance.
+
 # After fourth-round proof redesign — 27 October 2026
 
 1. Review the 14-page companion and its explicit scalar-transfer premises;

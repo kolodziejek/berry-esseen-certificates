@@ -1,0 +1,32 @@
+{
+  "reviewer": "coordinating agent; visual inspection is not mathematical proof",
+  "note": {
+    "pages": 15,
+    "all_pages_inspected": true,
+    "final_changed_page_reinspected": [
+      1
+    ],
+    "pdf_sha256": "14e8b83c84d4a8856cbcba3113951cc508ec333e2b3d45ee914b0507fd37c114",
+    "observations": "Readable equations and tables, no clipping or overlap observed; final page contains verification and AI disclosure."
+  },
+  "manuscript": {
+    "pages": 158,
+    "page_text_changed": [
+      59
+    ],
+    "pages_inspected": [
+      58,
+      59,
+      60
+    ],
+    "pdf_sha256": "061650df9139a4bea76890b43915d7acea71337a9ad0a2b782691ca2de004c00",
+    "observations": "Corrected positive-gap explanation fits on page59; all other page text matches previous PDF."
+  },
+  "compile": {
+    "note": "note-build02",
+    "manuscript": "manuscript-build01",
+    "final_warnings": 0,
+    "overfull_boxes": 0
+  },
+  "portable_sources": "export01/receipt.json: 15/158 pages, exact page-text agreement after isolated no-shell-escape rebuilds"
+}

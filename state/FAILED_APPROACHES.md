@@ -1,3 +1,22 @@
+# Newly delimited failures and corrections — 27 October 2026
+
+- Three coarse initial resource updates do not close globalD<4; final5cells
+  fail. Lastcellgamma bound stays-1.84025. Increasing iteration count alone
+  does not establish progress or justify using later small-defect lemmas.
+- Per-cell support probes improve4of5highcells on tested0.01radiusgrid;
+  lastcell still needs3.84. No full Fourier recalculation was run from these.
+- A direct variance price for the complete CDF difference loses useful
+  linear cancellation; the accepted reduction retains marked-crossing terms.
+- False positive-gap phrase(t-a)(rho-t)<=rho²/4 fails at(-1,.5,1).
+  Correct t(rho-t)<=rho²/4, multiply by t-a>=0 and integrate. Same coefficient;
+  active manuscript corrected; immutable archived sources retained.
+- Feedback's circle defect is a LOWER bound on conservedD, not equal to it.
+  Corrected wording preserves numerical bound directions; no coefficient changed.
+- Integration01 omitted literal-input argv. Integration02 wrongly required
+  sparse baseline file materialization; integration03 tried unavailable promisor
+  blob lookup, whose implicit fetch failed. Exact drivers preserved. Final
+  integration04 checks tree/index plus materialized bytes without downloading.
+
 # Fourth-round rejected shortcuts — 27 October 2026
 
 - Universal domination by the same-sign Bernoulli skeleton is false for each

@@ -1,0 +1,144 @@
+{
+  "started_utc": "2026-10-27T19:46:46.155491+00:00",
+  "interpreter": "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "python": "3.12.14",
+  "driver_sha256": "c900f9d6c8a1642623709e78000a3f28b9177c41e3ac30eac8f1104c579f7830",
+  "compiler": "pdfTeX 3.141592653-2.6-1.40.27 (TeX Live 2025)",
+  "documents": [
+    {
+      "name": "companion",
+      "archive": "mathematics/fixed-target-v5/2026-10-27/source-fixed-target-v5.zip",
+      "archive_sha256": "07f730a1278a051ef953f93d74809eb06e9c4135b74547ed745348e492f8febf",
+      "member_sha256": {
+        "main.tex": "d435add30e00b73e0a045bfccd7fed20399984e1389e25d9fc993bd76dbbdab0",
+        "entry.tex": "8019f58a017922afbdc1c666cd2dca39818b4b46303f192170a5e12abda6fb93",
+        "numerical-cover.tex": "c7b50e40d6fec341f70da75aabaed5443609b8a9cc34f9c4cc10a0bb973f7298",
+        "count-cost.tex": "653464a3d72866309bfe03c5310e7a9b0d868ba13cf8747f93898e2085ecf51b",
+        "response-proof/response.tex": "274c9f75df734313cdbd34b62eb74629988bb981f3ba83e376a0b682a1a9aa1b",
+        "README.md": "f4e347969f386102d091dc095dbd66a5e45979f7314b1cd30ce1985dc1a2a77f"
+      },
+      "passes": [
+        {
+          "command": [
+            "/Library/TeX/texbin/pdflatex",
+            "-no-shell-escape",
+            "-interaction=nonstopmode",
+            "-halt-on-error",
+            "main.tex"
+          ],
+          "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/runs/fixed-target-v5-20261027/export01/companion-source",
+          "returncode": 0
+        },
+        {
+          "command": [
+            "/Library/TeX/texbin/pdflatex",
+            "-no-shell-escape",
+            "-interaction=nonstopmode",
+            "-halt-on-error",
+            "main.tex"
+          ],
+          "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/runs/fixed-target-v5-20261027/export01/companion-source",
+          "returncode": 0
+        },
+        {
+          "command": [
+            "/Library/TeX/texbin/pdflatex",
+            "-no-shell-escape",
+            "-interaction=nonstopmode",
+            "-halt-on-error",
+            "main.tex"
+          ],
+          "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/runs/fixed-target-v5-20261027/export01/companion-source",
+          "returncode": 0
+        }
+      ],
+      "pages": 15,
+      "page_text_identical": true,
+      "delivered_pdf_sha256": "14e8b83c84d4a8856cbcba3113951cc508ec333e2b3d45ee914b0507fd37c114",
+      "rebuilt_pdf_sha256": "955d2c19b0db8efdc03c3f06f6a4ff1acc2f9ae36e0b55493775e76fb8a8c721",
+      "underfull_notices": 0,
+      "warning_lines": [
+        "Package epstopdf Warning: Shell escape feature is not enabled."
+      ]
+    },
+    {
+      "name": "manuscript",
+      "archive": "manuscript/arxiv-v1/source-arxiv-v1.zip",
+      "archive_sha256": "551af3e97fc0b18b1a31980965b18dc661f144e033a72ae4bca878965d8349a7",
+      "member_sha256": {
+        "main.tex": "2af64394bafdf1cc73ea0fc59a823798315cac02397329e709d530ab7612d8cc",
+        "sections/01-introduction.tex": "5b16fe151c7a18ec967a266c39c6c728f548e60e04c93b688527549ade8cfc64",
+        "sections/01b-guide.tex": "9634928165ffca98575a2b603124135c34448b1d5f88a6cca689d8f97b788fd4",
+        "sections/02-extremizers.tex": "618f7130857074f8e6ecbb157c3389900cd666c18d2aaae0b8828234a551fdd4",
+        "sections/02b-moment-domain.tex": "13e4e29cc68b87ed2e07be15953b1c027eece2d0bb5ca5711419e4f0af95225e",
+        "sections/03-smoothing.tex": "ae46b6ce551df67b073b754cd5212f4ba467368da39d0cabfca57e29d8967ab6",
+        "sections/04-support.tex": "562b9ed903f996f643abef552314b2a70a6e250f9f7d01e5a589c18a9e53dfc5",
+        "sections/05-geometry-counts.tex": "2112ef0d4b449b282b07b21b9fb6d90c9507488c19dccd1d794929ed6cd04441",
+        "sections/05b-conserved.tex": "a559e01609da0522bbfab283dea1cacbcb342d9af5795c5dca043da819f3abfb",
+        "sections/05c-counts.tex": "bcb3417380015e75d19ad6dc799b8fc2f403c3f2f8727471fbba83bc8e27d632",
+        "sections/06-resources.tex": "86833630570c7a1a4d2d88aa425adab1b25fac09154a3a1ed1266023631de932",
+        "sections/07-curvature.tex": "33a0fb5105059945dd6c562497e1b6a40a6e4b700bf048984ed63ca22a208ddf",
+        "sections/08-certificates.tex": "703549b3b298a4e8025e2adeb443f1798dc98a450bb34d7b24b47b02c2a9dcbf",
+        "sections/09-discussion.tex": "091bf4f61e2e821f1ddfec5b345263c875ba3f17be85fa3f56b939f495b20988",
+        "appendices/finite-analysis.tex": "e6c3ed19f9fb2ff1923542962079a68c2aa10bfbaf371b4ea1bd23e162611af3",
+        "appendices/finite-support.tex": "2feea5ffd01c370b455c2b3530a8f51b7002c1eaccf13722d34299bdebf04d3a",
+        "appendices/fourier-analysis.tex": "0274a491a12fec13d87a391ce88184cc7229210168fc72bc88974e5382670a1f",
+        "appendices/local42-refinements.tex": "a2ea8efdee5f7316aea51dfc3284df01b31c2536a9ea5b3f2b3cdd32a5d60b8f",
+        "appendices/normalization.tex": "f87e39c495e57723a3b9806fa39df78d3753a973fed1f16579344f0eedf8440f",
+        "appendices/uniform-bridge.tex": "3535cdd8b73b6296af0e6799b4a9b6d4789a5525cfd9502f513a8f1a1e2d456a",
+        "references-added.bib": "e1de5cfc75f4314c8741993ff2faa7bc6e3681c90f6ce25eacddb42fac91e92c",
+        "references-classical.bib": "d572142ac859fb2ff3a2e4679e33869cb54aa41320df60f23139b149a0a94084",
+        "references-modern-a.bib": "6375a56e09258d12e6ff5b79eb240d720335f9e9030fe9ba4306a5b210bf304a",
+        "references-modern-b.bib": "508f3d4000fd3113a26b49647f8a166b00f313e082c83090c51fde256cd475c2",
+        "main.bbl": "4be93d1b3dbfc51f4cdb1a9fb39d19489b72d08a338ada0acced89bbb3e7e518",
+        "README.md": "b2cbec8bfe48b661ff2d97930c6bde9b042d1a757d9f16f68d1228b6b44a18ad"
+      },
+      "passes": [
+        {
+          "command": [
+            "/Library/TeX/texbin/pdflatex",
+            "-no-shell-escape",
+            "-interaction=nonstopmode",
+            "-halt-on-error",
+            "main.tex"
+          ],
+          "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/runs/fixed-target-v5-20261027/export01/manuscript-source",
+          "returncode": 0
+        },
+        {
+          "command": [
+            "/Library/TeX/texbin/pdflatex",
+            "-no-shell-escape",
+            "-interaction=nonstopmode",
+            "-halt-on-error",
+            "main.tex"
+          ],
+          "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/runs/fixed-target-v5-20261027/export01/manuscript-source",
+          "returncode": 0
+        },
+        {
+          "command": [
+            "/Library/TeX/texbin/pdflatex",
+            "-no-shell-escape",
+            "-interaction=nonstopmode",
+            "-halt-on-error",
+            "main.tex"
+          ],
+          "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/runs/fixed-target-v5-20261027/export01/manuscript-source",
+          "returncode": 0
+        }
+      ],
+      "pages": 158,
+      "page_text_identical": true,
+      "delivered_pdf_sha256": "061650df9139a4bea76890b43915d7acea71337a9ad0a2b782691ca2de004c00",
+      "rebuilt_pdf_sha256": "86d93300598e0f2063ce7d35848eedf51cff42cf5d5a8b3d7cf2adfbcff46593",
+      "underfull_notices": 0,
+      "warning_lines": [
+        "Package epstopdf Warning: Shell escape feature is not enabled."
+      ]
+    }
+  ],
+  "scope": "Portable TeX reproduction and page-text comparison, not proof validation.",
+  "status": "PASS_PORTABLE_DOCUMENT_REBUILDS",
+  "completed_utc": "2026-10-27T19:46:54.582776+00:00"
+}

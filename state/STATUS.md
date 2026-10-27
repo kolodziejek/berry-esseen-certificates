@@ -1,3 +1,26 @@
+# Fixed-target continuation — 27 October 2026
+
+Existing draft PR #5 is the review target; branch manuscript/strategy-v4-20261027.
+Starting point78f0b7c; reference6346fc1 remains preserved. New proof:
+mathematics/fixed-target-v5/2026-10-27/main.pdf (15pages), with portable sources.
+The158page manuscript has a corrected positive-gap explanation on page59.
+
+| Result | Mathematical status | Execution status |
+|---|---|---|
+| Initial rho/beta/support entry without an actual-score cap | Derived from fixed-target contact, predecessor and external structural inequality | Exact checks and independent scoped review |
+| Adaptive first license and R_c/rho<10 on24closedcells | Conditional on retained complete Fourier primitives | Fresh exact PASS |
+| Three resource updates, D<=4.9901197720 and nD<=209.585030422267 | Conditional scalar implication | Fresh exact PASS; five cells still fail D<4 |
+| Disjoint/quartic count cost | Locally proved; independently rederived | Constructor and independent bounded PASS |
+| Combined response on CENTRAL19 | Proved under explicit same-law domain and weighted-gap hypotheses | Exact stationary/sign/actual-law PASS |
+| Full acquisition, BASE41, LOCAL42, all Fourier estimates | Still required | No complete native/Lean acceptance |
+
+Eight integrated bounded checks pass (integration04). All2748reference entries
+preserved:182materialized bytes checked and2566sparse blobs preserved in tree/index.
+Two portable PDFs compile cleanly and reproduce with identical page text; all15
+note pages and manuscript58–60 inspected. No certificate/target/production edit,
+heavy campaign, main push, upstream mutation or merge. Review recommends author
+review as research progress, not acceptance of the full conjecture. Keep PR draft.
+
 # Fourth-round proof redesign — 27 October 2026
 
 Fork main starting point ca4943a (PR #4 merged); original baseline 6346fc1

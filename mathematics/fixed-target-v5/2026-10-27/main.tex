@@ -1,0 +1,76 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs,booktabs}
+\usepackage[hyphens]{url}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\R}{\mathbb R}
+\newcommand{\CE}{C_{\mathrm E}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\title{Initial acquisition and sharper count comparison\\
+for fixed-target Berry--Esseen excess}
+\author{Bartosz Ko{\l}odziejek \and Kacper Rodziewicz}
+\date{27 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We continue the fixed-target approach to the sharp iid Berry--Esseen
+problem. The first support and moment bounds use fixed-target contact,
+an external structural inequality and the sharp predecessor bound.
+No upper bound on the actual score is needed. A moment-sensitive
+Gaussian-weight condition then permits a small
+complete scalar cover of the initial moment interval. Retaining the phase
+cost improves its defect bound, although the remaining bound is too large
+for the next general contraction step. Separately, disjoint crossing events
+and a fourth-moment estimate reduce the cost in the conditional-count
+comparison. A combined moment response gives a further conditional
+improvement on one central domain. We give the new proofs and distinguish
+them from the retained Fourier estimates, domain-acquisition premises and
+finite-base obligations. No complete sharp upper bound is claimed.
+\end{abstract}
+
+\paragraph{How the pieces fit.}
+The earlier companion establishes attainment, contact and conservation for
+the excess $\sqrt n(F_n-\Phi)-\CE\rho$. Here we first make its initial
+entry quantitative, then calculate what that entry actually yields. The
+count-crossing argument and the common moment response are separate local
+improvements; neither can be used before its stated domain is acquired.
+The proof of each implication is given below. The low- and high-frequency
+inequalities named in Section~\ref{v5entry:raw} remain explicit analytic
+inputs, as in the full manuscript. Exact evaluation of their formulas does
+not independently prove Fourier inversion or their uniform remainder bounds.
+
+The external affine inequality used for initial entry is Shevtsova's
+2013 structural bound, valid for every sample size; see
+\emph{Informatics and its Applications} \textbf{7}(1), 124--125,
+\url{https://www.mathnet.ru/eng/ia252}. It is applied after variance
+normalization, where the third-moment sum is $\rho/\sqrt n$ and the sum of
+cubed standard deviations is $1/\sqrt n$. Its uniform bound also applies
+to closed CDF values by taking one-sided limits.
+
+\input{entry}
+\input{numerical-cover}
+\input{count-cost}
+\input{response-proof/response}
+
+\paragraph{Research and verification record.}
+The accompanying source files contain exact checkers, source locations,
+input hashes, failed controls and fresh execution records. Independent
+review rederived the count-cost conclusion without importing its
+constructor. The coordinating review checked the entry and response
+derivations and the order of the numerical implications. These are scoped
+mathematical reviews, not a formalization or an end-to-end certificate
+acceptance. Existing certificates and their original targets are preserved.
+
+\paragraph{Use of AI.}
+AI systems were used extensively in developing and checking the arguments,
+writing the programs, and drafting this note. The proofs and limitations
+are presented for author and independent mathematical review; agreement
+between AI systems is not evidence beyond the arguments and checks shown.
+\end{document}

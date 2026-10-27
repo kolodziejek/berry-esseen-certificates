@@ -29,7 +29,8 @@ the binomial mass factor, and the zero-noise case. The complete inverse-index
 correction must be clamped at zero before replacing `1/n` by `1/N`.
 
 The old source comparison is in
-`manuscript/arxiv-v1/appendices/local-comparison.tex`, and the pinned
+`manuscript/arxiv-v1/appendices/fourier-analysis.tex:4024` and
+`manuscript/arxiv-v1/appendices/local42-refinements.tex:286`, and the pinned
 `central42_v2/central42_kernel.py` and `left42_final/central42_kernel.py`
 inside `verification/finite-tail/sources/backend.zip`. The checker reads
 their data through the earlier guarded helper

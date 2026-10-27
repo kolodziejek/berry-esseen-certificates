@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/manuscript/arxiv-v1/main.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/runs/fixed-target-v5-20261027/manuscript-build01/build",
+    "--json"
+  ],
+  "python": "3.9.6",
+  "returncode": 0,
+  "elapsed_seconds": 6.175903542,
+  "main_sha256": "2af64394bafdf1cc73ea0fc59a823798315cac02397329e709d530ab7612d8cc"
+}

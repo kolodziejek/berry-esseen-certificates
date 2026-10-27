@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v5/2026-10-27/cell_check.py", line 164, in <module>
+    need(len(sys.argv)==2,'one literal input file')
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v5/2026-10-27/cell_check.py", line 28, in need
+    if not ok: raise ValueError(message)
+ValueError: one literal input file

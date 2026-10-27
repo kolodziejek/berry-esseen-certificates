@@ -1,3 +1,30 @@
+# Fixed-target continuation DAG — 27 October 2026
+
+Attainment/contact (strategy-v4/excess.tex) + nonnegative excess + C_(n-1)<=CE
++ external0.3031(rho+0.646) bound + n>=42
+ -> initial rho<7361/4000, |beta|<321/500, support|X|<96/25 (entry.tex).
+Support + actual-law moment inequalities -> M4/M5/M6 ceilings and real iid event.
+Those ceilings/event + complete low/high Fourier premises + exact raw identity
+ ->24cell raw R_c/rho<10 (cell_check.py), conditional on analytic primitives.
+Raw T<N*c_lower*rho_lower + conservation,D>=0,leakage>=0,excess>=0
+ ->positive phase coefficient,density floor,unweighted resource.
+Same RAW T ->extra H²curvature; resource U ->nD and D ceilings.
+Do not substitute U into the raw-density edge. D>=sqrt10rho-gamma-6m,
+not equality. Three ordered updates still leave5cells outsideD<4.
+
+Same-law conditional-count coupling + c_gap>1/2 + chi<2 + acquired A,T
+ ->disjoint quadratic maximum and min(cubic,quartic) large-crossing price.
+Its local join also requires all old linear/mass/event/normalization gates,
+zero clamp when n is replaced by N, and a complete signed cover.
+
+CENTRAL19 simultaneous actual-law bounds + weighted gap budget
+ ->common moment-response bound, retaining original J,J1,J2 and full E_n.
+The panel's acquisition for a fixed-target optimizer is NOT inferred from
+historical ratio-optimizer acquisition. No resulting complete cell exclusion.
+
+Full BASE41 + full transported strict tail exclusion still required for global
+sharp theorem. No finite recurrence consumer or production certificate removed.
+
 # New conditional fixed-target route — 27 October 2026
 
 Genuine finite base -> least failure -> two sharp predecessor caps

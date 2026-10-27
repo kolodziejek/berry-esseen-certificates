@@ -1,0 +1,139 @@
+{
+  "started_utc": "2026-10-27T19:42:45.356997+00:00",
+  "python": "3.9.6",
+  "optimization": 0,
+  "driver_sha256": "75837be98d874e228942ee51eca4d12485abf600adae59e03198e1b6eb1cd889",
+  "checks": [
+    {
+      "name": "entry",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v5/2026-10-27/entry_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.020485084,
+      "script_sha256": "02e5036e3bb0a618e261afe593b6718feec178d1dd688ffcc66596d887e212f7",
+      "stdout_sha256": "e37ee415a60e956881781978013d640615fbaae907522da46ce0e78259d59b73",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "first-cover",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v5/2026-10-27/cell_check.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v5/2026-10-27/cell-input.json"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.5598785,
+      "script_sha256": "6827a67e64cfea5b89d823ffd34821fa942b3c3add702ee9721c89d65f443aa5",
+      "stdout_sha256": "7525713bd06a30b9c13693d01949d4f186890128eed3432771953ef9eafef082",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "refinement",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v5/2026-10-27/cell_refine.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.567646625,
+      "script_sha256": "5f1c4b1b285664f8ccb6c1c3da6a595616137353cfdf3c527f239d0fbed01f64",
+      "stdout_sha256": "a9add32ec6e3af8b71c1701b5dd3ac83f9066601005cc4c8f13e815bac73a726",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "count",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v5/2026-10-27/count_cost.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 1.088343292,
+      "script_sha256": "68c41af31f87b62a9c195c92aeae3b204c6f6b8bfffa5dbb7f0f799dfe26420d",
+      "stdout_sha256": "f5d49284b59d0d79e6bde88dbc75368e222a7dd99f55e02d6616d0c177a4fdc6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "count-independent",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v5/2026-10-27/count_review_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.6828637089999998,
+      "script_sha256": "4313dbfd545bd7ea6710234fc398e6d8bb67c906348de448e008a2c1ef5bff5b",
+      "stdout_sha256": "3c9b9f0aeab985ea4854c9fd24d707311ba6bf8e99f4e30e12f8385081df11d7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "response",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v5/2026-10-27/response_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.05536454199999996,
+      "script_sha256": "1caeb8f095a72363eee35da92167c01c0a9fb11ad70b24965fd4aceafa464327",
+      "stdout_sha256": "68a8b97b7fc0a84082a636ba74a0344f95c07c827fa7d11e14da99b56dd8c6f7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "support-probe",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v5/2026-10-27/cell_support_probe.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.0299017909999999,
+      "script_sha256": "7111f630a361bf6d942163e41a7b7a068ef9edc4d4d9a1c24379b801ef0e0a2f",
+      "stdout_sha256": "1365620d9d55ed43ee923f3519cfbfaad75f6c53f9b19583ca7e8b39dd10b600",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "manuscript-sources",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/manuscript/arxiv-v1/tools/check_sources.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.029414709000000094,
+      "script_sha256": "31e77ebb57e78a45f0050820338a374a7d692dd7cd19112fe64c9637d400b009",
+      "stdout_sha256": "45c5c1d859ead6f94ff62640c7a67eb08e87213c6d22553e6f32ff7b03bc0973",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "source_sha256": {
+    "mathematics/fixed-target-v5/2026-10-27/cell-explore.py": "faded3e728c070359bd487a1fef6f47eef619f8287add68aaf426269393f5398",
+    "mathematics/fixed-target-v5/2026-10-27/cell-input.json": "617f12d1dfa7521a6b06ca11c9ed195e4a576c069bdb21a81b6f383641c90ea2",
+    "mathematics/fixed-target-v5/2026-10-27/cell-sources/accept_initial42.py": "aa759c74fbd9ad39618264ef51b961f13c7833faa77a7f7b33309c27a7cee032",
+    "mathematics/fixed-target-v5/2026-10-27/cell-sources/high_window_core.py": "53e181be63852e21abc3f44191cce7237c46d9e9d7868d3b6b94fccb606c7232",
+    "mathematics/fixed-target-v5/2026-10-27/cell-sources/kernel.py": "d71f58b7527c3cf6d2146d816e5d124f6f331d1b153e5aaedee5182707647f12",
+    "mathematics/fixed-target-v5/2026-10-27/cell-sources/local_signed_core.py": "f0c2df790b794413e7fd08c4f3fc20f79c15c27a6456c8eae5013b96eb093c11",
+    "mathematics/fixed-target-v5/2026-10-27/cell-sources/provenance.json": "fc4089ecb959a69d729732519311c6f2d367af0d3b66cf1d44a46fc11fb4f150",
+    "mathematics/fixed-target-v5/2026-10-27/cell_check.py": "6827a67e64cfea5b89d823ffd34821fa942b3c3add702ee9721c89d65f443aa5",
+    "mathematics/fixed-target-v5/2026-10-27/cell_refine.py": "5f1c4b1b285664f8ccb6c1c3da6a595616137353cfdf3c527f239d0fbed01f64",
+    "mathematics/fixed-target-v5/2026-10-27/cell_run.py": "7964b9da80f72f2abe2499c56e50fa7af3460c74ba4cdd1b2e10d16377ab245c",
+    "mathematics/fixed-target-v5/2026-10-27/cell_support_probe.py": "7111f630a361bf6d942163e41a7b7a068ef9edc4d4d9a1c24379b801ef0e0a2f",
+    "mathematics/fixed-target-v5/2026-10-27/count-cost.tex": "653464a3d72866309bfe03c5310e7a9b0d868ba13cf8747f93898e2085ecf51b",
+    "mathematics/fixed-target-v5/2026-10-27/count_cost.py": "68c41af31f87b62a9c195c92aeae3b204c6f6b8bfffa5dbb7f0f799dfe26420d",
+    "mathematics/fixed-target-v5/2026-10-27/count_review_check.py": "4313dbfd545bd7ea6710234fc398e6d8bb67c906348de448e008a2c1ef5bff5b",
+    "mathematics/fixed-target-v5/2026-10-27/entry-main.tex": "49f337f2a01a73283fa03016425e215c343a3da8cec33a9e452ebf3480f0910f",
+    "mathematics/fixed-target-v5/2026-10-27/entry.tex": "8019f58a017922afbdc1c666cd2dca39818b4b46303f192170a5e12abda6fb93",
+    "mathematics/fixed-target-v5/2026-10-27/entry_check.py": "02e5036e3bb0a618e261afe593b6718feec178d1dd688ffcc66596d887e212f7",
+    "mathematics/fixed-target-v5/2026-10-27/main.tex": "27da9da3e859ca5aef71acdb1fa07af60f9fbc1cdc94f7e07edf56268441cb37",
+    "mathematics/fixed-target-v5/2026-10-27/numerical-cover.tex": "c7b50e40d6fec341f70da75aabaed5443609b8a9cc34f9c4cc10a0bb973f7298",
+    "mathematics/fixed-target-v5/2026-10-27/response-proof/main.tex": "0eebb2b4c648c232fc961cc78e4f1d7f744894830c3540638eb5524469819ea2",
+    "mathematics/fixed-target-v5/2026-10-27/response-proof/response.tex": "274c9f75df734313cdbd34b62eb74629988bb981f3ba83e376a0b682a1a9aa1b",
+    "mathematics/fixed-target-v5/2026-10-27/response_check.py": "1caeb8f095a72363eee35da92167c01c0a9fb11ad70b24965fd4aceafa464327",
+    "mathematics/fixed-target-v5/2026-10-27/run_checks.py": "75837be98d874e228942ee51eca4d12485abf600adae59e03198e1b6eb1cd889"
+  },
+  "scope": "Bounded arithmetic/source checks, not complete Fourier or local acceptance."
+}
