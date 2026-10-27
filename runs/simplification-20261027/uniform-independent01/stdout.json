@@ -1,0 +1,88 @@
+{
+  "status": "PASS_BOUNDED_INDEPENDENT_UNIFORM42_DIAGNOSTICS",
+  "mathematical_status": "Exact identities and countermodels to omitted hypotheses; conditional analytic review is separate.",
+  "execution_status": "Fresh stdlib-only diagnostic; no archived code imported or executed.",
+  "source_bindings": [
+    {
+      "path": "work/toward40_20261007/audit43/capsule/proofs/cutoff44.tex",
+      "sha256": "41af93935e4ebe64e38670bab222b1f8447b5dd7d95b3dc205ffc97236114f2b",
+      "lines": 332
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/proofs/joint_resource.tex",
+      "sha256": "afda69759618eba2a0671e66bac0afc27046e9dd596e8bff5c9e24c29f3fcc44",
+      "lines": 270
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/proofs/local42_signed_gaussian_v2.tex",
+      "sha256": "894495dd297f25ea9e68741dfefdbf7ba0fcaa217047db301f3bbdea6cdc4143",
+      "lines": 129
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/proofs/signed_cubic_repair.tex",
+      "sha256": "ad8360b6af1abe479b84a1070b4ac91a277c514051d78d7a71b5a3455e9e2696",
+      "lines": 158
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/sperner_kernel.py",
+      "sha256": "21249fe117c6756a7a84af481dea2c5a490f9c66013c331cc998ab6828e1bb08",
+      "lines": 143
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/high_window_core.py",
+      "sha256": "53e181be63852e21abc3f44191cce7237c46d9e9d7868d3b6b94fccb606c7232",
+      "lines": 40
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/package_audit/left42_exact/paired_extended.py",
+      "sha256": "9fbfdee44f42fe29caa3ee049d8b60d84670c8b4f5d53c147b6fbe280ccb5998",
+      "lines": 54
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/package_audit/left42_exact/accept_acquisition.py",
+      "sha256": "a565247f6587f3bb07dd67ef2100d08f70aebbe7543937f1ab98f8d09cf31eb6",
+      "lines": 109
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_final/central42_kernel.py",
+      "sha256": "d025529aa2690c3cfc0f1c34a6af385d6fa69db8e069543057f29475cbb133c3",
+      "lines": 219
+    },
+    {
+      "path": "work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_tiny_final/normalization_piecewise42_v2.py",
+      "sha256": "acc4055234a2629298cb665b12474ba5a9f35ed979dd3d238fffe9afd4aa5708",
+      "lines": 152
+    }
+  ],
+  "high_window_derivative_coefficients": [
+    "4",
+    "-10",
+    "-22",
+    "-13",
+    "-2"
+  ],
+  "high_window_endpoint": "-11/128",
+  "tangent_identity": {
+    "(1, 2, 0)": 1,
+    "(1, 0, 2)": 1,
+    "(1, 1, 1)": -2
+  },
+  "scalar42": {
+    "excess": "3003/10250",
+    "own_score": "73/175",
+    "own_reserve": "191/35000"
+  },
+  "negative_controls": [
+    "dropping inverse-index positivity reverses the floor bound",
+    "positive event bracket cannot use a mass lower bound for an upper estimate",
+    "negative cubic bracket requires the upper score multiplier",
+    "Bernoulli interval [0,1] has mass1, exceeding max atom1/2 at width equal to step",
+    "unweighted defect alone does not yield the claimed uniform noise ceiling"
+  ],
+  "limitations": [
+    "No native gate replay",
+    "No analytic premise acceptance",
+    "No generic parameter acceptance API",
+    "No full BASE41 proof"
+  ]
+}

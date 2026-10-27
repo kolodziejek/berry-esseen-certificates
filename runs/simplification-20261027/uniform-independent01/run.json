@@ -1,0 +1,24 @@
+{
+  "started_utc": "2026-10-27T09:59:16.143270+00:00",
+  "finished_utc": "2026-10-27T09:59:16.198725+00:00",
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/review-uniform",
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "mathematics/simplification/2026-10-27/reviews/check_uniform_independent.py"
+  ],
+  "python_version": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "return_code": 0,
+  "reviewed_head": "341c1e3f77806a4aaa178051f6f8c80c13bd63ac",
+  "source_baseline": "6346fc1b4432bc5982822aa696eb566ed9e1e1ee",
+  "input_sha256": {
+    "mathematics/simplification/2026-10-27/reviews/check_uniform_independent.py": "4e2fcaf65a7fa9f3bea6dd81dd88c37c2ea6247c8a40ecabae03f825e401f73c",
+    "mathematics/simplification/2026-10-27/uniform42.md": "bf4d9c4ea5965efd992e955fd747fd3da2a2de924876232b402eb949d7daa427",
+    "mathematics/simplification/2026-10-27/finite-entry.md": "9144e172b2391b2cd2df41b56901f4f68e69f5e1b950420a34054d927645de0b",
+    "mathematics/simplification/2026-10-27/base-closure.md": "e90a1c0c14773031273dd2df52674ff1129e42822fd8a2021c7f8bdd389ab719",
+    "paper/analytic-supplement.txt": "dad4a3558b01bda4acfdfc9120a50ecbcd7a6f2389886ba3ce72a6602ec39018",
+    "verification/finite-tail/sources/backend.zip": "43b606138f826b47e3f174957088285349aebc82a928627e9e66fe370471be52"
+  },
+  "stdout_sha256": "169ab4b356a14dbb453a6594bc17ff677db8bcb88cd9b144bfdae9ef839d9be4",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "Fixed stdlib-only independent algebra diagnostics and source bindings; no inherited programs executed."
+}
