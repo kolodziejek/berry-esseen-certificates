@@ -1,37 +1,39 @@
 # Research status — 27 October 2026
 
-Fork only: kolodziejek/berry-esseen-certificates. Immutable baseline
+Fork only: kolodziejek/berry-esseen-certificates. Baseline
 6346fc1b4432bc5982822aa696eb566ed9e1e1ee, tag audit-baseline-20261027.
-Original PR #1 was merged externally at2026-10-27T09:02:18Z, head ac7bd06,
-merge2c418e73dc93b0622ab2b4e95ba042201d37604d. The agent did not merge it.
-Existing draft PR #2, audit/independent-review-20261027, now consolidates the
-requested follow-up audit reviews and the new simplification research.
-No merge is authorized without explicit user approval.
+PR#1 was merged externally (agent did not merge); follow-up PR#2 remains
+open draft. No merge is authorized without explicit user approval.
 
-Read mathematics/simplification/2026-10-27/README.md and reviews/REVIEW.md.
-New exact support certificate:14 closed intervals,672 rational Bernstein
-coefficients>1/4,84 strict ray signs, covering65 original support calls at all
-n>=42 under zero predecessor loss. Independently reconstructed directly in
-Bernstein basis with exact coefficient agreement. Actual preceding resources
-and contact/heat analysis remain premises. Old finite support positivity is
-unnecessary for this alternative proof; old files remain unchanged.
+Current result index: mathematics/reduction2/2026-10-27/README.md.
+Earlier audit: mathematics/audit/2026-10-27/; first simplification:
+mathematics/simplification/2026-10-27/README.md. Original certificates and
+production programs are unchanged. No upstream changes or expensive runs.
 
-New conditional theorem: genuine BASE41 + complete uniform zero-loss LOCAL42
-and equality-compatible attainment imply C_n<C_E for every n>=42. Scalar
-entry gives n(C_n-C_E)<3003/10250<.3, own cap73/175<.4226, both deleted
-caps<.4253 and zero loss. All non-support resource/confinement/local gates
-remain. Independent support, executable, uniformity, grouped and composition
-reviews found no blocking defect at this scope.
+Mathematical status: locally derived conditional reductions. The new support
+proof covers all65 zero-loss calls for actual n>=42 using two fixed boundaries,
+one monotone polynomial on a continuous radius family, and18 common ray signs.
+It needs no Bernstein certificate or signed fifth-order tangent. Actual moment
+acquisition, attained contact and derivative/Fourier norm inputs remain.
+Exact LOW curvature supremum needs at most3 candidates instead of64; a proved
+zero clamp preserves the original strict target and all other gates.
+Retaining n(C-C_E)rho yields empty LEFT0/TINY, LEFT5/MID, LEFT8/LOW domains,
+truncates LEFT10/13 and CENTRAL28 noise, and saves4 signed profile evaluations.
+No acquisition/confinement ancestors are removed. The candidate upper module
+count becomes238->171->169 legacy tasks (19 native+150 LOW), before new joins.
+This is not whole-repository savings or a measured runtime estimate.
 
-Candidate upper-index task reduction:238 ->171 legacy tasks (19 native+152
-LOW), bypassing12 finite ceiling/special43 and55 separate tail tasks, before
-new joins. This is neither measured runtime nor a closed whole-repository
-saving. Repeated LOW arithmetic is a separate unimplemented opportunity.
+Execution status: bounded constructor checks and independent support/curvature
+checks pass; resource review uses separate outward arithmetic. The one-pass
+prototype's synthetic fixture passes with152 vs304 evaluator calls and
+identical old bytes/summaries. Its native path was not executed. It pins the
+old152-row contract and is NOT composable with changed formulas/150 rows
+without a newly named complete acceptance contract. Full LOCAL42 remains
+unaccepted. No full native LOW or resource certificate was replayed.
 
-Execution: new bounded exact/structural checks pass; five-page TeX/PDF compiled
-and visually inspected. No native program or expensive campaign run. No full
-LOCAL42, BASE41, global acceptance or conjecture claim. Missing current base
-provider body and old tail-dependent base inventory prevent provider closure.
-Full original audit/reviews remain in mathematics/audit/2026-10-27/.
-Recommendation: ready for merge as conditional research material after explicit
-approval; not ready to replace production acceptance. PR #2 remains draft.
+The nine-page proof source/PDF is in reduction2/2026-10-27/proof/; compiled
+with TeX Live and all pages visually inspected. Small exact evidence, versions,
+hashes and preserved failed/corrected diagnostics are in runs/reduction2-20261027/.
+Independent review outcome and final integration checks are indexed in
+reduction2/2026-10-27/reviews/REVIEW.md. Recommendation is limited to merging
+reviewed research/audit material after explicit approval, not production proof.

@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/second-reduction/mathematics/reduction2/2026-10-27/proof/main.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/second-reduction/runs/reduction2-20261027/latex03/build",
+    "--json"
+  ],
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/second-reduction",
+  "returncode": 0,
+  "elapsed_seconds": 0.9676748749999999,
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "input_sha256": "bab69cdfef8340cac53ca35b0d535d4e40615ea91ec7607afbeeb65c13b6b603",
+  "stdout_sha256": "e08e91fdcee20d58dc2d576b76d3c7f4156f5fd859380e5a63dde1ad590a0f52",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

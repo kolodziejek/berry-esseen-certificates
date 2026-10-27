@@ -1,5 +1,11 @@
 # First-failure redesign: result and review map
 
+Continuation: [further reductions and review](../../reduction2/2026-10-27/README.md)
+give an elementary support alternative without Bernstein certificates,
+an exact LOW curvature maximum, conditional pruning to150 LOW producers,
+and a separate one-pass protocol prototype. The results below remain valid
+as the first reduction; all original certificates and proof routes remain.
+
 **The new concrete result is an all-index zero-loss support certificate with
 14 closed intervals and672 exact rational coefficients.** It replaces the
 old finite42–48 support-sign predicates in a new conditional proof. Combined

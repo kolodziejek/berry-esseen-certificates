@@ -1,36 +1,40 @@
 # Dependency checkpoint — 27 October 2026
 
-New proposed upper-index route:
+Proposed upper-index route, retaining exact hypotheses:
 
-    genuine BASE41 (or terminal sharp40/41 for the strict-tail statement)
-      + support-free Gaussian smoothing
-      -> least n>=42 with C_n>=C_E has zero predecessor loss,
-         n(C_n-C_E)<.3, own cap .4226, both deleted caps .4253
-      + retained equality attainment/contact/moment/heat inputs
-      + grouped14-interval support certificate for each ordered acquired tuple
-      -> initial3.84 and all64 LEFT support radii, uniformly n>=42
-      + complete INITIAL/LEFT/CENTRAL/complement resources
-      + floor42 confinement, profiles, weighted joint gap/noise resource
-      + complete TINY/MID/152LOW and exact zero-noise Bernoulli
-      -> strict tail42; BASE41 adds weak global upper bound
-      + independent lower approximation -> sharp universal constant.
+    genuine BASE41 + support-free smoothing + equality-compatible attainment
+      -> least n>=42 with C_n>=C_E: zero predecessor decrement,
+         n(C_n-C_E)<3003/10250, own cap73/175, both deleted caps<.4253
+    zero loss + attained same-law contact + actual ordered moment resources
+      + Gaussian derivative norms through5 + direct derivative bound
+      -> elementary three-case support for all65 calls at actual n>=42
+    complete original resources/confinement + signed phase quadratic envelope
+      + retained score-excess charge + original same-law joint geometry
+      -> tighter coherent inward/noise intercepts, specified empty sectors
+    full whole-count comparison + original LOW gates
+      -> exact3-candidate curvature + zero-clamp transport of strict target
+    surviving TINY/MID/150LOW + zero-noise Bernoulli + new complete join
+      -> conditional LOCAL42; first failure then gives strict tail42.
 
-Precise hypotheses/source locations: mathematics/simplification/2026-10-27/
-finite-entry.md, zero-loss-support.md, grouped-support.md, uniform42.md,
-local-cover.md and base-closure.md. Both support proofs are available; the
-grouped alternative removes old finite support signs as premises.
+Read mathematics/reduction2/2026-10-27/{elementary-support,local-kernel,
+tighter-resources}.md for exact statements, source hashes/lines, and edge
+hypotheses. Earlier uniform42.md carries all-index interface obligations.
+No truth of actual acquired resources follows from static JSON/hash binding.
 
-Conditional bypasses in this NEW upper module:6 finite positive-ceiling/support
-+6 special43 bootstrap +55 separate tail tasks. Retain19 native+152LOW legacy
-obligations before new joins. All old production collectors remain unchanged.
-No whole-repository removal: current BASE41 provider is not fully available;
-old62F base join explicitly has tail43/early/single39 parents. Current A17
-mathematical contract uses genuine38/39 instead, but a contract is not its
-missing implementation. Original lower-base and shared consumers remain.
+Removals for this NEW alternative support argument: old radial Bernstein,
+new14-group672-coefficient support positivity, fifth-order signed identity,
+fourth-derivative tangent and its domination gates. Contact, scale inequality,
+initial moment inequalities, actual acquisition and remaining local work stay.
+Resource pruning occurs only AFTER acquisition; no ancestor is removed.
 
-The earlier BASE46/48+LOCAL47 audit remains valid conditional context, including
-its retained finite coarse-ceiling consumers. New argument changes the route;
-it does not retroactively erase those edges or validate old global markers.
-Any defect in a retained analytic or numerical premise propagates to the new
-uniform theorem and global composition. Arithmetic/source identity alone does
-not establish physical iid resources, attainment or full proof acceptance.
+Candidate upper-module legacy count238->171->169, before new joins; final169
+is19 native+150 LOW. Four signed profile calls and TINY/MID sectors are internal
+work, not additional whole task savings. Current BASE41 provider closure and
+shared consumers remain unresolved; no whole-repository dead-code conclusion.
+
+Separate one-pass prototype: original152 fresh outputs + original pinned
+serialization/coverage/indices + binder controls -> same old output contract
+without duplicate evaluation. Changed curvature/resources/150 labels require
+a new contract; old byte pins intentionally reject them. Native path untested.
+Any defect in retained analytic/numerical premises propagates to all downstream
+claims. Global sharpness also requires the independent lower approximation.
