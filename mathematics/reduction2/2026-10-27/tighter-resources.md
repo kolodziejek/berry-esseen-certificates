@@ -101,8 +101,10 @@ Positive curvature throughout follows from its positive endpoint values.
 The maximum includes zero because the maximizing signed coefficient can be
 negative; the unrestricted signed-square shortcut is not used.
 
-Suppose `C0<c<chi<C1`, `C<=C1`, and the row gives `rho>=rho_min>0`. On
-`[C0,chi]` discard the nonnegative excess charge in(1). On `[chi,C1]`, use
+Suppose `C0<c<chi<C1`, `C<=C1`, and the row gives `rho>=rho_min>0`. For actual
+`C` in `[c,chi]`, discard the nonnegative excess charge in(1), and bound
+`G(C)` using the endpoints of the larger formal interval `[C0,chi]`.
+No actual witness with `C<c` is asserted. On `[chi,C1]`, use
 
 \[
 n(C-c)\rho\ge N(C-\chi)\rho_{\min}.
