@@ -3,8 +3,9 @@
 The supplied Opus/Argon suggestions have been independently assessed and
 selectively integrated on `manuscript/editorial-v2-20261027`, preserving
 starting manuscript commit `ec370aa` and immutable baseline `6346fc1`.
-The existing draft PR #3 will receive the revision by a normal fast-forward
-push; no duplicate PR, upstream/main mutation or merge is authorized.
+The existing draft PR #3 received the revision by a normal fast-forward
+push to the author review branch in the user fork. It remains open and draft;
+no duplicate PR, upstream/main mutation or merge was made.
 
 Deliverables: `manuscript/arxiv-v1/main.pdf` (164 pages), editable sources
 and `source-arxiv-v1.zip`. Decision/review index:
