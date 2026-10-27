@@ -1,3 +1,57 @@
+# Third-round proof-reference dependencies — 27 October 2026
+
+- The scalar LOCAL42 reformulation is equivalent only because positive
+  closed attainment makes the extremal-pair set nonempty and its conjunction
+  has no omitted pair-dependent premise. Equality remains included.
+- The Fourier affine-resource specialization with D<=D_* uses N=n in the
+  weighted theorem. The floor-N version still requires nD<=N d_D.
+- Coarse Gaussian constants do not establish the fifteen-decimal pi endpoints;
+  the finer Machin/alternating-series recipes remain explicit.
+- The finite paired rectangle retains R<2g, M>=3 and its signed exact Gaussian
+  integral. Only common polynomial/norm derivations are cross-referenced.
+- The strict-gap concentration proof is index-independent; its separate
+  floor47/J0=45 mass bound remains. No reference extends it to floor42 by itself.
+- Curvature convexity uses corrected bracket3(b+u−1)+2(c−u)>0; other pieces
+  still require c<=1 and u<=1/2. The theorem's domain and zero-clamp gates stay.
+
+# Manuscript revision dependency clarifications — 27 October 2026
+
+- The exact conserved identity requires one common actual iid marginal,
+  closed-support contact, positive score and bounded support before higher
+  moments. Gap leakage uses `[a,b)`, excluding the upper-endpoint atom.
+- Unweighting needs an established raw remainder ceiling `r_0 < 2N/5`
+  with `C >= C_E` and `n >= N >= 2`. Positivity of `gamma+3J` then follows;
+  `D >= 0` by itself does not give it.
+- Extra phase curvature additionally needs a positive previous density
+  floor and `0.4095 rho - d_D/15 > 0`. The weighted bound is `nD <= Nd_D`.
+- The exact count identity does not by itself give errors relative to
+  arbitrarily small conditional variance. Those uniform bounds remain
+  separate analytic steps in LOCAL42.
+- Zero physical defect implies the oriented extremal Bernoulli law by
+  the nonnegative decomposition. A reflected law need not have zero D.
+- No edge into BASE41 or complete LOCAL42 has been removed in this revision.
+  Full unique Fourier-atlas content remains in the manuscript.
+
+# Manuscript dependency checkpoint — 27 October 2026
+
+The main conditional theorem is BASE41 (independent sharp prefix) plus
+LOCAL42 (equality-inclusive actual-law exclusion) plus proved attainment
+and uniform smoothing. It is not an arithmetic-PASS theorem by definition.
+
+Source correspondence: manuscript/arxiv-v1/research/manuscript-review.md.
+The main text includes attainment/contact, smoothing, support65, physical
+joint defect, count/crossing identities, score charge and exact curvature.
+Appendices include moment domains, normalization, uniform42 interpretation,
+legacy support, the full retained Fourier/local derivations, signed finite42
+refinements and S4/S6/A3–A18 finite arguments. Supplied proof-candidate scope
+and unexecuted numerical predicates are explicit.
+
+C5 consumes genuine C4, global contact, direct n>=2 support and all six
+whole-H endpoint predicates before supported Fourier. Rational ray gates
+alone, the coarse global Gaussian bound, and the new n>=42 theorem do not
+prove those endpoints. G4 also retains the G3 certificate condition.
+The harmonic4553 refinement retains896 rational coefficient predicates.
+
 # Dependency checkpoint — 27 October 2026
 
 Proposed upper-index route, retaining exact hypotheses:

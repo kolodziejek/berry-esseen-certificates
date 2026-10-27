@@ -1,0 +1,176 @@
+\section{Extremizers and contact on the closed support}
+\label{ms:extremizers}
+
+We first show that $C_n$ is attained, by a compactness argument over all
+of $\mathcal P$ that allows atoms at the threshold.
+
+Use $\mathcal P$, $F_{n,P}(H)=\Pp(S_n\le H)$, $R_n(P)$ and $C_n$
+as in Section~\ref{ms:introduction}. Throughout the article,
+\[
+ \beta=\E[X|X|],\qquad \gamma=\E X^3
+\]
+are distinct signed moments.
+
+\subsection{Fixed-index attainment}
+
+\begin{lemma}[Orientation and fixed-index attainment]
+\label{ms:attainment}
+For every fixed integer $n\ge1$, $0<C_n\le\sqrt n$. There exist
+$P\in\mathcal P$ and $H\in\R$ such that
+\[
+ \frac{\sqrt n}{\rho(P)}
+       \{F_{n,P}(H)-\Phi(H/\sqrt n)\}=C_n.
+\]
+Thus a maximum is attained as a positive discrepancy for a closed event.
+
+\end{lemma}
+\begin{proof}
+Lyapunov's inequality gives $\rho\ge(\E X^2)^{3/2}=1$, so
+$C_n\le\sqrt n$. For the symmetric law on $\{-1,1\}$, the choice $H=n$
+gives $F_{n,P}(H)=1>\Phi(\sqrt n)$, proving positivity.
+
+It suffices to maximize positive closed discrepancies over all laws. Indeed,
+if $F_{n,P}(H)-\Phi(H/\sqrt n)<0$, reflection gives
+\[
+ \Pp(-S_n<-H)-\Phi(-H/\sqrt n)
+       =\Phi(H/\sqrt n)-F_{n,P}(H).
+\]
+Closed thresholds increasing to $-H$ converge to the strict event on the
+left. Continuity of $\Phi$ gives the same supremum using positive closed
+discrepancies of the reflected law. Reflection preserves all three defining
+conditions of $\mathcal P$.
+
+Choose pairs $(P_j,H_j)$ with positive scores $r_j\to C_n$ and
+$r_j\ge\eta>0$. Since a discrepancy is at most one,
+\[
+ 1\le\rho_j\le\sqrt n/\eta=:M.
+\]
+The unit second moments make $(P_j)$ tight. By weak subsequence selection
+on $\R$, and then compactness of $[1,M]$, we may assume
+$P_j\Rightarrow P$ and $\rho_j\to b\in[1,M]$. The uniform tail estimates
+\[
+ \int_{|x|>A}x^2\,dP_j\le M/A,\qquad
+ \int_{|x|>A}|x|\,dP_j\le M/A^2
+\]
+allow bounded continuous truncations to pass the first two moments to the
+limit. Hence $\E_P X=0$ and $\E_P X^2=1$. Lower semicontinuity of the
+third absolute moment gives $1\le\rho(P)\le b<\infty$.
+
+The thresholds are bounded as well. If $H_j<0$, then
+$F_{n,P_j}(H_j)\le n/H_j^2$ by Chebyshev's inequality. If $H_j>0$, then
+the positive discrepancy is at most $1-\Phi(H_j/\sqrt n)\le n/H_j^2$.
+As each discrepancy is at least $\eta/\sqrt n$, both cases give
+$|H_j|\le n^{3/4}/\sqrt\eta$. Take a further subsequence with $H_j\to H$.
+
+Because $n$ is fixed, weak convergence of the marginals implies weak
+convergence of their $n$-fold products, and the continuous sum map gives
+$P_j^{*n}\Rightarrow P^{*n}$. For each $\varepsilon>0$, eventually
+$H_j\le H+\varepsilon$. The closed-set inequality for weak convergence gives
+\[
+ \limsup_j F_{n,P_j}(H_j)
+ \le F_{n,P}(H+\varepsilon).
+\]
+Letting $\varepsilon\downarrow0$ uses right continuity of the closed CDF,
+not continuity at $H$. It follows that
+\[
+ F_{n,P}(H)-\Phi(H/\sqrt n)\ge C_n b/\sqrt n.
+\]
+Therefore
+\[
+ C_n\ge R_n(P)\ge
+ \frac{\sqrt n\{F_{n,P}(H)-\Phi(H/\sqrt n)\}}{\rho(P)}
+ \ge C_n\frac b{\rho(P)}\ge C_n.
+\]
+All inequalities are equalities, proving attainment and $\rho(P)=b$.
+In particular, extremality forces $\rho(P)=b$, so the third moments
+converge without assuming uniform integrability of their third powers.
+\end{proof}
+
+\subsection{Contact on the closed support}
+
+We now fix one attaining pair $(P,H)$. The contact inequality comes from
+contaminating the raw law at a point $y$ and then standardizing it. Keeping
+the raw event fixed is essential: differentiating a moving distribution
+function through an atom would not be justified.
+
+\begin{lemma}[Atom-safe contact]
+\label{ms:contact}
+Let $n\ge2$, $C=C_n$, $F=F_{n,P}(H)$ and $z=H/\sqrt n$ at an attaining
+pair. Define $I:\R\to\R$ by
+\begin{align}
+ \rho I(y)={}&n^{3/2}\{F_{n-1,P}(H-y)-F\}+ny\phi(z)
+   +\frac{H\phi(z)}2(y^2-1)\notag\\
+ &+\frac32C\rho(y^2-1)
+   -C\{|y|^3-\rho-3y\beta\}.\label{ms:contact-formula}
+\end{align}
+Then $I(y)\le0$ for every real $y$, and $I(y)=0$ for every point of the
+closed support of $P$. In particular, that support is compact.
+\end{lemma}
+\begin{proof}
+For fixed $y$, let $P_\varepsilon=(1-\varepsilon)P+\varepsilon\delta_y$.
+Its mean and variance are
+\[
+ m_\varepsilon=\varepsilon y,\qquad
+ v_\varepsilon=1+\varepsilon(y^2-1)-\varepsilon^2y^2.
+\]
+For all sufficiently small $\varepsilon\ge0$, $v_\varepsilon>0$ and the
+standardized law remains in $\mathcal P$. Put
+$r_\varepsilon=\E_{P_\varepsilon}|X-m_\varepsilon|^3$. The standardized
+positive score evaluated at its corresponding raw threshold is
+\[
+ G(\varepsilon)=\frac{\sqrt n\,v_\varepsilon^{3/2}}{r_\varepsilon}
+ \left\{F_{n,P_\varepsilon}(H)
+  -\Phi\!\left(\frac{H-nm_\varepsilon}{\sqrt{nv_\varepsilon}}\right)\right\}.
+\]
+It satisfies $G(\varepsilon)\le C$ and $G(0)=C$.
+
+The finite mixture expansion makes $F_{n,P_\varepsilon}(H)$ a polynomial
+in $\varepsilon$, with derivative
+$n\{F_{n-1,P}(H-y)-F\}$ at zero. No density of the sum is needed.
+For the absolute third moment,
+\[
+ r'_0=|y|^3-\rho-3y\beta.
+\]
+To justify differentiation, the derivative of $|x-\varepsilon y|^3$ is
+bounded, for $0\le\varepsilon\le1$, by
+$3|y|(|x|+|y|)^2$, which is integrable. The contaminating term contributes
+$|y|^3$ at first order. Finally the derivative of the normal argument is
+\[
+ -\sqrt n\,y-\frac{H}{2\sqrt n}(y^2-1).
+\]
+Differentiating $G$ now gives exactly $G'(0+)=I(y)$ in
+\eqref{ms:contact-formula}. Maximality implies $I(y)\le0$.
+
+Integrating against $P$ gives $\int I\,dP=0$: the convolution term
+integrates to zero, as do all the displayed centered moment terms. This
+integral is finite because $\rho<\infty$. The function
+$y\mapsto F_{n-1,P}(H-y)$ is upper semicontinuous: at an atom its value
+is the larger, closed-event value. Hence $I$ is upper semicontinuous.
+If $I(y_0)<0$ at a support point, upper semicontinuity would give a
+neighborhood of positive $P$-measure on which $I$ is bounded above by a
+negative constant. Together with $I\le0$ elsewhere this contradicts
+$\int I\,dP=0$. Thus contact holds on the entire closed support, including
+atoms and accumulation points.
+
+At this fixed pair, the right side of \eqref{ms:contact-formula} is bounded
+above by $-C|y|^3+M_2y^2+M_1|y|+M_0$ for finite nonnegative constants
+$M_i$. Since $C>0$, this expression is negative on both sufficiently
+distant rays. Those rays contain no contact point and hence no support
+point. This proves compactness.
+The radius obtained here need not be uniform in $n$ or in the attaining pair.
+\end{proof}
+
+For later integral identities it is useful to record the same statement as
+a CDF majorant. With $\nu$ the law of $H-S_{n-1}$, define
+\begin{align}
+ nQ_H(y)={}&nF+\tfrac12\{z\phi(z)+C\rho/\sqrt n\}
+   -(\sqrt n\phi(z)+3C\beta/\sqrt n)y\notag\\
+ &-\tfrac12\{z\phi(z)+3C\rho/\sqrt n\}y^2
+   +C|y|^3/\sqrt n.\label{ms:contact-majorant}
+\end{align}
+Rearranging \eqref{ms:contact-formula} gives
+\[
+ \nu([y,\infty))\le Q_H(y),
+ \qquad \nu([y,\infty))=Q_H(y)\quad
+                 (y\in\operatorname{supp}P).
+\]

@@ -1,0 +1,7 @@
+PASS r' and corrected r'' by exact polynomial differentiation
+NEGATIVE CONTROL old r'' at b=1,c=3/4,u=1/4: old=40, actual=56
+PASS g' and g'' by exact polynomial differentiation
+PASS cap derivative-jump numerator = 2(b+c/3)
+PASS directed pi interval at 15 decimal places (32/12-term Machin bounds)
+PASS sqrt(10), CE, phi(0), 1/(4pi), and fifth-derivative coefficient bounds
+SCOPE exact algebra/constants only; no local certificate predicates executed

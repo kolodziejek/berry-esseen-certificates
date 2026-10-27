@@ -1,0 +1,51 @@
+{
+  "scope": "Completed local-baseline LaTeX build copied from retained temporary output; no proof-program run.",
+  "compile_command": [
+    "/Library/TeX/texbin/latexmk",
+    "-norc",
+    "-pdf",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-synctex=1",
+    "-outdir=/private/tmp/be-finite-v3-20261027-build",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite/manuscript/arxiv-v1/main.tex"
+  ],
+  "returncode": 0,
+  "compiler": "texlive",
+  "pdf_original_path": "/private/tmp/be-finite-v3-20261027-build/main.pdf",
+  "pdf_sha256": "62373f94522a36fd3b03188b677ad2f08a8d170127cdee5789195a5ead2e84c8",
+  "source_sha256": {
+    "manuscript/arxiv-v1/appendices/finite-analysis.tex": "4f67624b77b98ba79d9b07695d60bf42492708c89a19aef8f0f67c6fe5427193",
+    "manuscript/arxiv-v1/appendices/finite-support.tex": "a20f0214151cdb9544e851845357f55ce3da65638b28ea4eececbc858b5a19e4",
+    "manuscript/arxiv-v1/appendices/fourier-analysis.tex": "3badf43bef1885c1b356c0145c6960f63f0533e68640921779e96c80f89c63f5",
+    "manuscript/arxiv-v1/appendices/local42-refinements.tex": "a299333a3ff2f195b253d34cadeeb802067a95975ed633d2b67e4f461c61677d",
+    "manuscript/arxiv-v1/appendices/normalization.tex": "d1986afecce85ccccccf2ffc4b09b4b238435002b6ec0b82a323fbef0aa950bf",
+    "manuscript/arxiv-v1/appendices/uniform-bridge.tex": "f81cf182fd910cd17e6b6bf4c5ef20bac374eaf33c4ed8f6293a1a39e00978a7",
+    "manuscript/arxiv-v1/main.tex": "6dcf35df9174eafb57d716c0486a581f44357d75aca5d8613ee28d6e81b1dd4b",
+    "manuscript/arxiv-v1/sections/01-introduction.tex": "69dbae921bea801ec40f9c55013af5a0feb0ebddf0ea27c160c906d4c98e2bef",
+    "manuscript/arxiv-v1/sections/01b-guide.tex": "fe734c497a72030177e4bc1e7eb4faa7db28190ceba7368bbdb42a95e47c53ee",
+    "manuscript/arxiv-v1/sections/02-extremizers.tex": "32ce010cd2f3487dbd2318535f520b5033c5ac05faa4f1f61b91b40297926109",
+    "manuscript/arxiv-v1/sections/02b-moment-domain.tex": "13e4e29cc68b87ed2e07be15953b1c027eece2d0bb5ca5711419e4f0af95225e",
+    "manuscript/arxiv-v1/sections/03-smoothing.tex": "055af795fbb68a351c6eb66f470bf03479be478888f9a1b7105e26b5600af7ad",
+    "manuscript/arxiv-v1/sections/04-support.tex": "c4ea3f7e1b0d402b1eb39c4bedfba9f1c453250e40dfba27cccc21a3f8318c95",
+    "manuscript/arxiv-v1/sections/05-geometry-counts.tex": "f567ec53dbef0cc09e4b18e2ca92662ca5e9368c6d3fcbb6f89a550c153a41ad",
+    "manuscript/arxiv-v1/sections/05b-conserved.tex": "6cc898a7960d5255cbac0b4f63af3fd690d63f7a7c598d70ed0a8bc18d9674c9",
+    "manuscript/arxiv-v1/sections/05c-counts.tex": "b235895456292bdb6a2517174d68808cc15d563e29295c40e4cde3f200b26cf0",
+    "manuscript/arxiv-v1/sections/06-resources.tex": "890ba9ee2ec8167408593a28e568dcbbb04ab940d379d1c65d67620aed8e094b",
+    "manuscript/arxiv-v1/sections/07-curvature.tex": "cc7ec6124a0699a7fd40ea70870f29b065f7353ffdb62bfc7d6c3ee2d1980b56",
+    "manuscript/arxiv-v1/sections/08-certificates.tex": "b44d37e6e07f99d0073f78fc4f1bc0a51920b385c1179eb5e899dfb63314a7a9",
+    "manuscript/arxiv-v1/sections/09-discussion.tex": "181f9657e1c3f5d0bfd6140b7ec4aebcc5c8832047ae4e966c318a0f6ddc8920",
+    "manuscript/arxiv-v1/references-added.bib": "e1de5cfc75f4314c8741993ff2faa7bc6e3681c90f6ce25eacddb42fac91e92c",
+    "manuscript/arxiv-v1/references-classical.bib": "d572142ac859fb2ff3a2e4679e33869cb54aa41320df60f23139b149a0a94084",
+    "manuscript/arxiv-v1/references-modern-a.bib": "6375a56e09258d12e6ff5b79eb240d720335f9e9030fe9ba4306a5b210bf304a",
+    "manuscript/arxiv-v1/references-modern-b.bib": "508f3d4000fd3113a26b49647f8a166b00f313e082c83090c51fde256cd475c2"
+  },
+  "saved_evidence_sha256": {
+    "runs/manuscript-finite-v3-20261027/compile.stdout.json": "55d1312347dd0150b17287666a46d0b9e76ef4378230094b6aeec1ab4ddfae77",
+    "runs/manuscript-finite-v3-20261027/main.log": "afbc3a6a47b97123d4a8ace1fa6a7d8cf7b47254b36fc1d34b660ba3b89939c1",
+    "runs/manuscript-finite-v3-20261027/main.aux": "6289777b62739297bc715857b24a7fc46d34e390e5d661b033b33ba2b1466bc0",
+    "runs/manuscript-finite-v3-20261027/main.toc": "522a159fb233a2d6ed1503570bac545c859f86916251da5a3e3777b39a3934df"
+  },
+  "copied_utc": "2026-10-27T15:42:30.915436+00:00",
+  "stderr_note": "Original compiler stderr was not captured separately; final compile receipt and complete TeX log are preserved."
+}

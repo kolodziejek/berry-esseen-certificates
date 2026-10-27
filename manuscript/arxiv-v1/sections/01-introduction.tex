@@ -1,0 +1,167 @@
+\section{The problem and the approach}\label{ms:introduction}
+
+The central limit theorem describes the shape of a long sum. The
+Berry--Esseen inequality asks how far that description can be from the
+truth at a specified sample size. Even when the summands have the same
+distribution, the best universal constant is a delicate question: the
+largest errors come from the interaction of skewness with the jumps of a
+lattice distribution. A proof of the sharp inequality must control both
+effects uniformly in the law and in the sample size.
+
+Let $\mathcal P$ denote the probability laws on $\R$ satisfying
+$\E X=0$, $\E X^2=1$, and $\rho(P):=\E|X|^3<\infty$. For independent
+$X_1,\ldots,X_n$ with common law $P$, write $S_n=X_1+\cdots+X_n$ and
+\begin{align*}
+ \Delta_n(P)&=\sup_{H\in\R}
+       |\Pp_P(S_n\le H)-\Phi(H/\sqrt n)|,\\
+ R_n(P)&=\frac{\sqrt n\,\Delta_n(P)}{\rho(P)},\qquad
+ C_n=\sup_{P\in\mathcal P}R_n(P),\qquad C^*=\sup_{n\ge1}C_n.
+\end{align*}
+Here $\Phi$ and $\phi$ are the standard normal distribution function and
+density. The conjecture is
+\begin{equation}\label{ms:conjecture}
+ C^*=\CE,\qquad
+ \CE=\frac{3+\sqrt{10}}{6\sqrt{2\pi}}=0.409732\ldots.
+\end{equation}
+Throughout, $H$ is a threshold for the \emph{raw sum} $S_n$ and
+$H/\sqrt n$ its standardized version. All terminating decimals
+in numerical inequalities mean exact rational numbers.
+
+The normalization costs no generality. If $Z$ has mean $\mu$, variance
+$\varsigma^2>0$, and finite third absolute central moment $\beta_3$, apply the
+definitions to $X=(Z-\mu)/\varsigma$. Then $\rho=\beta_3/\varsigma^3$ and
+\[
+ \Pp\left(\frac{\sum_{i=1}^n Z_i-n\mu}{\varsigma\sqrt n}\le x\right)
+ =\Pp(S_n\le\sqrt n\,x).
+\]
+Thus $C_n\le\CE$ is precisely the usual sharp inequality at index $n$.
+
+\subsection{From Berry and Esseen to the sharp-constant problem}\label{ms:history}
+
+Berry~\cite{Berry1941} and Esseen~\cite{Esseen1942,Esseen1945}
+established quantitative normal approximation of order $n^{-1/2}$ under
+a finite third absolute moment. Their results initiated the search for
+the smallest constant in a bound that is uniform over the summand law.
+Esseen's later moment analysis~\cite{Esseen1956} identified the lower
+constant in~\eqref{ms:conjecture}. The conjecture that this lower constant
+is also the universal upper constant is associated with Zolotarev's work
+of 1966--1967~\cite{Zolotarev1966,Zolotarev1967}.
+
+The two-point example explains the value of the constant. Put
+\[
+ p_*=(4-\sqrt{10})/2,\qquad q_*=1-p_*,\qquad
+ X=(B-p_*)/\sqrt{p_*q_*},\quad B\sim\operatorname{Bernoulli}(p_*).
+\]
+For this fixed law, $\rho=(p_*^2+q_*^2)/\sqrt{p_*q_*}$ and the
+classical lattice asymptotic gives
+\begin{equation}\label{ms:bernoulli-limit}
+ \lim_{n\to\infty}R_n(P)
+ =\frac{3+q_*-p_*}{6\sqrt{2\pi}(p_*^2+q_*^2)}=\CE.
+\end{equation}
+Indeed $p_*^2+q_*^2=10-3\sqrt{10}$ and
+$(3+q_*-p_*)/(p_*^2+q_*^2)=3+\sqrt{10}$.
+Consequently every constant smaller than $\CE$ fails for a sufficiently
+large sum of this one fixed Bernoulli law. This proves $C^*\ge\CE$;
+it supplies no upper bound for other laws. Hipp and Mattner settled the symmetric binomial case
+\cite{HippMattner2008}; Schulz's dissertation~\cite{Schulz2016} proves
+the sharp upper bound for the entire binomial family at every sample size. We use Schulz's theorem for the noiseless case in
+Section~\ref{ms:counts}.
+
+Upper estimates developed through increasingly precise smoothing and
+characteristic-function inequalities. Zolotarev's work and van Beek's
+Fourier analysis~\cite{Zolotarev1967,vanBeek1972} are early milestones;
+Prawitz's one-sided smoothing kernel~\cite{Prawitz1972} remains useful in
+modern computations. Shiganov obtained the iid bound $0.7655$ in work originally published in
+1982~\cite{Shiganov1986,Tyurin2009}. Subsequent improvements include Shevtsova's bound
+$0.7056$~\cite{Shevtsova2007}, the bound $0.5129$ of Korolev and
+Shevtsova~\cite{KorolevShevtsova2010}, Tyurin's bound $0.4785$ obtained
+using zero-bias estimates and characteristic-function bounds~\cite{Tyurin2010}, and Shevtsova's bounds
+$0.4748$ and $0.4690$~\cite{Shevtsova2011,Shevtsova2013}.
+Their structural forms are more informative than the constants alone.
+For example, the inequalities
+\begin{equation}\label{ms:structural-classical}
+ \sqrt n\,\Delta_n(P)\le
+ \min\{0.4690\rho,\ 0.3322(\rho+0.429),\
+                          0.3031(\rho+0.646)\}
+\end{equation}
+hold for every $P\in\mathcal P$ and $n\ge1$~\cite{Shevtsova2013}.
+If $R_n(P)$ is near $\CE$, they bound $\rho$ from above. This supplies the
+first quantitative moment cap for the support calculation.
+
+\subsection{Recent manuscripts, repositories, and formalization}
+
+Several recent projects combine analytic inequalities with extensive
+computation. Xiao and Li report a global iid upper bound of $0.4395$;
+Lin reports $0.423$ using a refinement of their analytic framework
+\cite{xiao2026berryesseen,lin2026berryesseen}. Both supply Lean
+developments and exact finite certificates. Tao and contributors' \emph{Optimization Constants in Mathematics},
+especially Problem~19a, records this work and its verification status
+\cite{tao2026berryesseenregistry}.
+
+He and Cheng's preprint~\cite{hecheng2026eventually} reports the sharp
+inequality for every
+\[
+ n\ge 2\lceil\exp(10^{17})\rceil,
+\]
+with a threshold independent of the summand law. This uniform quantifier
+is essential. A theorem for each fixed law, with a law-dependent
+threshold, would not exclude a sequence of counterexamples whose laws
+change with $n$. A finite but astronomically large range of $n$ remains.
+
+Bell's collection treats independent, not necessarily identically
+distributed, summands. It reports a universal upper bound below
+$0.44988$, results for finite arrays, and sharp bounds when the Lyapunov
+ratio is small \cite{BellIndependent2026,BellFinite2026,BellSmall2026};
+its structural papers study extremizers in that
+setting~\cite{BellExtremizers2026,BellStructural2026}.
+
+In Lean, Yan's \emph{ProbabilityApproximation} formalizes classical
+nonuniform and multivariate normal-approximation
+theorems~\cite{Yan2026ProbabilityApproximation}, and the
+\emph{BerryEsseenLean} project formalizes an eventual-sharpness framework accompanying an earlier version of He
+and Cheng, relative to explicitly listed external mathematical inputs~\cite{BerryEsseenLean2026}.
+
+\subsection{The present approach and its scope}\label{ms:scope}
+
+The analytic starting point is a maximizing law at a fixed sample size.
+Its first variation gives a contact inequality at every support point.
+We integrate that inequality against the density of the zero-bias
+transform, introduced by Goldstein and Reinert~\cite{GoldsteinReinert1997}.
+The resulting identity connects the normal-approximation error to a
+nonnegative moment defect and a Fourier remainder. The defect singles out
+Esseen's two-point law; its quantitative form controls conditional noise
+and the displacement of the two parts of the support at the same time.
+The sign decomposition then turns the original sum into an exact binomial
+mixture. Related zero-bias methods appear in Tyurin's work and, for
+independent summands, in Bell's transport paper~\cite{Tyurin2010,BellTransport2026}.
+
+The reductions developed here address four parts of the argument.
+The one-step recurrence of Theorem~\ref{ms:one-step} controls the first
+index $n\ge42$ with $C_n\ge\CE$, assuming a sharp base through $41$;
+Lemma~\ref{ms:first-failure-entry} then gives zero predecessor loss and
+$0\le n(C_n-\CE)<3003/10250$. Proposition~\ref{ms:04:three-bounds}
+uses this zero loss to prove support bounds by boundary estimates and
+monotonicity. Retaining $n(C_n-\CE)\rho$ in the conserved identity
+sharpens the joint bound on noise and endpoint displacement
+(Corollary~\ref{ms:conserved:phase-resource} and
+Lemma~\ref{ms:06:charge}). Finally, Theorem~\ref{ms:curvature-thm}
+replaces the curvature maximization by at most three explicit candidates.
+The support and resource statements keep their stated moment and
+Fourier hypotheses.
+
+The all-index conclusion remains conditional. Theorem~\ref{ms:conditional-global}
+shows that an independent sharp base $C_j\le\CE$ for $1\le j\le41$,
+together with the equality-inclusive local exclusion of
+Assumption~\ref{ms:local42}, implies
+\[
+ C_n<\CE\quad(n\ge42),\qquad C^*=\CE.
+\]
+Establishing the local exclusion requires both analytic implications and
+complete finite certificates. The new reductions do not by themselves
+establish that assumption or the finite base. Section~\ref{ms:certificates}
+records their verification status in one place.
+
+An earlier, AI-assisted working draft is available on
+Hexagon~\cite{rodziewiczkolodziejek2026momentdefects}; the present paper
+reorganizes that material and develops the reductions above. None of the
+bounds reported in the recent works cited above is used here.

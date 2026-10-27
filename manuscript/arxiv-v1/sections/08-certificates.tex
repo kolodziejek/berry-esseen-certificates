@@ -1,0 +1,227 @@
+\section{Certificate conditions and the global implication}\label{ms:certificates}
+
+This section states the conditional global theorem, explains what a
+finite certificate must establish, and records which conditions have been
+verified.
+
+\subsection{The mathematical interface}
+
+Write $a_n=C_n-\CE$ and
+$d_n=n(C_{n-1}-C_n)_+$.
+
+\begin{assumption}[Finite base]\label{ms:base41}
+For every integer $1\le j\le41$, one has $C_j\le\CE$.
+This must be proved without using Assumption~\ref{ms:local42}.
+\end{assumption}
+
+\begin{assumption}[Equality-inclusive local exclusion]\label{ms:local42}
+For every integer $n\ge42$, the following conditions do not hold
+simultaneously:
+\begin{equation}\label{ms:local-entry}
+ \begin{gathered}
+ 0\le n(C_n-\CE)\le0.54,\qquad d_n=0,\qquad C_n<0.4226,\\
+ C_{n-1}<0.4253,\qquad C_{n-2}<0.4253.
+ \end{gathered}
+\end{equation}
+Since $C_n$ is attained (Lemma~\ref{ms:attainment}), this is equivalent to
+the nonexistence of an extremal pair at index $n$ under these conditions,
+which is how it would be proved.
+\end{assumption}
+
+A proof of Assumption~\ref{ms:local42} would combine the analytic results of
+Sections~\ref{ms:support}--\ref{ms:counts} with finite certificates, in
+four stages. First, the contact inequality and the moment
+bounds give the initial support interval. Second, an ordered sequence of
+Fourier estimates, moment intersections and support contractions gives
+one closed parameter panel containing the maximizing law. Third, a joint
+defect inequality and a confinement argument bound its conditional noise
+and its support near the two-point skeleton. Fourth, the exact
+conditional-count representation gives a comparison on every remaining
+closed phase and noise cell. The analytic steps are in Sections~\ref{ms:support}--\ref{ms:counts}
+and the appendices; their numerical inputs have not been independently
+re-verified.
+
+The stages are applied in order to one fixed extremal pair: each support
+contraction may use only moment bounds proved from the preceding support
+interval, and the deleted sums $S_{n-1}$ and $S_{n-2}$ are compared with
+the Gaussian through the constants $C_{n-1}$ and $C_{n-2}$.
+
+\begin{theorem}[Conditional all-index bound]\label{ms:conditional-global}
+Suppose Assumptions~\ref{ms:base41} and~\ref{ms:local42} hold. Then
+\[
+ C_n<\CE\quad(n\ge42),\qquad C^*=\CE.
+\]
+
+\end{theorem}
+\begin{proof}
+If the strict tail conclusion fails, choose the least $n\ge42$ with
+$C_n\ge\CE$. Both predecessors are at most $\CE$: at $n=42$ these are
+exactly the base indices $40$ and $41$. Hence $d_n=0$ and the two
+deleted caps in~\eqref{ms:local-entry} hold. The smoothing recurrence
+of Section~\ref{ms:smoothing} gives
+\[
+ 0\le n(C_n-\CE)<\frac{3003}{10250}<0.3,
+ \qquad C_n<\frac{73}{175}<0.4226.
+\]
+Thus all conditions in~\eqref{ms:local-entry} hold, contradicting
+Assumption~\ref{ms:local42}. The base
+and tail give $C^*\le\CE$; the fixed Bernoulli limit
+\eqref{ms:bernoulli-limit} gives the reverse inequality.
+\end{proof}
+
+If Assumption~\ref{ms:local42} is weakened to exclude only $C_n>\CE$, the
+same argument, applied to the least $n$ with $C_n>\CE$, still gives
+$C^*=\CE$.
+
+\subsection{What a finite certificate must establish}
+
+A certificate has three ingredients. Its domain
+description contains every actual parameter tuple allowed by the
+analytic hypotheses. Its local proof establishes the required inequality
+throughout each closed cell. Its coverage proof shows that the cells
+exhaust that domain.
+
+The following elementary lemma is the basic tool for tensor certificates.
+
+\begin{lemma}[Common-marginal expectation and score]
+\label{ms:certificate-expectation}
+Let $K\subset\R$ contain the support of $P\in\mathcal P$. Let
+$f_0,\ldots,f_d$ be integrable functions under $P$, with $f_0=1$, and let
+$m_j=\E f_j(X)$. For a finite tensor sum
+\[
+ T(x_1,\ldots,x_n)=\sum_{\alpha}t_\alpha
+                              \prod_{i=1}^n f_{\alpha_i}(x_i),
+\]
+independence gives
+\begin{equation}
+ \E T(X_1,\ldots,X_n)=\sum_\alpha t_\alpha\prod_{i=1}^n m_{\alpha_i}.
+\label{ms:tensor-expectation}
+\end{equation}
+If $T\ge\mathbf1_{\{x_1+\cdots+x_n\le H\}}$ on all of $K^n$ and
+\[
+ \sum_\alpha t_\alpha\prod_i m_{\alpha_i}
+         -\Phi(H/\sqrt n)\le a\rho/\sqrt n,
+\]
+then $\Pp(S_n\le H)-\Phi(H/\sqrt n)\le a\rho/\sqrt n$.
+\end{lemma}
+\begin{proof}
+Each product is absolutely integrable, because independence factors its
+absolute expectation into the finite quantities $\E|f_j(X)|$.
+Fubini and linearity prove \eqref{ms:tensor-expectation}. Integrate the
+pointwise majorant and use $\rho>0$ to obtain the score inequality.
+
+\end{proof}
+
+For example, a tensor product containing a centered factor has zero
+expectation when all other factors concern different independent variables.
+Such terms may improve a pointwise majorant without altering its expectation.
+Polynomial factors of degree above three require the corresponding moments.
+For the extremal laws used here, these are finite because support is compact.
+
+An exact polynomial positivity certificate often uses Bernstein coefficients.
+On $[0,1]$, set $B_{j,d}(t)=\binom dj t^j(1-t)^{d-j}$. They are
+nonnegative and sum to one. The identity
+\[
+ t^k=\sum_{j=k}^d\frac{\binom jk}{\binom dk}B_{j,d}(t)
+\]
+follows from
+$\binom dj\binom jk=\binom dk\binom{d-k}{j-k}$ and the binomial theorem.
+Applying it in each coordinate proves that a polynomial
+$\sum_\alpha a_\alpha t^\alpha$ of coordinate degrees at most $d_i$ has
+tensor Bernstein coefficients
+\[
+ b_\nu=\sum_{\alpha\le\nu}a_\alpha
+                      \prod_i\frac{\binom{\nu_i}{\alpha_i}}
+                                      {\binom{d_i}{\alpha_i}}.
+\]
+Thus nonnegative coefficients prove nonnegativity on the whole closed box.
+For $P(x)=\sum_{i=0}^d a_i x^i$ on $[l,h]$, the change
+$x=l+(h-l)t$ gives power coefficients
+$\widetilde a_j=(h-l)^j\sum_{i=j}^d a_i\binom ij l^{i-j}$.
+Applying the preceding identity gives the Bernstein coefficients on that
+interval. Rational affine changes and subdivision preserve exactness. A certificate must also verify the polynomial identity and the coverage
+of the domain.
+
+The event plane needs particular care. On the closed side
+$\sum x_i\le H$ the required inequality is $T-1\ge0$; on the other side
+it is $T\ge0$. A certificate which verifies only $T\ge0$ at a boundary
+point has not proved the closed-event majorant there. Sign orthants,
+event-plane intersections and endpoint atoms must be included in the
+pointwise proof.
+
+\begin{proposition}[Closed-cover soundness]
+\label{ms:closed-cover}
+Suppose a family of actual laws and thresholds has an analytically proved
+map into a covered parameter domain. A finite certificate has finitely
+many roots covering that domain and a finite subdivision tree at each
+root. Every split retains both closed children. At each leaf, either
+a proved necessary condition excludes every actual mapped point in the
+leaf, or a valid whole-leaf inequality bounds its positive score by $a$.
+Then all actual points in the root domain have positive score at most $a$.
+If every leaf instead excludes a putative attained score $C\ge\CE$, no
+such attained witness belongs to the root domain.
+\end{proposition}
+\begin{proof}
+An actual point at a parent belongs to at least one child, including if it
+lies on the common boundary. Induction up each finite tree transfers the
+leaf conclusion to its root. The root union transfers it to the complete
+mapped domain. In the second version no actual point can lie in any leaf, a
+contradiction.
+\end{proof}
+
+A root may describe a relaxation containing parameters of no actual law;
+this does not affect soundness, whereas a missing root or an unfinished
+subdivision does. A minimum of convex bounds need not be convex, so an
+endpoint maximization must be justified for each bound before the minimum
+is taken.
+
+In interval computations every transcendental function is enclosed
+outwards and every denominator is proved positive on the whole cell; a
+lower bound for a binomial mass multiplies a bracket only after the
+bracket is known to be negative.
+
+A cover must include both signs of the phase, all admissible nearest
+counts, the endpoints of probability panels and the boundaries between
+noise bands. The case $\lambda=n\E U^2=0$ is separate: then $U=0$ almost
+surely, the law is a two-point law, and Schulz's theorem
+applies~\cite{Schulz2016}.
+
+\subsection{Status of the remaining conditions}
+
+Sections~\ref{ms:extremizers}--\ref{ms:counts} prove the analytic
+implications stated there, with their moment, support and remainder
+hypotheses. Bounded exact checks accompany the support, curvature and
+score-excess calculations. The panel consequences in
+Section~\ref{ms:resources} remain conditional on the coefficient and
+moment bounds from Section~\ref{ms:fourier:rescore:re-atlas}.
+
+The finite base (Assumption~\ref{ms:base41}) has not been established
+in this work. The appendices give reductions for individual indices,
+but the complete independent proof through $41$ is missing. An older
+assembly for $40\le n\le42$ uses tail and coarse-ceiling inputs; the
+current independent assembly named by the source material was unavailable.
+
+The local exclusion (Assumption~\ref{ms:local42}) also remains open.
+Some inherited local statements begin at $47$ or have finite upper limits.
+Appendix~\ref{ms:uniform-bridge} gives the parameter changes needed at
+$42$. Completing the exclusion requires the corresponding analytic bounds
+and a complete finite cover at that scope. The longer Fourier,
+confinement and finite-index arguments are included for review; their
+whole chain and numerical inputs have not been independently verified
+in full here.
+
+\begin{center}
+\begin{tabular}{@{}P{0.36\textwidth}P{0.30\textwidth}P{0.27\textwidth}@{}}
+\toprule
+Result & Mathematical status & Computation status\\
+\midrule
+Attainment, contact and smoothing & Proved for the stated class of laws &
+Bounded checks recorded\\[3pt]
+Support, conserved identity, score charge and curvature & Proved under the
+stated hypotheses & Exact algebra and bounded arithmetic checked\\[3pt]
+Complete Fourier, confinement and finite-index chain & Supplied arguments;
+full independent review remains & No complete replay here\\[3pt]
+Finite base and uniform local exclusion & Open & No complete acceptance\\
+\bottomrule
+\end{tabular}
+\end{center}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS_BOUNDED_RETAINED_SUPPORT_IDENTITIES",
+  "scope": "rational algebra/constants only; no support-row or native certificate acceptance",
+  "series_nonzero_coefficients": [
+    2,
+    8,
+    16,
+    26,
+    38,
+    52
+  ],
+  "negative_controls": [
+    "wrong floor35",
+    "reversed leading series sign",
+    "missing fifth-term correction",
+    "favorable term frozen at lower index",
+    "negative square-root surrogate"
+  ],
+  "index27_scale_and_moment_constants": "checked",
+  "scale36_margin": "823/4050000"
+}

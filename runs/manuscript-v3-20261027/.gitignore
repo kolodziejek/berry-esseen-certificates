@@ -1,0 +1,5 @@
+# Reproducible local render/build caches. Receipts and final TeX logs are retained.
+build*/render/
+build*/full-pages/*.png
+build*/texlive/*
+!build*/texlive/main.log

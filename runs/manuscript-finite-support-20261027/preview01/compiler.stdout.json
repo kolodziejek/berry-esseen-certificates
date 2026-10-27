@@ -1,0 +1,52 @@
+{
+  "attempts": [
+    {
+      "command": [
+        "/Applications/ChatGPT.app/Contents/Resources/tectonic/tectonic",
+        "-X",
+        "compile",
+        "--outdir",
+        "runs/manuscript-finite-support-20261027/preview01/build",
+        "--outfmt",
+        "pdf",
+        "--print",
+        "--untrusted",
+        "main.tex"
+      ],
+      "compiler": "tectonic",
+      "exitCode": 101,
+      "log": "note: \"version 2\" Tectonic command-line interface activated\n\nthread 'main' (16943166) panicked at src/config.rs:154:18:\ncalled `Result::unwrap()` on an `Err` value: failed to create directory `<user-home>/Library/Caches/TectonicProject.Tectonic/bundles/hashes` or one of its parents\n\nCaused by:\n    Operation not permitted (os error 1)\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n",
+      "pdfExists": false,
+      "pdfPath": "runs/manuscript-finite-support-20261027/preview01/build/main.pdf"
+    }
+  ],
+  "command": null,
+  "compiler": null,
+  "exitCode": 1,
+  "log": "note: \"version 2\" Tectonic command-line interface activated\n\nthread 'main' (16943166) panicked at src/config.rs:154:18:\ncalled `Result::unwrap()` on an `Err` value: failed to create directory `<user-home>/Library/Caches/TectonicProject.Tectonic/bundles/hashes` or one of its parents\n\nCaused by:\n    Operation not permitted (os error 1)\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n",
+  "pdfExists": false,
+  "pdfPath": "runs/manuscript-finite-support-20261027/preview01/build/main.pdf",
+  "rootFile": "runs/manuscript-finite-support-20261027/preview01/project/main.tex",
+  "tectonic": {
+    "checked": [
+      {
+        "path": "/Applications/ChatGPT.app/Contents/Resources/tectonic/tectonic",
+        "source": "app"
+      }
+    ],
+    "path": "/Applications/ChatGPT.app/Contents/Resources/tectonic/tectonic",
+    "reason": "Tectonic executable is available.",
+    "source": "app",
+    "status": "available",
+    "version": "Tectonic 0.17.0"
+  },
+  "tectonicSuitability": {
+    "reasons": [],
+    "scannedFiles": [
+      "runs/manuscript-finite-support-20261027/preview01/project/main.tex",
+      "runs/manuscript-finite-support-20261027/preview01/project/finite-support.tex"
+    ],
+    "suitable": true
+  },
+  "texliveDetection": null
+}

@@ -1,0 +1,182 @@
+\section{The index changes required at the floor 42}\label{ms:uniform-bridge}
+
+The support proof in Section~\ref{ms:support} is uniform for $n\ge42$.
+The other estimates also depend on the lower bound for $n$. We derive
+the changes needed in concentration, confinement and normalization,
+assuming the contact, phase-resource and local-comparison identities
+stated in the preceding sections.
+
+\subsection{Conditional moments and strict-gap concentration}
+The concentration argument uses the antichain method of
+Littlewood--Offord theory~\cite{Erdos1945} in its random-chain
+form~\cite{Lubell1966}.
+
+Let $n\ge N=42$ and use the same coordinates
+$X=\ell(B_0+U-p)$ as in Section~\ref{ms:geometry-counts}. Suppose an
+already proved support bound gives
+\[
+ \supp(B_0+U)\subset(-w_{\rm strip},1+w_{\rm strip}),\qquad
+ U_0\le a_0,\quad U_1\ge-a_1,\quad
+ a_0+a_1=d_Y\le d_0<w_{\rm strip}.
+\]
+The strip width is $23/40$ in the first left-panel contraction.
+Any smaller value must be established before it is used in a subsequent
+contraction. Assume $p\in[l,h]\subset(0,1/2)$.
+
+Write $s=qw_0+pw_1=\lambda/n$, $w_i=\E U_i^2$. The exact identity
+\eqref{ms:conditional-moments}, $|U_i|<w_{\rm strip}$ and $pq(w_0+w_1)\le qs$
+give
+\[
+ \rho\le\rho_B(p)+c_\rho s
+ \quad\hbox{if}\quad
+ c_\rho>0,\quad c_\rho^2[l(1-l)]^3>[3(1-l)+w_{\rm strip}]^2.
+\]
+Indeed $|\E U_i^3|\le w_{\rm strip} w_i$,
+$\ell^3\le[l(1-l)]^{-3/2}$, and the skeleton's third moment is at
+most $\rho_B(p)$. The function $\rho_B(p)=(1-2p(1-p))/\sqrt{p(1-p)}$
+decreases on $(0,1/2)$, so a closed noise band with ceiling
+$\lambda_+$ gives
+\[
+ \rho\le\rho_B(l)+c_\rho\lambda_+/N.
+\]
+The first left contraction uses $c_\rho=30$. A later value such as $24$
+is licensed only if its displayed gate holds with the actual strip.
+
+Independently couple each pair of conditional residuals before choosing
+its Bernoulli label. Changing a label from zero to one increases the
+corresponding summand by at least $1-d_Y$. Conditional on the coupled
+residuals, the inverse image of an interval of diameter strictly less
+than $1-d_Y$ is therefore an antichain in the Boolean cube. For an
+antichain $\mathcal A$ of subsets of $\{1,\ldots,j\}$, a uniformly
+random permutation produces a chain of initial segments that intersects
+$\mathcal A$ at most once. Taking expectations gives
+\[
+ \sum_{A\in\mathcal A}\binom{j}{|A|}^{-1}\le1.
+\]
+Under independent labels of parameter $p$,
+\[
+ \Pp(\mathcal A)=\sum_{A\in\mathcal A}
+ \binom{j}{|A|}^{-1}\binom{j}{|A|}p^{|A|}q^{j-|A|}
+ \le\max_k\binom jk p^kq^{j-k}.
+\]
+Conditioning back proves the strict-gap concentration bound for the
+original sum, including any independent residual shift. The strict
+width condition is necessary; a closed interval with width equal to the
+increment can contain comparable vertices.
+
+At floor $42$, the two deleted indices are at least $40$. Put
+\[
+ r_L=l-(1-l)/40,\qquad r_R=h+h/40,
+ \qquad v_*=\min\{r_L(1-r_L),r_R(1-r_R)\}.
+\]
+The mode condition $|(k/j)-p|\le\max(p,q)/j$ puts every binomial mode
+for $j\ge40$ in $[r_L,r_R]$. Require $0<r_L<r_R<1$.
+For an interior mode with $r=k/j$, finite Stirling and nonnegativity of
+the relative entropy give
+\[
+ \sqrt j\binom jk p^kq^{j-k}
+ <\frac{\phi(0)}{\sqrt{r(1-r)}}\exp(1/(12j))
+ <\frac{0.4}{\sqrt{v_*}\{1-1/(12\cdot40)\}}.
+\]
+Here $e^x\le(1-x)^{-1}$ for $0\le x<1$, proved by comparing their
+power series. The endpoint gates ensure that the mode is interior.
+This provides the concentration estimate at both $n-1$ and $n-2$.
+
+The alternative concentration estimate obtained from the deleted
+Berry--Esseen bounds retains \emph{both} hypotheses
+$C_{n-1},C_{n-2}<0.4253$. Its scale factor $F_d$ must satisfy
+\[
+ F_d>0,\qquad F_d^2>\max\{(42/41)^3,42/40\}.
+\]
+The corresponding ratios decrease with $n$, so this endpoint gate is
+sufficient for every $n\ge42$. A scale factor checked only at the older
+floor need not satisfy it.
+
+\subsection{The signed confinement step}
+
+The signed deletion identities are algebraic identities at the actual
+index $n-1$. Removing a pair leaves $n-2$ full summands. A centered
+conditional noise $V$ satisfies $\E V_+=\E|V|/2$; replacing this signed
+quantity by an unrelated absolute error would lose the factor needed
+in the confinement estimate. Atoms and deterministic conditional laws
+are covered by the same identities.
+
+The exceptional pair event is strict. Its two candidate bounds have
+the form
+\[
+ \Pp(\Delta>\tau)\le
+ \min\left\{\frac{s}{s+p\tau^2},\frac{d_Y}{d_Y+\tau}\right\},
+ \qquad \tau>0,
+\]
+with the conditional mean, variance and one-sided support assumptions
+specified in the confinement derivation. The first is a one-sided
+second-moment bound; the second uses the same inner gap. The interval
+geometry additionally requires
+\[
+ 1-w_{\rm strip}-2d_0>0,\qquad 1-2d_0-2\tau_+>0,
+\]
+as well as the disjointness and buffer gates in that derivation. These
+conditions guarantee widths strictly below $1-d_Y$. The upper-ray
+contradiction is a strict inequality of the form
+$L-w_{\rm strip} U-\mathrm{error}>0$. The lower-ray argument also needs a
+positive slope, so that a check at one endpoint excludes the whole
+remaining ray inside the previously acquired strip. The new strip is
+an output of this reasoning.
+
+The step uses one strict phase resource,
+\begin{equation}\label{ms:uniform-strict-resource}
+ ne\rho+n\phi(0)D/6+n^{3/2}L_{\rm leak}<\mathcal B(H),
+ \qquad e=C-\CE\ge0,\quad L_{\rm leak}\ge0.
+\end{equation}
+For a phase/noise cell, write its remaining resource as $R-nP$ with
+$P\ge0$. Since $n\ge N$, it is at most $R-NP$. If the latter is
+nonpositive, strict inequality~\eqref{ms:uniform-strict-resource}
+excludes the cell. Otherwise a proved coefficient $\alpha>0$ gives
+$nd_Y<(R-NP)/\alpha$. The error terms to which the index floor is
+applied have the form
+\[
+ (zR+A)/n-zP+B\,\mathrm{bad},\qquad zR+A>0.
+\]
+The displayed positivity is what licenses $1/n\le1/N$; a formal
+substitution without it would be invalid.
+
+A sharper candidate uses the tangent inequality
+\[
+ \frac{x}{N\tau+x}\le
+ \frac{N\tau}{(N\tau+t)^2}x+
+ \frac{t^2}{(N\tau+t)^2},\qquad x,t\ge0,
+\]
+whose right side minus left side is
+\[
+ \frac{N\tau(x-t)^2}{(N\tau+x)(N\tau+t)^2}\ge0.
+\]
+The two error bounds are each valid with nonnegative coefficients and
+the same resource simplex. Taking their minimum is then legitimate.
+
+\subsection{Uniform assembly, conditional on the full inputs}
+
+The resulting extension has the following precise meaning. Retain the
+attainment and contact hypotheses, the complete Fourier and signed
+phase bounds, the ordered actual-law acquisition, all strict confinement
+gates just described, the signed binomial normalization, and the full
+positive-noise comparison. Replace all 65 finite support invocations
+by Section~\ref{ms:support}. Retain the weighted invariant $nD\le42d_D$;
+Section~\ref{ms:geometry-counts} then gives the joint plane at the same
+floor. On each noise band, contract the support before using the new
+amplitude in a subsequent estimate.
+
+If every selected exact predicate holds at these inputs, the argument
+proceeds at every actual $n\ge42$: signed entry, outer-panel exclusion,
+central or left support contraction, signed confinement, joint-resource
+export, noise-profile acquisition, and local count comparison. Closed
+phase and noise seams and all admissible counts remain part of the
+cover. The local signed cubic correction uses the actual upper score
+when its coefficient is negative. The combined inverse-index correction
+is clamped at zero before the floor substitution. At positive noise the comparison excludes the maximizing score; at zero
+noise the finite-binomial comparison is used. These are
+exactly the inputs needed for Assumption~\ref{ms:local42}.
+
+To obtain Assumption~\ref{ms:local42}, the finite inequalities and the
+analytic bounds supporting them must be verified on these uniform domains.
+This includes the ordered support contractions, both deleted indices,
+the signed phase cells and all positive-noise and zero-noise comparisons.

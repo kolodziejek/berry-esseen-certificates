@@ -1,0 +1,267 @@
+\section{The two-point skeleton and the conserved identity}
+\label{ms:geometry-counts}
+
+Every centered law can be separated into its positive and nonpositive
+parts. Replacing each part by its conditional mean gives a two-point law;
+the remaining conditional fluctuations measure its departure from that
+law. We first make this decomposition exact, then identify a moment
+defect that vanishes at Esseen's extremal distribution.
+
+\subsection{The sign split and its units}
+
+Fix $P\in\mathcal P$ and put
+\[
+ p=\Pp(X>0),\quad q=1-p,\quad v=pq,\quad
+ m=\E X_+=\E X_->0,\quad B_0=\mathbf1_{\{X>0\}}.
+\]
+Both $p,q$ are positive; a possible atom at zero is assigned to the
+nonpositive class. Define $V=\E[X\mid B_0]$ and $W=X-V$, so that
+\[
+ V=-m/q\quad(B_0=0),\qquad V=m/p\quad(B_0=1),\qquad
+ \theta=\E W^2=1-m^2/v<1.
+\]
+Write $\theta_-=\E[W^2;B_0=0]$ and $\theta_+=\E[W^2;B_0=1]$.
+The distance between the two conditional means is
+\[
+ \ell=m/v=\sqrt{(1-\theta)/v}>0.
+\]
+Set $U=W/\ell$ and $Y=B_0+U$. Then
+\begin{equation}
+ X=\ell(Y-p),\qquad \E[U\mid B_0]=0.
+\label{ms:bernoulli-coordinates}
+\end{equation}
+Let $U_0,U_1$ have the two conditional laws, and put
+\[
+ w_i=\E U_i^2,\quad \mu_i=\E U_i^3,\quad
+ s=qw_0+pw_1=\frac{v\theta}{1-\theta},\quad
+ \lambda=ns,\quad \ell=(v+s)^{-1/2}.
+\]
+The moments $\mu_i$ are finite because $\rho<\infty$. Higher moments are
+used only for extremal laws, which have compact support by
+Lemma~\ref{ms:contact}.
+
+If $s=0$, both nonnegative conditional variances vanish, so $U_0=U_1=0$
+almost surely. This is exactly the standardized Bernoulli law. If $s>0$,
+the parameter $\alpha=pw_1/s$ lies in $[0,1]$ and gives
+$w_0=s(1-\alpha)/q$, $w_1=s\alpha/p$.
+
+The signs of $X$ are still those defining the two classes, so expansion
+of the actual conditional moments gives
+\begin{align}
+ \rho/\ell^3&=v(1-2v)+3v(w_0+w_1)-q\mu_0+p\mu_1,\notag\\
+ \gamma/\ell^3&=v(q-p)+3v(w_1-w_0)+q\mu_0+p\mu_1,\notag\\
+ \beta/\ell^2&=v(q-p)+pw_1-qw_0.
+\label{ms:conditional-moments}
+\end{align}
+For example, on the nonpositive class $|X|^3=\ell^3(p-U_0)^3$;
+on the positive class it is $\ell^3(q+U_1)^3$. Conditional centering removes
+the linear terms and gives the first identity; the other two follow in
+the same way. The three identities share the same pair $(\mu_0,\mu_1)$.
+
+\subsection{A nonnegative moment defect}
+
+We now suppose the support is compact. Define
+\[
+ \tau(t)=\E[X\mathbf1_{\{X\ge t\}}],\qquad \sigma=\sqrt{10}.
+\]
+For $t<0$, centering gives $\tau(t)=-\E[X\mathbf1_{\{X<t\}}]\ge0$;
+for $t\ge0$ nonnegativity is immediate. Signwise Tonelli integration gives
+\begin{equation}
+ \int_\R\tau(t)\,dt=1,
+ \qquad 2\int_\R|t|\tau(t)\,dt=\rho.
+\label{ms:tau-moments}
+\end{equation}
+On every bounded component $(a,b)$ of the complement of the closed support,
+$\tau$ is constant in the interior; denote that value by $\tau_{a,b}$.
+Set
+\begin{equation}
+ J=\sum_{(a,b)}\tau_{a,b}(b-a)^2,
+ \qquad D=(3+\sigma)\rho-\gamma-3J.
+\label{ms:physical-defect-definition}
+\end{equation}
+There are at most countably many gaps. If the support lies in $[-R,R]$,
+then $J\le2R\int\tau=2R$, so this sum converges. Endpoint atoms do not
+alter the Lebesgue integrals defining its weights.
+
+\begin{lemma}[The moment defect and the central gap]
+\label{ms:physical-defect}
+\label{ms:fourier:afcore:lem:physical-defect}
+The quantity $D$ in \eqref{ms:physical-defect-definition} is nonnegative.
+If $0$ belongs to the support, then $D\ge(\sigma-1)\rho$. Consequently
+$D<(\sigma-1)\rho$ implies a genuine central support gap $(-A,B)$ with
+$A,B>0$.
+\end{lemma}
+\begin{proof}
+If zero belongs to the support, every gap has one sign and
+$(b-a)^2\le2\int_a^b|t|\,dt$. Sum using the constant gap weights and
+\eqref{ms:tau-moments} to obtain $J\le\rho$. Thus
+$D\ge\sigma\rho-\gamma\ge(\sigma-1)\rho$.
+
+Otherwise compactness and the presence of both signs give the central
+gap $(-A,B)$. Write
+\[
+ T_+=\E X_+^3-mB^2,\quad T_-=\E X_-^3-mA^2,
+ \quad R_+=\E X_+^2-mB,\quad R_-=\E X_-^2-mA,
+\]
+all nonnegative. Let $J_o=J-m(A+B)^2$ be the sum over the outer gaps.
+For a positive outer gap $(a,b)$,
+\[
+ (b-a)^2\le2\int_a^b(t-B)\,dt.
+\]
+Summing and using Tonelli bounds its total contribution by
+\[
+ J_o^+\le2\int_B^\infty(t-B)\tau(t)\,dt
+       =\E[X_+(X_+-B)^2]=T_+-2BR_+\le T_+.
+\]
+The same calculation on the negative half-line gives $J_o^-\le T_--2AR_-\le T_-$. Expansion of $D$ yields the identity
+\begin{align}
+ D={}&m\{\sqrt{\sigma+1}A-\sqrt{\sigma-1}B\}^2
+       +(\sigma-1)T_++(\sigma+1)T_-\notag\\
+    &+3(T_++T_--J_o).\label{ms:defect-decomposition}
+\end{align}
+Here $\sqrt{\sigma+1}\sqrt{\sigma-1}=3$. Every term is nonnegative,
+which proves the claim.
+\end{proof}
+
+\begin{corollary}[The zero-defect law]\label{ms:zero-defect}
+For a compactly supported $P\in\mathcal P$, $D=0$ if and only if
+\[
+ X=(B_0-p_*)/\sqrt{p_*q_*},\qquad
+ p_*=(4-\sqrt{10})/2,\quad q_*=1-p_*,
+ \quad B_0\sim\operatorname{Bernoulli}(p_*).
+\]
+The sign of the third moment is fixed by the definition of $D$.
+\end{corollary}
+\begin{proof}
+If $D=0$, zero cannot lie in the support, so there is a central gap
+$(-A,B)$. The nonnegative terms in \eqref{ms:defect-decomposition}
+force $T_+=T_-=0$. Since
+$T_+=\E[X_+(X_+^2-B^2)]$ and the positive support lies in $[B,\infty)$,
+all positive mass is at $B$; similarly all negative mass is at $-A$.
+Centering and unit variance give $pB=qA$ and $AB=1$.
+The square in \eqref{ms:defect-decomposition} now gives
+\[
+ \frac pq=\frac AB=\sqrt{\frac{\sigma-1}{\sigma+1}}
+                   =\frac{\sigma-1}{3},
+\]
+hence $p=p_*$. Conversely this two-point law has $T_+=T_-=J_o=0$
+and the square vanishes, so $D=0$.
+\end{proof}
+
+The defect therefore records the loss from the extremal two-point
+geometry. For quantitative estimates we use the full nonnegative
+decomposition, rather than only its equality case.
+
+Several elementary consequences will be useful.
+ Integrating $(X+A)(X-B)\ge0$ gives $AB\le1$.
+Cauchy--Schwarz gives $1/(2\rho)\le m\le1/2$. The outer-gap estimates give
+$J\le\rho+2m\le\rho+1$. Since $\sigma-1>2$,
+\eqref{ms:defect-decomposition} implies $T_++T_-\le D/2$; if $D<2$,
+then
+\[
+ m(A^2+B^2)=\rho-T_+-T_-\ge1-D/2,
+ \qquad A+B\ge\sqrt{2-D}.
+\]
+
+\subsection{One joint budget for endpoint motion and noise}
+
+Let $\bar A=m/q$, $\bar B=m/p$ be the conditional mean magnitudes, and
+let $\Delta_A=\bar A-A$, $\Delta_B=\bar B-B$. They are nonnegative.
+
+\begin{lemma}[Simultaneous gap inequality]
+\label{ms:simultaneous-gap}
+For this central gap,
+\begin{align}
+ D\ge{}&\frac{(6+2\sigma)(1-\theta)^{3/2}}{\sqrt{pq}}(p-p_*)^2
+ +6m\{(A+B)(\Delta_A+\Delta_B)+\Delta_A\Delta_B\}\notag\\
+ &+3(\sigma+1)B\theta_++3(\sigma+3)A\theta_-.
+\label{ms:simultaneous-gap-formula}
+\end{align}
+\end{lemma}
+\begin{proof}
+The stronger outer-gap bound in the preceding proof gives
+\[
+ D\ge(\sigma-1)\E X_+^3+(\sigma+1)\E X_-^3
+                      -6mAB+6BR_++6AR_-.
+\]
+Conditional cubic expansion gives
+\[
+ \E X_+^3=m\bar B^2+
+       \E[(X+2\bar B)(X-\bar B)^2;X>0]
+       \ge m\bar B^2+3B\theta_+,
+\]
+and similarly $\E X_-^3\ge m\bar A^2+3A\theta_-$.
+Moreover $R_+=\theta_++m\Delta_B$ and
+$R_-=\theta_-+m\Delta_A$. Substitution produces the last two terms of
+\eqref{ms:simultaneous-gap-formula} and the deterministic expression
+\[
+ m\{(\sigma-1)\bar B^2+(\sigma+1)\bar A^2-6\bar A\bar B\}
+ +6m\{\bar A\bar B-AB+B\Delta_B+A\Delta_A\}.
+\]
+The second brace equals
+$(A+B)(\Delta_A+\Delta_B)+\Delta_A\Delta_B$.
+For the first, use $m^2=(1-\theta)pq$ and the exact identity
+\[
+ (\sigma+1)p^2+(\sigma-1)q^2-6pq=(6+2\sigma)(p-p_*)^2.
+\]
+This proves the displayed inequality.
+\end{proof}
+
+In count coordinates the inward displacements are
+\[
+ a_0=p-A/\ell=\Delta_A/\ell,\quad
+ a_1=q-B/\ell=\Delta_B/\ell,
+ \quad d_Y=a_0+a_1=(\Delta_A+\Delta_B)/\ell.
+\]
+Thus $U_0\le a_0$ and $U_1\ge-a_1$. The physical displacement
+$\Delta_A+\Delta_B$ and the count displacement $d_Y$ differ by $\ell$.
+
+\begin{theorem}[Weighted joint resource]
+\label{ms:joint-resource}
+Suppose $n\ge N>0$ and
+\[
+ nD\le Nd_D,\quad \theta\le\Theta<1,\quad pq\le v_*,\quad
+ D\ge b+6mS_*(\Delta_A+\Delta_B)+K\theta,
+\]
+where $b\ge0$, $S_*>0$, $K>0$ and $v_*>0$. Put $r=d_D-b$.
+If $r<0$ there is no such law. If $r=0$, then $d_Y=\lambda=0$.
+If $r>0$, define
+\[
+ d_* =\frac{r}{6(1-\Theta)S_*},\qquad
+ \Lambda=\frac{Nv_*r}{K(1-\Theta)}.
+\]
+Then
+\begin{equation}
+ \frac{d_Y}{d_*}+\frac\lambda\Lambda\le1.
+\label{ms:joint-plane}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Since $m\ell=1-\theta$ and
+$n\theta=(1-\theta)\lambda/(pq)$,
+\begin{align*}
+ Nd_D&\ge nD\ge nb+6n(1-\theta)S_*d_Y
+                          +K(1-\theta)\lambda/(pq)\\
+ &\ge Nb+6N(1-\Theta)S_*d_Y+K(1-\Theta)\lambda/v_*.
+\end{align*}
+All weakened coefficients multiply nonnegative quantities. Subtracting
+$Nb$ proves the impossible and zero cases without division. For $r>0$,
+division by $Nr$ proves \eqref{ms:joint-plane}.
+\end{proof}
+
+For instance, on a closed probability interval $I$, established endpoint
+floors $A\ge A_l>0$, $B\ge B_l>0$ and $\theta\le\Theta$ supply
+\[
+ S_*=A_l+B_l,\qquad K=\min\{3(\sigma+1)B_l,3(\sigma+3)A_l\},
+\]
+\[
+ b=\frac{(6+2\sigma)(1-\Theta)^{3/2}}{\sqrt{v_*}}
+          \operatorname{dist}(p_*,I)^2,
+ \qquad v_*\ge\max_{p\in I}p(1-p).
+\]
+These choices follow from Lemma~\ref{ms:simultaneous-gap} by dropping the
+nonnegative product $6m\Delta_A\Delta_B$. Rational lower enclosures for
+$b,K,S_*$ and an upper enclosure for $v_*$ preserve the implication.
+
+On a band $L\le\lambda\le U\le\Lambda$, the joint plane gives
+$d_Y\le d_*(1-L/\Lambda)$. Either intercept may be replaced by a larger value.

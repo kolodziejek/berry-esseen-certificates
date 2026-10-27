@@ -1,0 +1,124 @@
+\subsection{Keeping the excess term}\label{ms:resources}
+
+In~\eqref{ms:fourier:rescore:re-phaseprice} the excess $n(C-\CE)\rho$ and
+the defect term $\kappa nD$ are bounded by the same quantity $\mathcal B(H)$,
+which depends on $C$. Keeping the excess term, instead of discarding it,
+compensates for this dependence and improves the bound on the defect.
+
+Let $n\ge N=42$, $c=\CE$, $C\ge c$ and $\kappa=997/15000$, and assume the
+conclusion of Corollary~\ref{ms:conserved:phase-resource},
+\begin{equation}\label{ms:06:resource}
+ n(C-c)\rho+\kappa nD+n^{3/2}L\le\mathcal B(H),\qquad L\ge0,
+\end{equation}
+under the hypotheses stated there.
+
+For each of the two moment corners $j$ of a panel and each sign of $H$,
+the quadratic upper envelope is
+\[
+ A_j(C)+F_{j,\pm}(C)|H|-Q_j(C)|H|^2.
+\]
+Here $A_j,Q_j$ are affine in $C$, and each signed $F$ is a finite maximum
+of affine functions plus a score-independent slope. On the endpoint-score
+interval $[C_0,C_1]$, its chord $\widehat F$ majorizes $F$.
+The supremum of these chord quadratics is
+\[
+ G(C)=\max_j\left\{A_j(C)+
+ \frac{\max(0,\widehat F_{j,+}(C),\widehat F_{j,-}(C))^2}{4Q_j(C)}
+ \right\}.
+\]
+Positive endpoint $Q_j$ gives positivity throughout. As a supremum of
+affine functions of $C$ indexed by $j$, sign and $|H|\ge0$, $G$ is convex.
+
+\begin{lemma}[Two-interval score charge]\label{ms:06:charge}
+Suppose $C_0<c<\chi<C_1$ and the actual score is at most $C_1$.
+Then \eqref{ms:06:resource} implies
+\[
+ \kappa nD\le
+ B_*=\max\{G(C_0),G(\chi),G(C_1)-N(C_1-\chi)\}.
+\]
+\end{lemma}
+\begin{proof}
+For actual $C\in[c,\chi]$, discard its nonnegative excess charge and
+bound $G(C)$ by the endpoints of the larger formal interval $[C_0,\chi]$.
+For $C\in[\chi,C_1]$,
+$n(C-c)\rho\ge N(C-\chi)$, using only $\rho\ge1$.
+The convex function $G(C)-N(C-\chi)$ is bounded above by its endpoint
+values. Take the maximum. This includes $C=c$ without assigning a
+positive charge at equality.
+\end{proof}
+
+On the $45$ left probability panels $p\in[(145+i)/500,(146+i)/500]$,
+$0\le i\le44$, we take $C_0=0.4095$, $C_1=0.4226$ and $\chi=0.40974$;
+exact arithmetic gives $B_*=G(\chi)$ on each of them.
+The bounds $C_0<\CE<\chi$ follow from Lemma~\ref{ms:gaussian-constants}.
+
+\subsubsection{The joint bound on noise and displacement}
+If a previously established bound gives $nD\le Nd_{\rm old}$, define
+\[
+ d_{\rm new}=\min\{d_{\rm old},B_*/(\kappa N)\}.
+\]
+Thus $nD\le N d_{\rm new}$. Let $A,B>0$ be lower bounds for the two central-gap endpoints,
+$\Theta<1$ an upper bound for $\theta$, and $[l,u]$ the probability panel. Write $s_l=3.162277660$, $s_u=3.162277661$, and set
+\begin{align*}
+ v_*&=\max_{p\in[l,u]}p(1-p),\\
+ \delta_*&=\max\{0,(4-s_u)/2-u,\ l-(4-s_l)/2\},\\
+ b_*&=(6+2s_l)
+   \frac{\sqrt{(1-\Theta)^3}_{\,\rm lower}}
+        {\sqrt{v_*}_{\,\rm upper}}\,\delta_*^2,\\
+ K&=\min\{3(s_l+1)B,\ 3(s_l+3)A\}>0,\qquad
+ r=d_{\rm new}-b_* .
+\end{align*}
+Lemma~\ref{ms:simultaneous-gap} gives
+\[
+ nD\ge Nb_*+6N(1-\Theta)(A+B)d_Y
+                 +\frac{K(1-\Theta)}{v_*}\lambda.
+\]
+If $r<0$, the panel contains no extremal law. If $r>0$, put
+\[
+ \Lambda_{\rm new}=\frac{Nv_*r}{K(1-\Theta)},\qquad
+ d_{{\rm new,in}}=\frac{r}{6(1-\Theta)(A+B)}.
+\]
+Then the \emph{single} residual gives
+\[
+ \frac{d_Y}{d_{{\rm new,in}}}
+       +\frac{\lambda}{\Lambda_{\rm new}}\le1.
+\]
+If $r=0$, Theorem~\ref{ms:joint-resource} gives $d_Y=\lambda=0$.
+For the coefficient bounds used below, none of the panels has $r=0$.
+
+On the $47$ central panels $p\in[(190+i)/500,(191+i)/500]$,
+$0\le i\le46$, the coefficients are known only through outward roundings:
+upper bounds for $A_j$ and $F$, lower bounds for $Q_j$, and an enclosure
+$R_{\rm cap}\in[\mathcal R_{\rm out}-2\cdot10^{-6},\mathcal R_{\rm out}]$
+for the exact value of the chosen remainder bound $R_{\rm cap}$.
+The upper score endpoint therefore lies in
+\[
+ [\,\min(0.4247,\chi+(\mathcal R_{\rm out}-2\cdot10^{-6})/42),
+    \min(0.4247,\chi+\mathcal R_{\rm out}/42)\,].
+\]
+We apply Lemma~\ref{ms:06:charge} with the chord weights enclosed over
+this interval and with its left endpoint in the subtraction.
+
+\subsubsection{Empty noise bands}
+Using the coefficient bounds and moment intervals for these panels gives
+the following consequences. They are conditional on establishing those
+inputs for the extremal law. The decimal bounds are rounded up from
+exact fractions.
+\begin{center}
+\begin{tabular}{@{}llP{62mm}@{}}
+\toprule
+Probability panel & New bound & Consequence\\
+\midrule
+$p\in[0.290,0.292]$ & $r<-0.0003$ & no extremal law\\
+$p\in[0.300,0.302]$ & $\lambda\le0.049944478$ & no extremal law with $\lambda>0.05$\\
+$p\in[0.306,0.308]$ & $\lambda\le0.077273055$ & no extremal law with $\lambda>0.08$\\
+$p\in[0.310,0.312]$ & $\lambda\le0.094055578$ & no extremal law with $\lambda>0.10$\\
+$p\in[0.316,0.318]$ & $\lambda\le0.117287323$ & no extremal law with $\lambda>0.12$\\
+$p\in[0.436,0.438]$ & $\lambda\le0.099809552$ & no extremal law with $\lambda>0.10$\\
+\bottomrule
+\end{tabular}
+\end{center}
+In each case the excluded noise band starts strictly above the new bound,
+so the remaining cells still cover the panel. On the other panels the new
+bounds do not cross the endpoint of a noise band. The case $\lambda=0$ is
+treated separately by Schulz's theorem.

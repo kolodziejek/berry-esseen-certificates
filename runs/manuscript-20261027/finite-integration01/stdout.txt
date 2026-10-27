@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "checks": {
+    "N1 left tail below target": true,
+    "N1 elementary right tail": true,
+    "N1 right tail below target": true,
+    "G3 scalar tail comparison": true,
+    "G3 structural tail below target": true,
+    "G4 localization strictly above G3": true,
+    "G4 localization below target": true,
+    "n5 structural cutoff": true,
+    "n5 lower target ordering": true,
+    "b2 positive radical domain": true,
+    "b2 outward moment cap": true,
+    "b3 positive radical domain": true,
+    "b3 outward moment cap": true,
+    "unweighted substitution rejected": true
+  },
+  "n5_structural_value": "819/2000",
+  "n5_tail_reserve": "0",
+  "scope": "Selected scalar algebra only; no N1/G3/G4/n5/floor certificate accepted."
+}

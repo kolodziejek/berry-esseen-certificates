@@ -104,10 +104,10 @@ candidate is attained at a point of the actual closed interval.
 On its active region `b+u>1`,
 
 \[
- r''(u)={2[3(b-1)+2u+c]\over(c-u)^4}>0,
+ r''(u)={2[3(b-1)+u+2c]\over(c-u)^4}>0,
 \]
 
-because the bracket is `3(b+u-1)+(c-u)>0`. At `u=1-b`, the
+because the bracket is `3(b+u-1)+2(c-u)>0`. At `u=1-b`, the
 first derivative jumps upwards, from zero to `1/(c-u)^2`.
 
 For `u<c/3` and `b+u>0`,

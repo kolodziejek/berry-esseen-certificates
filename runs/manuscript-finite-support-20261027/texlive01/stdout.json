@@ -1,0 +1,102 @@
+{
+  "attempts": [
+    {
+      "command": [
+        "/Library/TeX/texbin/latexmk",
+        "-norc",
+        "-pdf",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-synctex=1",
+        "-outdir=runs/manuscript-finite-support-20261027/texlive01/build",
+        "runs/manuscript-finite-support-20261027/preview01/project/main.tex"
+      ],
+      "compiler": "texlive",
+      "exitCode": 0,
+      "log": "oktabs.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty\n(/usr/local/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty\n(/usr/local/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty\n(/usr/local/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))\n(/usr/local/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty\n(/usr/local/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.s\nty (/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))\n(/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty\n(/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))\n(/usr/local/texlive/2025/texmf-dist/tex/latex/base/atbegshi-ltx.sty))\n(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def\n(/usr/local/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty\n\n(/usr/local/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty\n))) (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)\n(runs/manuscript-finite-support-20261027/texlive01/build/mai\nn.aux) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg)\n*geometry* driver: auto-detecting\n*geometry* detected driver: pdftex\n(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty\n(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty\n(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def\n(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii\n[Loading MPS to PDF converter (version 2006.09.02).]\n)))\n(/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty\n(/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg)))\n(runs/manuscript-finite-support-20261027/texlive01/build/mai\nn.out)\n(runs/manuscript-finite-support-20261027/texlive01/build/mai\nn.out) (./finite-support.tex\n(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omslmsy.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omxlmex.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg)\n[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l\nocal/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2\n025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist\n/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc\n/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/\nlm-mathex.enc}]\n[2]\n[3]\n[4]\n[5]\n[6]\n[7])\n[8]\n(runs/manuscript-finite-support-20261027/texlive01/build/mai\nn.aux) )\npdfTeX warning (dest): name{main\\040finite-base\\040assumption} has been referen\nced but does not exist, replaced by a fixed one\n\n\npdfTeX warning (dest): name{main\\040contact\\040formula} has been referenced but\n does not exist, replaced by a fixed one\n\n\npdfTeX warning (dest): name{main\\040Gaussian\\040constants} has been referenced \nbut does not exist, replaced by a fixed one\n\n\npdfTeX warning (dest): name{main\\040third-moment\\040theorem} has been reference\nd but does not exist, replaced by a fixed one\n\n\npdfTeX warning (dest): name{main\\040sign-moment\\040lemma} has been referenced b\nut does not exist, replaced by a fixed one\n\n\npdfTeX warning (dest): name{main\\040structural\\040bounds} has been referenced b\nut does not exist, replaced by a fixed one\n\n\npdfTeX warning (dest): name{main\\040contact\\040lemma} has been referenced but d\noes not exist, replaced by a fixed one\n\n\npdfTeX warning (dest): name{main\\040support\\040theorem} has been referenced but\n does not exist, replaced by a fixed one\n\n</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/loca\nl/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/\n2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf\n-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2025/texmf-dist/font\ns/type1/public/lm/lmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pub\nlic/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr1\n0.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr\n/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texli\nve/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texm\nf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fon\nts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/p\nublic/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfo\nnts/symbols/msbm10.pfb>\nOutput written on runs/manuscript-finite-support-20261027/te\nxlive01/build/main.pdf (8 pages, 270983 bytes).\nSyncTeX written on runs/manuscript-finite-support-20261027/texlive01/build/main.synctex.gz.\nTranscript written on runs/manuscript-finite-support-2026102\n7/texlive01/build/main.log.\nLatexmk: Getting log file 'runs/manuscript-finite-support-20261027/texlive01/build/main.log'\nLatexmk: Examining 'runs/manuscript-finite-support-20261027/texlive01/build/main.fls'\nLatexmk: Examining 'runs/manuscript-finite-support-20261027/texlive01/build/main.log'\nLatexmk: Log file says output to 'runs/manuscript-finite-support-20261027/texlive01/build/main.pdf'\nLatexmk: All targets (runs/manuscript-finite-support-20261027/texlive01/build/main.pdf) are up-to-date\n\n",
+      "pdfExists": true,
+      "pdfPath": "runs/manuscript-finite-support-20261027/texlive01/build/main.pdf"
+    }
+  ],
+  "command": [
+    "/Library/TeX/texbin/latexmk",
+    "-norc",
+    "-pdf",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-synctex=1",
+    "-outdir=runs/manuscript-finite-support-20261027/texlive01/build",
+    "runs/manuscript-finite-support-20261027/preview01/project/main.tex"
+  ],
+  "compiler": "texlive",
+  "exitCode": 0,
+  "log": "oktabs.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty\n(/usr/local/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty\n(/usr/local/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty\n(/usr/local/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))\n(/usr/local/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty\n(/usr/local/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.s\nty (/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))\n(/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty\n(/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))\n(/usr/local/texlive/2025/texmf-dist/tex/latex/base/atbegshi-ltx.sty))\n(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def\n(/usr/local/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty\n\n(/usr/local/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty\n))) (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)\n(runs/manuscript-finite-support-20261027/texlive01/build/mai\nn.aux) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg)\n*geometry* driver: auto-detecting\n*geometry* detected driver: pdftex\n(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty\n(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty\n(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def\n(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii\n[Loading MPS to PDF converter (version 2006.09.02).]\n)))\n(/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty\n(/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg)))\n(runs/manuscript-finite-support-20261027/texlive01/build/mai\nn.out)\n(runs/manuscript-finite-support-20261027/texlive01/build/mai\nn.out) (./finite-support.tex\n(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omslmsy.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omxlmex.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd)\n(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg)\n[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l\nocal/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2\n025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist\n/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc\n/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/\nlm-mathex.enc}]\n[2]\n[3]\n[4]\n[5]\n[6]\n[7])\n[8]\n(runs/manuscript-finite-support-20261027/texlive01/build/mai\nn.aux) )\npdfTeX warning (dest): name{main\\040finite-base\\040assumption} has been referen\nced but does not exist, replaced by a fixed one\n\n\npdfTeX warning (dest): name{main\\040contact\\040formula} has been referenced but\n does not exist, replaced by a fixed one\n\n\npdfTeX warning (dest): name{main\\040Gaussian\\040constants} has been referenced \nbut does not exist, replaced by a fixed one\n\n\npdfTeX warning (dest): name{main\\040third-moment\\040theorem} has been reference\nd but does not exist, replaced by a fixed one\n\n\npdfTeX warning (dest): name{main\\040sign-moment\\040lemma} has been referenced b\nut does not exist, replaced by a fixed one\n\n\npdfTeX warning (dest): name{main\\040structural\\040bounds} has been referenced b\nut does not exist, replaced by a fixed one\n\n\npdfTeX warning (dest): name{main\\040contact\\040lemma} has been referenced but d\noes not exist, replaced by a fixed one\n\n\npdfTeX warning (dest): name{main\\040support\\040theorem} has been referenced but\n does not exist, replaced by a fixed one\n\n</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/loca\nl/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/\n2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf\n-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2025/texmf-dist/font\ns/type1/public/lm/lmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pub\nlic/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr1\n0.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr\n/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texli\nve/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texm\nf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fon\nts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/p\nublic/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfo\nnts/symbols/msbm10.pfb>\nOutput written on runs/manuscript-finite-support-20261027/te\nxlive01/build/main.pdf (8 pages, 270983 bytes).\nSyncTeX written on runs/manuscript-finite-support-20261027/texlive01/build/main.synctex.gz.\nTranscript written on runs/manuscript-finite-support-2026102\n7/texlive01/build/main.log.\nLatexmk: Getting log file 'runs/manuscript-finite-support-20261027/texlive01/build/main.log'\nLatexmk: Examining 'runs/manuscript-finite-support-20261027/texlive01/build/main.fls'\nLatexmk: Examining 'runs/manuscript-finite-support-20261027/texlive01/build/main.log'\nLatexmk: Log file says output to 'runs/manuscript-finite-support-20261027/texlive01/build/main.pdf'\nLatexmk: All targets (runs/manuscript-finite-support-20261027/texlive01/build/main.pdf) are up-to-date\n\n",
+  "pdfExists": true,
+  "pdfPath": "runs/manuscript-finite-support-20261027/texlive01/build/main.pdf",
+  "rootFile": "runs/manuscript-finite-support-20261027/preview01/project/main.tex",
+  "tectonic": {
+    "checked": [
+      {
+        "path": "/Applications/ChatGPT.app/Contents/Resources/tectonic/tectonic",
+        "source": "app"
+      }
+    ],
+    "path": "/Applications/ChatGPT.app/Contents/Resources/tectonic/tectonic",
+    "reason": "Tectonic executable is available.",
+    "source": "app",
+    "status": "available",
+    "version": "Tectonic 0.17.0"
+  },
+  "tectonicSuitability": {
+    "reasons": [],
+    "scannedFiles": [
+      "runs/manuscript-finite-support-20261027/preview01/project/main.tex",
+      "runs/manuscript-finite-support-20261027/preview01/project/finite-support.tex"
+    ],
+    "suitable": true
+  },
+  "texliveDetection": {
+    "activeBinDir": "/Library/TeX/texbin",
+    "commands": {
+      "biber": {
+        "path": "/Library/TeX/texbin/biber",
+        "version": "present"
+      },
+      "kpsewhich": {
+        "path": "/Library/TeX/texbin/kpsewhich",
+        "version": "kpathsea version 6.4.1"
+      },
+      "latexmk": {
+        "path": "/Library/TeX/texbin/latexmk",
+        "version": "Latexmk, John Collins, 27 Dec. 2024. Version 4.86a"
+      },
+      "lualatex": {
+        "path": "/Library/TeX/texbin/lualatex",
+        "version": "This is LuaHBTeX, Version 1.21.0 (TeX Live 2025)"
+      },
+      "pdflatex": {
+        "path": "/Library/TeX/texbin/pdflatex",
+        "version": "pdfTeX 3.141592653-2.6-1.40.27 (TeX Live 2025)"
+      },
+      "xelatex": {
+        "path": "/Library/TeX/texbin/xelatex",
+        "version": "XeTeX 3.141592653-2.6-0.999997 (TeX Live 2025)"
+      }
+    },
+    "knownTexBinDirs": [
+      "/Library/TeX/texbin",
+      "/usr/local/texlive/2025/bin/universal-darwin",
+      "/usr/local/texlive/2019/bin/x86_64-darwin",
+      "/usr/local/texlive/2018/bin/x86_64-darwin",
+      "/usr/local/texlive/2015/bin/x86_64-darwin",
+      "/usr/local/texlive/2015/bin/universal-darwin",
+      "/usr/local/texlive/2014/bin/x86_64-darwin",
+      "/usr/local/texlive/2014/bin/universal-darwin"
+    ],
+    "missingRecommended": [],
+    "missingRequired": [],
+    "reason": "Required TeX tools are available.",
+    "status": "existing-usable",
+    "texmfroot": "/usr/local/texlive/2025"
+  }
+}

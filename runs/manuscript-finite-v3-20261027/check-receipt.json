@@ -1,0 +1,23 @@
+{
+  "scope": "Bounded formal identities, exact structural cutoffs, and two-point negative controls; no native certificate acceptance or coverage.",
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "runs/manuscript-finite-v3-20261027/check_finite_references.py"
+  ],
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite",
+  "started_utc": "2026-10-27T15:42:30.884128+00:00",
+  "ended_utc": "2026-10-27T15:42:30.906749+00:00",
+  "returncode": 0,
+  "python_version": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "optimization": 0,
+  "input_sha256": {
+    "runs/manuscript-finite-v3-20261027/check_finite_references.py": "260926a4bc6b3659a7bb53c40e991217a0a7010f96a51c38474c65bdcf3d7d39",
+    "manuscript/arxiv-v1/appendices/finite-analysis.tex": "4f67624b77b98ba79d9b07695d60bf42492708c89a19aef8f0f67c6fe5427193",
+    "manuscript/arxiv-v1/appendices/fourier-analysis.tex": "3badf43bef1885c1b356c0145c6960f63f0533e68640921779e96c80f89c63f5",
+    "manuscript/arxiv-v1/sections/02-extremizers.tex": "32ce010cd2f3487dbd2318535f520b5033c5ac05faa4f1f61b91b40297926109",
+    "manuscript/arxiv-v1/sections/02b-moment-domain.tex": "13e4e29cc68b87ed2e07be15953b1c027eece2d0bb5ca5711419e4f0af95225e",
+    "manuscript/arxiv-v1/sections/05-geometry-counts.tex": "f567ec53dbef0cc09e4b18e2ca92662ca5e9368c6d3fcbb6f89a550c153a41ad"
+  },
+  "stdout_sha256": "ce4d235ff0b2e43367042413062c8b28b30859d6084908fb37990b5d2860b4d5",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
