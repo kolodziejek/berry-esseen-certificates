@@ -1,0 +1,104 @@
+{
+  "retrieved_date": "2026-10-27",
+  "method": "GitHub connector: read-only repository, recursive tree, file, commit, release metadata",
+  "mathematical_status": "External claims and metadata inspected; no proof reproduced",
+  "execution_status": "No external Lean build, numerical certificate, or release cache run",
+  "repositories": [
+    {
+      "repository": "haonan-xiao/iid-berry-esseen",
+      "commit": "f00d781c8c42908bf4aef2739129442a0919fa38",
+      "commit_date": "2026-09-10T18:46:30Z",
+      "recursive_tree_truncated": false,
+      "citation_cff_paths": [],
+      "files": [
+        {
+          "path": "README.md",
+          "git_blob_sha1": "bfeaddfaa38bc7c063deb2b0b052cb17c22f8348",
+          "url": "https://github.com/haonan-xiao/iid-berry-esseen/blob/f00d781c8c42908bf4aef2739129442a0919fa38/README.md"
+        },
+        {
+          "path": "FORMALIZATION.md",
+          "git_blob_sha1": "7800593f3b3d36d1a5d70abee48ae37457b00f64",
+          "url": "https://github.com/haonan-xiao/iid-berry-esseen/blob/f00d781c8c42908bf4aef2739129442a0919fa38/FORMALIZATION.md"
+        },
+        {
+          "path": "paper/main.tex",
+          "git_blob_sha1": "c55cf4d06bf51cd80d6915751c0c4df9ac3e6c38",
+          "url": "https://github.com/haonan-xiao/iid-berry-esseen/blob/f00d781c8c42908bf4aef2739129442a0919fa38/paper/main.tex"
+        }
+      ],
+      "releases": [],
+      "tags_status": "Connector /tags endpoint not supported; no absence inference"
+    },
+    {
+      "repository": "CoolRmal/BerryEsseen",
+      "commit": "bfb22608ad18b4fa9fda8dd9a1ed2c2b6fbc29e7",
+      "commit_date": "2026-09-13T17:55:10Z",
+      "recursive_tree_truncated": false,
+      "citation_cff_paths": [],
+      "files": [
+        {
+          "path": "README.md",
+          "git_blob_sha1": "244ece2dd4505bed658c1d1bc72282e5d254e463",
+          "url": "https://github.com/CoolRmal/BerryEsseen/blob/bfb22608ad18b4fa9fda8dd9a1ed2c2b6fbc29e7/README.md"
+        },
+        {
+          "path": "docs/UPPER_0423.md",
+          "git_blob_sha1": "476d2b590489170e1eec2c8b8dcdac8e3399fa3b",
+          "url": "https://github.com/CoolRmal/BerryEsseen/blob/bfb22608ad18b4fa9fda8dd9a1ed2c2b6fbc29e7/docs/UPPER_0423.md"
+        },
+        {
+          "path": "paper/upper-0423.tex",
+          "git_blob_sha1": "fd7b9d6f510424eb70e9b5e5fefabf67f40d3472",
+          "url": "https://github.com/CoolRmal/BerryEsseen/blob/bfb22608ad18b4fa9fda8dd9a1ed2c2b6fbc29e7/paper/upper-0423.tex"
+        }
+      ],
+      "releases": [
+        {
+          "name": "Optional supporting proof cache for 12690abf25ee",
+          "tag_name": "proof-cache-12690abf25ee",
+          "target_commitish": "12690abf25ee75ab9667d5d8e4a5504374c214b7",
+          "published_at": "2026-09-12T18:13:51Z",
+          "prerelease": true,
+          "url": "https://github.com/CoolRmal/BerryEsseen/releases/tag/proof-cache-12690abf25ee"
+        }
+      ],
+      "tags_status": "Connector /tags endpoint not supported; no absence inference"
+    },
+    {
+      "repository": "teorth/optimizationproblems",
+      "commit": "e95af44bc6ae938f545a0fc62cd1b6c1f6088a56",
+      "commit_date": "2026-10-26T04:08:12Z",
+      "recursive_tree_truncated": false,
+      "citation_cff_paths": [],
+      "files": [
+        {
+          "path": "constants/19a.md",
+          "git_blob_sha1": "de88b2f8376bb6981f39f4c0c8cae4e6f45b6bcf",
+          "url": "https://github.com/teorth/optimizationproblems/blob/e95af44bc6ae938f545a0fc62cd1b6c1f6088a56/constants/19a.md"
+        }
+      ],
+      "releases": [],
+      "tags_status": "Connector /tags endpoint not supported; no absence inference"
+    }
+  ],
+  "web_sources": [
+    {
+      "url": "https://arxiv.org/abs/2609.06358v3",
+      "version_date": "2026-09-30",
+      "doi": "10.48550/arXiv.2609.06358"
+    },
+    {
+      "url": "https://hexagonmath.org/2610.00147v3",
+      "version_date": "2026-10-17",
+      "initial_deposit": "2026-10-07",
+      "doi": null
+    },
+    {
+      "url": "https://arxiv.org/abs/1301.2783v3",
+      "version_date": "2013-12-13",
+      "journal_doi": "10.1016/j.jmaa.2014.03.075",
+      "verified_statement_locator": "Preprint Theorem 2, p. 5; journal theorem numbering not inspected"
+    }
+  ]
+}
