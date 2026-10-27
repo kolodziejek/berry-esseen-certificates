@@ -1,0 +1,102 @@
+{
+  "actual_laws": [
+    {
+      "at_n": 47,
+      "last_support_size": 48,
+      "law": "symmetric_Bernoulli",
+      "max_standardized_atom_threshold_float": 6.855654600401044,
+      "minimum_margin_float": 0.00526184829583376,
+      "n_range": [
+        2,
+        47
+      ]
+    },
+    {
+      "at_n": 43,
+      "last_support_size": 48,
+      "law": "skew_Bernoulli_2_over_5",
+      "max_standardized_atom_threshold_float": 8.396427811873332,
+      "minimum_margin_float": 0.00201951315537624,
+      "n_range": [
+        2,
+        47
+      ]
+    },
+    {
+      "at_n": 47,
+      "last_support_size": 48,
+      "law": "endpoint_near_Bernoulli_1_over_100",
+      "max_standardized_atom_threshold_float": 68.21290200541245,
+      "minimum_margin_float": 0.00448941052222096,
+      "n_range": [
+        2,
+        47
+      ]
+    },
+    {
+      "at_n": 47,
+      "last_support_size": 48,
+      "law": "reflected_Bernoulli_99_over_100",
+      "max_standardized_atom_threshold_float": 68.21290200541245,
+      "minimum_margin_float": 0.00448941052222096,
+      "n_range": [
+        2,
+        47
+      ]
+    },
+    {
+      "at_n": 47,
+      "last_support_size": 95,
+      "law": "tiny_middle_atom",
+      "max_standardized_atom_threshold_float": 6.855664883892372,
+      "minimum_margin_float": 0.005261852333226347,
+      "n_range": [
+        2,
+        47
+      ]
+    },
+    {
+      "at_n": 46,
+      "last_support_size": 1176,
+      "law": "tiny_remote_atom",
+      "max_standardized_atom_threshold_float": 4847.677431153165,
+      "minimum_margin_float": 0.001746821850260513,
+      "n_range": [
+        2,
+        47
+      ]
+    },
+    {
+      "at_n": 47,
+      "last_support_size": 189,
+      "law": "four_point_collisions",
+      "max_standardized_atom_threshold_float": 10.8397416943394,
+      "minimum_margin_float": 0.003159271140087627,
+      "n_range": [
+        2,
+        47
+      ]
+    },
+    {
+      "at_n": 4,
+      "last_support_size": 25,
+      "law": "nearby_four_point",
+      "max_standardized_atom_threshold_float": 2.019899007574369,
+      "minimum_margin_float": 0.10890556502208854,
+      "n_range": [
+        2,
+        4
+      ]
+    }
+  ],
+  "integer_checks": {
+    "CE_square_margin_numerator": 2024,
+    "excess_margin_numerator": 90910,
+    "own_cap_margin_numerator": 390900,
+    "pi_lower_margin_numerator": 2675,
+    "sqrt_cap_n46_failure": -4555,
+    "sqrt_cap_n47": 17566
+  },
+  "scope": "Independent integer algebra plus finite-law same-law recurrence diagnostics. Convolutions and moments use exact rational arithmetic; Gaussian evaluation and resulting margins use ordinary math.erfc floating point and are not rigorous enclosures.",
+  "status": "PASS_BOUNDED_DIAGNOSTICS"
+}
