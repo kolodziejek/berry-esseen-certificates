@@ -1,3 +1,27 @@
+# Fourth-round proof redesign — 27 October 2026
+
+Fork main starting point ca4943a (PR #4 merged); original baseline 6346fc1
+remains unchanged. Work branch manuscript/strategy-v4-20261027. Prior PRs 1–4
+were merged by the user; older draft-status paragraphs below are historical.
+
+New deliverable: mathematics/strategy-v4/2026-10-27/main.pdf, a 14-page research
+companion, with full new derivations and explicit conditional transport.
+The longer manuscript remains 158 pages with safe shared-proof simplifications.
+Decision index: mathematics/strategy-v4/2026-10-27/README.md.
+
+| Result | Mathematical status | Execution status |
+|---|---|---|
+| Fixed-target excess, contact and conservation | Locally derived; independently reviewed conditional transport | Fresh exact algebra/atom controls pass |
+| Moment circle, sharp gap family, common noise measure | Locally derived with bounded independent review | Exact identities and finite-law controls pass |
+| Unconditional own-sign skeleton domination | Refuted, including n=42; no counterexample to the main bound | Fresh rational normal/convolution checks pass |
+| Full BASE41, LOCAL42 and certificate transport | Still separate obligations | No complete native or Lean acceptance |
+
+The exact conservation term is (n+H^2)a. Recurrence can leave the new tail-entry
+logic only after a complete ordered transported exclusion; finite consumers
+remain. No existing certificate, driver or theorem target was changed.
+Eight bounded integration checks pass; 2,748 baseline entries preserved.
+Evidence: runs/strategy-v4-20261027. A new draft PR will carry the work; no merge.
+
 # Third manuscript revision — 27 October 2026
 
 Starting manuscript6299d97, immutable reference6346fc1; root branch

@@ -1,0 +1,225 @@
+\section{A short explanation of the gap defect}
+
+Let $X$ be centered with variance one and finite $\rho=\E|X|^3$.
+Write $\gamma=\E X^3$ and $m=\E X_+=\E X_->0$.
+The zero-bias density is $\tau(x)=\E[X\mathbf1_{X\ge x}]$.
+It is nonnegative, has integral one, and satisfies
+$2\int |x|\tau(x)\,dx=\rho$, by signwise Tonelli integration.
+On each bounded gap $(a,b)$ of the closed support, it is constant;
+write this value as $\tau_{a,b}$ and set
+$J=\sum\tau_{a,b}(b-a)^2$.
+
+\begin{proposition}[The moment circle]
+For every such law,
+\[
+ \gamma^2+(2m)^2\le\rho^2,\qquad J\le\rho+2m.
+\]
+Consequently, for every $t>0$,
+\[
+ \gamma+tJ\le (t+\sqrt{1+t^2})\rho.
+\]
+Equality in the last inequality holds exactly for a standardized
+two-point law whose positive mass is
+$p_t=(1+t-\sqrt{1+t^2})/2$.
+\end{proposition}
+\begin{proof}
+Put $a_\pm=\E X_\pm^2$ and $b_\pm=\E X_\pm^3$.
+Then $a_++a_-=1$, $\rho=b_++b_-$ and $\gamma=b_+-b_-$.
+If $p=\Pp(X>0)$ and $q=1-p$, Cauchy--Schwarz gives
+\[
+ a_\pm^2\le mb_\pm,\qquad m^2\le pa_+,\quad m^2\le qa_-.
+\]
+Adding the last two inequalities after division by $a_+$ and $a_-$
+gives $m^2\le a_+a_-$, and therefore
+$b_+b_-\ge(a_+a_-)^2/m^2\ge m^2$.
+This proves the circle inequality.
+
+For a gap on either side of zero,
+$(b-a)^2\le2\int_a^b|x|\,dx$.
+If a central gap $(-A,B)$ exists, its weight is $m$, and its additional
+contribution is $2mAB$. The support condition gives
+$0\le\E[(X+A)(X-B)]=1-AB$.
+Summing over the countably many gaps gives $J\le\rho+2m$;
+in particular $J$ is finite. Cauchy--Schwarz in two dimensions now gives
+$\gamma+2tm\le\sqrt{1+t^2}\rho$.
+
+Equality in the circle forces one nonzero atom on each sign class,
+and excludes an atom at zero. For the standardized two-point law,
+$J=\rho+2m$, $m=\sqrt{pq}$, and
+$\gamma=(q-p)/\sqrt{pq}$. Equality in the last Cauchy bound requires
+$\gamma=2m/t$, or $t(1-2p)=2p(1-p)$, whose unique admissible root
+is $p_t$.
+\end{proof}
+
+Thus, for $\sigma=\sqrt{10}$ and $p_*=(4-\sqrt{10})/2$,
+\[
+ D=(3+\sigma)\rho-\gamma-3J
+   =(\sigma\rho-\gamma-6m)+3(\rho+2m-J)
+\]
+is a sum of two nonnegative losses. The first measures departure from
+the extremal moment direction; the second measures inefficiency of the
+support gaps. Bounded support is unnecessary for this explanation.
+The quantitative endpoint inequality in the manuscript is still needed.
+
+\section{Keep the common measure when estimating conditional noise}
+
+Suppose now that a central gap $(-A,B)$ with $A,B>0$ is known. Set
+$V=\E[X\mid\mathbf1_{X>0}]$, $W=X-V$,
+$\bar A=m/q$, $\bar B=m/p$, $\theta=\E W^2$, and
+$\Delta_A=\bar A-A$, $\Delta_B=\bar B-B$.
+Define positive measures
+\[
+ d\mu_+=W^2\mathbf1_{X>0}\,dP,\qquad
+ d\mu_-=W^2\mathbf1_{X<0}\,dP.
+\]
+Write $\theta_\pm=\mu_\pm(\R)$. These measures belong to the law, independently of the function whose
+expectation we wish to bound.
+
+\begin{proposition}[A weighted noise budget]
+Let
+\begin{align*}
+ B_0&=\frac{(6+2\sigma)(1-\theta)^{3/2}}{\sqrt{pq}}(p-p_*)^2,\\
+ E_0&=6m\{(A+B)(\Delta_A+\Delta_B)+\Delta_A\Delta_B\},\\
+ k_+(x)&=(\sigma-1)(x+2\bar B)+6B,\\
+ k_-(x)&=(\sigma+1)(|x|+2\bar A)+6A.
+\end{align*}
+Then
+\[
+ D\ge B_0+E_0+\int k_+\,d\mu_++\int k_-\,d\mu_-.
+\]
+Using $k_+\ge3(\sigma+1)B$ and $k_-\ge3(\sigma+3)A$ gives the manuscript's
+$3(\sigma+1)B\theta_++3(\sigma+3)A\theta_-$ bound.
+\end{proposition}
+\begin{proof}
+Write $R_+=\E X_+^2-mB$ and $R_-=\E X_-^2-mA$.
+The outer-gap calculation gives
+\[
+ D\ge(\sigma-1)\E X_+^3+(\sigma+1)\E X_-^3
+                  -6mAB+6BR_++6AR_-.
+\]
+Conditional centering gives the exact expansions
+\[
+ \E X_+^3=m\bar B^2+\int(x+2\bar B)\,d\mu_+,
+ \quad
+ \E X_-^3=m\bar A^2+\int(|x|+2\bar A)\,d\mu_-.
+\]
+Also $R_+=\mu_+(\R)+m\Delta_B$ and
+$R_-=\mu_-(\R)+m\Delta_A$.
+After substitution the deterministic terms equal $B_0+E_0$:
+use $m^2=(1-\theta)pq$ and
+$(\sigma+1)p^2+(\sigma-1)q^2-6pq=(6+2\sigma)(p-p_*)^2$.
+The remaining terms are the displayed integrals.
+Since $x,\bar B\ge B$ on the positive class, $k_+\ge3(\sigma+1)B$;
+the reflected bound is $k_-\ge3(\sigma+3)A$.
+\end{proof}
+
+For a twice continuously differentiable function $h$, set
+\[
+ r_h(v,x)=\int_0^1(1-u)h''(v+u(x-v))\,du.
+\]
+Taylor's integral formula and conditional centering give
+\[
+ \E h(X)-\E h(V)=\int r_h(\bar B,x)\,d\mu_+
+                    +\int r_h(-\bar A,x)\,d\mu_-.
+\]
+This is valid when the terms are integrable, in particular on a bounded
+support for $h\in C^2$. At $x=v$ it includes the value $h''(v)/2$.
+Let $r=D-B_0-E_0\ge0$. For any real responses $R_\pm$ and any finite
+nonnegative $K$ satisfying $R_\pm(x)\le Kk_\pm(x)$ on their respective
+supports, integration proves
+\[
+ \int R_+\,d\mu_++\int R_-\,d\mu_-\le Kr.
+\]
+One may take $K=\max\{0,\sup R_+/k_+,\sup R_-/k_-\}$ when finite.
+It is better to combine signed responses before taking this supremum:
+otherwise different terms spend the same variance at different, incompatible
+locations. This is a one-dimensional pointwise majorant problem; no
+strong duality or extremal-support theorem is required.
+
+For a concrete comparison, consider a symmetric unit-variance law with
+masses $1/10$ at each of $-2,2$ and $2/5$ at each of $-1/2,1/2$.
+Here $A=B=1/2$ and $\bar A=\bar B=4/5$.
+For $h(x)=x^4$, the conditional response is
+$R(x)=x^2+(8/5)x+48/25$ in the magnitude coordinate.
+On $[1/2,2]$ the positive-class ratio
+\[
+ \frac{R(x)}{(\sigma-1)(x+8/5)+3}
+\]
+is increasing: its derivative numerator is
+$(\sigma-1)x^2+2d x+(16/25)(\sigma-1)+24/5>0$,
+where $d=(8/5)(\sigma-1)+3$.
+The negative-class denominator is larger. Thus the common bound is
+\[
+ K_{\rm weighted}=\frac{228/25}{(18/5)(\sigma-1)+3}
+ <\frac{228/25}{(21/10)(\sigma-1)+3}=K_{\rm minimum}.
+\]
+The right-hand expression is what results from replacing the weights
+by their actual minima on this interval before estimating the fourth moment.
+Using the still coarser coefficient $(3/2)(\sigma+1)$ from the scalar
+endpoint bound would give a larger constant again.
+The strict improvement is analytic, not an optimization sample. This
+example illustrates the gain; it is not a replacement of a critical
+Berry--Esseen certificate cell.
+
+This argument does not linearize the convolution. If $f=\E e^{itX}$,
+$g=\E e^{itV}$ and $\delta=f-g$, it gives $|\delta|\le t^2\theta/2$.
+For an integer $n\ge2$, the exact remaining term is
+\[
+ f^n-g^n-ng^{n-1}\delta
+ =n(n-1)\delta^2\int_0^1(1-u)(g+u\delta)^{n-2}\,du.
+\]
+The segment $g+u\delta$ consists of characteristic functions of mixture
+laws, so its modulus is at most one. Thus
+\[
+ |f^n-g^n-ng^{n-1}\delta|\le n(n-1)t^4\theta^2/8.
+\]
+This bound is useful on a finite frequency interval. It does not supply
+the high-frequency decay or the cancellations required by a singular
+Fourier inversion kernel. Those remain separate obligations.
+
+\section{Spend the binomial margin instead of proving domination}
+
+Let $c=\CE$, $p\in(0,1)$, $q=1-p$, $v=pq$ and
+$\rho_B=(p^2+q^2)/\sqrt v$. At a legal binomial count $k$, put
+$z_B=(k-np)/\sqrt{nv}$ and
+$C_B=\sqrt n\{F_B(k)-\Phi(z_B)\}/\rho_B$.
+For any standardized law with this sign probability, at any threshold $H$,
+define
+\[
+ \mathcal E_c=\sqrt n\{F_{n,P}(H)-F_B(k)-\Phi(H/\sqrt n)+\Phi(z_B)\}
+                    +c(\rho_B-\rho).
+\]
+Direct subtraction gives
+\[
+ a=\sqrt n\{F_{n,P}(H)-\Phi(H/\sqrt n)\}-c\rho
+      =\rho_B(C_B-c)+\mathcal E_c.
+\]
+It is therefore enough to prove
+$\mathcal E_c<\rho_B(c-C_B)$ to exclude $a\ge0$.
+Replacing $<$ by $\le$ excludes positive excess only; it does not exclude
+equality. In particular, the strict tail conclusion needs a strict step.
+
+For $p\in[1/3,2/3]$, use the stronger binomial envelope
+\[
+ c(p)=\frac{\phi(0)(3+|q-p|)}{6(p^2+q^2)}.
+\]
+The published binomial estimate supplies $C_B\le c(p)$ on this interval
+\cite{Schulz2016,MattnerShevtsova2019}. The algebraic margin is exact:
+with $r_p=\min(p,q)$,
+\[
+ c-c(p)=\frac{2c(r_p-p_*)^2}{p^2+q^2},\qquad
+ \rho_B(c-c(p))=\frac{2c(r_p-p_*)^2}{\sqrt{pq}}.
+\]
+To check it, expand
+$(3+\sqrt{10})(p^2+q^2)-(3+q-p)
+=2(3+\sqrt{10})(p-p_*)^2$ for $p\le1/2$ and reflect.
+Hence $\mathcal E_c<2c(r_p-p_*)^2/\sqrt{pq}$ suffices for strict
+exclusion on this interval. If a strict version of the binomial envelope
+is used, a non-strict bound on $\mathcal E_c$ suffices instead.
+
+The allowance vanishes at $p_*$, so a uniform argument near the extremal
+law is still necessary. Outside $[1/3,2/3]$, this particular envelope
+cannot be used. No count panel is removed merely by displaying the
+factorization. A complete proposal must bound the actual comparison error,
+including phase, noise, endpoint atoms and normal variance correction,
+against the available margin.

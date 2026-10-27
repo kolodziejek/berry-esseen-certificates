@@ -1,3 +1,22 @@
+# After fourth-round proof redesign — 27 October 2026
+
+1. Review the 14-page companion and its explicit scalar-transfer premises;
+   see mathematics/strategy-v4/2026-10-27/{README.md,transport-review.md}.
+2. Next bounded experiment: select one existing zero-barrier acquisition cell,
+   list its actual-law support/moment ancestors, and evaluate R_c with c=C_E.
+   Check containment of c, the first raw ceiling and every sign/index gate.
+   Compare with the old variable-score envelope using exact arithmetic.
+3. Only after a complete ordered numerical cover should the new exclusion
+   replace the old LOCAL42 entry contract. Preserve finite recurrence consumers.
+4. Keep BASE41, all frequency envelopes and strict zero-noise comparison as
+   independent obligations. No native generation campaign without approval.
+
+Runnable bounded algebra check:
+python3 mathematics/strategy-v4/2026-10-27/excess-transport-check.py
+Other checks and exact prior commands are in integration01/receipt.json.
+The integration driver writes a new fixed run directory and refuses to overwrite;
+choose a distinct run identifier before reproducing that aggregate driver.
+
 # After third manuscript revision — 27 October 2026
 
 1. Review the158page paper and research/revision3-decisions.md. Keep existing

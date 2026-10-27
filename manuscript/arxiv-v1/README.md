@@ -18,6 +18,15 @@ composition remain obligations. Supplied analytic material is explicitly
 distinguished from the new reductions and from independently checked
 external results. AI use is disclosed in the manuscript.
 
+## Fourth-round proof research
+
+The current round adds a shorter moment/gap proof and a general first-failure
+statement, while retaining the finite and Fourier details that still do work.
+See `research/revision4-decisions.md`. A separate 14-page companion at
+`mathematics/strategy-v4/2026-10-27/main.pdf` develops fixed-target excess
+and a common noise measure, with explicit conditional transfer hypotheses.
+It is not a replacement proof of all the remaining certificate inputs.
+
 ## Build
 
 Use an ordinary TeX Live installation with pdfLaTeX and BibTeX:
@@ -78,5 +87,6 @@ its PDF. The theorem and certificate predicates are unchanged. Compilation,
 page-review and portable rebuild receipts are under
 `runs/manuscript-v3-20261027/` at the repository root.
 
-Draft review: https://github.com/kolodziejek/berry-esseen-certificates/pull/3
-(stacked on audit PR #2; no merge or submission performed).
+Historical review: PR #3 was merged into the audit branch, and PR #4
+subsequently carried that work into main. This fourth round starts from
+that merged main revision ca4943a and is submitted separately as a draft.

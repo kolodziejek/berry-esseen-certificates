@@ -1,3 +1,24 @@
+# New conditional fixed-target route — 27 October 2026
+
+Genuine finite base -> least failure -> two sharp predecessor caps
+-> attained excess a>=0 at c=C_E -> fixed-c contact -> compact support
+-> actual-law support/moment acquisition -> complete universal Fourier bounds
+-> first uncharged R_c ceiling -> Gaussian-weight license -> common strict
+phase/defect/leakage resource -> ordered confinement/count cover
+-> strict negative count RHS (positive noise), or strict binomial bound
+(zero noise) -> contradiction.
+
+The recurrence used only for an upper-excess tail-entry cap is absent from
+this new conditional DAG. It remains in separate finite 40–42/positive-barrier
+consumers. The multiplier c, actual score c+a/rho and deleted global constants
+are distinct. Conservation charges (n+H^2)a, not na alone.
+
+Each scalar leaf still needs domain coverage, outward rounding, positive
+curvature/denominator gates, signed repair, true deleted indices and strictness.
+Complete source mapping at starting revision ca4943a:
+mathematics/strategy-v4/2026-10-27/excess.md.
+No existing production wrapper is silently accepted for the new problem.
+
 # Third-round proof-reference dependencies — 27 October 2026
 
 - The scalar LOCAL42 reformulation is equivalent only because positive

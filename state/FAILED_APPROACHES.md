@@ -1,3 +1,23 @@
+# Fourth-round rejected shortcuts — 27 October 2026
+
+- Universal domination by the same-sign Bernoulli skeleton is false for each
+  fixed index; exact n=2 and n=42 examples are in opus-audit.md. These low-score
+  laws do not refute the main bound or acquired local comparisons.
+- Rounding near-colliding sum atoms to 1e-10 can change a CDF by 1/4. Exhaustive
+  combinatorial enumeration with floating arithmetic is not exact acceptance.
+- Contact and moment-preserving second variation are necessary conditions,
+  not a global two-point reduction for the nonlinear convolution objective.
+- Argon's N/(N-2) factor is weaker than the required (N/(N-1))^3 at every N>=3.
+  The shifted quartic parameter is 2, not 1+sqrt3. The coarse Gaussian 1/2
+  remainder cannot replace the finite 1/15 bound in the inspected n4 row.
+- Fixed-target excess does not make all old 'extremizer' lemmas transferable:
+  the actual score differs from c, the exact charge includes H^2a, the raw
+  Gaussian-weight license remains, and equality needs a strict final bound.
+- Keeping one common noise measure can strengthen a bound, but discarding
+  the quadratic characteristic-function-power remainder would be false.
+- New floor 20/25, a complete BASE41 and automatic removal of all recurrence
+  consumers were not established. No page-count instruction licenses a cut.
+
 # Third-round corrections and declined shortcuts — 27 October 2026
 
 - Old curvature identity2[3(b−1)+2u+c]/(c−u)^4 is false: at

@@ -60,7 +60,12 @@ the same way. The three identities share the same pair $(\mu_0,\mu_1)$.
 
 \subsection{A nonnegative moment defect}
 
-We now suppose the support is compact. Define
+The constant $3+\sqrt{10}$ has a simple geometric explanation. The
+signed third moment and the first absolute moment satisfy a circle
+inequality; the lengths of the support gaps are controlled by the same
+first absolute moment. Neither fact requires bounded support.
+
+Define
 \[
  \tau(t)=\E[X\mathbf1_{\{X\ge t\}}],\qquad \sigma=\sqrt{10}.
 \]
@@ -71,93 +76,104 @@ for $t\ge0$ nonnegativity is immediate. Signwise Tonelli integration gives
  \qquad 2\int_\R|t|\tau(t)\,dt=\rho.
 \label{ms:tau-moments}
 \end{equation}
-On every bounded component $(a,b)$ of the complement of the closed support,
-$\tau$ is constant in the interior; denote that value by $\tau_{a,b}$.
-Set
+On each bounded complementary interval $(a,b)$ of the closed support,
+$\tau$ is constant in the interior, with value $\tau_{a,b}$. Put
 \begin{equation}
  J=\sum_{(a,b)}\tau_{a,b}(b-a)^2,
  \qquad D=(3+\sigma)\rho-\gamma-3J.
 \label{ms:physical-defect-definition}
 \end{equation}
-There are at most countably many gaps. If the support lies in $[-R,R]$,
-then $J\le2R\int\tau=2R$, so this sum converges. Endpoint atoms do not
-alter the Lebesgue integrals defining its weights.
+There are at most countably many gaps; the next proof shows that the
+nonnegative sum is finite. Endpoint atoms do not affect its integrals.
 
-\begin{lemma}[The moment defect and the central gap]
+\begin{lemma}[A moment circle and the gap inequality]
 \label{ms:physical-defect}
 \label{ms:fourier:afcore:lem:physical-defect}
-The quantity $D$ in \eqref{ms:physical-defect-definition} is nonnegative.
-If $0$ belongs to the support, then $D\ge(\sigma-1)\rho$. Consequently
-$D<(\sigma-1)\rho$ implies a genuine central support gap $(-A,B)$ with
-$A,B>0$.
+For every $P\in\mathcal P$,
+\begin{equation}
+ \gamma^2+(2m)^2\le\rho^2,\qquad J\le\rho+2m,
+ \qquad \gamma+tJ\le\bigl(t+\sqrt{1+t^2}\bigr)\rho\quad(t>0).
+ \label{ms:gap-family}
+\end{equation}
+The last constant is sharp. Equality holds exactly at the standardized
+Bernoulli law with positive mass $p_t=(1+t-\sqrt{1+t^2})/2$.
+In particular, $D\ge0$. If zero belongs to the support, then
+$D\ge(\sigma-1)\rho$; hence $D<(\sigma-1)\rho$ implies a central
+support gap $(-A,B)$ with $A,B>0$.
 \end{lemma}
 \begin{proof}
-If zero belongs to the support, every gap has one sign and
-$(b-a)^2\le2\int_a^b|t|\,dt$. Sum using the constant gap weights and
-\eqref{ms:tau-moments} to obtain $J\le\rho$. Thus
-$D\ge\sigma\rho-\gamma\ge(\sigma-1)\rho$.
+Write $a_\pm=\E X_\pm^2$ and $b_\pm=\E X_\pm^3$, so
+$a_++a_-=1$, $b_++b_-=\rho$ and $b_+-b_-=\gamma$.
+Cauchy--Schwarz on each sign class gives
+$a_\pm^2\le mb_\pm$. It also gives
+$m^2\le pa_+$ and $m^2\le qa_-$, where an atom at zero is included
+in $q$. Thus
+$m^2(1/a_++1/a_-)\le1$, or $m^2\le a_+a_-$.
+Consequently $b_+b_-\ge(a_+a_-)^2/m^2\ge m^2$, proving the
+circle inequality since $\rho^2-\gamma^2=4b_+b_-$.
 
-Otherwise compactness and the presence of both signs give the central
-gap $(-A,B)$. Write
-\[
- T_+=\E X_+^3-mB^2,\quad T_-=\E X_-^3-mA^2,
- \quad R_+=\E X_+^2-mB,\quad R_-=\E X_-^2-mA,
-\]
-all nonnegative. Let $J_o=J-m(A+B)^2$ be the sum over the outer gaps.
-For a positive outer gap $(a,b)$,
-\[
- (b-a)^2\le2\int_a^b(t-B)\,dt.
-\]
-Summing and using Tonelli bounds its total contribution by
-\[
- J_o^+\le2\int_B^\infty(t-B)\tau(t)\,dt
-       =\E[X_+(X_+-B)^2]=T_+-2BR_+\le T_+.
-\]
-The same calculation on the negative half-line gives $J_o^-\le T_--2AR_-\le T_-$. Expansion of $D$ yields the identity
-\begin{align}
- D={}&m\{\sqrt{\sigma+1}A-\sqrt{\sigma-1}B\}^2
-       +(\sigma-1)T_++(\sigma+1)T_-\notag\\
-    &+3(T_++T_--J_o).\label{ms:defect-decomposition}
-\end{align}
-Here $\sqrt{\sigma+1}\sqrt{\sigma-1}=3$. Every term is nonnegative,
-which proves the claim.
+Every gap on one side of zero satisfies
+$(b-a)^2\le2\int_a^b|x|\,dx$.
+If a central gap $(-A,B)$ exists, its weight is $m$ and its excess
+over this integral is $2mAB$. Moreover
+$0\le\E[(X+A)(X-B)]=1-AB$.
+Summing the gap bounds by Tonelli proves $J\le\rho+2m$.
+If zero is in the support there is no central gap, so $J\le\rho$.
+Finally Cauchy--Schwarz in $\mathbb R^2$ gives
+$\gamma+2tm\le\sqrt{1+t^2}\rho$, proving the family and the
+assertions about $D$.
+
+Equality in the circle forces equality in the two signwise Cauchy
+bounds: the positive and negative parts are each concentrated at one
+nonzero value. Equality in $m^2\le a_+a_-$ excludes mass at zero.
+For such a law, with positive mass $p$ and $q=1-p$, one has
+$J=\rho+2m$. Equality in the last Cauchy bound requires
+$\gamma=2m/t$, equivalently $t(1-2p)=2p(1-p)$.
+Its unique solution in $(0,1)$ is the stated $p_t$.
 \end{proof}
 
 \begin{corollary}[The zero-defect law]\label{ms:zero-defect}
-For a compactly supported $P\in\mathcal P$, $D=0$ if and only if
+For $P\in\mathcal P$, $D=0$ if and only if
 \[
  X=(B_0-p_*)/\sqrt{p_*q_*},\qquad
  p_*=(4-\sqrt{10})/2,\quad q_*=1-p_*,
  \quad B_0\sim\operatorname{Bernoulli}(p_*).
 \]
-The sign of the third moment is fixed by the definition of $D$.
 \end{corollary}
 \begin{proof}
-If $D=0$, zero cannot lie in the support, so there is a central gap
-$(-A,B)$. The nonnegative terms in \eqref{ms:defect-decomposition}
-force $T_+=T_-=0$. Since
-$T_+=\E[X_+(X_+^2-B^2)]$ and the positive support lies in $[B,\infty)$,
-all positive mass is at $B$; similarly all negative mass is at $-A$.
-Centering and unit variance give $pB=qA$ and $AB=1$.
-The square in \eqref{ms:defect-decomposition} now gives
-\[
- \frac pq=\frac AB=\sqrt{\frac{\sigma-1}{\sigma+1}}
-                   =\frac{\sigma-1}{3},
-\]
-hence $p=p_*$. Conversely this two-point law has $T_+=T_-=J_o=0$
-and the square vanishes, so $D=0$.
+Apply the equality case of Lemma~\ref{ms:physical-defect} with $t=3$.
 \end{proof}
 
-The defect therefore records the loss from the extremal two-point
-geometry. For quantitative estimates we use the full nonnegative
-decomposition, rather than only its equality case.
-
-Several elementary consequences will be useful.
- Integrating $(X+A)(X-B)\ge0$ gives $AB\le1$.
-Cauchy--Schwarz gives $1/(2\rho)\le m\le1/2$. The outer-gap estimates give
-$J\le\rho+2m\le\rho+1$. Since $\sigma-1>2$,
-\eqref{ms:defect-decomposition} implies $T_++T_-\le D/2$; if $D<2$,
-then
+In particular the defect separates two losses:
+\[
+ D=\underbrace{\sigma\rho-\gamma-6m}_{\text{moment loss}}
+       +3\underbrace{(\rho+2m-J)}_{\text{gap loss}},
+\]
+each nonnegative. For quantitative estimates we need more information
+than their signs. Suppose a central gap $(-A,B)$ has been established,
+and write
+\[
+ T_+=\E X_+^3-mB^2,\quad T_-=\E X_-^3-mA^2,\qquad
+ R_+=\E X_+^2-mB,\quad R_-=\E X_-^2-mA.
+\]
+These four quantities are nonnegative. For the outer gaps put
+$J_o=J-m(A+B)^2$. A positive outer gap satisfies
+$(b-a)^2\le2\int_a^b(t-B)\,dt$, so Tonelli gives
+\[
+ J_o^+\le2\int_B^\infty(t-B)\tau(t)\,dt
+       =\E[X_+(X_+-B)^2]=T_+-2BR_+\le T_+.
+\]
+Similarly $J_o^-\le T_--2AR_-\le T_-$.
+Expanding $D$, using $\sqrt{\sigma+1}\sqrt{\sigma-1}=3$, gives
+\begin{align}
+ D={}&m\{\sqrt{\sigma+1}A-\sqrt{\sigma-1}B\}^2
+       +(\sigma-1)T_++(\sigma+1)T_-\notag\\
+    &+3(T_++T_--J_o).\label{ms:defect-decomposition}
+\end{align}
+Every term is nonnegative. Cauchy--Schwarz also gives
+$1/(2\rho)\le m\le1/2$: indeed $1\le\rho\E|X|=2m\rho$ and
+$\E|X|\le1$. Since $\sigma-1>2$, the decomposition yields
+$T_++T_-\le D/2$. If $D<2$, then
 \[
  m(A^2+B^2)=\rho-T_+-T_-\ge1-D/2,
  \qquad A+B\ge\sqrt{2-D}.
@@ -217,7 +233,7 @@ Thus $U_0\le a_0$ and $U_1\ge-a_1$. The physical displacement
 $\Delta_A+\Delta_B$ and the count displacement $d_Y$ differ by $\ell$.
 
 \begin{theorem}[Weighted joint resource]
-\label{ms:joint-resource}
+\label{ms:joint-resource}\label{ms:fourier:rescore:joint-resource}
 Suppose $n\ge N>0$ and
 \[
  nD\le Nd_D,\quad \theta\le\Theta<1,\quad pq\le v_*,\quad
