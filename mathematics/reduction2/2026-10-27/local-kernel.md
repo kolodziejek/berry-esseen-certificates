@@ -38,7 +38,7 @@ All source line numbers below refer to decoded members, not ZIP offsets.
 |---|---|---|
 | `F/local/central42_v2/central42_kernel.py` | 62–65 domain; 80–95 joint gap; 96–114 signed H/phase; 159–169 curvature; 180–189 final gates | `9dc0754fe2dd4f2f7057247d3d62f3b71472c65a49d46f67d35fb0d66e3f8673` |
 | `F/local/left42_final/central42_kernel.py` | Same curvature/domain lines; 180–205 signed Gaussian and final gates | `d025529aa2690c3cfc0f1c34a6af385d6fa69db8e069543057f29475cbb133c3` |
-| `F/local/central42_v2/central42_contract.py` | 17–31 selected configuration, closed noise bands, 32 H cells, 16 outer phase cells | `de30acd375d9d53d6a7068cd4b5397da6c775c21be29aca2e5c6b5da5f65a39f` |
+| `F/local/central42_v2/central42_contract.py` | 17–31 selected configuration and closed noise bands; defaults 32 H/16 outer cells are overridden by producer arguments | `de30acd375d9d53d6a7068cd4b5397da6c775c21be29aca2e5c6b5da5f65a39f` |
 | `F/local/left42_final/central42_contract.py` | 17–31 corresponding LEFT selection | `10868c085cf69e6a0b1db01b6bcf638e2a13863db088bc966754ae44c22e2167` |
 | `F/local/central42_v2/tiny42_normalization.py` | 33–40 domain; 42–78 directed constants; 80–146 normalization gates | `3650f39f618def7615d8be20ce8b9efd28e16202102fb8fa76dd8687deff4a6c` |
 | `P/local42_improvements.tex` | 194–198 clamping before changing index; 209–216 conservative central cache | `1a634793af259cccd31cfb86cae8127be0af8bed15559b59d6baaf3f5f8215f6` |
@@ -241,40 +241,48 @@ the marked-tail Poisson computations, 16 inner marked-crossing subcells,
 mass/resource/repair arithmetic and all other work remain.
 
 No row is removed. All 78 CENTRAL and 74 LEFT LOW configurations, both H
-signs, their 32 H cells, 16 outer phase cells and all closed noise bands
-remain. Their actual source domain and target are preserved. No native task
+signs, their manifest-selected H/outer phase grids and all closed noise bands
+remain. The literal `finite61/MANIFEST.json` field `low_rows` selects 32/16
+only for CENTRAL row 0 minus, 16/8 for the other 77 CENTRAL configurations, and
+8/4 for all 74 LEFT configurations. Contract defaults are not the producer
+settings. Their actual source domain and target are preserved. No native task
 or finite base provider is proved unnecessary by this local result alone.
 
-The checker also counts potential cache keys from the literal contracts,
+The checker also counts potential cache keys from the literal contracts and
+the manifest's per-row/per-sign producer arguments,
 before the `cap<=0` empty-cell pruning. For one sweep of the 152 producer
-configurations the CENTRAL count is 164,864 and LEFT count is 1,247,232.
+configurations the CENTRAL count is 43,136 and LEFT count is 77,952.
 These are **upper bounds, not measured visits**: CENTRAL keys collapse
 noise bands with equal phase radius, LEFT keys include the band, and some
 keys may never reach the curvature calculation. If all potential keys were
-visited, their 90,374,144 old candidate evaluations would become at most
-4,236,288. No elapsed-time inference or claim about actual pruning is made.
+visited, their 7,749,632 old candidate evaluations would become at most
+363,264. No elapsed-time inference or claim about actual pruning is made.
 Duplicate binder replays are a separate execution-plan issue.
 
 ## Fresh bounded evidence and its limits
 
 The new standard-library program `check_local_curvature.py` reads and hashes
-the source-only archive, parses only its two resource JSON tables, and
+the source-only archive, parses its manifest and two resource JSON tables, and
 executes no archived module. It independently builds the relevant rational
-`b,c` parameters from the literal row/contract/kernel formulas. For every
-selected row and both H signs it chooses the first and last noise bands,
-H cells0,15,31, and outer phase cells0,7,8,15. This gives 3,648 tested calls.
+`b,c` parameters from the literal row/contract/kernel formulas, using each
+job's `H_cells=hc` and `outer_phase_cells=oc` from the pinned manifest.
+It rejects missing or duplicate row/sign jobs and verifies all 152 labels and
+the 32/16, 16/8, 8/4 grid inventory. For every selected row and both H signs it
+chooses the first and last noise bands, H cells 0, `floor((hc-1)/2)`, `hc-1`,
+and outer cells 0, `floor((oc-1)/2)`, `floor(oc/2)`, `oc-1`. This gives 3,648
+tested calls on the actual selected grids.
 It compares the exact candidate formula to a direct transcription of the
 old 64-term envelope, tests rational interior points and kinks, and verifies
 that a listed candidate attains the returned maximum.
 
-Fresh receipt: `runs/reduction2-20261027/local-kernel01/receipt.json`.
-Stdout: `stdout.json`; stderr: `stderr.txt` (empty). Exit code0; measured
-elapsed time 2.616317834 seconds on the receipt's Python/platform. Results:
+Corrected fresh receipt: `runs/reduction2-20261027/local-kernel02/receipt.json`.
+Stdout: `stdout.json`; stderr: `stderr.txt` (empty). Exit code 0; measured
+elapsed time 2.597033709 seconds on the receipt's Python/platform. Results:
 
-* All 3,648 comparisons passed; 2,778 gave a strictly smaller bound.
-* Nine sampled calls included an eligible stationary candidate. The other
+* All 3,648 comparisons passed; 2,997 gave a strictly smaller bound.
+* 161 sampled calls included an eligible stationary candidate. The other
   calls needed only the two endpoint values.
-* 62,276 exact rational point diagnostics passed, including six additional
+* 62,942 exact rational point diagnostics passed, including six additional
   adversarial cases covering `c=1`, arbitrary negative/large `b`, a singleton
   interval, kink coincidences, and both phase endpoints.
 * Endpoint-only and phase-reflection shortcuts were refuted exactly.
@@ -291,10 +299,30 @@ python mathematics/reduction2/2026-10-27/check_local_curvature.py \
 ```
 
 The receipt pins both the script and archive; stdout pins seven selected
-source blobs. Exact diagnostics establish their stated finite comparisons,
+source blobs and the canonically serialized manifest `low_rows` records
+(SHA256 `70dfc63e0592d52a7fd341676c3dd8929e778b3a95fd38281be6412edf466cc8`).
+Exact diagnostics establish their stated finite comparisons,
 not the continuous theorem or the validity of supplied moment/contact
 lemmas. The continuous theorem is proved above. A future new acceptor needs
 independent review of that proof, the helper semantics and the clamp join,
 then a separately authorized bounded integration exercise. The existing
 certificates, normalizations, numerical targets and native programs have
 not been changed or executed.
+
+### Preserved provenance correction
+
+Root review found that the initial checker used the contract defaults 32/16
+for every selected resource row/sign. Its run01 remains a valid bounded
+test of the universal supremum formula on those finer default grids, but
+its 164,864/1,247,232 potential-key counts and 90,374,144 candidate count were
+**not** the selected producer workload. Those workload claims are superseded
+by the manifest-bound run02 above. The mathematical lemma was unaffected.
+
+`runs/reduction2-20261027/local-kernel01/receipt.json`, stdout and stderr are
+preserved byte-for-byte. Its original input script is also preserved as
+`local-kernel01/check_local_curvature_default_grid.py`; its SHA256 matches
+the original receipt. Commit `b989359` preserves the original script at its
+original path. Reproduction of run01 uses that snapshot, not the corrected
+current script. Run01's output label `selected_LOW_configurations` means the
+152 row/sign resource pairs sampled with default grids, not the exact 152
+producer configurations. No run01 PASS is relabeled as a run02 result.

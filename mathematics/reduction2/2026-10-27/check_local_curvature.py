@@ -108,6 +108,17 @@ def main():
     stationary_cases = 0
     strict_improvements = 0
     potential_keys = {"central": 0, "left": 0}
+    jobs = {}
+    grid_counts = {}
+    for job in manifest["low_rows"]:
+        key = (job["family"], job["index"], job["sign"])
+        require(key not in jobs, "unique manifest LOW row")
+        require(type(job["H_cells"]) is int and job["H_cells"] > 0, "manifest H grid")
+        require(type(job["outer_phase_cells"]) is int and job["outer_phase_cells"] > 0, "manifest phase grid")
+        jobs[key] = job
+        grid = str((job["H_cells"], job["outer_phase_cells"]))
+        grid_counts[grid] = grid_counts.get(grid, 0) + 1
+    seen_jobs = set()
     min_ratio = F(1)
     largest_absolute_improvement = F(0)
     selected = {}
@@ -118,13 +129,19 @@ def main():
         selected[kind] = [r["index"] for r in rows]
         for row in rows:
             bs = bands(row, kind)
-            # Potential unique cache keys before resource-empty cell pruning.
-            potential_keys[kind] += 2*32*16*(len(set(x[2] for x in bs)) if kind == "central" else len(bs))
             p, q = map(F, row["p"])
             ell = rootlo((1-F(row["theta"]))/ (q*(1-q)))
             eh = rootlo(1/(p*(1-p))) + F(1, 10**8)
             require(ell > 0 and eh**2*p*(1-p) > 1, "span enclosures")
             for sign in (-1, 1):
+                family = "central42_v2" if kind == "central" else "left42_final"
+                key = (family, row["index"], sign)
+                require(key in jobs, "manifest job for selected row/sign")
+                seen_jobs.add(key)
+                job = jobs[key]
+                hc, oc = job["H_cells"], job["outer_phase_cells"]
+                # Actual producer grid from the pinned manifest, not contract defaults.
+                potential_keys[kind] += hc*oc*(len(set(x[2] for x in bs)) if kind == "central" else len(bs))
                 configs += 1
                 H = F(row["H_minus" if sign < 0 else "H_plus"])
                 # Bounded selection: both edge noise bands, H first/middle/last,
@@ -132,14 +149,14 @@ def main():
                 for bi in sorted({0, len(bs)-1}):
                     low, high, phase = bs[bi]
                     c = 1-F(row["d0"])*(1-low/F(row["lambda_max"]))
-                    for hj in (0, 15, 31):
-                        hl, hh = H*F(hj, 32), H*F(hj+1, 32)
+                    for hj in sorted({0, (hc-1)//2, hc-1}):
+                        hl, hh = H*F(hj, hc), H*F(hj+1, hc)
                         hs = (hl, hh) if sign > 0 else (-hh, -hl)
                         hqs = [h/e for h in hs for e in (ell, eh)]
                         b = q - min(hqs)
-                        for oi in (0, 7, 8, 15):
-                            lo = -phase+2*phase*F(oi, 16)
-                            hi = -phase+2*phase*F(oi+1, 16)
+                        for oi in sorted({0, (oc-1)//2, oc//2, oc-1}):
+                            lo = -phase+2*phase*F(oi, oc)
+                            hi = -phase+2*phase*F(oi+1, oc)
                             exact, candidates = curvature_supremum(b, c, lo, hi)
                             old = old_envelope(b, c, lo, hi)
                             require(exact <= old, "new bound exceeds old grid")
@@ -152,6 +169,8 @@ def main():
                                 min_ratio = min(min_ratio, exact/old)
                             largest_absolute_improvement = max(largest_absolute_improvement, old-exact)
     require(selected == {"central": list(range(39)), "left": list(range(8, 45))}, "all152 selected configurations")
+    require(seen_jobs == set(jobs), "exact manifest producer label coverage")
+    require(grid_counts == {"(32, 16)": 1, "(16, 8)": 77, "(8, 4)": 74}, "literal selected grid inventory")
     # Endpoint-only shortcut is false: the permitted interior maximum matters.
     b, c, lo, hi = F(2, 5), F(9, 10), F(0), F(1, 5)
     exact, _ = curvature_supremum(b, c, lo, hi)
@@ -177,6 +196,8 @@ def main():
     print(json.dumps({
         "status": "PASS bounded exact diagnostics; analytic proof supplies continuous coverage",
         "selected_LOW_configurations": configs,
+        "manifest_grid_configuration_counts": grid_counts,
+        "manifest_low_rows_canonical_sha256": sha256(json.dumps(manifest["low_rows"], sort_keys=True, separators=(",", ":")).encode()).hexdigest(),
         "sampled_curvature_calls": checked,
         "rational_point_diagnostics": sample_points,
         "sampled_calls_with_stationary_candidate": stationary_cases,
