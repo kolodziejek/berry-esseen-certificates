@@ -1,0 +1,71 @@
+{
+  "bernstein_transform_used": false,
+  "coarse_initial_negative_reserve": "-210108186268387281/328000000000000000",
+  "invalid_affine_continuation_negative_reserve": "-73831000713261/839680000000000",
+  "later_contractions": 63,
+  "mesh_or_search_used": false,
+  "native_programs_executed": 0,
+  "negative_controls": [
+    "expanded_radius_domain",
+    "omitted_radius_prefix",
+    "false_common_ray_cap",
+    "missing_probability_cell",
+    "reordered_probability_cells",
+    "changed_preceding_moment",
+    "missing_support_edge",
+    "duplicate_json_key"
+  ],
+  "results": {
+    "common_bridge": {
+      "negative_contact": "2533499510174559/214958080000000000",
+      "radius": "121/40",
+      "ray_gates": [
+        "-5347441/1400000",
+        "-104637/8000",
+        "-693/50",
+        "-372100321/112000000",
+        "-446567/100000",
+        "-2057/1000"
+      ]
+    },
+    "family": {
+      "derivative_upper": "-797749885413/3358720000000",
+      "margin_above_1_50": "104574680322409/214958080000000000",
+      "negative_contact_at_max_radius": "4403736280322409/214958080000000000",
+      "rays_at_5_2": [
+        "-16991/700000",
+        "-3801/500",
+        "-1107/100",
+        "-11615533/7000000",
+        "-706633/200000",
+        "-2057/1000"
+      ],
+      "taylor_coefficients": [
+        "123579925563/1343488000000",
+        "-467155860219/1679360000000",
+        "705959271/13434880000",
+        "8703567/167936000",
+        "-7499223/839680000",
+        "-531441/2099200000"
+      ]
+    },
+    "initial": {
+      "negative_contact_times_A": "2214258283536204102723/10250000000000000000000",
+      "radius": "96/25",
+      "ray_gates": [
+        "-663317/78125",
+        "-263781/12500",
+        "-17517/1000",
+        "-960520473/175000000",
+        "-11274423/2000000",
+        "-2057/1000"
+      ]
+    }
+  },
+  "scale_margin": "118707/42875000",
+  "scope": "New all-n>=42 zero-loss support arithmetic for65 bound calls; contact, moment and same-law resource premises remain. No full LOCAL42/base/global acceptance.",
+  "source_archive_sha256": "43b606138f826b47e3f174957088285349aebc82a928627e9e66fe370471be52",
+  "source_proof_sha256": "419ba79a8967665c998602dc421300ae8ee6f5c59901880175b9618f63c27393",
+  "status": "PASS_ELEMENTARY_ZERO_LOSS_SUPPORT_ARITHMETIC",
+  "support_cases": 3
+}
