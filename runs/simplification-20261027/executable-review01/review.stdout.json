@@ -1,0 +1,53 @@
+{
+  "status": "PASS_BOUNDED_INDEPENDENT_EXECUTABLE_REVIEW",
+  "reviewed_commit": "341c1e3f77806a4aaa178051f6f8c80c13bd63ac",
+  "baseline_archive_unchanged": true,
+  "native_archived_programs_executed": 0,
+  "original_runs": [
+    {
+      "command": [
+        "python3",
+        "mathematics/simplification/2026-10-27/check_support_lift.py"
+      ],
+      "cwd": ".",
+      "returncode": 0,
+      "stdout_sha256": "e91ed23c36a90172ae6098f60e5962ba3f40b02a5b9593a5984273a259d3a87f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "mathematics/simplification/2026-10-27/check_finite_entry.py"
+      ],
+      "cwd": ".",
+      "returncode": 0,
+      "stdout_sha256": "7ec5ab293d28bcbcf01e1c041781623ce7d7591610a4b84734faad5c5172ced3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scalar": [
+    {
+      "n": 42,
+      "bound": "3003/10250",
+      "reserve": "36/5125",
+      "own": "73/175",
+      "own_reserve": "191/35000"
+    },
+    {
+      "n": 43,
+      "bound": "102469/350000",
+      "reserve": "2531/350000",
+      "own": "1793/4300",
+      "own_reserve": "1209/215000"
+    }
+  ],
+  "exact_constants": {
+    "ell": "800390529679/125000000000",
+    "S": "202424330939/200000000000",
+    "r": "7361/4000",
+    "b": "641562334877/1000000000000"
+  },
+  "support_calls": 65,
+  "left_parent_chains": 55,
+  "low_rows": 152
+}

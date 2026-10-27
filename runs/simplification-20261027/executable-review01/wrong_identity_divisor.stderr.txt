@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<disposable-new-checker-copy>", line 237, in <module>
+    main()
+  File "<disposable-new-checker-copy>", line 196, in main
+    check_identity(r, b)
+  File "<disposable-new-checker-copy>", line 112, in check_identity
+    need(actual == expected, 'contact difference identity')
+  File "<disposable-new-checker-copy>", line 33, in need
+    raise Rejected(message)
+__main__.Rejected: contact difference identity

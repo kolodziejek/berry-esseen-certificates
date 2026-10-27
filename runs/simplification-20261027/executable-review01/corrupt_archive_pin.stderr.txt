@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<disposable-new-checker-copy>", line 237, in <module>
+    main()
+  File "<disposable-new-checker-copy>", line 183, in main
+    need(sha256(ARCHIVE.read_bytes()).hexdigest() == ARCHIVE_SHA, 'baseline archive identity')
+  File "<disposable-new-checker-copy>", line 33, in need
+    raise Rejected(message)
+__main__.Rejected: baseline archive identity
