@@ -1,4 +1,4 @@
-\section{An exact curvature calculation}\label{ms:curvature}
+\subsection{An exact curvature calculation}\label{ms:curvature}
 
 The remaining local comparison contains a one-dimensional supremum. Its apparent numerical difficulty comes from positive parts and a truncated denominator. Resolving the smooth pieces shows that no mesh is needed: a maximum occurs at an endpoint or at one explicitly known interior point.
 
@@ -13,7 +13,7 @@ $b=p_+-\min(H/\ell)$, where the minimum uses all four signed endpoint
 quotients. The variable $b$ is not a probability and cannot be freely
 reflected.
 
-\begin{theorem}[Exact three-candidate supremum]
+\begin{theorem}[Exact three-candidate supremum]\label{ms:curvature-thm}
 The supremum of $f$ over $[l,h]$ is the maximum of $f(l)$, $f(h)$, and
 the value $1/[4(c-b)]$ if
 \[
@@ -58,7 +58,7 @@ has the smallest $c$, so its cached envelope also dominates later exact
 values; this requires the original band order and joint-gap relation.
 LEFT retains its band-dependent cache.
 
-\subsection{Why the final correction needs a zero clamp}
+\subsubsection{Why the final correction needs a zero clamp}
 The curvature improvement can make the recomputed inverse-index correction
 negative. One must not assume the old assertion $I>0$ remains true.
 Within a fixed positive-noise cell, the actual forms are
@@ -85,7 +85,6 @@ Endpoint checks thus cover the closed interval. At an accepted old endpoint,
 The original strict target $m_0B+I_{\rm old}/N<-1/1000$ is preserved.
 The separate $B<0$ gate remains necessary to use the mass lower bound.
 
-This is conditional transport from an accepted old cell, not a full replay
-or a suppression of an old assertion. A new implementation replaces 64
-candidate values by at most three per curvature cache miss. All marked-tail,
-normalization, mass, joint-resource and other comparison work remains.
+Thus an already accepted cell keeps its strict comparison margin under
+this replacement. The curvature calculation requires at most three
+candidates, while the other terms and sign conditions are unchanged.

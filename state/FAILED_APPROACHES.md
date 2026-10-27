@@ -1,3 +1,20 @@
+# Rejected revision proposals — 27 October 2026
+
+- Weights `(4 minus/plus sqrt(10))/2` are not a probability pair. Correct
+  `p=(4-sqrt(10))/2`, `q=1-p`.
+- The normalized smoothing recurrence has an additive `O(1/n)` leading
+  error, not `O(n^(-3/2))`.
+- `D >= 0` alone does not license removing the Gaussian weight: the
+  independent review supplies a compactly supported continuous example
+  with `gamma+3J < 0`. The small-remainder gate is essential.
+- An exact mixture identity is not a proof of uniform relative-to-noise
+  remainders; a set of finite-index helper tools is not a cover of 6--41.
+- Removing 1,300 unique atlas lines or declaring all analytical obligations
+  complete would conceal unresolved work. Both proposals were declined.
+- Build01 of this editorial revision failed on a missing TeX delimiter
+  after renaming the strip width (`\lew`); corrected to `\le w`.
+  The failed and successful diagnostics are preserved under the revision run.
+
 # Manuscript review boundaries — 27 October 2026
 
 - Including a supplied analytic proof in a typeset appendix does not make it

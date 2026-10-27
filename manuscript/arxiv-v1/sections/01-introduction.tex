@@ -30,15 +30,15 @@ threshold, and we will keep the three distinct. All terminating decimals
 in numerical inequalities mean exact rational numbers.
 
 The normalization costs no generality. If $Z$ has mean $\mu$, variance
-$\sigma^2>0$, and finite third absolute central moment $\beta_3$, apply the
-definitions to $X=(Z-\mu)/\sigma$. Then $\rho=\beta_3/\sigma^3$ and
+$\varsigma^2>0$, and finite third absolute central moment $\beta_3$, apply the
+definitions to $X=(Z-\mu)/\varsigma$. Then $\rho=\beta_3/\varsigma^3$ and
 \[
- \Pp\left(\frac{\sum_{i=1}^n Z_i-n\mu}{\sigma\sqrt n}\le x\right)
+ \Pp\left(\frac{\sum_{i=1}^n Z_i-n\mu}{\varsigma\sqrt n}\le x\right)
  =\Pp(S_n\le\sqrt n\,x).
 \]
 Thus $C_n\le\CE$ is precisely the usual sharp inequality at index $n$.
 
-\subsection{From Berry and Esseen to the sharp-constant problem}
+\subsection{From Berry and Esseen to the sharp-constant problem}\label{ms:history}
 
 Berry~\cite{Berry1941} and Esseen~\cite{Esseen1942,Esseen1945}
 established quantitative normal approximation of order $n^{-1/2}$ under
@@ -64,19 +64,20 @@ Indeed $p_*^2+q_*^2=10-3\sqrt{10}$ and
 $(3+q_*-p_*)/(p_*^2+q_*^2)=3+\sqrt{10}$.
 Consequently every constant smaller than $\CE$ fails for a sufficiently
 large sum of this one fixed Bernoulli law. This proves $C^*\ge\CE$;
-it supplies no upper bound for other laws. Schulz's dissertation
-\cite{Schulz2016} proves the sharp upper bound for the entire binomial
-family at every sample size. That finite-binomial theorem and the
+it supplies no upper bound for other laws. Hipp and Mattner settled the symmetric binomial case
+\cite{HippMattner2008}; Schulz's dissertation~\cite{Schulz2016} proves
+the sharp upper bound for the entire binomial family at every sample size. That finite-binomial theorem and the
 fixed-law lower asymptotic have different roles in the argument below.
 
 Upper estimates developed through increasingly precise smoothing and
 characteristic-function inequalities. Zolotarev's work and van Beek's
 Fourier analysis~\cite{Zolotarev1967,vanBeek1972} are early milestones;
 Prawitz's one-sided smoothing kernel~\cite{Prawitz1972} remains useful in
-modern computations. More recent improvements include Shevtsova's bound
+modern computations. Shiganov obtained the iid bound $0.7655$ in work originally published in
+1982~\cite{Shiganov1986,Tyurin2009}. Subsequent improvements include Shevtsova's bound
 $0.7056$~\cite{Shevtsova2007}, the bound $0.5129$ of Korolev and
 Shevtsova~\cite{KorolevShevtsova2010}, Tyurin's bound $0.4785$ obtained
-using zero-bias methods~\cite{Tyurin2009}, and Shevtsova's bounds
+using zero-bias estimates and characteristic-function bounds~\cite{Tyurin2010}, and Shevtsova's bounds
 $0.4748$ and $0.4690$~\cite{Shevtsova2011,Shevtsova2013}.
 These estimates also give useful information before the absolute constant
 is extracted. For example, the structural inequalities
@@ -95,15 +96,10 @@ Several recent projects combine analytic inequalities with extensive
 computation. Xiao and Li report a global iid upper bound of $0.4395$;
 Lin reports $0.423$ using a refinement of their analytic framework
 \cite{xiao2026berryesseen,lin2026berryesseen}. Both supply Lean
-developments and exact finite certificates. Their use of
-\texttt{native\_decide} places the relevant compiler and evaluation
-mechanism within the trusted computation. We have inspected the stated
-scope and verification descriptions, but have not independently replayed
-these developments; their numerical conclusions are not premises of this
-paper. Tao and contributors' \emph{Optimization Constants in Mathematics},
+developments and exact finite certificates. Their finite checks use Lean's native evaluation mechanism. Tao and contributors' \emph{Optimization Constants in Mathematics},
 especially Problem~19a, records this work and its verification status
-\cite{tao2026berryesseenregistry}. The registry is a useful guide to the
-literature, rather than an additional proof of a listed bound.
+\cite{tao2026berryesseenregistry}. The registry links the manuscripts, implementations and verification
+discussions.
 
 He and Cheng's preprint~\cite{hecheng2026eventually} reports the sharp
 inequality for every
@@ -131,8 +127,7 @@ is an iid convolution. In the independent setting, zero padding can also
 change the number of summands without changing the normalized sum, so
 sample-size assertions must be compared with care. The cited papers are
 from collection version~0.7.0; the Primal Space project page describes an
-earlier version of the same collection, not a separate result.\footnote{Project overview: \url{https://www.primalspace.me/projects/independent-berry-esseen-bounds/}.} We have not
-replayed its computational certificates.
+earlier version of the same collection, not a separate result.\footnote{Project overview: \url{https://www.primalspace.me/projects/independent-berry-esseen-bounds/}.}
 
 Formalization offers another way to expose the exact hypotheses of a
 result. Yan's \emph{ProbabilityApproximation} formalizes classical
@@ -141,55 +136,48 @@ nonuniform scalar and multivariate normal-approximation theorems in Lean
 sharp iid constant. The \emph{BerryEsseenLean} project accompanying He
 and Cheng has eventual-sharpness endpoints with explicitly listed external
 mathematical inputs~\cite{BerryEsseenLean2026}. Its inspected September
-snapshot accompanies an earlier manuscript version. A kernel-checked
-implication with such inputs is valuable, but it does not discharge those
-inputs. We have not rebuilt either formalization.
+snapshot accompanies an earlier manuscript version. The scope of these formal statements is therefore determined by their
+external hypotheses as well as their conclusions.
 
-\subsection{What this manuscript proves and how to read it}
+\subsection{The present approach and its scope}\label{ms:scope}
 
-Our aim is to reduce the analytic and computational cost of a possible
-all-index proof, while making the remaining obligations precise. An
-earlier working draft of this project is available on Hexagon
-\cite{rodziewiczkolodziejek2026momentdefects}. We use it as source material,
-not as independent confirmation of its conclusions. The present draft
-does \emph{not} claim~\eqref{ms:conjecture}.
+The analytic starting point is a maximizing law at a fixed sample size.
+Its first variation gives a contact inequality at every support point.
+We integrate that inequality against the density of the zero-bias
+transform, introduced by Goldstein and Reinert~\cite{GoldsteinReinert1997}.
+The resulting identity connects the normal-approximation error to a
+nonnegative moment defect and a Fourier remainder. The defect singles out
+Esseen's two-point law; its quantitative form controls conditional noise
+and the displacement of the two parts of the support at the same time.
+The sign decomposition then turns the original sum into an exact binomial
+mixture. Related zero-bias methods appear in Tyurin's work and, for
+independent summands, in Bell's transport paper~\cite{Tyurin2010,BellTransport2026}.
 
-The central simplification is to examine the first index at which a
-sharp bound could fail. If a base through $41$ is available, that index
-is at least $42$, and the immediately preceding global constant is at
-most $\CE$. The resulting contact inequality has no positive predecessor
-loss. A support-free smoothing estimate also bounds the current score; the least-index choice supplies the
-bounds at both deleted indices. This is the role of
-Section~\ref{ms:smoothing}; it does not by itself establish the finite
-base or the local exclusion theorem.
+Our main reductions simplify three parts of this program. At a first
+contrary index, the predecessor loss in contact is zero. This permits
+an elementary support argument using boundary estimates and monotonicity,
+in place of support positivity meshes. Retaining the score excess in
+the defect budget excludes additional comparison sectors. Finally, an
+exact three-candidate maximization replaces the phase-curvature mesh.
+These are the results of Sections~\ref{ms:support}, \ref{ms:resources}
+and~\ref{ms:curvature}.
 
-The proof then has a concrete geometric form. A maximizing law must
-satisfy a contact inequality at every support point. That inequality
-confines the law to a bounded interval. Splitting the law by sign gives
-a two-point skeleton with conditional mean-zero noise. A nonnegative
-moment defect measures how much probability can lie away from the
-skeleton; one joint inequality controls both the noise variance and the
-inward displacement of the two support clusters. Finally, conditioning
-on the number of positive labels expresses the original iid sum exactly
-as a binomial mixture. Local comparisons can then be certified on closed
-parameter cells, provided that all these cells refer to the same
-underlying law.
+The all-index conclusion remains conditional. Theorem~\ref{ms:conditional-global}
+shows that an independent sharp base $C_j\le\CE$ for $1\le j\le41$,
+together with the equality-inclusive local exclusion of
+Assumption~\ref{ms:local42}, implies
+\[
+ C_n<\CE\quad(n\ge42),\qquad C^*=\CE.
+\]
+Establishing the local exclusion requires both analytic implications and
+complete finite certificates. The new reductions do not by themselves
+establish that assumption or the finite base. Section~\ref{ms:certificates}
+records their verification status in one place.
 
-Sections~\ref{ms:support}, \ref{ms:resources}, and \ref{ms:curvature}
-give three reductions in this program. The support argument replaces
-polynomial positivity meshes by two rational boundary inequalities and
-one monotonicity calculation. Keeping the score excess in the joint
-defect bound makes several comparison sectors empty. An exact
-one-dimensional maximization replaces a curvature grid by at most three
-candidates. Each statement carries its hypotheses, including any
-previously acquired moment or phase bounds.
-
-Section~\ref{ms:certificates} states the conditional global implication
-and separates analytic inputs from finite certificate conditions.
-The appendices contain the longer retained derivations, with their
-original numerical scopes made explicit. Some belong to a supplied
-proof candidate whose full independent verification remains open; they
-are marked accordingly. This distinction is particularly important when
-an argument proved for $n\ge47$ is proposed for use at $n\ge42$.
-The source correspondence and citation audit accompany the manuscript
-as review files, so that a reader can trace every retained dependency.
+An earlier working draft is available on Hexagon
+\cite{rodziewiczkolodziejek2026momentdefects}. The present manuscript
+reorganizes its analytic material and gives the reductions above, while
+keeping the unverified parts of the longer Fourier and finite-index chain
+explicit. We cite recent computational and formal projects as related
+work; none of their newly reported bounds is used as a premise here.
+The bibliography and accompanying source notes identify the versions used.

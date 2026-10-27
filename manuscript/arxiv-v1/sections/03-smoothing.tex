@@ -14,7 +14,8 @@ For the standard normal density $\phi$,
  \qquad \|\phi'''\|_\infty\le\frac2\pi,
  \qquad \frac1{4\pi}<\frac2{25}.
 \]
-Moreover $819/2000<\CE<20487/50000<41/100$.
+Moreover $819/2000<\CE<20487/50000<41/100$ and
+$\phi(0)>0.39886>0.3988=997/2500$.
 \end{lemma}
 \begin{proof}
 Since $\phi''(x)=(x^2-1)\phi(x)$, the norm on $x^2\le1$ is at most
@@ -77,7 +78,10 @@ $r_-^2<10<r_+^2$. The following comparisons are exact rational ones:
 For example, each outer comparison follows by multiplying by its positive
 rational denominator; the displayed finite sums specify those denominators
 completely. All quantities are positive, so taking square roots proves the
-claimed bounds. In particular, $.4095<\CE<.40974<.41$.
+claimed bounds. In particular, $0.4095<\CE<0.40974<0.41$.
+The same upper endpoint for $\pi$ is smaller than $22/7$.
+Since $(0.39886)^2<7/44$, we also obtain
+$\phi(0)>0.39886>0.3988$.
 \end{proof}
 
 \begin{theorem}[One-step smoothing]
@@ -164,14 +168,10 @@ Using $c<41/100$ gives the strict bound
  =\frac{3003}{10250}.
 \]
 The reserve below $3/10$ is $36/5125$. Consequently
-$C_n<c+.3/n<.41+.3/42=73/175$, whose reserve below $.4226$ is
+$C_n<c+0.3/n<0.41+0.3/42=73/175$, whose reserve below $0.4226$ is
 $191/35000$. Finally $R_{n-1}(P)\le C_{n-1}\le c\le C_n$, so both
 positive parts vanish.
 \end{proof}
-
-These are entry estimates, not local exclusion theorems. In particular,
-a zero predecessor decrement does not say that the conditional noise,
-the physical defect or a leakage term vanishes.
 
 \begin{proposition}[Equality-inclusive least contrary index]
 \label{ms:least-contrary}
@@ -179,7 +179,7 @@ Assume $C_j\le\CE$ for $1\le j\le41$. If some $C_n\ge\CE$ with
 $n\ge42$, there is a least such index, and at that index
 Lemma~\ref{ms:first-failure-entry} holds, while
 \[
- C_{n-1},C_{n-2}\le\CE<.41<.4253.
+ C_{n-1},C_{n-2}\le\CE<0.41<0.4253.
 \]
 Thus any independently established implication excluding an attained
 positive closed witness under these entry conditions excludes that least
@@ -188,8 +188,8 @@ $C_n<\CE$ throughout that range.
 \end{proposition}
 \begin{proof}
 The positive integers are well ordered. Below the least chosen index,
-the indices from42 onward have $C_j<\CE$, and the earlier ones have the
-assumed weak bound. At $n=42$ the required predecessors are41 and40;
+the indices from $42$ onward have $C_j<\CE$, and the earlier ones have the
+assumed weak bound. At $n=42$ the required predecessors are $41$ and $40$;
 at later indices the same conclusion holds. Apply the scalar lemma and
 then Lemma~\ref{ms:attainment}. Every premise of the stated independent
 exclusion implication is now available, including equality at the current

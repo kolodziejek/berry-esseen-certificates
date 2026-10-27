@@ -1,3 +1,26 @@
+# Manuscript editorial revision — 27 October 2026
+
+The supplied Opus/Argon suggestions have been independently assessed and
+selectively integrated on `manuscript/editorial-v2-20261027`, preserving
+starting manuscript commit `ec370aa` and immutable baseline `6346fc1`.
+The existing draft PR #3 will receive the revision by a normal fast-forward
+push; no duplicate PR, upstream/main mutation or merge is authorized.
+
+Deliverables: `manuscript/arxiv-v1/main.pdf` (164 pages), editable sources
+and `source-arxiv-v1.zip`. Decision/review index:
+`manuscript/arxiv-v1/research/revision-decisions.md`.
+The guide/diagram, moment proof and full conserved-identity derivation now
+lead into conditional counts. Genuine duplicates were removed; unique
+Fourier/finite arguments and all original labels are retained.
+
+Mathematical status: the conserved identity, compensated inversion,
+positivity gates and oriented zero-defect law received an independent
+analytic review. Complete remainder bounds, BASE41, uniform LOCAL42 and
+full certificate composition remain conditional. Execution status: exact
+symbolic controls and document-preservation checks pass; clean TeX build,
+all-page render review and isolated source rebuild are recorded under
+`runs/manuscript-v2-20261027/`. No full native replay or heavy generation.
+
 # Manuscript checkpoint — 27 October 2026
 
 First arXiv-style research draft is complete on branch

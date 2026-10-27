@@ -1,4 +1,4 @@
-\section{A stronger bound from the score excess}\label{ms:resources}
+\subsection{Retaining the score-excess charge}\label{ms:resources}
 
 An estimate can lose useful information by being solved for one coordinate too early. In the conserved phase inequality below, the score excess and the geometric defect both consume the same upper bound. Keeping this coupling gives a better bound on the defect even though the score excess itself may vanish.
 
@@ -11,7 +11,7 @@ with its original same-law geometry, support, signed phase, concentration,
 moment and deleted-score hypotheses. In particular the conserved phase
 curvature is not charged twice.
 The retained derivation and its coefficient bounds are written out in
-Appendix~\ref{ms:fourier:afcore:sec:conserved} and
+Section~\ref{ms:fourier:afcore:sec:conserved} and
 \eqref{ms:fourier:rescore:u-conserved}; the required Fourier enclosures
 and acquired geometry remain hypotheses here.
 
@@ -50,19 +50,11 @@ values. Take the maximum. This includes $C=c$ without assigning a
 positive charge at equality.
 \end{proof}
 
-For LEFT, $C_0=.4095$, $C_1=.4226$ and $\chi=.40974$.
+For LEFT, $C_0=0.4095$, $C_1=0.4226$ and $\chi=0.40974$.
 Exact arithmetic on all 45 rows gives $B_*=G(\chi)$.
-For completeness, with
-$s_k(x)=\sum_{i=0}^{k-1}(-1)^ix^{2i+1}/(2i+1)$, the alternating-series
-bounds and Machin's tangent-addition identity give
-\[
- 16s_6(1/5)-4s_1(1/239)<\pi
- <16s_5(1/5)-4s_2(1/239).
-\]
-Together with $3.162277660<\sqrt{10}<3.162277661$ and
-$c^2=(19+6\sqrt{10})/(72\pi)$ these prove $C_0<c<\chi$ using rationals.
+The bounds $C_0<\CE<\chi$ follow from Lemma~\ref{ms:gaussian-constants}.
 
-\subsection{Keep one joint residual}
+\subsubsection{Keep one joint residual}
 The old weighted bound is $nD\le Nd_{\rm old}$; define
 \[
  d_{\rm new}=\min\{d_{\rm old},B_*/(\kappa N)\}.
@@ -104,31 +96,31 @@ outward raw resource remainder ceiling. Its source rounding contract gives
 $\mathrm{raw}_{\rm exact}\in[\mathrm{raw}_{\rm out}-2\cdot10^{-6},
 \mathrm{raw}_{\rm out}]$. Accordingly its high score endpoint belongs to
 \[
- [\,\min(.4247,\chi+(\mathrm{raw}_{\rm out}-2\cdot10^{-6})/42),
-    \min(.4247,\chi+\mathrm{raw}_{\rm out}/42)\,].
+ [\,\min(0.4247,\chi+(\mathrm{raw}_{\rm out}-2\cdot10^{-6})/42),
+    \min(0.4247,\chi+\mathrm{raw}_{\rm out}/42)\,].
 \]
 Enclose the chord weight over this interval; use upper $A,F$, lower $Q$,
 and the lower high-score endpoint in the subtraction in
 Lemma~\ref{ms:06:charge}. This gives valid outward budgets for all 47 central rows.
 
-\subsection{Exact removable sectors}
+\subsubsection{Exact removable sectors}
 The following decimal ceilings are rounded upwards from exact fractions.
 For precise identification, LEFT row $i$, $0\le i\le44$, corresponds to
 $p\in[(145+i)/500,(146+i)/500]$; CENTRAL row $i$, $0\le i\le46$,
 corresponds to $p\in[(190+i)/500,(191+i)/500]$. These are the acquired
 probability panels in the retained input table. The full 92-row scan establishes all newly crossed
-thresholds among $.05,.08,.10,.12$.
+thresholds among $0.05,0.08,0.10,0.12$.
 \begin{center}
 \begin{tabular}{@{}llP{69mm}@{}}
 \toprule
 Row & New conclusion & Consequence after acquisition\\
 \midrule
-LEFT 0 & $r<-.0003$ & Entire final row excluded; TINY comparison unnecessary.\\
-LEFT 5 & $\lambda\le.049944478$ & MID domain above $.05$ empty.\\
-LEFT 8 & $\lambda\le.077273055$ & Both signed LOW producers above $.08$ unnecessary.\\
-LEFT 10 & $\lambda\le.094055578$ & Domain above $.10$ empty; two profile calls on $[.10,.12]$ unnecessary.\\
-LEFT 13 & $\lambda\le.117287323$ & Domain above $.12$ empty; two profile calls on $[.12,.30]$ unnecessary.\\
-CENTRAL 28 & $\lambda\le.099809552$ & Comparison sector above $.10$ empty; profile already inherited.\\
+LEFT 0 & $r<-0.0003$ & Entire final row excluded; TINY comparison unnecessary.\\
+LEFT 5 & $\lambda\le0.049944478$ & MID domain above $0.05$ empty.\\
+LEFT 8 & $\lambda\le0.077273055$ & Both signed LOW producers above $0.08$ unnecessary.\\
+LEFT 10 & $\lambda\le0.094055578$ & Domain above $0.10$ empty; two profile calls on $[0.10,0.12]$ unnecessary.\\
+LEFT 13 & $\lambda\le0.117287323$ & Domain above $0.12$ empty; two profile calls on $[0.12,0.30]$ unnecessary.\\
+CENTRAL 28 & $\lambda\le0.099809552$ & Comparison sector above $0.10$ empty; profile already inherited.\\
 \bottomrule
 \end{tabular}
 \end{center}

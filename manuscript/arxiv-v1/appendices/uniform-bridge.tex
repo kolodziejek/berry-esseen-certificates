@@ -10,29 +10,32 @@ It does not assert that the full numerical package has been accepted
 under a new composition.
 
 \subsection{Conditional moments and strict-gap concentration}
+The concentration argument uses the antichain method of
+Littlewood--Offord theory~\cite{Erdos1945} in its random-chain
+form~\cite{Lubell1966}.
+
 
 Let $n\ge N=42$ and use the same coordinates
 $X=\ell(B_0+U-p)$ as in Section~\ref{ms:geometry-counts}. Suppose an
 already proved support bound gives
 \[
- \supp(B_0+U)\subset(-\sigma,1+\sigma),\qquad
+ \supp(B_0+U)\subset(-w_{\rm strip},1+w_{\rm strip}),\qquad
  U_0\le a_0,\quad U_1\ge-a_1,\quad
- a_0+a_1=d_Y\le d_0<\sigma.
+ a_0+a_1=d_Y\le d_0<w_{\rm strip}.
 \]
-The symbol $\sigma$ in this appendix is the width of the strip, not
-$\sqrt{10}$. In the first left-panel contraction it is $23/40$.
+The strip width is $23/40$ in the first left-panel contraction.
 Any smaller value must be established before it is used in a subsequent
 contraction. Assume $p\in[l,h]\subset(0,1/2)$.
 
 Write $s=qw_0+pw_1=\lambda/n$, $w_i=\E U_i^2$. The exact identity
-\eqref{ms:conditional-moments}, $|U_i|<\sigma$ and $pq(w_0+w_1)\le qs$
+\eqref{ms:conditional-moments}, $|U_i|<w_{\rm strip}$ and $pq(w_0+w_1)\le qs$
 give
 \[
  \rho\le\rho_B(p)+c_\rho s
  \quad\hbox{if}\quad
- c_\rho>0,\quad c_\rho^2[l(1-l)]^3>[3(1-l)+\sigma]^2.
+ c_\rho>0,\quad c_\rho^2[l(1-l)]^3>[3(1-l)+w_{\rm strip}]^2.
 \]
-Indeed $|\E U_i^3|\le\sigma w_i$,
+Indeed $|\E U_i^3|\le w_{\rm strip} w_i$,
 $\ell^3\le[l(1-l)]^{-3/2}$, and the skeleton's third moment is at
 most $\rho_B(p)$. The function $\rho_B(p)=(1-2p(1-p))/\sqrt{p(1-p)}$
 decreases on $(0,1/2)$, so a closed noise band with ceiling
@@ -114,12 +117,12 @@ specified in the confinement derivation. The first is a one-sided
 second-moment bound; the second uses the same inner gap. The interval
 geometry additionally requires
 \[
- 1-\sigma-2d_0>0,\qquad 1-2d_0-2\tau_+>0,
+ 1-w_{\rm strip}-2d_0>0,\qquad 1-2d_0-2\tau_+>0,
 \]
 as well as the disjointness and buffer gates in that derivation. These
 conditions guarantee widths strictly below $1-d_Y$. The upper-ray
 contradiction is a strict inequality of the form
-$L-\sigma U-\mathrm{error}>0$. The lower-ray argument also needs a
+$L-w_{\rm strip} U-\mathrm{error}>0$. The lower-ray argument also needs a
 positive slope, so that a check at one endpoint excludes the whole
 remaining ray inside the previously acquired strip. The new strip is
 an output of this reasoning.

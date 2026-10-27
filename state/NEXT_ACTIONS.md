@@ -1,3 +1,16 @@
+# After manuscript editorial revision — 27 October 2026
+
+1. Review the new manuscript guide, main Section 5.4 and the disposition
+   report `manuscript/arxiv-v1/research/revision-decisions.md`.
+2. Preserve the explicit raw-remainder and positive phase-price gates when
+   reviewing concrete Fourier resource rows. Promotion into the main text
+   does not establish those numerical premises.
+3. Continue the independent BASE41/provider and uniform LOCAL42 review
+   already described below. No unconditional theorem or complete acceptance
+   contract has been created by this editorial revision.
+4. Keep manuscript PR #3 in draft for author review. No merge, arXiv
+   submission, main push or upstream change without explicit authorization.
+
 # Manuscript next steps — 27 October 2026
 
 1. Review manuscript/arxiv-v1/main.pdf and research/manuscript-review.md.

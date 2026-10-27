@@ -1,3 +1,21 @@
+# Manuscript revision dependency clarifications — 27 October 2026
+
+- The exact conserved identity requires one common actual iid marginal,
+  closed-support contact, positive score and bounded support before higher
+  moments. Gap leakage uses `[a,b)`, excluding the upper-endpoint atom.
+- Unweighting needs an established raw remainder ceiling `r_0 < 2N/5`
+  with `C >= C_E` and `n >= N >= 2`. Positivity of `gamma+3J` then follows;
+  `D >= 0` by itself does not give it.
+- Extra phase curvature additionally needs a positive previous density
+  floor and `0.4095 rho - d_D/15 > 0`. The weighted bound is `nD <= Nd_D`.
+- The exact count identity does not by itself give errors relative to
+  arbitrarily small conditional variance. Those uniform bounds remain
+  separate analytic steps in LOCAL42.
+- Zero physical defect implies the oriented extremal Bernoulli law by
+  the nonnegative decomposition. A reflected law need not have zero D.
+- No edge into BASE41 or complete LOCAL42 has been removed in this revision.
+  Full unique Fourier-atlas content remains in the manuscript.
+
 # Manuscript dependency checkpoint — 27 October 2026
 
 The main conditional theorem is BASE41 (independent sharp prefix) plus

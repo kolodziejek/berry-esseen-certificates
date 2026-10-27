@@ -24,20 +24,13 @@ parameters and the whole closed domain on which it is applied.
 \subsection{The scale correction}
 Write $\phi_0=\phi(0)$.
 We use the rational comparisons of Lemma~\ref{ms:gaussian-constants}.
-The additional lower bound $\phi_0>.3988$ follows from the same
-arctangent series, since
-\[
- \pi<16\left(\frac15-\frac1{3\cdot5^3}+\frac1{5\cdot5^5}\right)
- -4\left(\frac1{239}-\frac1{3\cdot239^3}\right)<\frac{22}{7},
- \qquad (.3988)^2<\frac7{44}<\phi_0^2.
-\]
 For $n>1$ put $s_n=\sqrt{n/(n-1)}$ and
 $e_n=n(s_n-1)-1/2$.
 \begin{lemma}\label{ms:legacy-support:scale}
-For every integer $n\ge36$, one has $0<e_n<.384/n$.
+For every integer $n\ge36$, one has $0<e_n<0.384/n$.
 \end{lemma}
 \begin{proof}
-Put $x=1/n$ and $c=.384=48/125$. Direct expansion gives
+Put $x=1/n$ and $c=0.384=48/125$. Direct expansion gives
 \[
  (1-x)(1+x/2+cx^2)^2-1
  =x^2\{(2c-3/4)-(c+1/4)x+(c^2-c)x^2-c^2x^3\}.
@@ -363,11 +356,11 @@ $d=n(C_{n-1}-C_n)_+$. The finite contact/predecessor bound is
 with $I=0$ on the entire closed support. Suppose also, for a finite
 band, that $C_n-\CE\ge K/n$, where $K>0$. The published finite cap gives
 \[
- c=.4095+K/L<C_n,\qquad
- \rho<r=\min\left\{\frac{.3031(.646)}{c-.3031},
-                        \frac{.3322(.429)}{c-.3322}\right\}.
+ c=0.4095+K/L<C_n,\qquad
+ \rho<r=\min\left\{\frac{0.3031(0.646)}{c-0.3031},
+                        \frac{0.3322(0.429)}{c-0.3322}\right\}.
 \]
-For the unrestricted nonnegative case put $K=0$, $c=.4095$.
+For the unrestricted nonnegative case put $K=0$, $c=0.4095$.
 The sign-moment inequality
 $\rho\ge(1+\beta^2)/\sqrt{1-\beta^2}$ supplies $|\beta|<b$ whenever
 $(1+b^2)^2>r^2(1-b^2)$ and $0<b<1$. All these statements concern the
@@ -379,7 +372,7 @@ same polynomials. Their validity is the only extra premise.
 
 Use positive rational $\ell,S$ with $\ell^2\le N-1$ and $S^2>N/(N-1)$. For $u=|t|$ define
 \[
- Q(u)=-u^3+3ru^2/2+3bu+.384r/N.
+ Q(u)=-u^3+3ru^2/2+3bu+0.384r/N.
 \]
 First check $Q<0$, before replacing $C$ by its lower bound $c$.
 Replace $1/\sqrt{N-1}$ by $1/\ell$ in the adverse remainder and use
@@ -406,11 +399,11 @@ The second polynomial gate is $W_*>0$. The third is
 This is a rational sufficient version of the cleared-denominator
 domination hypothesis; its quadratic $B_+^2$ term still uses the exact
 factor $1/(N-1)$.
-The bound on $T_*$ is positive, so the replacement $\phi_0<.4$ and
+The bound on $T_*$ is positive, so the replacement $\phi_0<0.4$ and
 $s_n<S$ both have their correct direction.
 
 The retained exact acceptance condition tests these polynomials on all adjacent closed intervals
-of length $.05$ from $R$ to $4.5$. Positive Bernstein coefficients prove
+of length $0.05$ from $R$ to $4.5$. Positive Bernstein coefficients prove
 their signs on every point of each cell, including endpoints. On the
 rays $u\ge4.5$ use Lemma~\ref{ms:legacy-support:far-gaussian},
 $|\mathcal H_n(H,t)|< u^3/15+u/5+1/2$.
@@ -423,7 +416,7 @@ exterior accumulation points.
 
 \subsection{Retained support rows and their application domains}
 \label{ms:legacy-support:rows}
-The older local route specified $K=0$, $R=3.84$, $q=.19$ on
+The older local route specified $K=0$, $R=3.84$, $q=0.19$ on
 \[
 [45,49],\ [50,59],\ [60,89],\ [90,134],\ [135,199],\ [200,\infty).
 \]
@@ -436,11 +429,11 @@ The older finite-index route specified five further support rows:
 \[
 \begin{array}{c|c|c|c}
 [N,L]&K&R&q\\\hline
-{[40,40]}&1.5&3.3&.88\\
+{[40,40]}&1.5&3.3&0.88\\
 {[41,49]}&1.5&2.9&1.5/40\\
-{[45,45]}&.7&3.5&.8341\\
-{[46,98]}&.7&3.5&.7/45\\
-{[46,46]}&.54&3.4&79/450
+{[45,45]}&0.7&3.5&0.8341\\
+{[46,98]}&0.7&3.5&0.7/45\\
+{[46,46]}&0.54&3.4&79/450
 \end{array}
 \]
 The second and fourth are used only on $41\le n\le45$ and
@@ -502,8 +495,8 @@ including every threshold in the stated interval and every $n\ge4$.
 
 \subsection{A common contact test for radius and strip refinement}
 \label{ms:legacy-support:panels}
-Suppose $n\ge47$, $0\le C-\CE\le.7/n$,
-$d=n(C_{n-1}-C)_+\le.19$ and
+Suppose $n\ge47$, $0\le C-\CE\le0.7/n$,
+$d=n(C_{n-1}-C)_+\le0.19$ and
 $|X|\le R_0$. A previously acquired row gives
 \[
  \rho\le r,\quad 0\le b_l\le\beta\le b_u<1,\quad |H|\le h.
@@ -512,12 +505,12 @@ Define $Q(t)=-|t|^3+3\rho t^2/2+3\beta t$ and
 $L_P(t)=\CE Q(t)+\phi(0)(t^3-3t)/6$.
 For $t>0$, upper polynomials for $L_P(t),Q(t)$ are
 \[
- (1/15-.4095)t^3+1.5(.40974)rt^2+(3(.40974)b_u-.3988/2)t,
+ (1/15-0.4095)t^3+1.5(0.40974)rt^2+(3(0.40974)b_u-0.3988/2)t,
  \quad -t^3+1.5rt^2+3b_ut.
 \]
 For $t<0$, write $u=|t|$ and use
 \[
- (-.3988/6-.4095)u^3+1.5(.40974)ru^2+(.2-3(.4095)b_l)u,
+ (-0.3988/6-0.4095)u^3+1.5(0.40974)ru^2+(0.2-3(0.4095)b_l)u,
  \quad -u^3+1.5ru^2-3b_lu.
 \]
 These coefficient choices are valid because $b_l\ge0$ is checked first.
@@ -529,14 +522,14 @@ absolute monomial bound
 $\sum_{a,b}|[H^at^b]P_j|h^aR_J^b$ suffices, where
 $R_J=\max_{t\in J}|t|$. The support contact is then bounded above by
 \begin{equation}\label{ms:legacy-support:paneltest}
- L_J+\frac{.7Q_J}{47}
- +.4\left(\sum_{j=1}^5\frac{m_j}{47^j}
+ L_J+\frac{0.7Q_J}{47}
+ +0.4\left(\sum_{j=1}^5\frac{m_j}{47^j}
                 +\frac{4^7B_{R_J}}{47^6}\right)
- +r\left(.19S+\frac{.384(.425)}{47}\right),
+ +r\left(0.19S+\frac{0.384(0.425)}{47}\right),
  \qquad S>\sqrt{47/46}.
 \end{equation}
 Indeed substitute the finite series in contact, split $C=\CE+(C-\CE)$,
-and use $C<.40974+.7/47<.425$. Every error retained in
+and use $C<0.40974+0.7/47<0.425$. Every error retained in
 \eqref{ms:legacy-support:paneltest} is nonnegative and decreases with $n$.
 A strictly negative rational result therefore excludes the entire cell
 for every integer $n\ge47$, including atoms and accumulation points.
@@ -549,9 +542,9 @@ For a coordinate strip, conditional centering gives
 \]
 If $p\in[p_l,p_u]\subset(0,1/2)$ and $\theta\le\Theta$, put
 $\ell_l\le\sqrt{(1-\Theta)/(p_u(1-p_u))}$.
-The forbidden strip $Y\notin(-.55,1.55)$ maps into
+The forbidden strip $Y\notin(-0.55,1.55)$ maps into
 \[
- X\le-\ell_l(p_l+.55),\qquad X\ge\ell_l(1.55-p_u).
+ X\le-\ell_l(p_l+0.55),\qquad X\ge\ell_l(1.55-p_u).
 \]
 Apply \eqref{ms:legacy-support:paneltest} between these thresholds and $\pm R_0$.
 An interval beyond the known radius is empty; an equal endpoint is a
@@ -564,18 +557,18 @@ requires the complete numerical tests just described:
 \begin{array}{l|c|c|r}
 \text{input rows}&\text{prior radius}&\text{conclusion}&\text{closed cells}\\\hline
 10\text{ central preparation rows}&3.84&|X|<2.5&1080\\
-45\text{ central rows}&2.5&-.55<Y<1.55&1431\\
-38\text{ left rows}&2.7&-.55<Y<1.55&3073
+45\text{ central rows}&2.5&-0.55<Y<1.55&1431\\
+38\text{ left rows}&2.7&-0.55<Y<1.55&3073
 \end{array}
 \]
-The source records respective largest contact bounds below $-.084$, $-.097$
-and $-.01658$. These are historical numerical claims, not fresh
+The source records respective largest contact bounds below $-0.084$, $-0.097$
+and $-0.01658$. These are historical numerical claims, not fresh
 verification by this appendix. These implications acquire no row by themselves: each is
 used only after its input row is proved by the preceding resource step.
 The left radii are applications of the all-threshold support polynomial,
-with $(N,L,K,q)=(47,\infty,0,.19)$ and the actual moment caps
+with $(N,L,K,q)=(47,\infty,0,0.19)$ and the actual moment caps
 \[
- (r,b,R)=(1.390,.430,3),\qquad (1.2563,.3926,2.7).
+ (r,b,R)=(1.390,0.430,3),\qquad (1.2563,0.3926,2.7).
 \]
 Conditional on the corresponding polynomial checks, the same heat proof
 supplies the initial radius, both left contractions, and the five finite-base rows. The bounded-threshold

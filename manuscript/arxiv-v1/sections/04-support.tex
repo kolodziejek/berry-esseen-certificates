@@ -59,8 +59,7 @@ $\|\phi^{(5)}\|_\infty\le8/\pi<51/20$. Therefore
  |R|\le E_v(u):=\frac{u^5/100+3u/20}{v}
        +\frac{51(3u^2-2)}{960v^{3/2}}.
 \end{equation}
-Every bound is uniform in the raw threshold $H$. No seventh derivative
-of $F_v$, sixth derivative of $\phi$, or signed fifth-order tangent is used.
+Every remainder bound is uniform in the raw threshold $H$.
 The rational lower bound $\pi>281476/89625>160/51$ suffices for these
 constants and $\phi(0)<2/5$.
 
@@ -96,7 +95,11 @@ $2e^{-3/2}A\phi(0)<A\phi(0)/2$, and the second is at most
 $2B\phi(0)\le A\phi(0)/2$. Add the uniform remainder.
 \end{proof}
 
-\subsection{Rational boundary inequalities and full rays}
+\subsection{Three support bounds}
+The first radius uses only the global moment cap. Later contractions use
+sharper moment bounds on probability panels. We state the three bounds in
+terms of those moments, before identifying their uses in the finite schedule.
+
 Use
 \[
  S=81/80,\quad \ell=6,\quad c_0=819/2000<\CE,\quad
@@ -140,16 +143,30 @@ for $u\ge U$, since $Q'''=-6$ and $L''=2/5-6c_0<0$.
 The contact upper bound for each sign then decreases strictly along the
 whole ray. This includes endpoints and atoms.
 
-\paragraph{Initial case.}
+\begin{proposition}[Support from moment bounds]\label{ms:04:three-bounds}
+Under the contact and zero-loss hypotheses of this section, each of the
+following implies $\supp P\subset(-R,R)$:
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item $R=96/25$, $\rho\le1841/1000$ and $|\beta|\le321/500$;
+\item $R=121/40$, $\rho\le143/100$ and $|\beta|\le93/200$;
+\item $5/2\le R\le111/40$,
+      $\rho\le7R/20+1/3$ and $|\beta|\le3R/8-3/5$.
+\end{enumerate}
+The structural inequalities \eqref{ms:structural-classical} supply the
+moment bounds in \textup{(i)} whenever $C_n\ge\CE$.
+\end{proposition}
+\begin{proof}
+\emph{The initial radius.}
+
 Take $R=96/25$, $r=1841/1000$, $b=321/500$. The retained moment inequalities
 give
 \[
  \rho<
- \min\left\{\frac{.3031\cdot.646}{c_0-.3031},
-              \frac{.3322\cdot.429}{c_0-.3322}\right\}
+ \min\left\{\frac{0.3031\cdot0.646}{c_0-0.3031},
+              \frac{0.3322\cdot0.429}{c_0-0.3322}\right\}
  =\frac{7361}{4000}<r.
 \]
-The sign-moment inequality in Appendix~\ref{ms:moment-domain} gives
+The sign-moment inequality in Section~\ref{ms:moment-domain} gives
 $|\beta|<b$, using
 \[
  (1+b^2)^2-r^2(1-b^2)=\frac{93288849}{50000000000}>0.
@@ -162,17 +179,16 @@ $H_4=6uA-3(u^2-1)<36A$ and $B<H_4/144<A/4$. Exact arithmetic gives
 \]
 All six ray signs are negative, proving support in $(-R,R)$.
 
-\paragraph{Common LEFT bridge.}
-Take $R=121/40$, $r=143/100$, $b=93/200$, outwardly enclosing the acquired
-common moment maxima $71458741/50000000$ and $46459359/100000000$.
+\emph{A first contraction.}
+Take $R=121/40$, $r=143/100$, $b=93/200$, which will be useful for the first contraction of the left probability
+panels.
 Then
 \[
  -P_{r,b}(R)=\frac{2533499510174559}{214958080000000000}>\frac1{100}.
 \]
 All six ray signs are negative.
 
-\paragraph{A continuous family for the other 63 calls.}
-All remaining acquired parameter tuples satisfy
+\emph{The continuous family.} Assume
 \[
  \frac52\le R\le\frac{111}{40},\qquad
  \rho\le r_R=\frac7{20}R+\frac13,\qquad
@@ -209,13 +225,19 @@ $r_*=131/100$, $b_*=441/1000$ have at $u=5/2$ the six signs
  \quad-\frac{2057}{1000}.
 \]
 They majorize the corresponding signs and derivative bounds for every fixed
-pair. Combining the negative boundary with these complete rays proves all
-63 calls. Continuing the affine caps along an infinite ray would be invalid.
+pair. Combining the negative boundary estimate with these ray bounds proves
+\textup{(iii)}. The moment caps are fixed while moving along a ray.
+\end{proof}
 
 \begin{theorem}[Conditional elementary support replacement]
 For an actual integer $n\ge42$ and attained score $C_n\ge\CE$, under the
 retained contact, zero-loss and ordered same-law acquisition
-hypotheses, all 65 support conclusions used by the zero-loss LOCAL42 route
-follow from the preceding three cases. This proof uses no polynomial positivity mesh and no signed fifth-order Gaussian tangent. The moment assumptions for each invocation must still be established before the support bound is applied.
+hypotheses, all 65 support conclusions in the proposed local exclusion follow from
+Proposition~\ref{ms:04:three-bounds}: one initial radius, one first
+contraction, and 63 instances of the continuous family. This proof uses no polynomial positivity mesh and no signed fifth-order Gaussian tangent. The moment assumptions for each invocation must still be established before the support bound is applied.
 \end{theorem}
-The eighteen common ray inequalities are rational comparisons. The matching of the 65 parameter tuples with these three cases is a finite input-identification task, described in Section~\ref{ms:certificates}. It does not establish the preceding moment estimates, which must be obtained for the same maximizing law.
+The first contraction encloses the schedule's moment maxima
+$71458741/50000000$ and $46459359/100000000$. The other 63 tuples satisfy
+the displayed affine moment bounds. Matching these tuples and establishing
+the preceding moment estimates are the finite inputs described in
+Section~\ref{ms:certificates}.

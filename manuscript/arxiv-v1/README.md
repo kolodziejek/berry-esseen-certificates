@@ -1,9 +1,10 @@
-# First manuscript draft
+# Revised manuscript draft
 
 **Authors:** Bartosz Kołodziejek and Kacper Rodziewicz. Affiliations, email
 addresses and ORCIDs are intentionally omitted at the authors' request.
 
-`main.tex` is the editable manuscript. The main chapters explain the
+`main.tex` is the editable manuscript. The revised guide and dependency diagram
+introduce the full contact/conserved-identity argument. The main chapters explain the
 extremizer/contact method, first-failure reduction, elementary support,
 joint physical defect, conditional-count identity, improved resource bound,
 exact curvature maximum and conditional global assembly. The appendices
@@ -34,6 +35,7 @@ made and requires author approval and further mathematical review.
 ## Citation and proof correspondence
 
 - `references-classical.bib`: historical and external analytic inputs.
+- `references-added.bib`: six focused additions checked during the revision.
 - `references-modern-a.bib`: Xiao–Li, Lin, He–Cheng v3, Tao's Problem19a,
   the earlier Hexagon manuscript and the sharp moment relation.
 - `references-modern-b.bib`: Bell's individual manuscripts and the two
@@ -52,11 +54,13 @@ a draft for review, without merging.
 
 ## Delivered review artifacts
 
-- `main.pdf`:162-page compiled first draft; main exposition precedes the
+- `main.pdf`: 164-page revised draft; main exposition precedes the
   technical appendices. Explicit certificate conditions and AI disclosure.
 - `source-arxiv-v1.zip`: portable source package, rebuilt in a fresh directory
   with shell escape disabled; it is not an arXiv submission.
-- `research/manuscript-review.md`: combined coverage, independent review
+- `research/revision-decisions.md`: disposition of the supplied proposals,
+  reorganization, independent review and preserved limitations.
+- `research/manuscript-review.md`: original combined coverage, independent review
   outcomes, remaining limitations and actual validation.
 
 The recommendation is author review, with the PR kept in draft. No final

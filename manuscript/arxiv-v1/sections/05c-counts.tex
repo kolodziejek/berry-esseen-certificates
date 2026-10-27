@@ -1,0 +1,217 @@
+\section{Conditional counts and discrete curvature}\label{ms:counts}
+The sign decomposition turns an iid sum into a binomial mixture of
+conditional noise sums. This identity supplies a comparison with the
+Bernoulli law having the same sign probability. The main issue is to
+control the error proportionally to the noise variance, including when
+that variance is arbitrarily small.
+
+\subsection{The exact count and score identities}
+
+Let $\pi_j=\binom njp^jq^{n-j}$ for $0\le j\le n$, zero otherwise,
+and $F_B$ be the CDF of $\operatorname{Bin}(n,p)$. For independent copies
+of the marginal, conditioning on the entire sign vector gives independent
+conditional residuals. All sign vectors with $j$ positive entries yield
+the same sum law
+\[
+ V_j=U_{1,1}+\cdots+U_{1,j}+U_{0,j+1}+\cdots+U_{0,n}.
+\]
+It follows from \eqref{ms:bernoulli-coordinates} that at
+$x=np+H/\ell=k+u$,
+\begin{equation}
+ \Pp(S_n\le H)=\sum_{j=0}^n\pi_j\Pp(V_j\le k+u-j).
+\label{ms:count-identity}
+\end{equation}
+For $0\le k\le n$, subtracting $F_B(k)$ gives the exact signed identity
+\begin{align}
+ Q:={}&\Pp(S_n\le H)-F_B(k)\notag\\
+   ={}&-\sum_{i=0}^{k}\pi_{k-i}\Pp(V_{k-i}>u+i)
+      +\sum_{i=1}^{n-k}\pi_{k+i}\Pp(V_{k+i}\le u-i).
+\label{ms:count-difference}
+\end{align}
+The outgoing event is strict and the incoming events are closed. Thus an
+atom exactly on a count plane has its correct weight.
+
+Choosing a nearest integer gives $|u|\le1/2$, with either integer allowed
+at a tie. Restricting to legal counts $0\le k\le n$ requires either
+$-1/2\le np+H/\ell\le n+1/2$ or a separate treatment of the remaining
+thresholds. Interior-count normalizations further require $1\le k\le n-1$.
+None of these range conditions follows merely from the notation.
+
+The own-count variance is
+\[
+ t=\E V_k^2=(n-k)w_0+kw_1=\lambda+\delta(w_1-w_0),\qquad
+ \delta=k-np=H/\ell-u.
+\]
+Since $|w_1-w_0|\le s/\min(p,q)$, any established bound
+$|\delta|\le\Delta$ and $c_v\ge1/\min(p,q)$ gives, for $n\ge N$,
+\begin{equation}
+ (1-c_v\Delta/N)\lambda\le t\le(1+c_v\Delta/N)\lambda.
+\label{ms:own-count-variance}
+\end{equation}
+A positive lower multiplier is a separate necessary gate when the lower
+bound is used in a denominator.
+
+For the comparison with the same Bernoulli count, set
+\[
+ \rho_B=(1-2v)/\sqrt v,\qquad
+ C=\frac{\sqrt n}{\rho}\{\Pp(S_n\le H)-\Phi(H/\sqrt n)\},
+\]
+\[
+ C_B=\frac{\sqrt n}{\rho_B}
+       \{F_B(k)-\Phi(\delta/\sqrt{nv})\},
+ \qquad
+ f(u)=\frac{\Phi((\delta+u)/\sqrt{n(v+s)})-
+                    \Phi(\delta/\sqrt{n(v+s)})}{\pi_k}.
+\]
+For a legal count $\pi_k>0$. Define the exact repair
+\[
+ \mathcal R=\sqrt n\{\Phi(\delta/\sqrt{nv})-
+                    \Phi(\delta/\sqrt{n(v+s)})\}
+                         +C(\rho_B-\rho).
+\]
+Direct subtraction, using $H/\sqrt n=(\delta+u)/\sqrt{n(v+s)}$, yields
+\begin{equation}
+ \rho_B(C-C_B)=\sqrt n\pi_k\{Q/\pi_k-f(u)\}+\mathcal R.
+\label{ms:master-identity}
+\end{equation}
+This identity is exact; estimates for its two terms must preserve the same
+phase, signed threshold and conditional marginal.
+
+\begin{proposition}[Two conditional local witnesses]
+\label{ms:local-witnesses}
+Let $\lambda>0$, $n\ge N$, and suppose $\sqrt n\pi_k\ge m_0>0$.
+The following are sufficient for $\rho_B(C-C_B)<-\varepsilon\lambda$.
+\begin{enumerate}
+\item Bounds $O,T,R_0,\kappa$ satisfy
+\[
+ \Pp(V_k>u)+f(u)\ge O,\quad
+ \sum_{i\ge1}\Pp(V_{k+i}\le u-i)\le T,\quad
+ \pi_{k+i}/\pi_k\le R_0,\quad
+ \mathcal R\le\kappa\lambda/n,
+\]
+where the sum and ratio involve legal counts. If $D_0=O-R_0T>0$ and
+$m_0D_0-\kappa\lambda/n>\varepsilon\lambda$, the conclusion holds.
+\item A proved whole-count estimate gives
+\[
+ \rho_B(C-C_B)\le\sqrt n\pi_k\lambda B(\lambda)
+                               +\lambda I(\lambda)/n.
+\]
+If $B(\lambda)<0$ and
+$m_0B(\lambda)+\max(0,I(\lambda))/N<-\varepsilon$, the conclusion holds.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+For the first witness, discard only the outgoing terms with $i>0$ in
+\eqref{ms:count-difference}; then $Q/\pi_k-f(u)\le-D_0$.
+Use $D_0>0$ before replacing the count mass by its lower bound in
+\eqref{ms:master-identity}. For the second, $B<0$ similarly licenses the
+mass replacement, and $I/n\le\max(0,I)/N$ holds for either sign of $I$.
+Multiplication by $\lambda>0$ gives the asserted strict inequality.
+\end{proof}
+
+The proposition separates the exact comparison identity from the estimates
+needed to use it. Outgoing and incoming probabilities, confinement and
+the repair term must all be bounded for the same law and phase. With
+these bounds in hand, Schulz's theorem $C_B\le\CE$ turns $C<C_B$
+into the required exclusion~\cite{Schulz2016}.
+
+For clarity, the zero-noise threshold convention is elementary. At an
+attained positive closed maximum for a Bernoulli law, the threshold must
+be a binomial atom. Between consecutive atoms, lowering the threshold
+to the preceding atom preserves the CDF and strictly improves the normal
+subtraction. Above the final atom the same argument applies, while below
+the first atom the discrepancy is nonpositive. Thus $u=0$ and $C=C_B$
+at such a maximum. This identifies the endpoint to which the finite-binomial theorem applies.
+
+\subsection{Whole-count coupling and its curvature term}
+
+The whole-count witness has a useful part which follows directly from the
+same conditional marginal. Suppose an acquired gap gives
+$U_0\le a_0$, $U_1\ge-a_1$, where $d_Y=a_0+a_1<1/2$, and put $c=1-d_Y$.
+Independently realize all $2n$ variables in the definition of $V_j$ above,
+and extend $V_j$ constantly for $j<0$ and $j>n$. The increments of
+$j+V_j$ are at least $c>1/2$ inside the legal range and equal one outside.
+Consequently
+\[
+ K=\max\{j\in\mathbb Z:j+V_j\le k+u\},\qquad R=K-k
+\]
+are well defined. An independent binomial selector has the correct law
+for each count, so
+\begin{equation}
+ \Pp\Bigl(\sum_{i=1}^nY_i\le k+u\Bigr)=\E F_B(k+R).
+\label{ms:whole-count-cutoff}
+\end{equation}
+Indeed, conditional on the coupled residuals, the closed event for the
+selector occurs exactly at counts not exceeding $K$.
+
+\begin{lemma}[Discrete curvature and crossing moments]
+\label{ms:crossing-curvature}
+Let $\chi=(n+1)p-k<2$ and $m_B=\max_j\pi_j$. For every integer $r$,
+\begin{align}
+ F_B(k+r)-F_B(k)-r\pi_k
+ \le\frac{m_B}{(n+1)v}
+ \left\{(\chi-1)_+r_++\chi_+\binom{r_-}{2}
+                                      +\binom{r_-}{3}\right\},
+\label{ms:discrete-curvature}
+\end{align}
+where $r_+=\max(r,0)$ and $r_-=\max(-r,0)$. If $|u|\le1/2$ and
+$t=\E V_k^2$, then
+\[
+ \E R_+\le\frac{t}{(c-u)^2},\qquad
+ \E\binom{R_-}{2}\le\frac{t}{[c+\min(u,c/3)]^2}.
+\]
+If additionally $|U_0|,|U_1|\le A_U$, then
+\[
+ \E\binom{R_-}{3}\le
+           \frac{t\sqrt{A_U^2+3t}}{(2c-1/2)^3}.
+\]
+\end{lemma}
+\begin{proof}
+For $0\le j\le n$, the binomial difference identity is
+\[
+ \pi_j-\pi_{j-1}
+    =\pi_j\frac{(n+1)p-j}{p(n-j+1)}.
+\]
+When its numerator is positive, $p(n-j+1)\ge(n+1)v$.
+Thus its positive part is bounded by
+$m_B((n+1)p-j)_+/((n+1)v)$; zero extension gives the same upper
+bound outside the legal range. For $r>0$, double summation gives weights
+$r-i+1$ on these differences at $j=k+i$. Since $\chi<2$, only $i=1$
+can contribute positively, giving $(\chi-1)_+r$.
+For $r=-h<0$, the corresponding weights are $h-1-i$ on the differences
+at $j=k-i$, $0\le i\le h-2$. Use $(\chi+i)_+\le\chi_++i$ and
+sum the weights to obtain $\chi_+\binom h2+\binom h3$.
+
+On $R=r\ge1$, crossing monotonicity gives $-V_k\ge cr-u$.
+Since $(cr-u)^2\ge r(c-u)^2$, this proves the first moment bound.
+On $R=-h\le-2$, the count immediately above $K$ is outside the closed
+event, giving the strict inequality $V_k>c(h-1)+u$. Put $j=h-1$.
+For $u\le c/3$, differentiation shows that
+$j(j+1)/(2(cj+u)^2)$ decreases for $j\ge1$: the derivative has the sign
+of $j(2u-c)+u\le0$. Its maximum is $1/(c+u)^2$ at $j=1$.
+For $u>c/3$, replace the crossing threshold by the smaller one with
+$u=c/3$. This proves the second bound.
+
+For the third, use $u\ge-1/2$ and $j\ge2$. The derivative of
+$(j^3-j)/(6(cj-1/2)^3)$ has the sign of
+$2cj-(3j^2-1)/2<0$, because $c\le1$. Its maximum at $j=2$ is
+$(2c-1/2)^{-3}$. Hence
+$\binom{R_-}{3}\le(V_k)_+^3/(2c-1/2)^3$.
+Independence and centering give
+$\E V_k^4\le A_U^2t+3t^2$. Finally,
+$\E(V_k)_+^3\le\sqrt{\E V_k^2\,\E V_k^4}
+\le t\sqrt{A_U^2+3t}$ by Cauchy--Schwarz.
+\end{proof}
+
+Here $\chi=p-H/\ell+u$. Thus an upper bound
+$b=p_+-\min(H/\ell)$ yields precisely the phase function
+\[
+ \frac{(b+u-1)_+}{(c-u)^2}
+ +\frac{(b+u)_+}{[c+\min(u,c/3)]^2}.
+\]
+We maximize this function in Section~\ref{ms:curvature}.
+The condition $\chi<2$, a positive own-variance multiplier, and any
+normalization such as $\sqrt n\,m_B\le1$ remain separate gates.
+The marked-crossing estimates needed to bound the remaining linear term
+$\pi_k\E R$ in \eqref{ms:whole-count-cutoff} are given in Section~\ref{ms:fourier:local}; they form a separate part
+of the local comparison.
