@@ -1,0 +1,73 @@
+{
+  "schema": "be.audit-integration-review/1",
+  "baseline": "6346fc1b4432bc5982822aa696eb566ed9e1e1ee",
+  "reviewed_head": "ac7bd069c9d5afe6d0dfe5a9c86c9a095644ff99",
+  "reviewer_scope": "Independent integration/scalar-checker review; computational-report author rechecks own source findings, not independent endorsement of that report",
+  "python_version": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "baseline_entries": 2748,
+  "modified_or_missing_baseline_entries": [],
+  "added_at_reviewed_head": 21,
+  "component_comparisons": [
+    {
+      "component_commit": "b7757f1",
+      "identical_files": [
+        "mathematics/audit/2026-10-27/acquisition-review.md"
+      ],
+      "different_files": []
+    },
+    {
+      "component_commit": "4e8ccb5",
+      "identical_files": [
+        "mathematics/audit/2026-10-27/computations-review.md"
+      ],
+      "different_files": []
+    },
+    {
+      "component_commit": "584ce25",
+      "identical_files": [
+        "mathematics/audit/2026-10-27/check_scalar.py",
+        "mathematics/audit/2026-10-27/scalar-review.md",
+        "runs/least-counterexample-20261027/scalar-compile01/compile-receipt.json",
+        "runs/least-counterexample-20261027/scalar01/run.json",
+        "runs/least-counterexample-20261027/scalar01/stderr.txt",
+        "runs/least-counterexample-20261027/scalar01/stdout.txt"
+      ],
+      "different_files": [
+        "mathematics/audit/2026-10-27/scalar-proof/main.tex"
+      ]
+    }
+  ],
+  "scalar_tex_difference": "Two manually reviewed layout changes only: split definition display; texttt path changed to path",
+  "task_count": 240,
+  "task_kinds": {
+    "finite-native": 31,
+    "low-row": 152,
+    "collector": 2,
+    "tail-native": 10,
+    "tail-mapping": 3,
+    "tail-retained": 41,
+    "tail-umbrella": 1
+  },
+  "five_candidates_retained": [
+    "tail.new.composition49",
+    "tail.new.support46",
+    "tail.new.independent_support46",
+    "tail.new.independent_selectors",
+    "tail.new.corrected_barrier46"
+  ],
+  "shared_support_member": "work/toward40_20261007/audit43/capsule/work/below49_20261006/entry/check_support42_48.py",
+  "shared_support_sha256": "a51a70f459a4f3cd1fb5d2cbd561baa2cd6fdfadd30aa132222dbd04dbc4ca7d",
+  "shared_support_line_9": "assert all(F('.40974')+F('.7')/n<F('.4253')for n in range(45,49))",
+  "input_sha256": {
+    "mathematics/audit/2026-10-27/AUDIT.md": "a38fb2d94157a8fea187f130b78f36920f68f4da86cf26636f5b2a5dc0c3f583",
+    "mathematics/audit/2026-10-27/check_scalar.py": "74b1fab6630ae1393f5389085fc33371eb2ef12a63364aa0930dd7a4640b86df",
+    "mathematics/audit/2026-10-27/baseline.json": "f9aab595b36450d0bcaacbac7bfd109559bd461e6e98d7fec4dc80d501f547f9",
+    "verification/finite-tail/TASKS.json": "297e5e44513fa8abda9faa61497721dd5a6fe2bfb3131fd5c99ffe6248ce545e",
+    "verification/finite-tail/sources/backend.zip": "43b606138f826b47e3f174957088285349aebc82a928627e9e66fe370471be52",
+    "mathematics/audit/2026-10-27/scalar-proof/main.tex": "f4173c5ef1a0beed109f048c36766cf9eb6f9db46a7ca89370f50fa061033e3a",
+    "mathematics/audit/2026-10-27/scalar-proof/main.pdf": "5ad5da0e79663144d8196865995b7b733a7a8be8308cf4bbce15f0d465255cd7"
+  },
+  "native_certificate_jobs_executed": 0,
+  "no_math_theorem_acceptance_claimed": true
+}
