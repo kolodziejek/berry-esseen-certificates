@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-review/mathematics/reduction2/2026-10-27/proof/main.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-review/runs/reduction2-20261027/curvature-erratum01/build",
+    "--json"
+  ],
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "returncode": 0,
+  "elapsed_seconds": 1.460730667,
+  "source_sha256": "1e8a8a95e73fe4fc0b475bc29ba154470ac5621bde675b67984bee15ad6ba509",
+  "stdout_sha256": "7dfe2f927c70544e5018651f375f0839369a3f74f6c21e93a954c9639c1b1a9b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "pdf_sha256": "ebb89bff46610cf73e2e93501e68ad055271156c454458cfcd71abb3282c4ca6"
+}
