@@ -61,3 +61,6 @@ a draft for review, without merging.
 
 The recommendation is author review, with the PR kept in draft. No final
 publication, complete proof acceptance or merge is recommended at this stage.
+
+Draft review: https://github.com/kolodziejek/berry-esseen-certificates/pull/3
+(stacked on audit PR #2; no merge or submission performed).

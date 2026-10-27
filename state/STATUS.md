@@ -5,7 +5,8 @@ manuscript/arxiv-v1-20261027, based on8989ba054eda36f63e469832f1e00f7e6a7a9084.
 Authors: Bartosz Kołodziejek and Kacper Rodziewicz, no affiliations or contacts.
 Deliverables: manuscript/arxiv-v1/main.pdf (162pages), main.tex and
 source-arxiv-v1.zip. Full review index: research/manuscript-review.md there.
-Prepared for a separate stacked draft PR above the existing audit PR#2;
+Submitted as draft PR#3, stacked above the existing audit PR#2:
+https://github.com/kolodziejek/berry-esseen-certificates/pull/3;
 no component audit duplicate PR, main push, force push or merge.
 
 Mathematical status: new core/reductions have independent scoped reviews;
