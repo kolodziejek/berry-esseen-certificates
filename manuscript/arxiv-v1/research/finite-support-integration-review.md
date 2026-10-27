@@ -4,8 +4,8 @@ Date: 2026-10-27. Reviewer worktree: `manuscript-finite`, branch `manuscript/fin
 
 Reviewed source snapshot:
 
-- `/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-finite-support/manuscript/arxiv-v1/appendices/finite-support.tex`, SHA256 `f36222ddc38a88e0b0529d94216f8d26087172c8d4bcf32bab7cb37b9600faa1` (596 lines; constructor's file was still uncommitted during this review).
-- Reference comparison: `paper/analytic-supplement.txt:342–797`, especially the direct support proof at 375–478, heat expansion and finite bands at 480–678, and bounded-threshold/strip derivation at 680–797. Original source SHA256 `dad4a3558b01bda4acfdfc9120a50ecbcd7a6f2389886ba3ce72a6602ec39018`.
+- `/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-finite-support/manuscript/arxiv-v1/appendices/finite-support.tex`, SHA256 `f36222ddc38a88e0b0529d94216f8d26087172c8d4bcf32bab7cb37b9600faa1` (598 lines; constructor's file was still uncommitted during this review).
+- Reference comparison: `paper/analytic-supplement.txt:311–797`, especially the direct support proof and whole-threshold method at 344–437, heat expansion and finite bands at 461–669, and bounded-threshold/strip derivation at 670–797. Original source SHA256 `dad4a3558b01bda4acfdfc9120a50ecbcd7a6f2389886ba3ce72a6602ec39018`.
 - Consumer: `finite-analysis.tex:2174–2306`, especially the zero-allowance lemma and the six required support radii in the C5 Fourier-band table.
 
 ## Conclusion
