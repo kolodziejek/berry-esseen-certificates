@@ -1,0 +1,33 @@
+{
+  "status": "PASS bounded exact diagnostics; analytic proof supplies continuous coverage",
+  "selected_LOW_configurations": 152,
+  "manifest_grid_configuration_counts": {
+    "(32, 16)": 1,
+    "(16, 8)": 77,
+    "(8, 4)": 74
+  },
+  "manifest_low_rows_canonical_sha256": "70dfc63e0592d52a7fd341676c3dd8929e778b3a95fd38281be6412edf466cc8",
+  "sampled_curvature_calls": 3648,
+  "rational_point_diagnostics": 62942,
+  "sampled_calls_with_stationary_candidate": 161,
+  "sampled_calls_strictly_improved": 2997,
+  "minimum_new_over_old_ratio": "1327285258668790135172122135770049/1344445379403043732153186675276800",
+  "largest_absolute_improvement": "1969140625/125885878416",
+  "potential_cache_keys_before_empty_pruning": {
+    "central": 43136,
+    "left": 77952
+  },
+  "adversarial_cases": 6,
+  "false_shortcuts_refuted": 2,
+  "malformed_domains_rejected": 6,
+  "source_pins": {
+    "local/central42_v2/central42_kernel.py": "9dc0754fe2dd4f2f7057247d3d62f3b71472c65a49d46f67d35fb0d66e3f8673",
+    "local/left42_final/central42_kernel.py": "d025529aa2690c3cfc0f1c34a6af385d6fa69db8e069543057f29475cbb133c3",
+    "local/central42_v2/central42_contract.py": "de30acd375d9d53d6a7068cd4b5397da6c775c21be29aca2e5c6b5da5f65a39f",
+    "local/left42_final/central42_contract.py": "10868c085cf69e6a0b1db01b6bcf638e2a13863db088bc966754ae44c22e2167",
+    "local/central42_v2/tiny42_normalization.py": "3650f39f618def7615d8be20ce8b9efd28e16202102fb8fa76dd8687deff4a6c",
+    "local/central42_v2/new_central42_targets.json": "c281ad46d97c0c5054609a88727c079e509fa1e07837bb856d470d7e2171f1c0",
+    "local/left42_final/actual_float_targets.json": "9244aee2e0eef320915fb41d1ac3fccaaf1300c25ca686f361602a251d8ec563"
+  },
+  "scope": "curvature supremum only; no LOW score gates, no native execution, no certificate replacement"
+}
