@@ -1,0 +1,19 @@
+{
+  "scope": "Source preservation and reference resolution, not semantic proof acceptance.",
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "runs/manuscript-finite-v3-20261027/check_source_integrity.py"
+  ],
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-finite",
+  "started_utc": "2026-10-27T15:46:59.652312+00:00",
+  "ended_utc": "2026-10-27T15:46:59.664418+00:00",
+  "returncode": 1,
+  "python_version": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "optimization": 0,
+  "source_sha256": {
+    "runs/manuscript-finite-v3-20261027/check_source_integrity.py": "dad6459ea4cdacb5a8f306979673a3e5ddf14c6a67395e17251d1a5482aeb073",
+    "manuscript/arxiv-v1/appendices/finite-analysis.tex": "4f67624b77b98ba79d9b07695d60bf42492708c89a19aef8f0f67c6fe5427193"
+  },
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "a187cf8096ea4d2b4b8a0d898f2b90f10f7cc96ee83674661ff83f02edadf534"
+}

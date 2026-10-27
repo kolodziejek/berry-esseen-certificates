@@ -201,5 +201,38 @@ contact sheets. Additionally inspected pages 113, 124, 126, 128, 131, 148,
 proofs, paragraph headings, unique paired bounds and final condition. No
 clipping, overlap, missing glyph or equation-number collision was found.
 Files are under `/private/tmp/be-finite-v3-20261027-build/render/`.
-The integrated manuscript still needs the coordinator's final compilation
-and layout check after changing the global heading style and ordering.
+The integrated build and final layout check are recorded below; the local
+build above remains the source of the preserved compilation evidence.
+
+
+## Preserved evidence and integrated layout review
+
+All bounded checks and the completed local-baseline build now have retained
+receipts in `runs/manuscript-finite-v3-20261027/`; see its `README.md` for
+commands, input hashes, separate mathematical/execution status and limits.
+The fresh preserved source check confirms all 165 labels, 87 labelled display
+entries, four certificate conditions and 174 resolved finite references.
+The first preservation-script attempt had a Python 3.9 f-string syntax error;
+its source, return code and streams are retained as `failed01`. The corrected
+script exited 0. No certificate predicate was changed or replayed.
+
+For the coordinator's 158-page integrated build01, PDF SHA-256
+`8b880fac987aceedd5f4222555e32d4ab54bbd33e923413143de3f64da01ee4f`,
+I inspected all five overview sheets spanning pages 109--158 with the image
+viewer. I also rendered and inspected full pages 120, 124, 126, 144, 145,
+154, 156, 157 and 158 separately. The appendix is now F and its numbered
+paragraph headings form distinct blocks. No clipping, overlap, missing glyphs
+or equation-number collision was found. Bibliography entries, including long
+URLs, fit within the text area.
+
+The page 126 proof still said “a positive maximizing raw threshold”; this
+could imply `t>0`, which the attainment argument does not establish. I sent
+the coordinator the correction “a maximizing raw threshold with positive
+closed-CDF discrepancy”. The coordinator owns that correction and any
+subsequent build. This evidence refers precisely to the build01 PDF above;
+the visual review does not independently certify mathematical hypotheses,
+finite certificates, complete coverage or bibliography accuracy.
+
+The coordinator subsequently reported the page 126 wording corrected in the
+root source, with a new build and changed-page review underway. This child
+record does not claim inspection of that later build.
