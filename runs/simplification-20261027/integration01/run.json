@@ -1,0 +1,73 @@
+{
+  "status": "PASS_BOUNDED_INTEGRATION",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "reviewed_head_before_state_update": "e1257965b566cd4884ad1f142087def902ce2750",
+  "checks": [
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "mathematics/simplification/2026-10-27/check_grouped_support.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.11776654099999999,
+      "sha256": "52f12e2206148824da587014a1b362399cd0e91f37f0983b7106085dde4d566c",
+      "stdout_sha256": "edb6cbb76ebeab1a172dc70b228736c731e8795b70e1883e8ba3f9f8b7f411d2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "mathematics/simplification/2026-10-27/check_support_lift.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.32237800000000005,
+      "sha256": "3cf1ec45f3abc69c308bc9819493d09fd1851c91d67f1ea72384d260e3edf59e",
+      "stdout_sha256": "e91ed23c36a90172ae6098f60e5962ba3f40b02a5b9593a5984273a259d3a87f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "mathematics/simplification/2026-10-27/check_finite_entry.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.055224500000000065,
+      "sha256": "2279c73727565305817276b4646662b38e967b2e9809e24eed53cfc932050901",
+      "stdout_sha256": "7ec5ab293d28bcbcf01e1c041781623ce7d7591610a4b84734faad5c5172ced3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "mathematics/simplification/2026-10-27/check_uniform42_interfaces.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.08026704200000001,
+      "sha256": "dda2727ade52ee013f561fe734082497428fe88ab91ffa0f8ef6d874095ac36c",
+      "stdout_sha256": "ffe75cc85e66cc5e7244b52d14d35824505a2932ed0fda231414b8df76f51173",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "mathematics/simplification/2026-10-27/check_local_cover_inventory.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.134976125,
+      "sha256": "a4fd746a03d1468be327138b472ea73bd1247bfd577876c3c11455b0b269ccbe",
+      "stdout_sha256": "6f973d48a130ead7d662f67eb84bbbb7bfbb4e8efc94671f855c677218043954",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "baseline_entries_preserved": 2748,
+  "readme_local_links_checked": 14,
+  "CE_lower_gap": "377/3134000 (using standard pi<22/7)",
+  "native_programs_executed": 0,
+  "full_proof_pass": false,
+  "limitations": "BASE41 providers, retained analytic and local numeric predicates and new composition joins remain required."
+}

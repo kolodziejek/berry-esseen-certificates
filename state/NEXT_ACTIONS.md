@@ -1,20 +1,29 @@
 # Next actions — 27 October 2026
 
-1. Independent audit review is complete. PR #1 was merged before review commits
-   were pushed; the owner authorized one follow-up draft for those reports and
-   evidence. Keep draft PR #2 pending explicit merge approval. Read
-   `mathematics/audit/2026-10-27/reviews/REVIEW.md` for the audit-only recommendation
-   and retained limitations. Do not merge automatically.
-   Retain the existing finite theorem through48 in the first redesign.
-2. Locate the actual public final provider implementations named by
-   `mathematics/global-contract.json`; pins alone do not permit a behavior audit.
-3. Implement a separately named BASE48 + full LOCAL47 composition contract and
-   mutation tests for missing support, acquired resources, deleted caps, signed
-   gates, zero noise and full coverage. This is the next bounded experiment.
-4. Only after reviewing that graph, propose a new global replay selection that
-   bypasses dedicated strong46 work while retaining shared coarse/phase work.
-   Preserve the original independent-tail theorem, certificates and targets.
+1. Keep existing draft PR #2 pending explicit merge approval. Independent review
+   is complete for the conditional reduction and small support certificate;
+   mathematics/simplification/2026-10-27/reviews/REVIEW.md gives the scope.
+2. Locate/read the pinned current4042_low_mathematical_assembly_v2.py
+   (aa819f3fff77d4cdad2b7a8b5c69be2719b8e9df26c85ba5041aa7c0b8bd2d7b)
+   and upstream sharp38/39 providers. Prove their actual graph implements the
+   current mathematical base induction without old tail43 dependence, or retain
+   that dependence. Existing indexed40 primitive is only initial support.
+3. Next bounded implementation: a separately named composition contract binding
+   genuine BASE41, equality attainment, scalar entry, grouped support result,
+   ordered same-law resources, full remaining LOCAL42 and zero-noise Bernoulli.
+   Reject missing predecessor/resource/sign/coverage/zero-noise inputs. Never
+   emit a whole-proof PASS from absent native acceptances or historical markers.
+4. Separately design/review one-pass LOW receipts if desired. Preserve complete
+   producer/binder coverage, exact config hashes, residues and mutation checks.
+   Current binders require original row objects missing from the source-only
+   package; do not merely disable replay or omit producers.
+5. Retain all certificates, theorem statements and old independent routes.
+   No expensive replay/generation campaign is authorized by these findings.
 
-Reproduction of new scalar arithmetic is documented in
-`mathematics/audit/2026-10-27/scalar-review.md`. No expensive campaign, removal
-or theorem weakening is authorized by this audit.
+Runnable small reproduction from repository root:
+python3 -B mathematics/simplification/2026-10-27/check_grouped_support.py
+This uses14 fixed intervals, not optimization. It checks arithmetic conditional
+on the documented contact/heat/resource premises. Integration receipts and full
+independent coefficients are under runs/simplification-20261027/ and
+runs/grouped-support-20261027/. The initial LOCAL47 audit remains historical
+context; the new uniform42 route is the stronger conditional proposal.

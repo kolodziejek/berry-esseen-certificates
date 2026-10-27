@@ -1,28 +1,36 @@
 # Dependency checkpoint — 27 October 2026
 
-Proposed conditional route:
+New proposed upper-index route:
 
-    genuine weak finite base through46 (conservatively through48)
-      + support-free smoothing
-      -> first contrary index has d_n=q_n=0, n(C_n-CE)<.3,
-         own cap .4247 and both deleted caps .4253
-      + attained same-law contact
-      + full support / INITIAL / signed acquisition / confinement predicates
-      + complete LOCAL47 phase-noise cover and finite Bernoulli theorem
-      -> weak global upper bound (and separately strict tail from47)
-      + independent lower approximation -> sharp global constant.
+    genuine BASE41 (or terminal sharp40/41 for the strict-tail statement)
+      + support-free Gaussian smoothing
+      -> least n>=42 with C_n>=C_E has zero predecessor loss,
+         n(C_n-C_E)<.3, own cap .4226, both deleted caps .4253
+      + retained equality attainment/contact/moment/heat inputs
+      + grouped14-interval support certificate for each ordered acquired tuple
+      -> initial3.84 and all64 LEFT support radii, uniformly n>=42
+      + complete INITIAL/LEFT/CENTRAL/complement resources
+      + floor42 confinement, profiles, weighted joint gap/noise resource
+      + complete TINY/MID/152LOW and exact zero-noise Bernoulli
+      -> strict tail42; BASE41 adds weak global upper bound
+      + independent lower approximation -> sharp universal constant.
 
-Exact source/interface edges: `mathematics/audit/2026-10-27/AUDIT.md` and
-`acquisition-review.md`. Execution/consumer edges: `computations-review.md`.
+Precise hypotheses/source locations: mathematics/simplification/2026-10-27/
+finite-entry.md, zero-loss-support.md, grouped-support.md, uniform42.md,
+local-cover.md and base-closure.md. Both support proofs are available; the
+grouped alternative removes old finite support signs as premises.
 
-Retained finite43–48 support acquisition consumes coarse .7/j caps at45..48.
-Thus bypassing strong46/base49 does not remove the whole coarse ceiling branch.
-LOCAL47 still consumes corrected PREP/complement and later phase-domain gates.
-Current public final joins/full_pass remain incomplete. Any defect in a retained
-analytic or numerical input propagates to the proposed global composition.
+Conditional bypasses in this NEW upper module:6 finite positive-ceiling/support
++6 special43 bootstrap +55 separate tail tasks. Retain19 native+152LOW legacy
+obligations before new joins. All old production collectors remain unchanged.
+No whole-repository removal: current BASE41 provider is not fully available;
+old62F base join explicitly has tail43/early/single39 parents. Current A17
+mathematical contract uses genuine38/39 instead, but a contract is not its
+missing implementation. Original lower-base and shared consumers remain.
 
-Independent review confirms conditional applicability and the shared finite
-consumer, without discharging the retained predicates. The exact root archive
-global_route member must be used: an older baseline copy and a historical
-coverage scope string remain in the archive. New assembly acceptance must not
-reuse an old global success marker. See the independent review report.
+The earlier BASE46/48+LOCAL47 audit remains valid conditional context, including
+its retained finite coarse-ceiling consumers. New argument changes the route;
+it does not retroactively erase those edges or validate old global markers.
+Any defect in a retained analytic or numerical premise propagates to the new
+uniform theorem and global composition. Arithmetic/source identity alone does
+not establish physical iid resources, attainment or full proof acceptance.

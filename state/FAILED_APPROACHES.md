@@ -21,3 +21,21 @@
 
 No counterexample to Berry--Esseen is claimed. No source or certificate was
 deleted or weakened. The full audit is in mathematics/audit/2026-10-27/.
+
+Additional simplification boundaries:
+
+- Extending old finite42–48 support by deleting its favorable fifth term while
+  retaining positive .19 loss is invalid. New proof uses zero loss and either
+  a proved splice comparison or direct14-interval infinite-index certificate.
+- Applying the floor43 square-root envelope253/250 at42 fails; the endpoint42
+  proof uses81/80. Both deleted predecessors at42 are40 and41.
+- Zero scalar predecessor loss does not imply zero conditional noise, smaller
+  noise ceilings or disappearance of LOW rows. All152 LOW rows remain.
+- A p-domain inclusion does not let tail47 resources stand in for finite42
+  same-law moments/profiles. The finite42 resources must be acquired directly.
+- The literal central-strip/support jobs are not identical: domains and bounds
+  differ. Route-specific redundancy requires a consumer proof.
+- The new238-to171 upper-module count is not a total runtime or global proof
+  saving. Current base closure, shared consumers and new joins are outside it.
+- New support polynomial positivity is freshly established; actual resource
+  bounds are not established by the source JSON or by the grouped checker.
