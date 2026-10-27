@@ -20,7 +20,9 @@ The exact conservation term is (n+H^2)a. Recurrence can leave the new tail-entry
 logic only after a complete ordered transported exclusion; finite consumers
 remain. No existing certificate, driver or theorem target was changed.
 Eight bounded integration checks pass; 2,748 baseline entries preserved.
-Evidence: runs/strategy-v4-20261027. A new draft PR will carry the work; no merge.
+Evidence: runs/strategy-v4-20261027. Draft PR #5: https://github.com/kolodziejek/berry-esseen-certificates/pull/5
+Verified open, draft and conflict-free; no merge performed. Independent bounded
+review recommends integration as documented research progress after author review.
 
 # Third manuscript revision — 27 October 2026
 

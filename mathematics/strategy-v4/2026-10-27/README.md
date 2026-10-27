@@ -3,6 +3,9 @@
 27 October 2026. Start: fork main `ca4943aae7a85ffa85d5d4d7166987dc055cb3e6`.
 Original reference: `6346fc1b4432bc5982822aa696eb566ed9e1e1ee`.
 
+Review: [draft PR #5](https://github.com/kolodziejek/berry-esseen-certificates/pull/5), targeting the user fork’s main.
+No merge has been performed.
+
 The useful change is to **maximize excess over the target before deriving
 contact**. This fixes the coefficient at `c=C_E`. We prove the resulting
 attainment, contact and conservation statements, and a conditional theorem
