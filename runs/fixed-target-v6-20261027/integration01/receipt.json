@@ -1,0 +1,218 @@
+{
+  "started_utc": "2026-10-27T20:26:40.399116+00:00",
+  "python": "3.9.6",
+  "optimization": 0,
+  "driver_sha256": "7e5fa4a238cbb59d2c9f48d1e209ea5cb0a672b86a49ea2c380bd0a675fef905",
+  "checks": [
+    {
+      "name": "signed",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v6/2026-10-27/signed-check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.032169708,
+      "script_sha256": "c827917d18b241d7e6255b3c15184ca719044cc3b7ffb8c7474ea5482dd7a847",
+      "stdout_sha256": "3376557f83874f571ed1c7cfad10b82930e736427ba597b5c8ed76b3c46b1944",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "signed-independent",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v6/2026-10-27/signed_review_check.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.03261341699999999,
+      "script_sha256": "9be1d9798169704a8965d2a1ffc6cbe327d94c68cc6283980bb1c7f4de0fc94b",
+      "stdout_sha256": "609475e29fe2a4c5d43b13d6e3e42233d599d9ff870738e7b14a810856fd7bb7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "circle",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v6/2026-10-27/moment_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.5568929579999999,
+      "script_sha256": "c44f789c35198eabb2d6d07a3843437c4fa29e9b85ebf79505a3bb696987513f",
+      "stdout_sha256": "301a768e1622f0b79161ef2c56225f5035e4d72d683e911f3b152e95ac694a93",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "circle-inverse",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v6/2026-10-27/moment_inverse_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.024309834000000086,
+      "script_sha256": "fd3419d559b1d6b7268f79fece1dac39b6a381552adfc3200e0a1f2a75506994",
+      "stdout_sha256": "fe0248661338b336bf66e5ea30b098ec1271813f43f0ab5ccbf8dd703ea7d86d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "circle-independent",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v6/2026-10-27/signed-moment-review-check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.039316792000000045,
+      "script_sha256": "475bd927bc6d23ab05017a64756588085e702c9fd2f37bd176f2a65d88066319",
+      "stdout_sha256": "95ee195b72e96cfa634b73d0330549f9ddc38d947e3398ecc7b56cd217db6737",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "phase",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v6/2026-10-27/phase_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.598070375,
+      "script_sha256": "7f57df7ecd4c35f7e05e79e4dd9940f84a6e4127567efb54c5e38afd2abd3da8",
+      "stdout_sha256": "a25a6bacbbf6b9cef42059f3a3b89c5c1a3094e2cabdae46fed5331e9b6bc0e5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "phase-independent",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v6/2026-10-27/phase_review_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.2476142910000001,
+      "script_sha256": "ad10bf6e43986aa6d03465e139ad40fecfdbac6df343117a157d1d45b177e29c",
+      "stdout_sha256": "1d17e758f4dbf9924a94f7b30fb0f834005457d956ec230bbf8f997cc9bfa64a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "combined",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v6/2026-10-27/combined_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.9341381249999998,
+      "script_sha256": "f22a0506d8301fb5c747650443980363b6bc06b47ce8fa6c35fb7eab0bc19d18",
+      "stdout_sha256": "200cc178bed6400f4a6043aac7f136e38a5cfa02a390c4d3a02971caf5c78dca",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "combined-independent",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v6/2026-10-27/combined_review_check.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.3813218329999999,
+      "script_sha256": "ba2309335ca793e3f7bf5162d81340a3b1beb73884e4d08b2d897fc6e3f91939",
+      "stdout_sha256": "909bbc19d02762514d372981bfe84a0fb5a7670b0956720c53179f900be98139",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "simple-two-pass",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v6/2026-10-27/signed-two-pass-check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.5699182500000002,
+      "script_sha256": "a2b9309998191c2d7e4477a969cd55ecb516440f56dfa3cf97df5ccddac1e76d",
+      "stdout_sha256": "c52122bea63beaed83de741a347863a39fb0faeaa34dec5dc4b2741a0a88594a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "simple-independent",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v6/2026-10-27/two_pass_review_check.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.058502749999999715,
+      "script_sha256": "b47355bd689203be98426ef5f82fa0f5140d474e71d1b89d198dccee9572d317",
+      "stdout_sha256": "b4c43d3b49ce54545440f7608bfd734b0e722b8111941bfd9227a555b7bfc1a0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "gap-event",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v6/2026-10-27/gap_event_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.019297499999999967,
+      "script_sha256": "ece8c4494d630147f6d5c915c7af153cc05b9c4e1eb00f07fb839124abc84b81",
+      "stdout_sha256": "688ffab5802b0c4b1668838050c6f689fe43465dc9c20fc23ceda2505f723548",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "gap-refinement",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v6/2026-10-27/gap_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 1.491103292,
+      "script_sha256": "d2345cd82d67599c45451f57400e706f9057f046e09c98c7f8773a458c2cb3fd",
+      "stdout_sha256": "8565f54d20041ccf32d3f06662ba66a1d8297638c19d67194f5adf45736bd7b8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "source_sha256": {
+    "mathematics/fixed-target-v6/2026-10-27/central-gap.tex": "7b24cd5dda6f51b00f6e856788bf5369cad14cd8a49760ab8aa71a38dfee8412",
+    "mathematics/fixed-target-v6/2026-10-27/combined_check.py": "f22a0506d8301fb5c747650443980363b6bc06b47ce8fa6c35fb7eab0bc19d18",
+    "mathematics/fixed-target-v6/2026-10-27/combined_review_check.py": "ba2309335ca793e3f7bf5162d81340a3b1beb73884e4d08b2d897fc6e3f91939",
+    "mathematics/fixed-target-v6/2026-10-27/compression_inventory.py": "d1a328e98117a810f513630abd88c2a493e9e70aca429b30e024265a7cc69275",
+    "mathematics/fixed-target-v6/2026-10-27/gap_check.py": "d2345cd82d67599c45451f57400e706f9057f046e09c98c7f8773a458c2cb3fd",
+    "mathematics/fixed-target-v6/2026-10-27/gap_event_check.py": "ece8c4494d630147f6d5c915c7af153cc05b9c4e1eb00f07fb839124abc84b81",
+    "mathematics/fixed-target-v6/2026-10-27/integration.tex": "d8be85e7a29ed1f4bbaa4184466864cd23272188c24959d9d227ac255559d643",
+    "mathematics/fixed-target-v6/2026-10-27/main.tex": "08b534e101a8d51c1eab91a427b51f4c05be93a81ba3d4d34dd0f44c96a87971",
+    "mathematics/fixed-target-v6/2026-10-27/moment-core.tex": "c6974fa0afe945c202d4af3f026441ebd80f187fa1f98003063809916f0c14a8",
+    "mathematics/fixed-target-v6/2026-10-27/moment-main.tex": "14ed2ff9c386f7be684519539bb437e43c67a41e6693d12ba6a53c46433cf18a",
+    "mathematics/fixed-target-v6/2026-10-27/moment.tex": "655ad13c499bb3d1e83d66e21c66444a0b2375f8f8e1de108893b7069e32c31c",
+    "mathematics/fixed-target-v6/2026-10-27/moment_check.py": "c44f789c35198eabb2d6d07a3843437c4fa29e9b85ebf79505a3bb696987513f",
+    "mathematics/fixed-target-v6/2026-10-27/moment_inverse_check.py": "fd3419d559b1d6b7268f79fece1dac39b6a381552adfc3200e0a1f2a75506994",
+    "mathematics/fixed-target-v6/2026-10-27/moment_run.py": "17709749012ef441aaa68e5d637c40acd1d18e631d06ba09e7cdf6a2a2f70191",
+    "mathematics/fixed-target-v6/2026-10-27/phase.tex": "82db7c78b07b4a20a257390d0dfae82a0bcf4bc7e0500856336da5e073205b5e",
+    "mathematics/fixed-target-v6/2026-10-27/phase_check.py": "7f57df7ecd4c35f7e05e79e4dd9940f84a6e4127567efb54c5e38afd2abd3da8",
+    "mathematics/fixed-target-v6/2026-10-27/phase_review_check.py": "ad10bf6e43986aa6d03465e139ad40fecfdbac6df343117a157d1d45b177e29c",
+    "mathematics/fixed-target-v6/2026-10-27/run_checks.py": "7e5fa4a238cbb59d2c9f48d1e209ea5cb0a672b86a49ea2c380bd0a675fef905",
+    "mathematics/fixed-target-v6/2026-10-27/shortening.tex": "8ece91b324c16ab2e4eeaf3e4333aeacf5cbaf0d8c789b2541e0e05520826525",
+    "mathematics/fixed-target-v6/2026-10-27/signed-check.py": "c827917d18b241d7e6255b3c15184ca719044cc3b7ffb8c7474ea5482dd7a847",
+    "mathematics/fixed-target-v6/2026-10-27/signed-moment-review-check.py": "475bd927bc6d23ab05017a64756588085e702c9fd2f37bd176f2a65d88066319",
+    "mathematics/fixed-target-v6/2026-10-27/signed-proof/main.tex": "8ad9ebcf194b416287b4044274ec2772b321d209352ef0e77b7c04911e956d05",
+    "mathematics/fixed-target-v6/2026-10-27/signed-proof/signed.tex": "43dc933883f313b26a6b4a0a99b57369f98a3ec2093707818e63dda5a1f9ef56",
+    "mathematics/fixed-target-v6/2026-10-27/signed-two-pass-check.py": "a2b9309998191c2d7e4477a969cd55ecb516440f56dfa3cf97df5ccddac1e76d",
+    "mathematics/fixed-target-v6/2026-10-27/signed-two-pass-proof/main.tex": "157aaebb07a0964cdd532580c9b269483a585eb7bd67721796301924e79788c0",
+    "mathematics/fixed-target-v6/2026-10-27/signed-two-pass-proof/signed-two-pass.tex": "ce1ef706ccf4c134d194a1b13bee96ded0d296a629715e8d68cb8ef7a6fab074",
+    "mathematics/fixed-target-v6/2026-10-27/signed_review_check.py": "9be1d9798169704a8965d2a1ffc6cbe327d94c68cc6283980bb1c7f4de0fc94b",
+    "mathematics/fixed-target-v6/2026-10-27/simple-route.tex": "3fa86148d1a40de99ad10518ca12dce5c0659e037383c87cad50ac9b525078fe",
+    "mathematics/fixed-target-v6/2026-10-27/two_pass_review_check.py": "b47355bd689203be98426ef5f82fa0f5140d474e71d1b89d198dccee9572d317"
+  },
+  "scope": "Bounded arithmetic/source checks, not complete Fourier or local acceptance.",
+  "status": "PASS_BOUNDED_INTEGRATION",
+  "baseline": "6346fc1b4432bc5982822aa696eb566ed9e1e1ee",
+  "unchanged_baseline_entries": 2748,
+  "materialized_baseline_files_checked": 182,
+  "sparse_baseline_blobs_checked": 2566,
+  "completed_utc": "2026-10-27T20:26:45.621844+00:00"
+}

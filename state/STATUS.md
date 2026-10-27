@@ -1,3 +1,32 @@
+# Conditional initial-gap acquisition — 27 October 2026
+
+The former five-cell D<4 obstacle is closed. Selected readable route: signwise
+K1 cap + fifth-moment square + same-law circle + two simple quadratic passes.
+On all 24 closed rho cells it gives raw<=11.5164967977, U<=9.9790315907,
+D<=3.5746638454, nD<=150.1358815051 and an actual central support gap.
+The degree-six phase proof is optional, not a selected-route dependency.
+
+| Result | Mathematical status | Execution status |
+|---|---|---|
+| New signed K1 and quarter-constant bounds | Proved for bounded actual laws; independent review | Fresh exact coefficient/actual-law PASS |
+| Two-pass complete initial-gap cover | Conditional on retained contact/support/Fourier inputs | Fresh 48 passes; independent 96 quadratics PASS |
+| Full-phase one-pass gap entry | Conditional; polynomial-specific raw gate retained | Independent 336-polynomial PASS |
+| Actual-gap event/distance | Proved without D<2; endpoint atoms included | Fresh actual-law/window-gate PASS |
+| Optional six actual-gap HIGH updates | Conditional on complete LOW/HIGH premises | D<=2.9976105609;16/24 D<2; fresh PASS |
+| Full INITIAL42, LOCAL42, Fourier closure and BASE41 | Still required | No full native/Lean acceptance |
+
+Deliverable: mathematics/fixed-target-v6/2026-10-27/main.pdf (13 pages), portable
+source ZIP, exact checks and independent reviews. See README.md,
+compression-map.md and integration-review.md in that directory. Earlier 158-page
+manuscript remains unchanged this turn; the 13-page note is not its replacement.
+
+13 bounded integrated checks pass (integration01); all 2748 baseline entries
+preserved (182 materialized, 2566 sparse tree/index). Final note-build04 is clean;
+export03 reproduces 13 pages with identical page text. All pages visually inspected.
+Existing draft PR #5 remains the sole review target. Component branches are
+integrated on manuscript/strategy-v4-20261027. No certificate/target deletion,
+heavy generation, main push, upstream mutation, force-push or merge.
+
 # Fixed-target continuation — 27 October 2026
 
 PR #5 updated and verified open/draft, unmerged, at proof commit157db04.

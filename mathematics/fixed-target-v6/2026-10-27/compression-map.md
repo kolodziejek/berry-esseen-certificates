@@ -134,3 +134,11 @@ Before declaring the score machinery absent from the complete tail proof, supply
 | Large overall reduction | Research opportunity requiring new uniform lemmas or base simplification | No claimed percentage, new total length or computational speedup |
 
 Only new research files and read-only inventory evidence are added. This report does not remove any existing certificate or weaken any theorem statement.
+
+## V6 addendum: initial support geometry now acquired
+
+The frozen inventory above remains a record of the starting point. The five-cell initialization obstacle is now closed, conditional on the same retained Fourier/contact/support inputs. The newly selected route uses the sign-coherent K1 bound and the fifth-moment square, followed by **two elementary quadratic passes**. Its full 24-cell cover gives raw <=11.5164967977, U<=9.9790315907, D<=3.5746638454 and a strictly positive central-gap margin on every cell. It requires neither an actual-score cap nor the new degree-six phase lemma. The first pass already gives D<4; one moment-circle/density update obtains the actual gap everywhere.
+
+The stronger optional phase lemma gives that geometry in one pass (D<=3.8675294672); six optional actual-gap HIGH updates reach D<=2.9976105609, with only16/24cells below2. This is not the full INITIAL42 target D<.784/raw<2.24 or the final LOCAL42 domain. Therefore the dependency removal now justified is the old score-control path **to this initial support-gap conclusion**, replaced by two coarse exact passes. No complete dense acquisition, final cover or finite-base proof is deleted. Comparing24cells with18432cells is not a speedup estimate because their complete outputs differ.
+
+For the short manuscript choose the two-pass route; retain the degree-six lemma as an optional quantitative refinement. The note's additional pages contain new proofs and reviewable comparisons, not a proposed addition to every proof path. The next large shortening still requires a direct bound reaching the final physical/noise domain or a uniform strict count theorem.

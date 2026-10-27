@@ -1,0 +1,31 @@
+{
+  "name": "INDEPENDENT_COMBINED_V6_REVIEW_V1",
+  "results": {
+    "polynomials": 336,
+    "max_concavity_subdivisions": 1,
+    "first_max_raw": "66409450799/5000000000",
+    "first_max_U": "21593190521/2000000000",
+    "first_max_D": "2417205917/625000000",
+    "first_min_gap_margin": "57439607663/1600000000000",
+    "final_max_D": "33579256801/10000000000"
+  },
+  "source_pins": {
+    "mathematics/fixed-target-v6/2026-10-27/combined_check.py": "f22a0506d8301fb5c747650443980363b6bc06b47ce8fa6c35fb7eab0bc19d18",
+    "mathematics/fixed-target-v6/2026-10-27/phase_check.py": "7f57df7ecd4c35f7e05e79e4dd9940f84a6e4127567efb54c5e38afd2abd3da8",
+    "mathematics/fixed-target-v6/2026-10-27/phase.tex": "82db7c78b07b4a20a257390d0dfae82a0bcf4bc7e0500856336da5e073205b5e",
+    "mathematics/fixed-target-v6/2026-10-27/signed-check.py": "c827917d18b241d7e6255b3c15184ca719044cc3b7ffb8c7474ea5482dd7a847",
+    "mathematics/fixed-target-v6/2026-10-27/moment_check.py": "c44f789c35198eabb2d6d07a3843437c4fa29e9b85ebf79505a3bb696987513f",
+    "runs/fixed-target-v6-20261027/combined01/stdout.json": "200cc178bed6400f4a6043aac7f136e38a5cfa02a390c4d3a02971caf5c78dca",
+    "runs/fixed-target-v6-20261027/signed02/stdout.json": "3376557f83874f571ed1c7cfad10b82930e736427ba597b5c8ed76b3c46b1944",
+    "runs/fixed-target-v5-20261027/cell02/check.stdout.json": "7525713bd06a30b9c13693d01949d4f186890128eed3432771953ef9eafef082"
+  },
+  "rejected_controls": [
+    "missing cell",
+    "altered signed coefficient",
+    "altered phase polynomial",
+    "understated resource",
+    "false gap margin",
+    "unlicensed selected polynomial despite unrelated prior bound"
+  ],
+  "no_shared_checker_or_fourier_execution": true
+}

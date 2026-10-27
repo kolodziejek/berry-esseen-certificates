@@ -1,3 +1,28 @@
+# V6 rejected shortcuts and bounded limits — 27 October 2026
+
+- beta*gamma>=0 and K1*gamma<=0 are false even for an actual centered,
+  standardized three-point law in the last initial rho cell. See signed.tex.
+  The successful cap reflects both signs and uses delta>=h² instead.
+- The selected simple first pass closes D<4 everywhere but has only 23/24
+  actual-gap margins. One circle/density update is necessary for that route;
+  falsely claiming all first-pass gaps is a rejected control.
+- The optional exponential phase estimate must keep a positive part and must
+  check its selected quadratic globally below N*b. An unrelated better raw
+  bound is insufficient to license its negative exponential coefficient.
+- Full-phase concavity is not automatic from a raw gate; retain z+z²<1 or a
+  separate continuous-domain certificate. The selected short route avoids
+  this lemma altogether.
+- An actual gap does not imply all old D<2 generic-event conclusions. The new
+  event theorem proves only its stated actual probability/distance/moment
+  interface; preserve remaining hypotheses of downstream lemmas.
+- Six optional coarse actual-gap HIGH updates improve every HIGH bound but
+  still leave 8/24 cells without D<2; worst D2.9976105609. This is not full
+  INITIAL42, and repeating summaries does not close final D<.784/raw<2.24.
+- Degree-six polynomial optimization is an upper-majorant calculation,
+  not an exact exponential optimization identity (final prose corrected).
+- Early source-pin rejections and typesetting overfull warnings are retained
+  in runs; final pinned reviews and final document builds pass.
+
 # Newly delimited failures and corrections — 27 October 2026
 
 - Three coarse initial resource updates do not close globalD<4; final5cells

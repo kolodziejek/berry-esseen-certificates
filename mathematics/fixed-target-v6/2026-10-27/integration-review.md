@@ -1,0 +1,31 @@
+# Coordinating review: a short conditional initial-gap proof
+
+The selected result is a genuine advance in the fixed-target route: two elementary quadratic passes on 24 closed moment cells obtain an actual central gap, without an upper actual-score cap, a preceding central gap, a D<2 assumption, or the optional degree-six phase theorem. The complete Fourier/contact/support premises remain explicit. This is not a completed INITIAL42/LOCAL42 contract or proof of the sharp conjecture.
+
+## Accepted arguments and dependencies
+
+The coordinating reviewer read the complete signed-moment, circle-inversion, phase, two-pass and actual-gap proofs, and the constructor code used in their combination. Independent reviewers rederived the new arguments and checked the combinations with separate acceptance implementations. Authorship overlap with the earlier first-cover/circle construction is disclosed in the two-pass and combined review reports; those reviews do not claim independent validation of the shared Fourier engine.
+
+1. Signwise Cauchy and reflection give `delta>=h²` and the signed K1 majorant. The constrained maximization uses its three explicit gates; failed gates use the valid fallback. Zero atoms remain allowed. On the final cell the effective cap is below 3.964267, compared with the retained 5.8704858543. The quarter constant comes from a nonnegative fifth-moment square already available in the later signed argument. Its early use retains the negative-gap coefficient and all other premises.
+2. The circle bounds actual same-law moments. Its inverse chooses the increasing lower branch, checks the sign before squaring, rounds its root upward and switches rho endpoints for a negative lower gamma bound. A defect lower bound is not redefined as the conserved defect.
+3. The selected two-pass argument first bounds raw R, licenses the Gaussian density and positive quadratic phase price, then bounds the resource and nD. Its first pass has only 23/24 gap cells; the second has 24/24, with minimum margin 0.328765376589375. Every quadratic is checked over its full threshold domain. The earlier raw/resource minima are inactive in every recorded pass; fresh quadratic ceilings alone suffice. No higher-degree phase theorem is needed for this conclusion.
+4. The optional full-phase proof uses its selected quadratic's own global raw gate. An unrelated better prior bound cannot license a sign reversal in that polynomial. The finite-index exponential expression is bounded above by a degree-six polynomial majorant; it is not exactly replaced by that polynomial. The positive part is retained. Independent Bernstein acceptance verifies all 336 polynomials in the one-pass-plus-six-update output.
+5. The actual-gap argument uses bounded complementary intervals of closed support. The moment-sensitive criterion `d<(sqrt(10)_lower−1)l` excludes zero from support and gives a quantitative opposite-sign event. Its stronger distance comes from adding the product estimate before applying m<=1/2. The HIGH wrapper uses this event only after a prior defect ceiling proves the gap. It retains all six frequency pieces and all window/index gates, and takes minima of complete bounds for the same integral. No other conclusion of the old D<2 package is imported.
+
+The integrated simple-route copy changes layout and adds the independently verified inactive-minimum observation. The integrated central-gap copy changes only the PDF bookmark formatting of its heading. The original component proof snapshots stay intact where separately pinned. The final presentation review found no blocking scope issue; its requested distinction between a polynomial majorant and an exact optimization identity was implemented.
+
+## Exact acceptance and reproduction
+
+`runs/fixed-target-v6-20261027/integration01/receipt.json` records 13 passing bounded jobs, with streams, return codes, versions, source hashes and preservation of all 2748 original baseline entries. Of these, 182 materialized files were checked by Git blob hash and 2566 sparse blobs were checked in HEAD and index. No missing promisor blob was fetched for this check.
+
+The independent checks include all 24 signed rows, 144 circle inverse certificates, 96 two-pass endpoint quadratics and 336 optional phase polynomials. The continuum justifications are the written inequalities and exact polynomial certificates; sampled actual-law controls are adversarial tests, not proofs of uniformity. Malformed/duplicated/reordered cells, wrong root branches, source changes, sign mistakes, resource-as-raw substitution and unlicensed phase polynomials are rejected. Earlier hash-rejection attempts during component editing remain recorded, followed by checks against the final frozen sources.
+
+The 13-page integrated note compiles without final warnings. The portable archive rebuilds with shell escape disabled and identical page text. Every page of build 03 was visually inspected; final changed pages are recorded and reinspected for build 04. The complete final source manifest is in the final build/export receipts. The arithmetic sources were unchanged by final typesetting edits, so no redundant arithmetic rerun was needed.
+
+## Scope and recommendation
+
+The short result gives D<=3.5746638454 and nD<=150.1358815051 with all 24 actual gaps. Optional full-phase/event refinement gives D<=2.9976105609 and nD<=125.8996435547, but only 16/24 cells satisfy D<2. The retained later contract still requires D<.784, raw<2.24 and probability/noise panels, among other hypotheses. Full Fourier validity, downstream support/confinement/count exclusions, zero-noise comparison and BASE41 remain obligations.
+
+The proof-shortening map measures the current 158-page manuscript and identifies exactly which score-control dependencies can leave the new entry path. It makes no unsupported total-page forecast, percentage reduction or speedup from unequal cell counts. No existing certificate or production theorem target is removed.
+
+**Recommendation:** ready for author review and merge as explicitly conditional research progress after that review. Keep PR #5 draft; this review does not recommend presenting the global theorem as established or submitting a complete arXiv proof. No automatic merge is performed.

@@ -1,0 +1,30 @@
+{
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v6/2026-10-27/main.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/runs/fixed-target-v6-20261027/note-build04/build",
+    "--json"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 1.209430333,
+  "python": "3.9.6",
+  "source_sha256": {
+    "central-gap.tex": "7b24cd5dda6f51b00f6e856788bf5369cad14cd8a49760ab8aa71a38dfee8412",
+    "simple-route.tex": "d8e1c5f43bf8c3c60b6ab2647162c18830405dd65727e6d811c0c6ff3f621a38",
+    "main.tex": "08b534e101a8d51c1eab91a427b51f4c05be93a81ba3d4d34dd0f44c96a87971",
+    "moment.tex": "655ad13c499bb3d1e83d66e21c66444a0b2375f8f8e1de108893b7069e32c31c",
+    "moment-main.tex": "14ed2ff9c386f7be684519539bb437e43c67a41e6693d12ba6a53c46433cf18a",
+    "shortening.tex": "8ece91b324c16ab2e4eeaf3e4333aeacf5cbaf0d8c789b2541e0e05520826525",
+    "moment-core.tex": "c6974fa0afe945c202d4af3f026441ebd80f187fa1f98003063809916f0c14a8",
+    "phase.tex": "82db7c78b07b4a20a257390d0dfae82a0bcf4bc7e0500856336da5e073205b5e",
+    "integration.tex": "9916787e4ef017ccd17b13ed296bf650dbfe1b1f920830a5992be443cd1a65c3",
+    "signed-proof/main.tex": "8ad9ebcf194b416287b4044274ec2772b321d209352ef0e77b7c04911e956d05",
+    "signed-proof/signed.tex": "43dc933883f313b26a6b4a0a99b57369f98a3ec2093707818e63dda5a1f9ef56",
+    "signed-two-pass-proof/signed-two-pass.tex": "ce1ef706ccf4c134d194a1b13bee96ded0d296a629715e8d68cb8ef7a6fab074",
+    "signed-two-pass-proof/main.tex": "157aaebb07a0964cdd532580c9b269483a585eb7bd67721796301924e79788c0"
+  }
+}

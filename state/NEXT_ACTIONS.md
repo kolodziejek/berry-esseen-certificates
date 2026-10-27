@@ -1,3 +1,25 @@
+# Next after actual-gap acquisition — 27 October 2026
+
+1. Read the v6 selected two-pass proof and independent review. The former
+   five high-rho D<4 failures are resolved; do not repeat that stale task.
+2. Preserve the explicit contact/support and complete LOW/HIGH premises.
+   Their full mathematical audit remains separate from scalar arithmetic.
+3. Next research target: strengthen the whole fixed-c remainder estimate,
+   with actual J/J1/J2 baseline and complete Fourier error, to reach final
+   signed noise/probability domains. The current optional gap refinement has
+   worst D2.9976105609 and raw 9.3684595861; it does not meet D<.784/raw<2.24.
+   Simply acquiring a gap does not license every conclusion bundled with D<2.
+4. For a short manuscript select two quadratics; the optional degree-six
+   phase derivation and stationary certificates are unnecessary for initial
+   gap existence. A uniform count comparison is a separate candidate for
+   replacing large later case covers. BASE41 remains independent.
+5. Keep PR #5 draft for author review. No merge, certificate deletion or
+   expensive generation without explicit approval.
+
+Next bounded reproduction from the active fork worktree, with an unused id:
+python3 -B mathematics/fixed-target-v6/2026-10-27/run_checks.py next-review
+This runs13 bounded checks and baseline preservation, not a native campaign.
+
 # Next after fixed-target entry — 27 October 2026
 
 1. Read mathematics/fixed-target-v5/2026-10-27/README.md and main.pdf.

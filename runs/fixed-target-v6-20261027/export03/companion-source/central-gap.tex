@@ -1,0 +1,113 @@
+\section{An actual gap before the bound \texorpdfstring{$D<2$}{D<2}}
+\label{v6gap:section}
+
+The opposite-sign high-frequency event requires an actual gap around
+zero, not the particular sufficient bound $D<2$. The stronger criterion
+below uses the moment cell. It does not assert that any numerical cell
+has acquired its hypotheses.
+
+Let $X$ have mean zero, variance one and finite third absolute moment
+$\rho$. Write $\gamma=\E X^3$, $m=\E X_+=\E X_->0$,
+$\sigma=\sqrt{10}$ and
+\[
+ \tau(t)=\E[X\mathbf1_{\{X\ge t\}}],\quad
+ J=\sum_{(u,v)}\tau_{u,v}(v-u)^2,\quad
+ D=(3+\sigma)\rho-\gamma-3J,
+\]
+where the sum runs over bounded complementary intervals of the closed
+support and $\tau_{u,v}$ is the constant value of $\tau$ on $(u,v)$.
+
+\begin{lemma}[Moment-sensitive actual-gap event]\label{v6gap:event}
+Suppose
+\[
+ 1\le l\le\rho\le u,\quad D\le d,\quad d\ge0,\quad
+ 1<\sigma_-<\sqrt{10},\quad d<(\sigma_--1)l.
+\]
+Define the positive numbers
+\[
+ P_0=(\sigma_--1)l-d,\qquad S=l-\frac{d}{\sigma_--1}.
+\]
+Then the actual closed support has a central gap $(-A,B)$, with
+$A,B>0$, and
+\begin{equation}\label{v6gap:distance}
+ (A+B)^2\ge 2S+\frac23P_0>2S>0.
+\end{equation}
+For independent copies of this same law, the actual event $E=\{XX'<0\}$
+satisfies
+\begin{equation}\label{v6gap:high-input}
+ \Pp(E)\ge\alpha:=\frac1{2u^2},\qquad
+ |X-X'|^2\ge2S+\frac23P_0\quad\hbox{on }E,\qquad
+ \E[(X-X')^2\mid E]\le\frac2\alpha=4u^2.
+\end{equation}
+In particular no premise $d<2$ is needed for this event.
+\end{lemma}
+\begin{proof}
+Signwise Tonelli gives $2\int|t|\tau(t)\,dt=\rho$.
+For a gap on one side of zero, $(v-u)^2\le2\int_u^v|t|\,dt$.
+If zero belonged to the closed support, all its gaps would be of that
+kind, so $J\le\rho$. As $\gamma\le\rho$, this would imply
+$D\ge(\sigma-1)\rho\ge(\sigma_--1)l>d$, a contradiction.
+Closed support and both sign classes therefore give finite positive
+inner endpoints $A,B$. Endpoint atoms are allowed.
+
+Put
+\[
+ T_+=\E X_+^3-mB^2,\quad T_-=\E X_-^3-mA^2,\quad T=T_++T_-.
+\]
+These are nonnegative. The central gap contributes $m(A+B)^2$ to J;
+write the remainder as $J_o$. For a positive outer gap,
+$(v-u)^2\le2\int_u^v(t-B)\,dt$. Thus
+\[
+ J_o^+\le\E[X_+(X_+-B)^2]
+       =T_+-2B(\E X_+^2-mB)\le T_+.
+\]
+The reflected argument gives $J_o^-\le T_-$, hence $J_o\le T$.
+Expanding D exactly gives
+\[
+ D=m\{\sqrt{\sigma+1}A-\sqrt{\sigma-1}B\}^2
+       +(\sigma-1)T_++(\sigma+1)T_-+3(T-J_o).
+\]
+Every term is nonnegative, so
+$T\le D/(\sigma-1)\le d/(\sigma_--1)$ and
+\[
+ m(A^2+B^2)=\rho-T\ge S.
+\]
+For an additional product bound, summing the simpler gap inequality
+gives $J\le\rho+2mAB$: the central gap exceeds
+$2\int_{-A}^{B}|t|\,dt$ by exactly $2AB$.
+Consequently
+\[
+ 6mAB\ge\sigma\rho-\gamma-D
+            \ge(\sigma-1)\rho-D\ge P_0.
+\]
+Since $m\le1/2$, combining the last two inequalities yields
+\[
+ (A+B)^2\ge\frac{S+P_0/3}{m}\ge2S+2P_0/3.
+\]
+
+There is no atom at zero. With $p=\Pp(X>0)$ and $q=1-p$,
+the actual event has probability $2pq$. Conditional Cauchy gives
+$1=\E X^2\ge m^2/p+m^2/q$, hence $pq\ge m^2$.
+Also $1\le\E|X|\,\E|X|^3=2m\rho$, while
+$2m=\E|X|\le1$. Therefore $2pq\ge2m^2\ge1/(2\rho^2)\ge\alpha$.
+Opposite signs force $|X-X'|\ge A+B$. Finally
+$\E(X-X')^2=2$, so conditioning on E gives at most
+$2/\Pp(E)\le2/\alpha$.
+\end{proof}
+
+To use the complete high-frequency lemma, choose a positive rational
+$d_0$ with $d_0^2\le2S+2P_0/3$, use event probability lower bound
+$\alpha=1/(2u^2)$ and conditional second-moment ceiling $4u^2$, and
+retain a valid fourth-moment ceiling for the same law. All the existing
+window, damping and index gates remain. This licenses no automatic use
+of the additional endpoint and moment conclusions bundled into the
+older $d<2$ generic-event lemma.
+
+In a finite ordered update, the new gap parameters must be obtained from
+the preceding proved defect ceiling. Every complete high-frequency bound
+then bounds the same actual Fourier integral. Its minimum with any
+previous complete bound is valid. If the same low-frequency triple is
+retained, the corresponding minima of the constant Fourier budgets are
+valid as well. Raw and conserved-resource bounds must still be kept
+distinct. This implication concerns the actual law throughout; it does
+not replace the law by an artificial two-point kernel.

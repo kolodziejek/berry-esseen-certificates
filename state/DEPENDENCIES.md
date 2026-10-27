@@ -1,3 +1,33 @@
+# V6 selected dependency path — 27 October 2026
+
+BASE41 remains an unclosed independent global premise. For a putative first
+failure n>=42, v4/v5 fixed-target attainment/contact + sharp predecessors +
+external structural inequality -> support 96/25, rho in [1,7361/4000], a>=0.
+
+That actual support and standardization -> signwise K1 bound + fifth-moment
+square (signed-proof/signed.tex). Same-law gap bound J<=rho+2m and signwise
+Cauchy -> circle gamma²+4m²<=rho² -> correctly rounded inverse gamma ceiling.
+
+Retained COMPLETE low/high Fourier estimates + actual moment/gap charge bounds
++ fixed-c conservation -> raw quadratic on each of 24 closed rho cells. Raw
+T<42*c_lower*l -> Gaussian density floor and simple positive phase price.
+Resource U -> nD<=6U/phi_lower -> priorD for the second pass; never use U as T.
+Two passes -> D<=3.5746638454 and all cell margins
+(sqrt10_lower−1)l−d>=.328765376589375>0 -> actual central gap.
+No actual-score cap, prior central gap or degree-six phase lemma is an input.
+The old raw/resource minima are inactive in the accepted 48 passes.
+
+For the optional HIGH refinement only: prior actual gap ->
+P0=(sqrt10_lower−1)l−d>0, S=l−d/(sqrt10_lower−1)>0,
+gap²>=2S+2P0/3, event>=1/(2u²), conditional square distance<=4u².
+All six HIGH pieces/window/index gates -> new complete Fourier bound ->
+ordered new raw/resource/defect. After six updates D<=2.9976105609.
+
+Not implied: final D<.784/raw<2.24, complete p panels, final local moments/noise,
+both deleted-sum confinement, strict positive-noise count exclusion, zero-noise
+binomial comparison, full INITIAL42/LOCAL42, or BASE41. No old certificate
+family is thereby dispensable. Full source locations: v6/compression-map.md.
+
 # Fixed-target continuation DAG — 27 October 2026
 
 Attainment/contact (strategy-v4/excess.tex) + nonnegative excess + C_(n-1)<=CE

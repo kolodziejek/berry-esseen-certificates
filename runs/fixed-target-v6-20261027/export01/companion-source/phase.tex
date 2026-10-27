@@ -1,0 +1,114 @@
+\section{Keeping the full phase correction}
+\label{v6phase:section}
+
+Let $c=C_{\mathrm E}$, $h=|H|$, $w=h^2/(2n)$ and $e=e^{-w}$.
+Write the conserved identity as
+\[
+ R=U+n(1-e)\left(c\rho-\frac{\phi(0)D}{6}\right),\qquad
+ U=(n+H^2)a+\frac{n\phi(0)D}{6}+n^{3/2}\mathcal L.
+\]
+Assume $a,D,\mathcal L\ge0$, $n\ge N>0$, and a valid positive lower
+bound $b\le c\rho$. Since $U\ge n\phi(0)D/6$, this gives
+\begin{equation}\label{v6phase:exact}
+ U\le nb+e^{h^2/(2n)}(R-nb).
+\end{equation}
+Unlike the earlier constant phase price, this estimate keeps the dependence
+of $R$ on the threshold. It requires no small-defect assumption.
+
+\begin{lemma}[Only the floor and infinite-index limit are needed]
+\label{v6phase:index}
+For any real $r$, $b>0$, $h\ge0$ and $n\ge N>0$,
+\begin{equation}\label{v6phase:endpoints}
+ nb+e^{h^2/(2n)}(r-nb)
+ \le\max\left\{r-\frac{bh^2}{2},\;
+ Nb+e^{h^2/(2N)}(r-Nb)\right\}.
+\end{equation}
+This is an inequality for every real index $n\ge N$, hence for all integers.
+\end{lemma}
+\begin{proof}
+The case $h=0$ is immediate. Put $a_0=h^2/2>0$, $x=1/n$, and extend
+\[
+ f(x)=re^{a_0x}-b\frac{e^{a_0x}-1}{x}
+\]
+continuously to $x=0$, with $f(0)=r-ba_0$. Its derivative has the sign of
+\[
+ r-ba_0\,j(a_0x),\qquad
+ j(z)=\frac{z-1+e^{-z}}{z^2}
+     =\int_0^1(1-s)e^{-zs}\,ds.
+\]
+Indeed $f'(x)=a_0e^{a_0x}[r-ba_0j(a_0x)]$.
+The integral shows that $j$ strictly decreases on $[0,\infty)$.
+Thus the derivative can change sign only from negative to positive.
+There is no interior maximum on $[0,1/N]$; the two endpoint values give
+\eqref{v6phase:endpoints}. No monotonicity of the full expression in $n$
+is presumed.
+\end{proof}
+
+The infinite-index endpoint can be dispensed with when an upper bound
+on a nonnegative resource is wanted. If $f(0)=r-ba_0>0$, then
+$r>ba_0$ and $j\le1/2$ make $f'>0$, so $f(1/N)>f(0)$.
+Otherwise $f(0)\le0$. Thus the right side of
+\eqref{v6phase:endpoints} is at most the positive part of its finite
+endpoint. Keeping that positive part is essential; the expression need
+not be monotone in $n$ when its values are negative.
+
+Suppose now a valid raw envelope is
+\[
+ R\le r(h)=A+Fh-qh^2\le T<Nb,\qquad F\ge0,\quad q>0.
+\]
+The first inequality in \eqref{v6phase:exact} is increasing in $R$, so
+replace it by $r(h)$. At the finite endpoint, $r(h)-Nb<0$.
+Consequently the lower Taylor bound $e^z\ge1+z+z^2/2$ gives an
+\emph{upper} resource bound. Define
+\begin{align*}
+ P_\infty(h)&=A+Fh-(q+b/2)h^2,\\
+ P_N(h)&=r(h)+(r(h)-Nb)
+                    \left(\frac{h^2}{2N}+\frac{h^4}{8N^2}\right).
+\end{align*}
+Then, uniformly for all $n\ge N$ and all thresholds,
+\begin{equation}\label{v6phase:polynomial}
+ U\le\max\{0,P_N(h)\}.
+\end{equation}
+The infinite-index polynomial has exact maximum
+$A+F^2/[4(q+b/2)]$ and remains a useful comparison.
+The finite-index polynomial has degree six and negative leading coefficient.
+On $r(h)<0$ the
+nonnegative raw conserved quantity cannot occur, so a certified finite
+interval containing $\{h\ge0:r(h)\ge0\}$ suffices.
+
+There is a simple analytic test for a unique maximum; no positivity
+subdivision is necessary. Put
+\[
+ z=\frac{F^2}{8q^2N}.
+\]
+If $z+z^2<1$, then $P_N$ is strictly concave on $[0,\infty)$.
+Indeed, writing $v(h)=h^2/(2N)+h^4/(8N^2)$ gives
+\[
+ P_N''=-2q(1+v)+2(F-2qh)v'+(r-Nb)v''.
+\]
+Here $v''>0$ and $r-Nb<0$. For $h\ge F/(2q)$ every term is
+nonpositive and the first is negative. Before that point,
+$h^2/(2N)\le z$ and
+$h(F-2qh)\le F^2/(8q)$, whence
+\[
+ P_N''\le-2q+\frac{F^2}{4qN}(1+z)
+          =-2q(1-z-z^2)<0.
+\]
+Since $P_N'(0)=F\ge0$, its unique maximum is attained at $h=0$ when
+$F=0$, and otherwise at its unique positive stationary point. Rational bisection of the
+derivative followed by an outward monomial bound encloses that value.
+The check of $z+z^2<1$ is a scalar inequality, not an assumption of
+sampled concavity. The old 24-cell coefficients already have $z<0.325$;
+decreasing $F$ or increasing $q$ preserves this gate.
+
+For a formal coefficient interval containing $c$, take $A,F,q,b$ affine
+in that coefficient, holding the same-law moment bounds fixed. Each of
+the two displayed polynomials is then affine before maximization over
+$h$. Their suprema, and their maximum, are convex in the coefficient;
+its two endpoints again suffice. The strict gate $T<Nb$ must hold for
+the chosen envelopes before reversing the exponential estimate.
+
+This is a stronger way to bound $U$, not a new raw-remainder estimate.
+The raw ceiling $T$ still supplies any earlier density license. Neither
+the low/high Fourier estimates nor the finite base are removed by this
+calculation.
