@@ -12,6 +12,12 @@
 - “A source pin or prior source-audit PASS verifies the final provider.” False;
   named final provider implementations are not present under their listed names
   in this baseline, and public whole-proof execution is incomplete.
+- “Independent audit approval accepts LOCAL47 or the full conjecture.” False:
+  the review verifies the new scalar proof and conditional interfaces, retaining
+  native predicates, external inputs and full analytic soundness obligations.
+- “Finite-law floating-point diagnostics are new rigorous certificates.” False:
+  the 325 checks are exploratory; the recurrence is justified by its written
+  uniform argument, and the separate finite rational gates are exact.
 
 No counterexample to Berry--Esseen is claimed. No source or certificate was
 deleted or weakened. The full audit is in mathematics/audit/2026-10-27/.

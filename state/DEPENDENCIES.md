@@ -20,3 +20,9 @@ Thus bypassing strong46/base49 does not remove the whole coarse ceiling branch.
 LOCAL47 still consumes corrected PREP/complement and later phase-domain gates.
 Current public final joins/full_pass remain incomplete. Any defect in a retained
 analytic or numerical input propagates to the proposed global composition.
+
+Independent review confirms conditional applicability and the shared finite
+consumer, without discharging the retained predicates. The exact root archive
+global_route member must be used: an older baseline copy and a historical
+coverage scope string remain in the archive. New assembly acceptance must not
+reuse an old global success marker. See the independent review report.
