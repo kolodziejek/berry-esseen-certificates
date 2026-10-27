@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v1/manuscript/arxiv-v1/main.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v1/manuscript/arxiv-v1/build/final02",
+    "--json"
+  ],
+  "exit_code": 0,
+  "duration_seconds": 4.9433946658391505,
+  "source_check_exit_code": 0,
+  "change": "Reduce contents font only, to avoid two orphaned contents entries on a second page.",
+  "pdf_sha256": "88f8af3f31f633c825048e1eda3fd4428d43b484e6d65348cbecc82bb2e3aa7e",
+  "pages": 162,
+  "layout_and_reference_warnings": [],
+  "body_pages_equal_after_frontmatter_shift": true
+}

@@ -1,3 +1,23 @@
+# Manuscript dependency checkpoint — 27 October 2026
+
+The main conditional theorem is BASE41 (independent sharp prefix) plus
+LOCAL42 (equality-inclusive actual-law exclusion) plus proved attainment
+and uniform smoothing. It is not an arithmetic-PASS theorem by definition.
+
+Source correspondence: manuscript/arxiv-v1/research/manuscript-review.md.
+The main text includes attainment/contact, smoothing, support65, physical
+joint defect, count/crossing identities, score charge and exact curvature.
+Appendices include moment domains, normalization, uniform42 interpretation,
+legacy support, the full retained Fourier/local derivations, signed finite42
+refinements and S4/S6/A3–A18 finite arguments. Supplied proof-candidate scope
+and unexecuted numerical predicates are explicit.
+
+C5 consumes genuine C4, global contact, direct n>=2 support and all six
+whole-H endpoint predicates before supported Fourier. Rational ray gates
+alone, the coarse global Gaussian bound, and the new n>=42 theorem do not
+prove those endpoints. G4 also retains the G3 certificate condition.
+The harmonic4553 refinement retains896 rational coefficient predicates.
+
 # Dependency checkpoint — 27 October 2026
 
 Proposed upper-index route, retaining exact hypotheses:

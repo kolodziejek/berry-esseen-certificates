@@ -1,3 +1,21 @@
+# Manuscript next steps — 27 October 2026
+
+1. Review manuscript/arxiv-v1/main.pdf and research/manuscript-review.md.
+   Keep the manuscript PR in draft. Confirm the exposition and prioritize
+   independent mathematical review of the retained Fourier/finite chain.
+2. Close the actual finite-base dependency graph before claiming the global
+   conditional theorem's premises. The n5 direct support lemma leaves six
+   pairs of whole-H endpoint predicates; the n>=42 replacement does not cover
+   them. Preserve the literal n>=36/47 finite-heat/strip scopes as well.
+3. Audit/rebuild a new acceptance contract for changed curvature/resources
+   and150 LOW rows, preserving joint weighted nD and the complete cover.
+4. The source archive is ready for editing and local compilation, not for
+   automatic submission. No heavy campaign, merge or arXiv upload authorized.
+
+Next small runnable source/document check:
+python3 manuscript/arxiv-v1/tools/check_sources.py
+The independent rational diagnostic scripts are in its research/ directory.
+
 # Next actions — 27 October 2026
 
 1. Keep existing draft PR#2 pending explicit merge approval. Independent

@@ -1,3 +1,32 @@
+# Manuscript checkpoint — 27 October 2026
+
+First arXiv-style research draft is complete on branch
+manuscript/arxiv-v1-20261027, based on8989ba054eda36f63e469832f1e00f7e6a7a9084.
+Authors: Bartosz Kołodziejek and Kacper Rodziewicz, no affiliations or contacts.
+Deliverables: manuscript/arxiv-v1/main.pdf (162pages), main.tex and
+source-arxiv-v1.zip. Full review index: research/manuscript-review.md there.
+Prepared for a separate stacked draft PR above the existing audit PR#2;
+no component audit duplicate PR, main push, force push or merge.
+
+Mathematical status: new core/reductions have independent scoped reviews;
+the long retained Fourier/finite chain remains a supplied proof candidate.
+BASE41, complete LOCAL42 and the full new composition remain conditional.
+The actual-n5 support method is included; all six rational ray gates pass,
+but six pairs of whole-H endpoint conditions remain. The896-coefficient
+harmonic refinement is also an explicit unexecuted numerical condition.
+No theorem/certificate in the original source was weakened or removed.
+
+Execution status: fresh bounded core/finite/support diagnostics, source
+integrity, clean TeX Live build, desktop compiler success, rendered-page QA
+and isolated portable-bundle rebuild. No heavy native certificates, full
+third-party Lean builds or end-to-end replay. All2748baseline entries are
+unchanged. Logs: runs/manuscript-20261027/ and
+runs/manuscript-finite-support-20261027/.
+
+Recommendation: circulate for author/mathematical review; keep draft status.
+Not ready for an unconditional sharp-theorem claim or arXiv submission.
+No merge or submission without explicit user approval.
+
 # Research status — 27 October 2026
 
 Fork only: kolodziejek/berry-esseen-certificates. Baseline

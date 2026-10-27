@@ -49,3 +49,15 @@ from reduction state `8989ba054eda36f63e469832f1e00f7e6a7a9084`.
 The original `paper/` directory, certificates and verification programs
 are preserved. Changes are confined to the user's fork and submitted as
 a draft for review, without merging.
+
+## Delivered review artifacts
+
+- `main.pdf`:162-page compiled first draft; main exposition precedes the
+  technical appendices. Explicit certificate conditions and AI disclosure.
+- `source-arxiv-v1.zip`: portable source package, rebuilt in a fresh directory
+  with shell escape disabled; it is not an arXiv submission.
+- `research/manuscript-review.md`: combined coverage, independent review
+  outcomes, remaining limitations and actual validation.
+
+The recommendation is author review, with the PR kept in draft. No final
+publication, complete proof acceptance or merge is recommended at this stage.

@@ -1498,7 +1498,7 @@ polynomial identity. This is an independent identity check, not a
 second verification of all positivity inequalities.
 
 
-\section{Four summands: an unrestricted bound}\label{ms:finite:n4all:section}
+\section{Four summands: a conditional unrestricted bound}\label{ms:finite:n4all:section}
 
 \begin{theorem}[Certificate-conditional four-summand bound]\label{ms:finite:n4all:thm:main}
 Assume the three-summand conclusion of Theorem~\ref{ms:finite:n3:thm:main}, as required by the localization below. If the complete bounded-law certificate inequalities specified below
@@ -2295,6 +2295,32 @@ $[17/10,7361/4000]$ & $15/4$\\\bottomrule
 \end{tabular}
 \end{center}
 For each row, the support certificate must first acquire $|X|\le R$.
+A valid actual-index route is Lemma~\ref{ms:legacy-support:direct}, with
+$n=5$, zero predecessor allowance, and
+\[
+ S=1119/1000,\qquad E=91/1000,\qquad c=819/2000.
+\]
+For the six rows in their displayed order, take $r$ to be the upper
+$\rho$ endpoint and take the respective upper bounds on $|\beta|$ to be
+\[
+ .389174,\quad .478710,\quad .525521,\quad .565414,\quad
+ .600001,\quad .641563.
+\]
+They follow from the signed-second-moment inequality, since in each row
+$(1+b^2)^2>r^2(1-b^2)$ and $0<b<1$. Exact substitution gives
+$Q(R),Q'(R),Q''(R),L(R),L'(R)<0$ for that lemma's polynomials;
+$S^2>5/4$ and $((E+11/2)/5)^2>5/4$ give the scale bounds.
+The remaining support conditions are precisely the six pairs of
+whole-threshold endpoint inequalities
+\[
+ \sup_{H\in\R}\mathcal H_5(H,\eta R)<-cQ(R),\qquad \eta\in\{-1,1\}.
+\]
+Those inequalities are not proved by these rational ray gates. The
+complete-threshold method in Appendix~\ref{ms:legacy-support:section}
+specifies how a finite certificate could establish them, including both
+infinite tails. The newer support theorem for $n\ge42$ is not applicable
+at this step.
+
 The Fourier certificate must then majorize all four terms of
 the Prawitz bound in Assumption~\ref{ms:finite:inputs}, item~\ref{ms:finite:input:afcore:eq:prawitz}, including endpoint pieces and the infinite
 normal tail, on a complete closed strip cover. Its required conclusion

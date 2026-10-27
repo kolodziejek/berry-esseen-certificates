@@ -1,3 +1,10 @@
+> Integration note, 27 October 2026: this is the original drafting contract. The
+> Fourier, finite-index, retained support and signed local-comparison appendices
+> have now been incorporated. See `manuscript-review.md` for the delivered
+> coverage map and remaining scope gaps. Inclusion is not independent acceptance
+> of the entire supplied analytic chain. The review of the new core is recorded
+> separately in `core-review.md`.
+
 # Analytic coverage for the first manuscript draft
 
 Branch: `manuscript/analysis-20261027`. This is a map of the analytical

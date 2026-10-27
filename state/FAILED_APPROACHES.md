@@ -1,3 +1,19 @@
+# Manuscript review boundaries — 27 October 2026
+
+- Including a supplied analytic proof in a typeset appendix does not make it
+  independently verified. Compiling and visual QA establish presentation only.
+- The direct n5 support ray gates pass, but the coarse all-H Gaussian bound is
+  positive after contact price at all six required radii. It cannot close the
+  whole-H endpoint conditions. This is not a counterexample to support.
+- The n5 structural cutoff equals819/2000 exactly: use a non-strict endpoint
+  comparison, followed by the distinct strict target comparison.
+- Negative cubic gain requires the upper score multiplier, with positive
+  multiplier gates. Clamp the total repair before transporting1/n to1/N.
+- A formalized endpoint with external interfaces is not a discharged sharp
+  theorem. Citation metadata and repository snapshots do not verify proofs.
+- The first built-in combined compilation was stale while renders changed
+  project inputs. The stable retry succeeded; both statuses are distinguished.
+
 # Rejected inferences — 27 October 2026
 
 Second-reduction controls/corrections:
