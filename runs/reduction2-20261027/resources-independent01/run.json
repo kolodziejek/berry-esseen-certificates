@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "-I",
+    "-B",
+    "-S",
+    "mathematics/reduction2/2026-10-27/reviews/check_resources_independent.py"
+  ],
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/review-resources",
+  "python_version": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "return_code": 0,
+  "started_utc": "2026-10-27T10:46:07.833186+00:00",
+  "finished_utc": "2026-10-27T10:46:07.990235+00:00",
+  "reviewed_head": "15e48cb8d90e4187b9bcff1dabb5448cdfe59e00",
+  "source_baseline": "6346fc1b4432bc5982822aa696eb566ed9e1e1ee",
+  "input_sha256": {
+    "mathematics/reduction2/2026-10-27/reviews/check_resources_independent.py": "f0626274e150150beac0bd494e289efe82ac173b62e2f51ba82f115e36037959",
+    "mathematics/reduction2/2026-10-27/tighter-resources.md": "71da02bf2d8284636345a2e12cb73908b52c02fa6c42e15fecc6598e21ef8964",
+    "mathematics/reduction2/2026-10-27/check_tighter_resources.py": "068f2f32d03f4085aa739dae2ffc93432bff0e943db40a176fe37ce115c7bf82",
+    "paper/analytic-supplement.txt": "dad4a3558b01bda4acfdfc9120a50ecbcd7a6f2389886ba3ce72a6602ec39018",
+    "verification/finite-tail/sources/backend.zip": "43b606138f826b47e3f174957088285349aebc82a928627e9e66fe370471be52"
+  },
+  "stdout_sha256": "0ef5281a4ffbf0c00d037d980046637b1fc8156f3143c4fa7db916b3475f5897",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "Independent conservative exact resource arithmetic using linear tangent/dyadic geometry; constructor and archived programs not imported or executed."
+}
