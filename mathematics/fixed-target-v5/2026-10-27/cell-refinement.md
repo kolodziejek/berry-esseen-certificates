@@ -84,8 +84,12 @@ At each of the three updates:
 
 1. Use the previous raw bound to form
    `phi_min=phi_lower*(1-T/(N*c_-*l))`. Check `0<phi_min<2/5`.
-2. Use the previous licensed defect ceiling, the identity
-   `D=sqrt(10)*rho-gamma-6m`, and `m=EX_+<=1/2` to obtain
+2. The conserved defect is exactly
+   `D=(3+sqrt(10))*rho-gamma-3J`. The gap bound `J<=rho+2m`
+   therefore gives the inequality `D>=sqrt(10)*rho-gamma-6m`,
+   as stated at `fourier-analysis.tex:1844–1847`; it is not an identity.
+   Use this inequality, the previous licensed ceiling `D<=d`, and
+   `m=EX_+<=1/2` to obtain
    `gamma_min=max(-g,sigma_lower*l-3-d)`, where
    `sigma_lower=3.162277660<sqrt(10)`.
    Also `rho-gamma <= min(2u,(1-sigma_lower)*l+3+d)`.
