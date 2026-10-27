@@ -1,0 +1,44 @@
+{
+  "pdf": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3/runs/manuscript-v3-20261027/build01/texlive/main.pdf",
+  "pdf_sha256": "8b880fac987aceedd5f4222555e32d4ab54bbd33e923413143de3f64da01ee4f",
+  "render_commands": [
+    {
+      "command": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/pdftoppm",
+        "-f",
+        "35",
+        "-l",
+        "35",
+        "-r",
+        "130",
+        "-singlefile",
+        "-png",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3/runs/manuscript-v3-20261027/build01/texlive/main.pdf",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-review/runs/manuscript-review-v3-20261027/pdf01/page-035"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.179698333
+    },
+    {
+      "command": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/pdftoppm",
+        "-f",
+        "42",
+        "-l",
+        "42",
+        "-r",
+        "130",
+        "-singlefile",
+        "-png",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3/runs/manuscript-v3-20261027/build01/texlive/main.pdf",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/manuscript-v3-review/runs/manuscript-review-v3-20261027/pdf01/page-042"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.207065666
+    }
+  ],
+  "images_sha256": {
+    "page-042.png": "61daaa2c6d578089853dabea3f73ec84b492a7988c906f35ed2fafef6fadbd48",
+    "page-035.png": "8d5621f433772548fd2ac89c700686a402246d2ad810c4841e2ffa14c1f6e279"
+  }
+}

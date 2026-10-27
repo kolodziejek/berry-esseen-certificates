@@ -339,3 +339,172 @@ Recommendation at this checkpoint: accept the curvature erratum and the
 reviewed main-text mathematical scope; keep the full global theorem
 conditional and complete the final appendix/cross-reference integration
 checks before treating the revision as ready for submission.
+
+## 7. Bounded appendix integration addendum
+
+After the preceding checkpoint, the Fourier consolidation was integrated
+as `1e28363dbbe5a89dccca15a3d62eb4af4d002e58`. I read the changed proof
+substitutions and their cited main-text arguments. I also read the
+coordinator's changes to normalization, the uniform bridge, positive-loss
+support, and local42 refinements, and the finite appendix in the separate
+`manuscript-v3-finite` constructor worktree. The latter's reviewed SHA-256
+is `4f67624b77b98ba79d9b07695d60bf42492708c89a19aef8f0f67c6fe5427193`.
+All reviewed appendix/main hashes are recorded in
+`revision3_checks/integrated-appendix-snapshot.json`; the finite source was
+reviewed before its final integration commit.
+
+The finite source was subsequently integrated as `1c0c7ab`; a byte-hash
+comparison confirmed it is exactly the source reviewed above.
+
+This is a bounded application and equivalence review of the changes,
+not an independent verification of every retained argument. No new
+native arithmetic or certificate check was run for this addendum.
+
+| Addendum item | Mathematical status | Execution status |
+|---|---|---|
+| Selected Fourier/finite duplicate-proof substitutions | Hypotheses and variable substitutions independently matched below | Read-only source comparison; final finite source hash matched |
+| Corrected signed-phase endpoint | Independently derived from `delta=xi-u` with the sign-safe logarithmic remainder | Source inspection; no new local predicate execution |
+| Curvature interval upper bound and zero clamp | Valid consequences on the stated positive-denominator domain | Source inspection; derivative algebra evidence is in the earlier bounded run |
+| Complete retained appendix chain and certificate predicates | Still supplied/conditional; not independently verified in full | No native campaign or full acceptance |
+| Combined manuscript layout and references | Visual inspection does not establish mathematical or bibliographic correctness | Subsequently inspected overview pages 1–48 and full-resolution pages 35 and 42; see `revision3-visual-review.md` |
+
+### Fourier substitutions
+
+The central-gap decomposition and simultaneous inequality use the same
+standardized law, compact support, actual inner endpoints, conditional
+means, and signed conditional variances as the main statements. Their
+auxiliary bounds and the subsequent interval updates are retained.
+
+The weighted joint-resource substitution retains `n>=N>0` and
+`nD<=N d_D`. In the separate lemma assuming only `D<=D_*`, the proof
+correctly specializes the cited theorem's floor to the **actual index n**,
+so its weighted input becomes `nD<=nD_*`. The resulting coefficients
+`g=6(1-Theta)S` and `h=k_*(1-Theta)/(n v_max)` agree with the displayed
+affine inequality. This avoids the invalid inference from `D<=D_*` to
+`nD<=N D_*` with a smaller fixed floor.
+
+The antichain proof is independent of the floor: conditional independent
+Bernoulli labels have increments at least `c`, and a set in an interval
+of diameter strictly smaller than `c` is an antichain. The independent
+shift assertion follows by conditioning. The separate rational binomial
+mode estimate remains at `N=47`, `J0=N-2=45`; it is not silently changed
+by citing the floor-42 appendix's combinatorial argument.
+
+The local-witness reference makes `V_j=W_j` and `m_0=m`. Its actual
+interior count, same phase, strict outgoing events and closed incoming
+events match. The appendix's `I>=0` condition makes the main theorem's
+`max(0,I)/N` equal to its displayed `I/N`, while `B<0` remains required
+for the binomial mass replacement. The zero-noise reference preserves
+the attained positive closed threshold and its binomial-atom argument.
+
+The whole-count reference uses the same independent coupling and zero
+extension. A smaller increment lower bound `c=1-d0` is legitimate when
+the actual `d<=d0`; the crossing estimates use only that lower bound,
+`1/2<c<=1`, the phase bound, conditional centering and the stated amplitude.
+The discrete binomial-curvature estimate also retains `chi<2`. No
+marked-crossing or fractional-part remainder is discarded by this
+substitution.
+
+The closed-box Bernstein reference preserves the affine changes, degree
+four in each coordinate, and all closed boundary faces. The scalar cosine
+lemma still begins with an explicit finite positivity premise even though
+the embedded program has been moved out of the article. The finer
+32/10-term pi enclosure is retained in the Fourier appendix; the local42
+32/12-term recipe is also retained. Their roles are distinct from the
+coarser smoothing constants.
+
+### Finite-index substitutions
+
+For `n=2` and `n=3`, the general positive closed attainment lemma applies
+to the same unrestricted standardized class. The external structural
+inequality excludes `rho>=2` or `rho>=15/8`, respectively, under the
+strict contrary hypothesis. No finite-support restriction or uniform
+integrability of third powers is introduced by the replacement.
+
+For either index, the main contact majorant is
+
+\[
+ nQ_H(y)=nF+\frac{x\phi(x)+C\rho/\sqrt n}{2}
+ -\left(\sqrt n\phi(x)+\frac{3C\beta}{\sqrt n}\right)y
+ -\frac{x\phi(x)+3C\rho/\sqrt n}{2}y^2
+ +\frac{C}{\sqrt n}|y|^3.
+\]
+
+With raw `H=t=x sqrt(n)`, `beta=m`, `C/sqrt(n)=lambda`, and
+`C rho/sqrt(n)=D`, this is exactly the displayed finite-index polynomial.
+The contact inequality is multiplied by `n`, explaining the left sides
+`2P(X<=t-y)` and `3P(X_1+X_2<=t-y)`. Equality remains on the complete
+closed support. The revised prose correctly says positive discrepancy,
+not positive raw threshold.
+
+The signed-second-moment reference uses only centering, unit variance,
+finite third absolute moment and both nonempty sign classes. The weighted
+signed-moment loss reference requires finite fifth absolute moment and
+`E|X|=2m>0`; its Cauchy proof and possible zero atom match, without needing
+the surrounding Fourier appendix's stronger application hypotheses.
+
+The Pearson formulas are polynomial identities for the reflected
+auxiliary standardized law. They do not impose the narrower coefficient
+gate `R>=2g`. The finite appendix retains its piecewise `R<2g` repair,
+signed coefficient rectangle, and actual-index damping conditions. Its
+Gaussian cancellation formula follows from the exact tail identity,
+retaining the sign of `z-3c`; it is not replaced by a weaker unsigned
+bound or by a theorem with a smaller domain.
+
+For the outer-gap reference, compact support is explicitly stated with
+distinct support-radius notation. The main defect identity and its
+`T_++T_--J_o>=2BR_++2AR_-` consequence give the same decomposition.
+The separate inequalities
+`T_+<=(R_++B)R_+` and its negative analogue (with radius and residual
+distinguished in the TeX notation) remain proved there. Therefore the
+displayed weighted prices and the single residual `D-mQ` are unchanged;
+no two independent copies of that residual are spent.
+
+The one-, two-, three-, four-, and five-summand numerical conclusions
+remain attached to their certificate conditions. Their unchanged
+positivity statements and continuous-domain covers were not executed
+in this editorial review. The larger finite base is not asserted proved.
+
+### Signed-phase correction, cover, and references
+
+The local42 positive-phase proof had an undefined `h` in the endpoint
+`2hu-u^2`. The corrected endpoint `2xi*u-u^2` follows directly from
+`delta=xi-u`. There is no sign restriction on `xi` in that substitution.
+For clarity, the preceding logarithmic lower bound is valid even if
+`2delta*t+t^2` is negative: after replacing the denominator, the discarded
+combined remainder is
+
+\[
+ \frac{s(\delta+t)^2}{2nv(v+s)}\ge0.
+\]
+
+Thus the corrected proof keeps the actual `delta` fixed while integrating
+over `t`, and uses the stated endpoint bound on `xi` without reflecting
+the law. The count formula and final scalar target do not change.
+
+The removed earlier local42 coverage paragraph is duplicated by the
+remaining final cover table. The probability panels, both signs of the
+raw threshold, closed phase/noise seams, acquired amplitude caps,
+band-dependent joint bound and separate zero-noise case remain explicit.
+The positive-loss support appendix likewise retains its different finite
+index hypotheses and numerical positivity premises.
+
+The coordinator repaired the transient table row-ending issue. The main
+file now sets `secnumdepth=4` after `appendix`, so demoted paragraph
+headings with reference labels receive their own numbers instead of
+silently sharing the preceding subsubsection number. The coordinator
+completed the combined build; my bounded visual follow-up is recorded
+separately in `revision3-visual-review.md`.
+
+The coordinator also restored the explicit curvature interval upper bound.
+For `u` in `[a,d]`, each numerator is at most its value at `d`;
+`c-u>=c-d>0`, and `c+min(u,c/3)>=c+min(a,c/3)>0`.
+Bounding these two nonnegative summands separately proves the displayed
+outward bound and hence its domination of the new exact maximum on every
+subdivision. This keeps the mathematical comparison to the old envelope
+available without referring to implementation cache behavior.
+
+**Addendum conclusion:** no blocking mathematical change found in these
+bounded deduplication/application checks. The global implication remains
+conditional on the genuinely independent base and complete uniform local
+exclusion; the appendix consolidation does not discharge either input.
