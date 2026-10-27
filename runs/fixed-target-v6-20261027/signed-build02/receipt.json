@@ -1,0 +1,44 @@
+{
+  "command": [
+    "latexmk",
+    "-pdf",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-outdir=../../../../runs/fixed-target-v6-20261027/signed-build02/texlive",
+    "main.tex"
+  ],
+  "cwd": "mathematics/fixed-target-v6/2026-10-27/signed-proof",
+  "returncode": 0,
+  "compiler": "pdfTeX 3.141592653-2.6-1.40.27 (TeX Live 2025)",
+  "source_sha256": {
+    "mathematics/fixed-target-v6/2026-10-27/signed-proof/main.tex": "8ad9ebcf194b416287b4044274ec2772b321d209352ef0e77b7c04911e956d05",
+    "mathematics/fixed-target-v6/2026-10-27/signed-proof/signed.tex": "43dc933883f313b26a6b4a0a99b57369f98a3ec2093707818e63dda5a1f9ef56"
+  },
+  "local_output_sha256": {
+    "runs/fixed-target-v6-20261027/signed-build02/stdout.txt": "33142a10502a8833d884f592a63c89b3986388917d20c43cc072bd7d18fe0454",
+    "runs/fixed-target-v6-20261027/signed-build02/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/fixed-target-v6-20261027/signed-build02/texlive/main.log": "a822e18891db4fac62a3f419ddc70ad130e83a54e96cacd342cb7976d3f33e88",
+    "runs/fixed-target-v6-20261027/signed-build02/texlive/main.pdf": "7f9a5fb4b6e9e71a8427e5a54403c8132b1346ec73c7c1e106e95b044bc1f59e"
+  },
+  "pages": 3,
+  "warnings": [],
+  "render_command": [
+    "pdftoppm",
+    "-r",
+    "100",
+    "-png",
+    "runs/fixed-target-v6-20261027/signed-build02/texlive/main.pdf",
+    "runs/fixed-target-v6-20261027/signed-build02/page"
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3
+    ],
+    "resolution_dpi": 100,
+    "observed": "No clipping, overlap, or equation/heading layout defects observed.",
+    "scope": "Visual layout only; no mathematical acceptance inferred."
+  },
+  "preservation": "Full compiler output and rendered pages remain in the local run directory; this path-sanitized receipt is committed."
+}
