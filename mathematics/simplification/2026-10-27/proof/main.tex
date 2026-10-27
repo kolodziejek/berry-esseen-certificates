@@ -1,0 +1,309 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,array}
+\usepackage[T1]{fontenc}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\CE}{C_{\mathrm E}}
+\newcommand{\Q}{\mathbb Q}
+\title{A zero-loss redesign of the upper-index proof\\
+\large Conditional composition and a small exact support certificate}
+\author{Research audit in the fork \texttt{kolodziejek/berry-esseen-certificates}}
+\date{27 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A first failure after a sharp finite prefix has zero predecessor decrement.
+A support-free scalar recurrence then supplies the local score gates without
+positive-ceiling propagation. We derive a new support certificate, uniform
+for all actual indices $n\ge42$, using 14 closed intervals and 672 rational
+Bernstein coefficients. This removes the finite upper endpoint from the
+support part of the proposed LOCAL42 route. The resulting strict-tail theorem
+is conditional on a genuine sharp base and the retained analytic and local
+numerical implications. It is not an acceptance of the full conjecture.
+\end{abstract}
+
+\section{Scope, notation and retained assumptions}
+For standardized iid summands with finite third absolute moment
+$\rho=E|X|^3$, write
+\[
+ C_n=\sup_P\frac{\sqrt n}{\rho(P)}
+       \sup_x\left|P\{(X_1+\cdots+X_n)/\sqrt n\le x\}-\Phi(x)\right|,
+ \qquad \CE=\frac{3+\sqrt{10}}{6\sqrt{2\pi}}<\frac{41}{100}.
+\]
+The inequality for $\CE$ and the treatment of reflected left limits are
+recorded in the independent scalar audit. Attainment of an oriented positive
+closed-CDF maximizing pair when $C_n\ge\CE$ is a separate retained analytic
+input; this includes equality, not merely strict exceedance.
+
+The proposed uniform LOCAL42 statement is:
+\begin{equation}\label{local}
+\begin{gathered}
+ n\ge42,\quad C_n\ge\CE,\quad
+ 0\le n(C_n-\CE)\le .54,\quad n(C_{n-1}-C_n)_+=0,\\
+ C_n<.4226,\qquad C_{n-1},C_{n-2}<.4253
+ \quad\Longrightarrow\quad\text{contradiction}.
+\end{gathered}
+\end{equation}
+Here \eqref{local} is conditional on the complete finite 42 resource and
+comparison predicates and on their analytic licenses, with the new support
+certificate below replacing the old finite-index support signs.
+The detailed transfer of the other index-sensitive hypotheses is in
+\texttt{uniform42.md}. It retains weighted resources $nD\le42d_D$,
+same-law joint gap/noise constraints, both signs, strict antichain widths,
+mode floor 40, actual strips and moment coefficients, signed normalization
+repairs, the complete closed TINY/MID/LOW cover, and the zero-noise Bernoulli
+theorem. None is proved by the scalar recurrence or by a support calculation.
+
+\section{The scalar entry and first-failure composition}
+\begin{lemma}[Support-free smoothing]
+For every integer $n\ge2$,
+\[
+ C_n\le \sqrt{\frac n{n-1}}C_{n-1}
+ +\frac{\sqrt n}{15(n-1)^{3/2}}+\frac{2\sqrt n}{25(n-1)^2}.
+\]
+\end{lemma}
+\begin{proof}
+Put $v=n-1$ and $F_v(t)=\Phi(t/\sqrt v)$. Conditioning on the last summand
+introduces at most $C_{n-1}\rho/\sqrt v$. Taylor's formula through order two
+and $EX=0$, $EX^2=1$ give
+\[
+ \left|EF_v(t-X)-F_v(t)-\tfrac12F_v''(t)\right|
+ \le \frac{\rho}{15v^{3/2}},
+\]
+because $\|\phi''\|_\infty=\phi(0)<2/5$.
+The heat identity $\partial_v F_v=F_v''/2$ gives
+\[
+ \left|F_{v+1}-F_v-\tfrac12F_v''\right|
+ \le \frac{1}{4\pi v^2}<\frac{2}{25v^2}.
+\]
+Indeed $\|\phi'''\|_\infty\le2/\pi$ follows from the Gaussian Fourier
+integral, and the integrated second variance derivative has factor $1/8$.
+Multiply by $\sqrt n/\rho$, use $\rho\ge1$, and take suprema. The uniform
+remainder uses only the third absolute moment and holds at every threshold.
+\end{proof}
+
+\begin{lemma}[Entry at 42]\label{entry}
+If $n\ge42$ and $C_{n-1}\le\CE\le C_n$, then
+\[
+ 0\le n(C_n-\CE)<\frac{3003}{10250}<\frac3{10},
+ \qquad C_n<\frac{73}{175}<.4226 .
+\]
+\end{lemma}
+\begin{proof}
+For $s=\sqrt{n/(n-1)}$, rationalizing $s-1$ in the preceding lemma yields
+\[
+ n(C_n-\CE)\le\frac n{n-1}
+ \left(\frac{\CE}{s+1}+\frac{s}{15}
+                +\frac{2s}{25\sqrt{n-1}}\right).
+\]
+Now $s<81/80$, $\sqrt{n-1}>6$, $s+1>2$ and $n/(n-1)\le42/41$.
+Thus the displayed expression is strictly smaller than
+\[
+ \frac{42}{41}\left(\frac{41}{200}
+             +\frac{27}{400}+\frac{27}{2000}\right)
+ =\frac{3003}{10250}.
+\]
+The reserve below $3/10$ is $36/5125$. Also
+$C_n<.41+.3/42=73/175$, whose reserve below $.4226$ is $191/35000$.
+\end{proof}
+
+\begin{theorem}[Conditional strict tail]\label{tail}
+Assume $C_j\le\CE$ for $1\le j\le41$, and assume the equality-inclusive
+implication \eqref{local} with all of its analytic and numerical premises.
+Then $C_n<\CE$ for every $n\ge42$.
+\end{theorem}
+\begin{proof}
+If the conclusion fails, choose the least integer $n\ge42$ with $C_n\ge\CE$.
+Both predecessors are at most $\CE$; when $n=42$ these are exactly 40 and 41.
+Hence their caps are strictly below $.4253$, and
+$n(C_{n-1}-C_n)_+=0$. Lemma~\ref{entry} supplies stronger excess and current
+score bounds than \eqref{local}. The retained equality-inclusive attainment
+hypothesis and \eqref{local} give a contradiction.
+Choosing the least strict exceedance instead would establish only a weak tail.
+\end{proof}
+
+\section{Uniform contact polynomials}
+Let $c=819/2000<\CE$ and $N=42$. The lower inequality follows from
+$\sqrt{10}>3081/500-3$, $\pi<22/7$ and
+$\sqrt{44/7}<1567/625$: the resulting lower bound for $\CE$ exceeds
+$c$ by $377/3134000$. Let $r,b$ be upper-bound parameters satisfying
+$\rho\le r$ and $|\beta|\le b$ for the same current law.
+They are not lower bounds on the actual moments. Put
+\[
+ \ell=\frac{6403124237432}{10^{12}},\qquad
+ S=\frac{202424330939}{200000000000},\qquad
+ \ell^2<41,\quad S^2>\frac{42}{41}.
+\]
+For $u\ge5/2$ define
+\begin{align*}
+ A&=(u^3-3u)/6,&J&=u^5-15u,&H_4&=u^4-6u^2+3,\\
+ D_+&=J/(120\cdot41),&W&=A-\tfrac{15}{2}D_+,&B_2&=H_4^2/(256\cdot41),\\
+ E&=\frac{51u^6}{14400\cdot41\ell}
+      +\frac{51(3u^2-2)}{960\cdot41\ell}
+      +\frac{u}{8\cdot41^2},\\
+ Q&=-u^3+\tfrac32ru^2+3bu+\tfrac{.384}{42}r .
+\end{align*}
+The infinite-upper-index, zero-loss polynomials are
+\begin{align}
+ G&=\left(\tfrac A2-3D_+-\frac{H_4}{12\ell}\right)W+B_2,\label{g}\\
+ P&=\tfrac25S^3(AW+B_2)+S^3EW+cQW.\label{p}
+\end{align}
+The retained signed fifth-order contact envelope states that positivity of
+$A,H_4,J,W,G,-Q,-P$ excludes support at the corresponding $u$, for both signs
+and every real raw threshold. Its source is
+\texttt{paper/analytic-supplement.txt}, lines 455--640.
+The adverse terms are bounded at 42; the favorable fifth-order lower bound is
+zero for the unbounded index range. Thus \eqref{p} has no hidden finite 48
+endpoint. The zero predecessor decrement removes the contact-loss term.
+
+For comparison, the old finite polynomial has $D_-=J/(120\cdot47)$ and
+loss $q=.19$. Direct subtraction gives
+\[
+ P_{\infty,0}-P_{48,.19}
+ =SW\left(\frac{S^2J}{4700}-.19r\right),\qquad
+ G_\infty-G_{48}=3D_-W.
+\]
+This gives an alternative transfer from old finite signs on suitable shorter
+intervals, proved in \texttt{zero-loss-support.md}. The following new
+certificate proves the infinite polynomials directly and therefore does not
+need those old sign premises.
+
+\section{Fourteen exact intervals}
+Group the 64 LEFT support calls by their 13 radii. Within each group use the
+componentwise maximum of the recorded preceding-resource bounds $r,b$.
+The initial call is a separate row. The fixed table is:
+\begin{center}\small
+\begin{tabular}{rrrr}
+\toprule $R$&$r$&$b$&Calls\\ \midrule
+$5/2$&$603319/500000$&$32128627/10^8$&17\\
+$101/40$&$475374/390625$&$8224681/25000000$&5\\
+$51/20$&$61183419/50000000$&$33662533/10^8$&4\\
+$103/40$&$30833983/25000000$&$8698269/25000000$&5\\
+$13/5$&$30994887/25000000$&$35540061/10^8$&4\\
+$21/8$&$24988347/20000000$&$36644311/10^8$&5\\
+$53/20$&$125900813/10^8$&$37372893/10^8$&4\\
+$107/40$&$63303431/50000000$&$1201521/3125000$&4\\
+$27/10$&$63753427/50000000$&$489197/1250000$&4\\
+$109/40$&$128341449/10^8$&$20069857/50000000$&4\\
+$11/4$&$25857241/20000000$&$41146991/10^8$&4\\
+$111/40$&$129968327/10^8$&$42077471/10^8$&3\\
+$121/40$&$71458741/50000000$&$46459359/10^8$&1\\
+$96/25$&$7361/4000$&$641562334877/10^{12}$&1\\
+\bottomrule
+\end{tabular}
+\end{center}
+The first 13 intervals are $[R,39/10]$; the final interval is $[96/25,21/5]$.
+All are closed and use a single cell. For fixed $u>0$, $W>0$,
+\[
+ \partial_rP=cW(3u^2/2+.384/42)>0,\qquad
+ \partial_bP=3cuW>0.
+\]
+Thus componentwise grouping preserves an upper bound even if the two maxima
+come from different calls. The first five sign polynomials do not depend on
+$r,b$. Each call is used sequentially only after its own actual-law resource
+bounds are acquired.
+
+\begin{proposition}[Exact interval certificate]\label{certificate}
+For every table row, the seven polynomials
+\[ A,\quad H_4,\quad J,\quad W,\quad G,\quad -Q,\quad -P \]
+are strictly positive on its specified closed interval.
+\end{proposition}
+\begin{proof}
+For $p(u)=\sum_{i=0}^d a_i u^i$ on $[l,h]$, write $u=l+(h-l)t$ and
+\[
+ q_j=(h-l)^j\sum_{i=j}^d a_i\binom ij l^{i-j},\qquad
+ B_k=\sum_{j=0}^k q_j\frac{\binom kj}{\binom dj}.
+\]
+The binomial theorem proves
+$p(l+(h-l)t)=\sum_{k=0}^d B_k\binom dk t^k(1-t)^{d-k}$.
+The basis is nonnegative and sums to1 on $[0,1]$.
+The degrees are $3,4,5,5,10,3,11$, giving 48 coefficients per row.
+The fixed rational checker computes all $14\cdot48=672$ coefficients,
+and every coefficient exceeds $1/4$. It also independently reconstructs
+\[
+ q_j=\binom dj\sum_{k=0}^j(-1)^{j-k}\binom jk B_k
+\]
+for every polynomial. Every coefficient is printed in the acceptance log,
+so the finite arithmetic is reproducible without numerical optimization.
+This proves continuous-domain positivity, including both endpoints.
+\end{proof}
+
+\section{Completing the rays}
+The retained direct Gaussian derivative estimate, valid for every raw $H,t$, is
+\[
+ |\partial_tH_n(H,t)|\le\tfrac25(t^2/2+1/2+e_n),\qquad
+ e_n=n\bigl(\sqrt{n/(n-1)}-1\bigr)-1/2<.384/n.
+\]
+For completeness, set $a=48/125$ and $x=1/n$. Expansion gives
+\[
+ (1-x)(1+x/2+ax^2)^2-1
+ =x^2\{2a-3/4-(a+1/4)x+(a^2-a)x^2-a^2x^3\}.
+\]
+The braces decrease on $[0,1/42]$ and equal
+$118707/42875000>0$ at its right endpoint. Taking square roots proves the
+stated uniform scale correction.
+
+For each group set
+\[
+ L(u)=\tfrac25(u^2/2+1/2+.384/42)+cQ'(u).
+\]
+At its splice $U$, the checker verifies all six strict inequalities
+$Q,Q',Q'',L,L',L''<0$. Since $Q'''=-6$ and $L''=2/5-6c<0$,
+these signs persist for all $u\ge U$.
+For $\eta=\pm1$ the contact envelope $H_n(H,\eta u)+cQ(u)$ has derivative
+at most $L(u)<0$. Its value at $U$ is already negative by
+Proposition~\ref{certificate}. Hence both full exterior rays are excluded.
+For each individual call the group caps majorize $Q$ and $Q'$.
+This conclusion applies to atoms, arbitrarily small masses, and every
+support point, with no limiting law or bounded-threshold substitution.
+
+Combining the closed interval with the complete rays yields the original
+strict support conclusion $|X|<R$ at every actual $n\ge42$, conditional on
+the retained contact/heat analysis and the actual preceding moment bounds.
+
+\section{Dependency savings and unresolved work}
+The new upper-index composition needs 19 of the old 31 finite native actions
+and all 152 LOW row producers. Six positive-ceiling/support actions and six
+special 43 bootstrap actions are bypassed by Lemma~\ref{entry} and sharp
+predecessors. If the full uniform LOCAL42 transfer is accepted, the separate
+55-action tail package is also unnecessary in this new upper-index module.
+Thus its conservative count is $238\to171$, before new composition joins.
+This is a task count, not measured runtime or a repository-wide saving.
+
+The grouped support certificate replaces only the support polynomial
+subchecks; it does not remove the remaining resource, confinement, profile,
+TINY/MID/LOW or harmonic obligations. A separate source audit found repeated
+LOW evaluations by producers and full binder replay, but no one-pass receipt
+implementation is included. All 152 producers remain in the conservative plan.
+
+A genuine BASE41 remains an input. The current mathematical floor 40 route
+states a sharp 38/39-to40/41/42 induction without the old upper-index tail.
+The complete pinned current provider body was unavailable in the inspected
+sources, while an older global 40 inventory explicitly consumes tail 43 and
+positive ceilings. Consequently neither executable base closure nor
+repository-wide obsolescence of those computations is established.
+Attainment at equality, published moment inequalities, analytic
+contact/Fourier/normalization licenses and strict Bernoulli comparison also
+remain separate premises.
+
+\section{Reproduction and preserved reference}
+The fixed checker is
+\texttt{mathematics/simplification/2026-10-27/check\_grouped\_support.py}.
+It imports only a new source-binding helper, never archived programs.
+The first acceptance returned 0 in about 0.12 seconds, with nine rejection
+controls and all exact coefficients stored under
+\texttt{runs/grouped-support-20261027/accept01/}.
+Other bounded checks, independent derivations, source locations and limitations
+are in the adjacent Markdown reports and \texttt{reviews/} directory.
+
+The immutable original baseline is commit
+\texttt{6346fc1b4432bc5982822aa696eb566ed9e1e1ee}.
+The backend archive SHA256 begins \texttt{43b606138f826b47e}; full pins are in
+the reports and receipts. No inherited certificate, theorem statement,
+acceptance target or production runner is changed. No native heavy
+certificate program was run. This document proves new conditional
+implications and a small exact support certificate, not the full conjecture.
+\end{document}

@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplify-root/mathematics/simplification/2026-10-27/proof/main.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplify-root/runs/simplification-20261027/latex04",
+    "--json"
+  ],
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "returncode": 0,
+  "input_sha256": "c419f3f79034be23e40561b4f92893a19de1cae309bd871446992b9414811c01",
+  "pdf_sha256": "fb763a10d91cad915001930e0d8105d3f42c482f31e12c0c179d558f96697b47"
+}

@@ -1,0 +1,22 @@
+{
+  "status": "COMPILED_AND_VISUALLY_INSPECTED",
+  "source_sha256": "c419f3f79034be23e40561b4f92893a19de1cae309bd871446992b9414811c01",
+  "pdf_sha256": "fb763a10d91cad915001930e0d8105d3f42c482f31e12c0c179d558f96697b47",
+  "pages": 5,
+  "page_images_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "render_command": "pdftoppm -scale-to 1000 -png proof/main.pdf render/page",
+  "render_hashes": {
+    "page-1.png": "c3023d21851d5ce94a284cf72209d28c69ae6c0a4f54d7edd551eb79c8e71ffc",
+    "page-2.png": "92aaec2ada20bde80a5fdb66b2141d8bbd44d4b10d93dd46907f0622f1cd76aa",
+    "page-3.png": "6d1c4d7740091ba20ce8f049a77935339b343a9f48fc67e4f2f91fac57033f36",
+    "page-4.png": "6d701a6b966119cad74a357b1b97d921b2b93b0b95df65e12390d34fe67413c5",
+    "page-5.png": "49f9f3b2565404b55213d0dc1850b5f99633a85684cf2348419afc143f767fbf"
+  },
+  "layout": "No overfull/underfull boxes or LaTeX warnings; equations, table, endpoints and page breaks inspected."
+}

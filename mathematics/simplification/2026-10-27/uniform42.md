@@ -21,6 +21,17 @@ This work began from fork commit
 `simplify/uniform42-20261027`. No inherited source, proof object, success marker,
 or existing theorem was edited.
 
+## Integration note after the support work
+
+The original transfer argument below uses old finite polynomial signs as
+premises. `grouped-support.md` now supplies an alternative direct all-index,
+zero-loss support certificate for all65 calls:14 intervals and672 exact
+coefficients. In that composition the old support-sign premises are replaced,
+while actual-law resource acquisition and the non-support numerical predicates
+remain. `finite-entry.md` also proves the endpoint42 scalar gate, so a genuine
+BASE41 gives the strict tail from42. The narrower43/44 variants below remain
+valid subcases. Neither addition changes the original finite wrapper.
+
 ## Exact source convention
 
 All archive paths below are logical keys in
