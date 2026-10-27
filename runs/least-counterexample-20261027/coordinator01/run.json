@@ -1,0 +1,51 @@
+{
+  "scope": "new scalar arithmetic and baseline/task inventory only; no inherited numerical acceptance",
+  "command": [
+    "python3",
+    "-B",
+    "mathematics/audit/2026-10-27/check_scalar.py"
+  ],
+  "working_directory": ".",
+  "python_version": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "return_code": 0,
+  "elapsed_seconds": 0.049831416,
+  "baseline_commit": "6346fc1b4432bc5982822aa696eb566ed9e1e1ee",
+  "input_sha256": {
+    "mathematics/audit/2026-10-27/check_scalar.py": "74b1fab6630ae1393f5389085fc33371eb2ef12a63364aa0930dd7a4640b86df",
+    "mathematics/audit/2026-10-27/scalar-review.md": "ce48a86bf3822f55dc6220bc43c8b8af7b9c6da65136fbdf36067fe2c43df85d",
+    "mathematics/audit/2026-10-27/baseline.json": "f9aab595b36450d0bcaacbac7bfd109559bd461e6e98d7fec4dc80d501f547f9"
+  },
+  "baseline_hash_matches": {
+    "README.md": true,
+    "paper/main.tex": true,
+    "paper/analytic-supplement.txt": true,
+    "paper/analytic-supplement-index.json": true,
+    "mathematics/global-contract.json": true,
+    "verification/finite-tail/TASKS.json": true,
+    "verification/finite-tail/replay.py": true,
+    "verification/finite-tail/README.md": true,
+    "verification/finite-tail/sources/BE_cutoff49_20260930.zip": true,
+    "verification/finite-tail/sources/backend.zip": true,
+    "formal/README.md": true,
+    "formal/BEMap/TailAssembly.lean": true,
+    "formal/BEMap/UniformTail.lean": true
+  },
+  "modified_or_deleted_baseline_paths": [],
+  "task_kinds": {
+    "finite-native": 31,
+    "low-row": 152,
+    "collector": 2,
+    "tail-native": 10,
+    "tail-mapping": 3,
+    "tail-retained": 41,
+    "tail-umbrella": 1
+  },
+  "conditional_bypass_candidate_ids_exist": [
+    "tail.new.composition49",
+    "tail.new.support46",
+    "tail.new.independent_support46",
+    "tail.new.independent_selectors",
+    "tail.new.corrected_barrier46"
+  ],
+  "native_certificate_jobs_executed": 0
+}
