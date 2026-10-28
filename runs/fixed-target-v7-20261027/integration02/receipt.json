@@ -1,0 +1,140 @@
+{
+  "started_utc": "2026-10-28T09:43:21.628817+00:00",
+  "python": "3.9.6",
+  "optimization": 0,
+  "driver_sha256": "3da8d11dcd27248471b0b7bd271d8dd55ba88962b2492b39079db006d1f85ead",
+  "checks": [
+    {
+      "name": "fourier",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v7/2026-10-27/fourier-check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.047963583,
+      "script_sha256": "a2f21cc289980331df747574f9534c29504fd64371ba1474cfeb8f1e9a8b0763",
+      "stdout_sha256": "4e86e02a070b115e9fed4a50049411f0cb97e2dac643530a60e7e53b008535ca",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "exclusion",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v7/2026-10-27/exclusion_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.028080458000000003,
+      "script_sha256": "9f151cba932e4c346090567a199308dc697bd7a9b4ae800d82b14cd4e31bab92",
+      "stdout_sha256": "8cdd1fa6c4570209c289cef4fd1442f842d8aabd4764e4ab49738955669124c7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "base",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v7/2026-10-27/base_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.022767082999999994,
+      "script_sha256": "59c4b05645c0b68f897be4aa4159d6d7593b1ed4a1af42f2550fd10e5a405a4c",
+      "stdout_sha256": "3ec08f4961f2482180ebabfd45a1e4e6bf269af7f8c6f307a0a444884cdf895d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "signed-accounting",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v7/2026-10-27/signed_review_structure.py",
+        "--source-root",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.30492104200000003,
+      "script_sha256": "b7dc211fb81315af47ea333f322ad5a9c661da4bd8182b212bb4e1f1f215aab0",
+      "stdout_sha256": "d793137bd44333b91ca806096804e9a6ca0a27f646e28a165609d2811650d5f5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "entry-schema-pooling",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v7/2026-10-27/entry_acceptor_review.py",
+        "--source-root",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.17288099999999995,
+      "script_sha256": "31c735f4cb3ddcfd6ac02d2639101a23210953d0949bbe6f17f00c73b8222724",
+      "stdout_sha256": "98eda0bd075bd7021dbb6b1210398c7026dfe27bc2ed43d18785903800a1d3f0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "conservation",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v7/2026-10-27/../../fixed-target-v8/2026-10-28/conservation-check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.27117316700000005,
+      "script_sha256": "78000a48d29f1d055d88bfd7bc1e7907b3ea8b327400ef6572e94161ab05623d",
+      "stdout_sha256": "abff121372e917095389f2343282c60615b58cb11567837ce525dcda6e268d1d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "source_sha256": {
+    "mathematics/fixed-target-v7/2026-10-27/accept_entry.py": "fe8197d6943c4decb7421bd1c162d7ec24045fdb3ea1215356249b4be620d69d",
+    "mathematics/fixed-target-v7/2026-10-27/base_check.py": "59c4b05645c0b68f897be4aa4159d6d7593b1ed4a1af42f2550fd10e5a405a4c",
+    "mathematics/fixed-target-v7/2026-10-27/entry-proof.json": "61b7ad43e20046d7cbf7157e3feb61696331731e7be418f6a5fa535c2eee8bae",
+    "mathematics/fixed-target-v7/2026-10-27/entry_acceptor_review.py": "31c735f4cb3ddcfd6ac02d2639101a23210953d0949bbe6f17f00c73b8222724",
+    "mathematics/fixed-target-v7/2026-10-27/exclusion-proof/exclusion.tex": "a691b4265f07a001387294e44decb035e9fbbda13fdeebb6f42be8b2bf983dd3",
+    "mathematics/fixed-target-v7/2026-10-27/exclusion_check.py": "9f151cba932e4c346090567a199308dc697bd7a9b4ae800d82b14cd4e31bab92",
+    "mathematics/fixed-target-v7/2026-10-27/export_entry.py": "203e1a4aa098997be8e3c7952d015b59b7818b6cd8c08691fa619233e67ae835",
+    "mathematics/fixed-target-v7/2026-10-27/fourier-check.py": "a2f21cc289980331df747574f9534c29504fd64371ba1474cfeb8f1e9a8b0763",
+    "mathematics/fixed-target-v7/2026-10-27/fourier-closure.tex": "200716d430c5d0058978d415da397e07a348a7742636607d6a4bbf3ea6e47109",
+    "mathematics/fixed-target-v7/2026-10-27/fourier-main.tex": "cd0fd9eb13435c4ddb50b268e216daf75ff6b976fd1bf6cf67f9ba3fb4be708e",
+    "mathematics/fixed-target-v7/2026-10-27/proof/exclusion-body.tex": "9b1065f8a6d5a53e8b509c79a89753579ed6b2cff6fb7fc750ec5719d3fc8247",
+    "mathematics/fixed-target-v7/2026-10-27/proof/fourier-closure.tex": "200716d430c5d0058978d415da397e07a348a7742636607d6a4bbf3ea6e47109",
+    "mathematics/fixed-target-v7/2026-10-27/proof/main.tex": "0d22d19a4b42c5637b3ad85c3e5df0c1da1e33d04db3cb1aac2dc412c5029b5d",
+    "mathematics/fixed-target-v7/2026-10-27/proof/signed-transport.tex": "d38d2ceb63e71fef0a5f90311023efa74ae5baafc05a59ba1f59def43ecda61e",
+    "mathematics/fixed-target-v7/2026-10-27/proof/source-manifest.json": "707292b756c738272167391b18486489780c43b9d42d50c9fb84f2fc34a8b038",
+    "mathematics/fixed-target-v7/2026-10-27/run_checks.py": "3da8d11dcd27248471b0b7bd271d8dd55ba88962b2492b39079db006d1f85ead",
+    "mathematics/fixed-target-v7/2026-10-27/run_probe.py": "f3d1decf39934fa8d70f1afc4201ce816e7a8841953f4d7707fac5ac6493c073",
+    "mathematics/fixed-target-v7/2026-10-27/signed-transport.tex": "d38d2ceb63e71fef0a5f90311023efa74ae5baafc05a59ba1f59def43ecda61e",
+    "mathematics/fixed-target-v7/2026-10-27/signed_core.py": "1f40ccb90eb58a7f84dc61a0a5dd9bf6e6eb4e341aa6c9c6d049d08451f5211b",
+    "mathematics/fixed-target-v7/2026-10-27/signed_probe.py": "1bec84b1d7be1046f02a5eded4242b253fc98ce040d5b94c5dbb1942c7166fd6",
+    "mathematics/fixed-target-v7/2026-10-27/signed_review_structure.py": "b7dc211fb81315af47ea333f322ad5a9c661da4bd8182b212bb4e1f1f215aab0",
+    "mathematics/fixed-target-v7/2026-10-27/signed_support.py": "eecb06e65d8520d7cc06fc34217e06e1c0b1840dd8d687621e6828923769a4c4"
+  },
+  "scope": "Six bounded independent checks, binding of the fresh exact entry replay, and baseline preservation; not LOCAL42 or BASE41.",
+  "entry_acceptance_binding": {
+    "receipt_sha256": "363263a783d190e15cc663b85cf4a0d96b1bb81dcfffd0c3a8bfd4bde4613f52",
+    "stdout_sha256": "2b6f9cb8b47348bb5c8285261e68861f7be650935f54c19caa72ffa98d2a8dd3",
+    "proof_sha256": "61b7ad43e20046d7cbf7157e3feb61696331731e7be418f6a5fa535c2eee8bae",
+    "summary": {
+      "raw": "10997587/5000000",
+      "D": "76682509/100000000",
+      "weighted_nD": "1610332689/50000000",
+      "rho": "71527/48000",
+      "beta": "50549963/100000000",
+      "H": "2295071/1250000",
+      "theta": "28620759/100000000",
+      "signed_cells": 11264,
+      "remaining_rho_cells": 14,
+      "probability_panels": 100,
+      "nonempty_probability_panels": 30
+    },
+    "scope": "Binds the recorded fresh replay; does not rerun all signed cells."
+  },
+  "status": "PASS_BOUNDED_INTEGRATION",
+  "baseline": "6346fc1b4432bc5982822aa696eb566ed9e1e1ee",
+  "unchanged_baseline_entries": 2748,
+  "materialized_baseline_files_checked": 182,
+  "sparse_baseline_blobs_checked": 2566,
+  "completed_utc": "2026-10-28T09:43:22.735312+00:00"
+}

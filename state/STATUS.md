@@ -1,3 +1,36 @@
+# Coarse entry completed; confinement and finite base remain — 28 October 2026
+
+New named exact component INITIAL42_FIXED_TARGET_COARSE_V7 passes. Selected
+ancestry: v5 entry, v6 two simple quadratic passes, four signed passes.
+No degree-six phase ancestor or six intervening HIGH updates is required.
+11264 signed boxes; all100 probability panels,30nonempty,7235incidences.
+Accepted raw<=2.1995174,D<=.76682509,nD<=32.20665378,rho<=71527/48000,
+|beta|<=.50549963,|H|<=1.83605680. Fresh accept02 rejects19controls;
+independent schema/pooling review rejects14. Original contracts untouched.
+
+| Result | Mathematical status | Execution status |
+|---|---|---|
+| Fixed-target coarse entry | Completed implication under explicit predecessor/structural and actual-law analytic hypotheses | Fresh exact named acceptance PASS |
+| Triangle LOW, complete six-piece HIGH, inversion | Independently proved at stated moment/event scope | Fresh exact algebra/domain/negative controls PASS |
+| Fixed-target attainment/contact/conservation, including atom endpoints | Independently rederived; off-contact residual identity supplied |111 configurations,666 coefficient cases PASS |
+| Full confinement/count composition and BASE41 | Still required | No complete native/Lean acceptance |
+
+Sources: mathematics/fixed-target-v7/2026-10-27 and
+mathematics/fixed-target-v8/2026-10-28/conservation-*. New13-page v7 note
+proof/main.pdf and portable source archive; final build02 clean and inspected.
+Six bounded integration checks pass; all2748 baseline entries preserved
+(182 materialized bytes,2566 sparse tree/index objects). Existing158-page
+manuscript is unchanged; this note is a research companion.
+
+Active work: confinement-v8 on p[.41,.42] has a candidate contact-derived
+strip; independent all30panel moment refinement and ROOT4 physical-bridge
+audit continue on separate worktrees. These are not yet integrated claims.
+Review target remains PR#5, verified open/draft/unmerged. Integration branch
+is manuscript/strategy-v4-20261027. Publication receipts live under root
+runs/v7-publication-20261028. No main/upstream mutation or merge.
+
+---
+
 # Conditional initial-gap acquisition — 27 October 2026
 
 The former five-cell D<4 obstacle is closed. Selected readable route: signwise

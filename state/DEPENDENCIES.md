@@ -1,3 +1,30 @@
+# Current fixed-target DAG — 28 October 2026
+
+Finite base through41 + least failure -> sharp predecessor(s).
+At fixed n, positive closed excess supremum -> attained compact-contact
+witness: v8 conservation-proof.tex (third moment penalty; only second UI).
+Contact -> exact conserved identity: same file, with explicit off-contact
+B-H*xi residual; includes support Lebesgue integral and half-open leakage.
+Predecessor + external structural inequality -> v5 rho/support entry.
+Actual moments/support/event + damping gates -> v7 proved Fourier bound.
+Entry + conservation + moment circle/sign bounds + complete Fourier
+-> v6 TWO SIMPLE QUADRATIC PASSES -> actual support gap on24rho cells.
+That gap + per-cell contact radii + physical lower-m/beta contraction
+-> v7 FOUR SIGNED PASSES -> named coarse entry,100p panels.
+Coarse entry -X-> full confinement: requires a new actual support-strip/
+contact implication. No moment-only substitution is valid.
+Confinement + joint resource + binomial/count/repair gates -> final exclusion
+STILL TO BE CLOSED. Zero noise uses the separate Bernoulli theorem.
+BASE41 remains independent; ROOT4 and current40/41 providers are not closed.
+
+Removed from SELECTED coarse-entry ancestry only: unknown-score cap,
+degree-six phase routine, six coarse actual-gap HIGH refinements, old12+1
+signed initialization schedule. No existing source/certificate is deleted.
+Read v7 README, signed-transport.tex, fourier-audit.md and the two independent
+signed/acceptor reviews for exact hypotheses and source locations.
+
+---
+
 # V6 selected dependency path — 27 October 2026
 
 BASE41 remains an unclosed independent global premise. For a putative first

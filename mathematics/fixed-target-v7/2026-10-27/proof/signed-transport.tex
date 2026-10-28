@@ -1,0 +1,190 @@
+\section{Closing the coarse acquisition by keeping the moments together}
+\label{v7:signed}
+The two initial quadratic passes of the preceding note give an actual
+central support gap. The next calculation keeps the signed moments of
+one marginal together. It requires no unknown extremal score and uses
+only the simple quadratic phase price. The point of the refinement is
+not a finer grid: a constraint already present in the conserved defect
+can sharply contract a moment box before it is evaluated.
+
+Write $m=\E X_+=\E X_-$, $\beta=\E[X|X|]$, $\gamma=\E X^3$,
+$\rho=\E|X|^3$ and $\sigma=\sqrt{10}$. Recall the physical defect
+$D=(3+\sigma)\rho-\gamma-3J\ge0$, where $J$ uses the actual support gaps.
+The elementary gap inequality $J\le\rho+2m$ and signwise Cauchy give
+\begin{equation}\label{v7:coupled}
+ D\ge\sigma\rho-\gamma-6m,\qquad
+ 4m^2+\beta^2\le1.
+\end{equation}
+Thus, on a box with $\rho\ge l$, $\gamma\le h$ and $D\le d$, put
+\[
+ m_* =\max\{0,(\sigma_-l-h-d)/6\},\qquad \sigma_-<\sqrt{10}.
+\]
+If $m_*>1/2$ the box is empty. Otherwise every actual law in it satisfies
+\begin{equation}\label{v7:contract}
+ m\ge m_*,\qquad |\beta|\le\sqrt{1-4m_*^2}.
+\end{equation}
+These are simultaneous restrictions, not separately optimized estimates.
+They narrow the same beta interval before the sign moments and support
+bounds are recomputed. Each gamma slice starts from its original beta
+interval; carrying the contracted interval into a different slice would
+lose coverage.
+
+A second inexpensive constraint comes from a weighted square. Set
+$\delta=\gamma-\rho\beta$ and
+$V=\E[|X|^3(|X|-\rho)^2]$. Cauchy with the two factors
+$|X|^{3/2}(|X|-\rho)$ and $\operatorname{sgn}(X)|X|^{1/2}$ gives
+$\delta^2\le2mV$. Consequently
+\begin{equation}\label{v7:quarter}
+ \frac{\rho\E X^4}{2}-\frac{\E|X|^5}{4}
+ =\frac{\rho^3}{4}-\frac V4
+ \le\frac{\rho^3}{4}-\frac{\delta^2}{8m}.
+\end{equation}
+Other lower bounds for $V/4$ may be combined by taking their maximum.
+They cannot be added: each spends the same nonnegative square.
+
+\subsection{The precise scalar step}
+Let $c=C_{\rm E}$, $c_-\le c\le c_+$, and $a\ge0$ be the fixed-target
+excess. The raw remainder and nonnegative resource satisfy
+\[
+ R_c=\mathcal U+n(1-e^{-H^2/(2n)})
+          \left(c\rho-\frac{\phi(0)D}{6}\right),\qquad
+ \mathcal U=(n+H^2)a+\frac{n\phi(0)D}{6}+n^{3/2}\mathcal L.
+\]
+Here $H$ is a raw sum threshold, and $\mathcal L\ge0$ is the contact loss.
+Suppose the incoming bounds are $R_c\le T<Nc_-l$ and $nD\le Nd$,
+with $n\ge N=42$. They give $D\le d$ and the density interval
+\[
+ \phi(H/\sqrt n)\in[\phi_-,2/5],\qquad
+ \phi_-=(997/2500)(1-T/(Nc_-l))>0.
+\]
+The moment and gap formulas bound the constant charge by $A$ and give
+$K_1\in[k_-,k_+]$, $W\in[w_-,w_+]$, where
+\[
+ K_1=\E[X|X|^3]-3\beta-\tfrac32\rho\gamma,
+ \qquad W=J_1+(\E X^4-3)/6.
+\]
+The preceding Fourier proof supplies $|E_n|\le K_F+s_F|H|$.
+For a formal coefficient $v\in[c_-,c_+]$, define
+\begin{align*}
+ F_v&=\max_{k\in\{k_-,k_+\},\ w\in\{w_-,w_+\},\ \varphi\in\{\phi_-,2/5\}}
+                       |vk+\varphi w|+s_F,\\
+ Q_v&=vl+\min_{\varphi\in\{\phi_-,2/5\}}\varphi\gamma_-/2,
+ \qquad B_v=K_F+vA.
+\end{align*}
+Require $Q_v>0$ at both endpoints. For $h=|H|$ the actual raw remainder
+is bounded by $B_c+F_ch-Q_ch^2$. For each fixed $h$, this upper bound is
+convex in $c$: $F_c$ is a maximum of absolute affine functions, and the
+other terms are affine. Therefore it is bounded by the maximum of the
+two endpoint quadratics, even when $A$ is negative.
+Set
+\[
+ T'=\min\left\{T,\max_{v=c_-,c_+}
+                    \left(B_v+\frac{F_v^2}{4Q_v}\right)\right\}.
+\]
+A negative $T'$ excludes the box, since $R_c\ge0$. Otherwise the previous
+strict raw gate remains valid. The simple phase lemma gives
+\[
+ \eta=\tfrac12(c_-l-T'/N)>0,\qquad
+ \mathcal U\le\max_{v=c_-,c_+}
+                    \{B_v+F_vh-(Q_v+\eta)h^2\}.
+\]
+A negative maximum of these quadratics excludes the box. In every other
+box put
+\[
+ S=\max_{v=c_-,c_+}\left(B_v+\frac{F_v^2}{4(Q_v+\eta)}\right),
+ \qquad d'=\min\{d,6S/(N(997/2500))\}.
+\]
+Then $nD\le Nd'$. In particular this is a weighted bound for every
+$n\ge42$, not just an estimate evaluated at $n=42$. A valid phase ceiling is
+\[
+ |H|\le\max_{v=c_-,c_+}
+ \frac{F_v+\sqrt{F_v^2+4(Q_v+\eta)\max(0,B_v)}}{2(Q_v+\eta)}.
+\]
+The replacement of $B_v$ by its nonnegative part only enlarges this root.
+All uses of the improved resource follow the raw-license check; there is
+no circular use of an unlicensed density floor.
+
+\subsection{Geometry, support and complete coverage}
+The actual-gap identity also improves the high-frequency event.
+If $(-A_0,B_0)$ is the central support gap and $m\le m_u$, the two
+consequences
+\[
+ m(A_0^2+B_0^2)\ge l-\frac d{\sigma_- -1},\qquad
+ 6mA_0B_0\ge(\sigma_- -1)l-d
+\]
+give
+\[
+ (A_0+B_0)^2\ge
+ \frac{l-d/(\sigma_- -1)+\{(\sigma_- -1)l-d\}/3}{m_u}.
+\]
+The event is the actual opposite-sign pair, not a substituted two-point
+law. Its probability and conditional distance moment retain their
+same-marginal derivations. Each high-frequency option includes all six
+terms and its own damping gates.
+
+For each third-moment cell the support radius can also be reduced before
+any signed pass. The v5 contact/heat argument tests the boundary polynomial
+and all six whole-ray derivative signs. We use the first successful
+radius in $2.50,2.51,\ldots,3.84$, with that cell's upper rho and outward
+beta bound. This implication is independent of the Fourier feedback.
+The chosen radius then controls every fourth, fifth and sixth moment,
+negative-gap price and Fourier coefficient in that cell. A proposed
+radius is never used before its contact gates have passed.
+
+The full signed cover has 24 closed rho cells, eight beta slices, eight
+gamma slices and two mean slices: at most 3072 nominal boxes per pass.
+Discarding a slice requires a proved necessary inequality to be
+inconsistent. In every rho cell the number of active and excluded boxes
+must equal 128. An excluded rho cell remains recorded in every later pass.
+All remaining upper bounds are pooled by maxima and lower bounds by
+minima; this enlarges the admissible set and preserves coverage.
+The 100 closed probability panels cover $[0,1]$, and a box meeting a
+shared endpoint is included in both incident panels.
+
+The exact implementation and independent reviews specify the other
+moment inequalities: signwise Cauchy, the common first moment, the fourth
+moment projection, bounded-support moment matrices, and the central and
+outer actual-gap charges. The source locations and the precise scope of
+those reviews are listed in the accompanying audit. These are analytic
+premises of the enclosure; an arithmetic receipt alone does not prove them.
+
+\subsection{The resulting conditional entry theorem}
+\begin{theorem}\label{v7:entry}
+Let $n\ge42$ and let an attained fixed-target witness have $a\ge0$.
+Assume its closed-support contact and conservation identities, the sharp
+predecessor bound used in the v5 support argument, and the stated external
+structural bound. Use the actual-law moment and gap inequalities reviewed
+in this note and the complete Fourier estimates of
+Section~\ref{v7fourier:section}, with all their domain gates.
+Then the two initial quadratic passes followed by the four signed passes
+verified by \texttt{INITIAL42\_FIXED\_TARGET\_COARSE\_V7} give
+\begin{gather*}
+ R_c\le2.1995174<2.24,\qquad nD\le32.20665378,
+ \qquad D\le .76682509<.784,\\
+ \rho\le71527/48000<1.526,\qquad
+ |\beta|\le .50549963<.523,\qquad |H|\le1.83605680<1.947.
+\end{gather*}
+There is a complete closed 100-panel probability cover carrying these
+bounds and the simultaneous noise bounds. Thirty panels are nonempty.
+The fixed coefficient is enclosed by
+$.4097321837023<c<.4097321837025$.
+\end{theorem}
+\begin{proof}
+The two-quadratic ancestor obtains the actual gap on all 24 rho cells.
+Each signed step preserves the inequalities by the preceding scalar
+argument and the stated moment/geometry bounds. All radii and Fourier
+gates are checked before use. Complete incidence accounting and outward
+pooling preserve every possible witness. The distinct exact acceptance
+contract replays the ancestor, the support gates and all 11264 signed
+boxes, and checks the stated targets on every nonempty probability panel.
+Its proof object and saved fresh receipt are supplied with the source.
+The inequality for $nD$ is retained at each step before replacing $n$ by
+its lower bound for an unweighted moment constraint.
+\end{proof}
+
+This replaces the coarse initialization in a new fixed-target
+composition. It does not assert that its output may be relabelled as a
+legacy certificate with a different actual-score hypothesis. The
+subsequent confinement and count interfaces need their own transport and
+complete checks. The degree-six phase envelope and the intervening six
+coarse HIGH refinements are absent from the selected ancestry.

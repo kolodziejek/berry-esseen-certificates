@@ -1,0 +1,96 @@
+{
+  "status": "PASS_BOUNDED_FOURIER_IDENTITIES_AND_CONTROLS",
+  "formal_identity_groups": 7,
+  "actual_laws": [
+    {
+      "law": "symmetric Bernoulli",
+      "mu4": "1",
+      "gamma": "0",
+      "radius": "1",
+      "actual_abs_z": "0",
+      "Z_bound": "0"
+    },
+    {
+      "law": "skew Bernoulli",
+      "mu4": "3121/1600",
+      "gamma": "-39/40",
+      "radius": "8/5",
+      "actual_abs_z": "146627/2560000",
+      "Z_bound": "146627/2560000"
+    },
+    {
+      "law": "reflected skew",
+      "mu4": "3121/1600",
+      "gamma": "39/40",
+      "radius": "8/5",
+      "actual_abs_z": "146627/2560000",
+      "Z_bound": "146627/2560000"
+    },
+    {
+      "law": "gapped three point",
+      "mu4": "10399/10000",
+      "gamma": "-189/1000",
+      "radius": "11/10",
+      "actual_abs_z": "25137/2000000",
+      "Z_bound": "502755323/40000000000"
+    },
+    {
+      "law": "zero atom",
+      "mu4": "25/16",
+      "gamma": "0",
+      "radius": "5/4",
+      "actual_abs_z": "0",
+      "Z_bound": "3/512"
+    },
+    {
+      "law": "distant symmetric atoms",
+      "mu4": "9",
+      "gamma": "0",
+      "radius": "3",
+      "actual_abs_z": "0",
+      "Z_bound": "1/5"
+    }
+  ],
+  "domain_checks": {
+    "scalar_grid_points": 1394,
+    "windows": [
+      {
+        "window": "1/8",
+        "minimum_gate_margin": "23451134486771141/36499275651170304"
+      },
+      {
+        "window": "4/25",
+        "minimum_gate_margin": "2720549/1725696"
+      },
+      {
+        "window": "9/50",
+        "minimum_gate_margin": "2720549/1725696"
+      },
+      {
+        "window": "1/5",
+        "minimum_gate_margin": "2720549/1725696"
+      },
+      {
+        "window": "11/50",
+        "minimum_gate_margin": "2720549/1725696"
+      },
+      {
+        "window": "1/4",
+        "minimum_gate_margin": "2720549/1725696"
+      }
+    ]
+  },
+  "directed_constants": {
+    "pi_lower": "1231847548/392109375",
+    "pi_upper": "22/7",
+    "sqrt_pi_lower": "4431/2500",
+    "sqrt_two_pi_upper": "251/100"
+  },
+  "negative_controls": [
+    "missing damping gate",
+    "missing Laguerre quarter gate",
+    "wrong fifth-coefficient sign",
+    "missing first-moment compensation"
+  ],
+  "scope": "No inherited kernel import, Fourier quadrature, dense certificate or full local exclusion run."
+}

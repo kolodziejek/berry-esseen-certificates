@@ -55,3 +55,9 @@ python3 -B mathematics/fixed-target-v7/2026-10-27/accept_entry.py mathematics/fi
 Independent reviews: `signed-independent-review.md` and `fourier-signed-review.md`, with source hashes and exact scope. `signed_review_structure.py` is independent accounting only; it must not be described as a numerical leaf reimplementation. `runs/fixed-target-v7-20261027/signed01` through `signed07` preserve the bounded exploratory history and source snapshots. No earlier result is overwritten.
 
 The selected dependency removals are specific: no full exponential/degree-six phase ancestor, no six coarse actual-gap HIGH updates, no unknown-score cap for this initialization, and no legacy twelve-stage signed initialization in the new composition. The moment inequalities, two coarse quadratic passes, complete Fourier terms, contact and finite-base obligations remain. Existing alternatives remain available in the repository.
+
+## Subsequent analytic closure (28 October)
+
+The independently derived `../../fixed-target-v8/2026-10-28/conservation-proof.tex` now supplies fixed-target attainment, compact closed-support contact, the equality/closed-reflection bridge, and the exact conservation identity. Its off-contact version retains both residuals, including the support Lebesgue integral. The proof and111 exact actual-law/threshold configurations (666 affine coefficient cases) are supplied separately. This closes those named analytic implications; the quantitative predecessor/support, moment/event domains and final confinement/base obligations retain their stated roles.
+
+The13-page compiled companion is `proof/main.pdf`; all portable TeX is in `source-fixed-target-v7.zip`. Final build02 is clean, all13 pages inspected, and the isolated export reproduces the same page text. The main158-page manuscript is unchanged by this research continuation.

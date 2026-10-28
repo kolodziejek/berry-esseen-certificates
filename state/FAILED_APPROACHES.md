@@ -1,3 +1,27 @@
+# Newly delimited shortcuts — 28 October 2026
+
+- Small D, weighted nD, and arbitrarily small conditional noise do NOT imply
+  conditional amplitude<1/2 or positive fractional-part gain. The v7 exact
+  three-atom family has span1 and exact lattice resonance, with D,noise->0;
+  these are actual standardized laws, not maximizing witnesses. Confinement
+  still needs contact or another proved nonresonance input.
+- Repeating loose signed boxes stalled because the physical lower bound
+  m>=(sqrt10*rho-gamma-D)/6 was not fed back into beta²+4m²<=1. The corrected
+  same-cell contraction closes coarse entry without a larger dense campaign.
+- A small characteristic modulus argument alone cannot prove impossibility
+  of a fractional-part lower bound. The repaired boundary argument uses
+  Z=±b/2,w=-b/2, giving E{w-Z}=(1-b)/2 directly as b->1.
+- Exact arithmetic acceptance needs precise schema and ancestor binding.
+  Initial acceptor allowed numeric true/float excluded identities and lacked
+  a top ancestor pin; repaired before selected accept02. Deep mutation tests
+  now reach arithmetic rejection, not rational-length rejection.
+- C5 historical success cannot supply C4: C4 is its explicit premise.
+- Off-contact conservation must retain both residuals B-H*xi, including the
+  support Lebesgue integral. Uniform compact laws supply a negative control
+  against dropping that integral merely because there are no support gaps.
+
+---
+
 # V6 rejected shortcuts and bounded limits — 27 October 2026
 
 - beta*gamma>=0 and K1*gamma<=0 are false even for an actual centered,

@@ -1,3 +1,30 @@
+# Next after complete coarse entry — 28 October 2026
+
+1. Preserve the selected four-pass contract and simple quadratic ancestry.
+   Do not repeat the obsolete D<4 or D<.784/raw2.24 search.
+2. Finish contact-based confinement after the new100p export. The acquired
+   p[.41,.42] candidate strip in confinement-v8 must be independently reviewed;
+   all30nonempty panels and both signs remain necessary. Moment-only small
+   defect/noise cannot force amplitude: exact resonant laws refute that shortcut.
+3. Check strict count comparison, its own-count conversion, mass/phase/marked
+   repairs and zero-noise branch. Harmonic span<1 is now proved, but other
+   denominator gates and a common marked parameter remain separate.
+4. Independently audit ROOT4 physical bridge and actual finite-base provider
+   bindings. C5 assumes C4; it cannot close its own missing parent. Sparse-file
+   absence is not repository absence. Do not trigger promisor downloads or a
+   native/dense campaign inadvertently.
+5. Keep existing PR#5 draft; integrate reviewed v8 results as they complete.
+   The v7 portable document reproduces with identical page text. No merge or
+   main push.
+
+Bounded current reproduction (new id):
+python3 -B mathematics/fixed-target-v7/2026-10-27/run_checks.py next-unused-id
+This runs six bounded checks, binds the saved fresh exact entry replay and
+checks baseline preservation. To actually replay the selected11264boxes:
+python3 -B mathematics/fixed-target-v7/2026-10-27/accept_entry.py mathematics/fixed-target-v7/2026-10-27/entry-proof.json
+
+---
+
 # Next after actual-gap acquisition — 27 October 2026
 
 1. Read the v6 selected two-pass proof and independent review. The former

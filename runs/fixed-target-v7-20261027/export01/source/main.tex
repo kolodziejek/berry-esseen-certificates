@@ -1,0 +1,109 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,longtable}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\R}{\mathbb R}
+\newcommand{\CE}{C_{\mathrm E}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\title{A shorter coarse acquisition for the sharp iid Berry--Esseen bound\\
+\large Fourier estimates, coupled moments, and the remaining count obstruction}
+\author{Bartosz Ko\l odziejek \and Kacper Rodziewicz}
+\date{28 October 2026 --- research continuation}
+\begin{document}
+\maketitle
+\begin{abstract}
+We complete the coarse acquisition in the fixed-target proof route.
+The main improvement feeds a lower bound for the common first moment
+back into the signed second moment, keeping both constraints attached
+to one law. Two coarse quadratic passes and four signed passes meet
+all five numerical targets of the earlier initialization.
+We independently prove the complete Fourier estimate used by the
+calculation and supply a distinct exact acceptance contract.
+A separate harmonic improvement allows conditional span below one;
+an explicit family of actual iid laws explains why small moment
+resources cannot replace confinement. The finite base and a complete
+confinement and count comparison remain necessary. This is not a
+proof of the sharp conjecture.
+\end{abstract}
+
+\section{What has been completed}
+Let $c=C_{\rm E}=(3+\sqrt{10})/(6\sqrt{2\pi})$. For a centered,
+variance-one marginal, write $\rho=\E|X|^3$ and consider the excess
+\[
+ a=\sqrt n\{\Pp(S_n\le H)-\Phi(H/\sqrt n)\}-c\rho .
+\]
+The preceding fixed-target argument gives an attained witness, a
+closed-support contact inequality, and a conserved identity.
+At a least failing index $n\ge42$, sharp predecessors and the external
+structural estimate give $1\le\rho\le7361/4000$ and $|X|\le96/25$.
+The earlier two quadratic passes obtain an actual central support gap.
+These are explicit entry inputs to the present calculation.
+
+The next step used to leave too much freedom in the signed moments.
+Writing $m=\E X_+$, the defect gives a lower bound for $m$, while
+$4m^2+\beta^2\le1$ turns it into an upper bound for $|\beta|$.
+Applying both before evaluating the resource eliminates the high-rho
+boxes. Four signed passes suffice. The selected calculation uses 11264
+signed boxes and exports all 100 closed probability panels; 30 are
+nonempty. Exact acceptance also rejects 19 malformed or understated
+proof objects.
+
+The degree-six phase envelope, six intervening coarse HIGH updates and
+an unknown extremal-score cap are absent from this selected route.
+The fixed target $c$ is the coefficient throughout. The resulting
+component has its own name and hypotheses; its output has not been
+relabelled as an older certificate with an actual-score premise.
+
+For orientation, the accepted coarse bounds are
+\begin{gather*}
+ R_c\le2.1995174,\qquad nD\le32.20665378,\\
+ \rho\le1.490145834,\qquad|\beta|\le .50549963,\qquad |H|\le1.83605680 .
+\end{gather*}
+The original coarse contract specifies 239616 signed-box evaluations.
+The smaller count here concerns that component only, with its small
+quadratic ancestor counted separately. It is not a runtime comparison
+or a percentage reduction of the complete proof.
+
+The proof below first establishes the complete Fourier estimate, then
+explains the signed update and its numerical contract. The final part
+identifies what a strict count comparison still needs. In particular,
+the finite prefix through41 is independent of these large-index
+estimates. The accompanying finite-base audit records its unresolved
+provider and analytic edges.
+
+\input{fourier-closure.tex}
+\input{signed-transport.tex}
+\input{exclusion-body.tex}
+
+\section{Evidence, scope and authorship}
+The exact source, proof object, fresh acceptance streams, input hashes
+and independent review reports accompany this note. The acceptance
+contract replays the two-quadratic ancestor, the support-radius gates,
+all selected signed boxes and the complete probability export.
+Independent reviews separately reconstruct the Fourier arguments,
+the moment and gap bounds, the fixed-target transport and the panel
+accounting. They are not all independent implementations of the
+same numerical program.
+
+The named Fourier lemmas are proved above under their explicit
+moment and actual-event hypotheses. Their proof does not establish
+those hypotheses for an arbitrary law. Likewise the new coarse
+entry does not establish every subsequent confinement or count
+predicate. The original certificates and theorem targets remain
+unchanged. A complete finite base and ordered final exclusion must
+still be supplied before an unconditional sharp theorem is claimed.
+
+AI systems were used to develop candidate arguments, write and
+revise the exposition, implement exact checks, and conduct separate
+adversarial reviews. The authors and readers must assess the
+displayed arguments and reproducible evidence; agreement between
+AI reviews is not a proof.
+\end{document}

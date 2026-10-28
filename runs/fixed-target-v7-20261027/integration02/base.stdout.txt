@@ -1,0 +1,48 @@
+{
+  "BASE41_verified": false,
+  "beta_boundary_reserve": "426279389297609/142044500000000000",
+  "checks": {
+    "beta_excluded_boundary": true,
+    "negative_P_ray": true,
+    "negative_Q_ray_from_4": true,
+    "radius_at_least_4": true,
+    "rho_coefficient_positive": true,
+    "rho_encloses_shevtsova": true
+  },
+  "constants": {
+    "beta": "641/1000",
+    "radius": "504/125",
+    "rho": "979013/533000",
+    "target": "4097/10000"
+  },
+  "derivatives_at_radius": [
+    "-1556901725263/499687500000000",
+    "-4423617674677/666250000000",
+    "-32198821809/5330000000",
+    "-10291/5000"
+  ],
+  "mathematical_scope": "Conditional n4 localization only; scalar countermodels are not iid laws.",
+  "native_execution": "not run",
+  "negative_controls": {
+    "LOCAL42_at41_rejected": true,
+    "radius4_rejected": true,
+    "reversed_signed_endpoint_rejected": true,
+    "understated_beta_.640_rejected": true,
+    "understated_rho_1.8_rejected": true
+  },
+  "polynomial_coefficients_ascending": [
+    "4737153593/31980000000",
+    "9878531/10000000",
+    "12033048783/10660000000",
+    "-10291/30000"
+  ],
+  "schema": "be.bounded-base-audit/1",
+  "source_sha256": {
+    "mathematics/audit/ARITHMETIC-FOUNDATIONS-G2-G3-ROOT4-v4.md": "13d43087209823b6f45400af814c8e361a1dcd9788c5051932df80641be2cbd8",
+    "mathematics/global-contract.json": "3b33be2e68e56cb2cca9796426f19a6a4cae038ea12a1d5739bb9046245c7387",
+    "mathematics/simplification/2026-10-27/base-closure.md": "e90a1c0c14773031273dd2df52674ff1129e42822fd8a2021c7f8bdd389ab719",
+    "paper/analytic-supplement.txt": "dad4a3558b01bda4acfdfc9120a50ecbcd7a6f2389886ba3ce72a6602ec39018",
+    "paper/main.tex": "1bc15cf4823ea58666d1e7cae8636b3f2b90fbd622f5ab04cbe61cd8a6b92b67",
+    "source/original/proof/obligations.json": "a483a6f95cfb32fb0cac2fd502b16a9a70828df63aece4f5f855a8913c2e8554"
+  }
+}
