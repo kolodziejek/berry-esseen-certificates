@@ -1,3 +1,35 @@
+# V10 next actions — 28 October 2026
+
+1. Finish ordinary integration/publication into existing draft PR5, preserving
+   manuscript/.DS_Store as an unrelated untracked user file. Keep the manuscript
+   untouched. Root publication receipt records the verified remote head.
+2. The main new analytic target is the own-count lower bound for negative
+   phase of order lambda when .02<lambda<=.075. The present quartic constants
+   fail at the admissible point t=lambda=r=.05. Try retaining a neighboring
+   outgoing count or more of the favorable cubic-moment repair. A larger
+   discovery grid alone does not fix this bound.
+3. The left probability range (1/4,.4) still lacks the same complete .6-strip
+   and count comparison. Use the p-dependent Bernoulli gap only on[1/3,2/3];
+   outside that interval only the global Bernoulli theorem is supplied.
+4. Consider the stronger closed first-moment root and combined fifth-moment
+   loss inside a separately scoped future Fourier cover. The existing11264
+   signed cells remain an ancestor; no smaller cover is accepted from these
+   analytic improvements alone.
+5. The finite base n1..41 remains independent. The common conditional witness
+   box rho<1.841, |X|<13, |H|<26 has no sharp-predecessor premise but supplies
+   no finite inequality. Preserve actual iid convolution consistency.
+6. Only after these research questions, revise manuscript exposition to use
+   direct geometry and the four-region comparison. Do not adopt a60-page
+   target by suppressing assumptions, finite-base gaps or analytic proofs.
+
+Bounded reproduction from the fork repository root:
+python3 -I -B mathematics/simplification-v10/2026-10-28/run_checks.py NEWID
+The run identifier must be new. No optimization flags. Full-event controls:
+python3 -I -B mathematics/simplification-v10/2026-10-28/moderate_actual_law_checks.py
+These do not rerun old Fourier ancestry or generate certificates.
+
+---
+
 # Next after manuscript integration — 28 October 2026
 
 1. Human-review manuscript/arxiv-v1/main.pdf and the v9 integration/independent

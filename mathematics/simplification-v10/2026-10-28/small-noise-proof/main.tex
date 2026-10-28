@@ -1,0 +1,37 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\CE}{C_{\mathrm E}}
+\title{A direct small-noise comparison in the iid Berry--Esseen problem}
+\author{Bartosz Ko{\l}odziejek \and Kacper Rodziewicz}
+\date{Research note, 28 October 2026}
+\begin{document}
+\maketitle
+\noindent
+We prove a comparison on an explicit small-noise domain, uniform over all
+integers \(n\ge42\). This is one part of a possible proof of the sharp iid
+Berry--Esseen bound. It does not establish the full bound.
+Throughout, \(S_n=X_1+\cdots+X_n\) for independent copies of the indicated
+standardized law \(X\), \(\Phi\) is the standard normal distribution
+function, and
+\(\CE=(3+\sqrt{10})/(6\sqrt{2\pi})\).
+The function \(F_B\) is the distribution function of \(\operatorname{Bin}(n,p)\).
+The final implication uses the strict finite-\(n\) Bernoulli theorem of
+Schulz, \emph{The optimal Berry--Esseen constant in the binomial case},
+dissertation, Theorem~1, p.~15,
+\href{https://d-nb.info/1197702695/34}{German National Library copy}.
+\par\medskip
+\noindent
+AI systems assisted the derivation, checking, and writing of this note.
+The analytic proof, exact scalar checks, and independent polynomial review
+are separate artifacts; agreement between AI systems is not proof.
+\input{proof.tex}
+\end{document}

@@ -1,0 +1,246 @@
+\section{A direct comparison for small noise}
+\label{v10:smallnoise}
+
+The small-noise part of the comparison can be proved from the incoming
+$0.6$ strip itself. Neither the sharper half-amplitude bound nor the
+fractional-part and marked-crossing estimates are needed in the following
+range. This is a comparison of actual conditional sum laws; contact and a
+predecessor bound are needed only to obtain its premises elsewhere.
+
+\begin{theorem}\label{v10:smallnoise:theorem}
+Let $n\ge42$, $2/5\le p\le53/100$, $q=1-p$, and $Y=B+U$, where
+$\Pp(B=1)=p$ and $\E(U\mid B)=0$. Suppose the two conditional laws satisfy
+\[
+ |U_j|\le3/5,\qquad U_0\le a_0,\qquad U_1\ge-a_1,
+ \qquad a_0,a_1\ge0,\quad a_0+a_1\le9/125.
+\]
+Put $v=pq$, $s=\E U^2$, $\lambda=ns$, $\ell=(v+s)^{-1/2}$,
+$X=\ell(Y-p)$, and $\rho=\E|X|^3$. Assume
+$0<\lambda\le1/500$ and $|H|\le46/25$.
+Choose an integer $k$ and $u\in[-34/125,91/125]$ such that
+$np+H/\ell=k+u$. Write $\delta=k-np$, $\rho_B=(1-2v)/\sqrt v$,
+\[
+ a=\sqrt n\{\Pp(S_n\le H)-\Phi(H/\sqrt n)\}-\CE\rho,
+ \quad
+ C_B=\frac{\sqrt n}{\rho_B}
+       \{F_B(k)-\Phi(\delta/\sqrt{nv})\}.
+\]
+Then $1\le k\le n-1$ and
+\[
+                 a+\rho_B(\CE-C_B)<-\lambda/100.
+\]
+In particular no law in this range can have $a\ge0$, by the sharp
+Bernoulli bound. The theorem does not cover larger noise or the remaining
+probability panels.
+\end{theorem}
+
+\subsection{The exact comparison and uniform normalization}
+Let $W_j$ have the law of the sum of $j$ independent $U_1$ variables and
+$n-j$ independent $U_0$ variables, and put
+$\pi_j=\binom njp^jq^{n-j}$, zero outside the legal counts. Define
+\[
+ f(u)=\frac{\Phi((\delta+u)/\sqrt{n(v+s)})-
+                   \Phi(\delta/\sqrt{n(v+s)})}{\pi_k},
+ \quad O=\Pp(W_k>u)+f(u),
+ \quad T=\sum_{i=1}^{n-k}\Pp(W_{k+i}\le u-i).
+\]
+Conditioning on the sign count, including its atoms, gives
+\[
+ Q:=\Pp(S_n\le H)-F_B(k)
+ =-\sum_{i=0}^k\pi_{k-i}\Pp(W_{k-i}>u+i)
+   +\sum_{i=1}^{n-k}\pi_{k+i}\Pp(W_{k+i}\le u-i).
+\]
+Consequently, if $\pi_{k+i}/\pi_k\le R_0$,
+\begin{equation}\label{v10:smallnoise:comparison}
+ a+\rho_B(\CE-C_B)
+ \le-\sqrt n\pi_k(O-R_0T)+\mathcal R,
+ \quad
+ \mathcal R=\sqrt n\{\Phi(\delta/\sqrt{nv})-
+                  \Phi(\delta/\sqrt{n(v+s)})\}+\CE(\rho_B-\rho).
+\end{equation}
+The discarded terms are nonpositive. The outgoing event is strict and
+the incoming events closed, also at a collision.
+
+Here $v\ge6/25$ and
+$\sqrt{v+s}<501/1000$. Thus $|\delta|<33/20$ throughout;
+on $|u|\le1/20$ it is less than one. These inequalities imply the stated
+interior-count range and $9/25<k/n<23/40$.
+On this last interval the absolute third derivative of binary relative
+entropy is at most $6$, the absolute logarithmic derivative of $r(1-r)$
+at most $5/4$, and $1/(12r(1-r))<3/8$. The finite Stirling estimate
+therefore gives
+\[
+ \sqrt n\pi_k=\frac{\phi(0)}{\sqrt v}
+       \exp\{-\delta^2/(2nv)+e\},\qquad
+ n|e|<Z(D):=5D/8+3/8+D^3/42
+\]
+whenever $|\delta|\le D\le33/20$.
+This follows by expanding relative entropy to second order and the
+logarithmic prefactor to first order; the three remainders are respectively
+$D^3/n^2$, $5D/(8n)$ and $3/(8n)$. It uses the same finite Stirling
+formula proved in the manuscript's count appendix, not an asymptotic law.
+Using $0.39886<\phi(0)<0.4$, $e^{-x}\ge1-x$, and
+$e^x\le(1-x)^{-1}$ for $x<1$ yields the following bounds:
+\[
+\begin{array}{c|cc}
+ & |u|\le1/20 & -34/125\le u\le91/125\\\hline
+ \sqrt n\pi_k\text{ lower bound}&73/100&13/20\\
+ f'\text{ lower bound}&19/20&4/5\\
+ f'\text{ upper bound}&21/20&5/4\\
+ \pi_{k+i}/\pi_k\text{ upper bound}&53/50&3/2\\
+ \mathcal R\text{ upper bound}&2\lambda/n&3\lambda/n
+\end{array}
+\]
+In the derivative bounds the actual $\delta$ is held fixed and the
+derivative variable runs between zero and the actual phase. Indeed
+\[
+ \log f'(t)=-\tfrac12\log(1+s/v)+\frac{\delta^2}{2nv}
+                  -\frac{(\delta+t)^2}{2n(v+s)}-e,
+\]
+and, for $|t|\le b$,
+\[
+ n|\log f'(t)|\le(8/3)\lambda+
+       \frac{2Db+b^2}{2(6/25)}+Z(D).
+\]
+Take $(D,b)=(1,1/20)$ or $(33/20,91/125)$.
+At a binomial mode, $|\delta|\le1$; the same Stirling estimate shows
+$\sqrt n\max_j\pi_j<17/20$. Dividing this by $13/20$ proves the
+global ratio bound. In the inner phase range, the exact binomial recursion
+gives $\pi_{k+1}/\pi_k\le1+(53/100)/(42\cdot6/25)<53/50$;
+all subsequent factors are at most one since $(n+1)p-k<153/100<2$.
+
+For the repair bound, conditional signs are fixed because $a_0<p$ and
+$a_1<q$. Expansion of the absolute cubic gives, with $r=\min(p,q)$,
+\[
+ \E|Y-p|^3\ge v(1-2v)+(3r-d)s,\qquad d=a_0+a_1.
+\]
+This follows term by term from
+$U_1^3\ge-a_1U_1^2$ and $U_0^3\le a_0U_0^2$.
+Since $(1+x)^{3/2}\le1+3x/2+3x^2/8$, it follows that
+\[
+ (v+s)^{3/2}(\rho-\rho_B)
+ \ge s\{3r-\tfrac32(1-2v)-d-3(1-2v)s/(8v)\}>0.
+\]
+The bracket is positive using $r\ge2/5$, $v\ge6/25$ and
+$s\le1/21000$. We may therefore discard the favorable moment term.
+Differentiating the normal term in $s$ bounds the remaining repair by
+$(7/4)\delta_+s$, because $0.2/(6/25)^{3/2}<7/4$. This proves the two
+repair bounds in the table.
+
+\subsection{Incoming counts need only a fourth moment}
+For a centered independent sum $W$ whose summands have absolute bound
+$A=3/5$ and total variance $t$,
+\[
+                  \E W^4\le A^2t+3t^2.
+\]
+Also $|s_1-s_0|\le(5/2)s$, so that
+$t_{k+i}\le iV\lambda$, with $V=9/8$ in the inner phase range and
+$V=7/6$ globally. Markov's inequality, applied to a closed incoming event,
+therefore gives, for any phase upper bound $h\in[0,1)$,
+\begin{equation}\label{v10:smallnoise:tails}
+ \frac{T}{\lambda}\le\frac{K(V)}{(1-h)^4},\qquad
+ K(V)=\frac9{25}V\frac{49}{40}
+                         +3V^2\frac1{500}\frac{17}{10}.
+\end{equation}
+Indeed $i-u\ge i(1-h)$; sum the resulting $i^{-3}$ and $i^{-2}$ terms.
+The elementary integral bounds
+\[
+ \sum_{i\ge1}i^{-3}\le1+1/8+1/27+1/18<49/40,
+ \quad
+ \sum_{i\ge1}i^{-2}\le1+1/4+1/9+1/3<17/10
+\]
+justify these constants. For $u\le0$ use $h=0$.
+
+\subsection{The own count, uniformly down to zero noise}
+Set $\alpha=9/20$ and
+\[
+ h_\alpha(x)=\frac{-x^4+3\alpha^2x^2+2\alpha^3x}{5\alpha^4}.
+\]
+Then $h_\alpha\le\mathbf1_{(0,\infty)}$: the polynomial is nonpositive
+on the negative half-line and its positive maximum is
+$(9+6\sqrt3)/20<1$. Its value at zero is zero. For a centered independent
+sum $W$ as above, Cauchy and the moment expansion give
+$|\E W^3|\le At$ and $\E W^4\le A^2t+3t^2$. Thus
+\[
+ \Pp(W+\sigma r>0)\ge
+ \frac{(3\alpha^2-A^2)t-3t^2-4Art-6r^2t-r^4
+                         +3\alpha^2r^2+2\sigma\alpha^3r}{5\alpha^4}.
+\]
+In the inner phase range,
+$79\lambda/84\le t=\E W_k^2\le89\lambda/84$.
+Put $T_*=89/42000$. To bound the preceding expression plus $br$, divide
+by $t>0$ and write $r=zt$. The result is
+\[
+ F_{\sigma,b}(z,t)=\frac{3\alpha^2-A^2-3t}{5\alpha^4}
+ +\left(\frac{2\sigma}{5\alpha}+b-\frac{4At}{5\alpha^4}\right)z
+ +\frac{3\alpha^2t-6t^2}{5\alpha^4}z^2
+ -\frac{t^3z^4}{5\alpha^4}.
+\]
+It is concave in $t\ge0$. On $0\le z\le z_0$, replace $z^4$ by
+$z_0^2z^2$ to obtain a lower quadratic. The minimum of this quadratic
+on the interval occurs at an endpoint or its eligible vertex. Checking
+it at $t=0,T_*$ proves
+\[
+ F_{1,-21/20}(z,t)>4/5\quad(0\le z\le2),\qquad
+ F_{-1,19/20}(z,t)>1\quad(0\le z\le3/2).
+\]
+The respective rational margins are greater than $0.0288$ and $0.176$.
+These are interval inequalities, not sampled noise checks.
+
+For negative phase $u=-r$ and $r\ge2t$, Cantelli instead gives
+$O\ge r^2/(t+r^2)-(21/20)r$. At $r=2t$ its value divided by $t$
+exceeds $4/5$, and its derivative in $r$ is positive. That derivative
+first increases and then decreases, so any subsequent stationary point
+is a maximum. The value at the other endpoint $r=1/20$ also exceeds
+$(4/5)t$, checked at $t=T_*$. Hence $O>(4/5)t$ throughout the negative
+inner phase range. For positive phase, the quartic handles $r\le3t/2$;
+for larger $r$, simply use $O\ge f(r)\ge(19/20)r>t$.
+Both switching points are below $1/20$. We have proved
+\[
+                         O>\frac45\frac{79}{84}\lambda
+                         \qquad (|u|\le1/20).
+\]
+Combining this with \eqref{v10:smallnoise:tails} and the table yields
+\[
+ \frac{73}{100}\left\{\frac45\frac{79}{84}
+       -\frac{53}{50}\frac{K(9/8)}{(19/20)^4}\right\}
+                      -\frac2{42}-\frac1{100}
+   =\frac{219609181}{27367410000}>0.
+\]
+The bracket is positive before the lower mass bound is used in
+\eqref{v10:smallnoise:comparison}.
+
+\subsection{The two outer phase intervals}
+For $u=-r\in[-34/125,-1/20]$, Cantelli and the global derivative bound give
+\[
+ O\ge\frac{r^2}{11/5000+r^2}-\frac54r.
+\]
+This expression is concave on the stated interval because
+$3r^2>11/5000$. Its smaller endpoint value exceeds $0.469$.
+Subtract $(3/2)K(7/6)/500$ for incoming counts. Multiplication by the
+mass lower bound $13/20$ still exceeds the repair $3/(42\cdot500)$
+and the desired $1/50000$ margin.
+
+For $u\in[1/20,91/125]$ use only $O\ge(4/5)u$.
+The function $u(1-u)^4$ increases and then decreases on $[0,1]$;
+its minimum on this interval is
+$G=(91/125)(34/125)^4$. Consequently
+\[
+ O-R_0T\ge (4/5)G-(3/2)K(7/6)/500>0.
+\]
+Here the positive numerator was divided by $(1-u)^4\le1$ before
+dropping that denominator. Finally
+\[
+ \frac{13}{20}\{(4/5)G-(3/2)K(7/6)/500\}
+       -\frac3{42\cdot500}-\frac1{50000}
+       =\frac{4806449287359}{5468750000000000}>0.
+\]
+Using the upper noise endpoint is valid in both outer intervals since
+every discarded error increases with $\lambda$.
+This completes the proof of Theorem~\ref{v10:smallnoise:theorem}.
+
+The accompanying exact rational checker reconstructs all 46 scalar gates.
+Its rejection of the same constants at $\lambda=1/20$ is a negative control
+for the sufficient argument, not a counterexample to the theorem or to
+the Berry--Esseen conjecture. The range $1/500<\lambda$ still needs a
+different estimate or sharper constants.

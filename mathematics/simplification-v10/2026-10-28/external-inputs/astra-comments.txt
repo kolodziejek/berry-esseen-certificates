@@ -1,0 +1,699 @@
+I think a **60-page version is now a realistic target for the present argument**. The next revision should make the proof revolve around one question:
+
+> How much can a small perturbation of a Bernoulli law increase the normal-approximation error?
+
+The fixed-target formulation now gives a clear way to identify a possible counterexample. The remaining opportunity is to simplify the conditions needed to exclude it.
+
+I went through the main.pdf[new manuscript](sandbox:/workspace/scratch/331ea4f3a09f/upload/main.pdf) and its source, including the dependencies between sections. I found several substantive replacements:
+
+- **One direct geometric inequality gives stronger global bounds than the eight-round iteration.** I checked the resulting constants with exact rational arithmetic.
+- **One stronger moment inequality replaces all three competing fifth-moment penalties.**
+- **A different choice of integer count weakens the support restriction needed by the count argument.**
+- **The count comparison can use the explicit Bernoulli gap below \(C_E\)**, allowing weaker estimates away from the critical probability.
+- **About fifteen pages are currently devoted to prospective branches that the completed main argument does not use.**
+
+The first two changes are ready to incorporate. The count changes are rigorous reformulations, but their final numerical comparison still needs checking. That distinction matters: I have checked the new deductions below, while treating the draft’s reported entry bounds as inputs.
+
+## 1. Replace the eight geometry updates by one inequality
+
+This is the strongest new simplification I found.
+
+In §5, the proof repeatedly updates lower bounds for the gap endpoints, upper bounds for the noise, the remaining defect, and the inward displacement. The underlying measure inequality already contains enough information to do this directly.
+
+Write
+\[
+\sigma=\sqrt{10},\qquad
+p_*=\frac{4-\sqrt{10}}2,\qquad
+q=1-p,\qquad v=pq,\qquad w=1-\theta,
+\]
+and define
+\[
+Q_*(p)=(6+2\sigma)(p-p_*)^2.
+\]
+As in the manuscript,
+\[
+\ell=\sqrt{\frac{w}{v}},
+\qquad
+d=1-\frac{A+B}{\ell}.
+\]
+
+Then your common defect budget implies
+\[
+\boxed{
+D\ge \ell\left[
+wQ_*(p)+6wd(1-d)+\theta K(p,d)
+\right],
+}
+\tag{1}
+\]
+where
+\[
+K(p,d)=
+\min\left\{
+3(\sigma+1)q-(\sigma+5)d,\;
+3(\sigma+3)p-(\sigma+7)d
+\right\}.
+\]
+
+This expresses the whole geometric restriction in three variables: \(p,\theta,d\).
+
+### Why the proof is short
+
+Put
+\[
+a_0=\frac{\bar A-A}{\ell},
+\qquad
+a_1=\frac{\bar B-B}{\ell}.
+\]
+Then \(a_0,a_1\ge0\) and \(a_0+a_1=d\). Your exact inward cost satisfies
+\[
+\frac{E_0}{\ell}
+=6w\{d(1-d)+a_0a_1\}.
+\]
+
+On the positive residual measure, \(x\ge B\), so its coefficient is at least
+\[
+\ell\{3(\sigma+1)q-(\sigma+5)a_1\}.
+\]
+The negative coefficient is at least
+\[
+\ell\{3(\sigma+3)p-(\sigma+7)a_0\}.
+\]
+
+Now drop \(a_0a_1\ge0\), use \(a_i\le d\), and use that the two residual measures have total mass \(\theta\). This proves (1).
+
+There is no need to introduce an iterative procedure to state this information.
+
+### It improves all four global bounds
+
+Using the incoming bounds already stated in the draft,
+\[
+p\in[0.24,0.54],\qquad
+n\ge42,\qquad
+nD\le32.20665378,
+\]
+and the acquired support radius \(|X|\le3.14\), I obtain:
+
+| Quantity | Current global output | Direct bound |
+|---|---:|---:|
+| \(\theta\) | \(0.0594425514\) | \(<0.056\) |
+| \(d\) | \(0.0719539227\) | \(<0.068\) |
+| \(\lambda\) | \(0.6314459997\) | \(<0.616\) |
+| \(\rho\) | \(1.4547288545\) | \(<1.426\) |
+
+The support radius is needed only for the last conclusion.
+
+Here is the essential reduction behind the numerical proof. Set
+\[
+D_0=0.76682509,\qquad
+z=\frac{3.162277660-1-D_0}{3}.
+\]
+The existing gap inequality gives
+\[
+AB\ge z,\qquad
+\theta\le1-z,\qquad
+0\le d\le1-2\sqrt{\frac{zpq}{1-\theta}}.
+\tag{2}
+\]
+
+For fixed \(p,\theta\), each branch on the right of (1) is concave in \(d\). Consequently, to exclude \(\theta\ge0.056\), only the two endpoints in (2) need checking.
+
+At the upper endpoint for \(d\), elementary bounds give lower estimates exceeding \(0.81955\) or \(0.77224\), according to the noise range. Both exceed \(D_0\). At \(d=0\), monotonicity in \(\theta\) reduces the problem to \(\theta=0.056\).
+
+The remaining checks are two quartic inequalities. The displacement bound requires one more quartic. They admit particularly short certificates: each polynomial \(P\) satisfies \(P''\ge2D_0^2\), so
+\[
+P(p)\ge P(x_0)-\frac{P'(x_0)^2}{4D_0^2}.
+\]
+
+The exact rational checks give:
+
+| Check | Tangent point \(x_0\) | Certified lower bound |
+|---|---:|---:|
+| \(\theta=0.056\), positive branch | \(0.45\) | \(>0.0017\) |
+| \(\theta=0.056\), negative branch | \(0.39\) | \(>0.011\) |
+| \(d=0.068,\theta=0\) | \(0.424\) | \(>0.0012\) |
+
+Thus these are interval proofs, not sampled checks.
+
+The other two bounds also reduce to simple one-variable calculations. After localization, the right side of (1) increases in \(d\). Retaining the weighted input \(nD\) gives
+\[
+\lambda\le
+\max\left\{
+\frac{p[17.558-42Q_*(p)]}{3(\sigma+1)},
+\frac{q[17.558-42Q_*(p)]}{3(\sigma+3)}
+\right\}.
+\]
+The two cubic maxima are below \(0.615289\) and \(0.565358\).
+
+For the third moment, the residual coefficients in the measure budget are at least \(5/2\) times those in the third-moment identity. This gives
+\[
+\rho\le
+\frac{1-2pq-\frac25Q_*(p)}{\sqrt{pq}}+\frac25D_0
+<1.426.
+\]
+
+**How I would use this:** replace the global-output part of the eight-round contraction by a direct localization lemma, with a short arithmetic table.
+
+There is one qualification. This does not automatically reproduce every panel-specific output, including the upper restriction \(p\le0.53\), the stronger lower bound for \(\ell\), or the central panel’s complete input vector. Those still need their own checks. The direct argument does exclude \(p\le1/4\).
+
+The immediate page saving is modest. The larger benefit is that readers can see why the bounds hold, and later arguments can use (1) itself instead of a collection of separately optimized constants.
+
+## 2. Replace the three fifth-moment penalties by one stronger bound
+
+The signed-moment subsection currently derives three different losses and takes their maximum. These can be replaced by one inequality that dominates all three.
+
+Let
+\[
+\delta=\gamma-\rho\beta,
+\]
+and write
+\[
+P_{\mathrm{sign}}
+=
+\frac{(\rho+\gamma)\delta_+^2}{8(1+\beta)^2}
++
+\frac{(\rho-\gamma)(-\delta)_+^2}{8(1-\beta)^2}.
+\]
+Then
+\[
+\boxed{
+\frac{\rho M_4}{2}-\frac{M_5}{4}
+\le
+\frac{\rho^3}{4}
+-P_{\mathrm{sign}}
+-\frac{\delta^2}{16m}.
+}
+\tag{3}
+\]
+
+This is stronger than the maximum of the three penalties currently retained.
+
+### A short proof
+
+For each sign, put
+\[
+a_\pm=\mathbb EX_\pm^2,\qquad
+b_\pm=\mathbb EX_\pm^3,\qquad
+d_\pm=b_\pm-\rho a_\pm=\pm\delta/2,
+\]
+and
+\[
+V_\pm=\mathbb E\!\left[X_\pm^3(X_\pm-\rho)^2\right].
+\]
+
+Weighted Cauchy gives
+\[
+V_\pm\ge \frac{d_\pm^2}{m}.
+\]
+On the sign where \(d_\pm\ge0\), the ordinary moment inequalities give the stronger estimate
+\[
+V_\pm\ge \frac{b_\pm d_\pm^2}{a_\pm^2}.
+\]
+
+Use the stronger estimate on that sign and the first estimate on the other sign. Adding these two contributions and dividing by four proves (3).
+
+This addition is legitimate because the two costs come from different sign contributions. It does not add overlapping bounds on the same quantity.
+
+Moreover:
+
+- \(P_{\mathrm{sign}}\) already dominates the quartic penalty.
+- \(mb_\pm\ge a_\pm^2\) shows that the new combined loss dominates \(\delta^2/(8m)\).
+
+So the three-way maximum, its separate proofs, and the accompanying explanation can disappear.
+
+### Replace the eleven auxiliary choices for \(m\) as well
+
+The eleven rational choices of the auxiliary parameter in the upper bound for \(m\) have a closed-form replacement.
+
+For \(Y=|X|\), put \(u=\mathbb EY=2m\). The positive semidefinite matrix
+\[
+\mathbb E\left[(R-Y)
+\begin{pmatrix}1\\Y\end{pmatrix}
+\begin{pmatrix}1&Y\end{pmatrix}\right]
+=
+\begin{pmatrix}
+R-u&Ru-1\\
+Ru-1&R-\rho
+\end{pmatrix}
+\]
+gives
+\[
+(R-u)(R-\rho)\ge(Ru-1)^2.
+\]
+Solving the quadratic,
+\[
+\boxed{
+2m\le
+\frac{R+\rho+\sqrt{(R-\rho)(4R^3-3R-\rho)}}{2R^2}.
+}
+\tag{4}
+\]
+
+This improves the sampled auxiliary bounds and removes another arbitrary implementation choice from the mathematical presentation.
+
+Together, (3) and (4) would make the signed-moment subsection considerably more coherent: a small sequence of square and determinant inequalities, each with a clear purpose.
+
+## 3. Choose the integer count to fit the available support bound
+
+This is the most promising change to the overall proof strategy.
+
+At present, you choose a nearest integer:
+\[
+np+H/\ell=k+u,\qquad |u|\le\frac12.
+\]
+That choice helps create the requirement \(|U|<1/2\) in the marked-count argument.
+
+But the exact count identity allows a different integer anchor.
+
+Suppose
+\[
+|U_i|\le A_U,\qquad
+U_0\le a_0,\qquad
+U_1\ge-a_1,\qquad
+a_0+a_1\le d_0.
+\]
+The two individual first-mark distances are positive when
+\[
+1-2d_0-u>0,\qquad 1-A_U+u>0.
+\]
+
+A full interval of phases of length one fits between these restrictions whenever
+\[
+\boxed{A_U+2d_0<1.}
+\]
+
+Choose
+\[
+u\in
+\left[
+\frac{A_U-1-2d_0}{2},
+\frac{A_U+1-2d_0}{2}
+\right].
+\tag{5}
+\]
+Every real threshold has an integer representation with its phase in this interval. Both first-mark distances are then at least
+\[
+\frac{1-A_U-2d_0}{2}.
+\]
+
+### The existing \(0.6\) strip already works for these domain conditions
+
+Using the bounds already acquired on \(p\in[0.40,0.53]\),
+\[
+A_U=\frac35,\qquad d_0=\frac9{125},
+\]
+choose
+\[
+u\in[-0.272,\,0.728].
+\]
+
+Then:
+
+- Both individual first-mark distances are at least \(0.128\).
+- The optional common-mark distances are at least \(0.056\).
+- Each conditional support span is at most \(0.672<1\), so the extended harmonic lemma applies.
+
+Thus **half-amplitude confinement is not required to make those parts of the count argument applicable on this range**.
+
+This could remove a substantial part of §6 from the necessary route. It needs a numerical comparison before that deletion is justified: some constants worsen when the upper phase endpoint moves to \(0.728\). In particular, the positive-crossing denominator becomes smaller.
+
+### The curvature calculation generalizes cleanly
+
+The restriction \(\chi<2\) can also be removed. Replace
+\[
+(\chi-1)_+
+\quad\text{by}\quad
+T(\chi):=\sum_{j\ge1}(\chi-j)_+
+\]
+in the positive-crossing term of the discrete-curvature bound.
+
+The proof is the same double summation, with each weight bounded by the total displacement. The phase supremum still has the same three candidates: the two endpoints and the eligible point
+\[
+u_*=\zeta-2b.
+\]
+
+So this generalization does not require a new phase subdivision machinery.
+
+For the concrete interval (5), the third-crossing coefficient is also explicit:
+\[
+\mathbb E\binom{R_-}{3}
+\le
+\frac{1953125}{7739786}\,
+t\sqrt{A_U^2+3t}.
+\]
+Only two integer candidates are needed to obtain that coefficient.
+
+My recommendation is to test this version of the count comparison **before extending the difficult half-amplitude confinement proof to more panels**.
+
+## 4. Use the Bernoulli gap that the new master identity exposes
+
+The revised master identity is a good improvement:
+\[
+a+\rho_B(c-C_B)=\text{comparison error}.
+\tag{6}
+\]
+But the sufficient conditions still largely force the right side to be negative. This discards a useful positive allowance.
+
+Schulz’s theorem gives, for \(p\in[1/3,2/3]\),
+\[
+C_B<
+c(p):=
+\frac{\varphi(0)\,[3+|1-2p|]}
+     {6[p^2+(1-p)^2]}.
+\]
+It also gives the strict bound \(C_B<C_E\) for every \(p\in(0,1)\) and finite \(n\). Thus the strict Bernoulli endpoint is already supplied by the cited theorem. [d-nb.info](https://d-nb.info/1197702695/34?utm_source=chatgpt.com)
+
+The stronger bound has a particularly simple gap:
+\[
+\boxed{
+g(p):=\rho_B\{C_E-c(p)\}
+=
+\frac{2C_E\,(\min(p,q)-p_*)^2}{\sqrt{pq}}.
+}
+\tag{7}
+\]
+
+For a witness with \(a\ge0\), the left side of (6) is strictly greater than \(g(p)\). Therefore it is enough to prove
+\[
+\text{comparison error}\le g(p).
+\]
+Requiring a negative comparison error is unnecessarily strong away from the critical probability.
+
+This suggests a better division of the work:
+
+- Near \(p_*\), use the strongest confinement and perturbation estimates.
+- Away from \(p_*\), use the explicit gap (7) to absorb a less accurate comparison.
+- Outside the range of the stronger Schulz theorem, retain the universal allowance \(g=0\).
+
+Within your acquired probability range, this could concentrate the difficult support analysis near the central panel.
+
+### The endpoint-check argument can retain its convexity
+
+There is a clean way to incorporate this allowance without breaking the existing numerical method.
+
+Suppose
+\[
+\text{comparison error}
+\le
+\sqrt n\,\pi_k\,\lambda B(\lambda)
++\frac{\lambda I(\lambda)}n,
+\]
+and
+\[
+m_0\le\sqrt n\,\pi_k\le M_0.
+\]
+Define
+\[
+\Gamma(\lambda)
+=
+\max\{m_0B(\lambda),M_0B(\lambda)\}
++\frac{\max(0,I(\lambda))}{N}.
+\tag{8}
+\]
+
+This handles either sign of \(B\). If \(B\) is convex and
+\[
+I(\lambda)=A_0+A_1/\lambda,\qquad A_1\ge0,
+\]
+then \(\Gamma\) is convex.
+
+On a noise interval \([L,U]\), with \(L>0\), let
+\[
+g_I\le\inf_{p\in I}g(p).
+\]
+It suffices to check
+\[
+\Gamma(L),\Gamma(U)\le g_I/U.
+\tag{9}
+\]
+Indeed, convexity gives \(\Gamma(\lambda)\le g_I/U\), hence
+\[
+\text{comparison error}\le\lambda\Gamma(\lambda)\le g_I.
+\]
+
+This removes the separate \(B<0\) requirement and consolidates the sign handling of the inverse-index correction.
+
+The constant \(g_I/U\) in (9) is deliberate. Subtracting \(g_I/\lambda\) from the old score would generally spoil the convexity argument.
+
+**One distinction should remain:** the existing whole-count estimate does not become uniform as \(\lambda\downarrow0\) merely by changing the anchor. Keep the small-noise quartic argument until there is a replacement that controls the mark error on the correct scale.
+
+## 5. A few generalizations can remove entire auxiliary discussions
+
+### Use one standard tail comparison
+
+Appendix B proves Cantelli, Bennett, and a cubic Poisson comparison separately. A standard quadratic Poisson comparison covers this role.
+
+For independent centered \(Z_i\le A\), with total variance at most \(V\), put
+\[
+Y=A\{\operatorname{Pois}(V/A^2)-V/A^2\}.
+\]
+Then
+\[
+\mathbb P\!\left\{\sum Z_i\ge b\right\}
+\le
+\inf_{t<b}
+\frac{\mathbb E(Y-t)_+^2}{(b-t)^2}.
+\tag{10}
+\]
+The needed moment comparison is stated under these hypotheses in Pinelis, Proposition 2.8 and Corollary 2.11. [arxiv.org](https://arxiv.org/pdf/0902.4058?utm_source=chatgpt.com)
+
+The optimized bound in (10) dominates the current Cantelli, Bennett, and cubic-Poisson choices. You can cite the comparison theorem and retain only the manuscript-specific rigorous evaluation.
+
+That removes the custom semigroup proof and gives the reader one tail function to understand. Its use in the final noise-interval checks still needs numerical verification.
+
+### Replace both cosine certificates by a calculus proof
+
+The strongest working inequality
+\[
+1-\cos(2\pi x)\le \frac{4553}{1000}x,\qquad 0\le x\le1,
+\]
+has a short proof.
+
+The maximum of \((1-\cos y)/y\) occurs at the unique
+\[
+y_*\in(\pi/2,\pi),\qquad \tan(y_*/2)=y_*.
+\]
+Its value is
+\[
+\frac{2y_*}{1+y_*^2}.
+\]
+A six-term alternating-series calculation proves \(y_*>2.3311\). Since \(y/(1+y^2)\) decreases for \(y>1\),
+\[
+\frac{4\pi y_*}{1+y_*^2}
+<
+\frac{4(355/113)(2.3311)}{1+(2.3311)^2}
+<
+\frac{4553}{1000}.
+\]
+
+I checked the rational comparisons exactly. This replaces both Bernstein coefficient certificates while preserving the stronger constant.
+
+### State the cubic repair for all \(p\)
+
+The restriction \(p\le1/2\) in parts of Appendix B is avoidable. Put
+\[
+r=\min(p,q).
+\]
+The cubic estimate extends to
+\[
+\mathbb E|Y-p|^3
+\ge pq(1-2pq)+(3r-d)s.
+\]
+Likewise, the variance comparisons using \(s/p\) can use \(s/r\).
+
+Together with the available binomial normalization across \(1/2\), this gives one analytic statement for the acquired probability range. It preserves the orientation of the chosen discrepancy and avoids a separate reflection discussion.
+
+### Keep the conservation identity at the level actually used
+
+The off-contact identity with residuals \(B\) and \(\xi\) is a worthwhile generalization, but it currently adds notation without serving the main proof.
+
+For the short version, state and prove the conservation identity under contact. Then the support contribution vanishes immediately because \(\Delta=0\) on the closed support.
+
+The off-contact formula and its uniform-law example can be omitted unless they acquire a later application. Generality earns its space when it replaces cases or supports a subsequent argument.
+
+## 6. Give the finite base one method, rather than a special four-summand branch
+
+Appendices E and F occupy roughly nine pages, but their construction does not currently close the finite base or feed the large-index argument.
+
+There are two reasonable choices:
+
+1. Remove this prospective branch from the present reduction paper.
+2. Replace it with a short general finite-index transfer proposition.
+
+I prefer the second if you intend to keep developing that route.
+
+### One compact domain for every finite-base witness
+
+Using the draft’s universal structural third-moment bound and the contact inequality, one can localize every possible finite-base witness to
+\[
+\boxed{
+1\le n\le41,\qquad
+|X|<13,\qquad
+|H|<26,\qquad
+\rho<1.841.
+}
+\tag{11}
+\]
+
+This needs no predecessor estimate. The contact argument also works for \(n=1\), interpreting the deleted sum as zero.
+
+For example, at \(u=|y|\ge1\), the contact function is bounded above by
+\[
+266.5+1.944715u^2+17.63u-0.4095u^3.
+\]
+Its value and first two derivatives are negative at \(u=13\), and its third derivative is negative. This proves the support bound. The threshold bound follows from Chebyshev and the normal tail bound.
+
+The constants are deliberately crude. The benefit is a single compact finite-base problem.
+
+### The Appendix F defect has a simpler probabilistic representation
+
+Let \(m=\mathbb EX_+=\mathbb EX_-\), and define two probability measures on positive magnitudes:
+\[
+\mu_\pm(dy)=\frac{y}{m}\,
+\mathbb P\{\pm X\in dy,\ \pm X>0\}.
+\]
+Write
+\[
+c_\pm=\mathbb E_{\mu_\pm}Y.
+\]
+The natural reference law is
+\[
+Q=
+\frac{m}{c_-}\delta_{-c_-}
++
+\left(1-\frac{m}{c_-}-\frac{m}{c_+}\right)\delta_0
++
+\frac{m}{c_+}\delta_{c_+}.
+\]
+Then
+\[
+\boxed{
+\rho(P)-\rho(Q)
+=
+m\left\{
+\operatorname{Var}_{\mu_-}Y+
+\operatorname{Var}_{\mu_+}Y
+\right\}.
+}
+\tag{12}
+\]
+
+The defect is simply a sum of two variances.
+
+For
+\[
+h_{\pm,t}(y)=\frac{e^{\pm ity}-1}{y},
+\]
+with its continuous value at zero,
+\[
+\|h_{\pm,t}''\|_\infty\le |t|^3/3.
+\]
+Ordinary Taylor expansion around \(c_\pm\) therefore gives
+\[
+|\psi_P(t)-\psi_Q(t)|
+\le \frac{|t|^3}{6}\{\rho(P)-\rho(Q)\}.
+\tag{13}
+\]
+
+This handles contact atoms and zero defect automatically, and avoids the singular defect-normalized kernels in the current presentation.
+
+The passage to sums is also general:
+\[
+|\psi^n-g^n-ng^{n-1}(\psi-g)|
+\le\frac{n(n-1)}2|\psi-g|^2,
+\]
+since characteristic functions have modulus at most one.
+
+So the mathematical construction can be stated once for every \(n\). Four summands should be an application of it.
+
+The reference \(Q\) can have three atoms, so this reformulation does not itself finish the finite base through the Bernoulli theorem. Its value is that it gives a cleaner problem to solve.
+
+## 7. The largest immediate cut is to choose which argument belongs in the paper
+
+The dependency audit suggests the following.
+
+| Material | Current role | Recommendation |
+|---|---|---|
+| Appendix D, roughly six pages | Possible local refinements; no incoming mathematical references from the rest of the source | Retain only estimates selected by the final comparison |
+| Appendices E–F, roughly nine pages | An unfinished finite-base branch; not used by the large-index argument | Omit, or replace with the general transfer above |
+| §8, roughly five pages | Global implication, generic certificate principles, execution history, status | Reduce to the implication, the exact verification requirements, and one status table |
+| Introduction, guide, discussion | Repeated proof map and repeated limitations | One introduction and one short proof guide |
+| Main count section and Appendix B | Repeated master identity, coupling, witnesses, and curvature material | State and prove each once |
+
+The first two rows account for about fifteen pages. The other changes should remove several more without changing a completed main analytic result.
+
+I would also make the target claim slightly narrower. To prove the sharp constant, it is enough to exclude **positive** fixed-target excess. The stronger statement \(C_n<C_E\) at every finite tail index can be retained as a consequence if it comes for free. It should not determine the entire presentation.
+
+### Proposed order
+
+I would organize the paper in this order:
+
+1. **The target and the counterexample reduction.**
+2. **Contact, the support gaps, and the defect identity.**
+3. **The binomial comparison and the conditions it needs.**
+4. **Fourier and moment bounds that localize a counterexample.**
+5. **The remaining support bounds needed by the comparison.**
+6. **Finite base and final verification.**
+
+In particular, introduce the comparison before the long confinement argument. Readers should know why a support restriction is needed before spending several pages proving it.
+
+A reasonable design budget is:
+
+| Part | Pages |
+|---|---:|
+| Problem, results, and proof guide | 3 |
+| Fixed-target contact and gap geometry | 9 |
+| Fourier and moment localization | 12 |
+| Binomial comparison, including its detailed estimates | 14 |
+| Support bounds used by that comparison | 5 |
+| Finite base and global completion | 7 |
+| Scalar verification details | 2 |
+| References | 3 |
+| **Planned total** | **55** |
+| Reserve | **5** |
+
+This is a proposed budget, not a claim that the missing finite-base proof already fits seven pages. It leaves room for that work while making clear that unused alternatives cannot all remain in the final manuscript.
+
+## 8. Make the prose describe the mathematics directly
+
+The revised prose is substantially clearer, but it still contains a great deal of language about managing a proof: “acquisition,” “licensed,” “gates,” “exports,” “actual-law,” “ordered,” “complete acceptance.”
+
+Some of these distinctions matter mathematically. Their repeated explanation makes the text harder to follow.
+
+### Establish the conventions once
+
+Near the start of the main argument, a paragraph along these lines would remove many later repetitions:
+
+> Fix a maximizing law \(P\), an index \(n\), and a threshold \(H\). All moments and support endpoints below refer to this law. Parameter intervals are closed, and numerical bounds are rounded outwards. We state explicitly whenever an event uses a strict endpoint.
+
+Then use ordinary mathematical prose.
+
+| Current style | More direct wording |
+|---|---|
+| “After a raw bound licenses the phase conversion…” | “This bound gives a positive lower bound for the normal density, which we use in…” |
+| “The selected calculation retains every actual-law cell…” | “The retained closed cells cover every admissible parameter tuple.” |
+| “This acquires an event, rather than supposing an artificial two-point kernel.” | “Thus the support has a gap \((-A,B)\) containing zero.” |
+| “The numerical input is a finite obligation, not a replacement for its entry hypotheses.” | “The proposition is conditional on the bounds in Table X.” |
+| “Ordered contractions on closed probability panels” | “Bounds for the noise and inward displacement” |
+
+I would also remove comments about what an earlier version did: “formerly convenient,” “which computations have actually been removed,” and comparisons with abandoned schedules. Those belong in development notes.
+
+### Keep explanations where they prevent a real mistake
+
+Three explanations deserve to remain prominent:
+
+- Why endpoint atoms have the stated weight.
+- Why several costs must share one defect budget.
+- Which numerical statements remain conditional.
+
+State these at the relevant definitions or theorem boundaries. They do not need to be repeated after every calculation.
+
+The source archive also does not include the named checker programs, proof objects, or execution records. In the paper, the reported computations should be presented concisely and accompanied by an accessible verification archive. Long descriptions of checking procedures cannot substitute for those materials.
+
+## What I would change first
+
+I would incorporate the **direct resource inequality (1)** and the **combined moment estimate (3)** immediately. They simplify the mathematics and improve the bounds.
+
+Next, I would test the **shifted count anchor together with the Bernoulli-gap criterion (8)–(9)**. That is the change most likely to remove a whole stage of support confinement. It should determine which parts of §6 and the count appendices survive.
+
+Once that choice is made, I would rewrite from the new contents rather than continue trimming the current text paragraph by paragraph. The main ingredients are now strong enough to support a much shorter argument; the next version needs to select and connect them.

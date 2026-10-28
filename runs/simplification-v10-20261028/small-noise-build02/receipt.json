@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v10/mathematics/simplification-v10/2026-10-28/small-noise-proof/main.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v10/runs/simplification-v10-20261028/small-noise-build02/build",
+    "--json"
+  ],
+  "returncode": 0,
+  "source_pins": {
+    "mathematics/simplification-v10/2026-10-28/small-noise-proof/main.tex": "ca5af361bdf692808758597e466b3081f9766349e69f27532270de36191727f2",
+    "mathematics/simplification-v10/2026-10-28/small-noise.tex": "4fc013111fc828e3696d28bc833370c937c45aac6a89a582ef452d9b8229b952"
+  },
+  "time_utc": "2026-10-28T15:14:21.540495+00:00"
+}

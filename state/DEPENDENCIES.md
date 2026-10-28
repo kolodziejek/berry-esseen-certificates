@@ -1,3 +1,50 @@
+# V10 selected dependency graph — 28 October 2026
+
+External affine structural theorem + fixed-target attainment
+ -> oriented positive closed-CDF contrary witness.
+Finite base BASE41 (OPEN) + least contrary index
+ -> sharp predecessor for n>=42; this does not prove BASE41.
+Attaining contact + predecessor + common conservation + selected Fourier entry
+ -> actual gap, p in[.24,.54], nD<=32.20665378, radius<=3.14,
+    raw |H|<=1.83605680. Existing11264-cell entry remains an ancestor.
+
+Actual gap + common geometric cost + these coarse inputs
+ -> theta<.056,d<.068,lambda<.616,rho<1.426,p>1/4
+ -> ONE evaluation on each of30 existing panels
+ -> exclude24/53, retain25..52, improved scalar and joint bounds.
+Contact/heat/ray theorem + these one-pass bounds
+ -> all13incoming .6 strips for oriented p in[.40,.53].
+The heat/ray theorem retains nonnegative excess, n>=42 and sharp predecessor.
+The raw H and signed phase inputs come from separate coarse-entry ancestors,
+not the replaced eight-round moment iteration.
+
+For the same law set I=1_{X>0},U=(X-E[X|I])/ell,
+s=theta/ell^2,lambda=ns,a0=p-A/ell,a1=q-B/ell,a0+a1=d.
+.6 strip + d<.068<.072 + rawH<1.84 + n>=42 + p[.4,.53]
+ +0<lambda<=.02 + external quadratic-hinge Poisson theorem
+ -> direct four-interval count comparison Delta_C<-lambda/100 (C>=0)
+ -> fixed-target exclusion using strict external Bernoulli bound.
+No half-amplitude/harmonic/marked-crossing/curvature input on this domain.
+For0<lambda<=.002 use the separate elementary fourth-moment proof, no Poisson.
+Atlambda0 use Bernoulli directly, not a limiting strict inequality.
+
+Open branches: .02<lambda; left p<.4; independently closed BASE41.
+The shifted-anchor curvature/gap lemmas are proved interfaces, not accepted
+full covers. All-p repairs use min(p,q); signed acquisition is not reflected
+by simply replacing p with1-p.
+
+Other replacements: one closed PSD root dominates all11auxiliary values;
+one signed-plus-weighted fifth-moment loss dominates the old3-way maximum;
+calculus replaces976cosine coefficients. Other signwise moment constraints,
+Fourier estimates and cover obligations remain. The all-n size-biased transfer
+has a possibly3atom reference law and does not prove a finite-base theorem.
+
+Exact sources, edges and independent review boundaries:
+mathematics/simplification-v10/2026-10-28/{README.md,integration-review.md,
+geometry.tex,moderate-noise.tex,primitives.tex,counts.tex,external-results.md}.
+
+---
+
 # Selected manuscript dependency graph — 28 October 2026
 
 Fixed c>0 -> attained fixed-n excess/contact -> compact support before higher

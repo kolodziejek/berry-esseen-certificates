@@ -1,3 +1,37 @@
+# V10 research checkpoint — 28 October 2026
+
+The selected new route uses a direct common geometric cost and a direct
+conditional-count comparison. Research worktree:
+work/fork_audit_20261027/simplification-v10, branch
+research/simplification-v10-20261028, starting00ba714897f2e09995d78354ac3c8931e257cd05.
+Integrate into the existing draft PR5 via manuscript/strategy-v4-20261027;
+no new component PR, main push, merge, force-push or upstream mutation.
+The89-page manuscript and all inherited certificates are unchanged.
+
+| Result | Mathematical status | Execution status |
+|---|---|---|
+| Direct geometry and one-pass30-panel update | Scoped analytic implication from existing coarse entry; all13 .6 strips retain contact/heat/predecessor premises |40 exact gates;170 actual-law controls; independent4quartic/2cubic reconstruction |
+| Balanced displacement/noise resource | Same common reserve, no double spending |All28exports checked; central intercepts .069772925988/.551973904179 improve both old values |
+| Direct count comparison, all n>=42, p[.4,.53], .6 strip, d<=.072, abs(H)<=1.84, 0<lambda<=.02 | Full local analytic proof, Delta_C<-lambda/100 for any C>=0; external quadratic Poisson theorem |62exactgates; independent40coefficients/fourmargins;144own-count tests;4exactfull-event controls |
+| Elementary subrange0<lambda<=.002 | Same local comparison, no Poisson theorem |46gates; separate40coefficient review;5exactfull-event controls |
+| Moment/cosine/common-transfer primitives | Complete scoped proofs; finite-base box conditional on affine structural bound and attainment/contact |Exact arithmetic and genuine false-bound controls |
+| Full sharp theorem, remaining count range, BASE41 | Still open |No full acceptance or generation campaign |
+
+Entry point: mathematics/simplification-v10/2026-10-28/README.md.
+Proof PDFs: geometry.pdf, moderate-noise.pdf, primitives.pdf, counts.pdf,
+small-noise-proof/main.pdf in that directory. Separate reviews and exact
+source locations are linked there. Fresh ten-component integration:
+runs/simplification-v10-20261028/integration02/receipt.json.
+Nine exact selected-event checks are in actual-laws01 and moderate-actual01;
+floating event selection is discovery, accepted comparisons are rational.
+The16 near-resonance cases and1407phase/noise samples are diagnostics only.
+
+Independent scoped reviews found no blocker; root read and reconciled all
+accepted proofs. Ready for human review as research progress, not a completed
+sharp-conjecture paper. Keep PR5 draft and do not merge without explicit approval.
+
+---
+
 # Manuscript v9 — 28 October 2026
 
 The actual manuscript now presents the fixed-target approach: 89 pages instead

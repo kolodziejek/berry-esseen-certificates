@@ -1,3 +1,40 @@
+# V10 rejected shortcuts and bounded limits — 28 October 2026
+
+- The geometric noise price is the MINIMUM of the two sign prices. Replacing
+  it by their maximum is false for an explicit rational three-atom law;
+  geometry-laws.py records the exact negative reserve.
+- The signed fifth-moment loss cannot be added to the full weighted loss
+  delta^2/(8m). An exact four-atom law refutes that sum; the correct extra
+  term is delta^2/(16m), allocated to the other sign.
+- The elementary .002 proof's unchanged constants reject lambda=.05. The
+  improved Poisson/own-count proof reaches .02, but not .03 by proof.
+  Discovery1407points is positive through .03 and fails at5points for .05,
+  18points for .075. These are failures of sufficient bounds, not contrary laws.
+- The unchanged improved quartic has exact scaled value257/1250<3/8 at
+  t=lambda=r=.05. These variance/phase parameters are admissible with
+  n42,p.5,U=+-1/sqrt840. This refutes the proposed extension of this bound,
+  not Berry--Esseen or the actual-law count comparison.
+- First Poisson hinge1 is inadmissible near positivephase .728; retain
+  Cantelli there. The factorial hinge bound works only for integer i>=2.
+  Removing the positive cubic correction from the first Poisson numerator
+  gives a false estimate, detected by the independent checker.
+- The improved first joint geometry line worsens the d-intercept slightly.
+  Convex averaging of two valid cross-term bounds gives the balanced line
+  that improves BOTH central intercepts. Do not claim rectangle containment
+  from unrelated improvements or spend both intercepts independently.
+- One-pass global improvements do not dominate every historical per-panel
+  interval automatically. The accepted substitutions check the13strips and
+  central scalar/shared-resource inputs explicitly; rawH/signedphase remain.
+- The desktop compiler rejected a proof input outside its dedicated project.
+  A byte-identical in-project copy makes the small-noise note self-contained.
+  App compile then passed; all4 final TeXLive page renders match the already
+  inspected version exactly. No mathematical source was changed by this repair.
+
+Prior falsified unconditional Bernoulli-domination, bytecode/source binding,
+atom-convention and finite-base shortcuts remain recorded below.
+
+---
+
 # Manuscript transfer defects corrected — 28 October 2026
 
 - Changing an old ratio repair to fixed c does not preserve its old left side.

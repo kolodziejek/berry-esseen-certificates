@@ -1,0 +1,20 @@
+{
+  "status": "PASS_THREE_DISPLAY_ONLY_TRANSFORMATIONS",
+  "reviewed_source_sha256": "3ff41e1f9be57b844915a07d02d699987ad696b7756e00b5c96d4a36441e6526",
+  "final_source_sha256": "41c07e67ba978d051e65e57a66bdfa3dcff57fdf887c99fbe43cf5c0fd4bba6f",
+  "transformations": [
+    {
+      "before": " f(u)=\\frac{\\Phi((\\delta+u)/\\sqrt{n(v+s)})-\n                   \\Phi(\\delta/\\sqrt{n(v+s)})}{\\pi_k},\n \\quad O=\\Pp(W_k>u)+f(u),\n \\quad T=\\sum_{i=1}^{n-k}\\Pp(W_{k+i}\\le u-i).",
+      "after": " \\begin{gathered}\n f(u)=\\frac{\\Phi((\\delta+u)/\\sqrt{n(v+s)})-\n                   \\Phi(\\delta/\\sqrt{n(v+s)})}{\\pi_k},\\\\\n O=\\Pp(W_k>u)+f(u),\\qquad\n T=\\sum_{i=1}^{n-k}\\Pp(W_{k+i}\\le u-i).\n \\end{gathered}"
+    },
+    {
+      "before": " Q:=\\Pp(S_n\\le H)-F_B(k)\n =-\\sum_{i=0}^k\\pi_{k-i}\\Pp(W_{k-i}>u+i)\n   +\\sum_{i=1}^{n-k}\\pi_{k+i}\\Pp(W_{k+i}\\le u-i).",
+      "after": " \\begin{aligned}\n Q&:=\\Pp(S_n\\le H)-F_B(k)\\\\\n  &=-\\sum_{i=0}^k\\pi_{k-i}\\Pp(W_{k-i}>u+i)\n   +\\sum_{i=1}^{n-k}\\pi_{k+i}\\Pp(W_{k+i}\\le u-i).\n \\end{aligned}"
+    },
+    {
+      "before": " a+\\rho_B(\\CE-C_B)\n \\le-\\sqrt n\\pi_k(O-R_0T)+\\mathcal R,\n \\quad\n \\mathcal R=\\sqrt n\\{\\Phi(\\delta/\\sqrt{nv})-\n                  \\Phi(\\delta/\\sqrt{n(v+s)})\\}+\\CE(\\rho_B-\\rho).",
+      "after": " \\begin{aligned}\n a+\\rho_B(\\CE-C_B)&\\le-\\sqrt n\\pi_k(O-R_0T)+\\mathcal R,\\\\\n \\mathcal R&=\\sqrt n\\{\\Phi(\\delta/\\sqrt{nv})-\n                  \\Phi(\\delta/\\sqrt{n(v+s)})\\}+\\CE(\\rho_B-\\rho).\n \\end{aligned}"
+    }
+  ],
+  "time_utc": "2026-10-28T15:23:39.874302+00:00"
+}
