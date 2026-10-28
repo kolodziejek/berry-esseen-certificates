@@ -1,3 +1,14 @@
+# Final integration review — 28 October 2026
+
+Independent composition and coverage review are complete with no unresolved
+blocker in the stated Delta_C<0 domain. See compound-composition-review.md,
+compound-cover-review.md, and comparison-union.tex for the joins. The final
+14-check integrated reproduction passed in
+runs/simplification-v12-20261028/integration01/receipt.json.
+The constructor-time pending-review record below is preserved as history.
+
+---
+
 # Compound comparison, 28 October 2026
 
 ## Exact result and separate evidence columns

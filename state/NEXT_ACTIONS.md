@@ -1,3 +1,34 @@
+# V12 next actions — 28 October 2026
+
+1. Read the two-page comparison-union.pdf and scoped review reports before
+extending anything. Right .075 theorem is Delta<0, not −lambda/100; old
+quantitative theorems remain unchanged.
+2. Seek a structural improvement beyond leftlambda.01/rightlambda.075.
+Reuse joint moment prices, physical g0,g1 and centered-hinge monotonicity.
+Try analytic allocation/tail estimates before increasing a parameter mesh.
+A larger bounded discovery experiment is not itself uniform acceptance.
+3. In parallel prioritize the independent finite base, beginning with C4.
+No theorem here supplies complete C4/BASE41 or a propagation theorem.
+4. Coarse11264-cell Fourierentry remains; do not delete certificates or
+replay expensive ancestors without authorization. No manuscript rewrite is
+needed until the new proof architecture has broader closure.
+5. Existing PR5 remains draft for human review. No automatic merge or main
+push. Use separate branches/worktrees for independent research tasks.
+
+Reproduce only the bounded suite from a new run ID:
+python3 -I -B mathematics/simplification-v12/2026-10-28/run_checks.py NEWID
+
+---
+
+# V12 next actions — 28 October 2026
+
+1. Independently review outer.tex/outer-check.py, compile and inspect; save reproduction receipt, actual-law controls.
+2. Complete right negative-inner compound-Poisson comparison, preserving physical g0,g1; no convexity-in-allocation endpoint shortcut.
+3. Review left .01 proposed combined cubic/own-count argument.
+4. Integrate only reviewed implications; reconcile every hypothesis; replay bounded checks and baseline/manuscript preservation. Update existing draft PR5 normally, no merge/main/upstream action.
+
+---
+
 # V11 next research steps after reviewed local results
 
 1. Publish this reviewed research package by normal push to existing draftPR5

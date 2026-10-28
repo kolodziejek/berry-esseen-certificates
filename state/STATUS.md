@@ -1,3 +1,55 @@
+# V12 reviewed integration — 28 October 2026
+
+The new route combines the same conditional third moments in the own-count
+loss and marginal penalty, keeps physical count variances, and bounds the
+complete incoming tail. Existing draft PR5 remains the sole review target.
+No main push, merge, force-push, branch deletion or upstream modification.
+
+| Result | Mathematical status | Execution status |
+|---|---|---|
+| Left p[.25,.4], amplitude.7, inward.068, lambda in(0,.01], C[.4095,.41]: Delta_C<−lambda/100 | Complete scoped derivation; independent joint-price/continuous-domain review |88scalar gates;40independent Bernstein coefficients; actual-law and full-event controls PASS |
+| Right p[.4,.53], amplitude.6,inward.072,lambda in(0,.075],C>=.4:Delta_C<0 | Complete union of old small-noise,new outer and new negative-inner comparisons |56outer gates/144coefficients;291closedcompoundcells; independent all291 margin replay and coverage PASS |
+| Old .03/.02/all-panel .002 theorems | Retained with original stronger margins/coefficient scopes |Source preservation and .03 scalar replay PASS |
+| Common-allocation discovery shortcut and compound-hinge allocation convexity | Refuted by exact intermediate counterexamples, not conjecture counterexamples |Independent exact controls PASS; new proofs use neither |
+| Full conjecture/larger noise/BASE41 | Open |No full acceptance or expensive campaign |
+
+All new comparisons assume n>=42, conditional centering and raw |H|<=1.84.
+Strip/contact/heat/sharp-predecessor acquisition, reflection/attainment and
+external Pinelis/Schulz results remain explicit ancestors. At CE remaining
+noise is left above.01 and right above.075, up to retained panel budgets.
+Coarse11264-cell Fourierentry and BASE41 remain required.
+
+Fresh integrated14checkPASS:
+runs/simplification-v12-20261028/integration01/receipt.json.
+All2748baselineentries preserved(182materialized,2566sparsebindings);
+all85manuscriptfiles unchanged. Proofs compiled and inspected: left7pages,
+outer5pages,compound7pages,comparator5pages,unionguide2pages. These are
+component lengths, not a complete-paper page claim.
+
+Read mathematics/simplification-v12/2026-10-28/README.md and
+comparison-union.pdf; source-bound component and union reviews are linked.
+Research worktree work/fork_audit_20261027/simplification-v12, starting
+ a69dda8e8ca78c01ed5fe2a7bdf1a4dd1149dfe1; integration worktree strategy-v4.
+Original baseline6346fc1b4432bc5982822aa696eb566ed9e1e1ee is retained.
+
+---
+
+# V12 active research — 28 October 2026
+
+Start a69dda8e8ca78c01ed5fe2a7bdf1a4dd1149dfe1; existing draft PR5 remains sole review target. Four isolated research worktrees; no v12 publication yet. Baseline6346fc1, reference/history and manuscript unchanged.
+
+| Result | Mathematical status | Execution status |
+|---|---|---|
+| Count transport correction | Exact counterexample refutes an old discovery-only allocation shortcut; accepted v11 theorems unaffected | Independent rational reconstruction PASS; comparator review compiling |
+| Common-variance complete factorial tail | Locally derived, independent reviewer confirmed i>=2 necessity | Exact controls PASS |
+| Right positive all phases + negative outer through lambda=.075 | Full scoped candidate in outer.tex; independent review requested; negative inner omitted | 56 scalar gates and 144 reconstructed Bernstein coefficients PASS (see actual output for gate count) |
+| Right negative inner .075 | Conditional candidate | CP exact evaluator and bounded allocation cover under construction |
+| Left panels through lambda=.01 | Conditional candidate | Exact exploratory margins positive; full proof/check under construction |
+
+Root worktree work/fork_audit_20261027/simplification-v12; source mathematics/simplification-v12/2026-10-28. Full conjecture and BASE41 remain open.
+
+---
+
 # V11 reviewed integration — 28 October 2026
 
 The new direct count domains are complete local implications, independently

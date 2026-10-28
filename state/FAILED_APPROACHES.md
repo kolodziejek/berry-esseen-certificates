@@ -1,3 +1,36 @@
+# V12 exact defects and scope cautions — 28 October 2026
+
+1. False own-count common-fraction shortcut in v11 discovery lines51–57:
+T0=(1-w)t,T1=wt with physicalw=pv1/s. Actual n42,p.5,k22,r.08,
+centeredU0{-3/5,1/1000},U1=-U0 violates the intermediatebound by
+423903/2500000000. Correcttransport uses g0,g1. Acceptedv11theorems and
+owncountlemma unaffected. Failed sources preserved.
+2. Centered two-jump hinge is not convex inallocation. AtA.6,d.072,T.025,
+w.25,y.2, exactsecondderivative<0. Monotonicity suffices for newcells.
+3. Factorial-square inequality cannot start ati1:Poissoncount3 gives4>3.
+The firstcount needs its specialhinge/Cantelli/compoundbound.
+4. Newnegativeinner .075 certificate provesDelta<0. It doesnot prove the
+old −lambda/100margin at that entirelarger scope. Oldtheorems retained.
+5. Removing theleftjointreserve makes this .01 sufficientbound fail;
+actualleft rho-rhoB canbenegative. Droppingadversecorrection isinvalid.
+6. Warm-cache malformedfloat/bool validation bypass was repaired with
+typedcachekeys before acceptance; sourcechange and malformedcontrols kept.
+
+Seecompound-review.tex,left-independent-review.md,outer-review.md,
+compound-cover-review.md,compound-composition-review.md and union-review.md.
+
+---
+
+# V12 defects and failed shortcuts — 28 October 2026
+
+Old v11 compound discovery joined physical w with count variances (1-w)t,wt. False for k!=np. Actual n42,p.5,k22,U0 supported{-3/5,1/1000},U1=-U0,r2/25 violates the intermediate fourth/cubic bound by423903/2500000000. Prior accepted .03/.002 comparisons and owncount lemma do not use it. Correct using separate g0,g1.
+
+Centered two-jump quadratic hinge is NOT convex in allocation: A.6,d.072,T.025,w.25,y.2 gives strictly negative exact second derivative. Monotonicity on allocation intervals survives.
+
+Factorial-square bound cannot start at count i1: P3 gives4>3. First count requires its special quadratic Poisson or Cantelli bound.
+
+---
+
 # V11 final additional controls and remaining obstacles
 
 - False unscaled gain C(rho−rhoB)>=lambda rejected on36actual marginals;

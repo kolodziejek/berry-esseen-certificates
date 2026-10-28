@@ -1,3 +1,43 @@
+# V12 accepted dependency changes — 28 October 2026
+
+Full local union: comparison-union.tex, with witness identity
+U=(Z-m_B)/ell, s=theta/ell², v+s=ell^-2, X=Z, lambda=n theta/ell².
+Raw threshold H is unchanged. Bernoulli bound holds at every integer anchor.
+
+LEFT-01: n>=42,p[.25,.4],U0[-.7,a0],U1[-a1,.7],a0+a1<=.068,
+rawH1.84,lambda(0,.01],C[.4095,.41] -> Delta_C<−lambda/100.
+Edges: exactcountidentity -> guarded joint fourth/third moment prices
+(+7s/4 reserve) -> finiteStirling/slopebounds -> strictquartic/Cantelli ->
+quadraticPoisson complete incoming tail ->88scalar gates.
+
+RIGHT-075: n>=42,p[.4,.53],U0[-.6,a0],U1[-a1,.6],a0+a1<=.072,
+rawH1.84,lambda(0,.075],C>=.4 -> Delta_C<0.
+lambda<=.03 uses unchanged v11 theorem. For [.03,.075], phase[-.15,0]
+uses compound-proof.tex; other phases use outer.tex. Closed joins no gaps.
+Compound edges: physicalw=pv1/s, g0=1-delta/(nq),g1=1+delta/(np);
+whole raw cubic bracketpositive before multiplierreduction; two group
+quadraticPoisson comparison; hinge increases with variance/decreases with
+smalljumpallocation; exactfinitecomplement + factorial continuation;
+separateconcavity inlambda,w,eta=1/n,multipliers;291closedcells.
+Outer edges: common VarWj<=2.5lambda;56scalar gates+144coefficients.
+
+Within these exactdomains, no additional half-amplitude confinement,
+harmonic/fractional gain, marked crossings, count curvature or inherited
+full-count grid is needed. New bounded certificates are retained.
+Acquisition(contact,heat,actualindex,sharp predecessor),reflection,
+attainment,coarse Fourierentry and external Pinelis/Schulz remain.
+Neither local count theorem supplies independent BASE41 or full noiseclosure.
+
+---
+
+# V12 dependency checkpoint — 28 October 2026
+
+outer.tex assumes n>=42,p[.4,.53],conditional centering,|U|<=.6,inward<=.072,raw |H|<=1.84,C>=.4,0<lambda<=.075. It covers u[-.272,-.15] union[0,.728] only. Edges: finite Stirling; actual iid count conditioning with strict outgoing/closed incoming; cubic gain>lambda/n; Pinelis0902.4058 quadratic hinge; all-count VarW<=2.5lambda; explicit rational scalar/Bernstein inequalities. Count acquisition and BASE41 remain independent.
+
+Two-jump hinge evaluator: finite complement exact, centered hinge monotone in total variance and decreasing in small-jump allocation; not convex in allocation. Own-count allocation must use g0=1-delta/(nq),g1=1+delta/(np); physical marginal w=pv1/s.
+
+---
+
 # V11 final selected DAG and coefficient scopes
 
 Retained actual-law attainment/reflection + sharp predecessor + coarseentry
