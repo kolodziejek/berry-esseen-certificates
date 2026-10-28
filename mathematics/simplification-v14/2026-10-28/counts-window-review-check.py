@@ -10,7 +10,7 @@ import argparse,hashlib,json,sys
 if not __debug__ or sys.flags.optimize:raise RuntimeError('Assertions required')
 parser=argparse.ArgumentParser();parser.add_argument('--source',type=Path,required=True)
 args=parser.parse_args()
-PIN='58c5cb0d372a1e4a898102a67523434dbaddc80679fe4891b8543f5accc4045c'
+PIN='ad48f1eae57817b955016c6a12114e3929852a3e636afcfbb91646697b4c6509'
 data=args.source.read_bytes()
 if hashlib.sha256(data).hexdigest()!=PIN:raise RuntimeError('Reviewed source changed')
 A=F(3,5);N=6000;L=F(3,40);U=F(9,25)

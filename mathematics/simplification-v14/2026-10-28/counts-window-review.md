@@ -4,7 +4,7 @@ Reviewer: counts component agent. Review worktree: `counts-window-review-v14`, b
 
 This agent constructed the separate paired-kernel/two-point-family component, but did **not** construct the all-law characteristic-function/transport argument or its acceptance checker. The mass estimate below was derived independently and differs from the constructor's estimate. No constructor Python is imported or executed.
 
-Reviewed source: `mathematics/simplification-v14/2026-10-28/large-index.tex`, SHA-256 `58c5cb0d372a1e4a898102a67523434dbaddc80679fe4891b8543f5accc4045c`.
+Reviewed source: `mathematics/simplification-v14/2026-10-28/large-index.tex`, SHA-256 `ad48f1eae57817b955016c6a12114e3929852a3e636afcfbb91646697b4c6509`.
 
 | Item | Mathematical status | Execution status |
 |---|---|---|
@@ -114,3 +114,7 @@ The checker rejects changed reviewed source bytes and imports no constructor. Th
 ## Final source-pin refresh
 
 After the first committed review, the coordinator changed only two long source references from `texttt` to `path` and inserted paragraph breaks. The saved diff confirms no formula, hypothesis or mathematical prose changed. The old source remains preserved in `check01/`; the final source pin above is freshly checked in `check02/`. The independent arithmetic was rerun against the final bytes, and fresh malformed-source rejections are preserved in `mutations02/`.
+
+## Explicit iid statement clarification
+
+The final statement now explicitly defines `U_j` as the conditional noise given `B=j`, and states that `X_1,...,X_n` are independent copies of `X`. The diff from the preceding reviewed source contains exactly these two sentences. They make explicit the conditional-law and iid hypotheses already used throughout this audit; no bound, formula or arithmetic domain changes. The final pin above is bound by fresh `check03/`, which preserves the source, exact diff and successful quick checker replay. Earlier review snapshots remain unchanged.
