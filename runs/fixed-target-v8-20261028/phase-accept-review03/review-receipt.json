@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "mathematics/fixed-target-v8/2026-10-28/reviews/phase-accept-repair-review.py",
+    "../phase-entry-v8"
+  ],
+  "returncode": 0,
+  "source_sha256": "88811fe093917877f443248544221990a2bd69c784fd83b6cd1f46ea555c39d1",
+  "evidence_scope": "Individual subprocess stdout/stderr raw SHA256 and returncodes are in their receipts. Committed views normalize environment paths; unnormalized logs remain locally ignored. Cached producer stdout is stored losslessly in gzip where applicable."
+}

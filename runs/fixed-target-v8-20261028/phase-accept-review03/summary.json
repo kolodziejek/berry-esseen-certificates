@@ -1,0 +1,31 @@
+{
+  "acceptor_sha256": "416ab9b7bf957c57062e929743dad200f9ac002f879cb2516eeb9c6a2ac2e6b7",
+  "active_cells": 682,
+  "attacks_present_during_success": [
+    "timestamp-valid unreviewed phase_core cache in inherited prefix",
+    "v7 phase_core.py shadow module"
+  ],
+  "candidate_sha256": "b18599468c975032f4078e7a5f734fd6430b2b7da583789de58d9537d323f690",
+  "controls": [
+    "prior unreviewed-cache export rejected",
+    "optimized Python rejected",
+    "pinned core mutation rejected",
+    "nested JSON duplicate rejected"
+  ],
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "replay_stdout_sha256": "b18599468c975032f4078e7a5f734fd6430b2b7da583789de58d9537d323f690",
+  "scope": "Executable source binding and deterministic export authenticity; does not replay v7 stages1-3 or establish analytic premises.",
+  "source_pins": {
+    "mathematics/fixed-target-v5/2026-10-27/cell-sources/high_window_core.py": "53e181be63852e21abc3f44191cce7237c46d9e9d7868d3b6b94fccb606c7232",
+    "mathematics/fixed-target-v5/2026-10-27/cell-sources/kernel.py": "d71f58b7527c3cf6d2146d816e5d124f6f331d1b153e5aaedee5182707647f12",
+    "mathematics/fixed-target-v7/2026-10-27/accept_entry.py": "fe8197d6943c4decb7421bd1c162d7ec24045fdb3ea1215356249b4be620d69d",
+    "mathematics/fixed-target-v7/2026-10-27/entry-proof.json": "61b7ad43e20046d7cbf7157e3feb61696331731e7be418f6a5fa535c2eee8bae",
+    "mathematics/fixed-target-v7/2026-10-27/signed_core.py": "1f40ccb90eb58a7f84dc61a0a5dd9bf6e6eb4e341aa6c9c6d049d08451f5211b",
+    "mathematics/fixed-target-v7/2026-10-27/signed_support.py": "eecb06e65d8520d7cc06fc34217e06e1c0b1840dd8d687621e6828923769a4c4",
+    "mathematics/fixed-target-v8/2026-10-28/build_phase_core.py": "f39b10eed0da60f35b37393cd046f72dd2d45bd58afd60cf3e82b339de113bdd",
+    "mathematics/fixed-target-v8/2026-10-28/phase_core.py": "c9cc7e5a0e5637faafc912882cdb9bcd28bda5fa9982304ede2ab412c724ee7a",
+    "mathematics/fixed-target-v8/2026-10-28/phase_probe.py": "90ca756fde0425505013444ab1a5ff5ffa9fb9bb0ff125fbdda6a132eb64167d"
+  },
+  "status": "PASS_REPAIRED_PHASE_ACCEPTOR_AUTHENTICITY",
+  "total_cells": 2048
+}
