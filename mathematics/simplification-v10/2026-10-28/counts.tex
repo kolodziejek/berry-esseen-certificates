@@ -1,0 +1,307 @@
+\section{A count comparison adapted to the available strip}
+\label{v10:counts}
+
+The integer used to compare an iid sum with a binomial sum is a choice,
+not a property of the law. Choosing it to fit the conditional support
+removes one reason for requiring a half-amplitude strip. This section
+proves that change and describes all other estimates that must change with
+it. It does not assert a complete numerical comparison on the new domain.
+
+Let $Y=B+U$, where $B$ is Bernoulli with parameter $0<p<1$,
+$q=1-p$, and $\mathbb E(U\mid B)=0$. Denote the conditional laws by
+$U_0,U_1$, and suppose
+\[
+ |U_j|\le A,\qquad U_0\le a_0,\qquad U_1\ge-a_1,
+ \qquad a_0,a_1\ge0,\quad a_0+a_1\le d_0\le A.
+\]
+Write $v=pq$, $s=q\mathbb EU_0^2+p\mathbb EU_1^2$, $\lambda=ns$,
+$\ell=(v+s)^{-1/2}$, $\rho=\mathbb E|\ell(Y-p)|^3$ and
+$\rho_B=(1-2v)/\sqrt v$. The actual raw threshold is $H$ and
+$x=np+H/\ell$. Set $\zeta=1-d_0$.
+
+\subsection{Choice of phase and the exact identity}
+Assume $A+2d_0<1$ and define
+\begin{equation}\label{v10:count:phase}
+ l=\frac{A-1-2d_0}{2},\qquad h=l+1,
+ \qquad \epsilon=\frac{1-A-2d_0}{2}>0.
+\end{equation}
+Every $x\in\mathbb R$ has a representation $x=k+u$ with integer $k$ and
+$u\in[l,h]$, for example $k=\lfloor x-l\rfloor$; either choice is allowed
+at a shared endpoint. This assertion alone does not ensure that $k$ is a
+legal or interior binomial count. For example, if $p\in[p_-,p_+]$,
+$|H/\ell|\le X_*$ and $n\ge N$, the sufficient conditions
+\[
+ Np_--X_*-h>0,\qquad N(1-p_+)-X_*+l>0
+\]
+ensure $1\le k\le n-1$.
+
+Notice that $d_0\le A$ and $A+2d_0<1$ imply $d_0<1/3$, $A<1$ and $-\zeta<l<h<\zeta$: indeed $h<\zeta$ is equivalent to $A<1$, while $l> -\zeta$ follows from $A+1-4d_0\ge1-3d_0>0$.
+
+For a legal count define $\delta=k-np$, $\pi_j=\binom njp^jq^{n-j}$,
+with zero extension, and $F_B$ its CDF. Let $V_j$ be a sum of $j$ independent
+copies of $U_1$ and $n-j$ of $U_0$. Conditional independence gives exactly
+\[
+ Q:=\mathbb P\Big\{\sum Y_i\le k+u\Big\}-F_B(k)
+ =-\sum_{i=0}^k\pi_{k-i}\mathbb P\{V_{k-i}>u+i\}
+   +\sum_{i=1}^{n-k}\pi_{k+i}\mathbb P\{V_{k+i}\le u-i\}.
+\]
+The outgoing event is strict and the incoming event closed. Put $c=C_E$,
+$a=\sqrt n\{\mathbb P(\sum Y_i\le x)-\Phi(H/\sqrt n)\}-c\rho$, and
+\[
+ C_B=\frac{\sqrt n}{\rho_B}\{F_B(k)-\Phi(\delta/\sqrt{nv})\},
+ \qquad
+ f(u)=\frac{\Phi((\delta+u)/\sqrt{n(v+s)})-
+                  \Phi(\delta/\sqrt{n(v+s)})}{\pi_k}.
+\]
+Direct subtraction, with no phase-size assumption, gives
+\begin{equation}\label{v10:count:master}
+ a+\rho_B(c-C_B)=\sqrt n\pi_k\{Q/\pi_k-f(u)\}+\mathcal R,
+\end{equation}
+where
+\[
+ \mathcal R=\sqrt n\{\Phi(\delta/\sqrt{nv})-
+                   \Phi(\delta/\sqrt{n(v+s)})\}+c(\rho_B-\rho).
+\]
+
+\subsection{Crossings and curvature on the longer phase interval}
+Couple all $2n$ conditional variables independently and set
+$V_j=\sum_{i\le j}U_{1,i}+\sum_{i>j}U_{0,i}$, extending constantly
+outside $[0,n]$. Then $j+V_j$ has increments at least $\zeta$ inside the
+legal range and one outside. Consequently
+\[
+ K=\max\{j\in\mathbb Z:j+V_j\le k+u\},\quad R=K-k,
+ \qquad \mathbb P\Big\{\sum Y_i\le k+u\Big\}=\mathbb EF_B(k+R).
+\]
+For real $z$, define the finite sum $T(z)=\sum_{j\ge1}(z-j)_+$.
+Let $\chi=(n+1)p-k$ and $m_B=\max_j\pi_j$. For every integer $r$,
+\begin{equation}\label{v10:count:curvature}
+ F_B(k+r)-F_B(k)-r\pi_k
+ \le\frac{m_B}{(n+1)v}
+ \left\{T(\chi)r_++\chi_+\binom{r_-}{2}+\binom{r_-}{3}\right\}.
+\end{equation}
+Indeed, the binomial difference identity bounds the positive part of
+$\pi_j-\pi_{j-1}$ by $m_B((n+1)p-j)_+/((n+1)v)$, including its zero
+extension. For $r>0$, double summation gives weights $r-i+1\le r$ on
+the differences at $k+i$; summing their positive bounds gives $rT(\chi)$.
+For $r=-m<0$, the weights are $m-1-i$, $0\le i\le m-2$, on differences
+at $k-i$. The bound $(\chi+i)_+\le\chi_++i$ gives the other two terms.
+There is no restriction $\chi<2$ in this proof.
+
+More generally suppose $-\zeta<l\le u\le h<\zeta$, $0<\zeta\le1$,
+and write $t=\mathbb EV_k^2$. Crossing monotonicity gives
+\begin{equation}\label{v10:count:crossings}
+ \mathbb ER_+\le\frac{t}{(\zeta-u)^2},\qquad
+ \mathbb E\binom{R_-}{2}\le\frac{t}{[\zeta+\min(u,\zeta/3)]^2},
+ \qquad
+ \mathbb E\binom{R_-}{3}\le C_3t\sqrt{A^2+3t},
+\end{equation}
+where
+\[
+ C_3=\sup_{j\in\mathbb Z,\,j\ge2}
+                  \frac{j^3-j}{6(\zeta j+l)^3}.
+\]
+For the first estimate, $R=r\ge1$ implies $-V_k\ge\zeta r-u>0$.
+The difference $(\zeta r-u)^2-r(\zeta-u)^2$ equals
+$(r-1)(\zeta^2r-u^2)\ge0$. For $R=-m\le-2$, the first unaccepted count
+gives $V_k>\zeta(m-1)+u>0$. For $u\le\zeta/3$,
+$j(j+1)/(2(\zeta j+u)^2)$ decreases on $j\ge1$, since its derivative
+has the sign of $j(2u-\zeta)+u\le0$. For larger $u$, lower it to
+$\zeta/3$. This proves the second estimate. The same strict crossing
+with $j=m-1\ge2$ proves $\binom{R_-}{3}\le C_3(V_k)_+^3$.
+Finally, independence and centering give
+$\mathbb EV_k^4\le A^2t+3t^2$, and Cauchy--Schwarz proves the last bound.
+
+For $A=3/5$, $d_0=9/125$, the interval is
+\begin{equation}\label{v10:count:constants}
+ [l,h]=[-34/125,91/125],\qquad \zeta=116/125,
+ \qquad C_3=\frac{1953125}{7739786}.
+\end{equation}
+To verify the last value, the derivative of
+$(j^3-j)/(6(\zeta j+l)^3)$ has the sign of
+$3lj^2+2\zeta j-l$. For these constants it is positive at $2$,
+negative at $3$, and has just one positive zero. Thus only the integers
+$2,3$ can maximize it; the value at $3$ is the larger. For other $l<0$,
+the same argument reduces the integer maximum to $2$ and the adjacent
+integers to $(\zeta+\sqrt{\zeta^2+3l^2})/(-3l)$. If $l\ge0$, its
+supremum is $1/(6\zeta^3)$.
+
+\paragraph{The phase supremum still has three candidates.}
+For $0<\zeta\le1$ and $[l,h]\subset(-\zeta,\zeta)$, put
+\[
+ F(u)=\frac{T(b+u)}{(\zeta-u)^2}
+       +\frac{(b+u)_+}{[\zeta+\min(u,\zeta/3)]^2}.
+\]
+Its maximum is the larger endpoint value, or the value
+$1/[4(\zeta-b)]$ when
+\[
+ \zeta>b,\quad l\le\zeta-2b\le h,\quad
+ \zeta-2b\le\zeta/3,\quad\zeta-2b\le1-b.
+\]
+Here is the point at which the old $|u|\le1/2$ proof needs care.
+Each active summand $(b+u-j)/(\zeta-u)^2$ has strictly positive second
+derivative: its numerator is twice
+$3(b+u-j)+2(\zeta-u)>0$. Below $\zeta/3$, the second derivative of the
+other term has sign $3b+u-2\zeta$. Whenever $T(b+u)>0$, this is greater
+than $3-2u-2\zeta>3-8\zeta/3\ge1/3$. Thus their sum is convex there
+even on the longer phase interval. Above $\zeta/3$ the second term is
+piecewise linear. All derivative jumps at $b+u=0,1,2,\ldots$ and at
+$u=\zeta/3$ are nonnegative. An interior maximum can therefore occur
+only where $T=0$ and the derivative
+$(\zeta-2b-u)/(\zeta+u)^3$ vanishes. The displayed eligibility and value
+follow. Continuity includes coincident breakpoints and constant pieces.
+
+\subsection{The marked crossing needs no half-amplitude bound}
+Let $D_i=U_{1,i}-U_{0,i}$ and
+$\vartheta=\mathbb E(D_i)_+=\mathbb E(D_i)_-$. For $0<\eta\le1$,
+write $R_f=\mathbb E\{u+\eta-V_k\}$, where braces denote fractional part.
+The deleted sums have laws
+$A_0=kU_1+(n-k-1)U_0$ and $A_1=(k-1)U_1+(n-k)U_0$. Then
+\begin{equation}\label{v10:count:mark}
+ \mathbb ER\le u+\eta-R_f+\frac{\vartheta}{\eta}
+ \sum_{i\ge1}\{\mathbb P(A_0\le u+d_0-\zeta i)
+                  +\mathbb P(A_1>u+\eta+i-A)\}.
+\end{equation}
+To prove it, set $z=u-V_k$ and use the marks
+\[
+ Z_f=\sum_{i=1}^{n-k}(D_{k+i})_-\mathbf1_{\{V_k\le u-\zeta i\}},
+ \quad Z_b=\sum_{i=1}^{k}(D_{k-i+1})_+
+                         \mathbf1_{\{V_k>u+\eta+i\}}.
+\]
+On $R>z+\eta$, if $R>0$ the crossing implies $z\ge\zeta R$, so all
+forward marks through $R$ are active and $R\le z+Z_f$. If $R<0$,
+$z<R-\eta$ activates all backward marks through $-R$, and the accepted
+count gives $R\le z+Z_b$. The case $R=0$ is impossible on this event.
+Thus if $h=R-\lfloor z+\eta\rfloor>0$, then
+$Z_f+Z_b>h-1+\eta\ge\eta h$. This yields the pathwise inequality
+$R\le\lfloor z+\eta\rfloor+(Z_f+Z_b)/\eta$.
+Deleting a forward pair uses $U_0>U_1\ge-d_0$ on its active mark;
+deleting a backward pair uses $U_1\le A$. Independence from the deleted
+pair then gives (\ref{v10:count:mark}). The bound
+$|R|\le1+(|V_k|+|u|)/\zeta$ justifies expectations. No phase restriction
+has been used.
+
+On the shifted interval, the first individual distances are
+\[
+ 1-2d_0-h=1-A+l=\epsilon>0.
+\]
+For the optional common-deleted-sum estimate they become
+$1-3d_0-h=1-A-d_0+l=\epsilon-d_0$; hence that extra shortcut requires
+$A+4d_0<1$. The concrete values in (\ref{v10:count:constants}) give
+$\epsilon=16/125$ and $\epsilon-d_0=7/125$.
+The fourth-moment tail denominators for marks $i\ge3$ are
+$(5/2)\zeta-A-h=124/125$ and $(5/2)\zeta-A+l=181/125$, both positive.
+The conditional spans are at most $A+d_0=84/125<1$, so the harmonic
+fractional-part estimate applies. These are domain checks, not a numerical
+upper bound for the full error in (\ref{v10:count:master}).
+
+\subsection{Other changes that the shifted anchor requires}
+The count must be held fixed while differentiating $f$. A Stirling estimate
+$\sqrt n\pi_k=\phi(0)v^{-1/2}\exp\{-\delta^2/(2nv)+e\}$,
+$n|e|\le Z(D)$, is used on the enlarged count displacement range.
+On $|\delta|\le D$, $|u|\le a$, the usual derivative bounds remain valid
+with this new $a$, without requiring $a\le1/2$. In particular, the term
+$(2Da+a^2)/(2v_-)+Z(D)$ must be recomputed. The positive-phase signed
+Gaussian estimates also hold on any $[a,b]\subset[0,\infty)$: their proof
+uses convexity on the segment from $0$ to the actual $u$, not $u\le1/2$.
+The negative-phase estimate has the same property.
+
+For tiny noise, the shifted-quartic argument can still use $r=zt$ and
+its original quadratic lower bounds. If the negative phase has maximum
+magnitude $a_-=-l>0$, the far-end Cantelli gate must be
+\begin{equation}\label{v10:count:tiny}
+ \frac{a_-^2}{t_*+a_-^2}-h_fa_->c_-t_*,\qquad z_-t_*<a_-.
+\end{equation}
+The other gates are unchanged:
+$J(1,-h_f,z_-)>c_-$,
+$z_-^2/(1+z_-^2t_*)-h_fz_->c_-$, and
+$2z_-/(1+z_-^2t_*)^2>h_f$.
+Indeed $r^2/(t+r^2)-h_fr$ has positive derivative at $r=z_-t$;
+its second derivative changes sign once, so any later stationary point
+is a maximum. Its minimum on $[z_-t,a_-]$ is at an endpoint. The left
+endpoint divided by $t$ decreases with $t$, and the right endpoint is
+bounded by (\ref{v10:count:tiny}). On the positive side replace
+$z_+t_*<1/2$ by $z_+t_*<h$. The quartic and the bound $f(u)\ge l_fu$
+then give the same proof. These conclusions still require their numerical
+gates; changing the anchor does not itself control noise tending to zero.
+
+The binomial ratio shortcut $p_++\Delta<2$ need not hold on the enlarged
+displacement range. One safe replacement is
+$\pi_{k+i}/\pi_k\le M_B/m_0$ whenever
+$\sqrt n\,m_B\le M_B$ and $\sqrt n\pi_k\ge m_0>0$.
+All-probability Stirling constants use $|1-2r|$, not $1-2r$, on their
+count-frequency segment. Likewise set $r_0=\min(p,q)$ in the variance
+bound $|s_1-s_0|\le s/r_0$.
+
+The absolute cubic needs no reflection. If $d_0<\min(p,q)$, its two
+conditional signs are fixed and
+\[
+ \mathbb E|Y-p|^3\ge v(1-2v)+(3r_0-d_0)s.
+\]
+To see this, expand the cubic and bound
+$p\mathbb EU_1^3-q\mathbb EU_0^3\ge-pa_1s_1-qa_0s_0$;
+the coefficients of $qs_0$ and $ps_1$ are respectively $3p-a_0$ and
+$3q-a_1$, both at least $3r_0-d_0$. Hence
+\[
+ (v+s)^{3/2}(\rho-\rho_B)\ge s\left\{
+ 3r_0-\tfrac32(1-2v)-d_0-\frac{3(1-2v)s}{8v}\right\}.
+\]
+The same signed-multiplier rule remains necessary if this bracket is negative.
+
+Finally, if the mass upper bounds are not normalized to one, the whole-count
+inverse-index term is
+\[
+ I(\lambda)=\frac{M_B\omega_+}{v_-}
+    \{\sup F+C_3\sqrt{A^2+3T_U}\}
+       +M_k aB_1+\frac{M_k aP_1}{\lambda}+\kappa,
+\]
+where $\sqrt n\pi_k\le M_k$ and $\mathcal R\le\kappa\lambda/n$.
+Thus a replacement domain must recompute both mass bounds, the own-count
+variance factors, all Gaussian constants, the cubic repair and marked tails.
+
+\subsection{Spend the available Bernoulli gap}
+Schulz's dissertation, Theorem 1 (printed page 15), equations (4) and (5), gives the strict finite-index
+Bernoulli bound for all $0<p<1$, and for $1/3\le p\le2/3$ the sharper
+bound
+\[
+ C_B<c(p):=\frac{\phi(0)(3+|1-2p|)}{6(p^2+q^2)}.
+\]
+Here the statement concerns every threshold, since its source bounds the
+Kolmogorov distance. Put $p_*=(4-\sqrt{10})/2$. Elementary expansion gives
+\begin{equation}\label{v10:count:gap}
+ g(p):=\rho_B(C_E-c(p))
+      =\frac{2C_E(\min(p,q)-p_*)^2}{\sqrt{pq}}\ge0.
+\end{equation}
+Outside $[1/3,2/3]$, use $g(p)=0$ and the strict universal Bernoulli bound.
+Thus any witness with $a\ge0$ has left side of
+(\ref{v10:count:master}) strictly greater than $g(p)$. It is sufficient
+to bound its right side by $g(p)$, with a non-strict inequality.
+At zero noise, a maximizing Bernoulli threshold is an atom; the strict
+finite-index theorem excludes it directly. No separate unproved strictness
+assumption is needed.
+
+Suppose on a probability interval $I$ and noise interval $[L,U]$, $L>0$,
+the comparison has been bounded by
+\[
+ \sqrt n\pi_k\lambda B(\lambda)+\lambda I_0(\lambda)/n,
+ \quad m_0\le\sqrt n\pi_k\le M_k,
+ \quad I_0(\lambda)=A_0+A_1/\lambda,\quad A_1\ge0,
+\]
+where $B$ is convex and all constants are fixed on the cell. Define
+\[
+ \Gamma(\lambda)=\max\{m_0B(\lambda),M_kB(\lambda)\}
+                     +\frac{\max(0,I_0(\lambda))}{N}.
+\]
+It is convex, since positive multiples and finite maxima preserve convexity.
+For any $0\le g_I\le\inf_{p\in I}g(p)$, the two endpoint inequalities
+\begin{equation}\label{v10:count:gaptest}
+ \Gamma(L)\le g_I/U,\qquad\Gamma(U)\le g_I/U
+\end{equation}
+give a contradiction: the comparison error is at most
+$\lambda\Gamma(\lambda)\le\lambda g_I/U\le g_I\le g(p)$.
+This permits either sign of $B$ and $I_0$. Subtracting $g_I/\lambda$
+from the old score would not preserve the same convexity argument.
+
+The conclusions are analytic replacements for the count interface. They
+allow the $0.6$ strip to replace half-amplitude in its domain assumptions,
+but only a complete numerical comparison (including the small-noise part)
+could remove half-amplitude confinement from the final proof dependency graph.

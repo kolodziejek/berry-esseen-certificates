@@ -1,0 +1,24 @@
+{
+  "status": "PASS_SHIFTED_COUNT_IDENTITIES_AND_BOUNDED_CONTROLS",
+  "mathematical_scope": "Analytic derivations are in counts.tex; these finite tests are not a complete count-comparison cover",
+  "execution_scope": "Exact rational algebra and actual finite-law regressions; no floating optimization",
+  "phase": [
+    "-34/125",
+    "91/125"
+  ],
+  "third_crossing_coefficient": "1953125/7739786",
+  "discrete_curvature_cases": 6025,
+  "cases_with_chi_at_least_two": 1956,
+  "phase_grid_regression_points": 24600,
+  "actual_law_cases": 720,
+  "pathwise_checks": 37044,
+  "observed_own_count_atom_collisions": 894,
+  "negative_controls": [
+    "The old nearest phase interval has a negative first backward mark distance",
+    "Keeping only j=2 underestimates the third-crossing coefficient",
+    "Replacing T(chi) by (chi-1)+ fails as a coefficient when chi>2",
+    "A closed count-plane atom cannot be replaced by an open event"
+  ],
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "source_sha256": "de5dbd757c45b258b166eabf0d05e24d8f104e2f99e1b06061c1ffdaa8c07185"
+}
