@@ -1,0 +1,217 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\newcommand{\E}{\mathbb E}\newcommand{\CE}{C_{\rm E}}
+\newtheorem{proposition}{Proposition}\newtheorem{lemma}{Lemma}
+\title{Keeping the sign of the threshold in the fixed-target resource}
+\author{Bartosz Ko{\l}odziejek and Kacper Rodziewicz}
+\date{28 October 2026}
+\begin{document}\maketitle
+\noindent This research note proves a conditional improvement to the
+coarse-entry estimate. Its purpose is to retain information already paid
+for in that computation. It does not prove the remaining confinement,
+count comparison, or finite base. AI assisted its derivation, implementation
+and exposition; the accompanying independent checks have the specific
+scope described below.
+
+\section{Why the threshold matters}
+The coarse entry used $|H|$ to obtain one bound valid for both signs of the
+raw sum threshold. This was convenient for acquiring moments, but loses
+information needed at the next step. A term $KH$ can help when $H>0$
+and hurt when $H<0$. Replacing it by $|K|\,|H|$ too early discards that help.
+We retain its sign within each previously accepted moment cell.
+
+Fix $n\ge N=42$ and $c=\CE$. Let $P$ be an attained fixed-target maximizing
+witness with nonnegative excess
+\[
+ a=\sqrt n\,\{\mathbb P(S_n\le H)-\Phi(H/\sqrt n)\}-c\rho\ge0,
+ \qquad \rho=\E|X|^3.
+\]
+Retain the predecessor, contact, gap, and Fourier hypotheses of the
+accepted coarse entry, named
+\texttt{INITIAL42\_FIXED\_TARGET\_COARSE\_V7}.
+Write $\gamma=\E X^3$, $\beta=\E[X|X|]$ and
+\[
+ D=(3+\sqrt{10})\rho-\gamma-3J,\qquad
+ \mathcal U=(n+H^2)a+n\phi(0)D/6+n^{3/2}L\ge0.
+\]
+Here $J$ is the actual weighted gap sum and $L$ is the nonnegative
+leakage from the conservation identity. Neither may be replaced by the
+corresponding quantity of a two-point approximation.
+
+\section{A signed bound from one accepted cell}
+The fourth signed pass of the entry proof already gives, on each cell,
+\begin{equation}\label{raw}
+ \mathcal R_c\le K_F+cA+(cK_1+\varphi W)H+s|H|
+       -(c\rho+\varphi\gamma/2)H^2,
+ \qquad \varphi=\phi(H/\sqrt n).
+\end{equation}
+The intervals for $K_1,W,\rho,\gamma$ and $\varphi$ refer to the same law.
+The letter $W$ here denotes the signed moment expression in the
+remainder; it is not a conditional noise variable.
+The cell supplies $\rho\ge r_l$, $\gamma\ge g_l$,
+$\varphi\in[\varphi_l,2/5]$, and a previously proved raw ceiling
+$\mathcal R_c\le T<Nc_-r_l$, where $c_-\le c\le c_+$.
+
+There are two ordered uses of the raw estimate. The density floor in
+\eqref{raw} uses the preceding pass. The newly obtained ceiling $T$ is
+then used in conservation to pay for an additional quadratic term.
+In detail, put $w=H^2/(2n)$ and $M=c\rho-\phi(0)D/6$.
+The conserved inequality gives $e^{-w}M\ge c\rho-T/n>0$ and
+\[
+ \mathcal R_c-\mathcal U=n(1-e^{-w})M
+ \ge \frac{H^2}{2}(c\rho-T/n)\ge\eta H^2,
+ \qquad
+ \eta=\frac{c_-r_l-T/N}{2}>0.
+\]
+We used $e^w-1\ge w$. This argument does not use its conclusion to
+justify its own density floor.
+
+For $t=c_-$ or $c_+$, define
+\[
+ B_t=K_F+tA,\quad
+ Q_t=tr_l+\min_{\varphi\in[\varphi_l,2/5]}\varphi g_l/2+\eta,
+\]
+\[
+ F_{t,+}=\max(tK_1+\varphi W)+s,\qquad
+ F_{t,-}=-\min(tK_1+\varphi W)+s.
+\]
+The maxima and minima range over the recorded rectangular intervals.
+They can be evaluated at the eight corners, since the expression is
+affine in each variable separately. All exported $Q_t$ are positive.
+
+\begin{proposition}[Signed resource]\label{signed}
+For $h=|H|$ and the original sign $\epsilon$ of $H$,
+\[
+ 0\le\mathcal U\le
+ \min\left\{T,\ 
+ \max_{t\in\{c_-,c_+\}}
+       (B_t+F_{t,\epsilon}h-Q_th^2)\right\}.
+\]
+At $H=0$ either sign gives the same bound.
+\end{proposition}
+\begin{proof}
+For either fixed sign, the maximum defining $F_{t,\epsilon}$ is a
+maximum of affine functions of $t$, hence is convex in $t$.
+For fixed $h\ge0$, $B_t+F_{t,\epsilon}h-Q_th^2$ is therefore convex.
+Its maximum on the enclosing interval for $c$ occurs at an endpoint.
+Combining \eqref{raw} with the ordered phase price proves the quadratic
+bound. Also $\mathcal U\le\mathcal R_c\le T$.
+A negative signed slope remains negative; replacing it by zero would
+lose a valid improvement.
+\end{proof}
+
+\section{Using a noise restriction without fixing the index}
+Let $p=\mathbb P(X>0)$, $q=1-p$, $v=pq$, and
+$m=\E X_+=\E X_->0$. The possible atom at zero is assigned to the
+nonpositive class. Conditional centering gives
+\[
+ \theta=1-\frac{m^2}{v},\qquad
+ \ell^2=\frac{1-\theta}{v},\qquad
+ \lambda=\frac{n\theta}{\ell^2}
+          =\frac{nv\theta}{1-\theta}.
+\]
+Consequently
+\begin{equation}\label{identities}
+ \theta=\frac{\lambda}{nv+\lambda},\qquad
+ m^2=\frac{v^2}{v+\lambda/n}.
+\end{equation}
+The two unnormalized conditional variance contributions $\theta_+,\theta_-$
+are nonnegative and sum to $\theta$. Thus
+\[
+ \beta=(1-\theta)(1-2p)+\theta_+-\theta_-,
+ \qquad
+ 1-2p-2q\theta\le\beta\le1-2p+2p\theta.
+\]
+These formulas retain the orientation when $p>1/2$.
+
+\begin{lemma}[A necessary filter]\label{filter}
+Let $p\in[l,u]\subset(0,1)$ and $0\le\lambda\le\Lambda$.
+Put $v_-=\min\{l(1-l),u(1-u)\}$ and let $v_+$ be the maximum of
+these two values and $1/4$ if $[l,u]$ contains $1/2$.
+For every $n\ge42$,
+\[
+ \theta\le\Theta=\frac{\Lambda}{42v_-+\Lambda},\qquad
+ \sqrt{\frac{v_-^2}{v_-+\Lambda/42}}\le m\le\sqrt{v_+},
+\]
+\[
+ 1-2u-2(1-l)\Theta\le\beta\le1-2l+2u\Theta .
+\]
+\end{lemma}
+\begin{proof}
+The function $v^2/(v+s)$ increases with $v>0$ and decreases with $s\ge0$.
+Apply this fact to \eqref{identities}, then enlarge the coefficients in
+the two beta inequalities outward on $[l,u]$.
+This includes the limit $n\to\infty$; it is not a fixed-index approximation.
+\end{proof}
+
+For a closed region $p\in[l,u]$, $h\in[h_0,h_1]$, $\lambda\in[0,\Lambda]$,
+retain every cell meeting these necessary ranges and with its acquired
+phase ceiling at least $h_0$. Closed overlaps are retained.
+For each retained cell clip $h_1$ by that phase ceiling.
+A concave quadratic $B+Fh-Qh^2$, $Q>0$, has its maximum at
+\[
+ h=\max\{h_0,\min(h_1,F/(2Q))\}.
+\]
+Apply this to both target endpoints, intersect with that cell's $T$,
+and take the maximum over all retained cells.
+An empty cell list excludes the region only when the complete ancestor
+cover has first been established. A negative resulting upper bound
+contradicts $\mathcal U\ge0$.
+
+\section{Exact closed-region consequences}
+The complete fourth pass has 2,048 boxes and exports all 682 active cells.
+The following are outward rational upper bounds with denominator $10^9$;
+all rows have $p\in[.41,.42]$. No sampled phase value is substituted for
+an interval.
+\begin{center}
+\begin{tabular}{ccccr}\toprule
+$|H|$ & $\Lambda$ & cells & $H\ge0$ & $H\le0$\\\midrule
+$1.25$ & unrestricted &331&1.032820261&1.266287022\\
+$1.25$ & $.15$ &15&$-.128026665$&.206210125\\
+$[1.24,1.26]$ & $.15$ &18&$-.094649077$&.218329547\\
+$[1.20,1.30]$ & $.15$ &22&$-.033287706$&.265382458\\\bottomrule
+\end{tabular}
+\end{center}
+In particular, under the retained entry hypotheses, no nonnegative-excess
+witness can have
+\[
+ p\in[.41,.42],\qquad H\in[1.20,1.30],\qquad 0\le\lambda\le.15.
+\]
+For the reflected sign the last row is a resource ceiling, not an
+exclusion. A bound on one such region does not prove full confinement.
+
+\section{What is accepted, and what remains}
+The export adds three reversible insertions to the pinned signed kernel:
+initialization, an append after each surviving cell, and a return field.
+It changes none of the old bounds or rejection branches.
+Its exact reverse recovers the original source.
+The producer replays the final pass from the accepted third-pass rows,
+checks every resulting row against the selected entry object, and records
+all active cells. It does not claim to repeat the accepted prefix.
+
+The separate acceptance program pins its sources and inherited inputs
+before executing them. Project modules are compiled from those source
+bytes at explicit paths; a fresh isolated cache and interpreter exclude
+cached bytecode and import-path replacements. It replays all 2,048 boxes
+and compares the complete
+ordered JSON object with the proposed export. Comparison uses serialized
+types, so an integer cannot be replaced by a Boolean or a floating value.
+Duplicate keys, missing, repeated or reordered cells, false bounds and
+extra fields are rejected. This proves agreement with the reviewed
+deterministic computation, not the correctness of its analytic premises.
+
+The independent mathematical review reconstructs all 1,364 endpoint
+quadratics by a different rectangular-support formula, checks every phase
+price and preceding density floor, and evaluates all nine recorded closed
+regions by endpoints and interior vertices. It imports no inherited
+kernel. A separate executable review addresses source binding and coverage.
+The original selected entry replay, contact/conservation arguments,
+support acquisition, and complete Fourier estimates remain dependencies.
+
+Keeping these signed envelopes requires no new Fourier integration beyond
+the last accepted pass. It removes the need to replace that pass by a
+single worst-case resource in these downstream estimates. It does not
+remove a complete confinement job, count theorem, finite certificate,
+or any existing repository proof object.
+\end{document}
