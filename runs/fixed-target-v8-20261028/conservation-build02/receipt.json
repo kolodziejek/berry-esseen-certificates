@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/conservation-v8/mathematics/fixed-target-v8/2026-10-28/conservation-main.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/conservation-v8/runs/fixed-target-v8-20261028/conservation-build02",
+    "--json"
+  ],
+  "cwd": "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8",
+  "returncode": 0,
+  "elapsed_seconds": 0.914885542,
+  "inputs": {
+    "mathematics/fixed-target-v8/2026-10-28/conservation-main.tex": "9f60912aa5578360d3e5a5d1d5d0273dcc468db35b8f35ea5199e00de3142844",
+    "mathematics/fixed-target-v8/2026-10-28/conservation-proof.tex": "d8f55acc0462034329734de10b89507eb0a155eea65ea58a4b75c70cfaf4ad27"
+  }
+}
