@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-28T15:34:28.505028Z",
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/smallnoise-extension-v10/runs/moderate-noise-v10-20261028/build02/main.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/smallnoise-extension-v10/runs/moderate-noise-v10-20261028/build02/texlive",
+    "--json"
+  ],
+  "returncode": 0,
+  "input_sha256": {
+    "runs/moderate-noise-v10-20261028/build02/main.tex": "69f2f3a8e6e40259f7b2c9cfe6dcac7243bbe888d07d78f3ed9f022ad7ab2f08",
+    "mathematics/simplification-v10/2026-10-28/moderate-noise.tex": "bda129c029de36bac7a8455ec3f1e7f7726cea9b21bf89671be7e9095f775074"
+  },
+  "artifact_sha256": {
+    "runs/moderate-noise-v10-20261028/build02/texlive/main.pdf": "908cb93d69b80c942c3d804d60a0df3fcd72256ef30aa8659404d5f300f66039",
+    "runs/moderate-noise-v10-20261028/build02/page-1.png": "90cda4eae99ef9a4cdb64dddb5ca295c924df5891ad04496ff085de8f63d6f8f",
+    "runs/moderate-noise-v10-20261028/build02/page-2.png": "a9d603de02eb445db16eca61eac454f1b4ea2d95d0ef735bd3a8af399b6796e7",
+    "runs/moderate-noise-v10-20261028/build02/page-3.png": "784a9d168ce535a3787d33e9d2b6f238aae1a8c64897aaaaa089b60e92be0e3e",
+    "runs/moderate-noise-v10-20261028/build02/page-4.png": "605e2a46ba5cdefc97354989fe3229244c74c40eb328e3dadfe43bf86445c1ce",
+    "runs/moderate-noise-v10-20261028/build02/page-5.png": "533c195f70149b833811ab2bd7e22e17984fb8227dc209306d6c95db7d28d8b3",
+    "runs/moderate-noise-v10-20261028/build02/page-6.png": "b8757f09402df3e0de181d6f4119ebf5ee23114ed1fca927936d6c6765cb14aa"
+  },
+  "visual_review": {
+    "pages": 6,
+    "result": "All six pages inspected; equations readable and inside margins; no clipping. Final TeX log has no warnings or overfull boxes."
+  }
+}
