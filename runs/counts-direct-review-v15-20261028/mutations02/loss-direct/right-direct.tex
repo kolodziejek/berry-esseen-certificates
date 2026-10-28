@@ -1,0 +1,239 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,microtype}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\title{The right-strip comparison from five conditional counts}
+\author{}\date{28 October 2026}
+\begin{document}\maketitle
+
+We use the five-count reserve of \texttt{loss-direct.tex} to bound the full
+signed Berry--Esseen excess. Interpolating two binomial CDF values is
+less expensive than comparing to one prescribed integer anchor. In
+particular the normal error is a signed interpolation remainder of order
+$1/n$. No geometric budget or displacement bound of order $1/n$ is needed.
+
+\begin{theorem}\label{thm:right}
+Let $n\ge200$ be an integer and $p\in[2/5,53/100]$, with $q=1-p$ and
+$v=pq$. Let $Y=B+U$, where $B$ is Bernoulli of parameter $p$,
+$\E(U\mid B)=0$, and the conditional noise laws satisfy
+\[
+ -3/5\le U_0\le a_0,\qquad -a_1\le U_1\le3/5,
+ \qquad a_0,a_1\ge0,\qquad a_0+a_1\le9/125.
+\]
+Put $s=\E U^2$, $\lambda=ns$, $X=(Y-p)/\sqrt{v+s}$ and
+$\rho=\E|X|^3$. If $3/40\le\lambda\le9/25$, then for independent
+copies $X_1,\ldots,X_n$ and every $|H|\le46/25$,
+\[
+ \sqrt n\{\Pp(X_1+\cdots+X_n\le H)-\Phi(H/\sqrt n)\}
+                 -C_E\rho<-\frac{\lambda}{100},
+ \qquad C_E=\frac{3+\sqrt{10}}{6\sqrt{2\pi}}.
+\]
+\end{theorem}
+
+This is a theorem about every law satisfying the displayed support,
+centering, variance and threshold hypotheses. Acquiring these hypotheses
+for an extremal witness is a separate task. The statement concerns the
+positive signed discrepancy; reflection requires the corresponding
+hypotheses for the reflected law. It is not an unconditional cutoff
+theorem for the full iid conjecture.
+
+\section{The crossing formula and five binomial masses}
+Write
+\[
+ t=np+H\sqrt{v+s},\quad k=\lfloor t\rfloor,\quad u=t-k\in[0,1),
+ \quad w=t-np,
+\]
+and let $\pi_j$ and $F_B$ be the mass function and CDF of
+$\operatorname{Bin}(n,p)$. The support hypotheses imply the interior
+crossing conditions $na_0\le t<n(1-a_1)$.
+Indeed $v\ge6/25$, $\sqrt{v+s}<251/500$, and
+\begin{equation}\label{eq:w}
+ |w|<231/250<47/50.
+\end{equation}
+The retained v13 crossing identity gives
+\begin{equation}\label{eq:cross}
+ \Pp\Big(\sum X_i\le H\Big)
+ =(1-u)F_B(k)+uF_B(k+1)+\mathcal C(t)-\sum_{i=1}^n\pi_i g_i(t),
+\end{equation}
+where $g_i\ge0$ are the kernels in \texttt{loss-direct.tex} and
+\[
+ \mathcal C(t)=\sum_{j=1}^{n-1}(\pi_{j+1}-\pi_j)
+ \left\{\E(t-j-W_j)_+-(t-j)_+\right\}.
+\]
+Here $W_j$ is the sum of $j$ independent $U_1$ variables and $n-j$
+independent $U_0$ variables. All lower threshold events are closed.
+
+For $k-1\le i\le k+3$, \eqref{eq:w} gives $|i-np|<4$.
+For $z=i/n$, every point on the segment joining $z$ to $p$ lies in
+$[.38,.55]$, where $z(1-z)>23/100$. In particular the counts are interior.
+The explicit finite Stirling remainder
+\[
+ \log(m!)=(m+\tfrac12)\log m-m+\tfrac12\log(2\pi)+r_m,
+ \qquad0<r_m<1/(12m),
+\]
+and $D''(z\Vert p)=1/(z(1-z))$ give
+\begin{equation}\label{eq:mass}
+ \sqrt n\pi_i\ge\frac{\phi(0)}{\sqrt{z(1-z)}}
+ \exp\left\{-\frac{8+1/12}{200(23/100)}\right\}
+ >\frac{199}{250}\left(1-\frac{8+1/12}{46}\right)>
+ \frac{13}{20}.
+\end{equation}
+The same finite Stirling proof as in the retained count appendix is used;
+no local central limit theorem is invoked. The elementary bounds
+$199/500<\phi(0)<2/5$ follow from $25/8<\pi<22/7$.
+
+Let $\alpha=39/40$, $b=203/200$ and $x=3\alpha\lambda$.
+Taylor's integral remainder gives
+$1-e^{-x}\ge x-x^2/2+x^3/6-x^4/24$ for every $x\ge0$.
+The five-count theorem, monotonicity in $n$, and \eqref{eq:mass} yield
+\begin{equation}\label{eq:W}
+ \sqrt n\sum_i\pi_i g_i\ge W(\lambda):=
+ \frac{13}{50}\left\{
+ \frac{x-x^2/2+x^3/6-x^4/24}{2}
+ -\frac{(9/25)b\lambda+3b^2\lambda^2}{16}
+ -\frac{10(22/7)^2}{200}\lambda\right\}.
+\end{equation}
+No omitted count needs a new estimate: all other weighted kernels are
+nonnegative. The finite-window theorem already controls its omitted bump
+translates, with their entire fourth-moment tail.
+
+\section{Curvature and the signed normal interpolation}
+Use the summable-curvature lemma in the v14 note
+\texttt{geometry-slack.tex}. Set
+\[
+ c=(np-q-t)_+,\qquad T=\frac{100}{47}\lambda,
+ \qquad M=\frac9{25}T+3T^2.
+\]
+The actual conditional variance on the increasing side of the binomial
+mass is at most $\lambda/q\le T$, and its fourth moment is at most $M$.
+For $H\le0$ we have $c<23/50$; for $H\ge0$ it is zero.
+Also
+\[
+ \sqrt T<\frac32\sqrt\lambda\le\frac32(\lambda+1/4),
+ \qquad v^{3/2}>117/1000.
+\]
+The last square-root inequality is $(\sqrt\lambda-1/2)^2\ge0$.
+
+The binomial mode coefficient $\beta=41/100$ in the curvature lemma
+is valid throughout this right range. To check it, put $N=n+1$ and
+$r=m/N$ for a mode $m=\lfloor(N+1)p\rfloor$. Since
+$|m-Np|\le.6$ and $|1-2p|\le.2$,
+\[
+ r(1-r)\ge v(1-1/N-2/N^2)>39v/40\qquad(N\ge43).
+\]
+Finite Stirling, discarding its nonpositive entropy and denominator
+remainders, gives
+\[
+ \max_j\Pp(\operatorname{Bin}(N,p)=j)
+ <\frac{(2/5)\sqrt{40/39}(516/515)}{\sqrt{Nv}}
+ <\frac{41/100}{\sqrt{Nv}}.
+\]
+Thus, writing
+\[
+ S(\lambda,c)=\frac T4+\frac{3c}{2}(\lambda+1/4)
+       +\frac{27M}{256}\left(\frac53+\frac{5c}{4}\right),
+\]
+we have $\sqrt n\mathcal C(t)\le(41/100)S(\lambda,c)/(nv^{3/2})$.
+
+Schulz's binomial theorem \cite[Theorem1, printed p.1]{Schulz} gives,
+at both integer anchors and for every $0<p<1$,
+\[
+ \sqrt n\{F_B(j)-\Phi((j-np)/\sqrt{nv})\}<C_E\rho_B,
+ \qquad \rho_B=(1-2v)/\sqrt v.
+\]
+Convex interpolation preserves this bound. No sharper middle-$p$ reserve
+is needed here. For $G(z)=\Phi((z-np)/\sqrt{nv})$,
+\[
+ G''(z)\le\frac{\phi(0)(np-z)_+}{(nv)^{3/2}}.
+\]
+The signed linear-interpolation remainder therefore satisfies
+\[
+ \sqrt n\{(1-u)G(k)+uG(k+1)-G(t)\}
+ \le\frac{\phi(0)}{2nv^{3/2}}u(1-u)(u-w)_+.
+\]
+For $H\le0$, the variance change to $v+s$ is favorable. Using
+$u(1-u)\le1/4$, $u^2(1-u)\le4/27$ and \eqref{eq:w}, the total
+normal cost is at most
+\[
+ \frac{2/5}{nv^{3/2}}\left(\frac{231/250}{8}+\frac2{27}\right).
+\]
+For $H\ge0$, the interpolation cost is at most
+$(2/5)(2/27)/(nv^{3/2})$ and the variance change costs at most
+$\phi(0)ws/(2v^{3/2})$. The total is at most
+\[
+ \frac{2/5}{nv^{3/2}}\left(\frac2{27}+\frac{231}{500}\lambda\right).
+\]
+These estimates retain both signs of $H$, every phase and all threshold atoms.
+
+The cubic correction has the favorable sign. Expanding the actual marginal
+absolute third moment, and using the inward cubic bounds, gives
+\[
+ (v+s)^{3/2}(\rho-\rho_B)
+ \ge s\left\{\frac{87}{250}-\frac{13}{16}s\right\}>0.
+\]
+Here the two conditional supports have fixed signs relative to $p$;
+$\E U_0^3\le a_0\E U_0^2$, $\E U_1^3\ge-a_1\E U_1^2$,
+and $(1+y)^{3/2}\le1+3y/2+3y^2/8$ for $y\ge0$.
+The right side is positive because $s\le9/5000$.
+
+\section{Four rational endpoint comparisons complete the proof}
+Define two quadratic error polynomials
+\begin{align*}
+ E_-(\lambda)&=\frac{(41/100)S(\lambda,23/50)
+ +(2/5)(231/2000+2/27)}{117/1000},\\
+ E_+(\lambda)&=\frac{(41/100)S(\lambda,0)
+ +(2/5)(2/27+231\lambda/500)}{117/1000}.
+\end{align*}
+The preceding estimates give the following strict upper bound on the full signed excess:
+$-W(\lambda)+E_\pm(\lambda)/n$, according to the sign of $H$.
+It remains to prove positivity of
+\[
+ P_\pm(\lambda)=W(\lambda)-E_\pm(\lambda)/200-\lambda/100.
+\]
+Both are quartics. Their concavity has a direct explanation. With
+$z=3\alpha$, differentiating the gain gives
+\[
+ W''(\lambda)=-\frac{13}{50}
+ \left\{\frac{z^2}{4}\bigl[(z\lambda-1)^2+1\bigr]
+                    +\frac{3b^2}{8}\right\}<0.
+\]
+The error polynomials $E_\pm$ are convex quadratics. Thus $P_\pm''<0$
+for every real $\lambda$.
+The minimum of each concave polynomial is attained at an endpoint.
+The four exact rational comparisons, rounded down only for display, are
+\[
+\begin{array}{c|cc}
+ &\lambda=3/40&\lambda=9/25\\\hline
+P_-&>6075/10^6&>2577/10^6\\
+P_+&>11528/10^6&>11247/10^6.
+\end{array}
+\]
+The companion checker reconstructs the polynomials and verifies these
+comparisons using fractions. It performs no subdivision or optimization.
+Thus $P_\pm>0$ on the entire closed noise interval. Since $E_\pm>0$
+and $n\ge200$, Theorem~\ref{thm:right} follows.
+
+\section*{Dependencies and remaining range}
+The new local inputs are the five-count reserve in \texttt{loss-direct.tex},
+the v13 crossing identity and the v14 summable-curvature lemma. The external
+probability input is precisely Schulz's all-$p$ binomial theorem; finite
+Stirling has its explicit retained elementary proof. No geometric-budget,
+selected-count transport, marked crossing, Poisson comparison or new
+parameter certificate is used in this larger-noise comparison.
+
+For acquired witnesses, v13 geometry supplies $\lambda<.36$, while v12
+handles smaller positive noise. That small-noise theorem may choose a
+different integer anchor; this causes no problem because the binomial
+theorem holds at every anchor. Zero noise is Bernoulli. The support strips,
+raw-threshold bound, sign-specific acquisition and independent finite base
+remain separate obligations. No statement about unrestricted $C_n$ is made.
+
+\begin{thebibliography}{1}
+\bibitem{Schulz}J. Schulz,
+\emph{The optimal Berry--Esseen constant in the binomial case},
+doctoral dissertation, Universit\"at Trier, 2016.
+\url{https://d-nb.info/1197702695/34}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,20 @@
+--- /Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/counts-direct-review-v15/runs/counts-direct-review-v15-20261028/check03/loss-direct.tex	2026-10-28 23:23:44
++++ /Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v15/mathematics/simplification-v15/2026-10-28/loss-direct.tex	2026-10-28 23:24:45
+@@ -105,7 +105,7 @@
+ \[
+ \frac25B(x)\le\frac25\pi^2(1-x)^2
+ \le\frac25\left(\frac{22}{7}\right)^2\frac9{125}(1-x)
+-<\frac{41}{84}(1-x).
++\le\frac{41}{84}(1-x).
+ \]
+ At $x=1$ the minorant is zero. This includes all atoms of $D$ because
+ the displayed survival event stays strict.
+@@ -183,7 +183,7 @@
+ 1-\cos(2\pi x)\ge3x^2.
+ \]
+ On $0\le x\le2/3$, concavity gives
+-$\sin(\pi x)\ge(3\sqrt3/4)x>(51/40)x$.
++$\sin(\pi x)\ge(3\sqrt3/4)x\ge(51/40)x$.
+ On $2/3\le x\le84/125$, the Lipschitz bound for sine gives
+ $\sin(\pi x)>17/20-44/2625$.
+ Squaring these positive estimates proves the claim by rational
