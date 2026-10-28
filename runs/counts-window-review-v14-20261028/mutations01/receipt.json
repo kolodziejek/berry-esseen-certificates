@@ -1,0 +1,22 @@
+{
+  "status": "PASS_ALL_EXPECTED_REJECTIONS",
+  "checker_sha256": "9f97abe92694e05ae2cda8abcb99396bd32572b1508384d2b43515c92a78d87f",
+  "records": [
+    {
+      "name": "missing-option",
+      "returncode": 2,
+      "elapsed_seconds": 0.034624583
+    },
+    {
+      "name": "missing-file",
+      "returncode": 1,
+      "elapsed_seconds": 0.034655792
+    },
+    {
+      "name": "changed-bytes",
+      "returncode": 1,
+      "elapsed_seconds": 0.034144499999999994
+    }
+  ],
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]"
+}
