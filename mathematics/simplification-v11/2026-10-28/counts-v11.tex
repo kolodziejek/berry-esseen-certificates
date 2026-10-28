@@ -1,0 +1,271 @@
+\section{Keeping the third-moment gain extends the direct comparison}
+\label{v11:counts}
+
+The direct argument can be extended from $ns\le1/50$ to $ns\le3/100$
+without a parameter grid. The useful change is to keep the favorable
+third-moment term: it pays for most of the normal variance correction.
+The negative and positive inner phases must also have different incoming
+tail bounds. The support assumption remains $3/5$ throughout.
+
+\begin{theorem}\label{v11:counts:theorem}
+Let $n\ge42$, $2/5\le p\le53/100$, $q=1-p$, and $Y=B+U$, with
+$\Pp(B=1)=p$ and $\E(U\mid B)=0$. For the two conditional laws assume
+\[
+ |U_j|\le3/5,\qquad U_0\le a_0,\quad U_1\ge-a_1,
+ \qquad a_0,a_1\ge0,\quad a_0+a_1\le9/125.
+\]
+Set $v=pq$, $s=\E U^2$, $\lambda=ns$, $X=(Y-p)/\sqrt{v+s}$,
+$\rho=\E|X|^3$, and $\rho_B=(1-2v)/\sqrt v$. Suppose
+$0<\lambda\le U_*:=3/100$, $|H|\le46/25$, and $C\ge2/5$.
+Choose an integer $k$ and $u\in[-34/125,91/125]$ such that
+$np+H\sqrt{v+s}=k+u$, and write $\delta=k-np$.
+Then $k$ is interior, and for the sum $S_n$ of $n$ independent copies
+of $X$,
+\begin{align*}
+ \Delta_C:={}&\sqrt n\{\Pp(S_n\le H)-\Phi(H/\sqrt n)\}-C\rho\\
+ &-\sqrt n\{F_B(k)-\Phi(\delta/\sqrt{nv})\}+C\rho_B
+                                      <-\lambda/100,
+\end{align*}
+where $F_B$ is the distribution function of $\mathrm{Bin}(n,p)$.
+\end{theorem}
+
+This theorem deliberately requires $C\ge2/5$. The preceding $1/50$
+theorem, which permits every $C\ge0$, is unchanged. In particular the
+new theorem applies at the sharp Bernoulli constant. Acquiring the
+conditional representation, strip and threshold bound remains a
+separate part of the global proof.
+
+\subsection{The comparison and its repaired normalization}
+Let $W_j$ be a sum of $j$ independent $U_1$ variables and $n-j$
+independent $U_0$ variables, and put $\pi_j=\binom njp^jq^{n-j}$.
+Define
+\[
+ \begin{gathered}
+ f(u)=\frac{\Phi((\delta+u)/\sqrt{n(v+s)})-
+                 \Phi(\delta/\sqrt{n(v+s)})}{\pi_k},\\
+ O=\Pp(W_k>u)+f(u),\qquad
+ T=\sum_{i=1}^{n-k}\Pp(W_{k+i}\le u-i).
+ \end{gathered}
+\]
+Conditioning on the count and discarding only nonpositive outgoing terms
+other than the own count gives
+\begin{equation}\label{v11:counts:master}
+ \Delta_C\le-\sqrt n\pi_k(O-R_0T)+\mathcal R,
+\end{equation}
+provided $\pi_{k+i}/\pi_k\le R_0$, where
+\[
+ \mathcal R=\sqrt n\{\Phi(\delta/\sqrt{nv})-
+                \Phi(\delta/\sqrt{n(v+s)})\}+C(\rho_B-\rho).
+\]
+The own outgoing event is strict; every incoming event is closed.
+This identity and convention include atom collisions.
+
+Write $A=3/5$, $v_*=6/25$, and
+$\Xi=(46/25)(501/1000)$. As $\sqrt{v+s}<501/1000$,
+$|\delta|<33/20$ globally, while $|u|\le3/40$ gives
+$|\delta|<\Xi+3/40<1$. Thus $1\le k\le n-1$ and
+$9/25<k/n<23/40$. Finite Stirling gives
+\[
+ \sqrt n\pi_k=\frac{\phi(0)}{\sqrt v}
+       \exp\{-\delta^2/(2nv)+e\},\qquad
+ n|e|<Z(D):=5D/8+3/8+D^3/42
+\]
+for $|\delta|\le D\le33/20$.
+The proof in the preceding direct-comparison note uses the entropy,
+logarithmic-prefactor and factorial-remainder constants $6,5/4,3/8$
+on $[9/25,23/40]$; these
+constants and this segment are unchanged. In particular crossing
+$p=1/2$ is allowed.
+For fixed actual $k$ and $\delta$,
+\[
+ \log f'(t)=-\tfrac12\log(1+s/v)+\frac{\delta^2}{2nv}
+             -\frac{(\delta+t)^2}{2n(v+s)}-e.
+\]
+Consequently, when $|t|\le b$,
+\[
+ n|\log f'(t)|\le\tfrac83\lambda+
+                 \frac{2Db+b^2}{2v_*}+Z(D).
+\]
+Take $(D,b)=(1,3/40)$ in the inner interval. Using
+$e^{-x}\ge1-x$ and $e^x\le(1-x)^{-1}$ proves
+\[
+\begin{array}{c|cc}
+ & |u|\le3/40&-34/125\le u\le91/125\\\hline
+ \sqrt n\pi_k\text{ lower bound}&73/100&13/20\\
+ f'\text{ lower bound}&24/25&4/5\\
+ f'\text{ upper bound}&26/25&5/4\\
+ R_0\text{ upper bound}&53/50&3/2
+\end{array}
+\]
+The same finite estimates also give $f'>19/20$ on $0\le u\le1/10$
+and $f'>9/10$ throughout the positive phase interval. For the former
+use $(D,b)=(21/20,1/10)$; for the latter use the signed bound
+$2\delta t+t^2\le\max(0,2\Xi u-u^2)$, $0\le t\le u$.
+The ratio arguments are unchanged: the binomial mode has
+$\sqrt n\pi_j<17/20$; in the inner interval the first count ratio is
+less than $53/50$ and every later factor at most one because
+$(n+1)p-k<153/100<2$. The exact checker rechecks all these finite
+normalization inequalities at the enlarged noise endpoint.
+
+Here is the new gain. With $r_p=\min(p,q)$ and $d=a_0+a_1$,
+conditional signs and cubic expansion give
+\[
+ \E|Y-p|^3\ge v(1-2v)+(3r_p-d)s.
+\]
+Using $(1+x)^{3/2}\le1+3x/2+3x^2/8$, $r_p\ge2/5$ and
+$v\ge6/25$, we obtain
+\begin{equation}\label{v11:counts:gain}
+ (v+s)^{3/2}(\rho-\rho_B)
+ \ge s\left(\frac{87}{250}-\frac{13s}{16}\right)
+ \ge s B_*,\qquad
+ B_*:=\frac{87}{250}-\frac{13U_*}{16\cdot42}.
+\end{equation}
+The exact inequality
+\[
+ \frac25 B_*-(501/1000)^3
+                 =\frac{92514493}{7000000000}>0
+\]
+therefore proves $C(\rho-\rho_B)>s=\lambda/n$. Differentiating
+the normal variance correction bounds it by
+$(7/4)\delta_+\lambda/n$. Thus
+\begin{equation}\label{v11:counts:repair}
+ \mathcal R<\frac{3\lambda}{4n}\quad(|u|\le3/40),
+ \qquad \mathcal R<\frac{2\lambda}{n}\quad\hbox{globally}.
+\end{equation}
+The $1/n$ factor is essential: the gain is relative to $s$, not to
+$\lambda$ without normalization.
+
+As before, $|s_1-s_0|\le(5/2)s$, where $s_j=\E U_j^2$.
+Hence, with $t=\E W_k^2$,
+\[
+ \frac{79}{84}\lambda\le t\le\frac{89}{84}\lambda
+     \quad(|u|\le3/40),\qquad t\le\frac{11}{10}\lambda
+     \quad\hbox{globally}.
+\]
+For $i\ge1$, $\E W_{k+i}^2\le iV\lambda$, with $V=9/8$ in
+the inner interval and $V=7/6$ globally.
+
+\subsection{Incoming tails and the own count}
+The following incoming bound was proved in the $1/50$ note from
+Pinelis, \href{https://arxiv.org/abs/0902.4058}{arXiv:0902.4058},
+Proposition~2.8 and Corollary~2.11. Put $\mu=V\lambda/A^2$ and
+\[
+ \begin{split}
+ Q(\mu,h)&=\frac{\mu^2(1/2+\mu/6)}{((1-h)/A-1+\mu)^2},\\
+ J(\mu,h)&=\frac{\mu^3}
+ {3(1/A-1-h/(2A)+\mu)^2(1-3\mu)}.
+ \end{split}
+\]
+When $u\le h$, $h\ge0$, $3\mu<1$, and
+$b_h:=1/A-1-h/(2A)>0$, $J$ bounds the sum of incoming
+probabilities for $i\ge2$. The unsquared hinge denominator is then positive.
+If also $h<1-A$, $Q$ bounds the first incoming probability. These
+follow from the integer hinges $j=1$ and $j=i$, respectively, and
+$\E(P_\mu-i)_+^2\le\mu^{i+1}/(i+1)!$ for $i\ge2$.
+The coefficient ratio in the resulting series is less than $3\mu$.
+Moreover, $J/\lambda$ increases with $\lambda$; so does $Q/\lambda$
+if $\mu\le(1-h)/A-1$. These are precisely the hypotheses checked
+at $U_*$ below. In the negative inner interval one uses $h=0$.
+
+For the own count, set $\alpha=13/25$ and use
+\[
+ h_\alpha(x)=\frac{-x^4+3\alpha^2x^2+2\alpha^3x}{5\alpha^4}
+                     \le\mathbf1_{(0,\infty)}(x).
+\]
+Its maximum on the positive half-line is $(9+6\sqrt3)/20<1$;
+its numerator factors as $-x(x+\alpha)^2(x-2\alpha)$.
+For a centered independent sum with absolute summand bound $A$,
+$|\E W^3|\le At$ and $\E W^4\le A^2t+3t^2$.
+Writing $r=zt$, the shifted quartic plus the linear normal term,
+divided by $t$, is bounded below by
+\begin{align*}
+ F_{\sigma,b}(z,t)={}&\frac{3\alpha^2-A^2-3t}{5\alpha^4}
+ +\left(\frac{2\sigma}{5\alpha}+b-\frac{4At}{5\alpha^4}\right)z\\
+ &+\frac{3\alpha^2t-6t^2}{5\alpha^4}z^2
+                 -\frac{t^3z^4}{5\alpha^4}.
+\end{align*}
+Set $T_*=(89/84)U_*=89/2800$. Concavity in $t$ reduces the
+rectangle $0\le t\le T_*$ to its two endpoints. On $0\le z\le3/2$,
+replace $z^4$ by $(3/2)^2z^2$, then check the endpoints and any
+eligible quadratic vertex. The result is
+\[
+ F_{1,-26/25}>37/100,
+ \qquad F_{-1,24/25}>19/20.
+\]
+The exact positive margins are
+\[
+ \frac{82564663499}{16050459443200},\qquad
+ \frac{377266419344095319}{17248259356596450000}.
+\]
+For negative phase beyond $r=3t/2$, Cantelli gives
+$O\ge r^2/(t+r^2)-(26/25)r$. Its derivative is positive at
+$r=3t/2$ and first increases then decreases, so its minimum on
+$[3t/2,3/40]$ is at an endpoint. Both endpoint values exceed
+$(37/100)t$, uniformly for $t\le T_*$. For positive phase beyond
+$3t/2$, $O\ge(24/25)r>(19/20)t$. The switch lies below $3/40$.
+Thus
+\begin{equation}\label{v11:counts:own}
+ O>\frac{37}{100}\frac{79}{84}\lambda\quad(-3/40\le u\le0),
+ \qquad
+ O>\frac{19}{20}\frac{79}{84}\lambda\quad(0\le u\le3/40).
+\end{equation}
+
+\subsection{Six closed intervals, with no noise grid}
+All quantities now use $U_*=3/100$. Write
+$\mu_I=3/32$, $\mu_G=7/72$, and $t_G=(7/6)U_*$.
+For each interval let $B$ denote the following lower bound for
+$O-R_0T$, with $Q,J$ evaluated at the displayed arguments:
+\[
+\begin{array}{c|l}
+[-3/40,0]&B/\lambda=(37/100)(79/84)-(53/50)[Q(\mu_I,0)+J(\mu_I,0)]/U_*\\[2pt]
+[0,3/40]&B/\lambda=(19/20)(79/84)
+ -(53/50)[Q(\mu_I,3/40)+J(\mu_I,3/40)]/U_*
+\end{array}
+\]
+For the outer negative interval set
+\[
+ L_-:=\min_{r\in\{3/40,34/125\}}
+       \{r^2/((11/10)U_*+r^2)-(5/4)r\}.
+\]
+The derivative is positive at $3/40$ and can have only a later maximum,
+so $O\ge L_-$ throughout. There take
+$B=L_--(3/2)[Q(\mu_G,0)+J(\mu_G,0)]$.
+For $[3/40,1/10]$ take
+\[
+ B=\frac{19}{20}\frac3{40}
+     -\frac32\{t_G/(t_G+(9/10)^2)+J(\mu_G,1/10)\}.
+\]
+On each of $[1/10,1/5]$ and $[1/5,91/125]$, the function
+$(9/10)u-(3/2)t_G/(t_G+(1-u)^2)$ is concave, because
+$3(1-u)^2>t_G$. Let its endpoint minimum be $L_+$ and let $h$
+be the interval's right endpoint. There take
+$B=L_+-(3/2)J(\mu_G,h)$.
+
+All six brackets are positive. After multiplying by the appropriate
+mass lower bound, subtracting \eqref{v11:counts:repair}, and allowing
+the target margin $\lambda/100$, the exact residuals are:
+\[
+\begin{array}{c|c}
+{[-3/40,0]}\quad\text{(divided by $\lambda$)}&19650157/2820720000\\
+{[0,3/40]}\quad\text{(divided by $\lambda$)}&40612185886957/129085181232000\\
+{[-34/125,-3/40]}&12343549039/533914920000\\
+{[3/40,1/10]}&1221121/371280000\\
+{[1/10,1/5]}&652372219/42906045000\\
+{[1/5,91/125]}&40879152773/857753190000
+\end{array}
+\]
+In the outer intervals, use $U_*$ for all increasing errors and the
+decreasing own-count lower bound; therefore the displayed absolute
+positive residuals work for every smaller positive noise. In the inner
+intervals, monotonicity of $(Q+J)/\lambda$ gives a bound proportional
+to $\lambda$ all the way to zero. The six intervals are closed, meet
+at their endpoints, and cover $[-34/125,91/125]$.
+This proves Theorem~\ref{v11:counts:theorem}.
+
+The exact checker retains the preceding normalization gates and checks
+the new gates separately. Its negative controls remove or reverse the
+cubic gain, omit its $1/n$ scaling, reuse the inappropriate positive
+phase tail bound on negative phases, and enlarge the target to $.04$.
+These controls reject the sufficient estimates; they are not
+counterexamples to the Berry--Esseen conjecture. The full interval
+$.03<\lambda\le.075$ is still outside the proved theorem.

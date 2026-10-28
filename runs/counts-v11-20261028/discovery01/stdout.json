@@ -1,0 +1,135 @@
+{
+  "status": "DISCOVERY_ONLY",
+  "cases": 360,
+  "method": "common quartic and common Bennett tilt; both allocation endpoints; coupled third-moment penalty; n42 and formal n=infinity diagnostic",
+  "rows": [
+    {
+      "n": 42,
+      "lambda_value": 0.02,
+      "worst": {
+        "r": 0.095,
+        "margin": 0.0026398906065825093,
+        "variance_endpoint": 1,
+        "mass": 0.7370028762535967,
+        "variance_factor": 1.060611896892887,
+        "tail": 0.0006919657437969458,
+        "own": 0.004164884227485177,
+        "alpha": 0.48,
+        "h": 7.3
+      },
+      "failures": 0
+    },
+    {
+      "n": 42,
+      "lambda_value": 0.03,
+      "worst": {
+        "r": 0.15,
+        "margin": -0.0032063384688276637,
+        "variance_endpoint": 1,
+        "mass": 0.85,
+        "variance_factor": 1.0638857064166967,
+        "tail": 0.001103335860723203,
+        "own": -0.002709480268958203,
+        "alpha": 0.5,
+        "h": 6.7
+      },
+      "failures": 23
+    },
+    {
+      "n": 42,
+      "lambda_value": 0.05,
+      "worst": {
+        "r": 0.22,
+        "margin": -0.023914430519896623,
+        "variance_endpoint": 1,
+        "mass": 0.85,
+        "variance_factor": 1.0680523730833633,
+        "tail": 0.002337294875905593,
+        "own": -0.025636889840726734,
+        "alpha": 0.58,
+        "h": 5.9
+      },
+      "failures": 45
+    },
+    {
+      "n": 42,
+      "lambda_value": 0.075,
+      "worst": {
+        "r": 0.22,
+        "margin": -0.04140844711480772,
+        "variance_endpoint": 0,
+        "mass": 0.85,
+        "variance_factor": 0.9319476269166367,
+        "tail": 0.07148723720144265,
+        "own": 0.02900672290078482,
+        "alpha": 0.64,
+        "h": 4.9
+      },
+      "failures": 45
+    },
+    {
+      "n": null,
+      "lambda_value": 0.02,
+      "worst": {
+        "r": 0.08,
+        "margin": 0.004418160059182239,
+        "variance_endpoint": 1,
+        "mass": 0.79772,
+        "variance_factor": 1.0,
+        "tail": 0.0007148910160738754,
+        "own": 0.006253375771604938,
+        "alpha": 0.48,
+        "h": 7.3
+      },
+      "failures": 0
+    },
+    {
+      "n": null,
+      "lambda_value": 0.03,
+      "worst": {
+        "r": 0.115,
+        "margin": 0.0012782612299044522,
+        "variance_endpoint": 1,
+        "mass": 0.79772,
+        "variance_factor": 1.0,
+        "tail": 0.0012643246415478364,
+        "own": 0.0028667179999999903,
+        "alpha": 0.5,
+        "h": 6.7
+      },
+      "failures": 0
+    },
+    {
+      "n": null,
+      "lambda_value": 0.05,
+      "worst": {
+        "r": 0.22,
+        "margin": -0.013626695090471133,
+        "variance_endpoint": 1,
+        "mass": 0.85,
+        "variance_factor": 1.0,
+        "tail": 0.0017346554752030385,
+        "own": -0.014296750513586531,
+        "alpha": 0.58,
+        "h": 6.1
+      },
+      "failures": 34
+    },
+    {
+      "n": null,
+      "lambda_value": 0.075,
+      "worst": {
+        "r": 0.22,
+        "margin": -0.030638108996938387,
+        "variance_endpoint": 1,
+        "mass": 0.85,
+        "variance_factor": 1.0,
+        "tail": 0.006040266014069624,
+        "own": -0.030004568099975537,
+        "alpha": 0.64,
+        "h": 5.1
+      },
+      "failures": 45
+    }
+  ]
+}
