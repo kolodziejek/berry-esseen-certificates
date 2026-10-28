@@ -12,7 +12,7 @@
 \usepackage{bookmark}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning}
-\hypersetup{pdftitle={Analytic reductions for the sharp iid Berry--Esseen inequality},
+\hypersetup{pdftitle={A fixed-target approach to the sharp iid Berry--Esseen inequality},
  pdfauthor={Bartosz Kołodziejek and Kacper Rodziewicz}}
 \setlength{\emergencystretch}{2em}
 \setcounter{tocdepth}{1}
@@ -42,32 +42,33 @@
 \newcommand{\pos}[1]{(#1)_+}
 \newcommand{\ind}{\mathbf 1}
 \newcommand{\iid}{\mathrm{iid}}
-\title{Analytic reductions for the sharp iid\\
+\title{A fixed-target approach to the sharp iid\\
 Berry--Esseen inequality\thanks{This paper was written with substantial
 assistance from AI systems; see the end of Section~\ref{ms:discussion}.}}
 \author{Bartosz Ko{\l}odziejek \and Kacper Rodziewicz}
-\date{27 October 2026}
+\date{28 October 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
-The conjectured optimal constant in the Berry--Esseen inequality for sums
-of i.i.d.\ random variables with finite third moment is
-$\CE=(3+\sqrt{10})/(6\sqrt{2\pi})$, the limiting value for one fixed
-two-point law. We develop an approach to the matching upper bound at every
-sample size. For fixed $n\ge2$ an extremal law exists and satisfies a
-first-order contact condition. Integrating this condition against the
-zero-bias density gives an exact identity that links the
-normal-approximation error to a Fourier remainder and to a nonnegative
-moment defect, which vanishes only at the extremal two-point law.
-Conditioning on the signs of the summands writes the sum exactly as a
-binomial mixture, so that a nearly two-point law can be compared with its
-Bernoulli skeleton. Assuming the sharp bound through $41$, a one-step smoothing recurrence
-controls the first index $n\ge42$ with $C_n\ge\CE$. The sharp predecessor
-bounds then give an elementary support estimate. Retaining the score
-excess sharpens the defect bound, while an exact curvature formula
-simplifies the conditional-count comparison. The global conclusion remains
-conditional on that finite base and a complete local exclusion for every
-$n\ge42$, including equality. The conjecture is not established here.
+The conjectured optimal constant in the iid Berry--Esseen inequality is
+$\CE=(3+\sqrt{10})/(6\sqrt{2\pi})$. We study this upper bound by maximizing
+the excess over the fixed target $\CE\E|X|^3$ at a fixed sample size.
+This choice gives compact-support contact and an exact conservation
+identity in which excess, moment defect and leakage share one nonnegative
+budget. An ordered Fourier calculation and elementary moment inequalities
+then restrict a possible counterexample at $n\ge42$, under the stated
+predecessor bounds, to a neighbourhood of a two-point law. We give the analytical steps of this approach, including the bounds
+and coverage conditions needed by its rational certificates.
+A continuous contact argument proves half-amplitude confinement for small
+conditional noise on the acquired probability range $[.40,.53]$: both
+support rays reduce to a single quintic and elementary derivative signs.
+A signed resource argument also completes the conditional confinement step
+on the panel $[.41,.42]$ for its full acquired noise range.
+The exact conditional-count representation describes the comparison still
+needed after confinement. A sharp finite base through $41$ and a complete
+local exclusion at every later index remain unproved here. The paper is a
+self-contained account of the stated reductions, not a proof of the full
+conjecture.
 \end{abstract}
 \clearpage
 \begingroup\small
@@ -76,25 +77,25 @@ $n\ge42$, including equality. The conjecture is not established here.
 \clearpage
 \input{sections/01-introduction}
 \input{sections/01b-guide}
-\input{sections/02-extremizers}
+\input{sections/02-fixed-target}
 \input{sections/02b-moment-domain}
-\input{sections/03-smoothing}
-\input{sections/04-support}
 \input{sections/05-geometry-counts}
-\input{sections/05b-conserved}
-\input{sections/06-resources}
+\input{sections/04-fixed-entry}
+\input{sections/06-fixed-resources}
+\input{sections/07-fixed-confinement}
 \input{sections/05c-counts}
 \input{sections/07-curvature}
+\input{sections/07b-harmonic}
 \input{sections/08-certificates}
 \input{sections/09-discussion}
 \appendix
-\setcounter{secnumdepth}{4}
-\input{appendices/fourier-analysis}
+\setcounter{secnumdepth}{3}
+\input{appendices/fixed-fourier}
+\input{appendices/count-comparison}
 \input{appendices/normalization}
-\input{appendices/uniform-bridge}
 \input{appendices/local42-refinements}
-\input{appendices/finite-support}
-\input{appendices/finite-analysis}
+\input{appendices/half-line-smoothing}
+\input{appendices/original-law-four}
 \begingroup
 \small\raggedright
 \urlstyle{same}

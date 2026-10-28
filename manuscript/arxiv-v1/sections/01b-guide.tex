@@ -1,164 +1,131 @@
-\subsection{A guide to the argument}\label{ms:guide}
+\subsection{A guide to the proof}\label{ms:guide}
 
-The proof has two distinct jobs. It must show that a law with a large
-Berry--Esseen ratio has nearly two-point geometry, and then compare its
-sum with the corresponding binomial sum accurately enough to detect even
-a very small improvement. The first job uses contact and Fourier
-analysis; the second uses the discrete count structure.
+A possible counterexample must satisfy two very different demands. Its
+moments and support must make the error of normal approximation large;
+its repeated iid convolution must also put enough mass on one side of a
+threshold. The first demand brings the marginal close to two points. The
+second is a discrete comparison with a binomial law. The argument below
+keeps those two tasks separate, and uses contact to pass between them.
 
-\paragraph{Start at the first failure of the strict bound.}
-Assume a sharp base through $41$, and choose the least $n\ge42$ with
-$C_n\ge\CE$. Then $C_{n-1},C_{n-2}\le\CE\le C_n$, so
-$d_n=n(C_{n-1}-C_n)_+=0$. The uniform smoothing bound is
+\paragraph{Fix the value we want to prove.}
+At a fixed index, maximize \eqref{v9:intro:excess} over standardized laws
+and raw thresholds. The target $c=\CE$ remains fixed. At a first failure
+above an independently established base through $41$, the predecessor
+bound is $C_{n-1}\le c$. Thus the deleted sum can be estimated with the
+same coefficient that appears in the extremal problem. No estimate of an
+unknown maximizing ratio is needed at this stage.
+
+A maximizing limit needs care because third moments need not be uniformly
+integrable. The moment penalty in the objective supplies the missing
+inequality. Thresholds are bounded along a maximizing sequence with
+nonnegative limiting excess, and the closed-event Portmanteau inequality
+handles moving thresholds and atoms. Contamination by a new atom, followed
+by centering and scaling, gives contact on the entire closed support.
+Its cubic term proves compact support before higher moments are used.
+
+\paragraph{Find one budget for the departures from two points.}
+Write $p=\Pp(X>0)$, $q=1-p$ and $m=\E X_+=\E X_-$.
+The sign decomposition is exactly
 \[
- C_n\le\sqrt{\frac n{n-1}}\,C_{n-1}
-       +\frac{\sqrt n}{15(n-1)^{3/2}}
-       +\frac{2\sqrt n}{25(n-1)^2}.
-\]
-It gives $0\le n(C_n-\CE)<3003/10250<0.3$.
-The additive remainder in this normalized inequality is of order $1/n$.
-Thus the current ratio is close to $\CE$, and both deleted indices have
-sharp bounds. The floor $42$ is the one used by the proposed local
-comparison; its choice fixes the finite base required by this route.
-
-\paragraph{Use extremality to restrict the support.}
-The supremum at a fixed $n$ is attained by a law $P$ and a closed threshold
-$H$. Adding a small atom at $y$, then standardizing, gives the
-first-variation inequality
-\[
- \Pp(S_{n-1}\le H-y)\le Q_H(y),\qquad
- \Pp(S_{n-1}\le H-y)=Q_H(y)\quad(y\in\supp P),
-\]
-where $Q_H$ is the explicit piecewise cubic function in
-\eqref{ms:contact-majorant}. Its cubic growth first gives compact support.
-The quantitative step estimates the Gaussian part of contact at a radius
-$R$, then proves that the upper bound decreases along both exterior rays.
-Since the predecessor term vanishes, this yields the three support bounds
-of Section~\ref{ms:support}, provided their moment bounds have been proved
-in the order in which they are used.
-
-\paragraph{Measure the departure from the extremal two-point law.}
-Let $p=\Pp(X>0)$, $q=1-p$, and $m=\E X_+=\E X_-$.
-Replacing each sign class by its conditional mean leaves a centered
-conditional fluctuation. In suitable units this is
-\[
- X=\ell(B_0+U-p),\qquad B_0=\ind_{\{X>0\}},\qquad
+ X=\ell(B_0+U-p),\qquad B_0=\mathbf1_{\{X>0\}},\qquad
  \E(U\mid B_0)=0,\qquad \ell=m/(pq).
 \]
-The physical fluctuation is $W=\ell U$; the count-scale noise is
-$s=\E U^2$, and $\lambda=ns$ is its variance over $n$ draws.
+The variance of the physical noise $W=\ell U$ is $\theta$; the variance
+of the noise in a sum of $n$ Bernoulli-coordinate observations is
+$\lambda=n\E U^2$. These are different quantities.
 
-The zero-bias density is $\tau(t)=\E[X\ind_{\{X\ge t\}}]$.
-It is constant on each gap $(a,b)$ in the support. Consequently
+The gap defect $D$ measures both moment asymmetry and the loss of a
+single large support gap. Integrating contact against the zero-bias
+density gives the exact identity in \eqref{v9:core:conservation}.
+Its nonnegative side is
 \[
- J=\sum_{(a,b)}\tau_{a,b}(b-a)^2
+ \mathcal U=(n+H^2)a+\frac{n\phi(0)}6D+n^{3/2}L.
 \]
-is the expected length of the gap containing a zero-biased observation,
-with gap length zero on the support. For a two-point law this is just
-its span $\ell$, and for the law of~\eqref{ms:bernoulli-limit} the quantity
-$\phi(0)(\gamma+3\ell)/(6\rho)$ is exactly the limit displayed there. The
-inequality
-\[
- D=(3+\sqrt{10})\rho-\gamma-3J\ge0
-\]
-says that $\phi(0)(\gamma+3J)/6$, which extends this first-order lattice
-term to arbitrary support gaps, never exceeds $\CE\rho$.
-Its equality case is exactly Esseen's oriented two-point law
-(Corollary~\ref{ms:zero-defect}). More usefully, its nonnegative
- decomposition bounds the sign probability, inward endpoint movement
-and conditional variance simultaneously.
+The leakage $L$ is defined using half-open intervals, so an atom at a
+contact endpoint has its proper weight. The identity must be applied to
+the same marginal throughout; separate maxima for its costs cannot be
+added as though they had independent budgets.
 
-\paragraph{Connect the defect to the error of normal approximation.}
-Integrate the contact slack against $\tau$. Evaluating this integral
-through support gaps and through the zero-bias transform of the sum
-gives the conserved identity of Section~\ref{ms:conserved}. The identity
-contains the score excess $n(C_n-\CE)\rho$, the defect cost and a
-nonnegative leakage term. A Fourier remainder is the quantity to be
-bounded. Once that remainder and the necessary sign conditions have
-been controlled, one obtains a resource inequality of the form
-\[
- n(C_n-\CE)\rho+\kappa nD+n^{3/2}L\le\mathcal B(H).
-\]
-Together with the defect decomposition, this inequality bounds the noise
-and the inward displacement.
-Retaining the first term, instead of discarding it, sharpens the budget.
+\paragraph{Acquire the moment and support bounds in order.}
+A first support bound gives finite fourth and sixth moments. Two quadratic
+updates and four signed updates then bound the Fourier remainder and
+contract the possible moments. A lower bound for $m$ follows from
+$D\ge\sqrt{10}\rho-\gamma-6m$; combining it with
+$4m^2+\beta^2\le1$ makes the signed updates effective. Each pass uses only
+bounds already proved. In particular, a density floor comes from the
+preceding raw ceiling, and a new phase price is used only after its own
+raw ceiling has been established.
 
-\paragraph{Compare sums with the same Bernoulli skeleton.}
-Conditioning on $K=\sum B_{0,i}\sim\operatorname{Bin}(n,p)$ gives
+The selected rational calculation retains every actual-law cell and
+every closed probability overlap. It gives $p\in[.24,.54]$; an elementary
+moment contraction then gives $p\in[.25,.53]$. These intervals are
+necessary conditions for a witness, not descriptions of all feasible
+laws. The Fourier proof and the finite arithmetic have distinct roles:
+the first explains the implication, the second verifies all of its
+specified coefficient and coverage gates.
+
+\paragraph{Use contact again to confine the conditional noise.}
+On the acquired range $p\in[.40,.53]$, the initial strip is $|U|<.6$.
+If $\lambda\le.075$, elementary moment bounds give
+$\theta<.0074$, $\ell>1.992$ and $\rho<1.105$.
+For the negative support ray set $z=p$; for the positive ray set $z=1-p$.
+Both contact bounds reduce to the same quintic on
+$u=1.992(z+1/2)\in[1.7928,2.1912]$.
+Its third derivative is negative, its first derivative is concave with
+positive endpoint values, and its right endpoint is negative. Separate
+radial derivative signs extend the boundary contradiction along the
+whole rays. This proves $|U|<1/2$ without subdividing this probability
+interval. The two rays are rays of one physical law, not a reflection
+argument for its CDF.
+
+On $p\in[.41,.42]$, the complementary noise range can also be handled.
+The sign of $H$ is retained in the phase resource. Noise and endpoint
+motion consume that same resource before the deletion errors are bounded.
+Antichain concentration and signed deletion then give the two required
+ray inequalities. The finite closed cover has $128$ sign, threshold and
+noise boxes: the low-noise lemma handles $16$, necessary conditions
+exclude $84$, and both ray tests pass on the remaining $28$.
+This completes confinement on that one panel; it does not complete the
+count comparison.
+
+\paragraph{Compare the actual convolution with its binomial skeleton.}
+At $np+H/\ell=k+u$, conditioning on the sign count gives
 \[
  \Pp(S_n\le H)=\sum_{j=0}^n\binom njp^jq^{n-j}
-                   \Pp(V_j\le k+u-j),
- \qquad np+H/\ell=k+u,
+                    \Pp(V_j\le k+u-j),
 \]
-where $V_j$ is the sum of $j$ independent copies of $U\mid B_0=1$
-and $n-j$ independent copies of $U\mid B_0=0$. Subtracting
-the binomial distribution function gives the exact score identity
-\eqref{ms:master-identity}. At $\lambda=0$ the original law is two-point,
-so Schulz's theorem applies directly. At positive noise, the outgoing
-and incoming probabilities must be estimated with errors proportional
-to $\lambda$, uniformly as $\lambda$ decreases to zero. The exact identity
-makes this comparison possible; the required relative bounds are separate
-steps in the argument. The three-candidate curvature formula simplifies
-one of them.
-
-\begin{figure}[htbp]
-\centering
-\begin{tikzpicture}[
- node distance=8mm,
- box/.style={draw,rounded corners=2pt,align=center,font=\small,
-             text width=66mm,inner sep=5pt},
- input/.style={box,text width=48mm,dashed},
- arr/.style={-{Stealth[length=2mm]},semithick}]
-\node[box] (entry) {First index with $C_n\ge\CE$, $n\ge42$\\
-  sharp predecessors and zero loss};
-\node[box,below=of entry] (contact) {Attainment and contact\\
-  initial support bound};
-\node[box,below=of contact] (resource) {Conserved identity\\
-  joint defect and phase resources};
-\node[box,below=of resource] (count) {Confinement and conditional counts\\
-  comparison with the Bernoulli law};
-\node[box,below=of count] (end) {Local exclusion at every $n\ge42$\\
-  completes the conditional global argument};
-\node[input,right=12mm of entry] (base) {Independent sharp base\\
-  $C_j\le\CE$, $1\le j\le41$};
-\node[input,right=12mm of resource] (fourier) {Valid Fourier enclosures\\
-  and ordered moment bounds};
-\node[input,right=12mm of count] (local) {Complete signed local cover\\
-  at the index};
-\draw[arr] (entry)--(contact);
-\draw[arr] (contact)--(resource);
-\draw[arr] (resource)--(count);
-\draw[arr] (count)--(end);
-\draw[arr,dashed] (base)--(entry);
-\draw[arr,dashed] (fourier)--(resource);
-\draw[arr,dashed] (local)--(count);
-\end{tikzpicture}
-\caption{The proposed route to the local exclusion. Dashed boxes show
-required auxiliary bounds; their verification status is recorded in
-Section~\ref{ms:certificates}.}
-\label{ms:fig:dependencies}
-\end{figure}
+where $V_j$ is the sum of the actual conditional noises.
+Section~\ref{ms:counts} rewrites the excess over the fixed target exactly
+as outgoing count mass, incoming count mass and a Gaussian/moment repair.
+A sufficiently negative upper bound contradicts nonnegative excess.
+The needed error bounds must be proportional to $\lambda$ uniformly down
+to zero. The marked-crossing and curvature calculations are given in full
+in Appendix~\ref{v9:count:appendix}. Their positivity gates and complete
+cover remain to be supplied on the new acquired domain. At zero noise
+the law is Bernoulli and is treated directly.
 
 \subsection{Notation and reading order}\label{ms:notation}
-The main variables are listed below. Auxiliary variables used only in a
-single estimate are defined where they occur.
 \begin{center}\small
-\begin{tabular}{@{}lP{110mm}@{}}\toprule
+\begin{tabular}{@{}lP{108mm}@{}}\toprule
 Symbol & Meaning\\\midrule
-$H$, $z=H/\sqrt n$ & Raw and standardized thresholds.\\
-$p,q,m$ & Sign probabilities and common one-sided first moment.\\
-$\rho,\gamma,\beta$ & $\E|X|^3$, $\E X^3$, and $\E[X|X|]$.\\
-$\ell$ & Span between conditional means; $\ell=m/(pq)$.\\
-$W$, $U=W/\ell$ & Physical and count-scale conditional noise.\\
-$\theta$, $s$, $\lambda$ & $\E W^2$, $\E U^2$, and $ns$; $\theta=s/(pq+s)$.\\
-$D$, $d_n$, $d_Y$ & Moment defect, predecessor score decrement, and inward count-gap displacement.\\
-$k,u$ & Nearest integer count and phase: $np+H/\ell=k+u$, $|u|\le1/2$.\\
-$\sigma=\sqrt{10}$ & Constant in the defect decomposition.\\\bottomrule
+$c=\CE$, $a$ & Fixed target and unnormalized excess over that target.\\
+$H$, $H/\sqrt n$ & Raw and standardized thresholds.\\
+$\rho,\gamma,\beta$ & $\E|X|^3$, $\E X^3$, $\E[X|X|]$.\\
+$p,q,m$ & Positive and nonpositive probabilities; common one-sided first moment.\\
+$\ell$, $W$, $U$ & Conditional-mean span, physical noise and $U=W/\ell$.\\
+$\theta$, $s$, $\lambda$ & $\E W^2$, $\E U^2$, $ns$; $\theta=s/(pq+s)$.\\
+$D$, $L$, $\mathcal U$ & Physical gap defect, leakage, and their joint resource with excess.\\
+$d=d_Y$ & Inward displacement in Bernoulli coordinates.\\
+$k,u$ & Integer count and phase, $np+H/\ell=k+u$, $|u|\le1/2$.\\
+$\zeta=1-d_0$ & A lower count increment used only in the count/curvature formulas.\\
+$\sigma=\sqrt{10}$ & Constant in the moment defect.\\\bottomrule
 \end{tabular}
 \end{center}
 
-Sections~\ref{ms:extremizers}--\ref{ms:counts} contain the analytic
-argument, and Section~\ref{ms:certificates} the conditional global theorem
-and the status of the remaining conditions. The appendices contain the
-longer Fourier estimates, the finite-index arguments and the explicit
-comparison formulas.
+The main text follows this order from fixed-target extremality to
+confinement and counts. The appendices give the selected Fourier proof,
+the detailed count estimates and their refinements, and a separate
+original-law reduction for four summands. The latter concerns the missing
+finite base; it is not an input to the confinement theorem. Historical
+acquisition schedules are preserved in the repository but are not silently
+included among the premises of this argument.

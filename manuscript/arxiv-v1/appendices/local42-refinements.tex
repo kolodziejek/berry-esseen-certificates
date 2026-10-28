@@ -1,9 +1,8 @@
 \section{Signed refinements of the local comparison}\label{ms:local42-refinements}
 The refinements in this appendix apply to an already acquired common-law
 resource panel. They preserve the actual count while integrating a Gaussian
-increment, and retain the sign of the cubic correction. These are needed
-for the proposed comparison with floor $42$; the earlier floor-$47$ formulas
-alone do not supply them. Every numerical positivity and coverage statement
+increment, and retain the sign of the cubic correction. They are possible ingredients of a comparison with floor $42$; each
+retains its own probability and positivity domain. Every numerical positivity and coverage statement
 below is an acceptance condition. Whenever a normalized binomial mass or
 a Stirling expression is used, assume $n\ge N\ge2$ and an interior
 integer count $1\le k\le n-1$, so that $\pi_k>0$.
@@ -97,8 +96,7 @@ to justify $E,L_0,R$.
 
 \subsection{A sharper elementary harmonic constant}
 \begin{lemma}\label{ms:local42:lem:cos}
-Assume the finite rational positivity condition in the proof below.
-Then, for every $x\ge0$,
+For every $x\ge0$,
 \[
                1-\cos(2\pi x)\le\frac{4553}{1000}x.
 \]
@@ -124,8 +122,8 @@ $P(x)=\sum_{h=0}^{13}p_hx^h$, its Bernstein coefficients on $[a,a+w]$ are
         \sum_{h=i}^{13}p_h\binom hi a^{h-i}w^i,
                \qquad k=0,\ldots,13.
 \]
-The remaining certificate condition is that all 896 rational coefficients
-are positive. Under that condition,
+All 896 rational coefficients exceed $123/10^6$, as checked directly
+from the displayed rational formula. Thus
 $P>0$ on the full interval. The value at zero follows by
 continuity (or directly).
 
@@ -384,8 +382,8 @@ Then $Q\ge Q_*$: the first term increases with $p$, and
 $(1-2v)/v$ decreases with $v$. In particular, $Q_*$ may be negative.
 Already with $d=s=0$ its sign changes at $p=1-1/\sqrt2$.
 
-Let $C$ be the score multiplying the moment correction, and assume
-$0<c_*\le C\le c^*$. Choose positive multipliers satisfying
+Let $c=\CE$ be the fixed coefficient multiplying the moment correction,
+and choose $0<c_*\le c\le c^*$. Choose positive multipliers satisfying
 \[
         0<m_-\le\frac{c_*}{(V^*)^{3/2}},\qquad
         m_+\ge\frac{c^*}{v_*^{3/2}},
@@ -402,7 +400,7 @@ count displacement $\delta$, set
  \mathcal R=\sqrt n\left\{
  \Phi\!\left(\frac{\delta}{\sqrt{nv}}\right)
  -\Phi\!\left(\frac{\delta}{\sqrt{n(v+s)}}\right)\right\}
-                         +C(\rho_B-\rho).
+                         +c(\rho_B-\rho).
 \]
 If $D_+\ge\max(\delta,0)$ and $P_*\ge 0.4/(2v_*^{3/2})$, then
 \begin{equation}\label{ms:local42:repair_bound}
@@ -412,11 +410,11 @@ If $D_+\ge\max(\delta,0)$ and $P_*\ge 0.4/(2v_*^{3/2})$, then
 \end{equation}
 \end{proposition}
 \begin{proof}
-Write $A=C/(v+s)^{3/2}$. The hypotheses give
+Write $A=c/(v+s)^{3/2}$. The hypotheses give
 $0<m_-\le A\le m_+$. By Lemma~\ref{ms:local42:cubic},
-$C(\rho-\rho_B)\ge sAQ\ge sAQ_*$.
+$c(\rho-\rho_B)\ge sAQ\ge sAQ_*$.
 If $Q_*\ge0$, $AQ_*\ge m_-Q_*$; if $Q_*<0$,
-$AQ_*\ge m_+Q_*$. This proves $C(\rho-\rho_B)\ge sG_*$
+$AQ_*\ge m_+Q_*$. This proves $c(\rho-\rho_B)\ge sG_*$
 in both cases. One must use the \emph{upper} multiplier in the negative
 case.
 
@@ -436,60 +434,28 @@ $(P_*D_+-G_*)\lambda/n\le\kappa\lambda/n\le\kappa\lambda/N$.
 The clamp at zero is needed before replacing $n$ by its lower bound.
 \end{proof}
 
-\subsection{Exact checks and the finite application}
-The left probability panels at floor $42$ use
+\subsection{What must be checked on a new cover}
+For the fixed target one can take
 \[
-                    N=42,\qquad c_*=0.4,\qquad c^*=0.4226.
+ N=42,\qquad c_*=819/2000,\qquad c^*=20487/50000,
+ \qquad c_*<\CE<c^*.
 \]
-These are hypotheses supplied by the surrounding finite-index proof.
-The required rational multiplier inequalities are
+On each actual probability and noise cell, verify positivity of the
+multipliers as well as
 \[
- (m_-)^2(V^*)^3<c_*^2,\qquad
- (m_+)^2v_*^3>(c^*)^2,
+ m_-^2(V^*)^3\le c_*^2,\qquad
+ m_+^2v_*^3\ge(c^*)^2,\qquad 4P_*^2v_*^3\ge0.4^2.
 \]
-\emph{together with positivity of both multipliers}. Squaring without
-those positivity checks would accept a false negative coefficient.
-The normal multiplier is checked similarly using
-$4P_*^2v_*^3>0.4^2$ and $P_*>0$.
+The upper multiplier is indispensable when $Q_*<0$. All constants must
+be computed from the same acquired support, moment and signed resource
+bounds. The new entry range is $p\in[.25,.53]$, whereas the formulas above
+assume a probability interval below $1/2$. A complete comparison still
+needs every surviving probability, phase and positive-noise interval,
+including the part above $1/2$, and a separate zero-noise argument.
 
-On each probability and noise interval, evaluate the minimum in
-\eqref{ms:local42:gain} and bound the nonnegative coefficient in
-\eqref{ms:local42:repair_bound} using the same moment and support data.
-Lemma~\ref{ms:local42:cubic} and Proposition~\ref{ms:local42:repair}
-then give the probabilistic correction.
-
-\subsection{The finite comparison cover at floor $42$}\label{ms:local42-cover}
-The proposed acquisition first excludes the closed probability ranges
-$[0,0.23]$, $[0.23,0.29]$, $[0.474,0.48]$ and $[0.48,0.63]$, together with
-$[0.63,1]$. Different bounds may establish adjacent exclusions, so their
-common endpoints must be retained. The remaining grids are the $45$ left
-panels in $[0.29,0.38]$ and $47$ central panels in $[0.38,0.474]$, each of width
-$0.002$. These are the rows defined in Section~\ref{ms:resources}.
-The impossible endpoints $p=0,1$ are excluded by centering and unit variance.
-Each exclusion and each resulting moment interval is a certificate obligation.
-
-On a surviving row, intersect every noise interval with its acquired
-ceiling $\Lambda$. The following table specifies the original comparison
-cover. A whole-count radius $r$ means $|u|\le r$; the nearest-count
-comparison covers the complementary closed phase intervals up to $|u|=1/2$. Both signs of $H$ are checked
-separately. At $\lambda=0$, the actual law is Bernoulli and the separately
-cited binomial theorem applies.
-\begin{center}\small
-\begin{tabular}{@{}lP{55mm}P{55mm}@{}}\toprule
-Noise interval & Central panels & Left panels\\\midrule
-$(0,0.05]$ & Small-noise bound, all phases & Small-noise bound, all phases\\
-$[0.05,0.06]$ & Whole count: $|u|\le0.09$; nearest count outside & Nearest count, all phases\\
-$[0.06,0.08]$ & Whole count: $|u|\le0.14$; nearest count outside & Nearest count, all phases\\
-$[0.08,0.10]$ & Whole count: $|u|\le0.19$; nearest count outside & Whole count: $|u|\le0.19$; nearest count outside\\
-$[0.10,0.12]$ & Whole count: $|u|\le0.29$; nearest count outside & Whole count: $|u|\le0.27$; nearest count outside\\
-$[0.12,\Lambda]$ & Whole count, all phases & Whole count, all phases\\\bottomrule
-\end{tabular}
-\end{center}
-All seams are closed and shared. The comparison's amplitude caps must also
-be acquired: on the four bands ending at $0.08,0.10,0.12,\Lambda$, the
-central-panel caps are $0.375,0.325,0.275,0.25$ and the left-panel caps are
-$0.40,0.35,0.30,0.275$, respectively, intersected with the row's global cap.
-A narrower cap is an output of confinement before it can be used here.
-The joint gap cap is recomputed from the same weighted resource in every
-band. The additional exclusions of Section~\ref{ms:resources} reduce this
-cover once their required moment and resource bounds have been established.
+An earlier proposed schedule used narrower probability rows and noise
+bands with stronger amplitude caps. Those rows are not outputs of the
+entry proved in this paper. We therefore do not import that schedule as
+a certificate of the new comparison. Every new amplitude cap must first
+be acquired by contact, and every seam between noise and phase intervals
+must be covered as a closed boundary.

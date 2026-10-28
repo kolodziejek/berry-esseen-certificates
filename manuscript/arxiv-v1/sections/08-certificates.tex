@@ -1,77 +1,57 @@
-\section{Certificate conditions and the global implication}\label{ms:certificates}
+\section{Certificates and the remaining global implication}\label{ms:certificates}
 
-This section states the conditional global theorem, explains what a
-finite certificate must establish, and records which conditions have been
-verified.
+The analytical results above have two kinds of conclusions. Some are
+identities or inequalities for every law in a stated class. Others acquire
+numerical bounds after finitely many rational gates have been verified.
+Neither kind supplies an omitted hypothesis of the other. We first state
+the remaining global obligation, then specify the computational boundary.
 
-\subsection{The mathematical interface}
+\subsection{The fixed-target global implication}
 
-Write $a_n=C_n-\CE$ and
-$d_n=n(C_{n-1}-C_n)_+$.
-
-\begin{assumption}[Finite base]\label{ms:base41}
-For every integer $1\le j\le41$, one has $C_j\le\CE$.
-This must be proved without using Assumption~\ref{ms:local42}.
+\begin{assumption}[Independent finite base]\label{ms:base41}
+For every integer $1\le j\le41$, one has $C_j\le\CE$, by a proof
+independent of the later-index exclusion.
 \end{assumption}
 
-\begin{assumption}[Equality-inclusive local exclusion]\label{ms:local42}
-For every integer $n\ge42$, the following conditions do not hold
-simultaneously:
-\begin{equation}\label{ms:local-entry}
- \begin{gathered}
- 0\le n(C_n-\CE)\le0.54,\qquad d_n=0,\qquad C_n<0.4226,\\
- C_{n-1}<0.4253,\qquad C_{n-2}<0.4253.
- \end{gathered}
-\end{equation}
-Since $C_n$ is attained (Lemma~\ref{ms:attainment}), this is equivalent to
-the nonexistence of an extremal pair at index $n$ under these conditions,
-which is how it would be proved.
+\begin{assumption}[Fixed-target local exclusion]\label{ms:local42}
+For every integer $n\ge42$ satisfying
+$C_{n-1},C_{n-2}\le\CE$, there is no pair maximizing
+\eqref{v9:intro:excess} with $c=\CE$ and nonnegative excess.
 \end{assumption}
 
-A proof of Assumption~\ref{ms:local42} would combine the analytic results of
-Sections~\ref{ms:support}--\ref{ms:counts} with finite certificates, in
-four stages. First, the contact inequality and the moment
-bounds give the initial support interval. Second, an ordered sequence of
-Fourier estimates, moment intersections and support contractions gives
-one closed parameter panel containing the maximizing law. Third, a joint
-defect inequality and a confinement argument bound its conditional noise
-and its support near the two-point skeleton. Fourth, the exact
-conditional-count representation gives a comparison on every remaining
-closed phase and noise cell. The analytic steps are in Sections~\ref{ms:support}--\ref{ms:counts}
-and the appendices; their numerical inputs have not been independently
-re-verified.
-
-The stages are applied in order to one fixed extremal pair: each support
-contraction may use only moment bounds proved from the preceding support
-interval, and the deleted sums $S_{n-1}$ and $S_{n-2}$ are compared with
-the Gaussian through the constants $C_{n-1}$ and $C_{n-2}$.
+The second assumption is the missing conclusion of the local program,
+not a result of this paper. Its predecessor hypotheses are consequences
+of a least-failure choice. The new contact entry and the central-panel
+confinement use $C_{n-1}\le\CE$; the latter obtains its two-deletion
+concentration from antichains, without a bound on $C_{n-2}$.
+We leave both predecessor bounds in the final interface so that any later
+comparison using both must declare that use explicitly.
 
 \begin{theorem}[Conditional all-index bound]\label{ms:conditional-global}
-Suppose Assumptions~\ref{ms:base41} and~\ref{ms:local42} hold. Then
+Under Assumptions~\ref{ms:base41} and~\ref{ms:local42},
 \[
  C_n<\CE\quad(n\ge42),\qquad C^*=\CE.
 \]
-
 \end{theorem}
 \begin{proof}
-If the strict tail conclusion fails, choose the least $n\ge42$ with
-$C_n\ge\CE$. Both predecessors are at most $\CE$: at $n=42$ these are
-exactly the base indices $40$ and $41$. Hence $d_n=0$ and the two
-deleted caps in~\eqref{ms:local-entry} hold. The smoothing recurrence
-of Section~\ref{ms:smoothing} gives
-\[
- 0\le n(C_n-\CE)<\frac{3003}{10250}<0.3,
- \qquad C_n<\frac{73}{175}<0.4226.
-\]
-Thus all conditions in~\eqref{ms:local-entry} hold, contradicting
-Assumption~\ref{ms:local42}. The base
-and tail give $C^*\le\CE$; the fixed Bernoulli limit
+If the strict tail bound fails, choose the least $n\ge42$ with
+$C_n\ge\CE$. Both predecessors are at most $\CE$; at $n=42$ they
+are the base indices $41$ and $40$. The fixed-target attainment and
+equality statements of Section~\ref{v9:core:section} give a maximizing
+pair with nonnegative excess. This contradicts
+Assumption~\ref{ms:local42}. Together with the base, the strict tail gives
+$C^*\le\CE$. The single Bernoulli law in
 \eqref{ms:bernoulli-limit} gives the reverse inequality.
 \end{proof}
 
-If Assumption~\ref{ms:local42} is weakened to exclude only $C_n>\CE$, the
-same argument, applied to the least $n$ with $C_n>\CE$, still gives
-$C^*=\CE$.
+For the sharp global constant alone it is enough to exclude positive
+excess under the same predecessor hypotheses. Indeed, choose the least
+$n\ge42$ with $C_n>\CE$ and repeat the argument. This yields
+$C_n\le\CE$, hence $C^*=\CE$, without a claim of strictness at each
+finite index. Equality-inclusive exclusion additionally needs the
+zero-excess case, including the strict finite-index Bernoulli endpoint.
+Neither version requires an upper bound for an unknown maximizing ratio,
+a global positive ceiling, or an astronomically large terminal index.
 
 \subsection{What a finite certificate must establish}
 
@@ -186,42 +166,131 @@ noise bands. The case $\lambda=n\E U^2=0$ is separate: then $U=0$ almost
 surely, the law is a two-point law, and Schulz's theorem
 applies~\cite{Schulz2016}.
 
-\subsection{Status of the remaining conditions}
+\subsection{What has been checked}\label{v9:certificates:status}
 
-Sections~\ref{ms:extremizers}--\ref{ms:counts} prove the analytic
-implications stated there, with their moment, support and remainder
-hypotheses. Bounded exact checks accompany the support, curvature and
-score-excess calculations. The panel consequences in
-Section~\ref{ms:resources} remain conditional on the coefficient and
-moment bounds from Section~\ref{ms:fourier:rescore:re-atlas}.
+The selected coarse entry is the separately named fixed-target component
+\texttt{INITIAL42\_FIXED\_TARGET\_COARSE\_V7}. Its accepted proof object
+reconstructs the two quadratic passes, verifies every support-radius gate,
+and evaluates four signed passes with $11264$ nominal boxes in total.
+It keeps all $100$ closed probability panels, including all incidences of
+a law lying at a shared endpoint; $30$ panels are nonempty after entry.
+The subsequent elementary moment calculation excludes two whole panels
+and retains $28$. These are coverage statements about necessary conditions,
+not assertions that each remaining box is realized by an iid law.
 
-The finite base (Assumption~\ref{ms:base41}) has not been established
-in this work. The appendices give reductions for individual indices,
-but the complete independent proof through $41$ is missing. An older
-assembly for $40\le n\le42$ uses tail and coarse-ceiling inputs; the
-current independent assembly named by the source material was unavailable.
+The selected signed resource export contains all $682$ active cells of
+the last pass and their $1364$ endpoint quadratics. The low-noise lemma
+uses $28$ rational endpoint and domain gates for one continuous polynomial
+argument. Its application is bound to the previously acquired $.6$ strip
+on $p\in[.40,.53]$. The complementary calculation on $[.41,.42]$ covers
+all $128$ closed sign, threshold and noise boxes: $16$ use the low-noise
+lemma, $84$ are impossible by necessary conditions, and $28$ pass both
+ray tests. The $56$ retained strict margins exceed $0.00892011917$.
+The seam $\lambda=.075$ belongs to both arguments; $\lambda=0$ is
+handled directly.
 
-The local exclusion (Assumption~\ref{ms:local42}) also remains open.
-Some inherited local statements begin at $47$ or have finite upper limits.
-Appendix~\ref{ms:uniform-bridge} gives the parameter changes needed at
-$42$. Completing the exclusion requires the corresponding analytic bounds
-and a complete finite cover at that scope. The longer Fourier,
-confinement and finite-index arguments are included for review; their
-whole chain and numerical inputs have not been independently verified
-in full here.
+The recorded independent checks reconstruct the signed coefficients and
+the continuous quintic without importing their constructors. They also
+check the actual-law moment contraction and the central-panel resource
+and ray inequalities. Negative controls include malformed, missing,
+duplicated, reordered and corrupted proof data, a wrong endpoint-atom
+convention, and omission of the $H^2a$ conservation term. These controls
+test specified failure modes; they do not turn arithmetic into a proof
+of compactness, inversion, or an analytic reduction.
 
-\begin{center}
-\begin{tabular}{@{}P{0.36\textwidth}P{0.30\textwidth}P{0.27\textwidth}@{}}
-\toprule
-Result & Mathematical status & Computation status\\
-\midrule
-Attainment, contact and smoothing & Proved for the stated class of laws &
-Bounded checks recorded\\[3pt]
-Support, conserved identity, score charge and curvature & Proved under the
-stated hypotheses & Exact algebra and bounded arithmetic checked\\[3pt]
-Complete Fourier, confinement and finite-index chain & Supplied arguments;
-full independent review remains & No complete replay here\\[3pt]
-Finite base and uniform local exclusion & Open & No complete acceptance\\
-\bottomrule
-\end{tabular}
+\begin{center}\small
+\begin{tabular}{@{}P{.29\textwidth}P{.36\textwidth}P{.28\textwidth}@{}}\toprule
+Result & Mathematical status & Execution status\\\midrule
+Fixed-target attainment, contact and conservation & Proved at the stated
+scope, including reflection and support residuals & Finite-law identity
+and negative controls recorded\\[3pt]
+Selected Fourier and coarse entry & Analytic implication proved; numerical
+conclusion uses the stated exact cover & Isolated replay passed; $11264$
+signed boxes\\[3pt]
+Elementary moment contraction and signed phase & Same-law implications
+proved from the acquired entry & All panels and active cells checked\\[3pt]
+Continuous low-noise confinement & Proved under its incoming strip and
+predecessor hypotheses & $28$ exact gates; independent reconstruction\\[3pt]
+Full confinement on $[.41,.42]$ & Conditional panel theorem proved &
+Complete $128$-box join checked\\[3pt]
+Four-summand original-law bridge & Conditional on genuine whole-cell
+rows and complete coverage & Algebraic and atom controls; no complete
+four-summand acceptance\\[3pt]
+Finite base and complete local exclusion & Open & No complete acceptance\\
+\bottomrule\end{tabular}
 \end{center}
+
+These arithmetic results were recorded during the research checks of
+27--28 October 2026. The manuscript build and source-consistency checks
+are separate document checks. An execution marked successful is not an
+independent theorem about all real laws unless the mapping from such laws
+to the checked domain has also been justified.
+
+\subsection{Execution and the trusted boundary}
+
+The acceptance programs use exact rational arithmetic and directed
+rational enclosures. They compare the complete ordered proof data, reject
+duplicate keys and distinguish numerical types. Source hashes identify
+inputs; they do not establish the mathematical correctness of those inputs.
+
+An execution audit found that disabling Python bytecode writes does not
+prevent reading an existing valid cache. A hostile cache could therefore
+alter a phase export while every pinned source hash remained unchanged;
+module search order supplied another route to the wrong implementation.
+The selected execution path now compiles the explicitly named source bytes
+and runs in an isolated child with a fresh cache location. The unchanged
+coarse-entry ancestor is copied from its $13$ pinned source and data files into a
+fresh private tree and checked before and after execution. The repaired
+path reproduces the genuine output and rejects the hostile fixtures.
+The Python interpreter, standard library, operating system, rational
+arithmetic semantics and the analytic-to-code correspondence remain part
+of the trusted boundary. This is not a Lean formalization.
+
+The repository includes the proof objects, exact programs, input hashes,
+commands, return codes and separate review reports. Bounded reproduction
+uses \path{mathematics/fixed-target-v8/2026-10-28/run_checks.py}; the isolated
+coarse-entry replay is
+\path{mathematics/fixed-target-v8/2026-10-28/isolated_entry_replay.py}.
+The evidence directory is \path{runs/fixed-target-v8-20261028/}.
+No native large-scale certificate-generation campaign is part of these
+manuscript checks.
+
+\subsection{Which computations have actually been removed}
+
+For the selected coarse entry, the fixed coefficient and signed moment
+feedback replace the older unknown-score initialization. Its dependency
+chain no longer includes the degree-six phase ancestor, the six intervening
+coarse high-frequency updates, or the older twelve-stage signed schedule and its export evaluation.
+The comparison is $11264$ signed boxes in the new component against
+$239616$ prescribed in the old component, plus their respective separate
+initial calculations. It is not a measured speedup or a percentage reduction
+of the whole proof. The two quadratic passes, complete Fourier estimates,
+actual-law event bounds, and ordered support acquisition remain.
+
+After that entry, the moment contraction is elementary and needs no new
+Fourier integration. The continuous low-noise proof replaces the additional
+thirteen-panel boundary table by one quintic and its derivative signs; it
+also removes the phase table from the lowest-noise part of the completed
+central panel. The incoming $.6$ strip is still essential. Larger noise,
+other probability panels, the strict count comparison and the independent
+finite base are not removed by these results. Existing certificate files
+and their original targets are preserved as historical alternatives.
+
+\subsection{What remains to complete the conjecture}
+
+A full local proof must still acquire the required confinement on the
+other surviving probability panels at larger noise, then prove the strict
+count comparison on every remaining count, phase and noise cell. In
+particular, several normalization and cubic-repair formulas in the
+appendices assume $p<1/2$, while the acquired range reaches $.53$.
+Those assumptions cannot be omitted. Amplitude bounds below $1/2$ must
+also be quantitatively strong enough for each selected count denominator.
+The equality case and zero-noise comparison must have their stated scope.
+
+Independently, the finite base through $41$ remains open in this work.
+Appendix~\ref{r4bridge:section} keeps the original marginal in the
+four-summand response and proves the quadrature and threshold-interpolation
+reserves. It does not provide all the necessary numerical rows or a complete
+four-summand cover. A five-summand result which assumes the four-summand
+bound cannot supply that missing parent. No historical success marker or
+partial-checkout file list is used to infer otherwise.
