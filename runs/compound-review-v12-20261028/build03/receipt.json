@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/compound-review-v12/mathematics/simplification-v12/2026-10-28/compound-review.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/compound-review-v12/runs/compound-review-v12-20261028/build03/build",
+    "--json"
+  ],
+  "started": "2026-10-28T18:16:57.202536+00:00",
+  "finished": "2026-10-28T18:16:58.264085+00:00",
+  "returncode": 0,
+  "source_sha256": "e037bada6470072377a9c6a7cec8a51ed04ea547ed84bca9cbe37004998dd75a",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]"
+}

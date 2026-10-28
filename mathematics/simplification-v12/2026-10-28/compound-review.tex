@@ -1,0 +1,317 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}[proposition]{Lemma}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\Pois}{\operatorname{Pois}}
+\newcommand{\1}{\mathbf1}
+\title{Independent review of the two-jump Poisson comparison}
+\author{}
+\date{28 October 2026}
+\begin{document}
+\maketitle
+
+This note proves component estimates for a direct count comparison. It does
+not prove a new range of the Berry--Esseen inequality. It identifies a false
+allocation shortcut in the earlier discovery program, gives the correct
+finite-count variables, and establishes a finite evaluation formula and a
+useful monotonicity. The accepted small-noise theorems and the local
+variance-aware moment lemma do not use the false shortcut.
+
+\section{Comparison with two Poisson jump sizes}
+Write $Z_b(V)=b(P_{V/b^2}-V/b^2)$, where $P_a\sim\Pois(a)$.
+Different occurrences are independent unless stated otherwise; $Z_b(0)=0$.
+We use the following published theorem: if independent $X_j$ satisfy
+$\E X_j\le0$, $X_j\le b$, and $\sum_j\E X_j^2\le V$, then
+\[
+ \E f\Bigl(\sum_jX_j\Bigr)\le\E f(Z_b(V))
+ \quad\text{for } f\in\mathcal F^2_+.
+\]
+Here $\mathcal F^2_+$ consists of continuously differentiable functions
+whose function and derivative are increasing and convex. This is
+Pinelis, \emph{On the Bennett--Hoeffding inequality}, Proposition~2.8
+and Corollary~2.11, printed p.~9,
+\href{https://arxiv.org/pdf/0902.4058}{arXiv:0902.4058}.
+In particular $f(x)=(x-y)_+^2$ belongs to this class. The premise is a
+variance upper bound, not an equality. Zero variance is dealt with directly.
+
+\begin{proposition}[Groupwise comparison]
+Suppose $S_0,S_1$ are sums of two independent groups of centered independent
+variables. The summands in group $j$ are at most $b_j>0$, and their total
+variance is at most $V_j$. Then, for every real $y$,
+\begin{equation}\label{eq:groups}
+ \E(S_0+S_1-y)_+^2
+ \le \E\{Z_{b_0}(V_0)+Z_{b_1}(V_1)-y\}_+^2.
+\end{equation}
+Consequently, for every $y<b$,
+\begin{equation}\label{eq:closed}
+ \Pp(S_0+S_1\ge b)
+ \le \frac{\E\{Z_{b_0}(V_0)+Z_{b_1}(V_1)-y\}_+^2}{(b-y)^2}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Condition on $S_1=z$ and apply the published theorem to the translated
+hinge $(x+z-y)_+^2$. Integrate this inequality. Then condition on the
+new independent variable $Z_{b_0}(V_0)$ and replace the second group.
+All integrands are nonnegative, so Tonelli applies; all expectations
+are finite by the second-moment bounds. No theorem for a larger class
+of moment functions is being assumed. Finally
+$\1_{[b,\infty)}(x)\le (x-y)_+^2/(b-y)^2$. This includes an atom at
+$b$ and requires the strict inequality $y<b$.
+\end{proof}
+For the incoming lower tail of $W_j$, apply this with $S=-W_j$:
+the jump bound is $A$ on $-U_0$ and $d\ge a_1$ on $-U_1$.
+The inward bound on $U_0$ is not a permissible replacement for $A$.
+
+\section{The allocation belongs to the marginal, not to each count}
+Let $p\in(0,1)$, $q=1-p$, and let $U_0,U_1$ be centered conditional
+laws with variances $v_0,v_1$. Assume
+$-A\le U_0\le a_0$, $-a_1\le U_1\le A$, with
+$a_0,a_1\ge0$ and $a_0+a_1\le d$. Set
+\[
+ s=qv_0+pv_1>0,\quad \lambda=ns,\quad
+ w=\frac{pv_1}{s}\in[0,1],\quad k=np+\delta\in\{0,\ldots,n\}.
+\]
+At a legal count $k+i$, the exact group variances are
+\begin{align}\label{eq:transport}
+ T_{0,i}&=\lambda(1-w)\left(1-\frac{\delta+i}{nq}\right),&
+ T_{1,i}&=\lambda w\left(1+\frac{\delta+i}{np}\right).
+\end{align}
+These follow simply from $v_0=s(1-w)/q$, $v_1=sw/p$ and the counts
+$n-k-i,k+i$. Thus $t_i=\lambda+(\delta+i)(v_1-v_0)$, but generally
+$T_{0,i}\ne(1-w)t_i$ and $T_{1,i}\ne wt_i$.
+
+If $p,q\ge2/5$ and $|\delta|\le D$, then the common inflation
+\[
+ T_{0,i}\le\lambda(1-w)\left(1+\frac{5(D+i)}{2n}\right),\qquad
+ T_{1,i}\le\lambda w\left(1+\frac{5(D+i)}{2n}\right)\quad(i\ge1)
+\]
+is valid. The earlier discovery program's incoming inflation therefore
+has a legitimate interpretation. Its own-count/cubic-repair join did not:
+there it replaced the two own-count variances by $(1-w)t,wt$ while using
+$w$ as the marginal allocation in the moment repair.
+
+\paragraph{An exact admissible counterexample to that intermediate bound.}
+Take $n=42$, $p=1/2$, $k=22$, $r=2/25$, $A=3/5$, and
+$\varepsilon=1/1000$. Let $U_0$ be the centered two-point law on
+$\{-A,\varepsilon\}$, with probabilities
+$\varepsilon/(A+\varepsilon),A/(A+\varepsilon)$, and let $U_1=-U_0$.
+This gives an actual four-point marginal $B+U$, not a moment relaxation.
+Here
+\[
+ v_0=v_1=v=3/5000,\quad w=1/2,\quad \lambda=63/2500,
+ \quad T_0=20v,\quad T_1=22v,\quad t=42v.
+\]
+With $\kappa=-4r$, put $c_0=A^2-4Ar$, $c_1=A^2+4Ar$.
+The valid bound is
+$\E W^4-\kappa\E W^3\le c_0T_0+c_1T_1+3t^2$.
+The common-fraction substitute fails by the exact amount
+\begin{equation}\label{eq:false}
+ \E W^4-\kappa\E W^3-
+ \{[c_0(1-w)+c_1w]t+3t^2\}
+ =\frac{423903}{2500000000}>0.
+\end{equation}
+Indeed $\E U_0^3=v(\varepsilon-A)$,
+$\E U_0^4=v(A^2-A\varepsilon+\varepsilon^2)$, and independence gives
+$\E W^4=42\E U_0^4+3t^2-126v^2$.
+The difference is
+$v[8rA-8r\varepsilon-168A\varepsilon+42\varepsilon^2]$.
+The inward sum is $.002<.072$. The raw threshold at phase $u=-r$ is
+\[
+ |H|=\frac{\delta-r}{\sqrt{pq+s}}
+      =\frac{23/25}{\sqrt{.2506}}<1.84.
+\]
+Thus the counterexample satisfies the intended support and threshold
+constraints. It invalidates an intermediate discovery inference, not the
+sharp conjecture, the accepted $.03$ theorem, or the local moment lemma.
+
+\paragraph{The corrected joint cubic prices.}
+For a quartic minorant
+$h(x)=(-x^4+b_3x^3+b_2x^2+b_1x+b_0)/M$, $M>0$, define
+$\kappa=b_3-4r$, $L=b_2+3b_3r-6r^2$, $J=Mh(r)$.
+Put $\Lambda_0=\lambda(1-w)$, $\Lambda_1=\lambda w$,
+$g_0=1-\delta/(nq)$, $g_1=1+\delta/(np)$, so
+$t=g_0\Lambda_0+g_1\Lambda_1$.
+Let $m>0$, $C\ge0$, and assume $a_0<p$, $a_1<q$. Write
+$\mu_j=\E U_j^3$ and $\ell=(pq+s)^{-1/2}$. These support bounds fix
+the signs of $B+U-p$, giving
+\[
+ \rho=\ell^3\{pq(1-2pq)+3pq(v_0+v_1)+p\mu_1-q\mu_0\}.
+\]
+Set $v=pq$ and $\rho_B=(1-2v)/\sqrt v$. Choose
+\[
+ B\ge \frac{v(1-2v)}s\{(1+s/v)^{3/2}-1\},
+\]
+and suppose the resulting lower bound for the entire cubic bracket is
+nonnegative.
+If $0\le K\le C\ell^3/n$, one may lower-bound that entire repair
+using $K$. For the right-panel bounds, the bracket is positive since
+$3\min(p,q)-B-d>0$. Combining the third moments before estimating them
+then gives the lower bound
+\begin{align*}
+ m\Pp(W>-r)+C(\rho-\rho_B)\ \ge\ &
+ \frac mM(Lt-3t^2+J)+K\lambda\{3p(1-w)+3qw-B\}\\
+ &-\Lambda_0\max_{x\in\{-A,a_0\}}
+       \left\{\frac mM g_0(x^2-\kappa x)+Kx\right\}\\
+ &-\Lambda_1\max_{x\in\{-a_1,A\}}
+       \left\{\frac mM g_1(x^2-\kappa x)-Kx\right\}.
+\end{align*}
+To see this, integrate each displayed quadratic against
+$x^2\,dP_j(x)/v_j$ and use its endpoint maximum; it is convex because
+$g_j\ge0$. At $v_j=0$ the corresponding term is zero directly.
+This preserves the two physical multipliers. Replacing $K$ in separated
+signed pieces without first proving the whole bracket nonnegative is
+not justified. For fixed other parameters the displayed bound is concave
+in $w$, owing to $-3t^2$; the endpoint prices are independent of $w$.
+
+\section{Monotonicity removes some allocation work, but not all}
+\begin{proposition}[Variance and allocation monotonicity]\label{prop:mono}
+For $0<d\le A$, $T\ge0$, $w\in[0,1]$, and $y\in\mathbb R$, set
+\[
+ G(T,w;y)=\E\{Z_A(T(1-w))+Z_d(Tw)-y\}_+^2.
+\]
+Then $G$ is nondecreasing in $T$ and nonincreasing in $w$.
+\end{proposition}
+\begin{proof}
+First prove $\E(Z_d(V)-y)_+^2\le\E(Z_A(V)-y)_+^2$.
+For $V>0$ and integers $N\ge V/d^2$, take independent
+$B_j\sim\operatorname{Bernoulli}(V/(Nd^2))$.
+The centered sum $X_N=d\sum_{j=1}^N(B_j-\E B_j)$ has summands bounded
+above by $d\le A$ and total variance at most $V$. The published comparison
+gives the required bound with $X_N$ in place of $Z_d(V)$.
+The binomial Poisson limit gives $X_N\Rightarrow Z_d(V)$.
+Moreover
+\[
+ \E X_N^4\le d^2V+3V^2,
+\]
+since each centered summand has absolute value at most $d$ and independence
+gives the fourth-moment expansion. Hence the quadratic hinges are uniformly
+integrable: their tails are controlled by a constant times
+$(1+|X_N|)^2$, whose squares have uniformly bounded expectation.
+Truncating a continuous hinge and then removing the truncation justifies
+the limit. At $V=0$ the assertion is immediate.
+
+The comparison persists after adding an independent variable with finite
+second moment: condition on that variable and integrate the translated
+hinge inequalities. For $w_1<w_2$, use a common sum consisting of
+$Z_A(T(1-w_2))$ and $Z_d(Tw_1)$. The remaining variance is
+$V=T(w_2-w_1)$, assigned to large jumps at $w_1$ and small jumps at
+$w_2$. The preceding comparison proves monotonicity in $w$.
+For $T_1<T_2$, the law at $T_2$ is the law at $T_1$ plus independent
+centered Poisson increments with variances
+$(T_2-T_1)(1-w)$ and $(T_2-T_1)w$. Conditional Jensen proves
+monotonicity in $T$. All assertions include zero intensities.
+\end{proof}
+
+For example, choose valid upper group variances
+$V_0=\lambda(1-w)\omega_0$, $V_1=\lambda w\omega_1$ with
+$0\le\omega_0\le\omega_1$. Their small-jump fraction is at least $w$.
+If $V_0+V_1\le T_+$ and $w\ge w_-$, the incoming hinge is bounded by
+$G(T_+,w_-;y)$. One must check $\omega_0\le\omega_1$; it does not follow
+from arbitrary count multipliers without a phase condition.
+On a negative phase, $\delta=\xi+r$, $|\xi|<1$, so $\delta+i>0$
+for $i\ge1$ and one may take $\omega_0=1$ and a suitable $\omega_1\ge1$.
+
+\paragraph{Convexity is false, even for a positive hinge anchor.}
+At $A=3/5$, $d=9/125$, $T=1/40$, $w=1/4$, and $y=1/5$,
+\begin{equation}\label{eq:curv}
+ \frac{\partial^2}{\partial w^2}G(T,w;y)
+ =-e^{-815/648}\,
+ \frac{787398879114798488065}{147382613147155571933184}<0.
+\end{equation}
+Here is an exact finite verification. Put
+$\mu=T(1-w)/A^2$, $\nu=Tw/d^2$, $M=A\mu+d\nu$, $z=M+y$.
+At the stated point $\mu+\nu=815/648$, $z=229/720$, and
+$4d<z<5d<A$. In a neighborhood, the only atoms below the hinge are
+zero large jumps and $j=0,\ldots,4$ small jumps. Thus
+\[
+ G(T,w;y)=T+y^2-e^{-\mu-\nu}Q(w),\qquad
+ Q(w)=\sum_{j=0}^4\frac{\nu^j}{j!}(M+y-jd)^2.
+\]
+Since $(\mu+\nu)'=385/81$ and $M'=11/36$, differentiating this finite
+polynomial shows that the coefficient in \eqref{eq:curv} is
+$Q''-2(385/81)Q'+(385/81)^2Q$. The independent rational checker
+reconstructs it. Therefore a concave own-count bound minus this hinge
+need not be concave. Allocation endpoints alone cannot be inferred from
+convexity. Monotone bounds on closed allocation intervals remain valid.
+
+\section{The complete hinge is a finite complement}
+For $A=3/5$, $d=9/125$, set $a=3/125$, so $A=25a$, $d=3a$.
+Let $S=25P_\mu+3P_\nu$. For every real $K$,
+\begin{equation}\label{eq:lattice}
+ \E(S-K)_+^2=625\mu+9\nu+(25\mu+3\nu-K)^2
+ -e^{-\mu-\nu}\sum_{25j+3l\le K}
+ \frac{\mu^j\nu^l}{j!l!}(K-25j-3l)^2.
+\end{equation}
+The sum is finite (empty if $K<0$). This is the identity
+$x_+^2=x^2-(-x)_+^2$, followed by the exact first two moments of $S$.
+It includes all upper-tail mass and every lattice collision; there is no
+truncation error. The physical anchor is
+$K=(y+A\mu+d\nu)/a$, and the physical numerator is $a^2$ times
+\eqref{eq:lattice}. A rational $K$ is allowed.
+
+The independent implementation uses the probability-generating function
+$e^{\mu z^{25}+\nu z^3}=\sum_{j\ge0}c_jz^j$ instead of a double sum:
+\[
+ c_0=1,\qquad j c_j=25\mu c_{j-25}+3\nu c_{j-3},
+ \quad c_j=0\ (j<0).
+\]
+The finite deficit is $\sum_{j\le K}(K-j)^2c_j$.
+For rational $x=\mu+\nu\ge0$, let $S_N=\sum_{j=0}^Nx^j/j!$ and
+$N+2>x$. The positive exponential series gives
+\[
+ S_N\le e^x\le S_N+\frac{x^{N+1}}{(N+1)!}\frac1{1-x/(N+2)}.
+\]
+Reciprocals enclose $e^{-x}$. A lower exponential bound gives an upper
+hinge numerator because the deficit is subtracted. This direction is
+essential. It remains valid at zero intensity and at integer $K$.
+
+For an alternative box bound with fixed $K$, the uncentered numerator
+$\E(S-K)_+^2$ increases with each intensity by ordinary Poisson coupling.
+Use upper intensity endpoints in that numerator and a positive lower
+bound on $b/a+25\mu+3\nu-K$ in the denominator. A centered physical
+anchor generally moves $K$ with the intensities; in that case one should
+apply Proposition~\ref{prop:mono}, or account for this movement explicitly.
+
+\section{Bounding all remaining incoming counts}
+Every legal count has variance at most
+$n\max(v_0,v_1)\le(5/2)\lambda$ when $p,q\ge2/5$.
+Put $\mu=(5/2)\lambda/A^2$ and assume $0<A<1$, $r\ge0$.
+For an integer $i\ge2$, the Poisson hinge at integer anchor $i$ gives
+\[
+ \Pp(W_{k+i}\le-i-r)
+ \le\frac{\mu^{i+1}}{(i+1)!D_i^2},\qquad
+ D_i=i(1/A-1)+r/A+\mu>0.
+\]
+Indeed $(j-i)_+^2\le\binom j{i+1}$ for integers $j\ge0$ and $i\ge2$.
+For $j=i+l$, $l\ge1$, the ratio
+$\binom{i+l}{i+1}/l^2$ starts at one and is nondecreasing, since
+\[
+ \frac{\binom{i+l+1}{i+1}/(l+1)^2}
+      {\binom{i+l}{i+1}/l^2}
+ =\frac{l(i+l+1)}{(l+1)^2}\ge1
+ \quad\Longleftrightarrow\quad (i-1)l\ge1.
+\]
+Poisson factorial moments give the numerator. Since $D_i$ increases,
+for any $m\ge2$ with $\mu<m+2$ the complete tail is bounded by
+\[
+ \sum_{i=m}^{n-k}\Pp(W_{k+i}\le-i-r)
+ \le\frac{\mu^{m+1}}{(m+1)!D_m^2}\frac1{1-\mu/(m+2)}.
+\]
+The added terms beyond legal counts are nonnegative numbers in the
+majorant; no nonexistent conditional law is invoked. The condition
+$i\ge2$ matters: at $i=1,j=3$, the proposed pointwise bound would read
+$4\le3$. At $\lambda=0$ handle the deterministic conditional noises
+directly.
+
+\paragraph{Status.}
+These are complete component derivations under the stated hypotheses.
+The published Poisson comparison remains an external theorem. Exact checks
+cover the transport counterexample, a genuine failure of convexity,
+finite-complement arithmetic, actual conditional convolutions and rejected
+shortcuts. They are not a closed-domain count cover, nor an independent
+proof of the published theorem. No old certificate or manuscript file is
+changed.
+\end{document}
