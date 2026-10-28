@@ -8,7 +8,7 @@ history file. No external service was modified and no generation campaign ran.
 ## Result
 
 The proposed direct geometric inequality is valid, with a complete derivation in
-`geometry.tex` and a five-page compiled note `geometry.pdf`. For an actual compact,
+`geometry.tex` and a six-page compiled note `geometry.pdf`. For an actual compact,
 centered variance-one law with central support gap, let `w=1-theta`, `v=pq`,
 `ell=sqrt(w/v)` and `d=1-(A+B)/ell`. Then
 
@@ -40,11 +40,11 @@ One further direct evaluation per frozen v7 entry panel replaces the old eight
 rounds for the currently used moment/strip conclusions. It reads the accepted
 v7 input directly and does not read an old iteration output. Its input SHA256 is
 `61b7ad43e20046d7cbf7157e3feb61696331731e7be418f6a5fa535c2eee8bae`.
-The named input, all100 closed source panels, all30 nonempty panels, maximum
+The named input, all 100 closed source panels, all 30 nonempty panels, maximum
 incoming D and maximum surviving radius are checked explicitly.
 
-- Panels24 and53 are excluded; panels25 through52 are retained.
-- All13 existing .6 strips on p[.40,.53] pass their complete boundary/ray tests.
+- Panels 24 and 53 are excluded; panels 25 through 52 are retained.
+- All 13 existing .6 strips on p[.40,.53] pass their complete boundary/ray tests.
 - The central panel [.41,.42] gives:
 
 | Quantity | New outward bound | Current central theorem's required bound |
@@ -57,6 +57,25 @@ incoming D and maximum surviving radius are checked explicitly.
 | ell upper | 2.033209198406 | 2.034 |
 | beta lower | .103059226156 | .09736 |
 | beta upper | .220251236683 | .234 |
+| joint displacement intercept (balanced line) | .069772925988 | .0730144376 |
+| joint noise intercept (balanced line) | .551973904179 | .5728987925 |
+
+The last two reference values are the old central moment-stage resource
+(`runs/fixed-target-v8-20261028/moment03/stdout.json`, panel 41), not independent
+threshold caps. The smaller new intercepts imply containment in that old
+resource triangle. The raw H bound and signed phase resource are unchanged
+separate ancestors; this table does not re-establish them.
+
+The direct formulas also retain the shared constraint
+`aI*d + C_I*lambda/(42*vmax) <= J_I`, where
+`aI=6(1-d_I)-Theta_I*(s_upper+7)/(1-Theta_I)>0`.
+The zero-reserve case forces both quantities to zero. This keeps the joint
+resource needed by later count estimates; its two intercepts cannot be spent
+independently. The first line's central displacement intercept .07337803326
+is slightly larger than the old .0730144376, although its noise intercept
+is smaller. The balanced line averages it with the other valid linearization
+of the same mixed cost; it improves BOTH old intercepts, as the table shows.
+Both valid lines remain exported.
 
 The new whole-panel outward bounds additionally give theta<=.053287161488,
 lambda<=.561431508254 and ell>=1.960929043113. The independent global bounds
@@ -68,10 +87,10 @@ main simplification is removing the feedback iteration and exposing one cost.
 | Component | Mathematical status | Execution status |
 |---|---|---|
 | Direct actual-law budget | Locally derived complete analytic proof | 170 exact actual-law controls passed |
-| Four global improvements | Conditional theorem from stated coarse inputs | Fresh40 exact rational gates passed |
-| One-pass panel exports | Derived formulas for the same actual-law parameters | Fresh complete30-panel evaluation passed |
-| Incoming .6 strips | Conditional on retained all-threshold heat/ray/contact/predecessor theorem | Both rays passed on exactly13 panels |
-| Central-panel input connection | All listed premises strictly improved | Eight outward scalar joins checked |
+| Four global improvements | Conditional theorem from stated coarse inputs | Fresh 40 exact rational gates passed |
+| One-pass panel exports | Derived formulas for the same actual-law parameters | Fresh complete 30-panel evaluation passed |
+| Incoming .6 strips | Conditional on retained all-threshold heat/ray/contact/predecessor theorem | Both rays passed on exactly 13 panels |
+| Central-panel input connection | All listed premises strictly improved | Eight scalar joins and two joint-resource intercept joins checked |
 | Remaining high-noise/count/BASE41 | Open, unchanged | Not accepted or executed here |
 
 The negative control is a genuine law: centered atoms
@@ -98,10 +117,10 @@ source/proof hashes, Python version, durations and return codes. It runs only
 three bounded pure-rational programs; no constructor/Fourier import or native
 certificate campaign is involved. Assertions must remain enabled.
 
-Selected result: `runs/geometry-v10-20261028/final03/`.
+Selected result: `runs/geometry-v10-20261028/final05/`.
 The initial floating-point discovery is separately labeled in `geometry-explore.py`
 and `explore01/`; it is not used by acceptance. Earlier gated runs are preserved
-without being relabeled as final. `build02` compiles the full proof in five pages,
+without being relabeled as final. `build04` compiles the full proof in six pages,
 with no final warnings; every rendered page was visually inspected. The final
 PDF and source hashes are in its receipt and `visual-review.json`.
 
@@ -126,6 +145,9 @@ input-by-input comparison or a rerun on the new interval. No old file or
 certificate is deleted. This component does not remove half-amplitude
 confinement, close the shifted-anchor count comparison, or prove BASE41.
 
-An independent reviewer is auditing the derivation and numerical semantics on
-a separate worktree. Its report and any integration recommendation belong to
-the coordinating agent; this constructor report is not independent acceptance.
+The separate independent review found no blocker at the final source hashes.
+Its commits are `8afb87ed8f9e89002d4ec67b740290e6594d036a` and
+`f9ab4eebe4a1bea364b3d8d9a9d00471a517a744`. It reconstructed all four quartics
+and both cubics, and checked the new joint constraints and central triangle
+containment. The review and integration recommendation belong to the
+coordinating agent; this constructor report is not independent acceptance.

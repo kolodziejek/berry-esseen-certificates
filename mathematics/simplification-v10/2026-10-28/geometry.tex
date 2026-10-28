@@ -190,7 +190,8 @@ Multiplying by $n$ and using $n\theta=w\lambda/v$ yields
 \]
 Here $\ell w\ge2W_0^{3/2}$ and
 $32.20665378/(2W_0^{3/2})<17.558$.
-Replacing $Q,\sigma$ by their lower enclosures gives rational cubics
+The numerators are positive since $Q\le.4$. Replacing $Q,\sigma$ by
+their lower enclosures gives rational cubics
 $U_+,U_-$. The positive cubic increases up to $p=1/3$ and satisfies
 $U_+''\le-13$ thereafter. The negative cubic has $U_-''\le-12$
 on the entire interval. The concave counterpart of
@@ -291,7 +292,31 @@ The other exports are
  \lambda\le\frac{v_+}{C_I}
       \left\{\frac{42D_I}{e_I(1-\Theta_I)}-42Q_I\right\}.
 \]
-These are direct formulas; no result is fed back into an earlier formula.
+The same calculation retains a joint displacement--noise constraint. Set
+\[
+ a_I^*=6(1-d_I)-\frac{\Theta_I}{1-\Theta_I}(s^++7)>0.
+\]
+In the direct budget,
+$6wd(1-d)-\theta(\sigma+5\text{ or }\sigma+7)d\ge w a_I^*d$.
+Multiply by $n$, use $n\theta=w\lambda/v$, $n\ge42$ and
+$\ell w\ge e_I(1-\Theta_I)$. All remaining costs are nonnegative, so
+\begin{equation}\label{v10:geometry:joint}
+ a_I^*d+\frac{C_I\lambda}{42v_+}\le J_I.
+\end{equation}
+If $J_I=0$ this forces $d=\lambda=0$; otherwise it is a single shared
+budget with intercepts $J_I/a_I^*$ and $42v_+J_I/C_I$. It does not permit
+spending the full reserve independently on displacement and noise.
+A second useful line follows by bounding the same mixed cost in the other
+direction, using $d\le d_I$. Averaging the two valid lower bounds gives
+\[
+ \widehat a_I d+\frac{\widehat C_I\lambda}{42v_+}\le J_I,\qquad
+ \widehat a_I=6(1-d_I)-\frac{\Theta_I(s^++7)}{2(1-\Theta_I)},\quad
+ \widehat C_I=C_I-\frac{(s^++7)d_I}{2}.
+\]
+Both coefficients are checked positive. This uses
+$2(\theta/w)d\le[\Theta_I/(1-\Theta_I)]d+d_I(\theta/w)$, so it averages
+valid bounds for the same cost rather than adding two expenditures.
+All these are direct formulas; no result is fed back into an earlier formula.
 
 \begin{proposition}[Connection with the current entry]
 For the thirty closed nonempty panels of the selected v7 entry, the preceding
@@ -308,7 +333,10 @@ heat and ray inequalities. On $[.41,.42]$ it gives
  1.975749037978\le\ell\le2.033209198406,
  \qquad .103059226156\le\beta\le.220251236683.
 \]
-These imply every outward moment, noise and scale premise used by the
+The averaged joint bound has outward intercepts $.069772925988$ and
+$.551973904179$, both smaller than the old central moment resource's
+$.0730144376$ and $.5728987925$. These imply every outward moment, noise
+and scale premise used by the
 current central-panel confinement theorem. The raw-threshold and signed
 phase bounds still come from their original separate predecessors.
 \end{proposition}

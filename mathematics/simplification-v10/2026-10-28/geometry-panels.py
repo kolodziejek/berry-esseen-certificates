@@ -54,8 +54,16 @@ def row(z):
  rho=min(F('1.426'),hi(rb+max(F(0),L-decay*rb)*min(theta,r/(k*L))))
  beta_l=lo(1-2*u-2*(1-u)*theta);beta_u=hi(1-2*l+2*l*theta)
  lam=hi(vmax/cmin*(42*Di/(ell*w)-42*qmin))
+ joint_cost=6*(1-d)-(theta/w)*(SU+7)
+ assert joint_cost>0
+ joint_displacement=hi(J/joint_cost)
+ balanced_a=6*(1-d)-(theta/w)*(SU+7)/2
+ balanced_c=cmin-(SU+7)*d/2
+ assert balanced_a>0 and balanced_c>0
+ balanced_displacement=hi(J/balanced_a)
+ balanced_noise=hi(42*vmax*J/balanced_c)
  zn=heat(ell*(l+F(3,5)),rho,-beta_l);zp=heat(ell*(1-u+F(3,5)),rho,beta_u)
- return dict(index=i,excluded=False,pl=l,pu=u,D=Di,qmin=qmin,cmin=cmin,theta=theta,d=d,ell_l=ell,ell_u=ellu,A=A,B=B,rho=rho,beta_l=beta_l,beta_u=beta_u,lambda_upper=lam,third_moment_price=k,strip_negative=zn,strip_positive=zp)
+ return dict(index=i,excluded=False,pl=l,pu=u,D=Di,qmin=qmin,cmin=cmin,theta=theta,d=d,ell_l=ell,ell_u=ellu,A=A,B=B,rho=rho,beta_l=beta_l,beta_u=beta_u,lambda_upper=lam,joint_displacement_intercept=joint_displacement,joint_noise_intercept=lam,joint_cost=joint_cost,joint_reserve=J,balanced_displacement_cost=balanced_a,balanced_noise_cost=balanced_c,balanced_displacement_intercept=balanced_displacement,balanced_noise_intercept=balanced_noise,third_moment_price=k,strip_negative=zn,strip_positive=zp)
 def encode(x):
  if isinstance(x,F):return str(x)
  if isinstance(x,dict):return {k:encode(v)for k,v in x.items()}
@@ -77,6 +85,8 @@ assert strips==list(range(40,53))
 central=next(x for x in kept if x['index']==41)
 for key,bound in [('theta','.054'),('d','.069'),('rho','1.22'),('lambda_upper','.6'),('ell_u','2.034'),('beta_u','.234')]:assert central[key]<F(bound)
 for key,bound in [('ell_l','1.9706'),('beta_l','.09736')]:assert central[key]>F(bound)
+assert central['balanced_displacement_intercept']<F('.0730144376')
+assert central['balanced_noise_intercept']<F('.5728987925')
 summary={k:max(x[k]for x in kept)for k in ['theta','d','rho','lambda_upper']}
 summary['ell_lower']=min(x['ell_l']for x in kept)
 print(json.dumps(encode({'status':'PASS_DIRECT_ONE_PASS_PANEL_CALCULATIONS','source_input_sha256':PIN,'script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'python':sys.version,'updates_per_panel':1,'excluded':[x['index']for x in rows if x['excluded']],'complete_point_six_strips':strips,'global_outward':summary,'panels':rows,'limitations':'Conditional on the global direct-geometry theorem, accepted v7 entry and retained all-threshold heat/ray theorem; no phase/count cover or full conjecture.'}),indent=2))
