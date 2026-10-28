@@ -4,7 +4,7 @@ Reviewer: counts component agent. Review worktree: `counts-window-review-v14`, b
 
 This agent constructed the separate paired-kernel/two-point-family component, but did **not** construct the all-law characteristic-function/transport argument or its acceptance checker. The mass estimate below was derived independently and differs from the constructor's estimate. No constructor Python is imported or executed.
 
-Reviewed source: `mathematics/simplification-v14/2026-10-28/large-index.tex`, SHA-256 `06fd210a5634ac25ac6514bc5b61f649a1b2d7b3146e6b80563aea85b7e1a9df`.
+Reviewed source: `mathematics/simplification-v14/2026-10-28/large-index.tex`, SHA-256 `58c5cb0d372a1e4a898102a67523434dbaddc80679fe4891b8543f5accc4045c`.
 
 | Item | Mathematical status | Execution status |
 |---|---|---|
@@ -110,3 +110,7 @@ python3 mathematics/simplification-v14/2026-10-28/counts-window-review-check.py 
 ```
 
 The checker rejects changed reviewed source bytes and imports no constructor. Three disposable mutation controls freshly rejected a missing required option, a missing source file, and changed source bytes; their logs are in `mutations01/`. Fresh stdout, stderr, source snapshot, Python version, elapsed time, return code and hashes are stored under `runs/counts-window-review-v14-20261028/check01/`. The reviewed proof is LaTeX owned and compiled by the coordinator; this component changes no theorem source.
+
+## Final source-pin refresh
+
+After the first committed review, the coordinator changed only two long source references from `texttt` to `path` and inserted paragraph breaks. The saved diff confirms no formula, hypothesis or mathematical prose changed. The old source remains preserved in `check01/`; the final source pin above is freshly checked in `check02/`. The independent arithmetic was rerun against the final bytes, and fresh malformed-source rejections are preserved in `mutations02/`.
