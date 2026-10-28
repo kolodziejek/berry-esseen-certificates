@@ -1,0 +1,172 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,microtype,hyperref}
+\newtheorem{theorem}{Theorem}\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\title{Combining all conditional counts by one crossing identity}
+\author{}\date{28 October 2026}
+\begin{document}\maketitle
+
+Separate upper bounds on incoming counts discard cancellation with outgoing
+counts. The following identity retains every count of the same iid law.
+Its leading loss has the correct sign for all noise levels. The proof is a
+finite calculation; no Poisson theorem, tail truncation, or parameter grid
+enters it. The unequal binomial weights still require a separate estimate.
+
+\begin{theorem}\label{thm:mesh}
+Let $U_0,U_1$ be integrable, centered conditional-noise laws with
+\[
+ U_0\le a_0,\qquad -a_1\le U_1\le A_1,
+ \quad a_0,a_1,A_1\ge0,\quad a_0+a_1<1,\quad A_1+a_1\le1.
+\]
+Take $2n$ mutually independent variables $U_{0i},U_{1i}$ with these laws,
+and define
+\[
+ T_j=j+\sum_{i\le j}U_{1i}+\sum_{i>j}U_{0i},\quad 0\le j\le n.
+\]
+If $na_0\le t<n(1-a_1)$, there is a unique $K\in\{0,\ldots,n-1\}$
+with $T_K\le t<T_{K+1}$. Put
+\[
+ b=\min\{1-A_1-a_1,1-a_0-a_1\}\ge0,\qquad R=t-T_K.
+\]
+Then
+\begin{equation}\label{eq:gain}
+              g_n(t):=t-\E K\ \ge\ \E\min\{R,b\}\ \ge0.
+\end{equation}
+More precisely, let $D=1+U_1$ and define the nonnegative kernel
+\begin{align*}
+ h(x)&=\E(x-U_0)_+-\E(x-D)_+-\Pp(D\le x),\\
+ R_i&=t-(i-1)-\sum_{l<i}U_{1l}-\sum_{l>i}U_{0l}.
+\end{align*}
+The exact cancellation identity is
+\begin{equation}\label{eq:identity}
+                       g_n(t)=\sum_{i=1}^n\E h(R_i).
+\end{equation}
+\end{theorem}
+\begin{proof}
+Each increment $T_i-T_{i-1}=1+U_{1i}-U_{0i}$ is at least
+$1-a_0-a_1>0$. The threshold assumptions give $T_0\le t<T_n$.
+Thus the closed lower and strict upper crossing events partition the
+sample space, even when $t$ is an atom of a conditional sum.
+
+Set $m=1-a_1$. If $x<m$, both terms involving $D$ in the definition
+of $h$ vanish, so
+\[
+                         h(x)=\E(x-U_0)_+\ge0.             \tag{3}
+\]
+If $x\ge m>a_0$, then $\E(x-U_0)_+=x$. Since $\E D=1$,
+put--call parity and the bound $D\le1+A_1$ give
+\begin{align*}
+ h(x)&=\Pp(D>x)-\E(D-x)_+\\
+     &\ge(1-A_1-a_1)\Pp(D>x)\ge b\Pp(D>x).                \tag{4}
+\end{align*}
+This includes $x=m$ with its strict survival probability.
+
+Let $L_j(t)=\E(t-T_j)_+$. The variables omitted from $R_i$ are
+independent of it. Consequently the definition of $h$ gives
+\[
+ \E h(R_i)=L_{i-1}(t)-L_i(t)-\Pp(T_i\le t).                \tag{5}
+\]
+Sum over $i$. The stop-loss expectations telescope, with
+$L_0(t)=t-\E T_0=t$ and $L_n(t)=0$. Moreover
+$\E K=\sum_{i=1}^n\Pp(T_i\le t)$. This proves
+\eqref{eq:identity} and $g_n(t)\ge0$.
+
+For the stronger age bound, condition on $R_i=x$. Crossing at $i$
+means $U_{0i}\le x<D_i$, and its age is $x-U_{0i}$.
+If $x<m$, then $D_i>x$ surely, and (3) is at least the conditional
+expected value of $\min\{x-U_{0i},b\}$ on this event.
+If $x\ge m$, then $U_{0i}\le a_0<x$ surely, the crossing probability
+is $\Pp(D_i>x)$, and its age is at least $m-a_0\ge b$.
+Now (4) applies. Summing over the unique crossing proves
+\eqref{eq:gain}. All expectations are finite, and no stopping-time or
+limiting argument has been used.
+\end{proof}
+
+\section*{An exact replacement for the separate count sums}
+For $Y=B+U$ with $\Pp(B=1)=p$ and these conditional laws, the conditional
+distribution of a raw iid sum given $j$ successes is precisely that of
+$T_j$. With $F_B$ the $\mathrm{Bin}(n,p)$ CDF,
+\begin{equation}\label{eq:cdf}
+            \Pp(Y_1+\cdots+Y_n\le t)=\E F_B(K).
+\end{equation}
+The coupling is auxiliary: it preserves each conditional law, hence
+preserves the actual iid mixture. It does not impose independence between
+$K$ and the binomial count or substitute an optimized relaxation.
+
+For the acquired right strip, $a_0+a_1\le.072$ and $A_1=.6$, one may
+take $b=.328$ in \eqref{eq:gain}; for the left strip, inward sum at most
+$.068$ and $A_1=.7$ give $b=.232$. For $n\ge42$, $p\in[.25,.53]$,
+$s=\E U^2$, $ns\le.616$ and $|H|\le1.84$, put
+$t=np+H\sqrt{p(1-p)+s}$. Then
+\[
+ .25n-.948<t<.53n+.948,\qquad
+                   na_0\le t<n(1-a_1).
+\]
+Indeed $\sqrt{1/4+.616/42}<.515$ and $1.84(.515)<.948$;
+the remaining two inequalities hold already at $n=42$. Thus the
+cancellation identity covers the whole retained acquired noise range.
+It makes no assertion that the acquisition hypotheses themselves hold
+without their existing contact and predecessor dependencies.
+
+\section*{The weighted identity isolates the remaining difficulty}
+Write $\pi_j=\Pp(B_n=j)$, $L_j(t)=\E(t-T_j)_+$,
+$B_j(t)=L_j(t)-(t-j)_+\ge0$ (by Jensen), and
+$g_i(t)=\E h(R_i)\ge0$. Multiply (5) by $\pi_i$ and sum by parts.
+Because the count-zero CDF is one and $L_0=t$, $L_n=0$, this gives
+\[
+ \Pp(Y_1+\cdots+Y_n\le t)
+ =\pi_0+\pi_1t+\sum_{j=1}^{n-1}(\pi_{j+1}-\pi_j)L_j(t)
+                 -\sum_{i=1}^n\pi_i g_i(t).                \tag{7}
+\]
+Let $k=\lfloor t\rfloor$ and $u=t-k\in[0,1)$. Replacing $L_j$ by
+$(t-j)_+$ in the first three terms gives the linear interpolation
+$F_B(k)+u\pi_{k+1}$. Hence the exact formula is
+\begin{equation}\label{eq:weighted}
+ \Pp(Y_1+\cdots+Y_n\le t)-F_B(k)
+ =u\pi_{k+1}+\sum_{j=1}^{n-1}(\pi_{j+1}-\pi_j)B_j(t)
+                 -\sum_{i=1}^n\pi_i g_i(t).
+\end{equation}
+Both $B_j$ and $g_i$ are nonnegative. Only the increasing side of the
+binomial mass function contributes unfavorably to the curvature sum.
+No separate incoming-count tail appears.
+
+For the following normalized comparison assume additionally $0<p<1$
+and $\E|U_0|^3+\E|U_1|^3<\infty$, as holds in the acquired bounded
+strips. Put $v=p(1-p)$, $s=\E U^2$,
+$\rho=\E|Y-p|^3/(v+s)^{3/2}$ and $\rho_B=(1-2v)/\sqrt v$.
+For the direct comparison at this integer anchor,
+\begin{align}\label{eq:delta}
+ \Delta_C={}&-\sqrt n\sum_{i=1}^n\pi_i g_i(t)
+       +\sqrt n\sum_{j=1}^{n-1}(\pi_{j+1}-\pi_j)B_j(t)
+       +\sqrt n\,u\pi_{k+1}\notag\\
+ &-\sqrt n\left[
+ \Phi\!\left(\frac{t-np}{\sqrt{n(v+s)}}\right)
+ -\Phi\!\left(\frac{k-np}{\sqrt{nv}}\right)\right]
+                  +C(\rho_B-\rho).
+\end{align}
+Every identity is exact at the actual sample size. The remaining task is
+to absorb the binomial curvature and the phase, normal and cubic repairs
+in the common nonnegative loss. A sign for the unweighted loss alone does
+not do this. Therefore the current general count certificates remain
+ancestors of the accepted comparison until that joint inequality is proved.
+
+For comparison with a direct stopped-sum calculation, put $W_j=T_j-j$.
+Its selected mean is generally nonzero:
+\[
+ \E W_{K+1}=-\sum_{i=1}^n
+   \E\!\left[U_{0i}\mathbf1_{\{T_{i-1}\le t\}}\right]\ge0.
+\]
+The sign follows by conditioning on the omitted-pair sum and centering
+$U_{0i}$. The telescoping proof includes this bias automatically; setting
+it to zero would be an unjustified use of optional stopping.
+
+\section*{Controls and limitations}
+The companion exact checks reconstruct all conditional sums and the local
+kernel $h$ separately, including closed collisions and strict crossings.
+They check \eqref{eq:identity}, \eqref{eq:gain}, \eqref{eq:cdf}, \eqref{eq:weighted} and the
+nonzero selected-noise bias. They also include a false extension: take
+$U_0=0$ and $D=9/10,39/20$ with probabilities $19/21,2/21$.
+At $n=2$, $t=9/10$, $\E K-t=1/210>0$; here $A_1+a_1=21/20>1$.
+No assertion of strict gain proportional to $s$, or of the full sharp
+Berry--Esseen bound, follows from this note alone.
+\end{document}

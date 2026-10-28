@@ -174,4 +174,7 @@ require('nonzero selected bias exercised',bias_cases>0)
 reject('reversing curvature difference',lambda:must(curvature_sign_controls==0))
 
 source=Path(sys.argv[1]) if len(sys.argv)>1 else Path(__file__).resolve().parent/'crossing.tex'
-print(json.dumps({'result':'PASS','scope':'crossing identity/sign/age reserve and exact count algebra; not full Delta comparison','actual_law_threshold_cases':cases,'exact_checks':len(checks),'nonzero_selected_noise_cases':bias_cases,'negative_controls':controls,'constructor_code_imported':False,'source':str(source),'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest() if source.exists() else None,'checker_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()},indent=2))
+EXPECTED_SOURCE_SHA256='0dda285adb9aaa24277fdc1d74843c20bc6100b2a64a0cd5ae34bb696a68a6ec'
+assert source.is_file(), 'reviewed source missing'
+assert hashlib.sha256(source.read_bytes()).hexdigest()==EXPECTED_SOURCE_SHA256, 'reviewed source pin mismatch'
+print(json.dumps({'result':'PASS','scope':'crossing identity/sign/age reserve and exact count algebra; not full Delta comparison','actual_law_threshold_cases':cases,'exact_checks':len(checks),'nonzero_selected_noise_cases':bias_cases,'negative_controls':controls,'constructor_code_imported':False,'reviewed_source_pin_verified':True,'source':str(source),'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest() if source.exists() else None,'checker_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()},indent=2))

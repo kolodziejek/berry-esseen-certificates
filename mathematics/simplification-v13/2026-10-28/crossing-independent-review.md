@@ -1,7 +1,7 @@
 # Independent review of the all-count crossing identity
 
 Reviewed source: `crossing.tex`, SHA-256
-`b0f2e15ff41aaeb843b8b8e0619c89cdc15f07a427f71adba4ea7c151dfd0aec`.
+`0dda285adb9aaa24277fdc1d74843c20bc6100b2a64a0cd5ae34bb696a68a6ec`.
 The source belongs to the separate `simplification-v13` constructor worktree.
 This review imports none of its checker or discovery code.
 
@@ -123,7 +123,7 @@ python3 -I -B mathematics/simplification-v13/2026-10-28/crossing-independent-run
 ```
 
 For a separate review worktree, append `--source /absolute/path/to/crossing.tex`.
-`runs/finite-v13-20261028/crossing02` records the final independent replay.
+`runs/finite-v13-20261028/crossing03` records the final source-pinned independent replay.
 The checker constructs conditional convolutions, full coupled paths, and the
 actual iid mixture product distribution separately. It checks n=1,2,3,4,
 all admissible conditional-sum atom thresholds and intermediate thresholds
@@ -153,3 +153,24 @@ to absorb the positive binomial curvature, the phase term and the normal and
 third-moment repairs. There is no established defect-proportional lower bound
 here, and zero-noise endpoint cases force non-strictness in the present theorem.
 The retained regional comparison certificates therefore remain active.
+
+## Final source rebind
+
+The final edit replaced mixed manual/automatic equation numbering with automatic
+labels, hid hyperlink boxes, and clarified one sentence about the auxiliary
+coupling. The new sentence makes no assertion about the original joint law of
+the count and K; only conditional marginals are needed. No formula or hypothesis
+changed.
+
+`runs/finite-v13-20261028/crossing-format02/verify.py` reverses exactly nine
+declared edits and reconstructs the previously reviewed source byte-for-byte:
+SHA-256 `b0f2e15ff41aaeb843b8b8e0619c89cdc15f07a427f71adba4ea7c151dfd0aec`.
+The original bytes and complete diff are saved there. The final source also
+passes matching-environment, unique-label and resolved-reference checks. An
+intermediate formatting version had a mismatched align environment and duplicate
+label; the constructor repaired both before the final pin.
+
+The independent checker now rejects any source whose bytes do not match the
+final reviewed hash. Its final replay preserves all 366 cases and 9,192 exact
+checks. Earlier receipts remain unchanged. This rebind does not strengthen the
+mathematical conclusion beyond the scope already reviewed above.
