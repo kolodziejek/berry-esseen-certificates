@@ -178,7 +178,7 @@ Its controls reject the coarse .535 probability as a right-count input, the infe
 
 All reviewed source paths and SHA256 pins are in join-review-sources.json. The checker verifies those bytes. Hashes establish identity, not correctness. Final run evidence is under runs/join-review-v15-20261028/. No component-generation campaign or inherited suite was rerun.
 
-The recorded checks verify 240 exact conditions, 28 right phase/noise strata and twelve actual marginal mappings, with seventeen negative-control instances. Nine instances reject confusing standardized residual variance with Bernoulli-coordinate noise; the remaining eight test domain or logical implications. The initial check01 passed against the pre-clarification component sources. check02 binds the final source versions with their shorter concavity explanations; all theorem domains and numerical targets are unchanged.
+The recorded checks verify 240 exact conditions, 28 right phase/noise strata and twelve actual marginal mappings, with seventeen negative-control instances. Nine instances reject confusing standardized residual variance with Bernoulli-coordinate noise; the remaining eight test domain or logical implications. The initial check01 passed against the pre-clarification component sources. check02 binds the versions with their shorter concavity explanations. check03 binds the final left source after two literal endpoint corrections: the sine-chord comparison is weak at \(x=0\), and the final kernel-coefficient comparison is weak at \(x=1\). A direct diff confirms exactly those two sign changes. Both sides vanish at the relevant endpoints, so the weak assertions are correct and preserve the stated cosine and kernel minorants. All theorem domains, constants, targets and join conclusions are unchanged.
 
 Replay after integration:
 
@@ -186,4 +186,6 @@ Replay after integration:
 
 In the separate review worktree, supply the two constructor locations:
 
-    --right-root ../simplification-v15 --left-root ../geometry-left-v15
+    --right-root ../simplification-v15 --left-root ../simplification-v15
+
+The final source is in the integrated constructor worktree; geometry-left-v15 retains the earlier source, which was bound by check02.
