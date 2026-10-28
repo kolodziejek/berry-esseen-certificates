@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/small-noise-v8/mathematics/fixed-target-v8/2026-10-28/small-noise-main.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/small-noise-v8/runs/fixed-target-v8-20261028/small-noise-build01",
+    "--json"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 0.9773769378662109,
+  "input_sha256": {
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/small-noise-v8/mathematics/fixed-target-v8/2026-10-28/small-noise-main.tex": "3e524eebbb100fa8848f5fc2c7762732da6663d1f652258415a41cdb2a6d2ea6",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/small-noise-v8/mathematics/fixed-target-v8/2026-10-28/small-noise.tex": "92f66bee9a07bb73ed3b7f71213f4a16f0129e275272c1a71780c95cf8515d88"
+  }
+}
