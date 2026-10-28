@@ -1,0 +1,915 @@
+\section{From fixed-target contact to a coarse acquisition}
+\label{v9:entry:section}
+
+We now derive quantitative support and moment bounds, then explain the
+finite enclosure that propagates them. The selected calculation has two
+coarse quadratic passes followed by four signed-moment passes. Every
+improvement is used only after its hypotheses have been established for
+the same attaining law. The final output is an acquisition bound, not a
+local exclusion or a proof of the conjecture.
+Let $P$ be a centered,
+unit-variance law, $S_j$ a sum of $j$ independent copies, and set
+\[
+ \rho=\E|X|^3,\quad \beta=\E[X|X|],\quad \gamma=\E X^3,
+ \quad c=\CE=\frac{3+\sqrt{10}}{6\sqrt{2\pi}}.
+\]
+The threshold $H$ always has the units of the raw sum. A fixed-target
+maximizer maximizes
+\[
+ a(P,H)=\sqrt n\{\Pp(S_n\le H)-\Phi(H/\sqrt n)\}-c\rho.
+\]
+We use Proposition~\ref{v9:core:attainment} and its closed-support
+contact formula~\eqref{v9:core:contact}. In particular its closed-support contact
+equality, not ratio optimality, is the variational premise here. We consider
+a maximizer with $a\ge0$. The actual normalized score is $c+a/\rho$;
+no upper bound on it is assumed.
+
+\subsection{The first support bound}
+\begin{theorem}[Initial moment and support entry]\label{v9:entry:initial}\label{v9:entry:initial-support}
+Assume $n\ge42$, $C_{n-1}\le c$, and the universal structural inequality
+\begin{equation}\label{v9:entry:structural}
+ \sqrt n\,\Delta_n(P)\le\frac{3031}{10000}
+                  \left(\rho+\frac{323}{500}\right)
+\end{equation}
+for standardized laws with finite third moment. Then a fixed-target
+maximizer with $a\ge0$ satisfies
+\begin{equation}\label{v9:entry:entry}
+ 1\le\rho<\frac{7361}{4000}<\frac{1841}{1000},\qquad
+ |\beta|<\frac{321}{500},\qquad
+ \operatorname{supp}P\subset(-96/25,96/25).
+\end{equation}
+The theorem is uniform in all real $H$ and in both signs of a support
+point. It requires neither $C_{n-2}$ nor an excess bound of order $1/n$.
+\end{theorem}
+
+The structural inequality~\eqref{v9:entry:structural} is the external
+iid theorem of Shevtsova~\cite{Shevtsova2013}. Only this affine bound
+is needed for the displayed moment radius; it is not a consequence of
+the finite arithmetic in this section.
+
+\begin{proof}
+Since $c\rho\le\sqrt n\Delta_n(P)$ and $c>819/2000$, elementary division gives
+\[
+ \rho<\frac{(3031/10000)(323/500)}{819/2000-3031/10000}
+       =\frac{7361}{4000}.
+\]
+The other affine bound $0.3322(\rho+0.429)$ alone would give the larger
+number $712569/386500$; it must not be used to claim $7361/4000$.
+Put $m=\E X_+=\E X_->0$ and $a_\pm=\E X_\pm^2=(1\pm\beta)/2>0$.
+Cauchy on each sign class gives $m\rho\ge a_+^2+a_-^2$ and
+$m^2\le a_+a_-$. Hence
+\[
+ \rho\ge\frac{1+\beta^2}{\sqrt{1-\beta^2}}.
+\]
+This function increases with $|\beta|$. For $r=1841/1000$, $b=321/500$,
+\[
+ (1+b^2)^2-r^2(1-b^2)=\frac{93288849}{50000000000}>0,
+\]
+which proves the second assertion without assuming bounded support.
+
+Write $v=n-1$, $s=\sqrt{n/v}$, $F_v(x)=\Phi(x/\sqrt v)$ and
+$e_n=n(s-1)-1/2$. Closed-support contact, the upper predecessor
+bound $F_{n-1,P}(H-t)\le F_v(H-t)+c\rho/\sqrt v$, and
+$\sqrt n(F_{n,P}(H)-\Phi(H/\sqrt n))=c\rho+a$ give
+\begin{equation}\label{v9:entry:contact}
+ 0\le H_n(H,t)+c\{-|t|^3+\tfrac32\rho t^2+3\beta t+\rho e_n\}-na
+ \quad(t\in\operatorname{supp}P),
+\end{equation}
+where exactly
+\[
+ \frac{H_n(H,t)}{n^{3/2}}
+ =F_v(H-t)-F_{v+1}(H)+tF'_{v+1}(H)
+                   -\frac{t^2-1}{2}F''_{v+1}(H).
+\]
+The extra $-na$ can be discarded in this upper bound. This is the precise
+reason the predecessor assumption is $C_{n-1}\le c$, not a comparison
+with the actual score. No continuity assumption on the distribution
+function at $H-t$ is inserted.
+
+Rationalization gives
+\[
+ ne_n=\frac{s^2(2s+1)}{2(s+1)^2},\qquad
+ s<81/80=:S,\qquad
+ ne_n<\frac{793881}{2073680}<\frac{48}{125}.
+\]
+The first expression increases for $s\ge1$, as its logarithmic derivative
+is $2/s+2/(2s+1)-2/(s+1)>0$. Thus $e_n<8/875$.
+
+For completeness we rederive the Gaussian estimate used at the radius.
+The heat identity $\partial_vF_v=F_v''/2$ permits spatial expansion of
+$F_v(H-t)$ to order four, variance expansion of $F_{v+1}$ to order two,
+and variance expansion of $F'_{v+1},F''_{v+1}$ to order one. The cubic
+coefficient is $(-t^3+3t)/6$, and the quartic coefficient is
+$(t^4-6t^2+3)/24$. Therefore, for $t=\pm u$, $z_v=H/\sqrt v$,
+\begin{equation}\label{v9:entry:heat}
+ H_n(H,\pm u)/s^3
+ =\pm A(1-z_v^2)\phi(z_v)+B\phi'''(z_v)+\mathcal E,
+\end{equation}
+where $A=(u^3-3u)/6$, $H_4=u^4-6u^2+3$ and $B=H_4/(24\sqrt v)$.
+The four error bounds after division by $s^3$ are respectively
+\[
+ \frac{u^5\|\phi^{(4)}\|_\infty}{120v},\quad
+ \frac{\|\phi^{(5)}\|_\infty}{48v^{3/2}},\quad
+ \frac{u\|\phi^{(4)}\|_\infty}{8v},\quad
+ \frac{|u^2-1|\|\phi^{(5)}\|_\infty}{16v^{3/2}}.
+\]
+Gaussian Fourier inversion gives norms at most $3\phi(0)<6/5$ and
+$8/\pi<51/20$. Since $v\ge41$ and $\sqrt v>6$, for $u\ge1$ this gives
+\[
+ |\mathcal E|<E(u):=u^5/4100+3u/820+17(3u^2-2)/78720.
+\]
+These errors are uniform in $H$; they use no higher moment of $P$.
+
+If $A,B>0$ and $B\le A/4$, the leading part of \eqref{v9:entry:heat}
+is at most $\phi(0)(A+9B^2/(4A))$ for both signs. Indeed, for the
+positive sign and $|z_v|\le1$, it is at most
+$\phi(0)(A-Az_v^2+3B|z_v|)$, and complete the square. Outside that
+interval the first term is nonpositive. For the negative sign the first
+term is at most $2e^{-3/2}A\phi(0)<A\phi(0)/2$. In both cases use
+$\|\phi'''\|_\infty<2\phi(0)$: on $[0,\sqrt3]$ the polynomial
+$3x-x^3$ is at most two, and beyond $\sqrt3$ use
+$x^3e^{-x^2/2}\le3\sqrt3e^{-3/2}<2$.
+
+For frozen $r,b$ above define
+\begin{align*}
+ Q(u)&=-u^3+\tfrac32ru^2+3bu+(8/875)r,\\
+ P(u)&=\tfrac25 S^3\left(A^2+\frac{H_4^2}{256\cdot41}\right)
+                         +S^3E(u)A+\frac{819}{2000}Q(u)A.
+\end{align*}
+At $R=96/25<6$ we have $A>0$, $0<H_4<36A$, hence $B<A/4$.
+The sign $Q(R)<0$ is checked before replacing $c$ by its lower endpoint.
+The upper bound in \eqref{v9:entry:contact}, multiplied by $A$, is then
+strictly below $P(R)$, and exact arithmetic gives
+\[
+ -P(R)=\frac{2214258283536204102723}{10250000000000000000000}>\frac15.
+\]
+To cover each entire exterior ray, differentiation of the exact Gaussian
+expression gives
+\[
+ |\partial_tH_n(H,t)|<\tfrac25(t^2/2+1/2+e_n).
+\]
+For verification put $y=(H-t)/\sqrt n$, $z=H/\sqrt n$; the derivative is
+$n\phi(z)+Ht\phi(z)-ns\phi(sy)$. The second-order Taylor error between
+$\phi(y)$ and $\phi(z)$ costs $\phi(0)t^2/2$, while
+$\partial_s[s\phi(sy)]=-\phi''(sy)$ costs $\phi(0)n(s-1)$.
+Define $L(u)=\tfrac25(u^2/2+1/2+8/875)+(819/2000)Q'(u)$.
+At $R$, the six numbers $Q,Q',Q'',L,L',L''$ are strictly negative.
+Since $Q'''=-6$ and $L''=2/5-6(819/2000)<0$, all their required signs
+persist for $u\ge R$. Thus both radial upper bounds decrease from a
+strictly negative boundary value. The contact inequality excludes every
+support point with $|t|\ge R$.
+\end{proof}
+
+\subsection{Higher moments and an actual Fourier event}
+\label{v9:entry:moments}
+Higher moments are used only after Theorem~\ref{v9:entry:initial}.
+For $x=|X|$ the nonnegative measure
+$d\mu_0=(x-1)^2(x+1/2)\,dP$ has mass $\rho-1$. Direct expansion gives
+\begin{align*}
+ M_4-1&=\int\frac{(x+1)^2}{x+1/2}\,d\mu_0,\\
+ M_5-1&=\int\frac{x^3+2x^2+3x+3/2}{x+1/2}\,d\mu_0,
+\end{align*}
+where $M_j=\E|X|^j$. Both ratios increase for $x\ge0$: they equal
+$x+3/2+1/[4(x+1/2)]$ and
+$x^2+3x/2+9/4+3/[8(x+1/2)]$, whose derivatives are nonnegative.
+Writing their values at $R=96/25$ as $k_4(R),k_5(R)$, we obtain
+\begin{equation}\label{v9:entry:mom}
+ M_4\le\min(R\rho,1+k_4(R)(\rho-1)),\quad
+ M_5\le\min(RM_4,1+k_5(R)(\rho-1)),\quad M_6\le RM_5.
+\end{equation}
+Also $\gamma^2\le M_4-1$, by expanding
+$\E(X^2-1-\gamma X)^2\ge0$.
+
+There is no need to assume a central support gap before the first Fourier
+bound. For independent copies let $E=\{(X-X')^2\ge9/25\}$ and let
+$M$ be any valid fourth-moment ceiling. Then
+\begin{equation}\label{v9:entry:event}
+ \Pp(E)\ge\alpha:=\frac{(2-9/25)^2}{2M+6}>0,\quad
+ |X-X'|\ge3/5\text{ on }E,\quad
+ \E[(X-X')^2\mid E]\le2/\alpha.
+\end{equation}
+Indeed $\E[(X-X')^2;E]\ge2-9/25$ and
+$\E(X-X')^4=2M_4+6\le2M+6$, so Cauchy proves the mass bound.
+The conditional second-moment bound follows from its unconditional value
+two. This is an event under one actual iid marginal, not a replacement
+characteristic function.
+
+
+The same support proof will be used again on a smaller closed moment
+cell. Freeze upper bounds $r,b$ for $\rho,|\beta|$ in its polynomial
+$Q$, and test a proposed radius before changing any moment bound.
+For $R\in[5/2,96/25]$, the gates $A>0$, $0<H_4<36A$, $Q(R)<0$,
+$P(R)<0$, and the six negative ray signs suffice. Their strictness
+excludes the boundary atoms as well as the open exterior rays. A radius
+that fails a gate is not used. The selected finite search is
+$R=2.50,2.51,\ldots,3.84$; it only chooses among proved implications.
+
+\subsection{The Fourier enclosure used by every pass}
+\label{v9:entry:fourier}
+Let $f(t)=\E e^{itX}$ and
+$e_n(t)=e^{-nt^2/2}(1-in\gamma t^3/6)$. For the remainder in
+\eqref{v9:core:R}, the compensated inversion proved in
+Appendix~\ref{v9:fourier:section} gives
+\[
+ |E_n|\le\frac{2\sqrt n}{\pi}\left\{
+ \int_0^{1/2}\frac{|\Im[e^{-itH}(f(t)^n-e_n(t))]|}{t^3}dt
+ +\int_{1/2}^{\infty}\frac{|f(t)^n-e_n(t)|}{t^3}dt\right\}.
+\]
+The comparator is signed, has the correct mass and first moment, and
+its entire high-frequency tail is included. This formula applies at
+atoms and for arbitrary real $H$.
+
+For clarity, the exact input and output of the selected Fourier step
+are as follows. Acquire $|X|\le R$ first, and choose common ceilings
+$M\le11.1$, $g\le1.85$, $M_6$ for
+$M_4,|\gamma|,\E X^6$, together with
+\[
+ |(3-M_4)/24|\le A_4,\qquad
+ |(10\gamma-\E X^5)/120|\le Z_5.
+\]
+Put
+\begin{gather*}
+ E_6=M_6/720+g^2/72+(1/2+g^2/144)^3/5,\\
+ B_6=A_4+Z_5/2+E_6/4,\\
+ a_0=(N-1)/(2N),\quad b_0=(45-M)(1-2/N)/96,\\
+ c_0\ge\sqrt{\pi/2}(N/(N-1))^{3/2},\qquad c_1\ge c_0/2.
+\end{gather*}
+A complete admissible low-frequency triple is
+\begin{align*}
+ L_0&=c_0Z_5+c_1A_4g+251g^3/17280,\\
+ L_H&=c_0A_4+251g^2/4800,\\
+ L_2&=E_6/(2a_0^2)+B_6^2/(2b_0^3).
+\end{align*}
+One may take $A_4=\max(2,M-3)/24$ and $M_6=R M_5$.
+The sharper fifth-order coefficient used by the finite cover is proved
+in Appendix~\ref{v9:fourier:section}; it follows from the exact
+identity for $X^2-\gamma X-1$, not from an assumed fifth moment.
+
+The high-frequency input is an actual event for two iid copies:
+\[
+ \Pp(\mathcal E)\ge\alpha>0,\qquad
+ |X-X'|\ge d_E>0\text{ on }\mathcal E,\qquad
+ \E[(X-X')^2\mid\mathcal E]\le M_E.
+\]
+Lemma~\ref{v9:fourier:high} supplies a complete six-term bound $K_H$
+at $N=42$, subject to its explicit positive damping and all-index gates.
+The first event is \eqref{v9:entry:event}; an opposite-sign event is
+used only after an actual central gap is acquired below. Different valid
+windows may be minimized only after all six terms, including the
+comparator, are present. No characteristic function of an artificial
+binary law is substituted for $f$.
+
+The exact scalar output is
+\begin{equation}\label{v9:entry:fourier-output}
+ |E_n|\le K_F+s_F|H|,\qquad
+ K_F=\frac{16}{25}(L_0+K_H+L_2/\sqrt N),\quad
+ s_F=\frac{16}{25}L_H.
+\end{equation}
+All square roots and exponential bounds in the finite evaluation are
+directed outward. The proof in the appendix applies to every actual
+$n\ge N$ and allows the law and threshold to vary with $n$.
+Thus no fixed-law limit is being used as a uniform bound.
+
+\subsection{Coarse coefficients before a central gap is known}
+\label{v9:entry:coarse-coefficients}
+Write the non-Fourier constant charge in \eqref{v9:core:R} as
+\[
+ A_c^{\rm law}=\frac32\beta(J+\gamma)+3(\rho J_1-J_2)
+                   +\frac\rho2M_4-\frac14M_5-\frac\rho2.
+\]
+Here $A_c^{\rm law}$ does not depend on $c$; the subscript records its
+role as the coefficient of $c$. We will bound it from above, retaining
+all signs in the later passes.
+
+The following gap inequalities need no gap around zero:
+\begin{equation}\label{v9:entry:gap-free}
+ -M_4/6\le J_1\le M_4/2,\qquad -3J_2-M_5/4\le0,\qquad J\le\rho+1.
+\end{equation}
+For a gap $(u,v)$ of length $h$, the first pair follows from
+\[
+ \int_u^v(t-u)t\,dt+\frac12\int_u^vt^2dt=hv^2/2,
+ \quad \frac32\int_u^vt^2dt-\int_u^v(t-u)t\,dt=h(2u+v)^2/6.
+\]
+Sum with the nonnegative gap weights and use $\int t^2\tau=M_4/3$.
+On a negative gap, reflection and
+\[
+ \frac13\int_u^v x^3dx-\int_u^v(v-x)x^2dx=u^3(v-u)/3\ge0
+ \quad(0\le u\le v)
+\]
+prove the second assertion; the positive portion only improves it.
+The last bound follows from $J\le\rho+2m$ and $2m\le1$.
+
+For $1\le r\le\rho$ and $R\le6$, choose $\Gamma(R,r)\ge0$ with
+\begin{equation}\label{v9:entry:Gamma}
+ \Gamma(R,r)\ge\max_{r\le v\le R}
+ \left\{-\frac{v^2}4+\frac{(R+r)v}3-\frac{Rr}2
+                  +\frac{r^3(2R-r)}{12v^2}\right\}_+.
+\end{equation}
+Then
+\begin{equation}\label{v9:entry:coarse-gap-charge}
+ 3(\rho J_1-J_2)\le\frac32\Gamma(R,r)(\rho-\gamma)+\frac38\rho^2J.
+\end{equation}
+On the negative portion of a gap discard $|t|<\rho$, where its charge
+is nonpositive. Extending the remaining positive integral gives
+$\int_r^v(R-x)x(x-r)\,dx$. Its quotient by $v^2$ is the expression
+in \eqref{v9:entry:Gamma}. Signwise Tonelli charges its upper bound
+against $\E X_-^3=(\rho-\gamma)/2$. On the positive portion,
+$t(\rho-t)\le\rho^2/4$ and
+$\sum\tau_{u,v}\int_u^v(t-u)dt=J/2$ give the other term.
+This argument includes a gap crossing zero.
+
+The finite bound for $\Gamma$ partitions $[r,R]$ into 64 closed
+intervals. On each, maximize the concave quadratic at its clipped vertex
+$2(R+r)/3$ and its nonnegative reciprocal term at the left endpoint.
+The alternative ceiling $5/2$ follows at $r=1,R=6$ from
+$3v^4-28v^3+66v^2-11>0$ on $[1,6]$: the endpoint values are $30,205$
+and the two interior critical values are $(85\mp35\sqrt5)/2>0$.
+The positive integral representation is increasing in $R$ and decreasing
+in $r$, so that endpoint choice encloses the present domain.
+
+The elementary square
+\[
+ V=\E[|X|^3(|X|-\rho)^2]=M_5-2\rho M_4+\rho^3\ge0
+\]
+gives $\rho M_4/2-M_5/4\le\rho^3/4$. Thus on
+$\rho\in[l,u]$, $|\beta|\le b$, $M_4\le M$, and with
+$0\le\rho-\gamma\le\Delta$, two complete constant bounds are
+\begin{align}
+ A_1(\Delta)&=\tfrac32b(2u+1)+\tfrac32\Gamma(R,l)\Delta
+              +\tfrac38u^2(u+1)+u^3/4-l/2,\notag\\
+ A_2&=\tfrac32b(2u+1)+2uM-l/2.\label{v9:entry:coarse-A}
+\end{align}
+Use $A=\min(A_1,A_2)$. The first uses
+\eqref{v9:entry:coarse-gap-charge}; the second uses
+\eqref{v9:entry:gap-free}. They are alternative complete bounds, not
+partial costs to be mixed.
+
+For the linear term $K_1$, the following three bounds are valid:
+\begin{align*}
+ K_{\rm rad}&=3ub+\frac{R(R+2-3l/2)}{R+1/2}(u-1),\\
+ K_{\rm univ}&=6u-3u^2/2+3b,\\
+ K_R&=Ru/2+\max_{r\in\{l,u\}}|R/2-3r/2|g+3b.
+\end{align*}
+For the first use the positive measure
+$d\mu_0=(|X|-1)^2(|X|+1/2)dP$, of mass $\rho-1$, and the exact identity
+\[
+ K_1+3\rho\beta=
+ \int\operatorname{sgn}(X)\frac{x(x+2-3\rho/2)}{x+1/2}\,d\mu_0,
+ \qquad x=|X|.
+\]
+The ratio is convex in $x\ge0$ and decreases in $\rho$. Its negative
+part is at most $31/40$ on $\rho\le1.85$; require its displayed
+endpoint ceiling to exceed that number. The second bound uses
+$|\E[X|X|^3]-3\gamma|\le3\rho$ for $R\le6$, and $\rho\le2$.
+For the third use the signwise fourth-moment bounds
+$0\le\E X_\pm^4\le R(\rho\pm\gamma)/2$.
+Finally \eqref{v9:entry:gap-free} gives
+\[
+ |\varphi\Omega|\le v_H:=\frac25\max\{1/2,2M/3-1/2\},
+ \qquad\Omega=J_1+(M_4-3)/6.
+\]
+
+\begin{lemma}[A stronger signed fourth-moment charge]\label{v9:entry:signed-K}
+Let $|X|\le R$, $\rho\in[l,u]$, $|\beta|\le b<1$.
+Put $h_*=1+b$ and $a(r)=(3r-R)/2$.
+A valid bound for $|K_1|$ is the maximum on $[l,u]$ of
+\[
+ B_R(r,b)=Rr-\tfrac32r^2+3b+\tfrac12(1+b)a(r)^2.
+\]
+If the three gates
+\[
+ h_*\ge a(u),\qquad 3+2a(l)h_*-\tfrac32h_*^2\ge0,
+ \qquad R-3u+\tfrac32h_*^2\ge0
+\]
+hold, it may be intersected with the smaller bound
+\[
+ Ru-\tfrac32u^2-3+3h_*+a(u)h_*^2-h_*^3/2.
+\]
+\end{lemma}
+\begin{proof}
+For $\epsilon=\pm1$ set $h=1-\epsilon\beta>0$ and
+$\delta=\rho-\epsilon\gamma$. Signwise Cauchy and $m\le1/2$ give
+$\delta\ge h^2$. The fourth moments on the two signs give
+\[
+ \epsilon K_1\le R\rho-\tfrac32\rho^2-3
+                    +3h+a(\rho)\delta-\delta^2/(2h).
+\]
+Completing the square in unrestricted $\delta$ and using $h\le h_*$
+proves the first bound. With $\delta\ge h^2$, the last three terms
+maximize to
+\[
+ \psi_a(h)=
+ \begin{cases}h(3+a^2/2),&0<h\le a,\\
+                3h+ah^2-h^3/2,&h\ge a.
+ \end{cases}
+\]
+The first branch is increasing. The second has derivative
+$3+2ah-3h^2/2$, a concave quadratic whose endpoint values on
+$[0,h_*]$ are nonnegative under the second gate. The branches agree
+at $h=a$; the first gate places $h_*$ in the second branch. The
+remaining derivative in $\rho$ is $R-3\rho+3h_*^2/2$, nonnegative
+by the third gate. This proves the claim, including all endpoints.
+The quadratic maximum in the first bound is evaluated at its endpoints
+and, when present, its concave vertex.
+\end{proof}
+Take the minimum of the applicable bounds for $|K_1|$ and call it K.
+No assertion about the signs of $\beta\gamma$ or $K_1\gamma$ is used.
+
+\subsection{Two quadratic passes and the first actual gap}
+\label{v9:entry:raw-cover}
+Use the 24 closed cells with endpoints
+\[
+ r_i=1+3361i/96000,\quad i=0,\ldots,24,
+ \qquad N=42,
+\]
+and directed constants
+\begin{gather*}
+ c_-=0.4097321837023<\CE<c_+=0.4097321837025,\\
+ \phi_l=997/2500<\phi(0),\quad\sigma_l=3.162277660<\sqrt{10}.
+\end{gather*}
+The Gaussian constants follow from the rational Machin estimates in
+Lemma~\ref{ms:gaussian-constants} and Appendix~\ref{v9:fourier:section};
+the tighter $c$ enclosure is checked by the same alternating expansions
+and rational squares. The interval encloses the fixed coefficient c,
+not the actual normalized score.
+
+On a cell $[l,u]$, form the moments and the universal actual event above,
+and compute the complete Fourier pair $K_F,s_F$. In pass 1 use
+$\Delta=2u$, $A=\min(A_1(2u),A_2)$, and, for $t\in[c_-,c_+]$,
+\[
+ f(t)=tK+v_H+s_F,\qquad q(t)=tl-g/5.
+\]
+Require $q>0$. The bound
+$\mathcal R_c\le K_F+cA+f(c)|H|-q(c)H^2$ is affine in c at each
+fixed $|H|$, so its maximum is at an endpoint before completing squares.
+Let an overline denote upward rounding to $10^{-10}$. Compute
+\begin{align}
+ T_1&=\overline{\max_{t=c_-,c_+}
+                     \{K_F+tA+f(t)^2/(4q(t))\}},\notag\\
+ \eta_1&=(c_-l-T_1/N)/2,\notag\\
+ U_1&=\min\left\{T_1,
+       \overline{\max_{t=c_-,c_+}
+          \{K_F+tA+f(t)^2/[4(q(t)+\eta_1)]\}}\right\},\notag\\
+ d_1&=\overline{6U_1/(N\phi_l)}.\label{v9:entry:first-pass}
+\end{align}
+The strict gate $0\le T_1<Nc_-l$ is checked before $\eta_1$ or the
+resource bound is used. Corollary~\ref{v9:core:phase-price} then proves
+$\mathcal R_c\le T_1$, $\mathcal U\le U_1$, and $nD\le Nd_1$.
+The scalar bounds hold at every actual $n\ge N$.
+
+For the second pass the circle in Lemma~\ref{ms:physical-defect} gives
+\[
+ D\ge\sigma\rho-\gamma-3\sqrt{\rho^2-\gamma^2},\qquad\sigma=\sqrt{10}.
+\]
+Put $a_0=\sigma_l-d_1/l$. A valid lower bound for $\gamma/\rho$ is
+\begin{equation}\label{v9:entry:circle-inversion}
+ Y(a_0)=\begin{cases}-1,&a_0\le-1,\\
+ (a_0-3\sqrt{10-a_0^2})/10,&-1<a_0\le\sqrt{10}.
+ \end{cases}
+\end{equation}
+Indeed $y+3\sqrt{1-y^2}$ increases from $-1$ to $\sqrt{10}$ on
+$[-1,1/\sqrt{10}]$. Solving its level equation on that branch gives
+the smaller quadratic root in \eqref{v9:entry:circle-inversion};
+it has $a_0-y\ge0$, so squaring introduced no false branch. Every y
+below it violates the required lower level. A downward rational bound
+$y_l$ is obtained by rounding the square root upward. Thus
+\begin{gather*}
+ g_l=\max\{-g,\sigma_l l-3-d_1,\min(ly_l,uy_l)\}\le\gamma,\\
+ \Delta=\min\{2u,(1-\sigma_l)l+3+d_1,u-g_l\},\qquad
+ \phi_- =\phi_l(1-T_1/(Nc_-l))>0,\\
+ A=\min\{A_1(2u),A_1(\Delta),A_2\},\\
+ q(t)=\max\{tl-g/5,tl+\tfrac12\min(\phi_-g_l,(2/5)g_l)\}.
+\end{gather*}
+The first two bounds also use $2m\le1$. Each value of $q(t)$ is affine
+in t, since its two alternatives have the same slope l. Repeat the
+raw bound first, intersect it with $T_1$, then price phase using this
+new raw bound, intersect the resource with $U_1$, and finally retain
+$d_2\le d_1$. A resource bound is never substituted for a raw bound
+in the density or phase license.
+
+\begin{condition}[The two coarse passes]\label{v9:entry:two-pass-condition}
+The preceding coefficient domains, Fourier gates, endpoint enclosures
+and strict raw gates hold on every one of the 24 closed cells. Outward
+evaluation gives the following ceilings, and in every second-pass cell
+$d_2<(\sigma_l-1)l$:
+\[
+\begin{array}{c|r|r|r|c}
+ \text{pass}&\max T&\max U&\max d&\text{strict gap gates}\\\hline
+ 1&13.2818901598&10.9330610254&3.9164138937&23\\
+ 2&11.5164967977&9.9790315907&3.5746638454&24.
+\end{array}
+\]
+The minimum second-pass gap margin is at least
+$526024602543/1600000000000>0$.
+\end{condition}
+The stated condition is a finite exact arithmetic obligation. The named
+two-pass proof object records and rechecks these inequalities; it is
+kept distinct from the analytic implications just proved. Although its
+implementation retains additional previously valid minima, the fresh
+quadratic ceilings attain all the displayed minima in this cover, so
+no earlier resource-refinement schedule is a mathematical premise here.
+
+If zero belonged to the closed support, every gap would be on one side
+of zero and $J\le\rho$. Hence $D\ge(\sigma-1)\rho$, contradicting the
+strict second-pass test. Centering and positive variance therefore give
+an actual central gap $(-A,B)$, with positive endpoints. This acquires
+an event, rather than supposing an artificial two-point kernel.
+
+\subsection{Signed moments and physical gap costs}\label{v9:entry:signed-moments}
+Write $\mu_4=M_4$, $\eta_5=M_5$, $\sigma=\sqrt{10}$. Put $a_\pm=(1\pm\beta)/2$, $b_\pm=(\rho\pm\gamma)/2$.
+Both signs have positive probability and positive first moment, since a
+centered variance-one law cannot be supported on one half-line. Thus
+$|\beta|<1$ and the signwise denominators below are positive whenever
+used; degenerate correction denominators are handled separately.
+Cauchy gives $m^2\le a_+a_-$ and $b_\pm m\ge a_\pm^2$.
+Consequently
+\[
+ \frac{(1+\beta)^{3/2}}{\sqrt{1-\beta}}-\rho
+ \le\gamma\le
+ \rho-\frac{(1-\beta)^{3/2}}{\sqrt{1+\beta}},\qquad
+ m\ge\max\left\{\frac{1+\beta^2}{2\rho},
+                  \frac{a_+^2}{b_+},\frac{a_-^2}{b_-}\right\}.
+\]
+These statements also hold with a zero atom. Projection of $X|X|$ onto
+the span of $X$ and $|X|$ gives
+\[
+ \mu_4\ge\rho^2+\frac{(\gamma-\rho\beta)^2}{1-\beta^2}.
+\]
+For completeness, this follows by minimizing the nonnegative expectation
+$\E(X|X|-uX-v|X|)^2$ over $u,v$; its Gram matrix has diagonal entries
+one and off-diagonal entry $\beta$, and is positive definite.
+
+Two support-localizing moment matrices give the additional upper bounds
+as follows. If
+$D_\pm=Ra_\pm-b_\pm>0$, then
+\[
+ 2m+\sum_\pm\frac{(Rm-a_\pm)^2}{D_\pm}\le R,
+ \qquad
+ \mu_4\le R\rho-\sum_\pm\frac{D_\pm^2}{Rm-a_\pm}.
+\]
+Indeed the first follows by summing the determinant inequalities for
+\[\E[(R-|X|)(1,|X|)^{\mathsf T}(1,|X|);\pm X>0].\]
+The second follows from the corresponding matrices with an additional
+factor $|X|$. One more factor $|X|$ yields, sign by sign,
+\[
+ \E[X_\pm^5]\le R \E[X_\pm^4]
+ -\frac{(Rb_\pm-\E[X_\pm^4])^2}{D_\pm}.
+\]
+Zero denominators are treated by dropping their nonnegative correction;
+they never imply exclusion without a separate contradictory numerator.
+The common $m$ is retained throughout.
+
+A second useful upper bound for $m$ follows by integrating
+$(x-a)^2(R-x)\ge0$ for $x=|X|\in[0,R]$. For every fixed $a>0$,
+\[
+ 2m\le\frac{R-\rho+2a+Ra^2}{a(2R+a)}.
+\]
+The cover uses only the eleven rational choices $a=2/10,\ldots,12/10$.
+
+Write $\delta=\gamma-\rho\beta$. Cauchy and a square completion on
+each sign give the signed constant bound
+\begin{align*}
+ \frac\rho2\mu_4-\frac14\eta_5
+ &\le\frac{\rho^3}{4}
+ -\frac{(\rho+\gamma)(\delta_+)^2}{8(1+\beta)^2}
+ -\frac{(\rho-\gamma)((-\delta)_+)^2}{8(1-\beta)^2}.
+\end{align*}
+Indeed on either sign, write $a=\E X_s^2$, $b=\E X_s^3$,
+$c=\E X_s^4$, $f=\E X_s^5$. Cauchy gives $c\ge b^2/a$,
+$f\ge c^2/b$, and
+$\rho c/2-f/4\le\rho^2b/4-(c-\rho b)^2/(4b)$.
+Distance to the half-line $c\ge b^2/a$ proves the stated penalty
+on summing both signs. Independently,
+$\mu_4^2\le\rho\eta_5$ and the projection bound above give
+\[
+ \frac\rho2\mu_4-\frac14\eta_5
+ \le\frac{\rho^3}{4}
+ -\frac{(\gamma-\rho\beta)^4}{4\rho(1-\beta^2)^2}.
+\]
+Each is a complete deduction from the same square.
+There is a third independent deduction which is often stronger.
+For $Y=|X|$ and $\delta=\gamma-\rho\beta$, put
+\[
+ V=\E[Y(Y^2-\rho Y)^2]=\eta_5-2\rho\mu_4+\rho^3.
+\]
+Since
+$\delta=\E[Y\operatorname{sgn}(X)(Y^2-\rho Y)]$,
+weighted Cauchy gives $\delta^2\le2mV$. Hence
+\begin{equation}\label{v9:entry:weighted-constant-loss}
+ \frac\rho2\mu_4-\frac14\eta_5
+ \le\frac{\rho^3}{4}-\frac{\delta^2}{8m}.
+\end{equation}
+The maximum of these three separately valid losses can be subtracted.
+Their sum cannot. A zero atom contributes zero to the weighted measure.
+
+\paragraph{An actual central gap without assuming $D<2$}
+The physical decomposition \eqref{ms:defect-decomposition} shows that
+$D<(\sigma-1)\rho$ implies an actual central gap. Use its same
+nonnegative terms, writing $T=T_++T_-$ and
+$Q=(\sqrt{\sigma+1}A-\sqrt{\sigma-1}B)^2$.
+Hence $T\le D/(\sigma-1)$. The additional inequality
+$J\le\rho+2mAB$ gives $6mAB\ge(\sigma-1)\rho-D$.
+Consequently, if $\rho\ge l$, $D\le d<(\sigma_l-1)l$ and $m\le m_u$,
+\begin{equation}\label{v9:entry:gap-distance}
+ (A+B)^2\ge
+ \frac{l-d/(\sigma_l-1)+\{(\sigma_l-1)l-d\}/3}{m_u}>0.
+\end{equation}
+This is the distance lower bound used in the complete high-frequency
+event. It uses the actual moment m and the actual support endpoints.
+
+Moreover $A\le a_-/m$, $B\le a_+/m$ and $J\le\rho+2m$.
+The last bound gives the compulsory defect
+\[
+ D\ge \sigma\rho-\gamma-6m.
+\]
+The inequalities $T-J_o\ge2BR_++2AR_-$ give the useful additional
+endpoint constraint
+\[
+ D\ge(\sigma-1)b_++6a_+B-(\sigma+5)mB^2.
+\]
+If $D<(\sigma-1)b_+$, this downward quadratic forces $B$ to be at
+least its positive root. The reflected constraint has $a_-,b_-,A$
+and the coefficients $\sigma+1,\sigma+7$. In a closed moment box,
+positive coefficients are rounded down, negative coefficients up, and
+the lower square-root endpoint is used in the resulting root bound.
+
+The actual opposite-sign event has probability $2pq$.
+There is no atom at zero. Cauchy gives the necessary probability interval
+$2m_-^2/(1+\beta_+)\le p\le1-2m_-^2/(1-\beta_-)$ on a moment cell.
+In particular, $2pq\ge(1+\beta^2)^2/(2\rho^2)$, using
+$m\ge(1+\beta^2)/(2\rho)$ and $pq\ge m^2$. The minimum of
+$p(1-p)$ on a closed interval is attained at an endpoint.
+
+For independent copies one has exactly
+\[
+ \E[(X-X')^2\mid XX'<0]
+ =\frac{1+\beta(1-2p)+4m^2}{2pq}
+ =\frac{1+4m^2+\beta}{2p}
+  +\frac{1+4m^2-\beta}{2q}.
+\]
+For an upper bound, use the upper $m$ endpoint and both endpoints of
+$p$ and $\beta$. The expression is convex in $p$ and affine in $\beta$.
+This improves the former $2/\Pp(XX'<0)$ bound inside the complete high-frequency
+estimate. Both copies still have the same actual marginal.
+
+\paragraph{Preserving central and outer integral costs}
+Let
+\[
+ P_1(A,B)=B^3/3+AB^2/2-A^3/6,\quad
+ P_2(A,B)=B^4/4+AB^3/3-A^4/12,\quad G=\rho P_1-P_2.
+\]
+Then $J_{1,c}=mP_1$, $J_{2,c}=mP_2$. Since
+$\partial_BG=B(A+B)(\rho-B)$,
+\[
+ G(A,B;\rho)\le G(A,\rho;\rho)
+ =\rho^4/12+\rho^3A/6-\rho A^3/6+A^4/12.
+\]
+The last expression increases with $A$ because its derivative is
+$(\rho-A)^2(\rho+2A)/6$, and is convex in $\rho$ because its second
+$\rho$ derivative is $\rho^2+\rho A$. Its closed-rectangle maximum is
+therefore bounded using the upper $A$ endpoint and both $\rho$ endpoints.
+
+Positive outer gaps satisfy
+$(t-a)(\rho-t)\le(\rho-B)_+^2/4$. On negative outer gaps the positive
+part is bounded by $(R-\rho)^2/4$ after extracting $|t|$.
+Integration gives
+\[
+ 3(\rho J_1-J_2)_o
+ \le\frac38\{(\rho-B)_+^2T_++(R-\rho)^2T_-\}.
+\]
+The available weighted outer budget is $D-mQ$, not the entire $D$.
+The cover intersects this budget with the individual bounds
+$T_+\le b_{+,u}-m_lB_l^2$ and $T_-\le b_{-,u}-m_lA_l^2$.
+
+For the signed phase term $\Omega=J_1+(\mu_4-3)/6$, retain
+\[
+ -RT_-/2\le J_{1,o}\le RT_+/2.
+\]
+The central minimum of $P_1$ occurs at $B_l$ and an $A$ endpoint;
+its maximum occurs at $B_u$ and $A$ clipped to the interval at $A=B_u$.
+A nonnegative polynomial bound is multiplied by $m_u$ for an upper
+bound and $m_l$ for a lower bound; a negative one uses the opposite
+endpoint. For example, the binary endpoints $A=3/2$, $B=2/3$ make this
+maximum negative; the sign switch is necessary even when $D<2$.
+The fourth-moment sign intervals also sharpen
+$K_1=\E[X|X|^3]-3\beta-3\rho\gamma/2$.
+The complete $K_1,\Omega,\varphi$ rectangles are used in the signed expression
+$|cK_1+\varphi\Omega|$, without replacing it by two separate absolute values.
+
+
+
+\paragraph{A compulsory first moment before each signed evaluation.}
+The physical inequality $D\ge\sigma\rho-\gamma-6m$ is especially
+useful inside a cell. If its prior ceiling is $D\le d$, and
+$\rho\ge l$, $\gamma\le\gamma_+$, then
+\begin{equation}\label{v9:entry:mean-contraction}
+ m\ge m_*:=\max\{0,(\sigma_l l-\gamma_+-d)/6\}.
+\end{equation}
+If $m_*>1/2$, the cell is empty. Otherwise the common sign-moment
+inequality $4m^2+\beta^2\le1$ forces
+$|\beta|\le\sqrt{1-4m_*^2}$. This restriction must be intersected
+with the beta interval for this gamma cell, not carried from a different
+gamma cell. Recompute all dependent sign-moment ranges after the
+intersection. These are necessary conditions on one law; no sufficiency
+or moment-realizability assertion is made.
+
+For completeness, the event distance and conditional moment refinements
+fit the Fourier input exactly. On the acquired actual gap, use
+$\mathcal E=\{XX'<0\}$, a downward square root of
+\eqref{v9:entry:gap-distance}, and the larger of the two valid probability
+lower bounds
+\[
+ \alpha=\max\left\{
+ \frac{(1+\min|\beta|^2)^2}{2u^2},\quad
+ 2\min_{p=p_-,p_+}p(1-p)\right\}.
+\]
+The conditional second-moment ceiling is the smaller of $2/\alpha$ and
+the corner maximum of the exact expression displayed above. Its
+numerators are positive, it increases with m, is affine in beta, and
+is convex in p, so these corner choices are valid. Each event option
+is inserted into all six HIGH terms. Taking the minimum with the
+complete universal-event bound preserves the same actual Fourier
+integral. None of these statements follows merely from declaring a
+moment rectangle feasible.
+
+\subsection{The signed enclosure and its ordered update}
+\label{v9:entry:ordered-update}
+On one closed moment cell retain bounds for
+$(\rho,\beta,\gamma,m)$, an already proved support radius R, an incoming
+raw ceiling T, and the weighted defect invariant $nD\le Nd$.
+Thus $D\le d$ for every actual $n\ge N$. Intersect all necessary
+moment conditions just proved, with directed endpoint operations.
+A positive numerator with a zero denominator proves incompatibility
+only through its original positive-semidefinite inequality; a
+zero-over-zero correction is dropped. No division is made before this
+check. Bisection of the monotone first-moment necessary inequality
+keeps its upper endpoint, so its rounding cannot remove a law.
+
+Here is an explicit description of the coefficient enclosures. Let
+$M$ be the resulting upper fourth moment and let $[J_-,J_+]$ contain J;
+one can use
+\[
+ J_- =\max\{0,((3+\sigma_l)l-\gamma_+-d)/3\},\quad
+ J_+=\min\{u+2m_+,((3+\sigma_u)u-\gamma_-)/3\},
+\]
+with a rational $\sigma_u>\sqrt{10}$. For the beta term take the full
+corner maximum of $3\beta(J+\gamma)/2$. For the gap charge take the
+minimum of the complete coarse charge
+\eqref{v9:entry:coarse-gap-charge} and the central-plus-outer charge
+just proved. Write this bound as $G_*$ and the beta-term maximum as $B_*$.
+Let $P_*\ge0$ be any lower bound for the maximum of the three independent
+fifth-moment penalties. Then a valid complete constant bound is
+\begin{equation}\label{v9:entry:signed-constant}
+ A=\min\{B_*+G_*+u^3/4-l/2-P_*,\quad B_*+2uM-l/2\}.
+\end{equation}
+The fourth semimoment inequalities and the signed product rectangle
+for $\rho\gamma$ give an interval $[k_-,k_+]$ containing
+$K_1=\E X_+^4-\E X_-^4-3\beta-3\rho\gamma/2$.
+The central polynomial $mP_1$ and the signed outer bounds give an
+interval $[\omega_-,\omega_+]$ containing
+$\Omega=J_1+(M_4-3)/6$. Intersect them with every previous valid interval.
+When multiplying by a moment endpoint, the sign of the coefficient is
+retained. These constructions explain every coefficient in the next
+quadratic, without assuming that unrelated corner maxima are attained
+by one common law.
+
+Require the incoming raw gate $0\le T<Nc_-l$. By
+Corollary~\ref{v9:core:phase-price},
+\[
+ \varphi=\phi(H/\sqrt n)\in[\phi_-,2/5],\qquad
+ \phi_- =\phi_l(1-T/(Nc_-l))>0.
+\]
+For a formal coefficient $v\in[c_-,c_+]$ set
+\begin{align}
+ B_v&=K_F+vA,\notag\\
+ F_v&=\max_{k\in\{k_-,k_+\},\ \omega\in\{\omega_-,\omega_+\},\
+                    \psi\in\{\phi_-,2/5\}}|vk+\psi\omega|+s_F,\notag\\
+ Q_v&=vl+\tfrac12\min\{\phi_-\gamma_-,(2/5)\gamma_-\}.
+ \label{v9:entry:signed-quadratic}
+\end{align}
+The actual raw remainder is at most $B_c+F_c|H|-Q_cH^2$.
+The maximum over the signed rectangle is valid by successive affine
+maximization, and the absolute value preserves convexity. For fixed
+$|H|$, this expression is convex in c: the constant and curvature
+parts are affine and $F_c$ is convex. Thus the two endpoints c-,c+
+suffice, even if A is negative. A negative lower gamma must be priced
+with the upper density endpoint; it cannot be reflected inside the
+contact law.
+
+\begin{lemma}[One ordered signed step]\label{v9:entry:signed-step}
+Suppose all preceding cell bounds hold and $Q_v>0$ at both endpoints.
+Let upward rounding be applied to every proposed numerical ceiling.
+Set
+\begin{align*}
+ T'&=\min\{T,\max_{v=c_-,c_+}(B_v+F_v^2/(4Q_v))\},\\
+ \eta&=(c_-l-T'/N)/2,\\
+ U'&=\max_{v=c_-,c_+}(B_v+F_v^2/[4(Q_v+\eta)]).
+\end{align*}
+A negative T' or U' excludes the cell. Otherwise $\mathcal R_c\le T'$,
+$\mathcal U\le U'$, and the new weighted defect bound is
+\[
+ nD\le N d',\qquad d'=\min\{d,6U'/(N\phi_l)\}.
+\]
+A valid raw-threshold ceiling is
+\begin{equation}\label{v9:entry:phase-ceiling}
+ |H|\le\max_{v=c_-,c_+}
+ \frac{F_v+\sqrt{F_v^2+4(Q_v+\eta)\max(0,B_v)}}{2(Q_v+\eta)}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Complete the two raw squares first. The incoming strict gate persists
+under $T'\le T$, and gives $\eta>0$. Only now apply
+Corollary~\ref{v9:core:phase-price} and complete the two resource
+squares with curvature $Q_v+\eta$. A negative complete ceiling is
+incompatible with the nonnegative raw or resource expression.
+The resource contains $n\phi(0)D/6$, so the displayed weighted bound
+follows without setting the actual sample size equal to N. If the
+maximum of both resource quadratics at a phase were negative, no
+witness could have that phase. Replacing B by its positive part enlarges
+each positive root and gives \eqref{v9:entry:phase-ceiling}.
+Previous valid resource or phase bounds may also be intersected, but
+an unlicensed resource bound cannot be fed back as a raw ceiling.
+\end{proof}
+
+\subsection{Closed coverage and the selected acquisition theorem}
+\label{v9:entry:selected-route}
+For each of the original 24 rho cells, acquire a support radius with
+the independent heat/ray test before recomputing higher moments.
+Each signed pass then partitions a full necessary beta enclosure into
+eight closed intervals, each resulting necessary gamma enclosure into
+eight closed intervals, and each necessary common-m enclosure into two
+closed intervals. The original beta interval is restored for every
+gamma slice before applying \eqref{v9:entry:mean-contraction}.
+Discarding an outer interval counts all its descendants, and requires
+one of the proved necessary conditions to be inconsistent. In every
+processed rho cell the active and excluded counts sum to 128.
+
+Each surviving actual law satisfies the cell update of
+Lemma~\ref{v9:entry:signed-step}. Pool upper bounds by maxima and lower
+bounds by minima before the next pass. This may enlarge the possible
+set, but cannot lose an actual witness. A rho cell disappears from later
+passes only when all of its descendants have been excluded. Degenerate
+closed intervals may duplicate boundary work; they do not leave holes.
+
+For export, intersect each surviving necessary probability interval
+with all 100 closed panels $[j/100,(j+1)/100]$, $j=0,\ldots,99$.
+A cell meeting a shared endpoint contributes to both panels. From
+$\theta=1-m^2/[p(1-p)]$ obtain a panel upper bound using its lower m
+endpoint and the maximum of $p(1-p)$ on the intersection, including
+$1/4$ if it crosses $1/2$. Pool this simultaneously with the raw,
+weighted defect, rho, beta, and phase bounds of the same cells.
+
+\begin{condition}[The four signed passes]\label{v9:entry:signed-condition}
+Starting with Condition~\ref{v9:entry:two-pass-condition}, all support,
+moment, actual-event, Fourier, denominator, signed-curvature and ordered
+raw-license gates hold on the complete four-pass cover just described.
+Its exact rational evaluation contains 11264 nominal signed boxes in
+total. The complete 100-panel export satisfies, on every nonempty panel,
+\begin{gather*}
+ \mathcal R_c\le2.1995174,\qquad nD\le32.20665378,
+ \qquad D\le0.76682509,\\
+ \rho\le71527/48000,
+ \qquad |\beta|\le0.50549963,
+ \qquad |H|\le1.83605680.
+\end{gather*}
+Fourteen rho cells survive, and thirty probability panels are nonempty.
+The largest support radius among the surviving final rows is $157/50$;
+thus the export also supplies
+\begin{equation}\label{v9:entry:exported-support}
+ \supp P\subset(-157/50,157/50).
+\end{equation}
+\end{condition}
+This is the named fixed-target coarse proof object, with its own targets
+and complete incidence requirements. It has a fresh exact acceptance
+record; numerical acceptance remains distinct from the analytic proof
+that its leaves enclose all possible witnesses. The preceding statements
+supply that reduction and explicitly identify the finite predicates
+used. They do not change an older certificate's hypotheses or its target.
+
+\begin{theorem}[Selected fixed-target coarse entry]\label{v9:entry:theorem}
+Let $n\ge42$ be an actual index and let an attained fixed-target pair
+have $a\ge0$. Assume the true sharp predecessor $C_{n-1}\le\CE$ and
+the external structural inequality~\eqref{v9:entry:structural}.
+Under Conditions~\ref{v9:entry:two-pass-condition} and
+\ref{v9:entry:signed-condition}, the stated complete probability cover
+and all the displayed coarse bounds hold for that pair.
+\end{theorem}
+\begin{proof}
+Theorem~\ref{v9:entry:initial-support} supplies the actual support before
+higher moments are used. Appendix~\ref{v9:fourier:section} and the
+actual-event constructions prove the complete Fourier bounds on their
+specified domains. The coarse coefficient inequalities and the two
+ordered quadratic steps establish the first actual gap. Every signed
+cell thereafter uses the moment and physical-gap bounds of this same
+law, followed by Lemma~\ref{v9:entry:signed-step}. Induction over the
+four passes preserves the weighted invariants. The complete closed
+cover and outward pooling prove that every witness reaches an incident
+output panel with the stated bounds.
+\end{proof}
+The argument contains no upper bound for the witness's actual score,
+no scalar score recurrence, and no second deleted-score assumption.
+It uses only the simple quadratic phase price. A further confinement
+and count comparison is required on every retained probability panel;
+the finite base required to obtain a first failure is a separate input.
+Neither a small defect nor a successful coarse acquisition proves that
+final comparison.
