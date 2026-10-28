@@ -15,7 +15,7 @@
 
 ## Exact statement and scope
 
-The law is an actual standardized fixed-target maximizing witness `(P,H)` with nonnegative excess over CE at n>=42. Assume the true predecessor `C_(n-1)<=CE` and closed-support contact. Its sign split is `X=ell(B+U-p)`, with `B=1_(X>0)`, `p=P(X>0)` and `E(U|B)=0`. Assume the already acquired outer strip `|U|<3/5` and inward conditional bounds `U_0<d<69/1000`, `U_1>-d`. If `lambda=n E U^2<=3/40`, then `|U|<1/2`.
+The law is an actual standardized fixed-target maximizing witness `(P,H)` with nonnegative excess over CE at n>=42. Assume the true predecessor `C_(n-1)<=CE` and closed-support contact. Its sign split is `X=ell(B+U-p)`, with `B=1_(X>0)`, `p=P(X>0)` and `E(U|B)=0`. Assume the already acquired outer strip `|U|<3/5` and inward conditional bounds `U_0<=d<69/1000`, `U_1>=-d`. If `lambda=n E U^2<=3/40`, then `|U|<1/2`.
 
 These are same-law hypotheses. We do not infer iid realizability from a relaxation, and do not invent independent conditional fluctuations. The iid predecessor and maximizing-contact inputs remain explicit; the conditional moment calculations themselves concern just one marginal. The .6 strip is acquired before the bounded cubic calculation and is never derived from the desired .5 conclusion.
 
@@ -64,3 +64,5 @@ The new dependency path is `acquired .6 strip + same-law lambda<=.075 -> moment/
 ## Typeset verification
 
 The final three-page note compiled with TeX Live 2025, return code 0 and no warnings, in `small-noise-build02`. All three pages were rendered at 105 dpi and inspected; no clipping, overlap or equation-layout issue was found. The first build is preserved: its harmless bookmark and paragraph-width warnings were corrected only by changing a heading and displaying the two boundary inequalities.
+
+The subsequent endpoint clarification uses the actual weak inward bounds `U_0<=d`, `U_1>=-d`; the strict bound is on `d<.069`. The proof already uses only this weaker hypothesis. `small-noise-build03` preserves the corrected three-page PDF, successful compilation with no warnings, and visual inspection of every page. Earlier build logs remain unchanged.
