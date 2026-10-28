@@ -1,0 +1,71 @@
+{
+  "status": "PASS_INDEPENDENT_LOW_NOISE_HALF_AMPLITUDE_GATES",
+  "noise_ceiling": "3/40",
+  "theta_exact_upper": "125/17058",
+  "simple_caps": {
+    "theta": "733/100000",
+    "ell_lower": "1009/500",
+    "rho_upper": "1093/1000",
+    "beta": [
+      "151/1000",
+      "187/1000"
+    ]
+  },
+  "boundaries": [
+    {
+      "u": "459/250",
+      "beta_direction": "-151/1000",
+      "heat_upper": "-4204450376159697231939/8200000000000000000000",
+      "ray_signs": [
+        "-1298583931/875000000",
+        "-1136361/250000",
+        "-7737/1000",
+        "-3442330413/3500000000",
+        "-4867803/2000000",
+        "-2057/1000"
+      ]
+    },
+    {
+      "u": "2179/1000",
+      "beta_direction": "187/1000",
+      "heat_upper": "-504398409454360553183541/2099200000000000000000000",
+      "ray_signs": [
+        "-18608183673/14000000000",
+        "-3269091/500000",
+        "-1959/200",
+        "-10668841303/7000000000",
+        "-1255781/400000",
+        "-2057/1000"
+      ]
+    }
+  ],
+  "actual_law_controls": [
+    {
+      "name": "zero_noise",
+      "p": "441/1066",
+      "lambda_at_42": "0",
+      "amplitude": "0"
+    },
+    {
+      "name": "nearby_four_point_1/1000",
+      "p": "1203470948801/2909071948801",
+      "lambda_at_42": "2565801567182418001250/177716447307274107988089621",
+      "amplitude": "35860261025000/51305413885774461"
+    },
+    {
+      "name": "nearby_four_point_1/100",
+      "p": "4813721/11636521",
+      "lambda_at_42": "4105381954850/2843190053546661",
+      "amplitude": "28996900/4096361997"
+    },
+    {
+      "name": "nearby_four_point_1/50",
+      "p": "7520669/18183169",
+      "lambda_at_42": "40094566606250/6939361867043781",
+      "amplitude": "229243750/15962756607"
+    }
+  ],
+  "new_cells_added": 0,
+  "inherited_code_imported": false,
+  "scope": "Conditional on fixed-target contact, true sharp predecessor, and already acquired .6 strip/inner gap. No global theorem or new full confinement replay."
+}

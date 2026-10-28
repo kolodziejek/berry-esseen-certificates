@@ -1,3 +1,28 @@
+# Next after one complete confinement panel — 28 October 2026
+
+1. Author-review the v8 result in existing draft PR5. Final integrated checks,
+   artifact binding and independent high/low-noise reviews are complete.
+   No merge without explicit user approval.
+2. Preserve the selected continuous low-noise proof. Do not repeat the13-row
+   boundary grid or the false Psecond(left)<0 test. General p[.4,.6] is conditional;
+   actual acquired entry application remains[.4,.53],lambda<=.075.
+3. Generalize complete high-noise confinement only with actual per-panel moments,
+   all closed seams, all sign/phase/noise cases and one common resource. The
+   other27 probability panels are not yet covered by the full .5 theorem.
+4. A strict iid count comparison, marked/phase/mass repairs and zero-noise branch
+   remain after confinement. BASE41 and full ROOT4/C4 acceptance are independent.
+5. Publish reviewed v8 component results to existing draft PR5, update its body
+   with performed checks/limits; do not merge or push main/upstream.
+
+Next bounded reproduction from integration repository:
+python3 -I -B mathematics/fixed-target-v8/2026-10-28/run_checks.py new-unused-id
+For a complete isolated frozen ancestry replay (~65s observed, not a generation campaign):
+python3 -I -B mathematics/fixed-target-v8/2026-10-28/isolated_entry_replay.py --output-dir runs/fixed-target-v8-20261028/new-entry-id
+Do not repeat the latter without a changed input/failure/review concern; a fresh
+13-file isolated replay is already saved in isolated-entry-review01.
+
+---
+
 # Next after complete coarse entry — 28 October 2026
 
 1. Preserve the selected four-pass contract and simple quadratic ancestry.

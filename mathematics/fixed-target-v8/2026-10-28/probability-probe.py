@@ -9,7 +9,7 @@ from fractions import Fraction as F
 from hashlib import sha256
 import json,sys
 ROOT=Path(__file__).resolve().parents[3]
-PHASE=ROOT.parent/'phase-entry-v8/runs/fixed-target-v8-20261028/phase01/stdout.json'
+PHASE=ROOT/'runs/fixed-target-v8-20261028/phase01/stdout.json'
 MOMENT=ROOT/'runs/fixed-target-v8-20261028/moment03/stdout.json'
 def need(x,s):
  if not x:raise ValueError(s)

@@ -1,3 +1,37 @@
+# V8 checkpoint — 28 October 2026
+
+Active integration worktree: work/fork_audit_20261027/strategy-v4,
+branch manuscript/strategy-v4-20261027. The current v8 component commits are integrated for existing draft PR5.
+The publication receipt records its verified head; no component PR is created.
+Main ca4943a and original baseline6346fc1 are unchanged. No upstream mutation.
+
+| Result | Mathematical status | Execution status |
+|---|---|---|
+| All-panel moment contraction | Conditional actual-law gap/entry implication | Fresh exact30-panel PASS,2 panels excluded |
+| Signed phase resource | Independently derived from the same conserved resource |2048-box replay,682 cells,1364 independently reconstructed quadratics |
+| Full half-amplitude on p[.41,.42], n>=42 | Conditional on predecessor/contact/gap/entry; analytic review complete or finalizing |128 closed boxes:16 directheat,84 resource exclusions,28 both-ray passes |
+| Isolated fixed v7 entry | Same conditional theorem, unchanged source/object | Fresh11264-cell replay,19 inherited+5 wrapper controls; byte-identical output |
+| ROOT4 original-law bridge | Scoped conditional proof, not complete C4 | Exact moment/Hermite/atom/count controls |
+| Global confinement/count/BASE41 | Still missing | No full native acceptance |
+
+The original phase checker had a reproducible cached-bytecode source-binding
+flaw; repaired direct-source/isolated replay rejects that altered export and
+shadow-module attacks. Old logs and source snapshots remain intact.
+
+New proofs and index: mathematics/fixed-target-v8/2026-10-28/README.md.
+Eleven bounded integrated checks pass in runs/fixed-target-v8-20261028/integration02;
+all2748 baseline entries preserved (182 materialized,2566 sparse blobs).
+The low-noise extension is now proved continuously: conditional p[.4,.6],
+lambda[0,.075], allH,n>=42; the acquired application is p[.4,.53].
+Both rays fold to one quintic on[1.7928,2.1912];28exact endpoint/domain gates
+replace the new13boundary rows. Incoming .6strips remain necessary.
+Constructor and independent derivations agree exactly; larger noise outside
+the central panel remains unresolved. The primary five-page source archive rebuilds
+with identical text on all pages. Independent reviews find no blocker at the
+named scopes; ready for author review as research progress, not a full theorem.
+
+---
+
 # Coarse entry completed; confinement and finite base remain — 28 October 2026
 
 New named exact component INITIAL42_FIXED_TARGET_COARSE_V7 passes. Selected

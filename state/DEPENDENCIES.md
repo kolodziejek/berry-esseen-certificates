@@ -1,3 +1,49 @@
+# V8 dependency update — 28 October 2026
+
+FIXED_TARGET_MAXIMIZER + sharp predecessor + actual-law gap/contact/Fourier inputs
+ -> INITIAL42_FIXED_TARGET_COARSE_V7 (two quadratic passes +4signed passes).
+The exact fixed13-file ancestry was freshly isolated/replayed; this proves
+execution agreement, not the analytic premises.
+
+V7 + actual outer-gap inequality
+ -> binary cost B0 + inward cost E0 + positive conditional-noise integrals
+ -> exact30panel iteration ->28 panels p[.25,.53],theta<=.0594425514,
+    d<=.0719539227,rho<=1.4547288545,lambda<=.6314459997.
+Support is already bounded before higher conditional moments are used.
+Direct contact gives the .6 strip on panels40..52; positive-ray test fails25..39.
+
+V7 same-cell R_c + ordered raw ceiling T<N*c_-*rho_l
+ -> eta=(c_-rho_l-T/N)/2>0
+ -> Ucal<=min(T,max_c[B+F_sign*|H|-(q+eta)H^2]).
+Ucal=(n+H^2)a+n*phi(0)*D/6+n^1.5*leakage is ONE resource.
+All682 active cells, both CE endpoints and closed overlap filters remain.
+
+p[.41,.42] acquired .6 strip + inward d<.069 + lambda<=.075
+ + contact/predecessor -> |U_noise|<.5 for allH,n>=42 (2heat+12rays).
+Complement lambda[.075,.6] + signed resource + exact retained antichain/slopes/
+common-resource gate ->84 impossible boxes +28 two-ray boxes.
+Union including seam/zero noise -> full conditional panel |U_noise|<.5,d<.069.
+The conclusion does NOT imply own-count domination or the global theorem.
+
+Further independent edge replacement:
+Acquired .6strip + inward d<.072 + p[.4,.6] + lambda<=.075 + contact/predecessor
+ -> theta<.0074,ell>1.992,rho<1.105
+ -> folded physical rays z=p or1-p, b(u)=4963u/4980-9889/5000,
+    u in[2241/1250,2739/1250]
+ -> explicit quintic P; Pthird negative endpoints and convex -> Pfirst concave;
+    Pfirst positive endpoints -> P increasing, P(right)<-.1779;
+    all held-beta radial signs by monotonicity
+ -> |U_noise|<.5 continuously, no new probability grid.
+Application inherits only p[.40,.53] from the13 acquired strips. The old26boundary/
+156ray checks of the new low-noise step are unnecessary; the incoming strip
+checks, larger-noise central-cell comparisons and finite base stay required.
+
+ROOT4 branch: original-law common defect measure + closed Prawitz input
+ + genuine whole-cell nodal enclosure + actual endpoint/tail coverage
+ -> scoped central threshold bridge. Numerical providers/complete C4 still required.
+
+---
+
 # Current fixed-target DAG — 28 October 2026
 
 Finite base through41 + least failure -> sharp predecessor(s).

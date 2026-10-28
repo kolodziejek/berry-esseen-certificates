@@ -38,6 +38,6 @@ a witness and is not a counterexample to the conjecture.
 
 `probability-probe.py` and `runs/fixed-target-v8-20261028/probability01/` preserve
 all rational calculations, input hashes, command, return code and timing.
-The script currently reads the frozen phase export in sibling `phase-entry-v8`;
-integration changes this path to the identical in-repository export. The input
+The integrated script reads the identical frozen phase export in this repository.
+The earlier source snapshot records the original sibling-worktree path; the input
 hash remains fixed. No certificate or existing driver is modified.

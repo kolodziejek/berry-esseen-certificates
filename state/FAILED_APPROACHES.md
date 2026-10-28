@@ -1,3 +1,37 @@
+# New failures and repairs — 28 October 2026
+
+1. Source hashes + python -B alone do not bind executed bytecode. A disposable
+   timestamp-valid phase_core cache altered all682 exported cells and the old
+   acceptor accepted it with sourcepins unchanged. An extra v7/phase_core.py
+   also shadowed the intended file. New direct-source loading, -I and fresh
+   -X cache prefix defeat both attacks. Frozen v7 code is reproduced from an
+   exact13-file allowlist instead of being rewritten. This does not show the
+   historical clean arithmetic output was wrong; new isolated output matches it.
+2. Fixed global phase ceiling cannot close the old half-amplitude envelope:
+   the recorded point obstruction exceeds .01556. Same-cell phase reduces195
+   failed rays to8 on equal128 boxes. Redistributing8 noise intervals leaves1.
+   Do not expand grids to repair that stale low-noise obstacle: direct all-H
+   contact heat covers the entire lowest band and closes the original128cover.
+3. Beta<=1-2p+Theta is invalid above p=.5; exact actual three-point laws refute
+   it. Use beta<=1-2p+2p*Theta with correct orientation. This is not a counterexample
+   to Berry--Esseen.
+4. Subtracting only the binary defect cost from global phase maxima excludes
+   NO additional complete probability panel (probability01). Positive relaxed
+   reserves do not prove existence of a maximizing law. Moment constraints alone
+   admit the Bernoulli p=.26 control; do not silently discard the left domain.
+5. Replacing the original finite-n law by its two-point representative alone
+   can underestimate the original closed CDF. ROOT4 exact four-point control
+   refutes that shortcut; keep its common defect-response measure.
+
+6. The proposed continuous-heat shortcut Psecond(left)<0 is false:
+   its exact value is about+.0228525021. Preserve failed independent run01.
+   Same contact target is proved by Pthird<0 (convex quadratic negative endpoints),
+   hence Pfirst is concave; BOTH positive endpoint values suffice. Selected run02
+   uses this different valid criterion. Total b(u)-family derivatives must not
+   replace the derivatives holding beta fixed along each physical support ray.
+
+---
+
 # Newly delimited shortcuts — 28 October 2026
 
 - Small D, weighted nD, and arbitrarily small conditional noise do NOT imply
