@@ -1,0 +1,210 @@
+{
+  "status": "PASS_EXACT_SCALAR_GATES",
+  "gates": {
+    "variance root": {
+      "lhs": "12503/50000",
+      "rhs": "251001/1000000",
+      "strict": true
+    },
+    "raw displacement": {
+      "lhs": "11523/12500",
+      "rhs": "47/50",
+      "strict": true
+    },
+    "curvature displacement": {
+      "lhs": "1412/3125",
+      "rhs": "23/50",
+      "strict": true
+    },
+    "mesh interior lower": {
+      "lhs": "3",
+      "rhs": "119953/50",
+      "strict": true
+    },
+    "mesh interior upper": {
+      "lhs": "159047/50",
+      "rhs": "5997",
+      "strict": true
+    },
+    "window interior": {
+      "lhs": "12",
+      "rhs": "2400",
+      "strict": true
+    },
+    "selected transport": {
+      "lhs": "8066337/659344",
+      "rhs": "13",
+      "strict": true
+    },
+    "sqrt three lower": {
+      "lhs": "289/100",
+      "rhs": "3",
+      "strict": true
+    },
+    "cosine first interval": {
+      "lhs": "3",
+      "rhs": "2601/800",
+      "strict": true
+    },
+    "cosine second interval": {
+      "lhs": "21168/15625",
+      "rhs": "76545001/55125000",
+      "strict": true
+    },
+    "age cap": {
+      "lhs": "3/10",
+      "rhs": "41/125",
+      "strict": true
+    },
+    "phase Lipschitz constant": {
+      "lhs": "33/35",
+      "rhs": "1",
+      "strict": true
+    },
+    "fixed count variance factor": {
+      "lhs": "37/42",
+      "rhs": "1199/1200",
+      "strict": true
+    },
+    "CF loss per noise": {
+      "lhs": "1/5",
+      "rhs": "555/2732",
+      "strict": true
+    },
+    "full fourth moment tail": {
+      "lhs": "5536030025/631986840576",
+      "rhs": "1/100",
+      "strict": true
+    },
+    "window variance 199/500": {
+      "lhs": "23/100",
+      "rhs": "59899/250000",
+      "strict": true
+    },
+    "window variance 133/250": {
+      "lhs": "23/100",
+      "rhs": "15561/62500",
+      "strict": true
+    },
+    "normal density lower": {
+      "lhs": "435611/437500",
+      "rhs": "1",
+      "strict": true
+    },
+    "Stirling exponent": {
+      "lhs": "173/3312",
+      "rhs": "53/1000",
+      "strict": true
+    },
+    "window mass": {
+      "lhs": "3/4",
+      "rhs": "188453/250000",
+      "strict": true
+    },
+    "positive window loss": {
+      "lhs": "0",
+      "rhs": "31/4000",
+      "strict": true
+    },
+    "log variance derivative": {
+      "lhs": "202000/239799",
+      "rhs": "1",
+      "strict": true
+    },
+    "entropy third derivative": {
+      "lhs": "202000000000/57503560401",
+      "rhs": "4",
+      "strict": true
+    },
+    "upper mass remainder": {
+      "lhs": "4879/4500",
+      "rhs": "11/10",
+      "strict": true
+    },
+    "phase bracket": {
+      "lhs": "157/20",
+      "rhs": "8",
+      "strict": true
+    },
+    "density upper squared": {
+      "lhs": "4/25",
+      "rhs": "5043/31250",
+      "strict": true
+    },
+    "integrated phase derivative": {
+      "lhs": "2",
+      "rhs": "53/25",
+      "strict": true
+    },
+    "integrated phase": {
+      "lhs": "66461/17976",
+      "rhs": "15/4",
+      "strict": true
+    },
+    "variance anchor squared": {
+      "lhs": "178929/39062500",
+      "rhs": "216/15625",
+      "strict": true
+    },
+    "complete phase correction": {
+      "lhs": "19/4",
+      "rhs": "5",
+      "strict": true
+    },
+    "cubic correction": {
+      "lhs": "0",
+      "rhs": "278361/800000",
+      "strict": true
+    },
+    "sqrt index": {
+      "lhs": "5929",
+      "rhs": "6000",
+      "strict": true
+    },
+    "sqrt minimum noise": {
+      "lhs": "729/10000",
+      "rhs": "3/40",
+      "strict": true
+    },
+    "final relative margin": {
+      "lhs": "1/200",
+      "rhs": "2411/356400",
+      "strict": true
+    },
+    "acquisition variance ratio": {
+      "lhs": "2004501/4000000",
+      "rhs": "251/500",
+      "strict": true
+    },
+    "acquisition inward displacement": {
+      "lhs": "10793/3712",
+      "rhs": "3",
+      "strict": true
+    },
+    "coarse budget": {
+      "lhs": "1610332689/50000000",
+      "rhs": "129/4",
+      "strict": true
+    },
+    "first noise coefficient": {
+      "lhs": "0",
+      "rhs": "801/125",
+      "strict": true
+    },
+    "second noise coefficient": {
+      "lhs": "0",
+      "rhs": "624/125",
+      "strict": true
+    }
+  },
+  "gate_count": 39,
+  "negative_controls_rejected": [
+    "unit weighted loss",
+    "zero selected transport cost",
+    "cutoff 100 with same estimates",
+    "margin doubled without proof"
+  ],
+  "margin_after_target": "629/356400",
+  "proof_sha256": "ad48f1eae57817b955016c6a12114e3929852a3e636afcfbb91646697b4c6509",
+  "scope": "Finite scalar gates supporting the written all-law proof; no grid, convolution coverage or acquisition proof is asserted."
+}

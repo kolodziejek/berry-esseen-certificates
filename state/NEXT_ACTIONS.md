@@ -1,26 +1,33 @@
-# Next actions after reviewed v13
+# Next actions after v14
 
-1. Preserve the accepted crossing, geometry and restricted-count results; existing
-   draft PR5 is the sole review target. Keep the manuscript unchanged unless asked.
-2. Main analytic target: with the SAME actual law, lower-bound
-   sqrt(n)*sum_i pi_i*g_i(t) enough to absorb signed curvature, phase interpolation,
-   normal variance repair and C_E*(rho_B−rho). Exact formula is crossing.tex(9).
-   counts-tools.tex gives C(t)<=s/(4pq)+c*sqrt(s)/(2pq*sqrt(n+1)),
-   c=(np−q−t)_+. Its square-root term cannot be called relative-noise error.
-3. Use the new geometric domain lambda<.36, left<.32, and the finite-index
-   localization. Keep allocation lambda0,lambda1 if it improves the joint bound.
-   Seed the next actual-law probe with n42,p.3,lambda.1,U1=0,
-   U0 centered{-3/5,5/882}; geometry permits it, so geometry alone cannot close left.
-4. A single selected stop-loss reserve cannot be proved positive from its first
-   four moment constraints alone: exact−5/144 obstruction in counts-tools.tex.
-   Investigate paired neighboring kernels or retain actual independent summands.
-5. Independent C4/BASE41 remains separate. Use the full quartic moment path and
-   contact/collision restriction, retaining resonant strata and possible nonatomic
-   compact support. Never use moment-extreme endpoints or generic six-atom claims.
+1. Preserve the scoped results and keep PR5 draft. Manuscript editing is secondary;
+   no new project, PR, certificate deletion or expensive generation is needed.
+2. Main research target: close the general unequal-noise intermediate range
+   42<=n<6000 beyond retained v12 lambda<=.01left/<=.075right. The new left
+   reserve removes p[1/3,.4] when nQ/sqrt(v)>=24; use that region before any
+   count work. Preserve actual conditional laws, phases and threshold atoms.
+3. Use the paired reserve from counts-pair.tex. Its remaining incoming term is
+   WEIGHTED, E[(u-W_(k+1))1{W_(k+1)<=u-1}]; raw quadratic-hinge bounds cannot
+   be clipped at1. The two central two-point families are solved, but neither
+   arbitrary thresholds nor arbitrary conditional laws follow by continuity.
+4. The summable curvature lemma in geometry-slack.tex has O(1/n) normalization.
+   It can replace the weaker O(1/sqrt(n)) term in large-index.tex, after proving
+   the appropriate right-range binomial mode bound. Retaining the exact CF
+   fraction can improve the local6000 threshold. This optimization is secondary
+   to a full intermediate comparison; it is not a global cutoff proof.
+5. The all-n independent-noise theorem in loss-closure.tex removes that subclass
+   entirely. A possible next structural target is a justified comparison of
+   unequal conditional noises with a common independent-noise law, including
+   its actual CDF error. Pooling alone is false; no optimizer reduction follows.
+6. Independent C4/BASE41 stays separate. Keep full moment paths and active
+   collision/contact consistency; do not return to the refuted endpoint shortcut.
 
-Bounded source-bound reproduction from the fork checkout (new identifier):
-python3 -I -B mathematics/simplification-v13/2026-10-28/run_checks.py NEWID
-Do not repeat accepted checks without changes/review concern. Existing larger-noise
-actual-law data are runs/simplification-v13-20261028/actual01/stdout.json;
-exact selected-event evidence is actualExact01/. Discovery is not coverage.
-No expensive generation, certificate deletion, main push or merge is authorized.
+Next runnable bounded probe: adapt weighted-discovery.py in a NEW branch to
+retain the signed phase and the new summable curvature, concentrating on actual
+right-strip laws at n42 and left laws below nQ/sqrt(v)=24. Its floating output
+is discovery only; convert any proposed universal bound to a complete proof or
+exact acceptance with honest coverage before removing a dependency.
+
+Reproduction (fresh ID):
+python3 -I -B mathematics/simplification-v14/2026-10-28/run_checks.py NEWID
+Run from the fork worktree; do not rerun unchanged historical suites without need.

@@ -1,0 +1,174 @@
+{
+  "status": "PASS_BOUNDED_V14_INTEGRATION",
+  "checks": {
+    "large-index-check.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v14/mathematics/simplification-v14/2026-10-28/large-index-check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.063843958,
+      "source_sha256": "3573a5ce86fefd8c58c43967559838df9c5ec914ce07bc91aff31ed8ae8ceba8",
+      "source_unchanged": true,
+      "stdout_sha256": "035d58a396e7531a83e0e0f82b3f55326da27257c32219999624df801a4655ba",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_EXACT_SCALAR_GATES"
+    },
+    "counts-check.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v14/mathematics/simplification-v14/2026-10-28/counts-check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 2.150886167,
+      "source_sha256": "961cc647fc3cdc00935f70f659c70af0d144a7f3e36efe6930ec3e4b757c0109",
+      "source_unchanged": true,
+      "stdout_sha256": "fd77edd74a212515d935a76ed9124d9e28f017e91f07d85f6c9b9f52185a2e34",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_PAIRED_ANALYTIC_CONTROLS"
+    },
+    "loss-check.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v14/mathematics/simplification-v14/2026-10-28/loss-check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 7.957169958,
+      "source_sha256": "99603dae48c294d1d5eeb108a29903be4b96d7a11796c611032a2627aea24d37",
+      "source_unchanged": true,
+      "stdout_sha256": "58ce637d2b5fdc3ddefcd4157f0e23824f8c8a0e7e99c6791d9315418ae59dcf",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS"
+    },
+    "geometry-slack-check.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v14/mathematics/simplification-v14/2026-10-28/geometry-slack-check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.06196929199999998,
+      "source_sha256": "ee7ca3ad6ed5f500ecb6b075e212686d07b08fb3a24c7244340360dd74af2c19",
+      "source_unchanged": true,
+      "stdout_sha256": "90b71f8d3c5a47d93f3044f957c2a0f229e5cc5988cdccdcead9f4236daa4982",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_GEOMETRY_BERNOULLI_REGION"
+    },
+    "geometry-slack-actual.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v14/mathematics/simplification-v14/2026-10-28/geometry-slack-actual.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 2.73098425,
+      "source_sha256": "ad738d3c0dc34efb91d99ad271debfbda0cbe3f3c7f279c2b05bc8403f17bfe2",
+      "source_unchanged": true,
+      "stdout_sha256": "f57a7122447af49771a5ab314a6e7c275c0aef32cd258e7492b7406902dca27e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_GEOMETRY_SLACK_ACTUAL_CONTROLS"
+    },
+    "preservation.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v14/mathematics/simplification-v14/2026-10-28/preservation.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.49259983399999996,
+      "source_sha256": "e8d723e5d9db71aca89e7d06203097a5fa0c91b86bebbf00f4afe06e36ba6563",
+      "source_unchanged": true,
+      "stdout_sha256": "255d41806ae51a3069550ce4caf06005196e14ff75abbe43ede1b7a1ce0d04a8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_RESEARCH_BASELINE_AND_MANUSCRIPT_PRESERVATION"
+    },
+    "large-index-review-check.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v14/mathematics/simplification-v14/2026-10-28/large-index-review-check.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v14"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.20469662499999997,
+      "source_sha256": "18b4faae436cb0400858c6b5312f3dff989e181eda4d746b7fc290ecfd670320",
+      "source_unchanged": true,
+      "stdout_sha256": "3a1ec785ad4dd9370ef63364e5aa036d9fdf7d8e7bca9646457a845e32ba6982",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_INDEPENDENT_LARGE_INDEX_REVIEW"
+    },
+    "counts-window-review-check.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v14/mathematics/simplification-v14/2026-10-28/counts-window-review-check.py",
+        "--source",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v14/mathematics/simplification-v14/2026-10-28/large-index.tex"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.2760512089999998,
+      "source_sha256": "474d55133dc61ead79c6d3e8ee00a1603b7d9277a3c94ea88c2b337c293fe70e",
+      "source_unchanged": true,
+      "stdout_sha256": "4459cfa977be1fea115a9baf84cf8124b997cf6389c6586fdfc9e3baaa83d642",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_INDEPENDENT_WINDOW_TAIL_FINAL"
+    },
+    "geometry-slack-review.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v14/mathematics/simplification-v14/2026-10-28/geometry-slack-review.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v14/mathematics/simplification-v14/2026-10-28/geometry-slack.tex"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.40251012500000005,
+      "source_sha256": "b647fe55bbde358bf55ed7c59d94e0dd90b7c77df85e9869500d6dcfc594e5e7",
+      "source_unchanged": true,
+      "stdout_sha256": "84feca6f40465f07fddf392a3c85823135f01ed6b4bb2a638003e774c40e7db2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS"
+    }
+  },
+  "reviewed_sources_sha256": {
+    "coordinator-review.md": "d741e0aa3f72b3c2ef4ae985836837c08add4814fdb3ba58cec01fedda949b58",
+    "counts-check.py": "961cc647fc3cdc00935f70f659c70af0d144a7f3e36efe6930ec3e4b757c0109",
+    "counts-pair.tex": "931fb88565922d525726ba264a867e2b0774051a4e56267d9f9d65f3142b01f4",
+    "counts-window-review-check.py": "474d55133dc61ead79c6d3e8ee00a1603b7d9277a3c94ea88c2b337c293fe70e",
+    "counts-window-review.md": "4ec9eb43f0ae184147f603805997fd91949fea7200d8ab9d2cfdc0c2b7b49d07",
+    "geometry-slack-actual.py": "ad738d3c0dc34efb91d99ad271debfbda0cbe3f3c7f279c2b05bc8403f17bfe2",
+    "geometry-slack-check.py": "ee7ca3ad6ed5f500ecb6b075e212686d07b08fb3a24c7244340360dd74af2c19",
+    "geometry-slack-review-run.py": "2cbd0ba7422c010149b8f8b5abb3f61941709dc9018f15e1c24b04633ac00c4e",
+    "geometry-slack-review.md": "bcf29e4cf71b46ec2238d60be8f256e7bf0e67d9ee1959b3a1747c6e379d7fa5",
+    "geometry-slack-review.py": "b647fe55bbde358bf55ed7c59d94e0dd90b7c77df85e9869500d6dcfc594e5e7",
+    "geometry-slack.tex": "8eb6fc89d82eb458fef45fb9a2f9783c1cae2705c908dcb8bebba725a4a36461",
+    "large-index-check.py": "3573a5ce86fefd8c58c43967559838df9c5ec914ce07bc91aff31ed8ae8ceba8",
+    "large-index-independent-review.md": "e88dd0a515963770bb640681f9a10717bdb606f3fa702e13be76455cb933d12d",
+    "large-index-review-check.py": "18b4faae436cb0400858c6b5312f3dff989e181eda4d746b7fc290ecfd670320",
+    "large-index.tex": "ad48f1eae57817b955016c6a12114e3929852a3e636afcfbb91646697b4c6509",
+    "loss-check.py": "99603dae48c294d1d5eeb108a29903be4b96d7a11796c611032a2627aea24d37",
+    "loss-closure.tex": "83494e6fa485557df38acdb1b9b50084530fbc3c470f8f482bb020d4a58af80b",
+    "loss-common.tex": "b39d289e59b832db4755e0404c88f9af16c46d99b9db577fca3f9bd9cc086758",
+    "loss-run.py": "0bae5ed634e5fd4e14ed25dee33256eaf283cf5a583e08a82703b4d0555e5843",
+    "preservation.py": "e8d723e5d9db71aca89e7d06203097a5fa0c91b86bebbf00f4afe06e36ba6563",
+    "run_checks.py": "c8b076a3774e5c1f4315c3b6eae70677ffe6e956dc12a9706b7b612af158c283",
+    "run_one.py": "8885fbf5f315008a545ee294aba4ccd94e5e9b5e471748667049a3d83a78f24b",
+    "weighted-discovery.py": "77cedc8e54ad82ddd55e64235522c82ef99ef973e943b62b48c7d09efc3ffaf8"
+  },
+  "manifest_sha256": "c30effff07727e763f2e5af097e369ea9161a9183080765c8031efb4f53abbbf",
+  "driver_sha256": "c8b076a3774e5c1f4315c3b6eae70677ffe6e956dc12a9706b7b612af158c283",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "utc": "2026-10-28T20:43:50.775042+00:00",
+  "scope": "Scoped all-law right comparison n>=6000, independent-noise subclass, left geometric region, central asymmetric families and integrity; no global conjecture, finite base or coarse-Fourier acceptance"
+}

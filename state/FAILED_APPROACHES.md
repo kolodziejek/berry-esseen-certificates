@@ -1,30 +1,40 @@
-# Established failed shortcuts — current v13
+# Failed shortcuts — current v14
 
-- Four-summand moment endpoints: rawsupport{-2,-1,0,1,2}, masses
-  (.05+theta,.2−2theta,.5,.2+2theta,.05−theta),theta∈[−.05,.05]. Fixedmean0,
-  variance4/5,abs-third6/5. At rawthreshold1, interiorCDF25719/32000 exceeds
-  endpoint4017/5000 and7921/10000. Signedthird varies. This refutes only the
-  endpoint-only extremal principle, not Berry–Esseen. finite-contact.tex.
-- A unique active collision gives<=6atoms only with finite support and contact.
-  Neither nonatomic limits nor multiple resonances can be discarded as generic.
-- Selected conditional noise need not be centered: E W_(K+1)=.01 in an exact
-  admissible example. Stop-loss telescoping includes the bias automatically.
-- Width-free crossing positivity is false: U0=0,D=1+U1 in{.9,1.95},masses
-  19/21,2/21,n2,t.9 gives E K−t=1/210; A1+a1=1.05 violates the theorem.
-- Comonotone bounded increments do not create an independent delayed renewal:
-  exact right-strip example has covariance(U0,1+U1−U0)=−216/15625.
-- One selected own-count reserve cannot be positive from four moments alone:
-  Z=±6/5 with mass25/144each and0with47/72 has var.5,third0,fourth.72<=.93,
-  but P(Z>0)−E Z+=−5/144. This is a relaxation obstruction, not an iid law claim.
-- Geometry alone cannot force leftlambda<=.01 orp>=1/3: exact n42,p.3,
-  lambda.1 law meets the recorded necessary budget/strip bounds (not assertedcontact).
-- Schulz's sharper formula cannot be extrapolated to allp. An exact thesis example
-  n217,p77/2604 violates it; this example lies outside the acquired p-domain.
+Newly checked obstructions:
 
-Earlier refutations retained: false marginal-to-own variance allocation (v12
-compound-review.tex); false allocation convexity; potentially adverse left rho
-correction; absent uniform neighboring-count gain. Full historical state is saved
-under stateBefore01. Accepted v12 scoped comparisons are unaffected.
+- Positive gain above noiseless phase is false even for actual independent
+  common noise. Forn42,U=+/-1/100,p.5,t=21+.75,
+  g-.75=-2^-42 sum_(m=0)^8 binom(42,m)<0. Atphase.5 the gain is exactlyzero.
+  Moderate-noise n512,U=+/-1/40,lambda.32 also has negative phase excess.
+- A weighted incoming tail cannot be clipped at1. ForZ=+/-3 with equal mass,
+  E[Z1{Z>=1}]=3/2. The paired identity must include equality at the incoming
+  collision; omitting it overstates an exact three-summand pair by1/13.
+- The c sqrt(T) term in the summable curvature bound cannot be dropped:
+  tiny common noise atn42,p.35,t14 gives an exact counterexample inside the
+  raw threshold band. The old weaker curvature bound can also be too large
+  to close actual negative comparisons; floating discovery is not a refutation
+  of the comparison itself.
+- Pooling unequal conditional noise into independent common noise changes the
+  actual law and CDF. Small independent-noise closure does not license pooling.
+- The selected noise is not centered, and its transport cannot be discarded.
+  Independent product controls include nonzero selected means and atom events.
+- A window wider than the certified21counts need not retain sqrt(n)pi_i>3/4;
+  n6000,p.5,i=np+50 violates it. Residual variance cannot be replaced bylambda
+  without conditional-allocation inflation (actual one-sided noise example).
 
-General unweighted positivity does NOT establish weighted Delta<0. Exact arithmetic
-PASS does not prove acquisition, compactness or finite base. Keep all limitations.
+Retained v13/v12 failures:
+- Moment-polytope endpoint compression for n4 is false on the exact five-point
+  family recorded in finite-contact.tex; its interior CDF exceeds both endpoints.
+- A six-atom contact bound requires finite support and a unique active multiset;
+  multiple resonances and nonatomic limits cannot be discarded as generic.
+- Width-free crossing positivity is false; stopped renewal increments need not
+  be independent; an own-count reserve need not be positive from four moments.
+- Geometry alone cannot force leftlambda<=.01 orp>=1/3. The actual n42,p.3,
+  lambda.1 two-point conditional example passes the necessary budget/strip test.
+- Sharper Schulz formula cannot be extrapolated outside its published interval.
+  rho-rhoB may be negative below1/3. False marginal-to-own variance allocation
+  and false allocation convexity remain refuted by exact actual-law examples.
+
+These are counterexamples to intermediate shortcuts, not to the main conjecture.
+Earlier detailed formulas and sources remain in the stateBefore01 snapshots and
+v10-v13 notes. No arithmetic PASS proves acquisition, compactness or finite base.
