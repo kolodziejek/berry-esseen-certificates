@@ -1,0 +1,38 @@
+{
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "driver_sha256": "9f31f75845f106532e8a7abe53baab6cf946c4f5bc8e51ec56fe51dcbcb9a401",
+  "proof_sha256": "e44f5cf7a51fd806adc743b756c6ce57ced441dfafb8cba932bd75063156a936",
+  "checks": [
+    {
+      "source": "mathematics/simplification-v11/2026-10-28/allpanel_check.py",
+      "source_sha256": "75c8e09509354ecfad9d1172b4a4f41f7b06e62195ced817b240f5471ad3d844",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v11/mathematics/simplification-v11/2026-10-28/allpanel_check.py"
+      ],
+      "elapsed_seconds": 0.049693375,
+      "returncode": 0,
+      "stdout_sha256": "c33a4af169892b3edd226228bb5d1926397e92f96726b166895c30aa86996230",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_ALLPANEL_SCALAR_GATES"
+    },
+    {
+      "source": "mathematics/simplification-v11/2026-10-28/allpanel_actual.py",
+      "source_sha256": "236dbfad724245ab252deb113b62ac333a3f8baa4382417151ed316306a4fc66",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v11/mathematics/simplification-v11/2026-10-28/allpanel_actual.py"
+      ],
+      "elapsed_seconds": 1.398039833,
+      "returncode": 0,
+      "stdout_sha256": "67f47b161ea7bb46ffb06c208e55825f7a35781594ad136551164f78dd97f682",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_ALLPANEL_EXACT_SELECTED_EVENTS"
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,3 +1,53 @@
+# V11 reviewed integration — 28 October 2026
+
+The new direct count domains are complete local implications, independently
+reviewed, with no unresolved component/composition blocker. PR5 remains the
+sole draft review target. Publication is pending; no merge/main push.
+
+| Result | Mathematical status | Execution status |
+|---|---|---|
+| Common.7 strips on retained p[.25,.53] | Derived under retained acquisition/contact/heat/sharp-predecessor hypotheses |30closed signed rays + false.65/cover mutation controls PASS |
+| All-panel count, p[.25,.53], amplitude.7, inward.068, lambda in(0,.002], C in[0,.41] | Full scoped proof; independent review rederived original quartics, repairs and infinite tail |52scalar gates;40independent Bernstein coefficients;5exact fullΔevents +10independent conditional identities PASS |
+| Right count, p[.4,.53], amplitude.6, inward.072, lambda in(0,.03], C>=.4 | Full scoped extension; retains gainC(rho−rhoB)>lambda/n |70gates;40independent coefficients/6margins;18laws72events +36independentlaws144events +4exact fullΔevents PASS |
+| Variance-aware own-count/cubic lemmas | Complete local derivations; not a further count exclusion |36laws,360moment/360strict-event/360repair controls PASS |
+| Full sharp theorem and BASE41 | Still open | No full acceptance |
+
+Every count row also assumesn>=42,conditional centering,raw|H|<=1.84,
+and concludesDelta_C<−lambda/100. Oldright.02 theoremforanyC>=0 retained.
+AtCE, remaining ranges: leftp<.4 above.002; rightp>=.4 above.03.
+Panel-specific uppernoise budgets and coarse11264-cell Fourierentry remain.
+
+Final10check integrationPASS:
+runs/simplification-v11-20261028/integration01/receipt.json.
+All2748baselineentries and85manuscriptfiles preserved. Proofs compiled and
+pages inspected: allpanel5pages, counts4pages, owncount4pages,leftstrip4pages.
+These are component lengths, not a complete-paper page claim.
+Read mathematics/simplification-v11/2026-10-28/README.md,
+allpanel-review.md,counts-v11-independent-review.md,composition-review.md.
+
+---
+
+# V11 active research — 28 October 2026
+
+Worktree work/fork_audit_20261027/simplification-v11, branch
+research/simplification-v11-20261028; start6027b27f85473780eaf90542f490168873de5986.
+Existing PR5 verified open/draft/unmerged at6027b27; no v11 push yet.
+Reference6346fc1 and manuscript unchanged. New source/evidence only.
+
+| Result | Mathematical status | Execution status |
+|---|---|---|
+| Left panels25–39: −.6<U0<=a0, −a1<=U1<.7, a0+a1<.068 | Scoped proof from retained contact/heat/predecessor and v10 geometry; coordinator read proof/checker | Fresh30signed rays + negative control, cover mutations rejected; component694fdb5 integrated40eb500 |
+| All p[.25,.53], n>=42, amplitude.7, inward.068, rawH1.84, 0<lambda<=.002: Delta_C<−lambda/100 for0<=C<=.41 | Full candidate derivation; independent review in progress with no blocker found so far |52exact scalar gates,3negative controls,5exact iid selected events PASS;5page proof compiled and inspected |
+| Conditional variance-aware own-count/cubic inequality | Full local derivation independently read by coordinator; not a complete larger-noise theorem | Component tests/recorded review in progress |
+| Split compound-Poisson incoming comparison throughlambda.075 | Discovery only; closed-domain evaluator under construction |80sampled n42 and80 formal n-infinity points positive; no coverage accepted |
+| Full conjecture and BASE41 | Still open | No full acceptance or expensive generation |
+
+Entry: mathematics/simplification-v11/2026-10-28/README.md. Canonical
+allpanel.tex; portable editor project allpanel-proof/main.tex + proof.tex,
+PDF main.pdf. Exact evidence allpanel01; clean inspected build allpanel-build02.
+
+---
+
 # V10 research checkpoint — 28 October 2026
 
 The selected new route uses a direct common geometric cost and a direct

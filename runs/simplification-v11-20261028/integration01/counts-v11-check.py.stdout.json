@@ -1,0 +1,151 @@
+{
+  "status": "PASS_UNIFORM_COMPARISON_LAMBDA_LE_3_OVER_100",
+  "gate_count": 70,
+  "scope": "n>=42,p in [.4,.53],.6 strip,d<=.072,|H|<=1.84,0<lambda<=.03,C>=.4; analytic reduction and external P2 theorem documented separately",
+  "gates": {
+    "global_threshold_delta": "1/6250",
+    "sqrt_variance_upper": "2007/7000000",
+    "count_fraction_lower": "1/1400",
+    "count_fraction_upper": "1/175",
+    "interior_lower": "283/20",
+    "interior_upper": "1709/100",
+    "stirling_variance": "1/2500",
+    "stirling_E": "374/529",
+    "stirling_L": "3/92",
+    "stirling_R": "7/552",
+    "log_variance_B0": "37/1792",
+    "global_lower_derivative": "1172071/70560000",
+    "global_upper_derivative": "1172071/56448000",
+    "near_delta": "88/3125",
+    "near_lower_derivative": "24137/2016000",
+    "positive_G_monotone": "2423/12500",
+    "positive_lower_derivative": "39151559/1764000000",
+    "global_mass": "9001099/800000000",
+    "inner_mass": "1741/200000",
+    "mode_mass_squared": "26186449/5186160000",
+    "mode_own_ratio": "1/8",
+    "inner_ratio": "187/25200",
+    "inner_second_ratio": "47/100",
+    "inner_count_variance": "1/168",
+    "global_count_variance": "1/112",
+    "global_own_variance": "1/560",
+    "cubic_repair_nonnegative": "38911/112000",
+    "normal_repair_squared": "73/31250",
+    "new_inner_delta": "79/25000",
+    "new_inner_lower_derivative": "6773/1128960",
+    "new_inner_upper_derivative": "327349/70560000",
+    "unit_cubic_gain": "92514493/7000000000",
+    "inner_repair_nonstrict": "0",
+    "global_repair": "9/80",
+    "quartic_majorant": "13",
+    "negative_quartic": "82564663499/16050459443200",
+    "positive_quartic": "377266419344095319/17248259356596450000",
+    "negative_cantelli_start": "203807/1200100",
+    "negative_cantelli_slope": "5663375974/3600600025",
+    "negative_cantelli_endpoint": "7109273/117320000",
+    "switch_inside": "153/5600",
+    "positive_linear_switch": "49/100",
+    "inner_neg_geometric_ratio": "23/32",
+    "inner_neg_rest_denominator": "2/3",
+    "inner_pos_geometric_ratio": "23/32",
+    "inner_pos_rest_denominator": "29/48",
+    "outer_neg_geometric_ratio": "17/24",
+    "outer_neg_rest_denominator": "2/3",
+    "near_geometric_ratio": "17/24",
+    "near_rest_denominator": "7/12",
+    "middle_geometric_ratio": "17/24",
+    "middle_rest_denominator": "1/2",
+    "far_geometric_ratio": "17/24",
+    "far_rest_denominator": "3/50",
+    "negative_first_monotonicity": "55/96",
+    "positive_first_monotonicity": "43/96",
+    "inner_negative_bracket": "98227357/2059125600",
+    "inner_negative_final": "19650157/2820720000",
+    "inner_positive_bracket": "605590824949/1290851812320",
+    "inner_positive_final": "40612185886957/129085181232000",
+    "negative_outer_initial_slope": "87755/42436",
+    "outer_negative_bracket": "29157053/762735600",
+    "outer_negative_final": "12343549039/533914920000",
+    "positive_near_bracket": "372581/48266400",
+    "positive_near_final": "1221121/371280000",
+    "positive_cantelli_convexity": "23369/125000",
+    "positive_middle_bracket": "41516479/1593653100",
+    "positive_middle_final": "652372219/42906045000",
+    "positive_far_bracket": "46551473/612680850",
+    "positive_far_final": "40879152773/857753190000"
+  },
+  "terminal_margins": {
+    "inner_negative_final": "19650157/2820720000",
+    "inner_positive_final": "40612185886957/129085181232000",
+    "outer_negative_final": "12343549039/533914920000",
+    "positive_near_final": "1221121/371280000",
+    "positive_middle_final": "652372219/42906045000",
+    "positive_far_final": "40879152773/857753190000"
+  },
+  "closed_phase_cover": [
+    [
+      "-34/125",
+      "-3/40"
+    ],
+    [
+      "-3/40",
+      "0"
+    ],
+    [
+      "0",
+      "3/40"
+    ],
+    [
+      "3/40",
+      "1/10"
+    ],
+    [
+      "1/10",
+      "1/5"
+    ],
+    [
+      "1/5",
+      "91/125"
+    ]
+  ],
+  "coverage_negative_controls": [
+    "gap",
+    "missing_interval",
+    "reordering",
+    "duplicate_interval"
+  ],
+  "own_coefficient_negative_control": {
+    "actual_polynomial_value": "6021234657483/16050459443200",
+    "rejected_coefficient": "1/2"
+  },
+  "negative_controls": {
+    "remove_cubic_gain": [
+      "inner_repair_nonstrict",
+      "global_repair",
+      "inner_negative_final"
+    ],
+    "reverse_cubic_gain": [
+      "inner_repair_nonstrict",
+      "global_repair",
+      "inner_negative_final"
+    ],
+    "omit_cubic_factor_1_over_n": [
+      "unit_cubic_gain"
+    ],
+    "reuse_positive_phase_tail_for_negative": [
+      "inner_negative_bracket",
+      "inner_negative_final"
+    ],
+    "unproved_expansion_to_point04": [
+      "negative_quartic",
+      "positive_quartic",
+      "inner_negative_bracket",
+      "inner_negative_final",
+      "outer_negative_bracket",
+      "outer_negative_final",
+      "positive_near_bracket",
+      "positive_near_final"
+    ]
+  },
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]"
+}

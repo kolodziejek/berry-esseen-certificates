@@ -1,3 +1,45 @@
+# V11 final additional controls and remaining obstacles
+
+- False unscaled gain C(rho−rhoB)>=lambda rejected on36actual marginals;
+correctgain>lambda/n holds. New.03 proofrequiresC>=.4, not arbitraryC>=0.
+- Neighboring outgoing count can vanish: n42,p.5,U1=0,
+U0∈{−.6,1/420} centered,lambda=.03,k21,u0,H0. MaxW20=11/210<1,
+soP(W20>1)=0. No universally positive neighborgain fromthese premises.
+- New.03 checker rejects removing/reversinggain, omitting1/n, usingweak
+positivephaseincomingbound onnegativephase, overstrongquarticcoefficient.5,
+and unprovedextensionto.04. These refute intermediates, notconjecture.
+- Constructor actual01 rejected a floor(np) collision input outsideHdomain;
+actual02 usesnearestintegeranchor, insideoriginaldomain. Failedsource/log
+preserved; noassertion or target weakened. FirstTeXbuildarrayformatfailure
+preserved; finalbuild02clean.
+- General asymmetricquartic and compoundPoisson.075 floatingdiagnostics remain
+separatefromacceptance. Common-tiltBennett fails evenwithcoupledmoments;
+closed-domaincompoundhinge evaluator remainsnextresearchtask.
+
+---
+
+# V11 new failures and negative controls
+
+- Extending rho>=rhoB to all left probabilities is false. Exact p13/50,
+U1=0,U0=±1/1000 with equal conditional masses givesrho<rhoB while satisfying
+new strips andlambda=.00003108 atn42. Keep adverse repair; not a counterexample
+to the count theorem or conjecture.
+- Common.65 positive strip: sufficient boundary test fails panels29–33.
+Panel29 upper bound .010460...>0. Whole-ray derivative gates still pass.
+Common.7 passes all15; no claim that.65 itself is false.
+- At positive phaseh=.782 withA=.7 the i2,j2 Poisson hinge is inadmissible.
+Use Cantelli for firstTWO counts andJ3 tail, withb3=59/1050>0.
+- Stronger inner ownconstant1/3 fails an exact corner of the selected quartic
+bound; selected1/4 passes. This is a bound failure, not an actual-law refutation.
+- General normalized asymmetric quartic exploration (363points) improves
+sampled margins but the uncoupled estimate still fails lambda.05/.075 near
+negative phase. Sourcegeneral-quartic-discovery.py; discovery01, floats only.
+- Split common-tilt Bennett estimate remains too loose atlambda.075 even with
+moment allocation: e.g sampled own.0597/incoming.0945. Compound-Poisson hinges
+look better but sampled positivity is not a continuous proof.
+
+---
+
 # V10 rejected shortcuts and bounded limits — 28 October 2026
 
 - The geometric noise price is the MINIMUM of the two sign prices. Replacing

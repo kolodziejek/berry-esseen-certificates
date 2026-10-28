@@ -1,3 +1,54 @@
+# V11 final selected DAG and coefficient scopes
+
+Retained actual-law attainment/reflection + sharp predecessor + coarseentry
++ directv10geometry + heat/contact whole-ray estimates
+ -> common.7support onpanels25–52; rightpanels40–52 retainstronger.6.
+Allactualinwardsum<.068; raw|H|<=1.83605680; λ=nθ/ell².
+
+Actual conditional meanzero + boundedconditional support + finiteStirling
++ exactcountconditioning + strictquartic owncount/Cantelli
++ external quadraticPoissoncomparison + infinitefactorialtail
+ -> allp[.25,.53],λ<=.002,C∈[0,.41] using adverse repairupperbound;
+ -> rightp[.4,.53],λ<=.03,C>=.4 using favorablegainC(rho−rhoB)>λ/n.
+Oldrightλ<=.02,C>=0 remains independentlyvalid andunchanged.
+Atλ0: externalstrictfinite-nBernoullitheorem, not a limiting argument.
+
+Half-amplitude acquisition, harmonic/fractionalpart gain, markedcrossings,
+countcurvature and countgrids are unnecessary within these replaced domains.
+ExternalquadraticPoissoncomparison remains; do not claimallPoisson removed.
+CoarseFourierentry/contact/predecessor/reflection/finitebase notremoved.
+
+Owncount varianceallocation/thirdmoment coupling is a separateprovedlocaltool.
+It requiresfixedcaps/quartic/tilt for endpointconcavity. CompoundPoisson.075
+samples are not an ancestor of either completedtheorem. Neither agentagreement
+nor exactsampledCDFvalues replace the continuousproofs.
+
+---
+
+# V11 selected dependency additions
+
+Retained fixed-target attained witness + sharp predecessor + v7 coarse entry
++ v10 one-pass geometry + heat/contact ray bounds
+ -> closed panels25–39 admit negative amplitude.6, positive.7, inwardsum<.068.
+Together with right panels40–52 (.6) -> amplitude.7 on all acquired p[.25,.53].
+
+Actual Y=B+U, E(U|B)=0, common iid marginal; n>=42, p[.25,.53],
+|Uj|<=.7, inwardsum<=.068, lambda=nE U² in(0,.002], raw|H|<=1.84
+ -> exact conditioning + finite Stirling + quartic/Cantelli own count
+ + Pinelis quadratic-hinge Poisson comparison + entire factorial/geometric tail
+ + adverse moment repair <=(4/3)lambda/n
+ -> Delta_C<−lambda/100 for0<=C<=.41 (independent review pending).
+Atlambda0 use external strict Schulz Bernoulli theorem separately.
+
+Same-law join: U=(X−E[X|sign])/ell, s=theta/ell²,lambda=ns;
+ell=(pq+s)^−1/2. These are original-law quantities, not an independent
+moment relaxation or reflected law. Reflection/attainment remain ancestors.
+On this scoped range: no half-amplitude acquisition, harmonic smoothing,
+marked crossing, curvature, or count grid needed for the direct comparison.
+No deletion justified for larger noise; no change to coarse Fourier/BASE41.
+
+---
+
 # V10 selected dependency graph — 28 October 2026
 
 External affine structural theorem + fixed-target attainment

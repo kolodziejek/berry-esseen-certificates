@@ -1,3 +1,43 @@
+# V11 next research steps after reviewed local results
+
+1. Publish this reviewed research package by normal push to existing draftPR5
+branchmanuscript/strategy-v4-20261027; no merge/main/upstream mutation.
+2. For rightnoiseabove.03, use owncount.tex support-specific fourth/third
+moment coefficients with the SAME varianceallocation as the incoming tail.
+Fixed-tilt Bennett is too loose; compound-Poisson hinges remain discovery.
+Implement exact/outward hinge expectations by conditioning on finitely many
+large jumps, rigorous small-jump bound and factorial remainder. Establish
+closedparametercoverage and complete phase range before claiming extension.
+3. Onleftp<.4 above.002, retain adverse rho repair. Favorable rightgain isfalse
+there. Common.7 support is now available but no larger leftcount cover.
+4. Complete independent BASE41 separately. Neither acquired compactness nor
+ROOT4 bridge nor C5 conditionalonC4 supplies it.
+No expensive certificatecampaign or certificate deletion without approval.
+
+Reproduce bounded checks with a fresh alphanumericID:
+python3 -I -B mathematics/simplification-v11/2026-10-28/run_checks.py NEWID
+This is10checks, including sourcebindingandpreservation; noancestor replay.
+
+---
+
+# V11 current next actions
+
+1. Finish independent allpanel proof review in a separate branch; rederive original
+quartic rectangles and full tail, not merely rerun constructor. Integrate only
+reviewed scope; allpanel.tex final hashbd9d32de7000391edbc6a94547316b7c88234cc9aaf6d2c4f4c2d2de183dbf15.
+2. Larger-noise attack: retain conditional variance allocation/third moments;
+complete split compound-Poisson quadratic-hinge upper bound with exact tails.
+Counts-v11 agent is constructing it, owncount-v11 supplies independent moment
+lemmas. No sampled positivity is coverage. Modest bounded checks only.
+3. Reconcile component scope in README/dependency map, run bounded integration
+and baseline/manuscript preservation, then normal push to existing PR5 branch
+manuscript/strategy-v4-20261027. Keep draft; no merge/main/upstream mutation.
+4. Finite base and remaining larger-noise/left comparison remain open.
+Next runnable exact check (new unused ID):
+python3 -I -B mathematics/simplification-v11/2026-10-28/allpanel_run.py NEXTID
+
+---
+
 # V10 next actions — 28 October 2026
 
 1. Finish ordinary integration/publication into existing draft PR5, preserving
