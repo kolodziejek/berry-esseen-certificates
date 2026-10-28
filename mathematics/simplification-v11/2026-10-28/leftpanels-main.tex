@@ -1,0 +1,29 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{proposition}{Proposition}
+\title{A wider conditional support strip on the left probability panels}
+\author{Bartosz Ko{\l}odziejek \and Kacper Rodziewicz}
+\date{Research note, 28 October 2026}
+\begin{document}
+\maketitle
+\noindent
+This local proof was developed with AI assistance. Its arithmetic checks
+and its mathematical hypotheses are recorded separately. It is not a
+proof of the full sharp iid Berry--Esseen conjecture.
+\input{leftpanels.tex}
+\paragraph{Source locations.}
+The retained heat/ray lemma is in
+\path{manuscript/arxiv-v1/sections/06-fixed-resources.tex},
+lines 206--248, with its heat-expansion proof in Section 7 of that
+manuscript. The new one-pass input is
+\path{mathematics/simplification-v10/2026-10-28/geometry.tex},
+its panel export being identified by hash in the accompanying checker.
+The shifted-anchor identity and curvature lemma are in the same directory's
+\texttt{counts.tex}. The external Bernoulli input is Jona Schulz,
+\emph{The optimal Berry--Esseen constant in the binomial case},
+dissertation (2016), Theorem 1, printed p.~15,
+\href{https://d-nb.info/1197702695/34}{German National Library copy}.
+\end{document}
