@@ -13,7 +13,7 @@ review was made on a separate branch from baseline
 
 | Result | Mathematical status | Execution status |
 |---|---|---|
-| Selected-to-fixed-count transport | Independently rederived, with correct omitted-pair independence and full tails | Independent rational coefficient below12 verifies the source's bound13; exact product controls PASS |
+| Selected-to-fixed-count transport | Independently rederived, with correct omitted-pair independence and full tails | Independent rational coefficient below12 verifies the source's bound 13; exact product controls PASS |
 | Characteristic-function and clipped-age gain | Independently rederived on the whole support-width interval | Two closed trigonometric regions and all scalar guards PASS; positive actual-variance gain controls included |
 | Window tail and binomial weight restoration | Independently reconstructed fourth moments, full tails and finite Stirling bound | Rational tail, mass and positivity gates PASS |
 | Phase, normal-variance and actual cubic corrections | Independently rederived with the full1/n scaling | Reconstructed integrated polynomial and final margins PASS |
@@ -23,7 +23,7 @@ review was made on a separate branch from baseline
 
 ## Transport and selected-count conventions
 
-Source lines91–126. Let `D_i=U1_i−U0_i` and remove pair i to form V_i.
+Source lines 91–126. Let `D_i=U1_i−U0_i` and remove pair i to form V_i.
 Centering and the one-sided caps imply `E|D_i|<=2d`, while
 `Var(V_i)<=2.5lambda<=.9`. The events used in the proof are exactly
 
@@ -41,7 +41,7 @@ As an independent reconstruction, using zeta(2)<5/3 gives the coefficient
 
 The right tail uses `r−1−d >=.928(r−1)` for r>=2. The left tail uses
 `r−.6>=.7r` for r>=2; r=0,1 are handled separately. This is a different
-summation bound from the source's integral remainder and confirms its13d
+summation bound from the source's integral remainder and confirms its 13d
 constant without changing the theorem or optimizing its cutoff.
 
 A potentially dangerous alternative was checked and rejected: E W_K is
@@ -51,7 +51,7 @@ proved **clipped-age** inequality, which already contains the selected bias.
 
 ## Characteristic function and weighted loss
 
-Source lines128–224. The width of each conditional noise law is at most.672,
+Source lines 128–224. The width of each conditional noise law is at most.672,
 so independent copies differ by at most that amount. The proof of
 `1−cos(2pi x)>=3x²` covers both closed intervals [0,2/3] and [2/3,.672]
 and then uses evenness; the positive sine lower bounds have the correct
@@ -79,7 +79,7 @@ n and lambda. Its integer counts are interior, and finite Stirling gives
 
 ## Phase, cubic correction and acquisition
 
-Source lines226–322. The curvature coefficient c<.46 uses the tighter raw
+Source lines 226–322. The curvature coefficient c<.46 uses the tighter raw
 bound `1.84*.501−.47<.46`; it would not follow merely from the rounded
 `|t−np|<.94`. The exact scalar gate checks the tighter expression.
 
@@ -91,14 +91,14 @@ is the cubic
 
 Its derivative is concave and positive at both endpoints of [0,1], so its
 maximum is attained at u=1. The mass remainder, density, exponential and
-normal-variance corrections retain their stated1/n factors, yielding P<5/n.
+normal-variance corrections retain their stated 1/n factors, yielding P<5/n.
 The scalar reconstruction uses an independent Machin enclosure for pi.
 
 The absolute-third-moment expansion has the correct signs
-`−q mu0+p mu1`. Inward endpoint bounds leave a raw gain at least1.128s;
+`−q mu0+p mu1`. Inward endpoint bounds leave a raw gain at least 1.128s;
 the Bernoulli normalization costs at most `.78s+(13/16)s²`. Consequently
 rho>rho_B throughout the positive-noise theorem, independently of C>=0.
-The final rational relative margin remains strictly above1/200.
+The final rational relative margin remains strictly above 1/200.
 
 For the acquisition join, the actual-gap inward expansion has positive
 noise prices on the right strip, and all discarded terms are nonnegative.
@@ -106,7 +106,7 @@ Thus `nD>=6nv d(1−d)/(v+s)^(3/2)`. Independently,
 
     (v+s)^(3/2)/v < .501(1+1/4000) < .502,
 
-which, with nD<=129/4 and1−d>=.928, gives nd<3. This is a conditional join,
+which, with nD<=129/4 and 1−d>=.928, gives nd<3. This is a conditional join,
 not a proof of the coarse entry or actual-gap acquisition. It uses the
 actual inner endpoints; arbitrary loose support caps are not identified
 with an actual central gap.
@@ -120,10 +120,10 @@ each pure allocation, symmetric tiny noise and the zero-noise boundary.
 Thresholds include actual mesh atoms and immediate rational neighbors;
 both p=.4 and p=.53 are recorded.
 
-The150 controls correspond to75 distinct mesh/threshold calculations.
+The 150 controls correspond to 75 distinct mesh/threshold calculations.
 They directly compute K, selected transport, g, clipped age and E W_K,
-and verify the actual-variance CF/transport lower expression. There are22
-atom cases,33 nonzero selected-mean cases and22 strictly positive lower
+and verify the actual-variance CF/transport lower expression. There are 22
+atom cases, 33 nonzero selected-mean cases and 22 strictly positive lower
 expressions. They also test the requested lambda/5−13d bound. The record
 marks whether the theorem's fixed-variance ratio happens to hold at each
 small index. These are sanity checks of internal formulas, **not coverage
@@ -135,7 +135,7 @@ source snapshot, command, interpreter, return code, stdout, stderr and hashes.
 `check01` retains a reviewer-script syntax error, corrected before execution;
 `check02` correctly rejected a changed source hash. The final source change
 only added explicit definitions of U_j and independent X_i; its exact diff
-is saved with check03. The final run passes all40 rational gates and150
+is saved with check03. The final run passes all 40 rational gates and 150
 product controls. The reviewer did not run the constructor checker as a
 purported independent verification.
 
