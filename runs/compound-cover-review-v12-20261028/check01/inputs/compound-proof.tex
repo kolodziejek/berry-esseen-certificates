@@ -1,0 +1,442 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}{Lemma}
+\title{Direct count comparison with the physical variance allocation}
+\author{Research note, 28 October 2026}\date{}
+\begin{document}\maketitle
+
+The difficult negative phases can be handled without reducing the conditional
+support below $3/5$. The useful information is asymmetric: a negative noise
+variable can make a large negative jump, whereas a positive noise variable
+has negative jumps of size at most $9/125$. We retain this distinction for the
+first incoming count, and retain the same conditional third moments in the
+outgoing count and in the cubic penalty. A small closed certificate completes
+the resulting elementary comparison. The certificate has 291 cells; it does
+not discretize the sample size or the marginal distribution.
+
+\begin{theorem}\label{thm:comparison}
+Let $n\ge42$, $2/5\le p\le53/100$, $q=1-p$, and $Y=B+U$, where
+$B$ is Bernoulli with parameter $p$ and $\E(U\mid B)=0$. Write $U_j$
+for the conditional noise given $B=j$, and assume
+\[
+ U_0\in[-A,a_0],\qquad U_1\in[-a_1,A],\qquad
+ A=\frac35,\quad a_0,a_1\ge0,\quad a_0+a_1\le d=\frac9{125}.
+\]
+Set $v=pq$, $s=\E U^2$, $\lambda=ns$, $\ell=(v+s)^{-1/2}$,
+$X=\ell(Y-p)$, $\rho=\E|X|^3$ and $\rho_B=(1-2v)/\sqrt v$.
+Let $S_n$ be the sum of $n$ independent copies of $X$. Suppose
+\[
+ \frac3{100}\le\lambda\le\frac3{40},\qquad |H|\le\frac{46}{25},
+ \qquad np+H/\ell=k-r,\quad k\in\mathbb Z,\quad0\le r\le\frac3{20}.
+\]
+For every $C\ge2/5$, with $\delta=k-np$ and $F_B$ the distribution
+function of $\operatorname{Bin}(n,p)$,
+\begin{align*}
+\Delta_C={}&\sqrt n\{\Pp(S_n\le H)-\Phi(H/\sqrt n)\}-C\rho\\
+ &-\sqrt n\{F_B(k)-\Phi(\delta/\sqrt{nv})\}+C\rho_B<0.
+\end{align*}
+\end{theorem}
+
+This statement concerns actual iid laws, including atom collisions and zero
+variance in either conditional law. It does not assume a least counterexample,
+contact, harmonic reserves, half-amplitude confinement, or marked crossings.
+Other phases and smaller noise require their separate comparison theorems.
+The present assertion alone is not a proof of an unrestricted Berry--Esseen
+bound, nor does it establish the acquisition of its strip hypotheses.
+
+\section{The count identity and its normalization}
+Write $v_j=\E U_j^2$, $\eta=1/n$, and introduce the \emph{physical} allocation
+\[
+ w=\frac{pv_1}{s},\qquad \Lambda_0=nqv_0=\lambda(1-w),\qquad
+ \Lambda_1=npv_1=\lambda w.
+\]
+Let $W_j$ be a sum of $j$ independent variables with law $U_1$ and
+$n-j$ with law $U_0$, and put $\pi_j=\binom njp^jq^{n-j}$.
+With $u=-r$, conditioning gives exactly
+\begin{align*}
+ \Pp(S_n\le H)-F_B(k)
+ ={}&-\sum_{i=0}^{k}\pi_{k-i}\Pp(W_{k-i}>u+i)\\
+ &+\sum_{i=1}^{n-k}\pi_{k+i}\Pp(W_{k+i}\le u-i).
+\end{align*}
+The outgoing event is strict and the incoming event closed. Put
+\[
+ m=\sqrt n\pi_k,\qquad
+ f(u)=\frac{\Phi((\delta+u)/\sqrt{n(v+s)})-
+                   \Phi(\delta/\sqrt{n(v+s)})}{\pi_k}.
+\]
+If $\pi_{k+i}/\pi_k\le R$ and the sum of incoming probabilities is at
+most $\mathcal T$, it is sufficient to prove positivity of
+\begin{equation}\label{eq:margin}
+ m\{\Pp(W_k>-r)+f(-r)-R\mathcal T\}
+       +C(\rho-\rho_B)-\frac74(\Xi+r)\lambda\eta,
+ \qquad \Xi=\frac{231}{250}.
+\end{equation}
+Indeed the final term bounds the unfavorable normal variance correction:
+differentiating the normal distribution function gives at most
+$(1/5)v^{-3/2}\delta_+s<(7/4)(\Xi+r)s$.
+
+Here and below $v_*:=6/25\le v$, $\eta\le1/42$ and
+\[
+ \sqrt{v+s}<\frac{251}{500},\quad
+ \xi:=H\sqrt{v+s},\quad |\xi|<\Xi,\quad\delta=\xi+r.
+\]
+In particular $1\le k\le n-1$ and $9/25<k/n<23/40$.
+The finite Stirling estimate, with Taylor expansion around $p$, gives
+\begin{equation}\label{eq:stirling}
+ m=\frac{\phi(0)}{\sqrt v}
+ \exp\{-\delta^2/(2nv)+e\},\qquad
+ n|e|\le Z(D):=\frac{5D}{8}+\frac38+\frac{D^3}{42}
+ \quad (|\delta|\le D\le\Xi+3/20).
+\end{equation}
+For clarity, the constants are respectively the prefactor error, factorial
+remainder, and entropy remainder. On the segment joining $p$ to $k/n$,
+$|D'''(z\Vert p)|\le6$, $|(\log(z(1-z)))'|\le5/4$, and
+$1/(12z(1-z))<3/8$. Applying
+$0<\log(j!)-(j+1/2)\log j+j-\tfrac12\log(2\pi)<1/(12j)$
+gives the errors $D^3/n^2$, $5D/(8n)$ and $3/(8n)$.
+A proof of this finite factorial formula is retained in
+\texttt{manuscript/arxiv-v1/appendices/count-comparison.tex}
+(the paragraph beginning ``For completeness, the finite Stirling formula
+used here is''). No asymptotic remainder in the noise is used.
+
+On a closed cell $[l,L]\times[r_-,r_+]\times[w_-,w_+]$, let
+$D=\Xi+r_+$. Using $19943/50000<\phi(0)<2/5$ and
+$e^{-x}\ge1-x$ gives
+\begin{align}
+ m_-&=2\frac{19943}{50000}
+       \left[1-\frac{D^2/(2v_*)+Z(D)}{42}\right]\le m\le\frac{17}{20}=:m_+,
+       \label{eq:mass}\\
+ R&=1+\frac{\max(0,53/100+D-1)}
+              {42v_*-(3/5)\max(0,D-1)}.\label{eq:ratio}
+\end{align}
+For the upper mass bound apply \eqref{eq:stirling} at a mode, whose
+displacement from $np$ is at most one, and use
+$e^{Z(1)/42}\le(1-Z(1)/42)^{-1}$. For \eqref{eq:ratio}, the first
+exact ratio is $1+(p-\delta-1)/(nv+q(\delta+1))$; all subsequent
+ratios are at most one because $53/100+D<2$.
+All denominators and the bounds in this paragraph are checked rationally.
+
+For fixed count and fixed $\delta$, the derivative of $\log f'(t)$ with
+respect to $s$ is
+\[
+ \frac{(\delta+t)^2-n(v+s)}{2n(v+s)^2}<0,
+ \qquad -r\le t\le0.
+\]
+Indeed $|\delta+t|\le\Xi+r$ and $42v_*>(\Xi+3/20)^2$.
+At $s=0$, \eqref{eq:stirling} therefore gives
+\[
+ \log f'(t)\le\eta P(r),\qquad
+ P(r)=\frac{2\Xi r+r^2}{2v_*}+Z(\Xi+r).
+\]
+Let $E=42(\exp^+(P(r_+)/42)-1)$, where $\exp^+$ is the rational
+upper enclosure described below. Convexity of the exponential on
+$0\le\eta\le1/42$ implies
+\begin{equation}\label{eq:phase}
+                       f(-r)\ge-r(1+E\eta).
+\end{equation}
+This keeps the full $1/n$ scaling instead of introducing a constant error.
+
+\section{The first incoming count remembers the allocation}
+We use the quadratic-hinge comparison of Pinelis,
+\emph{On the Bennett--Hoeffding inequality},
+\href{https://arxiv.org/abs/0902.4058}{arXiv:0902.4058},
+Proposition 2.8 and Corollary 2.11. Independent centered variables bounded
+above by $b>0$, with total variance at most $V$, have sum dominated in every
+quadratic hinge $(x-y)_+^2$ by $b(P_{V/b^2}-V/b^2)$.
+It applies with an upper bound on variance, not only its exact value.
+Conditioning on independent added variables preserves the comparison.
+Consequently the two groups in $-W_j$ may be replaced successively by
+independent centered Poisson variables with jump sizes $A$ and $d$.
+
+\begin{lemma}\label{lem:monotone}
+For fixed $y$, the function
+\[
+ G(T,w;y)=\E\left[
+ A\left(P_{T(1-w)/A^2}-\frac{T(1-w)}{A^2}\right)
+ +d\left(P_{Tw/d^2}-\frac{Tw}{d^2}\right)-y\right]_+^2
+\]
+is nondecreasing in $T\ge0$ and nonincreasing in $0\le w\le1$.
+\end{lemma}
+\begin{proof}
+Increasing $T$ adds independent centered Poisson increments, so conditional
+Jensen applies. To compare jump sizes at fixed variance $V$, approximate
+$d(P_{V/d^2}-V/d^2)$ by a sum of $N$ centered $d$-Bernoulli variables,
+with success probability $V/(Nd^2)$, for $N$ sufficiently large.
+Their total variance is at most $V$ and their upper bound is at most $A$.
+The quoted comparison bounds each quadratic hinge by the corresponding
+centered $A$-Poisson hinge. Their fourth moments are at most
+$d^2V+3V^2$, giving uniform integrability of each quadratic hinge, so the
+inequality passes to the Poisson limit. It is preserved by adding an
+independent variable: condition first; a bound by a constant times
+$V+(Z-y)^2$ justifies integration for finite second moments.
+For $w_1<w_2$, split the two comparators into common large-jump variance
+$T(1-w_2)$, common small-jump variance $Tw_1$, and the transferred variance
+$T(w_2-w_1)$. Replacing the latter small jumps by large jumps gives the
+asserted direction. Zero variances are direct.
+\end{proof}
+
+The exact own-count variances are
+\begin{equation}\label{eq:transport}
+ T_0=g_0\Lambda_0,\quad T_1=g_1\Lambda_1,\qquad
+ g_0=1-\delta\eta/q,\quad g_1=1+\delta\eta/p.
+\end{equation}
+For an incoming count, $\delta+i=\xi+r+i>0$. Thus its negative group
+has variance at most $\Lambda_0$, while its positive group has variance
+at most $\Lambda_1[1+(5/2)(\Xi+r+i)\eta]$.
+The inflated comparator at the first incoming count therefore has total
+variance at most
+\begin{equation}\label{eq:firstT}
+ T^+=L\left[1+\frac{5}{84}(\Xi+r_++1)w_+\right],
+\end{equation}
+and its fraction assigned to small jumps is at least the physical $w$.
+For any rational $0\le y<1+r_-$, Lemma~\ref{lem:monotone} and the
+pointwise hinge inequality give the whole-cell bound
+\begin{equation}\label{eq:first}
+ \Pp(W_{k+1}\le-r-1)\le
+ \frac{G(T^+,w_-;y)}{(1+r_--y)^2}=:Q.
+\end{equation}
+One may replace $Q$ by $\min(Q,1)$.
+
+The centered hinge is \emph{not} assumed convex in $w$. Neither do we
+replace the own-count allocation by the physical allocation. In general
+$T_0/(T_0+T_1)\ne1-w$; the exact factors in \eqref{eq:transport} must
+remain in the outgoing moment bound.
+
+\subsection*{An exact finite expression, with no missing Poisson tail}
+Put $h=3/125$, so $A=25h$ and $d=3h$. If
+$\mu=T(1-w)/A^2$, $\nu=Tw/d^2$, and
+$K=y/h+25\mu+3\nu\ge0$, then $G=h^2N$, where
+\begin{align}\label{eq:complement}
+ N={}&625\mu+9\nu+(25\mu+3\nu-K)^2\\
+ &-e^{-\mu-\nu}
+ \sum_{\substack{j,k\ge0\\25j+3k\le K}}
+       (K-25j-3k)^2\frac{\mu^j\nu^k}{j!k!}.\notag
+\end{align}
+This subtracts the lower complement from the full second moment. The sum
+is finite even for rational $K$, while the identity includes the complete
+upper tail. Its coefficients are nonnegative, so a lower exponential bound
+produces an upper bound for $N$.
+For $x\ge0$, reduce to $z=x/2^a\le1$, sum the first 25 Taylor terms,
+and bound the remainder after order 24 by
+\[
+ \frac{z^{25}/25!}{1-z/26}.
+\]
+Repeated squaring gives rational endpoints for $e^x$; reciprocals give
+endpoints for $e^{-x}$. All arithmetic in acceptance uses integers and
+\texttt{Fraction}; no floating-point evaluation enters these bounds.
+
+\subsection*{All later incoming counts}
+Every legal conditional count has total variance at most
+$n\max(v_0,v_1)\le(5/2)\lambda$. For $i=2,3$ use
+\[
+ V_i=\min\left(\frac52L,
+       L\left[1+\frac5{84}(\Xi+r_++i)\right]\right),\qquad\mu_i=V_i/A^2.
+\]
+For an integer $j_i\ge2$ with $(i+r_-)/A+\mu_i-j_i>0$, the
+quadratic comparison and Poisson factorial moments give
+\begin{equation}\label{eq:later}
+ \Pp(W_{k+i}\le-r-i)\le
+ \frac{\mu_i^{j_i+1}}
+ {(j_i+1)!((i+r_-)/A+\mu_i-j_i)^2}=:Q_i.
+\end{equation}
+Indeed $(P-j)_+^2\le\binom P{j+1}$ for integers $P\ge0,j\ge2$.
+For $j=2$ this is $(t-1)(t-2)\ge0$ for integer $t=P-j\ge1$;
+the binomial coefficient increases with $j$. Its Poisson expectation is
+$\mu^{j+1}/(j+1)!$.
+For $i\ge4$, use the common variance $(5/2)L$, put $\mu_0=(5/2)L/A^2$,
+and choose hinge $j=i$. The denominator increases with $i$, and the
+numerator ratio is at most $\mu_0/6<1$. Hence the entire remainder is
+\begin{equation}\label{eq:infinite}
+ J=\frac{\mu_0^5}
+ {5!\{4(1/A-1)+r_-/A+\mu_0\}^2(1-\mu_0/6)}.
+\end{equation}
+We take $\mathcal T=Q+Q_2+Q_3+J$. Adding terms for nonexistent counts
+can only increase this upper bound. All unsquared hinge denominators are
+checked positive before division.
+
+\section{The cubic penalty and the outgoing count use the same moments}
+The signs of $Y-p$ on the two conditional supports are fixed, since
+$a_0<p$ and $a_1<q$. Put $M_0=nq\E U_0^3$, $M_1=np\E U_1^3$.
+Expansion gives
+\[
+ n\{\E|Y-p|^3-v(1-2v)\}
+       =3p\Lambda_0+3q\Lambda_1+M_1-M_0.
+\]
+The elementary inequality $(1+x)^{3/2}\le1+3x/2+3x^2/8$ implies
+\begin{equation}\label{eq:cubic}
+ n(v+s)^{3/2}(\rho-\rho_B)
+ \ge3p\Lambda_0+3q\Lambda_1+M_1-M_0
+               -\frac{39}{50}\lambda-\frac{13}{16}\lambda^2\eta.
+\end{equation}
+Here $(3/2)(1-2v)\le39/50$ and $3(1-2v)/(8v)\le13/16$.
+The right side is positive: it is at least
+$\lambda[6/5-d-39/50-(13/16)\lambda\eta]>0$.
+Therefore, for $K_0=79/25$, we may use
+$C/(v+s)^{3/2}>K_0$ in \eqref{eq:cubic} \emph{before} separating its
+signed terms. Also the uniform weaker consequence is
+\begin{equation}\label{eq:unitgain}
+ C(\rho-\rho_B)>
+ \frac{(2/5)\{87/250-(13/16)\lambda\eta\}}{(251/500)^3}
+                  \lambda\eta>\lambda\eta.
+\end{equation}
+
+For $\alpha>0$ define the quartic minorant
+\[
+ h_\alpha(x)=\frac{-x^4+3\alpha^2x^2+2\alpha^3x}{5\alpha^4}
+                         \le\mathbf1_{(0,\infty)}(x).
+\]
+Its numerator is $x(x+\alpha)^2(2\alpha-x)$; its positive maximum is
+$(9+6\sqrt3)\alpha^4/4<5\alpha^4$ because $108<121$.
+For a centered independent sum, expansion gives
+\[
+ \E W_k^4=\sum\E Z_j^4+3t^2-3\sum(\E Z_j^2)^2,
+ \quad\E W_k^3=\sum\E Z_j^3,\quad t=T_0+T_1.
+\]
+Apply the minorant to $W_k+r$. To combine it with \eqref{eq:cubic},
+price each conditional squared variable on its support. For group zero
+the price is
+\[
+ \frac m{5\alpha^4}g_0(x^2+4rx)+K_0\eta x,
+ \qquad -A\le x\le a_0\le d;
+\]
+for group one it is
+\[
+ \frac m{5\alpha^4}g_1(x^2+4rx)-K_0\eta x,
+ \qquad -d\le-a_1\le x\le A.
+\]
+Both are convex in $x$, because $m,g_0,g_1>0$. Thus their maxima are at
+the respective relaxed support endpoints $x_0\in\{-A,d\}$ and
+$x_1\in\{-d,A\}$. Dropping the favorable term
+$3\sum(\E Z_j^2)^2$ and replacing $3p\ge6/5$, $3q\ge141/100$
+gives the following lower bound for \eqref{eq:margin}, for the worst choice
+of $x_0,x_1$:
+\begin{align}\label{eq:polynomial}
+\mathcal L={}&\frac m{5\alpha^4}\big[
+ (3\alpha^2-6r^2-x_0^2-4rx_0)T_0
+ +(3\alpha^2-6r^2-x_1^2-4rx_1)T_1\notag\\
+ &\hspace{27mm}-3(T_0+T_1)^2-r^4+3\alpha^2r^2+2\alpha^3r\big]\notag\\
+ &-mr(1+E\eta)-mR\mathcal T-\frac74(\Xi+r)\lambda\eta\\
+ &+K_0\eta\lambda\left[
+ \frac65(1-w)+\frac{141}{100}w-x_0(1-w)+x_1w
+          -\frac{39}{50}-\frac{13}{16}\lambda\eta\right].\notag
+\end{align}
+This is a same-law moment inequality. The cubic penalty is not allocated
+independently of the outgoing fourth-moment estimate.
+
+\section{Why the finite check covers every law and every sample size}
+For fixed $r$, the actual multipliers satisfy
+\[
+ 1-\frac52(\Xi+r)\eta\le g_j\le
+ 1+\frac52(\Xi+r)\eta.
+\]
+The expression \eqref{eq:polynomial} is separately concave in $g_0,g_1$,
+so it suffices to substitute
+\[
+ g_j=1+\varepsilon_j\frac52(\Xi+r)\eta,
+                    \qquad\varepsilon_j\in\{-1,1\}.
+\]
+This is a valid outer rectangle, even though its four corners need not
+be realized by one marginal. After substitution it is separately concave
+in each of $\lambda,w,\eta$: all nonaffine terms in any one of those
+variables are negative squares. It is affine in $m$. Hence it suffices to
+check $\lambda\in\{l,L\}$, $w\in\{w_-,w_+\}$,
+$\eta\in\{0,1/42\}$ and $m\in\{m_-,m_+\}$, together with the four
+support-endpoint choices. Each choice leaves a polynomial of degree at
+most four in $r$. The artificial face $\eta=0$ is an endpoint of a
+concavity argument, not a limit theorem for a fixed law.
+
+For a polynomial $\sum_{k=0}^4 c_kr^k$, its degree-four Bernstein
+coefficients on $[a,b]$ are
+\[
+ \beta_i=\sum_{k=0}^4 c_k
+  \sum_{j=0}^{\min(i,k)}
+   \frac{\binom kj\binom ij}{\binom4j}a^{k-j}(b-a)^j,
+                       \qquad0\le i\le4.
+\]
+This follows by first substituting $r=a+(b-a)t$ and then using
+$t^j=\sum_{i=j}^4\binom ij\binom4j^{-1}\binom4i t^i(1-t)^{4-i}$.
+Positive coefficients prove positivity on the closed interval.
+There are 256 endpoint combinations per quartic cell and five coefficients
+per combination.
+
+Some cells use the simpler Cantelli bound. Set
+\[
+ T=L[1+(5/2)D/42],\quad h_f=1+E/42,\quad
+ B=\min_{r\in\{r_-,r_+\}}\left\{\frac{r^2}{T+r^2}-h_fr\right\}
+                         -R\mathcal T.
+\]
+Require $r_->0$ and $2r_-T/(T+r_-^2)^2>h_f$.
+The derivative of $r^2/(T+r^2)-h_fr$ first increases and then decreases,
+because its derivative has the sign of $T-3r^2$. Under the displayed
+left-endpoint condition any interior critical point is a maximum, so the
+minimum is at an endpoint. The variance upper bound makes Cantelli
+uniform. Using \eqref{eq:unitgain}, a valid margin is
+\begin{equation}\label{eq:cantelli}
+ \begin{cases}m_-B,&B\ge0,\\m_+B,&B<0\end{cases}
+                        -\{(7/4)D-1\}L/42.
+\end{equation}
+The coefficient $(7/4)D-1$ is positive on the domain.
+
+The certificate \texttt{compound-certificate.json} contains 291 rational
+closed boxes, 200 using \eqref{eq:polynomial} and 91 using
+\eqref{eq:cantelli}. Its domain is exactly
+\[
+ [3/100,3/40]\times[0,3/20]\times[0,1].
+\]
+The initial division has 3 noise intervals, 12 phase intervals and
+8 allocation intervals. Three cells were split once, giving 291 final
+cells. The acceptance checker independently forms the common endpoint
+refinement (480 elementary boxes), checks each interior is covered exactly
+once and all exterior faces occur, and uses closed inequalities on every
+cell. Missing, duplicated, reordered and malformed cells reject.
+Every cell passes with a rational lower margin of at least
+\[
+                    \frac{256695813}{10^{12}}>0.
+\]
+This proves Theorem~\ref{thm:comparison} from the stated analytic inputs.
+The finite arithmetic is executable evidence for the displayed inequalities;
+it does not replace the count identity, comparison theorem or concavity
+arguments above.
+
+\section{Scope, checks and preserved failed shortcuts}
+The acceptance program is \texttt{compound-accept.py}; it checks 23
+normalization gates and 8 malformed-input or source-change controls, reads
+the evaluator bytes, verifies their SHA256, and executes those exact bytes
+without importing cached bytecode. The finite exponential calculation is
+\texttt{compound-evaluator.py}. Its separate controls include zero
+intensities, exact hinge collisions, finite positive-series lower bounds,
+and malformed floating/Boolean inputs after warming the exact cache.
+Floating scripts \texttt{compound-cover-discovery.py} and
+\texttt{compound-plan.py} selected the parameters but are not acceptance
+inputs. The 294 tested discovery boxes and the first conservative failed
+pilot are preserved separately from the exact run.
+
+Two tempting shortcuts are false. First, the physical variance fraction
+cannot be reused as the own-count variance fraction. A centered actual law
+with $n=42,p=1/2,k=22,r=.08$, $U_0\in\{-.6,.001\}$ and $U_1=-U_0$
+has $v_0=v_1=.0006$, $w=1/2$, but own variances $20v_0$ and $22v_1$.
+For $\kappa=-4r$ it violates the corresponding shortcut fourth-moment
+bound by $423903/2500000000$; its raw $|H|=.92/\sqrt{.2506}<1.84$.
+Second, the centered compound hinge need not be convex in allocation:
+at $T=1/40,w=1/4,y=1/5$ its second derivative is
+\[
+ -e^{-815/648}
+ \frac{787398879114798488065}{147382613147155571933184}<0.
+\]
+The independent comparator review derives both controls exactly and supplies
+an independent probability-generating-function recurrence for
+\eqref{eq:complement}. Neither false shortcut is used here or in the
+previous accepted small-noise theorem.
+
+The new comparison can replace the negative-inner part of a selected
+right-panel low-noise branch, provided its strip, threshold and noise
+hypotheses have been acquired separately and the remaining phases are
+covered. It makes half-amplitude confinement and subsequent count-curvature
+arguments unnecessary \emph{within this domain}. It does not justify
+deleting their uses in other probability panels, larger noise, or other
+acquisition and exclusion arguments. No manuscript or inherited certificate
+has been changed by this research component.
+\end{document}
