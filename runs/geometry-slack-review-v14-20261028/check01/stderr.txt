@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/geometry-slack-review-v14/mathematics/simplification-v14/2026-10-28/geometry-slack-review.py", line 131, in <module>
+    reject('drop near-mesh c ceiling',lambda:must(sum(F(-3,2)<F(1,4)-j<0 for j in range(-3,4))<=1))
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/geometry-slack-review-v14/mathematics/simplification-v14/2026-10-28/geometry-slack-review.py", line 15, in reject
+    raise AssertionError(name)
+AssertionError: drop near-mesh c ceiling
