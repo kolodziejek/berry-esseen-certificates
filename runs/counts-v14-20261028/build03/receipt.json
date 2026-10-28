@@ -1,0 +1,10 @@
+{
+  "source_sha256": "931fb88565922d525726ba264a867e2b0774051a4e56267d9f9d65f3142b01f4",
+  "pdf_sha256": "2c3de0b16baa4a2e1371f0909a055bedcd3344d156ba2434cc6c63b1d932116e",
+  "returncode": 0,
+  "compiler": "texlive",
+  "pages": 4,
+  "visual_review": "All four final page renders inspected; equations and margins legible.",
+  "render_command": "pdftoppm -scale-to 1100 -png texlive/counts-pair.pdf page",
+  "warnings_found": []
+}
