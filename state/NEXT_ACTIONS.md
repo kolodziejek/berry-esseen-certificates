@@ -1,33 +1,34 @@
-# Next actions after v14
+# Next actions after v15
 
-1. Preserve the scoped results and keep PR5 draft. Manuscript editing is secondary;
-   no new project, PR, certificate deletion or expensive generation is needed.
-2. Main research target: close the general unequal-noise intermediate range
-   42<=n<6000 beyond retained v12 lambda<=.01left/<=.075right. The new left
-   reserve removes p[1/3,.4] when nQ/sqrt(v)>=24; use that region before any
-   count work. Preserve actual conditional laws, phases and threshold atoms.
-3. Use the paired reserve from counts-pair.tex. Its remaining incoming term is
-   WEIGHTED, E[(u-W_(k+1))1{W_(k+1)<=u-1}]; raw quadratic-hinge bounds cannot
-   be clipped at1. The two central two-point families are solved, but neither
-   arbitrary thresholds nor arbitrary conditional laws follow by continuity.
-4. The summable curvature lemma in geometry-slack.tex has O(1/n) normalization.
-   It can replace the weaker O(1/sqrt(n)) term in large-index.tex, after proving
-   the appropriate right-range binomial mode bound. Retaining the exact CF
-   fraction can improve the local6000 threshold. This optimization is secondary
-   to a full intermediate comparison; it is not a global cutoff proof.
-5. The all-n independent-noise theorem in loss-closure.tex removes that subclass
-   entirely. A possible next structural target is a justified comparison of
-   unequal conditional noises with a common independent-noise law, including
-   its actual CDF error. Pooling alone is false; no optimizer reduction follows.
-6. Independent C4/BASE41 stays separate. Keep full moment paths and active
-   collision/contact consistency; do not return to the refuted endpoint shortcut.
+1. Keep existing PR5 draft for author review. The selected route is the five-count
+   method in mathematics/simplification-v15/2026-10-28. Do not resume the
+   superseded n1000 transport candidate or delete old certificates.
+2. Main local gap: general unequal conditional noises on right indices42..199
+   beyondlambda=.075, and the surviving left region below700 beyondlambda=.01.
+   Apply v13 probability/index geometry and v14 nQ/sqrt(v)>=24 exclusion first.
+3. Seek a structural improvement of the four centered replacement costs. Their
+   O(lambda/n) constant is too large near n42. Removing the cost altogether
+   is false. A weighted direct identity or controlled centered coupling is a
+   useful target; a relaxation optimizer is not automatically an iid law.
+4. The optional first-moment curvature bound is available:
+   sqrt(n)C<=lambda/(4v sqrt(n))+(c/v)min{sqrt(lambda)/(2sqrt(n+1)),sqrt(n)(q e0+p e1)},
+   with ej=E(Uj)+ and c=(np-q-t)+. It makes the second term linear inlambda
+   for one-noisy conditional two-point laws. A universal floor anchor is false.
+5. Independent C4/BASE41 and global acquisition remain separate obligations.
+   The acquired n700 exclusion plus BASE41 only confines the first failure to
+   42..699; it does not prove all later rows without their predecessor premises.
+6. Manuscript editing remains secondary. Later consolidate the common minorant
+   and four-replacement proof, then give the two rows in a constants table.
+   Retain the full curvature, signed-normal and acquisition arguments. Component
+   lengths are not a complete-paper page count.
 
-Next runnable bounded probe: adapt weighted-discovery.py in a NEW branch to
-retain the signed phase and the new summable curvature, concentrating on actual
-right-strip laws at n42 and left laws below nQ/sqrt(v)=24. Its floating output
-is discovery only; convert any proposed universal bound to a complete proof or
-exact acceptance with honest coverage before removing a dependency.
+Next bounded experiment: on a NEW branch/worktree, test a weighted version of
+four-replacement transport at n42,p=.4 and near the Bernoulli optimizer,
+lambda=.075 and .36, using exact actual conditional laws and closed atoms with
+immediate neighbors. Include the n42 tiny-noise wrong-anchor counterexample.
+Read drivers before execution and record all evidence under a fresh run ID.
+Convert any promising discovery into a uniform proof before removing an edge.
 
-Reproduction (fresh ID):
-python3 -I -B mathematics/simplification-v14/2026-10-28/run_checks.py NEWID
-Run from the fork worktree; do not rerun unchanged historical suites without need.
+Reproduction, not discovery:
+python3 -I -B mathematics/simplification-v15/2026-10-28/run_checks.py NEWID
+Do not repeat unchanged historical suites without a new concern.

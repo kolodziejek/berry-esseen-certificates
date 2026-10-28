@@ -2,7 +2,9 @@
 """Independent exact join, normalization and logical-scope controls."""
 from fractions import Fraction as F
 from pathlib import Path
-import argparse,hashlib,json
+import argparse,hashlib,json,sys
+if not __debug__ or sys.flags.optimize:
+    raise RuntimeError('Assertions required')
 
 checks=[];controls=[]
 def check(name,x):

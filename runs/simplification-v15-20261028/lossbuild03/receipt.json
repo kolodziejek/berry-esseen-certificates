@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v15/mathematics/simplification-v15/2026-10-28/loss-direct.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v15/runs/simplification-v15-20261028/lossbuild03",
+    "--json"
+  ],
+  "returncode": 0,
+  "source_sha256": "1bb19aee8183fbf70e81424dfb4503a54877a1938cd073bf58e751556e387ead",
+  "elapsed_seconds": 1.1665155,
+  "utc": "2026-10-28T22:25:19.842967+00:00",
+  "change": "Weaken two displayed strict inequalities at vanishing endpoints; all theorem targets and constants unchanged."
+}

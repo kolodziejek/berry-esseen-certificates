@@ -1,38 +1,54 @@
-# Current research status — v14, 28 October 2026
+# Current research status — v15, 28 October 2026
 
-Existing sole review target: https://github.com/kolodziejek/berry-esseen-certificates/pull/5
-Keep draft; no merge, main push, force-push, branch deletion or upstream change.
-Original reference:6346fc1b4432bc5982822aa696eb566ed9e1e1ee.
-V14 starts from reviewed/published656232ea8d9561a3f47aefa083ead4f6ba4206ca.
+Review target: https://github.com/kolodziejek/berry-esseen-certificates/pull/5
+Keep draft for author review. No merge, main push, force-push, branch deletion
+or upstream change. Original reference:6346fc1b4432bc5982822aa696eb566ed9e1e1ee.
+This round starts at published2c2c511ca1aecb5840d474608aba7c43d90db79e.
+Remote publication is verified separately, not inferred from this local text.
 
 | Result | Mathematical status | Execution status |
 |---|---|---|
-| Right local comparison: n>=6000,p[.4,.53],.075<=lambda<=.36,d<=3/n,raw abs(H)<=1.84 | Locally derived all-law theorem, independent full review found no blocker; actual-gap budget supplies d<=3/n conditionally |39constructor gates; independent40gates/150small-product controls and27exact binomial controls PASS |
-| Common independent noise, p[.25,.75], support width<=.2 | All-n/all-threshold sharp bound with margin3s/(1000v^(3/2)); independent coordinator derivation; external Schulz theorem retained |507checks,40moment,120product identities,156outwardCDF events,6negative controls PASS |
-| Left geometric region: p[1/3,.4],nQ/sqrt(v)>=24 | Full signed excess<-1/(10n), conditional on stated budget/strip premises and Schulz middle-p theorem |28gates,5index endpoints,216curvature and15full signed events PASS; independent2638checks/72physical curvature cases PASS |
-| Two central asymmetric families, n>=42,np integer,H0,lambda<=.36 | Complete restricted comparison; independently checked |28actual laws,68paired identities,2304hinge points,6bias controls PASS |
-| General intermediate unequal-noise comparison,C4,BASE41,full conjecture | OPEN |No general acceptance claimed |
+| Five-count crossing-loss reserve | Locally derived; independent coordinator and component review |519 constructor checks; independent kernel/swap and scalar reconstruction |
+| Right signed comparison:n>=200,p[.4,.53],lambda[.075,.36] | All-law theorem under stated support/raw-H premises; independently reviewed |32 exact gates;45 outward-rational full signed events on5 actual laws |
+| Left signed comparison:n>=700,p[1/3,.4],lambda[.01,.32] | All-law theorem under stated support/raw-H premises; independent coordinator derivation |40 exact gates;35kernel,12swap,35independent trinomial smoke and12full signed events on4 laws |
+| Full-noise local unions and acquired witness exclusion at n>=700 | Independently derived conditional composition; acquisition retains predecessor premise |240checks,28exact phase/noise strata,12marginal mappings,17rejections |
+| Universal floor-anchor extension at tiny noise | Refuted; retained shifted-anchor theorem unaffected |Exact rational proof;270optional curvature checks |
+| C4,BASE41,unrestricted finite range,full conjecture | OPEN |No acceptance claimed |
 
-Main proof: mathematics/simplification-v14/2026-10-28/large-index.pdf (5pages).
-Also loss-closure.pdf(3),geometry-slack.pdf(4),counts-pair.pdf(4).
-Optional loss-common.pdf(3) is not an ancestor of independent-noise closure.
-The89-page manuscript remains unchanged. No new overall paper length is claimed.
+Use Y=B+U,E(U|B)=0,v=pq,s=EU²,lambda=ns,X=(Y-p)/sqrt(v+s),rho=E|X|³.
+Both new results give sqrt(n){P(sum Xi<=H)-Phi(H/sqrt(n))}-C_E rho<-lambda/100.
+Both require raw|H|<=1.84. Right supports:[-.6,a0],[-a1,.6],a0+a1<=.072;
+left supports:[-.7,a0],[-a1,.7],a0+a1<=.068. No budget or d<=3/n premise
+occurs in either new local theorem.
 
-The high-index proof replaces larger-noise grids by a CF estimate, exact
-selected-count transport, a21-count window and complete fourth-moment tails.
-Together with v12 small-noise comparison, it closes the stated acquired right
-strip at n>=6000. It does not establish acquisition or an unconditional cutoff.
-On the left, an acquired contrary witness p<=.4 now has n<=2681;
-p<1/3 still uses the earlier n<=168 bound. No count statement is added on(.53,.54].
+Proofs:mathematics/simplification-v15/2026-10-28/{loss-direct,right-direct,
+geometry-left,counts-phase}.tex and .pdf (4,4,4,3pages).
+README.md gives the human guide and exact computation-removal scopes.
+coordinator-review.md,counts-direct-review.md and join-review.md contain the
+separate derivations, source bindings, reflection and dependency checks.
 
-Bounded reproduction: mathematics/simplification-v14/2026-10-28/run_checks.py NEWID.
-Fresh integration:9bounded checks PASS, recorded in
-runs/simplification-v14-20261028/integration01/receipt.json.
-All2748baseline entries preserved:182materialized byte checks and2566sparse
-bindings. All85tracked manuscript files unchanged. Publication is verified separately; do not infer a remote head
-from this local status text. Prior state is preserved in stateBefore01.
+The smooth kernel and four centered replacements compare five actual counts
+at a variance cost. One fourth moment controls every omitted translate. Four
+rational endpoints per probability strip complete the larger-noise proof.
+This replaces the v14 selected-count transport/displacement and21-count window
+in the proved domains. All older sources and certificates remain preserved.
 
-Research worktree: work/fork_audit_20261027/simplification-v14.
-Integration branch: manuscript/strategy-v4-20261027 in strategy-v4.
-Baseline certificates/reference/history are preserved. Historical success labels
-in startup files do not override this scope or constitute independent evidence.
+The v12 small-noise results remain ancestors, including the291-cell
+negative-inner certificate. Coarse11264-cell Fourier entry, support/gap
+acquisition, attainment/reflection and sharp predecessor remain. With genuine
+BASE41 and those implications at a least failure, any first failure lies in
+42..699. This is NOT an unconditional cutoff700. A base through699 or an
+independent proof covering42..699 is still required for that induction route.
+
+Bounded reproduction:python3 -I -B mathematics/simplification-v15/2026-10-28/run_checks.py NEWID.
+Fresh integration01:9 bounded jobs PASS, with final source bindings, versions,
+commands, stdout/stderr and return codes. Evidence:
+runs/simplification-v15-20261028/integration01/receipt.json.
+Preservation:2748original entries (182materialized byte checks,2566sparse
+bindings); all85tracked manuscript files unchanged.
+No expensive generation, historical full Fourier replay or Lean build occurred.
+The89-page manuscript remains unchanged. Previous state is in stateBefore01.
+Historical optimistic startup headings do not override this audited scope.
+
+Worktree:work/fork_audit_20261027/simplification-v15.
+Integration branch:manuscript/strategy-v4-20261027 in strategy-v4.

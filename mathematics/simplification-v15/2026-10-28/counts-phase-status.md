@@ -48,3 +48,7 @@ Run `python3 mathematics/simplification-v15/2026-10-28/counts-phase-check.py`.
 A bounded diagnostic checked 48 actual three-point laws with two anchor choices (96 records, 3,832 threshold evaluations). It found floor-anchor failures at tiny noise and no tested failures at moderate noise. Those floating scores are discovery only. `discovery01/` preserves an initial syntax failure; `discovery02/` is the corrected bounded run. No numerical grid or certificate generation was launched.
 
 Further phase construction was stopped at the coordinator's request to prioritize independent review of the new signed all-law argument. No unproved nearest-mean or arbitrary-phase extension is claimed here.
+
+## Final integration review
+
+Final integration: the coordinator independently checked the anchor obstruction and first-moment curvature lemma. A missing probability-macro backslash was corrected and the three-page note rebuilt and inspected in runs/simplification-v15-20261028/anchorbuild02/. Mathematical statements and targets are unchanged.

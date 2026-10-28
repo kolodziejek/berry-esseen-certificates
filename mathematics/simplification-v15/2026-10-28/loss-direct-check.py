@@ -5,7 +5,9 @@ from math import comb, factorial
 from collections import defaultdict
 from functools import lru_cache
 from pathlib import Path
-import hashlib, json
+import hashlib, json, sys
+if not __debug__ or sys.flags.optimize:
+    raise RuntimeError('Assertions required')
 
 checks=[]; negative=[]; cases=[]
 def check(name, value):

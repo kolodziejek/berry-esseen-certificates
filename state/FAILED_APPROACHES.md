@@ -1,40 +1,40 @@
-# Failed shortcuts — current v14
+# Failed and unselected approaches after v15
 
-Newly checked obstructions:
+Prior full state is preserved in runs/simplification-v15-20261028/stateBefore01/.
+Inherited reference/history, old notes, proofs and certificates are unchanged.
 
-- Positive gain above noiseless phase is false even for actual independent
-  common noise. Forn42,U=+/-1/100,p.5,t=21+.75,
-  g-.75=-2^-42 sum_(m=0)^8 binom(42,m)<0. Atphase.5 the gain is exactlyzero.
-  Moderate-noise n512,U=+/-1/40,lambda.32 also has negative phase excess.
-- A weighted incoming tail cannot be clipped at1. ForZ=+/-3 with equal mass,
-  E[Z1{Z>=1}]=3/2. The paired identity must include equality at the incoming
-  collision; omitting it overstates an exact three-summand pair by1/13.
-- The c sqrt(T) term in the summable curvature bound cannot be dropped:
-  tiny common noise atn42,p.35,t14 gives an exact counterexample inside the
-  raw threshold band. The old weaker curvature bound can also be too large
-  to close actual negative comparisons; floating discovery is not a refutation
-  of the comparison itself.
-- Pooling unequal conditional noise into independent common noise changes the
-  actual law and CDF. Small independent-noise closure does not license pooling.
-- The selected noise is not centered, and its transport cannot be discarded.
-  Independent product controls include nonzero selected means and atom events.
-- A window wider than the certified21counts need not retain sqrt(n)pi_i>3/4;
-  n6000,p.5,i=np+50 violates it. Residual variance cannot be replaced bylambda
-  without conditional-allocation inflation (actual one-sided noise example).
+Floor-anchor extension is REFUTED. Actual iid law:n42,p1/2,U0=0, centered
+U1 on{-1/350000,3/5};lambda=9/250000. At the closed atomt=21-3/50000,
+floor20 givesDelta_C>1/250 for everyC in[0,1]; anchor21 givesDelta_C<0
+for everyC>=0. V12 chooses21; v14 floor theorem assumeslambda>=.075.
+Neither retained theorem nor Berry–Esseen is refuted. Never identify the
+anchors across noise regimes without a proof.
 
-Retained v13/v12 failures:
-- Moment-polytope endpoint compression for n4 is false on the exact five-point
-  family recorded in finite-contact.tex; its interior CDF exceeds both endpoints.
-- A six-atom contact bound requires finite support and a unique active multiset;
-  multiple resonances and nonatomic limits cannot be discarded as generic.
-- Width-free crossing positivity is false; stopped renewal increments need not
-  be independent; an own-count reserve need not be positive from four moments.
-- Geometry alone cannot force leftlambda<=.01 orp>=1/3. The actual n42,p.3,
-  lambda.1 two-point conditional example passes the necessary budget/strip test.
-- Sharper Schulz formula cannot be extrapolated outside its published interval.
-  rho-rhoB may be negative below1/3. False marginal-to-own variance allocation
-  and false allocation convexity remain refuted by exact actual-law examples.
+Other rejecting controls:
+- Freezing all five conditional counts at zero replacement cost is false for
+  actual unequal conditional laws. Independent direct review records examples.
+- Removing c*sqrt(T) from summable curvature is false: tiny symmetric noise
+  atn42,p=.35,t14 gives a linear bend against a quadratic proposed bound.
+  This is an internal-lemma control, not a counterexample to n700 comparison.
+- Normalized binomial mass4/5 fails atn200,p1/2; unit mass bound fails in the
+  leftn700 test. The weaker proved finite Stirling bounds are retained.
+- The right scalar certificate cannot simply be reused atn100.
+- A quadratic cosine minorant without the support-diameter cap fails atx1.
+- BASE41 plus a predecessor-conditional tail does not imply unconditional700.
+- Reflection changes the probability strip and introduces an atom correction.
 
-These are counterexamples to intermediate shortcuts, not to the main conjecture.
-Earlier detailed formulas and sources remain in the stateBefore01 snapshots and
-v10-v13 notes. No arithmetic PASS proves acquisition, compactness or finite base.
+Unselected candidate:commitf1631ed81865580c2662d76a96898350e3244f30 has an
+n1000 transport approach with only40scalar gates checked. It was superseded
+before full review and is not integrated as an accepted theorem.
+
+Preserved development failures: left actual checker needed a tighter outward
+trigonometric enclosure for a tiny-defect endpoint test(degree32 to48).
+Its first compile typo and the anchor discovery syntax failure remain recorded.
+Targets/test cases were not weakened. Final loss/left proofs correct two
+strict endpoint displays to weak inequalities atzero/one; conclusions unchanged.
+
+Still invalid/unproved: pooling unequal conditional laws, dropping actual
+couplings, assuming an independent selected count, extrapolating central atoms
+to all phases, and using a relaxed optimizer as an iid convolution. Earlier n4
+moment-endpoint and collision defects remain in prior state. No new finite-base
+claim repairs them. Local n200/700 comparisons do not remove acquisition.

@@ -77,3 +77,7 @@ Checker SHA256: c71b195c6c8c67334e17e16740e85738e67a6f916fcc212d7b6589606fb303d5
 Runner SHA256: 5978ff54d0a585a954b2ba56b5244719952138620f699e0901080af4f79492aa.
 
 Build01 compiled successfully without warnings. All four rendered pages were inspected. No dense search or certificate-generation campaign was run.
+
+## Final integration review
+
+Final integration: the coordinator and independent direct reviewer checked the proof. Two literal strict endpoint displays were changed to weak inequalities at zero/one; all theorem targets and constants are unchanged. The direct-entry checker now rejects optimized Python. Final proof/build/source pins are in reviewed-sources.json and runs/simplification-v15-20261028/lossbuild03/. Original constructor receipts above remain tied to their original bytes.

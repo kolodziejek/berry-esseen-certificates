@@ -1,59 +1,69 @@
-# Current dependency frontier — v14
+# Dependency graph after v15
 
-Retained ancestors: actual-law attainment/reflection and closed-CDF conventions;
-11264-cell coarse Fourier entry with its analytic assumptions; actual central gap,
-contact/heat/sharp-predecessor premises where used for the support strips and raw
-threshold; external binomial theorem; independent finite base through41 unresolved.
-No reflected branch is acquired merely by changing the sign of a final formula.
+Paths are relative to the fork checkout; v15 notes are under
+mathematics/simplification-v15/2026-10-28/. Mathematical and execution status
+remain separate in STATUS.md and individual receipts.
 
-## All-law right local comparison
+Actual iid conditional marginal Y=B+U,E(U|B)=0
+ -> separated supports/inward caps
+ -> v13 crossing identity with closed lower/strict upper events
+ -> interpolated binomial CDF + signed curvature - nonnegative weighted losses.
 
-Centered actual conditional noises, -.6<=U0<=a0,-a1<=U1<=.6,
-d=a0+a1<=min(.072,3/n),p[.4,.53],n>=6000,.075<=lambda<=.36,
-raw abs(H)<=1.84 -> v13 ordered crossing/clipped age/weighted identity ->
-fixed-count CF loss and selected-count transport Eabs(WK-Wk)<13d ->
-g>=lambda/5-13d -> complete fourth-moment tail<lambda/100 outside21counts ->
-finite Stirling sqrt(n)pi_i>3/4 -> weighted loss>57lambda/400-117/(4n).
-V13 signed curvature + explicit phase repair<5/n + favorable rho>=rhoB ->
-Delta_C<-lambda/200 for every C>=0. All formulas finite and uniform in the law.
+loss-direct.tex: compact kernel minorant + four centered replacements
+ + independent frozen-sum characteristic function + complete fourth-moment tail
+ -> five-count reserve. Premises:amplitude.6,inwardsum.072,p[.4,.53],n>=42,
+ lambda<=.36,abs(t-np)<.94. No acquisition/geometric budget premise.
 
-Actual central-gap budget nD<=129/4, right strip and lambda<=.36 ->
-positive inward-cubic noise prices -> nD>=6nv d(1-d)/(v+s)^(3/2) -> nd<3.
-This supplies d using actual inner endpoints, not arbitrary loose caps.
-V12 closes0<lambda<=.075 for C_E. Zero noise is Bernoulli. No conclusion on
-(.53,.54] or unconditional global cutoff is drawn.
+right-direct.tex: five-count reserve + finite Stirling masses>=13/(20sqrt(n))
+ + v14 summable curvature(T=100lambda/47,beta=.41)
+ + signed normal interpolation + favorable ACTUAL cubic
+ + external Schulz all-p strict binomial theorem
+ -> signed excess<-lambda/100.
+ Premises:n>=200,p[.4,.53],lambda[.075,.36],right strip,raw|H|<=1.84.
 
-## Left reserve exclusion
+geometry-left.tex: separately derived left kernel/variance/cosine constants
+ + five masses>=3/(4sqrt(n)) + curvature(T=5lambda/3,beta=.41)
+ + both normal signs + favorable actual cubic + same all-p binomial theorem
+ -> signed excess<-lambda/100.
+ Premises:n>=700,p[1/3,.4],lambda[.01,.32],amplitude.7,inwardsum.068,raw|H|<=1.84.
+Both final quartics are globally concave by a completed-square identity;
+convex errors preserve concavity. Four rational endpoints prove each noise row.
 
-Acquired p[1/3,.4], n>=42, A.7,d<=.068,lambda<=.32,nD<=129/4,
-rawabs(H)<=1.84, and nQ/sqrt(v)>=24 -> v13 geometry forceslambda<.09 ->
-Schulz middle-p reserve + v13 crossing + new summable-curvature lemma + signed
-normal interpolation + favorable rho -> full signed excess<-1/(10n).
-Thus p<=.4 contrary acquired witness has n<=2681, combining v13 below1/3.
-Schulz's sharper formula is not available below1/3; first125cutoff applies only
-atp1/3, not to all smallerp.
+v12 comparison-union.tex and its named components
+ -> right strict comparison at SOME anchor for0<lambda<=.075,C>=.4;
+ -> left comparison for0<lambda<=.01,C in[.4095,.41].
+C_E belongs to both coefficient domains. External strict binomial theorem at
+that anchor + new larger-noise rows + direct Bernoulli treatment oflambda0
+ -> full-noise LOCAL unions:rightn>=200,leftn>=700.
+Different components need not select the same anchor. See join-review.md1.
 
-## Independent-noise closure
+Genuine sharp predecessor + attained/oriented fixed-target witness
+ + retained structural theorem and complete coarse Fourier proof object
+ -> manuscript/arxiv-v1/sections/04-fixed-entry.tex:
+    nD<=32.20665378,raw|H|<=1.83605680 and coarse entry.
+ -> v10 geometry.tex and v11 leftpanels.tex:probability panels/support strips.
+ -> v13 geometry-noise.tex on actual central gap:
+    lambda<.36,lambda<.32left,p<=1/3 impliesn<=168.
+ -> optional high-p consequence:p>=.53 impliesn<=105.
+ -> local unions exclude all acquired nonnegative witnesses atn>=700.
+The high-p consequence uses PROVED positive monotonicity inlambda before
+D>=Q/sqrt(v); dropping the noisy denominator is invalid. Atp=.4 the left
+strip suffices. Normalization islambda=n theta/ell², notn theta.
 
-B Bernoulli(p),p[1/4,3/4]; U centered independent ofB, support width<=1/5 ->
-Schulz all-p/all-n absolute CDF theorem after conditioning on sumU -> finite
-third-order Gaussian replacement -> error<=3s/(125v^(3/2)). Actual sign-preserved
-cubic expansion gives C_E(rho-rhoB)>=27s/(1000v^(3/2)) -> full absolute BE margin
-3s/(1000v^(3/2)), alln, allthresholds. No acquisition or count theorem needed.
-Equal conditional laws imply this independence; unequal laws do not.
+Reflection:negative closed discrepancy<=reflected positive closed discrepancy
+at the same raw threshold magnitude, including atoms. The reflected oriented
+law needs its own acquisition; probability intervals are not invariant.
+GenuineBASE41 + acquisition at each least failure
+ -> any first strict failure lies42..699.
+This does NOT prove unconditional cutoff700. That induction needs a genuine
+base through699 or independent coverage42..699.
 
-## Paired kernels
-
-V13 separated centered crossing -> exact neighboring pair identity with one
-closed weighted incoming event. Central np integer,H0,one conditional noise
-zero,the other centeredtwo-point withouter.6,n>=42,p[.4,.53],lambda<=.36 ->
-explicit factorial moments and density-cap binomial mass -> full strict local
-comparison. Selected-bias caps additionally need each conditional width<1-d.
-
-## Removal scopes
-
-Larger-noise count grids are unnecessary for the proved right n>=6000domain;
-allcount/Poisson comparison is unnecessary for the independent-noise subclass;
-all count work is unnecessary in the proved left excluded region; restricted
-family tail checks unnecessary at the stated central anchors. Existing proof
-objects are retained. All other local/finite-base/acquisition dependencies remain.
+Removed ONLY within the new larger-noise local rows:selected-count transport,
+13d displacement error,21-count window,derived d<=3/n; the new left comparison
+also avoids the quantitative middle-p binomial reserve. These old theorems are
+preserved and can still help smaller indices.
+Not removed:291-cell v12 negative-inner,11264-cell coarse Fourier,
+actual-gap/support/contact/attainment/predecessor/reflection,independent finite
+base. Old logs and source hashes do not independently verify analytic premises.
+Optional counts-phase.tex first-moment curvature is not an ancestor of n200/700.
+Its counterexample only refutes a proposed stronger anchor rule.

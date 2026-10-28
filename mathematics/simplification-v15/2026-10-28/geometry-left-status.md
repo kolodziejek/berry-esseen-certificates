@@ -143,3 +143,7 @@ Final scalar checker SHA-256:
 `8c29a67d659f92a74f0e42e3a5136b95247315cf681eefc98cc64f80c1e53946`.
 Final actual-law checker SHA-256:
 `e7cc91e69e35f3f7dce2d938108c38f731e9505b0e383fc2679bf69f5dd62c9f`.
+
+## Final integration review
+
+Final integration: the coordinator independently derived the complete left comparison. Two literal strict endpoint displays were changed to weak inequalities at zero/one, without changing any theorem target or constant. The final proof/build/source pins are in reviewed-sources.json and runs/simplification-v15-20261028/leftbuild03/. The join review is bound to that corrected source. Original constructor receipts above remain tied to their original bytes.
