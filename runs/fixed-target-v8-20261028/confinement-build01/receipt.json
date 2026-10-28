@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/confinement-v8/mathematics/fixed-target-v8/2026-10-28/confinement-proof/confinement.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/confinement-v8/runs/fixed-target-v8-20261028/confinement-build01",
+    "--json"
+  ],
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/confinement-v8",
+  "returncode": 0,
+  "elapsed_seconds": 0.9406819343566895,
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "input_sha256": "080fe7915bd5cfd569c208ce057a7078f6aae7a787ceca1cde14cb45acf25ee2",
+  "stdout_sha256": "679a3cb988602ebea243b9990b1974b467dad496fa6a3355805e565fc5d674f7",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "artifacts_sha256": {
+    "confinement.pdf": "9a112ce2eb6e4ec2cff24dc93c180c0e19c29bd9dd3a318115fcd0e550fc7bc8",
+    "confinement.log": "58ffb1b59de8a530136e28d886c0f6202fe769ff06d1943e004ab5d0665aea20"
+  },
+  "compile_helper_sha256": "1b8034d6f4def5eb52cfde6a2701d8ad1df2b265323713bea626ace85e756cd7"
+}

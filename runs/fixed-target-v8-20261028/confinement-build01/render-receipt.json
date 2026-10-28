@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "pdftoppm",
+    "-r",
+    "110",
+    "-png",
+    "runs/fixed-target-v8-20261028/confinement-build01/confinement.pdf",
+    "runs/fixed-target-v8-20261028/confinement-build01/render/page"
+  ],
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/confinement-v8",
+  "returncode": 0,
+  "elapsed_seconds": 0.6909220218658447,
+  "page_sha256": {
+    "page-1.png": "31c1d6cac49ce96e5031970e4ce48c243cc3616726447f889b211667b6425521",
+    "page-2.png": "65b60b547dfbc110deda0d2d47f170be53e3b9c5633dbe2a56a7438d4566daa4",
+    "page-3.png": "427b1b762700e8ea561295148a7aa57be9bb9fcefebd0d701e9931904f778f00",
+    "page-4.png": "a8628ea00d382a08fef1ddd98cc60d7aae1807dc4b391f2f4f16a0a7dcde9990",
+    "page-5.png": "ec7709444f94c62d0b28d2e8f58e20d7275d4febb2e31bfc820c9d0f49b6257c"
+  }
+}

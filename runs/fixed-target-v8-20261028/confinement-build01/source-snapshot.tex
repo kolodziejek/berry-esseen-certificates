@@ -1,0 +1,376 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\newcommand{\CE}{C_{\rm E}}\newcommand{\pos}[1]{(#1)_+}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\title{One fixed-target panel: an acquired strip and a confinement barrier}
+\author{Bounded research note, 28 October 2026}\date{}
+\begin{document}\maketitle
+
+\section{Statement and explicit inherited premises}
+Let $n\ge N=42$ and let a centered variance-one law $P$ and raw threshold
+$H$ maximize the fixed-target excess
+\[
+ \mathfrak a=\sqrt n\{F_{n,P}(H)-\Phi(H/\sqrt n)\}-c\rho\ge0,
+ \qquad c=\CE,\quad \rho=\E|X|^3.
+\]
+Assume $C_{n-1}\le c$ and the fixed-target contact theorem, with closed
+support contact. Let $\sigma_0=\sqrt{10}$, $\gamma=\E X^3$,
+$m=\E X_+$, and
+\[
+ J=\sum_{(u,v)}\tau_{u,v}(v-u)^2,
+ \quad \tau(t)=\E[X\mathbf1_{X\ge t}],\quad
+ D=(3+\sigma_0)\rho-\gamma-3J.
+\]
+All gaps are actual complementary intervals of the closed support.
+Suppose the acquired entry has supplied
+\begin{equation}\label{conf:entry}
+ |X|\le96/25,\quad p=\Pp(X>0)\in[l,h]=[0.41,0.42],
+ \quad\theta\le0.27,\quad nD\le42(0.7).
+\end{equation}
+Here $q=1-p$, the conditional means are $-a=-m/q$ and $b=m/p$,
+$V=\E[X\mid\mathbf1_{X>0}]$, and $\theta=\E(X-V)^2$.
+Put $\ell=a+b=m/(pq)$ and $X=\ell(Y-p)$, $Y=B_{\rm ind}+U$,
+where $B_{\rm ind}=\mathbf1_{X>0}$ and $\E(U\mid B_{\rm ind})=0$.
+These hypotheses refer to one law. The numerical entry table is a
+conditional input here; this note does not replay its Fourier acceptance.
+
+\begin{theorem}\label{conf:panel}
+Under the stated premises,
+\begin{gather*}
+ \theta<0.054,\qquad d<0.069,\qquad \rho<1.218600<1.22,\\
+ 0.09736\le\beta:=\E[X|X|]\le0.234,
+ \qquad \ell>1.9706,\qquad \lambda:=n\E U^2<0.6,\\
+ \operatorname{supp}P\subset(-1.8,2.325),\qquad
+ \operatorname{supp}Y\subset(-0.6,1.6),\qquad |U|<0.6.
+\end{gather*}
+The quantity $d=1-(A+B)/\ell$ is the normalized inward displacement,
+where $(-A,B)$ is the actual central support gap. The bound on $\lambda$
+uses the weighted hypothesis $nD\le42(0.7)$, not merely $D\le0.7$.
+\end{theorem}
+
+\section{A same-law moment iteration}
+First $D\le0.7<\sigma_0-1$ excludes zero from the closed support:
+if zero belonged to it, summing the one-sided gap bound would give
+$J\le\rho$, and thus $D\ge(\sigma_0-1)\rho\ge\sigma_0-1$.
+The gap endpoints satisfy $0<A\le a$, $0<B\le b$.
+Set $\Delta_A=a-A$, $\Delta_B=b-B$.
+On each sign class use the measure
+$d\mu_\pm=(X-V)^2\mathbf1_{\{\pm X>0\}}\,dP$, with magnitude variable
+$x=|X|$.
+
+\begin{lemma}[One common resource]\label{conf:cost}
+Let $p_*=(4-\sigma_0)/2$. Then
+\begin{align}
+ D&\ge B_0+E_0+\int k_+\,d\mu_++\int k_-\,d\mu_-,\label{conf:joint}\\
+ B_0&=\frac{(6+2\sigma_0)(1-\theta)^{3/2}}{\sqrt{pq}}(p-p_*)^2,
+ \quad E_0=6m\{(A+B)(\Delta_A+\Delta_B)+\Delta_A\Delta_B\},\notag\\
+ k_+(x)&=(\sigma_0-1)(x+2b)+6B,
+ \quad k_-(x)=(\sigma_0+1)(x+2a)+6A.\notag
+\end{align}
+All four terms on the right are nonnegative. Moreover,
+\begin{equation}\label{conf:product}
+ AB\ge\frac{\sigma_0-1-D}{3},\qquad
+ E_0\ge6m\ell^2(1-d)d.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For positive outer gaps, comparison with
+$2\int(t-B)\tau(t)\,dt$ gives
+$J_o^+\le T_+-2BR_+$, where
+$T_+=\E X_+^3-mB^2$ and $R_+=\E X_+^2-mB\ge0$.
+Reflection gives $J_o^-\le T_--2AR_-$, with the analogous negative
+quantities. Add the central contribution $m(A+B)^2$ and substitute in D:
+\[
+ D\ge(\sigma_0-1)\E X_+^3+(\sigma_0+1)\E X_-^3
+            -6mAB+6BR_++6AR_-.
+\]
+Conditional centering gives
+\[
+ \E X_+^3=mb^2+\int(x+2b)\,d\mu_+,
+ \quad R_+=\mu_+(\mathbb R)+m\Delta_B,
+\]
+and the corresponding negative identities. The constant part is $B_0+E_0$;
+use $a=\ell p$, $b=\ell q$, and
+\[
+ (\sigma_0+1)p^2+(\sigma_0-1)q^2-6pq
+                  =(6+2\sigma_0)(p-p_*)^2.
+\]
+This proves \eqref{conf:joint}. The simpler gap bound
+$J\le\rho+2mAB$ gives
+$6mAB\ge\sigma_0\rho-\gamma-D\ge\sigma_0-1-D$.
+Since $m\le1/2$, the first part of \eqref{conf:product} follows.
+The second uses $A+B=\ell(1-d)$ and
+$\Delta_A+\Delta_B=\ell d$.
+\end{proof}
+
+Here is the precise finite iteration, with $D_*=0.7$ and
+$s_*=3.162277660<\sigma_0$. Write
+$v_-=l(1-l)$ and $v_+=h(1-h)$.
+Initially
+\[
+ a\le a^+=\sqrt{h/(1-h)},\quad b\le b^+=\sqrt{(1-l)/l},\quad
+ P_*=(s_*-1-D_*)/3>0.
+\]
+Take outward bounds
+$A_-=P_*/b^+$, $B_-=P_*/a^+$ and
+$c_-=2\sqrt{P_*v_-}\le(A+B)/\ell$, with $\Theta=0.27$.
+Given these bounds, let
+\[
+ a_-^m=\sqrt{(1-\Theta)l/(1-l)},\quad
+ b_-^m=\sqrt{(1-\Theta)(1-h)/h},
+\]
+and set
+\begin{align*}
+ K_\theta&=\min\{(s_*-1)(B_-+2b_-^m)+6B_-,
+                    (s_*+1)(A_-+2a_-^m)+6A_-\},\\
+ \Theta'&=\min\{\Theta,D_*/K_\theta\},\qquad
+ e_- =\sqrt{(1-\Theta')/v_+},\quad m_- =\sqrt{(1-\Theta')v_-},\\
+ d'&=\min\{1-c_-,D_*/(6m_-e_-^2c_-)\},\quad c_-'=\max\{c_-,1-d'\},\\
+ A_-'&=\max\{A_-,e_-(l-d')\},\quad
+ B_-'=\max\{B_-,e_-(1-h-d')\}.
+\end{align*}
+Every square root in the checker is rounded in the required direction.
+The first update follows from $D\ge K_\theta\theta$ in
+\eqref{conf:joint}; the second follows from \eqref{conf:product}.
+Only already proved bounds are used before each update. Four repetitions give
+the following strict upper bounds:
+\begin{center}
+\begin{tabular}{ccc}\toprule
+step&$\theta$&$d$\\\midrule
+1&0.077629&0.094983\\
+2&0.055626&0.069572\\
+3&0.053266&0.067419\\
+4&0.053060&0.067242\\\bottomrule
+\end{tabular}
+\end{center}
+Thus the simpler closed bounds $\Theta=0.054$, $d_0=0.069$ are valid.
+They imply $\ell>E=1.9706$, and hence
+$A\ge E(l-d_0)=0.6719746$, $B\ge E(1-h-d_0)=1.0069766$.
+
+To retain coupling in the third moment, let
+$\rho_B(p)=(1-2pq)/\sqrt{pq}$ and
+$\delta\rho=\rho-(1-\theta)^{3/2}\rho_B(p)$.
+The same conditional expansion gives
+$\delta\rho=\sum_\pm\int(x+2a_\pm)\,d\mu_\pm$.
+With $R=96/25$ and $L=R+2b^+$, put
+\[
+ k=\min\left\{s_*-1+\frac{6B_-}{R+2b^+},
+                 s_*+1+\frac{6A_-}{R+2a^+}\right\}>0.
+\]
+Since $p<1/2$, $b^+\ge a^+$, and
+\[
+                 \delta\rho\le\min\{L\theta,D_*/k\}.
+\]
+Take an outward upper $r_B\ge\rho_B(l)$ and $a_*=29/20$.
+The gate $a_*^2<(9/4)(1-\Theta)$ gives
+$(1-\theta)^{3/2}\le1-a_*\theta$ for $0\le\theta\le\Theta$.
+Also $L-a_*r_B>0$. The piecewise linear maximum therefore gives
+\[
+ \rho\le r_B+(L-a_*r_B)\min\{\Theta,D_*/(kL)\}
+                 <1.218600<1.22.
+\]
+The moment bound uses the original radius $R$; it is not based on the
+support improvement proved next. The signed second moment identity gives
+\[
+ 1-2h-2(1-h)\Theta\le\beta\le1-2l+\Theta,
+\]
+which is the claimed interval. Finally the refreshed cost satisfies
+$K_\theta>13.16206$. Multiplying $D\ge K_\theta\theta$ by $n$ and using
+$\lambda=npq\theta/(1-\theta)$ gives
+\[
+ \lambda\le\frac{42D_*v_+}{(1-\Theta)K_\theta}<0.575188<0.6.
+\]
+
+\section{Signed contact rays acquire the initial strip}
+Fixed-target contact and $C_{n-1}\le c$ imply at every support point $x$
+\begin{equation}\label{conf:contact}
+ 0\le\mathcal H_n(H,x)+c\{-|x|^3+\tfrac32\rho x^2+3\beta x+\rho e_n\}
+                         -n\mathfrak a,
+\end{equation}
+where $e_n=n(\sqrt{n/(n-1)}-1)-1/2<8/875$ and $\mathcal H_n$ is the
+Gaussian heat remainder. The final term is nonpositive and can be dropped.
+
+The retained fourth-order heat expansion remains valid for $u>\sqrt3$,
+even though its earlier simple envelope was stated only for $u\ge5/2$.
+With $v=n-1$, $s=\sqrt{n/v}$, $z=H/\sqrt v$,
+\[
+ \mathcal H_n(H,\pm u)/s^3
+ =\pm A_u(1-z^2)\phi(z)+B_u\phi'''(z)+R_u,
+\]
+where $A_u=(u^3-3u)/6>0$,
+$B_u=(u^4-6u^2+3)/(24\sqrt v)$, and
+\[
+ |R_u|\le\frac{u^5/100+3u/20}{v}
+                +\frac{51(3u^2-2)}{960v^{3/2}}.
+\]
+The Taylor remainder derivation uses $u^2-1\ge0$; this holds on the
+present enlarged domain. Only the sign of $B_u$ changes, so use
+$|B_u|$ in the bound $\|\phi'''\|_\infty<2\phi(0)$.
+With $S=81/80$, $c_-=0.4095<c$, define
+\begin{align*}
+ E_u&=u^5/4100+3u/820+17(3u^2-2)/78720,\\
+ Q_{r,b}(u)&=-u^3+\tfrac32ru^2+3bu+(8/875)r,\\
+ P_{r,b}(u)&=\tfrac25S^3\{A_u+|u^4-6u^2+3|/72\}
+                                  +S^3E_u+c_-Q_{r,b}(u).
+\end{align*}
+The sign $Q<0$ is checked before using the lower multiplier $c_-$.
+For the negative ray choose $b=-\beta_-$, and for the positive ray
+choose $b=\beta_+$. With $r=1.22$, exact rational arithmetic gives
+\[
+ P_{r,-0.09736}(1.8)<-0.093411,
+ \qquad P_{r,0.234}(2.325)<-0.005327.
+\]
+To cover the entire rays, define
+$L=(2/5)(u^2/2+1/2+8/875)+c_-Q'(u)$.
+The uniform derivative estimate
+$|\partial_x\mathcal H_n|\le(2/5)(x^2/2+1/2+e_n)$
+and the six strict signs $Q,Q',Q'',L,L',L''<0$ at each boundary suffice:
+$Q'''=-6$ and $L''=2/5-6c_-<0$ propagate the signs.
+The checker verifies all twelve signs. Hence \eqref{conf:contact}
+excludes $x\le-1.8$ and $x\ge2.325$, including boundary atoms.
+
+The exact inequalities
+\[
+ 1.8<E(l+0.6),\qquad 2.325<E(1+0.6-h)
+\]
+now give $-0.6<Y<1.6$. The inner endpoints give $U_0\le d<0.069$
+and $U_1\ge-d>-0.069$; the outer strip gives the other two sides.
+Thus $|U|<0.6$. This completes Theorem~\ref{conf:panel}, including zero
+noise. In that case both conditional variances vanish and $U=0$ exactly;
+no division by noise or limiting argument is used.
+
+\section{What transfers to the next confinement step}
+In Bernoulli coordinates the fixed-target contact majorant obeys
+\[
+ \sqrt n(-Q_c'(y))=\ell\phi(H/\sqrt n)
+ +\frac\ell n\{3c\beta+(H\phi(H/\sqrt n)+3c\rho)t-3ct|t|\},
+ \quad t=\ell(y-p).
+\]
+This is exactly the retained derivative with coefficient $c$.
+The extra excess affects an additive constant and disappears under
+differentiation. It does not license replacing the actual deleted sums
+by score bounds without proving those separate bounds.
+
+The present attempt instead uses strict-gap antichain concentration.
+It needs no deleted-score constants, but it does retain both actual
+indices $n-1,n-2$, the latter at least $40$. Put
+\[
+ r_L=l-(1-l)/40,\quad r_R=h+h/40,\quad
+ v_* =\min\{r_L(1-r_L),r_R(1-r_R)\}.
+\]
+Finite Stirling gives a valid cap $M$ whenever
+\[
+ M^2>\frac{0.16}{v_*(1-1/480)^2},\qquad
+ F_d^2>\max\{(42/41)^3,42/40\}.
+\]
+The checker uses a directed $M$ and $F_d=1.037$.
+The coefficient $c_\rho=24$ is valid here because
+$24^2[l(1-l)]^3>[3(1-l)+0.6]^2$; no old strip width is substituted.
+
+For a target amplitude $r_0=1/2$, choose both buffers $\tau=1/5$.
+The necessary geometry is strict:
+\[
+ 1-0.6-2d_0>0,\quad d_0+2\tau<r_0,\quad
+ 1-d_0-\tau>0,\quad1-2d_0-2\tau>0.
+\]
+The lower interval widths also remain strictly below $1-d_0$ over
+the whole acquired strip. The old particular choice $7r_0/15$ for
+the upper buffer fails $d_0+2\tau<r_0$ and is not reused.
+
+For this diagnostic the frozen entry row additionally supplies
+$\mathcal R_c< T=2.016$ and $|H|<1.814$.
+The raw license $T<42c_-$ gives the single conserved resource
+\[
+ (n+H^2)\mathfrak a+n\phi(0)D/6+n^{3/2}L_{\rm leak}
+ <\mathcal B(H):=T-\eta H^2,
+ \qquad \eta=(c_- -T/42)/2>0.
+\]
+This follows from the fixed-target Gaussian phase-price lemma; a defect
+maximum alone would not give this joint resource. Every term refers to
+the same law and raw threshold. The strict inequality follows from the
+outward raw ceiling, not from altering an acceptance target.
+
+The bounded check evaluates the retained slope and resource formulas on
+eight closed phase intervals, eight closed noise intervals in $[0,0.6]$,
+and both signs of $H$: 128 boxes. Four are excluded by the resource; 195
+of the remaining 248 ray gates fail. Thus this invocation does not prove
+$|U|<1/2$. Its zero-noise case is independently trivial; the failed
+positive-noise gates cannot be removed on that account.
+
+\section{A buffer-independent obstruction to this sufficient bound}
+The failure is not merely caused by the coarse subdivision.
+Fix the singleton $H=5/4$, $\lambda=3/20$ in the same panel and retain
+the preceding outward moment, scale and concentration constants.
+The upper contact side is
+$L_g-0.6U_+<0.216059$.
+Let $b_*$ be the retained positive coefficient of $\theta$ in the
+common moment resource, and put
+\[
+ R_* =\mathcal B(H)/\kappa-b_*E^2\lambda>0,
+ \qquad\kappa=997/15000.
+\]
+The upper geometry permits only
+$0<\tau<(r_0-d_0)/2=0.2155=:\tau_*$.
+The directed-distance term is affine in this entire interval:
+\begin{align*}
+ A(\tau)&=A_0+A_1\tau,\\
+ A_0&=F_dM\left\{\frac{d_0+H/E-l}{l}
+                   +\frac{1+d_0+H/E-l}{1-h}\right\},\\
+ A_1&=F_dM\{1/l+2/(1-h)\}.
+\end{align*}
+Both distance numerators are positive even at $\tau=0$.
+The old resource error majorant has coefficient
+$z\ge\kappa/((1-\Theta)\tau)$.
+Every tangent majorant also contains the leakage vertex
+$v_J=\kappa R_*/(42(1-\Theta)\tau)$, whose displacement is zero;
+its remaining tangent intercept is nonnegative.
+Consequently \emph{each of those error majorants}, for every allowed
+buffer and every nonnegative tangent parameter, is at least
+\[
+ f(\tau)=\frac{A_0}{42}+\frac{A_1\tau}{42}+\frac K\tau,
+ \qquad K=\frac{\kappa R_*}{42(1-\Theta)}.
+\]
+This lower-bounds the error bounds, not the true probabilistic error.
+The exact gate $A_1\tau_*^2/42<K$ makes $f$ strictly decreasing on
+$(0,\tau_*]$, so every admissible choice exceeds
+\[
+ f(\tau_*)>0.23161994,
+ \qquad f(\tau_*)-(L_g-0.6U_+)>0.01556155.
+\]
+Thus no refinement of the phase/noise mesh at this singleton, no choice
+of its upper buffer, and no additional tangent parameter repairs this
+particular sufficient-bound attempt with these fixed envelopes.
+It is not a counterexample to confinement or to the sharp conjecture.
+
+The current phase resource is $\mathcal B(5/4)=1.733578125$.
+Keeping the other envelopes, a necessary condition for removing this
+leakage-vertex obstruction is a resource ceiling below
+\[
+ \kappa b_*E^2\lambda+
+ 42(1-\Theta)\tau_*\{L_g-0.6U_+-A(\tau_*)/42\}
+ <1.600336284.
+\]
+The exact rational threshold is recorded by the checker. Passing this
+threshold alone would still not prove the remaining confinement gates.
+A coherent phase quadratic for the same active moment cell is a possible
+next input; separate favorable maxima of $D,H$ do not supply it.
+
+\section{Evidence and scope}
+The standard-library exact checker binds one frozen probability-panel
+object, verifies four moment updates, two signed boundary inequalities,
+twelve whole-ray signs, the noise bound, all listed geometry gates, the
+128 diagnostic boxes, and the continuous buffer obstruction. Eight
+negative controls reject missing/reordered source panels, a changed
+defect input, duplicate keys, a false smaller support radius, the wrong
+negative-ray beta sign, the invalid old buffer, and a false complete
+half-amplitude claim. No inherited numerical program is executed.
+
+Mathematical status: Theorem~\ref{conf:panel} is conditional on the
+fixed-target contact, sharp predecessor and acquired entry premises.
+The next half-amplitude invocation remains unproved, with an exact
+obstruction to the displayed sufficient bounds. Execution status:
+fresh rational checks of the new component and diagnostic; no native
+INITIAL42/LOCAL42 acceptance, finite base or global theorem is claimed.
+\end{document}
