@@ -373,7 +373,7 @@ changes require their own provenance; no such change silently extends this revie
 |---|---|
 | `main.tex` | `7ff04e52c194e1b08485171a8a3e478448f50b7b2d74436069eff580f86ee68d` |
 | `sections/02-fixed-target.tex` | `5a00687b76390fcaa4c57f9f893d070b23bf3119eda8aa4b82d66c3b4c0b509b` |
-| `sections/04-fixed-entry.tex` | `c1051e60e728fd9bb3a03734d889f2fce4fa7f6834d88dd7ddc3d00de5536032` |
+| `sections/04-fixed-entry.tex` | `db7156ca43f874b29216d6f297d74ea79ace4b988ec200a93a169e0d342498d8` |
 | `sections/06-fixed-resources.tex` | `1c8c5357a7057cff203fc580847dfdd0ee5befa5788d20761cce4956b0bd5ad0` |
 | `sections/07-fixed-confinement.tex` | `a1961a20b3dd8a6b6b465c82493e59a83d254559a9705e02e00626d2ce302fc4` |
 | `sections/05c-counts.tex` | `4902cddc9465536ea7d8ff2208d8ed39d81de200759660e8bdbb918ffc1157f2` |
@@ -382,5 +382,32 @@ changes require their own provenance; no such change silently extends this revie
 | `sections/08-certificates.tex` | `846d5fa8fb752aef117d3533038758154b4b97fd8bbb191042a0e068cf3117d7` |
 | `appendices/fixed-fourier.tex` | `f13b162a5a6d69934dd8f0c0b1b19274d5ec942dd87a855b94490f9e60c79478` |
 | `appendices/count-comparison.tex` | `b81146b5a8b80e46da99db6e468c148598a0a7c05ab5117e46a477c47c90435e` |
-| `appendices/local42-refinements.tex` | `55741dabacc3429a03dbfb6354890b460cd2ff55ee754f4e591215cbafcbcdc5` |
+| `appendices/local42-refinements.tex` | `d44bc3dd9b0eaf0de85e8d44ba76ebcdf5fd19fa49b54a58978298dab248206f` |
 | `research/v9_checks/scalar.py` | `a2387da4629d9abe09bb4bace634cd6b2172043815af68e2b609b95de2b70657` |
+
+
+## Post-review cosmetic addendum
+
+After commit `3ca58fb`, the coordinator made two requested source-only
+corrections. This addendum compares the actual coordinator files, not the
+older source copies on the review branch. For each file, the SHA256 of
+`git show 5f01d77:<path>` exactly matches the earlier review pin. Applying
+only the listed substitutions reproduces the new file bytes exactly:
+
+- `sections/04-fixed-entry.tex:254`: the label `v9:fourier:high` is called
+  a Proposition rather than a Lemma. Its target in `fixed-fourier.tex:226`
+  is in fact a proposition. No inequality or hypothesis changes.
+- `appendices/local42-refinements.tex:51,194-197`: four local prose/notation
+  occurrences now use `zeta` for the count-increment lower bound and its
+  curvature dependence. The fixed target remains `c=CE`; no formula,
+  constant, domain or certificate predicate changes.
+
+The final snapshot table above now contains the two new hashes. The previous
+pins were:
+
+- `sections/04-fixed-entry.tex`: `c1051e60e728fd9bb3a03734d889f2fce4fa7f6834d88dd7ddc3d00de5536032`.
+- `appendices/local42-refinements.tex`: `55741dabacc3429a03dbfb6354890b460cd2ff55ee754f4e591215cbafcbcdc5`.
+
+Execution status for this addendum: fresh byte comparisons passed; no
+mathematical certificate, numerical replay or LaTeX build was run. The
+scoped recommendation is unchanged. The earlier notation caution is resolved.
