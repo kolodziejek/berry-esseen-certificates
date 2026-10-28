@@ -1,0 +1,289 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\title{The left probability range from five neighboring counts}
+\author{}\date{28 October 2026}
+\begin{document}\maketitle
+
+Five neighboring counts retain enough of the crossing loss to pay for the
+finite corrections. Centered replacements compare their smooth kernels
+without an inward-displacement error. On the left probability range this
+gives a complete signed exclusion at every index at least 700, including
+the noise between the previous small-noise theorem and the geometric ceiling.
+
+Write $\phi_0=(2\pi)^{-1/2}$ and $C_E=(3+\sqrt{10})\phi_0/6$.
+\begin{theorem}\label{thm:left}
+Let $n\ge700$ be an integer, $p\in[1/3,2/5]$, $q=1-p$, and
+$Y=B+U$, where $B$ is Bernoulli of parameter $p$ and $\E(U\mid B)=0$.
+Write $U_j$ for the conditional noise given $B=j$. Suppose
+\[
+ -7/10\le U_0\le a_0,\quad -a_1\le U_1\le7/10,
+ \quad a_0,a_1\ge0,\quad a_0+a_1\le17/250.
+\]
+Put $v=pq$, $s=\E U^2$, $\lambda=ns$, $X=(Y-p)/\sqrt{v+s}$ and
+$\rho=\E|X|^3$. If $1/100\le\lambda\le8/25$ and $|H|\le46/25$, then
+for independent copies $X_1,\ldots,X_n$,
+\[
+ \sqrt n\{\Pp(X_1+\cdots+X_n\le H)-\Phi(H/\sqrt n)\}
+                       -C_E\rho<-\lambda/100.
+\]
+\end{theorem}
+
+There is no contact, predecessor or geometric-budget premise in this
+comparison theorem. Those premises remain in acquiring the displayed strip
+and noise ceiling for a putative extremal witness. The conclusion is signed;
+reflection requires the inputs for the reflected law.
+
+\section{Retaining the exact crossing loss}
+Set $t=np+H\sqrt{v+s}$, $k=\lfloor t\rfloor$, $u=t-k\in[0,1)$,
+$\delta=k-np$, and $s_j=\E U_j^2$. Since $v\in[2/9,6/25]$,
+\[
+ v+s<1/4,\quad |t-np|<23/25,\quad
+ -48/25<\delta<23/25.
+\]
+In particular all five indices $k-1,\ldots,k+3$ are interior.
+Use independent conditional pairs to form
+\[
+ T_j=j+\sum_{i\le j}U_{1i}+\sum_{i>j}U_{0i},\quad
+ V_i=\sum_{l<i}U_{1l}+\sum_{l>i}U_{0l},
+\]
+\[
+ h(x)=\E(x-U_0)_+-\E(x-1-U_1)_+-\Pp(1+U_1\le x),
+ \qquad g_i=\E h(t-i+1-V_i).
+\]
+The mesh is increasing; $T_0\le t<T_n$ follows from the inward caps.
+The finite crossing identity of v13 gives $g_i\ge0$ and, with
+$\pi_j=\Pp(\operatorname{Bin}(n,p)=j)$,
+\begin{equation}\label{eq:cross}
+ \Pp(X_1+\cdots+X_n\le H)
+ =(1-u)F_B(k)+uF_B(k+1)+\mathcal C(t)-\sum_i\pi_i g_i,
+\end{equation}
+where
+\[
+ \mathcal C(t)=\sum_{j=1}^{n-1}(\pi_{j+1}-\pi_j)
+       \{\E(t-T_j)_+-(t-j)_+\}.
+\]
+Each conditional sum has the distribution from the actual iid law.
+The auxiliary coupling changes none of these conditional marginals.
+Lower crossings remain closed and upper crossings strict, including atoms.
+
+\section{Five smooth kernels give the reserve}
+Let $B(x)=\sin^2(\pi x)$ on $[0,1]$ and zero elsewhere. Its derivative
+is globally Lipschitz with constant $2\pi^2$ and is zero at both joins.
+We first check the pointwise minorant
+\begin{equation}\label{eq:minorant} h(x)\ge(2/5)B(x).
+\end{equation}
+Separated support gives $h\ge0$. If $0\le x<1-a_1$, Jensen gives
+$h(x)\ge x$. The elementary bound $B(x)\le(5/2)x$ follows from
+$\pi^2<10$ for $x\le1/4$, the tangent at $1/4$ on $[1/4,2/5]$, and
+$B\le1$ for $x\ge2/5$. On the middle interval $B$ is concave and its
+tangent is $1/2+\pi(x-1/4)$; the two endpoint comparisons use $\pi<10/3$.
+
+For $1-a_1\le x\le1$, put $D=1+U_1$ and $L=\E(D-x)_+$.
+Put--call parity gives $h=\Pp(D>x)-L$, and hence
+\[
+ h(x)\ge\frac{x-7/10}{17/10-x}L
+       \ge\frac{29}{96}(1-x),
+\]
+since $x\ge233/250$ and $L\ge1-x$. On this same interval,
+\[
+ (2/5)B(x)\le(2/5)(22/7)^2(17/250)(1-x)
+                                    <(29/96)(1-x).
+\]
+At $x=1$ the minorant is zero. The strict survival probability in this
+calculation retains all atoms of $D$.
+
+Freeze $V=V_{k+1}$ and compare the five omitted-coordinate laws
+$V^{(j)}\stackrel{\rm law}=V_{k+1+j}$, $-2\le j\le2$.
+If $F'$ is Lipschitz with constant $L$ and $Z$ is centered, Taylor's
+integral remainder gives
+$|\E F(r+Z)-F(r)|\le L\E Z^2/2$. Thus one centered replacement
+costs at most $\pi^2(s_0+s_1)$ for a bump with this derivative bound.
+There are only four replacements after regrouping: for example, with
+$B_j(x)=B(u-j-x)$, the two positive-index differences equal
+\begin{align*}
+ &\E(B_1+B_2)(V^{(1)})-\E(B_1+B_2)(V)\\
+ &\hspace{15mm}+\E B_2(V^{(2)})-\E B_2(V^{(1)}).
+\end{align*}
+The open supports of $B_1,B_2$ are disjoint, and their derivatives
+vanish at the common boundary. Their sum still has derivative Lipschitz
+constant $2\pi^2$. The negative indices give two analogous replacements.
+Since $s_0+s_1\le3\lambda/n$, their total cost is at most
+$12\pi^2\lambda/n$. No independence of sums at different counts is assumed.
+
+The infinite translates of $B$ sum to a periodic sine square. Every
+omitted nonzero term with $|j|\ge3$ requires $|V|>2$, so
+\[
+ \sum_{j=-2}^2\E B(u-j-V)
+ \ge\E\sin^2(\pi(u-V))-\E V^4/16.
+\]
+The two boundary bumps vanish at integer joins, so there is no missing
+atom contribution.
+
+For $|x|\le96/125$, one has
+\begin{equation}\label{eq:cos}1-\cos(2\pi x)\ge(7/5)x^2.
+\end{equation}
+On $[0,3/4]$, the sine chord gives
+$\sin(\pi x)\ge(2\sqrt2/3)x>(14/15)x$.
+On $[3/4,96/125]$, its derivative bound gives
+$\sin(\pi x)>7/10-(22/7)(9/500)=563/875$.
+Squaring these positive bounds proves \eqref{eq:cos} on both closed
+intervals, then evenness completes the proof.
+Conditional support diameters are at most $7/10+17/250=96/125$.
+For either conditional noise $Z$ and an independent copy $Z'$, this yields
+\[
+ 1-|\E e^{2\pi iZ}|^2\ge(14/5)\operatorname{Var}Z,
+ \qquad |\E e^{2\pi iZ}|\le e^{-(7/5)\operatorname{Var}Z}.
+\]
+Only the independent frozen summands are multiplied. Their variance is
+\[
+ \tau=\E V^2=(nq-\delta-1)s_0+(np+\delta)s_1,
+ \qquad(1-6/n)\lambda\le\tau\le(1+3/n)\lambda.
+\]
+These are the physical count coefficients; they follow from the displayed
+bounds for $\delta$, $p\ge1/3$ and $q\ge3/5$.
+The fourth moment is at most $(49/100)\tau+3\tau^2$. Therefore
+\begin{equation}\label{eq:gain}
+ \sum_{i=k-1}^{k+3}g_i\ge\frac25\left\{
+ \frac{1-e^{-(7/5)(1-6/n)\lambda}}2
+ -\frac{(49/100)(1+3/n)\lambda+3(1+3/n)^2\lambda^2}{16}
+ -\frac{12\pi^2\lambda}{n}\right\}.
+\end{equation}
+This is the left-strip adaptation of the four-replacement proof in
+\path{loss-direct.tex}; the changes of support width, probabilities and
+variance constants have all been derived here.
+
+\section{Binomial weights and finite corrections}
+For $|i-k-1|\le2$, the phase bounds give $|i-np|<4$.
+The segment from $i/n$ to $p$ has variance product greater than $11/50$.
+Finite Stirling with remainder $0<r_j<1/(12j)$ and the entropy Taylor
+bound imply, uniformly for $n\ge700$,
+\[
+ \sqrt n\pi_i\ge2\phi_0
+ \exp\left\{-\frac{8+1/12}{700(11/50)}\right\}
+ >2\frac{19943}{50000}
+       \left(1-\frac{8+1/12}{700(11/50)}\right)>\frac34.
+\]
+Thus \eqref{eq:gain} can be multiplied by $3/4$. The other count losses
+are nonnegative and need no tail estimate.
+
+Here is the summable curvature bound from v14, in its full form.
+If $c=(np-q-t)_+\le1$, $T$ bounds the variances of the increasing-mass
+counts, $M$ bounds their fourth moments, and
+$\max_r\Pp(\operatorname{Bin}(n+1,p)=r)\le\beta/\sqrt{(n+1)v}$, then
+\begin{equation}\label{eq:curvature}
+ \sqrt n\mathcal C(t)\le\frac{\beta}{nv^{3/2}}
+ \left\{T/4+c\sqrt T+\frac{27M}{256}(5/3+5c/4)\right\}.
+\end{equation}
+Indeed the adjacent binomial difference has numerator $np-q-j$.
+For $a=t-j$, the centered stop-loss bend is bounded by $\sqrt T/2$,
+by $T/(4a)$ when $a>0$, and by $27M/(256|a|^3)$ away from zero.
+At most two nearby points are treated directly; the remaining full sums
+use $\sum i^{-2}<5/3$ and $\sum i^{-3}<5/4$.
+The increasing-mass indices satisfy $j<np$, so we may take
+\[
+ T=5\lambda/3,\quad M=(49/100)T+3T^2,\quad \beta=41/100.
+\]
+For completeness the last bound follows by finite Stirling at a mode:
+for $N=n+1\ge43$, its variance product exceeds $39v/40$, whence the
+mass is smaller than $(2/5)\sqrt{40/39}(516/515)/\sqrt{Nv}
+<(41/100)/\sqrt{Nv}$. Also $v^{3/2}>13/125$, and
+\[
+                 \sqrt T\le(250/39)\lambda+13/200
+\]
+follows by squaring $\sqrt T-13/100$.
+
+Schulz's strict finite-$n$ Bernoulli theorem gives at both integer anchors
+$\sqrt n\{F_B(j)-\Phi((j-np)/\sqrt{nv})\}<C_E\rho_B$, where
+$\rho_B=(1-2v)/\sqrt v$. Only this all-$p$ theorem is needed, not its
+sharper restricted-probability version. Linear interpolation preserves
+the strict inequality. Put $w=t-np$. Its normal interpolation error is at most
+\[
+ \frac{\phi_0}{2nv^{3/2}}u(1-u)(u-w)_+.
+\]
+This follows by bounding the positive part of the normal CDF's second
+derivative over the whole unit interval.
+For $H\le0$, $c<8/25$, the variance change is favorable and the remaining
+normal error is at most
+\[
+                  \frac{2/5}{nv^{3/2}}(23/200+2/27).
+\]
+For $H\ge0$, $c=0$, and interpolation plus variance repair is at most
+\[
+                  \frac{2/5}{nv^{3/2}}(2/27+(23/50)\lambda).
+\]
+These use $|w|<23/25$, $u(1-u)\le1/4$, $u^2(1-u)\le4/27$ and
+$1-(1+x)^{-1/2}\le x/2$.
+
+The actual cubic correction is favorable:
+\[
+ (v+s)^{3/2}(\rho-\rho_B)
+ \ge s\{1-5/6-17/250-(15/16)s\}>0,
+\]
+since $s\le(8/25)/700$. To obtain this bound, expand the marginal absolute
+third moment and retain its signs, use
+$\E U_0^3\le a_0s_0$, $\E U_1^3\ge-a_1s_1$, and
+$(1+x)^{3/2}\le1+3x/2+3x^2/8$. No favorable cubic sign is inferred
+below $p=1/3$.
+
+\section{Two concave quartics close the entire noise interval}
+Set $N=700$, $a=1-6/N$, $b=1+3/N$, $z=(7/5)a$ and define
+\[
+ W(\lambda)=\frac3{10}\left\{
+ \frac{z\lambda-z^2\lambda^2/2+z^3\lambda^3/6-z^4\lambda^4/24}{2}
+ -\frac{(49/100)b\lambda+3b^2\lambda^2}{16}
+ -\frac{12(22/7)^2\lambda}{N}\right\}.
+\]
+Taylor's theorem gives $1-e^{-x}\ge x-x^2/2+x^3/6-x^4/24$ for $x\ge0$.
+Every term in \eqref{eq:gain} improves with $n$, so $W$ is a lower bound
+for the normalized weighted loss at every $n\ge N$.
+Write
+\[
+ S_c=T/4+c\{(250/39)\lambda+13/200\}
+                  +(27M/256)(5/3+5c/4),
+\]
+\[
+ E_-(\lambda)=\frac{(41/100)S_{8/25}+(2/5)(23/200+2/27)}{13/125},
+\]
+\[
+ E_+(\lambda)=\frac{(41/100)S_0+(2/5)(2/27+(23/50)\lambda)}{13/125}.
+\]
+These are nonnegative quadratics. The preceding bounds reduce the theorem
+to $P_\pm(\lambda)>0$ on $[1/100,8/25]$, where
+\[
+                  P_\pm=W-E_\pm/N-\lambda/100.
+\]
+The gain polynomial is strictly concave on the whole real line, since
+\[
+ W''(\lambda)=-\frac3{10}\left\{
+ \frac{z^2}{4}\bigl((z\lambda-1)^2+1\bigr)+\frac{3b^2}{8}\right\}<0.
+\]
+Both error quadratics are convex. Hence $P_\pm''<0$, and their minima
+on the closed noise interval occur at endpoints. The four exact endpoint
+margins are positive. The smallest is
+\[
+ \frac{5442273179742877948871}{97819312500000000000000000}>0.
+\]
+The companion rational checker reconstructs all coefficients and guards;
+it does not accept sampled positivity or a fitted grid. This proves
+Theorem~\ref{thm:left} with all phases and noise endpoints included.
+
+\section*{Scope and evidence}
+The kernel and four-replacement method are in this round's
+\path{loss-direct.tex}; the v13 crossing identity and v14 summable-curvature
+proof retain their stated atom conventions. The external Bernoulli theorem
+is Schulz, \emph{The optimal Berry--Esseen constant in the binomial case}
+(2016), Theorem 1, printed page 1,
+\href{https://d-nb.info/1197702695/34}{original thesis}.
+Finite Stirling and the normal constants are explicitly enclosed in the
+checker. No Fourier or certificate-generation campaign is used.
+
+Combined with the retained LEFT-01 comparison below $\lambda=.01$, this
+closes the acquired $p\in[1/3,.4]$ strip at all $n\ge700$ through its noise
+ceiling. The retained geometry excludes $p<1/3$ already at $n\ge169$.
+Acquisition, reflection, attainment, remaining finite indices and BASE41
+remain separate obligations. No unconditional cutoff theorem is claimed.
+\end{document}

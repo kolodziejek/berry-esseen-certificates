@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/geometry-left-v15/mathematics/simplification-v15/2026-10-28/geometry-left-actual.py", line 190, in <module>
+    kernel,swaps,collisions=kernel_controls()
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/geometry-left-v15/mathematics/simplification-v15/2026-10-28/geometry-left-actual.py", line 80, in kernel_controls
+    assert actual[0]-frozen[1]+cost>=0,(name,u)
+AssertionError: ('tiny_symmetric', Fraction(1, 2))

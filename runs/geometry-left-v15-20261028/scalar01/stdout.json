@@ -1,0 +1,88 @@
+{
+  "status": "PASS_LEFT_SIGNED_N700",
+  "scalar_gates": 40,
+  "checks": {
+    "pi_upper": "28086493115204214261920039847378501825446/22211729146640973852969847619533538818359375",
+    "pi_square_below10": "6/49",
+    "pi_below10over3": "4/21",
+    "phi_lower": "2323770458925238058053496736872050123917570343/5634062790848461306049575796350836753845214843750",
+    "phi_upper": "29940667440868531788793289821361908264488529/5638916358156795855357736292779445648193359375",
+    "raw_scale_half": "167/17500",
+    "left_sign_separation": "199/750",
+    "right_sign_separation": "133/250",
+    "inward_below_amplitude": "79/125",
+    "kernel_high": "98237/2940000",
+    "kernel_tangent_left": "1/8",
+    "kernel_tangent_right": "1/35",
+    "sqrt2_lower": "1/25",
+    "cosine_low": "77/225",
+    "cosine_high": "8602/3828125",
+    "frozen_lower0": "14/5",
+    "frozen_lower1": "6/25",
+    "frozen_upper0": "22/15",
+    "frozen_upper1": "6/25",
+    "mesh_lower": "13861/75",
+    "mesh_upper": "9287/25",
+    "five_counts_lower": "17206/75",
+    "five_counts_upper": "10402/25",
+    "window_negative_displacement": "27/25",
+    "window_positive_displacement": "2/25",
+    "window_variance": "157/551250",
+    "five_count_mass": "3509/600000",
+    "mode_variance": "49/73960",
+    "mode_mass": "4633357/1379170000",
+    "v_three_halves": "1799/11390625",
+    "curvature_zeta2": "11/3600",
+    "curvature_zeta3": "7/216",
+    "curvature_c_less_than_one": "17/25",
+    "actual_cubic_favorable": "2063/21000",
+    "negative_concavity": "93815259662139/318500000000000",
+    "negative_endpoint_1/100": "5442273179742877948871/97819312500000000000000000",
+    "negative_endpoint_8/25": "28406876052696835855589/1528426757812500000000000",
+    "positive_concavity": "92554029193389/318500000000000",
+    "positive_endpoint_1/100": "6749804142300684121067/7524562500000000000000000",
+    "positive_endpoint_8/25": "2643892712789142121103/117571289062500000000000"
+  },
+  "polynomials": {
+    "negative": {
+      "coefficients": [
+        "-1268/1096875",
+        "1097586209749/8903731200000",
+        "-43102729647/203840000000",
+        "41781923/625000000",
+        "-14498327281/625000000000"
+      ],
+      "second_derivative_upper": "-93815259662139/318500000000000",
+      "endpoint_margins": [
+        "5442273179742877948871/97819312500000000000000000",
+        "28406876052696835855589/1528426757812500000000000"
+      ]
+    },
+    "positive": {
+      "coefficients": [
+        "-1/2457",
+        "90743901023/684902400000",
+        "-42699135897/203840000000",
+        "41781923/625000000",
+        "-14498327281/625000000000"
+      ],
+      "second_derivative_upper": "-92554029193389/318500000000000",
+      "endpoint_margins": [
+        "6749804142300684121067/7524562500000000000000000",
+        "2643892712789142121103/117571289062500000000000"
+      ]
+    }
+  },
+  "closed_noise_interval": [
+    "1/100",
+    "8/25"
+  ],
+  "negative_controls": [
+    "unit_binomial_weight_is_false",
+    "cosine_lower_bound_requires_width_cap"
+  ],
+  "proof_sha256": "1a21a42bbb59ef8a12f6110dabcd15e56042d6a770fe7e88fef38c931ca2dced",
+  "checker_sha256": "c9e47810b28ada3014992d5d00b63149d762cf7c4a090a7697f604a092d8d785",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "scope": "Exact continuous-domain reduction for full signed excess at C_E on n>=700,p\u2208[1/3,.4],lambda\u2208[.01,.32]. Acquisition, reflection, finite base and global cutoff are not accepted here."
+}
