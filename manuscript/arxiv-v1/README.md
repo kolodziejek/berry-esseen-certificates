@@ -1,92 +1,98 @@
-# Revised manuscript draft
+# A fixed-target approach to the sharp iid Berry–Esseen inequality
 
 **Authors:** Bartosz Kołodziejek and Kacper Rodziewicz. Affiliations, email
-addresses and ORCIDs are intentionally omitted at the authors' request.
+addresses and ORCIDs are omitted at the authors' request. AI assistance is
+disclosed on the title page and in the discussion.
 
-`main.tex` is the editable manuscript. The guide and dependency diagram
-introduce the full contact/conserved-identity argument. The main chapters explain the
-extremizer/contact method, first-failure reduction, elementary support,
-joint physical defect, conditional-count identity, improved resource bound,
-exact curvature maximum and conditional global assembly. The appendices
-typeset the retained analytic derivations at their actual scopes, grouped into
-six coherent appendices. Shared proofs are referenced after matching their
-hypotheses; distinct finite-index and Fourier refinements remain explicit.
+`main.tex` is the editable manuscript; `main.pdf` is the 89-page review draft
+of 28 October 2026. The paper now develops the fixed-target approach in full,
+including its analytical proofs and explicit certificate conditions. It
+replaces the previous 158-page manuscript as the current exposition.
 
-This is a review draft, not a claim that the sharp conjecture is proved.
-The finite base, complete local predicates, their scope and the full new
-composition remain obligations. Supplied analytic material is explicitly
-distinguished from the new reductions and from independently checked
-external results. AI use is disclosed in the manuscript.
+This is a complete account of the stated reductions, **not a proof of the
+sharp conjecture**. The sharp finite base through 41, the remaining
+confinement domains and a complete strict count comparison remain open.
+Acquisition, confinement and final exclusion are separate statements.
 
-## Fourth-round proof research
+## Reading the paper
 
-The current round adds a shorter moment/gap proof and a general first-failure
-statement, while retaining the finite and Fourier details that still do work.
-See `research/revision4-decisions.md`. A separate 14-page companion at
-`mathematics/strategy-v4/2026-10-27/main.pdf` develops fixed-target excess
-and a common noise measure, with explicit conditional transfer hypotheses.
-It is not a replacement proof of all the remaining certificate inputs.
+The introduction and guide explain the problem and proof strategy. Sections
+2–6 establish fixed-target attainment and contact, exact conservation,
+coarse Fourier entry, common moment resources and conditional confinement.
+Sections 7–9 give the count comparison, harmonic estimates, conditional
+global implication, evidence boundaries and unresolved steps.
 
-## Build
+The six appendices supply the full selected Fourier proof, conditional-count
+toolbox, scalar normalizations, local refinements, closed-half-line smoothing
+kernel and original-law four-summand bridge. The last bridge remains
+conditional on genuine whole-cell numerical bounds and complete coverage;
+it is not a complete four-summand proof. Analytical steps are included in
+the manuscript, rather than delegated to the research companions.
 
-Use an ordinary TeX Live installation with pdfLaTeX and BibTeX:
+Older TeX files that are no longer included by `main.tex` remain in the
+repository. They describe other routes or historical finite-base candidates.
+Their omission from this compilation does not discharge their premises,
+delete certificates or certify the missing finite base.
+
+## Build and portable sources
+
+Use TeX Live with pdfLaTeX and BibTeX:
 
 ```sh
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
+pdflatex -no-shell-escape -interaction=nonstopmode -halt-on-error main.tex
 bibtex main
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
+pdflatex -no-shell-escape -interaction=nonstopmode -halt-on-error main.tex
+pdflatex -no-shell-escape -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-The generated review PDF and a source archive with a generated `main.bbl`
-are delivered separately. No custom fonts, external image assets, shell
-escape or online execution are required. An arXiv submission has not been
-made and requires author approval and further mathematical review.
+`source-arxiv-v1.zip` contains the selected TeX inputs, four bibliography
+files, this README and the generated `main.bbl`. When using the archive,
+three pdfLaTeX passes suffice without running BibTeX. No external images,
+custom fonts, shell escape or online execution are required. The archive is
+a portable source package; no arXiv submission has been made.
 
-## Citation and proof correspondence
+From the repository root, the following bounded checks write JSON to stdout:
 
-- `references-classical.bib`: historical and external analytic inputs.
-- `references-added.bib`: six focused additions checked during the revision.
-- `references-modern-a.bib`: Xiao–Li, Lin, He–Cheng v3, Tao's Problem19a,
-  the earlier Hexagon manuscript and the sharp moment relation.
-- `references-modern-b.bib`: Bell's individual manuscripts and the two
-  distinct Lean projects.
-- `research/classical-sources.md`, `research/modern-a.md` and
-  `research/modern-b.md`: exact source/version choices and retrieval limits.
-- `research/analytic-coverage.md` and the appendix coverage reports map the
-  displayed arguments to their source material and retained obligations.
+```sh
+python3 -I -B manuscript/arxiv-v1/tools/check_sources.py
+python3 -I -B manuscript/arxiv-v1/research/v9_checks/scalar.py
+```
 
-The reference baseline remains
-`6346fc1b4432bc5982822aa696eb566ed9e1e1ee`; the manuscript branch starts
-from reduction state `8989ba054eda36f63e469832f1e00f7e6a7a9084`.
-The original `paper/` directory, certificates and verification programs
-are preserved. Changes are confined to the user's fork and submitted as
-a draft for review, without merging.
+The first checks source integrity, references, citations and author metadata.
+The second independently reconstructs the two displayed scalar cosine
+majorants with exact fractions: 80 and 896 Bernstein coefficients, together
+with directed Machin bounds and a false-majorant negative control. Neither
+command proves a full count cover or replays the earlier entry certificates.
+The build/export helpers beside them record local tool versions, commands,
+source hashes and return codes. They use the coordinator's local TeX/runtime
+paths; ordinary manual compilation is portable.
 
-## Delivered review artifacts
+## Review and evidence
 
-- `main.pdf`: 158-page revised draft; main exposition on pages 3–33 precedes the
-  technical appendices. Explicit certificate conditions and AI disclosure.
-- `source-arxiv-v1.zip`: portable source package, rebuilt in a fresh directory
-  with shell escape disabled; it is not an arXiv submission.
-- `research/revision-decisions.md`: disposition of the supplied proposals,
-  reorganization, independent review and preserved limitations.
-- `research/revision3-decisions.md`: the next editorial round, selective proof
-  deduplication, corrected curvature derivative and retained hypotheses.
-- `research/revision3-independent-review.md`, `revision3-fourier.md` and
-  `revision3-finite.md`: bounded independent review and exact substitution maps.
-- `research/manuscript-review.md`: original combined coverage, independent review
-  outcomes, remaining limitations and actual validation.
+- `research/v9-foundations-coverage.md`: fixed-target core and selected
+  Fourier/entry correspondence.
+- `research/v9-confinement-coverage.md`: full resources, continuous low-noise
+  proof and central-panel confinement correspondence.
+- `research/v9-independent-review.md`: independent composition review,
+  retained hypotheses and corrections found during integration.
+- `research/v9-integration-review.md`: final manuscript decisions,
+  dependencies, validation and remaining obligations.
+- `../../runs/manuscript-v9-20261028/`: source checks, scalar checks, build,
+  visual review and standalone archive-rebuild evidence.
 
-The recommendation is author review, with the PR kept in draft. No final
-publication, complete proof acceptance or merge is recommended at this stage.
+The earlier mathematical checks remain in their original v4–v8 research
+directories and run records. This manuscript revision does not relabel those
+checks as newly executed. It does not change the original `paper/` directory,
+proof objects or acceptance programs. The reference baseline remains
+`6346fc1b4432bc5982822aa696eb566ed9e1e1ee`; this editorial work starts from
+`924e6160bee44ed3a50eba35f7dbb8dcd5b9a9c7` on the existing PR branch.
 
-The third round starts from manuscript commit `6299d97`. Its corrected
-curvature derivative is also propagated to the earlier reduction note and
-its PDF. The theorem and certificate predicates are unchanged. Compilation,
-page-review and portable rebuild receipts are under
-`runs/manuscript-v3-20261027/` at the repository root.
+The bibliography retains the classical literature and separately identifies
+recent papers, repositories and formalization projects. The source/version
+choices and retrieval limits are documented in `research/classical-sources.md`,
+`research/modern-a.md` and `research/modern-b.md`. No new bibliographic claim
+was introduced or independently rechecked during this editorial round.
 
-Historical review: PR #3 was merged into the audit branch, and PR #4
-subsequently carried that work into main. This fourth round starts from
-that merged main revision ca4943a and is submitted separately as a draft.
+The review recommendation is human review of the conditional research draft.
+Keep PR #5 in draft; neither a merge nor submission as a completed proof is
+recommended at this stage.

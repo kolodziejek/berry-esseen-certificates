@@ -1,3 +1,37 @@
+# Selected manuscript dependency graph — 28 October 2026
+
+Fixed c>0 -> attained fixed-n excess/contact -> compact support before higher
+moments -> exact conservation with (n+H^2)a and full off-contact B-H*xi.
+Special c=CE + raw-before-density license -> one positive defect resource.
+True predecessor + Shevtsova input -> initial rho/support -> complete selected
+LOW + six HIGH + two quadratics -> actual gap -> four signed passes + closed
+cover -> INITIAL42_FIXED_TARGET_COARSE_V7. Unknown ratio cap, degree-six phase,
+six intermediate HIGH updates and the old Fourier resource atlas are not
+ancestors of this selected route. Their sources/certificates remain intact.
+
+Coarse entry -> common physical moments / weighted nD / signed phase resource
+ -> incoming .6 strip on p[.40,.53]
+ -> continuous low-noise quintic (lambda<=.075, allH,n>=42).
+Signed resource + correct deleted-index/endpoint/ray gates -> full confinement
+on p[.41,.42] only. Other high-noise and left panels remain open.
+
+Actual conditional laws + all count domains ->
+a+rho_B(c-C_B)=sqrt(n)*pi_k*(Q/pi_k-f)+R_c, with fixed-c repair.
+Strict negative RHS + Bernoulli bound excludes a>=0 for positive noise.
+Equality-inclusive zero noise requires its stated strict finite-index input.
+The abstract span theorem b<1 does not relax other count gates. Its numerical
+sine lower bound folds y=min(b,1-b); current scalar coefficients are checked.
+
+Complete exclusion at every n>=42 + independent BASE41 -> conditional global
+result by least failure. Neither is inferred from the new manuscript layout.
+ROOT4 closed Prawitz + original-law common defect + genuine whole-cell rows
++ complete coverage -> conditional finite bridge, not full C4/BASE41.
+
+Sources/edge-by-edge removal reasons: manuscript/arxiv-v1/research/
+v9-independent-review.md and v9-integration-review.md.
+
+---
+
 # V8 dependency update — 28 October 2026
 
 FIXED_TARGET_MAXIMIZER + sharp predecessor + actual-law gap/contact/Fourier inputs

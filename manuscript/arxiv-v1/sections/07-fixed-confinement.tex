@@ -135,37 +135,25 @@ The term $-na$ is nonpositive and may be dropped. This is a
 fixed-target statement; no equality between $c$ and the actual score is
 assumed.
 
-Expand the first term spatially through degree four. Expand the other
-three terms in variance through orders two, one and one, using
-$\partial_w F_w=F_w''/2$. At $t=\pm u$, cancellations give
+The spatial and variance expansions were derived in
+\eqref{v9:entry:heat}, together with each of their four remainder bounds.
+They apply for every $u\ge1$, before any conditional strip is used.
+For $t=\pm u$, write $w=n-1$, $z=H/\sqrt w$,
+$A_u=(u^3-3u)/6$ and $H_4(u)=u^4-6u^2+3$. Then
 \[
  \frac{\mathcal H_n(H,\pm u)}{s_n^3}
  =\pm A_u(1-z^2)\phi(z)
        +\frac{H_4(u)}{24\sqrt w}\phi'''(z)+R,
 \]
 \[
- z=H/\sqrt w,\quad A_u=(u^3-3u)/6,
- \qquad H_4(u)=u^4-6u^2+3.
-\]
-The absolute bounds for the four remainders are
-\[
- \frac{u^5\|\phi^{(4)}\|_\infty}{120w},\quad
- \frac{\|\phi^{(5)}\|_\infty}{48w^{3/2}},\quad
- \frac{u\|\phi^{(4)}\|_\infty}{8w},\quad
- \frac{|u^2-1|\|\phi^{(5)}\|_\infty}{16w^{3/2}}.
-\]
-Gaussian Fourier inversion, integrating absolute powers of frequency,
-gives $\|\phi^{(4)}\|_\infty\le3\phi(0)<6/5$ and
-$\|\phi^{(5)}\|_\infty\le8/\pi<51/20$.
-For $u\ge1$ their sum is at most
-\[
- \frac{u^5/100+3u/20}{w}
+ |R|\le\frac{u^5/100+3u/20}{w}
       +\frac{51(3u^2-2)}{960w^{3/2}}.
 \]
-Thus the remainder extends below the earlier $u\ge5/2$ presentation.
-For $u>\sqrt3$, $A_u>0$, and the elementary bounds
+For $u>\sqrt3$, $A_u>0$. The bounds
 $\|(1-z^2)\phi(z)\|_\infty=\phi(0)$ and
 $\|\phi'''\|_\infty\le2/\pi<2\phi(0)$ control both signs.
+Unlike the initial large-radius calculation, we retain $|H_4(u)|$;
+its sign is not assumed positive.
 
 Set $S=81/80$, $c_0=819/2000<c$ and $e=8/875$.
 For $n\ge42$, $s_n<S$, $\sqrt w>6$, and $e_n<e$.
@@ -183,16 +171,8 @@ If the directional signed moment is at most $b$, $Q<0$ licenses replacing
 the positive multiplier $c$ by $c_0$. Then $P<0$ contradicts
 \eqref{v9:confinement:contact} at that boundary for every raw $H$.
 
-To continue along a physical ray, hold $r,b$ fixed. Direct differentiation
-of the exact heat expression gives, with $z=H/\sqrt n$ and
-$y=(H-t)/\sqrt n$,
-\[
- \partial_t\mathcal H_n=n\phi(z)+Ht\phi(z)-ns_n\phi(s_ny).
-\]
-Taylor's theorem and $\|\phi''\|_\infty=\phi(0)$ bound the spatial
-remainder by $\phi(0)t^2/2$. Since
-$\partial_s[s\phi(sy)]=-\phi''(sy)$, the variance contribution is at
-most $\phi(0)n(s_n-1)$. Hence
+To continue along a physical ray, hold $r,b$ fixed. The derivative
+estimate established in the proof of Theorem~\ref{v9:entry:initial-support} is
 \[
  |\partial_t\mathcal H_n|<\tfrac25(t^2/2+1/2+e).
 \]
@@ -744,4 +724,3 @@ Higher noise on the other panels and strict count comparison remain
 separate obligations. In particular, count formulas requiring $p\le1/2$
 are not transferred to above-half panels by reflecting the already
 chosen discrepancy.
-

@@ -1,3 +1,27 @@
+# Next after manuscript integration — 28 October 2026
+
+1. Human-review manuscript/arxiv-v1/main.pdf and the v9 integration/independent
+   review reports in existing draft PR5. No automatic merge or arXiv submission.
+2. Continue the missing global mathematics: remaining confinement domains,
+   strict relative-noise count comparison and independent finite base through41.
+   The 89-page manuscript is a complete exposition of the selected reductions,
+   not completion of those obligations.
+3. Keep fixed-target count repair c=CE distinct from increment zeta=1-d.
+   The span b<1 harmonic rate uses y=min(b,1-b) before rational sine evaluation.
+   Acquisition up to p=.53 does not extend p<.5 count normalization gates.
+4. Do not repeat the old coarse entry or low-noise grid search: both are
+   superseded at the scopes stated in the paper. Generalize high-noise only
+   with actual common-law resources, closed seams and both physical rays.
+
+Next bounded document reproduction from the integration worktree:
+python3 -I -B manuscript/arxiv-v1/tools/check_sources.py
+python3 -I -B manuscript/arxiv-v1/research/v9_checks/scalar.py
+python3 -I -B manuscript/arxiv-v1/research/v9_checks/preservation.py
+Ordinary pdfLaTeX/BibTeX commands are in manuscript/arxiv-v1/README.md.
+No new expensive certificate-generation campaign is authorized.
+
+---
+
 # Next after one complete confinement panel — 28 October 2026
 
 1. Author-review the v8 result in existing draft PR5. Final integrated checks,

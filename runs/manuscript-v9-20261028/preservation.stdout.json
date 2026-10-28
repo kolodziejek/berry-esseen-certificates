@@ -1,0 +1,273 @@
+{
+  "status": "PASS_EDITORIAL_BASELINE_PRESERVATION",
+  "baseline": "6346fc1b4432bc5982822aa696eb566ed9e1e1ee",
+  "editorial_start": "924e6160bee44ed3a50eba35f7dbb8dcd5b9a9c7",
+  "head_at_check": "41035cb590852a160d6854da4b0692e698739e0c",
+  "baseline_entries": 2748,
+  "materialized_bytes_checked": 182,
+  "sparse_tree_index_bindings": 2566,
+  "unchanged_inactive_sources": {
+    "sections/02-extremizers.tex": "618f7130857074f8e6ecbb157c3389900cd666c18d2aaae0b8828234a551fdd4",
+    "sections/03-smoothing.tex": "ae46b6ce551df67b073b754cd5212f4ba467368da39d0cabfca57e29d8967ab6",
+    "sections/04-support.tex": "562b9ed903f996f643abef552314b2a70a6e250f9f7d01e5a589c18a9e53dfc5",
+    "sections/05b-conserved.tex": "a559e01609da0522bbfab283dea1cacbcb342d9af5795c5dca043da819f3abfb",
+    "sections/06-resources.tex": "86833630570c7a1a4d2d88aa425adab1b25fac09154a3a1ed1266023631de932",
+    "appendices/fourier-analysis.tex": "0274a491a12fec13d87a391ce88184cc7229210168fc72bc88974e5382670a1f",
+    "appendices/uniform-bridge.tex": "3535cdd8b73b6296af0e6799b4a9b6d4789a5525cfd9502f513a8f1a1e2d456a",
+    "appendices/finite-support.tex": "2feea5ffd01c370b455c2b3530a8f51b7002c1eaccf13722d34299bdebf04d3a",
+    "appendices/finite-analysis.tex": "e6c3ed19f9fb2ff1923542962079a68c2aa10bfbaf371b4ea1bd23e162611af3"
+  },
+  "changed_paths": [
+    "manuscript/arxiv-v1/README.md",
+    "manuscript/arxiv-v1/appendices/count-comparison.tex",
+    "manuscript/arxiv-v1/appendices/fixed-fourier.tex",
+    "manuscript/arxiv-v1/appendices/half-line-smoothing.tex",
+    "manuscript/arxiv-v1/appendices/local42-refinements.tex",
+    "manuscript/arxiv-v1/appendices/normalization.tex",
+    "manuscript/arxiv-v1/appendices/original-law-four.tex",
+    "manuscript/arxiv-v1/main.pdf",
+    "manuscript/arxiv-v1/main.tex",
+    "manuscript/arxiv-v1/research/v9-confinement-coverage.md",
+    "manuscript/arxiv-v1/research/v9-foundations-coverage.md",
+    "manuscript/arxiv-v1/research/v9-independent-review.md",
+    "manuscript/arxiv-v1/research/v9_checks/build.py",
+    "manuscript/arxiv-v1/research/v9_checks/scalar.py",
+    "manuscript/arxiv-v1/sections/01-introduction.tex",
+    "manuscript/arxiv-v1/sections/01b-guide.tex",
+    "manuscript/arxiv-v1/sections/02-fixed-target.tex",
+    "manuscript/arxiv-v1/sections/04-fixed-entry.tex",
+    "manuscript/arxiv-v1/sections/05-geometry-counts.tex",
+    "manuscript/arxiv-v1/sections/05c-counts.tex",
+    "manuscript/arxiv-v1/sections/06-fixed-resources.tex",
+    "manuscript/arxiv-v1/sections/07-curvature.tex",
+    "manuscript/arxiv-v1/sections/07-fixed-confinement.tex",
+    "manuscript/arxiv-v1/sections/07b-harmonic.tex",
+    "manuscript/arxiv-v1/sections/08-certificates.tex",
+    "manuscript/arxiv-v1/sections/09-discussion.tex",
+    "manuscript/arxiv-v1/source-arxiv-v1.zip"
+  ],
+  "new_untracked_paths": [
+    "manuscript/arxiv-v1/research/v9_checks/export.py",
+    "manuscript/arxiv-v1/research/v9_checks/preservation.py",
+    "runs/manuscript-v9-20261028/.gitignore",
+    "runs/manuscript-v9-20261028/build01/build.stderr.txt",
+    "runs/manuscript-v9-20261028/build01/build.stdout.json",
+    "runs/manuscript-v9-20261028/build01/receipt.json",
+    "runs/manuscript-v9-20261028/build01/render.stderr.txt",
+    "runs/manuscript-v9-20261028/build01/scalar.stderr.txt",
+    "runs/manuscript-v9-20261028/build01/scalar.stdout.json",
+    "runs/manuscript-v9-20261028/build01/sources.stderr.txt",
+    "runs/manuscript-v9-20261028/build01/sources.stdout.json",
+    "runs/manuscript-v9-20261028/build02/build.stderr.txt",
+    "runs/manuscript-v9-20261028/build02/build.stdout.json",
+    "runs/manuscript-v9-20261028/build02/receipt.json",
+    "runs/manuscript-v9-20261028/build02/render.stderr.txt",
+    "runs/manuscript-v9-20261028/build02/scalar.stderr.txt",
+    "runs/manuscript-v9-20261028/build02/scalar.stdout.json",
+    "runs/manuscript-v9-20261028/build02/sources.stderr.txt",
+    "runs/manuscript-v9-20261028/build02/sources.stdout.json",
+    "runs/manuscript-v9-20261028/build03/build.stderr.txt",
+    "runs/manuscript-v9-20261028/build03/build.stdout.json",
+    "runs/manuscript-v9-20261028/build03/detail-render.json",
+    "runs/manuscript-v9-20261028/build03/receipt.json",
+    "runs/manuscript-v9-20261028/build03/render.stderr.txt",
+    "runs/manuscript-v9-20261028/build03/scalar.stderr.txt",
+    "runs/manuscript-v9-20261028/build03/scalar.stdout.json",
+    "runs/manuscript-v9-20261028/build03/sources.stderr.txt",
+    "runs/manuscript-v9-20261028/build03/sources.stdout.json",
+    "runs/manuscript-v9-20261028/build04/build.stderr.txt",
+    "runs/manuscript-v9-20261028/build04/build.stdout.json",
+    "runs/manuscript-v9-20261028/build04/detail-render.json",
+    "runs/manuscript-v9-20261028/build04/receipt.json",
+    "runs/manuscript-v9-20261028/build04/render.stderr.txt",
+    "runs/manuscript-v9-20261028/build04/render/detail-20.png",
+    "runs/manuscript-v9-20261028/build04/render/detail-72.png",
+    "runs/manuscript-v9-20261028/build04/render/detail-74.png",
+    "runs/manuscript-v9-20261028/build04/render/overview-001-012.png",
+    "runs/manuscript-v9-20261028/build04/render/overview-013-024.png",
+    "runs/manuscript-v9-20261028/build04/render/overview-025-036.png",
+    "runs/manuscript-v9-20261028/build04/render/overview-037-048.png",
+    "runs/manuscript-v9-20261028/build04/render/overview-049-060.png",
+    "runs/manuscript-v9-20261028/build04/render/overview-061-072.png",
+    "runs/manuscript-v9-20261028/build04/render/overview-073-084.png",
+    "runs/manuscript-v9-20261028/build04/render/overview-085-089.png",
+    "runs/manuscript-v9-20261028/build04/scalar.stderr.txt",
+    "runs/manuscript-v9-20261028/build04/scalar.stdout.json",
+    "runs/manuscript-v9-20261028/build04/sources.stderr.txt",
+    "runs/manuscript-v9-20261028/build04/sources.stdout.json",
+    "runs/manuscript-v9-20261028/export01/final-tex-log.txt",
+    "runs/manuscript-v9-20261028/export01/pass1.stderr.txt",
+    "runs/manuscript-v9-20261028/export01/pass1.stdout.txt",
+    "runs/manuscript-v9-20261028/export01/pass2.stderr.txt",
+    "runs/manuscript-v9-20261028/export01/pass2.stdout.txt",
+    "runs/manuscript-v9-20261028/export01/pass3.stderr.txt",
+    "runs/manuscript-v9-20261028/export01/pass3.stdout.txt",
+    "runs/manuscript-v9-20261028/export01/receipt.json",
+    "runs/manuscript-v9-20261028/preservation.stderr.txt",
+    "runs/manuscript-v9-20261028/preservation.stdout.json"
+  ],
+  "no_lazy_fetch": true,
+  "commands": [
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "--show-object-format"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "6346fc1b4432bc5982822aa696eb566ed9e1e1ee"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "ls-tree",
+        "-rz",
+        "HEAD"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "ls-files",
+        "--stage",
+        "-z"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "ls-files",
+        "-t",
+        "-z"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "924e6160bee44ed3a50eba35f7dbb8dcd5b9a9c7:manuscript/arxiv-v1/sections/02-extremizers.tex"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "924e6160bee44ed3a50eba35f7dbb8dcd5b9a9c7:manuscript/arxiv-v1/sections/03-smoothing.tex"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "924e6160bee44ed3a50eba35f7dbb8dcd5b9a9c7:manuscript/arxiv-v1/sections/04-support.tex"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "924e6160bee44ed3a50eba35f7dbb8dcd5b9a9c7:manuscript/arxiv-v1/sections/05b-conserved.tex"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "924e6160bee44ed3a50eba35f7dbb8dcd5b9a9c7:manuscript/arxiv-v1/sections/06-resources.tex"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "924e6160bee44ed3a50eba35f7dbb8dcd5b9a9c7:manuscript/arxiv-v1/appendices/fourier-analysis.tex"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "924e6160bee44ed3a50eba35f7dbb8dcd5b9a9c7:manuscript/arxiv-v1/appendices/uniform-bridge.tex"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "924e6160bee44ed3a50eba35f7dbb8dcd5b9a9c7:manuscript/arxiv-v1/appendices/finite-support.tex"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "924e6160bee44ed3a50eba35f7dbb8dcd5b9a9c7:manuscript/arxiv-v1/appendices/finite-analysis.tex"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--name-only",
+        "924e6160bee44ed3a50eba35f7dbb8dcd5b9a9c7"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "ls-files",
+        "--others",
+        "--exclude-standard"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    }
+  ],
+  "script_sha256": "87dd9a1f509900e8e315e906b604129c019f702f2b75a4d512033df25da358eb",
+  "mathematical_verification": false
+}

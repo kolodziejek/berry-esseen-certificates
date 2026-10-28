@@ -551,9 +551,17 @@ majorization. Expansion in powers of the unit-interval coordinate
 proves the formula; Bernstein weights are nonnegative and sum to one.
 The alternating remainder and the stated rational bounds on $\pi$ follow
 from the same elementary series above. This completely specifies the
-finite scalar obligation. A rational rate follows by replacing
-$\sin(\pi b)$ with $x-x^3/6+x^5/120-x^7/5040$, $x=3.14159b$, on the
-checked alternating-series domain.
+scalar comparison. To obtain a rational rate throughout $0<b<1$, put
+$y=\min(b,1-b)$ and $x=3.14159y$. Since $0<y\le1/2$,
+$\sin(\pi b)=\sin(\pi y)\ge\sin x$, and the alternating bound
+\[
+ 0<x-x^3/6+x^5/120-x^7/5040\le\sin x
+\]
+is valid. Positivity follows from $x^2<3$ for the first two terms
+and $x^2<42$ for the last pair. Squaring this positive rational lower
+bound therefore gives a valid rate below $2\sin^2(\pi b)/b^2$.
+Folding at $1/2$ is essential: decreasing the sine argument would not be
+monotone on the whole unfurled interval.
 
 Set $r=r_*\omega_-$, require $rU<3$, and define
 \begin{equation}\label{ms:fourier:cut49:shortloc:gain}

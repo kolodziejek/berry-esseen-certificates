@@ -1,3 +1,22 @@
+# Manuscript transfer defects corrected — 28 October 2026
+
+- Changing an old ratio repair to fixed c does not preserve its old left side.
+  The valid identity is a+rho_B(c-C_B)=sqrt(n)*pi_k*(Q/pi_k-f)+R_c.
+  The count increment must remain zeta=1-d, including joined products.
+  A draft had mixed these coefficients; independent review caught and fixed it.
+- The old rational sine recipe at x=3.14159*b is not a lower-bound recipe on
+  all b<1: sine decreases past1/2, and a negative Taylor lower bound cannot
+  safely be squared. Fold y=min(b,1-b), use x=3.14159*y, prove positivity,
+  and retain denominator b^2. This repairs the numerical rate; the abstract
+  harmonic span theorem was not refuted.
+- K=4.5 is a false global cosine majorant: at x=3/8 the true ratio is
+  (8+4*sqrt(2))/3>4.5. The new exact scalar checker rejects it.
+- Removing inactive finite-base sources from compilation is not a proof of
+  BASE41. A shorter exposition of the selected route does not close the full
+  local count cover or justify dropping p<.5/interior-count assumptions.
+
+---
+
 # New failures and repairs — 28 October 2026
 
 1. Source hashes + python -B alone do not bind executed bytecode. A disposable

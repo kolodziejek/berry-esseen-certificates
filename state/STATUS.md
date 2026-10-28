@@ -1,3 +1,32 @@
+# Manuscript v9 — 28 October 2026
+
+The actual manuscript now presents the fixed-target approach: 89 pages instead
+of 158. Editable source, PDF and portable ZIP: manuscript/arxiv-v1/.
+Component worktree: work/fork_audit_20261027/manuscript-v9,
+branch manuscript/fixed-target-v9-20261028. Integration/review target remains
+work/fork_audit_20261027/strategy-v4, existing draft PR #5 in the user's fork.
+
+| Result | Mathematical status | Execution status |
+|---|---|---|
+| Full selected analytic manuscript | Complete account of explicitly scoped reductions; conditional global theorem only | Fresh composition review; two transfer defects corrected |
+| Two scalar cosine majorants | Alternating-Taylor/Bernstein proof at stated domain | Fresh exact 80 + 896 coefficients PASS; false K=4.5 rejected |
+| Document and source bundle | Editorial artifact, not proof acceptance | 89-page clean build; all-page visual review; standalone rebuild with all89 page texts identical |
+| V7/v8 entry, moments and confinement | Earlier scoped results retained | Prior isolated/independent evidence linked; not rerun in this editorial task |
+| Full confinement/count/BASE41 | Still open | No complete acceptance |
+
+Evidence: runs/manuscript-v9-20261028/build04, export01,
+visual-review.json and preservation.stdout.json. All2748 baseline entries
+unchanged:182 materialized byte checks and2566 sparse bindings. Nine inactive
+historical manuscript sources unchanged. No original certificate, production
+program, reference or history source is modified.
+
+Independent composition review and final cosmetic recheck found no blocker
+within the stated scope. Ready for human review as conditional research;
+keep PR draft, with no merge or claim of a finished sharp-conjecture proof.
+Full decisions: manuscript/arxiv-v1/research/v9-integration-review.md.
+
+---
+
 # V8 checkpoint — 28 October 2026
 
 Active integration worktree: work/fork_audit_20261027/strategy-v4,
