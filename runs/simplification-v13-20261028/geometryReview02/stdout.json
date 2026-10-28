@@ -1,0 +1,96 @@
+{
+  "status": "PASS_INDEPENDENT_INWARD_GEOMETRY",
+  "scope": "Independently reconstructed all continuous scalar certificates and raw actual-law algebra; analytic acquisition remains a premise",
+  "Bernstein_coefficients": 139,
+  "actual_laws": 15,
+  "sharp_cubic_equalities": 20,
+  "coefficient_margins": [
+    {
+      "domain": "global",
+      "allocation": 0,
+      "minimum_coefficients": [
+        "3124341914126580633218415565263381/19531250000000000000000000000"
+      ]
+    },
+    {
+      "domain": "global",
+      "allocation": 1,
+      "minimum_coefficients": [
+        "22018570499299083102049971275344445786829/12800000000000000000000000000000000",
+        "17507705102949658157229127832617657329/50000000000000000000000000000000",
+        "22833245244680088462070157672102042379/800000000000000000000000000000000",
+        "853839358445023201694310839421256583469/12800000000000000000000000000000000"
+      ]
+    },
+    {
+      "domain": "left",
+      "allocation": 0,
+      "minimum_coefficients": [
+        "1991133064835902562080231971/19073486328125000000000"
+      ]
+    },
+    {
+      "domain": "left",
+      "allocation": 1,
+      "minimum_coefficients": [
+        "3495344285356723956089689749/305175781250000000000000"
+      ]
+    },
+    {
+      "domain": "below_third",
+      "allocation": 0,
+      "minimum_coefficients": [
+        "81481518181353455461135962899/1687500000000000000000000"
+      ]
+    },
+    {
+      "domain": "below_third",
+      "allocation": 1,
+      "minimum_coefficients": [
+        "213893677922407694562474500503/540000000000000000000000"
+      ]
+    },
+    {
+      "domain": "below_three_tenths",
+      "allocation": 0,
+      "minimum_coefficients": [
+        "6788210660252006666348818367/375000000000000000000000"
+      ]
+    },
+    {
+      "domain": "below_three_tenths",
+      "allocation": 1,
+      "minimum_coefficients": [
+        "33439114653477135287933261783/93750000000000000000000"
+      ]
+    }
+  ],
+  "index_cutoffs": [
+    [
+      "3/10",
+      84
+    ],
+    [
+      "1/3",
+      168
+    ],
+    [
+      "7/20",
+      262
+    ],
+    [
+      "3/8",
+      657
+    ],
+    [
+      "39/100",
+      1530
+    ],
+    [
+      "2/5",
+      3598
+    ]
+  ],
+  "proof_sha256": "f538debff3c902dc03aea4a3ebee64e19f414a6e8cc68aae0c803ccdb886e9de",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]"
+}
