@@ -1,0 +1,237 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,microtype,hyperref}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\title{Structural count bounds beyond the small-noise comparison}
+\author{Research note, 28 October 2026}\date{}
+\begin{document}\maketitle
+
+The direct comparison through $ns=.075$ is retained unchanged. This note
+supplies two tools for the remaining noise range: a concentration bound
+from the ordered conditional counts, and an analytic upper bound for the
+signed binomial curvature correction. The first gives a complete comparison
+in the symmetric central subcase with no noise ceiling. The tools do not
+yet close the general larger-noise comparison.
+
+\section{Concentration from the ordered counts}
+Let $Y=B+U$, where $\Pp(B=1)=p\in(0,1)$, $\E(U\mid B)=0$, and
+\[
+ U_0\le a_0,\qquad U_1\ge-a_1,\qquad
+ a_0,a_1\ge0,\quad \zeta=1-a_0-a_1>0.
+\]
+Take independent copies $U_{0i},U_{1i}$ and set
+\[
+ T_j=j+\sum_{i\le j}U_{1i}+\sum_{i>j}U_{0i},\qquad
+ \pi_j=\binom njp^j(1-p)^{n-j},\quad0\le j\le n.
+\]
+Every conditional count has the correct law, and
+$T_{j+1}-T_j\ge\zeta$ on each coupled sample.
+
+\begin{theorem}\label{thm:concentration}
+For a closed interval $I$ of length less than $m\zeta$, where
+$1\le m\le n+1$ is an integer,
+\[
+ \Pp(Y_1+\cdots+Y_n\in I)
+       \le\max_{0\le j\le n+1-m}\sum_{r=j}^{j+m-1}\pi_r.
+\]
+In particular every atom, and every interval of length less than $\zeta$,
+has probability at most $\max_j\pi_j$.
+\end{theorem}
+\begin{proof}
+For each coupled sample, the indices with $T_j\in I$ are consecutive,
+and at most $m$ of them can occur: $m+1$ points would have span at least
+$m\zeta$. Conditioning on the actual binomial count gives
+\[
+ \Pp(Y_1+\cdots+Y_n\in I)
+       =\E\sum_{j=0}^n\pi_j\mathbf1_{\{T_j\in I\}}.
+\]
+A shorter block can be extended to $m$ legal indices, so its mass is
+bounded by the displayed maximum. This proves the claim without any
+independence assertion about a selected index. The strict length condition
+matters: for noiseless Bernoulli variables, $[j,j+1]$ contains two atoms.
+\end{proof}
+
+\begin{theorem}[Symmetric central comparison at every noise level]
+Let $n\ge2$ be even, $p=1/2$, $U_1$ have the law of $-U_0$,
+$\E U_0=0$, $U_0\le a<1/2$, and assume finite third absolute moments.
+Set $s=\E U_0^2>0$, $X=(Y-1/2)/\sqrt{1/4+s}$ and
+$\rho=\E|X|^3$. For every $C>0$ and
+\[
+             0\le H<\frac{1-2a}{2\sqrt{1/4+s}},
+\]
+the direct comparison with the central Bernoulli anchor $k=n/2$ is strict:
+\begin{align*}
+ &\sqrt n\{\Pp(X_1+\cdots+X_n\le H)-\Phi(H/\sqrt n)\}-C\rho\\
+ &\hspace{15mm}-\sqrt n\{F_B(n/2)-1/2\}+C<0.
+\end{align*}
+There is no upper bound on $ns$ in this statement.
+\end{theorem}
+\begin{proof}
+The marginal $X$ is symmetric. For $H\ge0$ this gives the exact identity
+\[
+ \Pp(X_1+\cdots+X_n\le H)
+ =\frac12+\frac12\Pp(|X_1+\cdots+X_n|\le H).
+\]
+The corresponding raw interval for the sum of the $Y_i$ has length
+$2H\sqrt{1/4+s}<1-2a$. Theorem~\ref{thm:concentration} bounds its
+mass by the central binomial mass $\pi_{n/2}$. Also
+$F_B(n/2)=1/2+\pi_{n/2}/2$. Subtraction therefore bounds the displayed
+comparison by
+\[
+       -\sqrt n\{\Phi(H/\sqrt n)-1/2\}-C(\rho-1).
+\]
+Jensen's strict inequality gives $\rho>1$ unless $|X|=1$ almost surely.
+The two conditional supports lie strictly on opposite sides of zero,
+since $a<1/2$. Thus $|X|=1$ would force each conditional law to be a
+point mass and $s=0$, contrary to the hypothesis. The final bound is strict,
+including at $H=0$ and at exact atom collisions.
+\end{proof}
+
+\section{The signed curvature correction has a short uniform bound}
+Write $v_j=\E U_j^2$, $q=1-p$, $v=pq$, $s=qv_0+pv_1$, and
+$W_j=T_j-j$. For any real $t$, define
+\[
+ B_j(t)=\E(t-T_j)_+-(t-j)_+\ge0,\qquad
+ \mathcal C(t)=\sum_{j=1}^{n-1}(\pi_{j+1}-\pi_j)B_j(t).
+\]
+These quantities require only finite second moments. The new crossing
+identity in the companion \texttt{crossing.tex} writes the actual CDF as
+the linear interpolation of the binomial CDF, plus $\mathcal C(t)$,
+minus a weighted nonnegative crossing loss. The following estimate bounds
+only the correction; it is not a bound for that loss.
+
+\begin{lemma}\label{lem:curvature}
+For $n\ge2$, $0<p<1$ and every real $t$, put $c=(np-q-t)_+$.
+Then
+\begin{equation}\label{eq:curvature}
+ \mathcal C(t)\le\frac{s}{4v}
+             +\frac{c\sqrt s}{2v\sqrt{n+1}}.
+\end{equation}
+In terms of $\lambda=ns$, this is
+\[
+ \sqrt n\,\mathcal C(t)\le\frac{\lambda}{4v\sqrt n}
+                +\frac{c\sqrt\lambda}{2v\sqrt{n+1}}.
+\]
+The second term vanishes whenever $t\ge np-q$.
+\end{lemma}
+\begin{proof}
+Let $a=t-j$ and $t_j=(n-j)v_0+jv_1$. Centering gives
+\[
+ B_j(t)=\frac{\E|a-W_j|-|a|}{2}.
+\]
+The triangle inequality and Cauchy--Schwarz imply
+$B_j\le\sqrt{t_j}/2$. When $a>0$, another application of
+Cauchy--Schwarz gives
+\[
+ B_j\le\frac{\sqrt{a^2+t_j}-a}{2}\le\frac{t_j}{4a}.
+\]
+Thus $a_+B_j\le t_j/4$ for all $a$.
+Write $\widetilde\pi_r=\Pp(\operatorname{Bin}(n+1,p)=r)$.
+The exact adjacent-mass identity is
+\[
+ \pi_{j+1}-\pi_j
+   =\frac{(n+1)p-j-1}{(n+1)v}\widetilde\pi_{j+1}.
+\]
+Its numerator is $a+(np-q-t)\le a_++c$. Discard the nonpositive
+mass differences, using $B_j\ge0$. On the positive side,
+\[
+ \mathcal C(t)\le\frac1{(n+1)v}
+   \sum_j\widetilde\pi_{j+1}
+        \left(\frac{t_j}{4}+\frac c2\sqrt{t_j}\right).
+\]
+The remaining sums may be extended over all $1\le j\le n-1$.
+For $r=j+1$, $t_j=(n+1-r)v_0+(r-1)v_1$ is at most
+$(n+1-r)v_0+rv_1$. Extending this latter nonnegative expression over
+the complete binomial distribution gives
+\[
+ \sum_{j=1}^{n-1}\widetilde\pi_{j+1}t_j\le(n+1)s.
+\]
+Cauchy--Schwarz also bounds the corresponding square-root sum by
+$\sqrt{(n+1)s}$, since its total mass is at most one.
+Substitution proves \eqref{eq:curvature}. No local truncation of the
+binomial distribution, or numerical count grid, was used.
+\end{proof}
+
+The signed sum can be much smaller than this upper bound. The proof
+retains its favorable sign long enough to discard only the decreasing
+side of the mass function. Nevertheless, below $np-q$ the remaining
+square-root term is not a bound proportional to arbitrarily small noise.
+Even above $np-q$, a quantitative weighted crossing-loss estimate and the
+normal/cubic repair are still needed to prove the full comparison.
+
+\section{A precise obstruction to one four-moment shortcut}
+Under the companion crossing theorem's hypotheses, put
+$g_n(t)=t-\E K$. Its kernel satisfies
+$h(x)\ge h_D(x):=\Pp(D>x)-\E(D-x)_+$: below the lower endpoint of
+$D$, the right side is $x\le\E(x-U_0)_+$, and above it the two
+kernels agree. Selecting one index in the nonnegative sum therefore gives
+\[
+ g_n(t)\ge\Pp(W_i>t-i)-\E(W_i-(t-i))_+
+\]
+It would be useful if the expectation on the right
+were positive from the usual own-count moment bounds alone. This is false.
+Let
+\[
+ \Pp(Z=6/5)=\Pp(Z=-6/5)=25/144,
+                 \qquad\Pp(Z=0)=47/72.
+\]
+Then
+\[
+ \E Z=\E Z^3=0,\quad \E Z^2=1/2,\quad\E Z^4=18/25
+       \le(3/5)^2(1/2)+3(1/2)^2=93/100,
+\]
+but
+\[
+                   \Pp(Z>0)-\E Z_+=-5/144<0.
+\]
+Thus no polynomial argument using only these four moment constraints can
+prove positivity of that selected reserve on the whole moderate-noise
+range. This law is a counterexample to the moment relaxation, not an
+asserted convolution of admissible iid conditional variables. Additional
+independence information, joint neighboring terms, or the full nonnegative
+kernel is necessary.
+
+A second false shortcut concerns renewal independence. Take $A=3/5$,
+$a=3/125$ and the comonotone conditional coupling
+\[
+ (U_0,U_1)=(-A,-a),(a,-a),(a,A)
+       \quad\text{with probabilities }1/26,12/13,1/26.
+\]
+Both marginals are centered and obey the right strip with inward sum
+$2a=.048$. At $n=42,p=1/2$ their noise is
+$ns=42Aa=378/625=.6048$. Although the increment
+$D=1+U_1-U_0$ has mean one and width $78/125<1$,
+\[
+                      \operatorname{Cov}(U_0,D)=-216/15625\ne0.
+\]
+The initial mesh location $\sum U_{0i}$ therefore remains correlated
+with its increments. An ordinary independent-delay renewal theorem cannot
+be applied merely by choosing this coupling. The companion exact
+stop-loss telescoping identity accounts for the bias and avoids the issue.
+
+\section{Evidence and the remaining inequality}
+The exact checker uses actual centered conditional two-point marginals,
+including one vanishing conditional noise and exact collisions. It verifies
+interval concentration, the binomial difference identity, the weighted
+variance step, the curvature bound and the symmetric central comparison.
+Radical bounds in the curvature control are checked by squaring only after
+checking the sign of the residual. The two counterexamples above are exact.
+
+A separate bounded diagnostic tested 115 actual four/three-point laws at
+$n=42,p=1/2$ and noise $.075<ns\le.616$. It evaluated the unweighted
+crossing at 43,487 exact atom locations near the mean, with floating
+probabilities; all observed losses were positive. Those observations are
+discovery only and are not inputs to any theorem here.
+
+The unresolved general implication is quantitative. In the exact identity
+\[
+ \Delta_C=-\sqrt n\sum_i\pi_i g_i(t)
+       +\sqrt n\,\mathcal C(t)+\text{phase, normal and cubic repairs},
+\]
+one must bound the first, weighted loss strongly enough for the same
+actual law to absorb every remaining term. The fact that
+$\sum_i g_i(t)\ge0$, even for the whole acquired noise range, does not
+supply such a bound. The existing accepted count certificates remain in
+place; no larger-noise full theorem or global propagation is claimed.
+\end{document}
