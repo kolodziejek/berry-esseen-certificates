@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/primitives-v10/mathematics/simplification-v10/2026-10-28/primitives.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/primitives-v10/runs/primitives-v10-20261028/build02",
+    "--json"
+  ],
+  "returncode": 0,
+  "seconds": 1.1761610419489443,
+  "source_sha256": "d5fa21c09b7b4a3c7052757df96440aa3e12c50c6fd73654ad491d4c8bc4b4ba",
+  "pdf_sha256": "1507f2792e256400c63485e5e06251ceb9da7e297a04bcde73c9f642bc7937c4",
+  "pages": 5,
+  "warnings": [
+    "Overfull \\hbox (6.18997pt too wide) detected at line 32",
+    "Overfull \\hbox (18.87001pt too wide) detected at line 98"
+  ],
+  "stdout_sha256": "bef1c005a147aaa51681a493e932141ba84e7f4712cd0cb6219263f7539871d7",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
