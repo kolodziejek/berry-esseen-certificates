@@ -1,0 +1,38 @@
+{
+  "result": "PASS",
+  "scope": "finite moment path and conditional contact/collision lemmas only; not C4",
+  "exact_checks": 374,
+  "collision_cases": 164,
+  "negative_controls": [
+    "endpoint-only moment maximization",
+    "convexity of iid objective on moment segment",
+    "dropping closed threshold atoms",
+    "forgetting binomial factor in second variation",
+    "signed third moment claimed fixed",
+    "contact omitted from nonresonance conclusion",
+    "at most one local minimum claimed",
+    "endpoint probabilities extended past feasible interval",
+    "missing fixture atom",
+    "duplicate fixture atom",
+    "reordered fixture without co-permutation",
+    "corrupt fixture mass"
+  ],
+  "quartic_coefficients": [
+    "25719/32000",
+    "-103/2000",
+    "-483/200",
+    "-123/5",
+    "11"
+  ],
+  "endpoint_gaps": [
+    "51/160000",
+    "1859/160000"
+  ],
+  "source_sha256": {
+    "mathematics/simplification-v13/2026-10-28/finite-contact.tex": "5724393717a0ad94b5f2e7113e3064f9c918f3601fe8387dd8d888d0701d0e8a",
+    "mathematics/simplification-v13/2026-10-28/finite-contact-check.py": "713c8698555a1520e3e20ee1b103323e030297999ca6d75b6052e42253afcfea",
+    "manuscript/arxiv-v1/sections/02-fixed-target.tex": "5a00687b76390fcaa4c57f9f893d070b23bf3119eda8aa4b82d66c3b4c0b509b",
+    "mathematics/fixed-target-v7/2026-10-27/base-audit.md": "5335faf21a1370655b1370197687cd3f35052a23ab55332ff8ad0fdcf8fd7251",
+    "mathematics/fixed-target-v8/2026-10-28/root4-bridge.tex": "00aca652fb1ab6b615bde78bd038c2dceb78f45f23a7ca64f1b759815428d337"
+  }
+}

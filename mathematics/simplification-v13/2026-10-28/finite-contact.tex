@@ -1,0 +1,241 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{theorem}{Theorem}\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\title{Four summands: moment paths and active collisions}
+\author{}\date{28 October 2026}
+\begin{document}\maketitle
+
+A linear moment theorem does not compress an iid four-fold convolution.
+The counterexample below occurs inside the bounded moment and threshold
+box used by the current four-summand reduction. A contact inequality does
+supply a different restriction: apart from at most two points, every atom
+of a finite maximizing law must occur in an active four-sum collision.
+This is a structural reduction with explicit remaining cases, not a proof
+of the four-summand Berry--Esseen bound.
+
+\section{An exact obstruction to moment-extreme compression}
+Let $Z_\theta$ have support $\{-2,-1,0,1,2\}$ and probability vector
+\begin{equation}\label{eq:family}
+ \left(\frac1{20}+\theta,\ \frac15-2\theta,\ \frac12,
+              \frac15+2\theta,\ \frac1{20}-\theta\right),
+ \qquad -\frac1{20}\le\theta\le\frac1{20}.
+\end{equation}
+All these laws have
+\[
+ \E Z_\theta=0,\qquad \E Z_\theta^2=\frac45,
+ \qquad \E|Z_\theta|^3=\frac65.
+\]
+Consequently $X_\theta=(\sqrt5/2)Z_\theta$ is standardized and has
+$\rho=3\sqrt5/4<46/25$. Its support is contained in
+$[-\sqrt5,\sqrt5]\subset(-4.032,4.032)$, and
+$\beta=\E[X_\theta|X_\theta|]=-5\theta$, so $|\beta|\le1/4$.
+The fixed standardized raw sum threshold corresponding to
+$\sum_{j=1}^4Z_{\theta,j}\le1$ is $H=\sqrt5/2$.
+
+\begin{proposition}\label{prop:obstruction}
+On the set of probability laws supported on these five raw points with
+these three moments, the four-summand closed CDF at threshold $1$ attains
+its maximum strictly inside the moment segment. In particular neither
+extreme law maximizes it. The same assertion holds for the standardized
+fixed-target functional
+\[
+ 2\{\Pp(X_{\theta,1}+\cdots+X_{\theta,4}\le H)-\Phi(H/2)\}
+                          -c\rho
+\]
+for every fixed $c$, because its other terms are constant on the segment.
+\end{proposition}
+\begin{proof}
+The matrix with rows $1,z,z^2,|z|^3$ on the five support points has rank
+four. Its nullspace is spanned by $(1,-2,0,2,-1)$; nonnegativity gives
+exactly the interval in \eqref{eq:family}. Hence the two endpoints are
+the only extreme points of this moment polytope.
+Direct convolution, with all threshold atoms included, gives
+\begin{align}\label{eq:cdf}
+ F(\theta)&:=\Pp(Z_{\theta,1}+\cdots+Z_{\theta,4}\le1)\notag\\
+ &=\frac{25719}{32000}-\frac{103}{2000}\theta
+       -\frac{483}{200}\theta^2-\frac{123}{5}\theta^3+11\theta^4.
+\end{align}
+In particular
+\[
+ F(0)=\frac{25719}{32000},\quad
+ F(-1/20)=\frac{4017}{5000},\quad
+ F(1/20)=\frac{7921}{10000}.
+\]
+The two strict differences are $51/160000$ and $1859/160000$.
+Continuity gives a maximizer, and neither endpoint can be one.
+More explicitly,
+\[
+ F'(\theta)=\frac{(20\theta+1)(4400\theta^2-7600\theta-103)}{2000}.
+\]
+The second factor decreases on the entire interval and changes sign
+between $-1/40$ and $-1/100$. Thus the unique maximum is at
+\[
+ \theta_* =\frac{190-\sqrt{37233}}{220}\in(-1/40,-1/100).
+\]
+The standardization and fixed-target assertions follow from the common
+moments and common threshold.
+\end{proof}
+
+This is not a counterexample to the Berry--Esseen conjecture. It refutes
+an intermediate extremal principle. It even has a positive closed
+normal discrepancy: $F(0)>4/5$, whereas
+$\Phi(\sqrt5/4)\le1/2+\sqrt5/10<73/100$.
+The example does not preserve the signed third moment:
+$\E X_\theta^3=-(15\sqrt5/2)\theta$. A reduction imposing that additional
+constraint would require its own argument. Nor does the example assert
+that its interior maximizer is a global fixed-target maximizer over all
+probability laws.
+
+\section{The correct finite moment-path calculation}
+For finite signed measures define
+\[
+ \mathcal A_H(\mu_1,\mu_2,\mu_3,\mu_4)
+  =\int\mathbf1_{\{x_1+x_2+x_3+x_4\le H\}}
+                         \,d\mu_1\,d\mu_2\,d\mu_3\,d\mu_4.
+\]
+This is symmetric and multilinear. The notation
+$\mathcal A_H(P^{4-j},\nu^j)$ records how many arguments are of each type.
+
+\begin{lemma}[A complete one-dimensional replacement]\label{lem:path}
+Let $P$ be a probability measure with finite absolute third moment and
+let $\nu$ be a finite signed measure with
+$\int(1+|x|^3)\,d|\nu|(x)<\infty$. Assume $P+t\nu$ is a nonnegative
+probability measure for $t\in[a,b]$. Suppose
+\[
+ \int(1,x,x^2,|x|^3)\,d\nu(x)=0.
+\]
+The mean, variance and absolute third moment remain fixed, and
+\begin{equation}\label{eq:expansion}
+ F_{P+t\nu}^{*4}(H)=
+ \sum_{j=0}^4\binom4j t^j\mathcal A_H(P^{4-j},\nu^j).
+\end{equation}
+Its maximum is attained at an endpoint or an interior zero of the cubic
+ derivative. Thus an exact derivative-root check, or a whole-interval
+quartic majorant, is sufficient. Checking only the endpoints is not.
+\end{lemma}
+\begin{proof}
+The moments are linear. Expand the four product factors, grouping equal
+terms by symmetry. The event stays fixed, including its boundary; no
+continuity of its indicator is used. The remaining assertion is the
+ordinary extreme-value theorem and Fermat's theorem for a polynomial.
+\end{proof}
+
+A useful necessary test for a local maximum is also immediate. If both
+signs of $t$ are feasible near zero, then
+\begin{gather*}
+ \mathcal A_H(P^3,\nu)=0,\qquad
+ \mathcal A_H(P^2,\nu^2)\le0.
+\end{gather*}
+If the second quantity vanishes, then also
+$\mathcal A_H(P,\nu^3)=0$ and $\mathcal A_H(\nu^4)\le0$.
+For $P=\sum_{j=1}^m p_j\delta_{x_j}$ with $p_j>0$, write
+$\nu=\sum_jv_j\delta_{x_j}$ and
+\[
+ K_{ij}=P^{*2}(( -\infty,H-x_i-x_j]).
+\]
+The quadratic condition is $v^\mathsf TKv\le0$ for every vector in
+the nullspace of the four moment rows. In other words, the compression
+of $K$ to that nullspace must be negative semidefinite. This is a necessary
+same-law condition; it does not characterize an optimizer or replace the
+whole event probability. It offers an inexpensive rejection test for
+candidate atomic supports before any dense certificate construction.
+
+\section{At most two atoms can avoid the active collision}
+We now use a contact premise, which is distinct from a moment-polytope
+extreme-point claim.
+
+\begin{lemma}[A cubic contact potential has at most two minima]
+\label{lem:minima}
+For $c>0$ and real $a,b,d$, the function
+$q(x)=c|x|^3+ax^2+bx+d$ has at most two distinct local minima.
+If there are two, one is negative and one positive.
+\end{lemma}
+\begin{proof}
+If $a\ge0$, the function is strictly convex, so has at most one local
+minimum. If $a<0$, set $R=-a/(3c)>0$. On $(-R,R)$ its second
+derivative $6c|x|+2a$ is negative. On each exterior interval it is
+strictly positive, so the derivative has at most one zero there.
+A stationary point at $R$ or $-R$ has a nonzero third derivative and
+is not a local minimum. These observations give at most one local
+minimum on each exterior interval and none elsewhere.
+\end{proof}
+
+\begin{theorem}[Contact forces active support collisions]\label{thm:collision}
+Let $P$ have finite support $S$, with every listed atom of positive mass.
+Fix $H\in\mathbb R$, $c>0$, and assume that for some real $a,b,d$
+\begin{equation}\label{eq:contact}
+ q(x):=c|x|^3+ax^2+bx+d
+ \ \ge\ 8P^{*3}(( -\infty,H-x]),
+ \qquad x\in\mathbb R,
+\end{equation}
+with equality at every $x\in S$. Then at most two points of $S$ fail
+to belong to an active four-sum collision. Equivalently,
+\[
+ \#\{x\in S:H-x\notin S+S+S\}\le2.
+\]
+If there are two such exceptional points, they have opposite signs.
+If exactly one unordered four-term multiset from $S$ sums to $H$, and
+it contains $r$ distinct points, then $\#S\le r+2\le6$.
+\end{theorem}
+\begin{proof}
+If $H-x\notin S+S+S$, the finite-support CDF
+$P^{*3}(( -\infty,H-y])$ is constant for $y$ in a neighborhood of
+$x$. Equality at $x$ and \eqref{eq:contact} therefore make $x$ a
+local minimum of the same function $q$. Apply Lemma~\ref{lem:minima}.
+Every point that does occur in an active collision belongs to its
+four-term multiset. If there is only one such multiset, it contains
+all but at most two support points, which proves the last assertion.
+\end{proof}
+
+For the fixed-target objective
+$2\{P^{*4}(( -\infty,H])-\Phi(H/2)\}-c\rho$, the contact formula
+in \texttt{sections/02-fixed-target.tex} has exactly this form.
+For a standardized maximizing pair, put
+$\varphi=\phi(H/2)$, $F=P^{*4}(( -\infty,H])$ and
+$\beta=\E[X|X|]$. Its potential is
+\[
+ q(x)=c|x|^3-\frac{H\varphi+3c\rho}{2}x^2
+              -(4\varphi+3c\beta)x
+              +8F+\frac{H\varphi+c\rho}{2}.
+\]
+The fixed-target contact theorem supplies \eqref{eq:contact}; it is an
+explicit premise of the new support conclusion, not proved by a finite
+arithmetic check. No two- or three-summand estimate is used here.
+For a finite law, a maximizing threshold must itself be a four-sum atom:
+otherwise lowering it a little preserves the CDF and strictly improves
+the normal subtraction.
+
+In particular, if distinct unordered four-term multisets of $S$ always
+have distinct sums, a finite fixed-target maximizing law has at most six
+atoms. Conversely, a finite maximizing law with at least seven atoms must
+have two distinct active occupancy vectors $k,l\in\mathbb N^m$, with
+\[
+ \sum_jk_j=\sum_jl_j=4,\qquad
+ \sum_j(k_j-l_j)x_j=0,\qquad
+ 0<\sum_j|k_j-l_j|\le8.
+\]
+Thus larger atomic candidates must lie on explicit low-integer-coefficient
+resonance hyperplanes. The two possible exceptional atoms can be restricted
+further to the local minima of the displayed cubic potential.
+
+\paragraph{What remains open.}
+This is not a universal six-atom reduction. Attainment of the unrestricted
+problem gives compact support, not finite support. A finite maximizing law
+may have several simultaneous active multisets; these resonant strata
+cannot be discarded as a set of parameter measure zero. Perturbing a
+threshold collision changes a closed event discontinuously. Nor does a
+finite atomic approximation of a maximizing law inherit its exact contact
+inequality. A complete short $n=4$ proof must address these remaining cases,
+or use an original-law bound such as the retained physical ROOT4 bridge.
+
+\paragraph{Scope of the bounded checks.}
+The independent rational script verifies the moment segment, its complete
+quartic by both convolution and direct product enumeration, its endpoint
+and derivative identities, moment-null tangent expansions, and actual
+collision hypergraphs. It rejects endpoint-only maximization and the
+omission of the contact premise. These are exact controls for the lemmas,
+not a new acceptance of G2, G3, ROOT4 or the finite base through $41$.
+\end{document}

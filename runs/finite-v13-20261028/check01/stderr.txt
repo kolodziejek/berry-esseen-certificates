@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/finite-v13/mathematics/simplification-v13/2026-10-28/finite-contact-check.py", line 159, in <module>
+    require(name+' is an actual mean-zero law',sum(weights)==1 and all(w>0 for w in weights) and sum(x*w for x,w in zip(points,weights))==0)
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/finite-v13/mathematics/simplification-v13/2026-10-28/finite-contact-check.py", line 21, in require
+    raise AssertionError(name)
+AssertionError: nearby four points is an actual mean-zero law
