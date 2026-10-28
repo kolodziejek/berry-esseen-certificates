@@ -1,0 +1,410 @@
+\section{Fixed-target moments and signed phase resources}
+\label{v9:resources:section}
+
+The next two sections keep the actual law, index and threshold fixed.
+Throughout, $n\ge N=42$, $c=\CE$, and the attained fixed-target excess
+$a$ is nonnegative. We assume the sharp predecessor
+$C_{n-1}\le c$ and the contact and conservation
+formulas~\eqref{v9:core:contact} and~\eqref{v9:core:conservation}.
+The entry of Section~\ref{v9:entry:selected-route} supplies a complete
+closed cover, an actual central gap $(-A,B)$, and bounds for the same
+law's $\rho,\beta,\gamma,m,D$ and raw threshold $H$.
+Here $D=(3+\sqrt{10})\rho-\gamma-3J$, with $J$ the actual weighted gap
+sum. Write $\mathcal L=L_{\rm core}$ for the nonnegative leakage denoted
+$L$ in the core conservation formula; this separates it from slope
+bounds used below.
+The physical noise remains $W=X-\E[X\mid B_0]$ and the count noise is
+$U=W/\ell$. Below, the different symbol $\Omega$ denotes a signed
+Fourier moment coefficient.
+
+\begin{condition}[Panel input and finite contraction]\label{v9:resources:input}
+Use the nonempty probability panels indexed 24 through 53 in the selected
+entry, with closed endpoints $[i/100,(i+1)/100]$. On each panel $I$ retain
+its actual-law bounds, including $nD\le ND_I$ and an initial noise ceiling
+$\theta\le\Theta_I$. Every law allowed by the entry must belong to at
+least one such panel. The support radius $R=157/50$ is the largest
+already acquired radius of the surviving fourth-pass rho rows.
+All arithmetic in the ordered iteration below is outward: lower roots
+are rounded down, upper roots up, and only a strictly negative residual
+excludes a panel. Perform eight rounds; check every denominator is
+positive before division and every asserted root has nonnegative input.
+\end{condition}
+
+The numerical input is a finite obligation, not a replacement for its
+entry hypotheses. The formulas below explain the implication of each
+recorded inequality and permit a check of each entire panel.
+
+Write \(p=\Pp(X>0)\), \(q=1-p\), \(m=\E X_+=\E X_->0\).
+The conditional means are \(\bar B=m/p\), \(\bar A=m/q\), and
+\[
+ \theta=1-\frac{m^2}{pq},\qquad
+ \ell=\frac m{pq}=\sqrt{\frac{1-\theta}{pq}},\qquad
+ d=1-\frac{A+B}{\ell},\qquad
+ \lambda=\frac{n\theta}{\ell^2}.
+\]
+Thus \(d\) is a count-coordinate inward displacement, not \(D\).
+Let \(V=\bar B\) on the positive sign and \(V=-\bar A\) on the negative sign;
+write \(W=X-V\). Define the two measures on nonnegative magnitudes by
+\(\int f(x)d\mu_\pm(x)=\E[W^2\mathbf1_{\{\pm X>0\}}f(|X|)]\).
+Their masses sum to \(\theta\); the central gap ensures there is no atom at zero.
+Also \(A\le\bar A\), \(B\le\bar B\).
+
+\subsection{A common defect budget}\label{v9:resources:moment-cost}
+We use the actual-law outer-gap inequality
+\[
+ D\ge(\sigma-1)\E X_+^3+(\sigma+1)\E X_-^3
+       -6mAB+6BR_++6AR_-,
+\]
+\[
+ \sigma=\sqrt{10},\qquad R_+=\E X_+^2-mB,\qquad R_-=\E X_-^2-mA.
+\]
+Here is the gap argument behind this input. On the positive side, summing
+over outer support gaps and comparing each squared gap length with
+$2\int(t-B)\,dt$ gives
+\[
+ J_o^+\le2\int_B^\infty(t-B)\tau(t)\,dt
+ =\E[X_+(X_+-B)^2]=T_+-2BR_+,
+ \quad T_+=\E X_+^3-mB^2.
+\]
+The negative side gives $J_o^-\le T_--2AR_-$ by the same magnitude
+calculation. Adding the central term $m(A+B)^2$ and substituting in
+$D$ proves the displayed inequality. Endpoint atoms are included in
+the tail integrals; changing their values at integration endpoints does
+not change an integral. Substituting
+\(\E X_+^3=m\bar B^2+\int(x+2\bar B)d\mu_+\) and
+\(R_+=\mu_+(\R)+m(\bar B-B)\), and their negative-sign counterparts, gives
+\begin{equation}\label{v9:resources:moment-budget}
+ D\ge \mathfrak b_0+E_0+\int k_+d\mu_++\int k_-d\mu_-,
+\end{equation}
+where, with \(p_*=(4-\sqrt{10})/2\),
+\[
+\begin{split}
+ \mathfrak b_0&=\frac{(6+2\sigma)(1-\theta)^{3/2}}{\sqrt{pq}}(p-p_*)^2,\\
+ E_0&=6m\{(A+B)(\bar A-A+\bar B-B)+(\bar A-A)(\bar B-B)\},\\
+ k_+(x)&=(\sigma-1)(x+2\bar B)+6B,\qquad
+ k_-(x)=(\sigma+1)(x+2\bar A)+6A .
+\end{split}
+\]
+The deterministic identity is
+\((\sigma+1)p^2+(\sigma-1)q^2-6pq=(6+2\sigma)(p-p_*)^2\).
+Every displayed cost is nonnegative.
+
+\subsection{Ordered contractions on closed probability panels}\label{v9:resources:iteration}
+For $I=[l,u]$, set \(v_-=\min_{p\in I}pq\), \(v_+=\max_{p\in I}pq\).
+The maximum includes \(1/4\) if \(I\) crosses \(1/2\).
+Use \(\sigma_l=3.162277660<\sigma<3.162277661=\sigma_u\).
+Initially \(D\le D_I<\sigma_l-1\), and the gap bound
+\(J\le\rho+2mAB\) gives
+\[
+ AB\ge z:=(\sigma_l-1-D_I)/3>0.
+\]
+Indeed \(\rho\ge1,\gamma\le\rho,m\le1/2\) imply this inequality.
+With \(\bar A_u=\sqrt{u/(1-u)}\), \(\bar B_u=\sqrt{(1-l)/l}\), obtain
+\[
+ A\ge A_l=z/\bar B_u,\quad B\ge B_l=z/\bar A_u,\quad
+ (A+B)/\ell\ge g=2\sqrt{zv_-},\quad d\le1-g.
+\]
+For a currently proved \(\theta\le\Theta\), lower-bound the binary charge by
+\[
+ b_I=\frac{(6+2\sigma_l)(1-\Theta)^{3/2}}{\sqrt{v_+}}
+        \operatorname{dist}(I,[ (4-\sigma_u)/2,(4-\sigma_l)/2])^2.
+\]
+All square roots are directed outward. If \(r=D_I-b_I<0\), the entire
+closed panel is impossible. Otherwise set
+\[
+ \bar A_l=\sqrt{(1-\Theta)l/(1-l)},\quad
+ \bar B_l=\sqrt{(1-\Theta)(1-u)/u},
+\]
+\[
+ K=\min\{(\sigma_l-1)(B_l+2\bar B_l)+6B_l,\
+          (\sigma_l+1)(A_l+2\bar A_l)+6A_l\}>0.
+\]
+Equation~\eqref{v9:resources:moment-budget} gives \(\theta\le r/K\).
+Intersect this bound with \(\Theta\), then recompute \(b_I,r\).
+Put \(m_l=\sqrt{(1-\Theta)v_-}\) and
+\(\ell_l=\sqrt{(1-\Theta)/v_+}\). Since
+\(E_0\ge6m\ell^2gd\), we may update
+\[
+ d\le\min\{d_{\rm old},r/(6m_l\ell_l^2g)\},\quad
+ g\ge1-d,
+\]
+\[
+ A_l\gets\max\{A_l,\ell_l(l-d)_+\},\quad
+ B_l\gets\max\{B_l,\ell_l(1-u-d)_+\}.
+\]
+Only previously proved bounds enter each update. Zero residual forces
+zero noise and displacement; no division by that residual is needed.
+The implementation performs eight rounds, rounding upper bounds upward and
+lower bounds downward to \(10^{-10}\).
+
+\subsection{Signed moments and a weighted noise bound}\label{v9:resources:exports}
+For every orientation, including \(p>1/2\),
+\begin{equation}\label{v9:resources:beta}
+ 1-2u-2(1-u)\Theta\le\beta\le1-2l+2l\Theta.
+\end{equation}
+This follows from
+\(\beta=(1-\theta)(1-2p)+\mu_+(\R)-\mu_-(\R)\).
+The formerly convenient upper replacement \(1-2l+\Theta\) requires
+\(l\le1/2\) and must not be continued past that point.
+
+For a coherent third-moment cap, put
+\[
+ L=R+2\max(\bar A_u,\bar B_u),\quad
+ k=\min\{\sigma_l-1+6B_l/(R+2\bar B_u),\
+          \sigma_l+1+6A_l/(R+2\bar A_u)\}.
+\]
+The exact identity
+\[\rho=\rho_B(p)(1-\theta)^{3/2}+\int(x+2\bar B)d\mu_++\int(x+2\bar A)d\mu_-.\]
+gives a noise charge at most \(\min(L\theta,r/k)\).
+Let \(r_B=(1-2v_-)/\sqrt{v_-}\) and
+\(s\le(3/2)\sqrt{1-\Theta}\). Integrating the derivative proves
+\((1-\theta)^{3/2}\le1-s\theta\) for \(0\le\theta\le\Theta\).
+The maximum of this affine, piecewise expression is therefore bounded by
+\[
+ \rho\le r_B+(L-sr_B)_+\min\{\Theta,r/(kL)\}.
+\]
+Intersect with the prior rho cap.
+
+Finally \eqref{v9:resources:moment-budget} implies the joint inequality
+\[
+ D\ge b_I+6m(A_l+B_l)\ell d+K\theta.
+\]
+Multiplying by the actual \(n\), using \(nD\le ND_I\),
+\(m\ell=1-\theta\), and \(n\theta=(1-\theta)\lambda/(pq)\),
+proves, when \(r>0\),
+\[
+ \frac{d}{r/[6(1-\Theta)(A_l+B_l)]}
+ +\frac{\lambda}{Nv_+r/[K(1-\Theta)]}\le1.
+\]
+This retains the weighted resource; it is not obtained by multiplying an
+arbitrary unweighted noise cap by \(N\).
+
+\begin{theorem}[Conditional all-panel contraction]\label{v9:resources:all-panels}
+Under Condition~\ref{v9:resources:input}, the exact eight-round
+calculation on the selected inputs excludes panels 24 and 53.
+On all 28 remaining panels,
+\[
+ \frac14\le p\le\frac{53}{100},\qquad
+ \theta\le0.0594425514,\qquad d\le0.0719539227,
+\]
+\[
+ \rho\le1.4547288545,\qquad \lambda\le0.6314459997,
+\]
+\[
+ 1.957063175\le\ell\le2.3094010768.
+\]
+All endpoints and both signs are included.
+\end{theorem}
+\begin{proof}
+The previous inequalities justify each recorded rational update.
+The input is the full accepted closed cover, and only a strictly negative
+residual excludes a panel. All 28 retained outputs and every update are in
+the exact log; the stated constants are their outward maxima or minima.
+No sampled parameter or favorable moment optimizer is used.
+\end{proof}
+
+\subsection{Acquiring the incoming strip}\label{v9:resources:strip}
+The retained fixed-target contact theorem, with sharp predecessor and
+nonnegative excess, bounds a support contact by \(H_n(H,\pm t)+cQ(t)\),
+where
+\(Q(t)=-t^3+3rt^2/2+3bt+(8/875)r\).
+Here \(r\) is a rho upper bound, and \(b=\beta_u\) on the positive ray,
+\(b=-\beta_l\) on the negative ray.
+For \(t>\sqrt3\), set
+\[
+ A_t=(t^3-3t)/6,\quad H_4=t^4-6t^2+3,\quad S=81/80,
+\quad E_t=t^5/4100+3t/820+17(3t^2-2)/78720.
+\]
+The heat expansion used in the preceding entry proof remains valid here:
+its fifth-derivative error has coefficient \(3t^2-2\), since \(t^2-1>0\).
+Using \(\|\phi'''\|_\infty<2\phi(0)\), \(\phi(0)<2/5\) and
+\(\sqrt{n-1}>6\), without any sign assumption on \(H_4\), yields
+\[
+ H_n(H,\pm t)\le \tfrac25S^3(A_t+|H_4|/72)+S^3E_t.
+\]
+Thus a negative boundary value of this expression plus
+\((819/2000)Q(t)\) excludes that boundary, provided \(Q(t)<0\).
+The exact derivative estimate is
+\(|\partial_tH_n|<\tfrac25(t^2/2+1/2+8/875)\).
+Check \(Q,Q',Q''<0\) and
+\[
+ L=\tfrac25(t^2/2+1/2+8/875)+(819/2000)Q',\quad L',L''<0.
+\]
+Their higher derivatives are negative constants, so both rays are excluded
+beyond the boundary, for every raw threshold \(H\).
+The complete Gaussian expansion and its domain are proved in
+Lemma~\ref{v9:confinement:heat}; the finite boundary and continuation
+inequalities remain explicit certificate conditions.
+
+Choose the two boundaries
+\(t_-=\ell_l(l+3/5)\) and \(t_+=\ell_l(1-u+3/5)\).
+All satisfy \(t_\pm>\sqrt3\). Both pass on panels 40--52, proving
+\(Y=X/\ell+p\in(-3/5,8/5)\) there.
+On panels 25--39 the negative ray passes but the positive boundary
+upper estimate is nonnegative. This is failure of that sufficient estimate,
+not a counterexample to the strip theorem. No strip claim is made on those
+fifteen panels by this test. On panels 40--52 the inward bound already
+gives $U_0\le d<0.072$ and $U_1\ge-d>-0.072$; together with the
+outer strip this proves $|U|<3/5$. This acquisition precedes the
+half-amplitude argument in Section~\ref{v9:confinement:section}.
+
+For later use, the panel $[0.41,0.42]$ has the following convenient
+strict outward bounds. They are weaker than its eight-round output and
+its retained entry phase bound:
+\begin{equation}\label{v9:resources:central-entry}
+\begin{gathered}
+ \theta<0.054,\quad d<0.069,\quad\rho<1.22,\quad
+ 0.09736\le\beta\le0.234,\\
+ 1.9706<\ell<2.034,\qquad\lambda<0.6,\qquad |H|<1.814,
+ \qquad |U|<0.6.
+\end{gathered}
+\end{equation}
+For example, its recorded noise and displacement bounds are
+$\theta\le0.053026061$, $d\le0.0672060498$,
+$\lambda\le0.5728987925$ and $\rho\le1.2049635459$.
+These numerical consequences still require the complete selected entry
+and the finite contraction checks of Condition~\ref{v9:resources:input}.
+
+\subsection{Signed Fourier terms from one actual moment cell}
+\label{v9:resources:signed}
+Write $M_j=\E|X|^j$ when an absolute moment is intended, and define
+\[
+ K_1=\E[X|X|^3]-3\beta-\tfrac32\rho\gamma,
+ \qquad \Omega=J_1+(M_4-3)/6,
+ \qquad J_1=\sum_{(a,b)}\tau_{a,b}\int_a^b(t-a)t\,dt.
+\]
+The moment coefficient $\Omega$ is unrelated to the physical noise $W$.
+The complete Fourier estimate in the ordered entry supplies, on each
+retained cell,
+\begin{equation}\label{v9:resources:raw}
+ \mathcal R_c\le K_F+cA_F+(cK_1+\varphi\Omega)H+s_F|H|
+             -(c\rho+\varphi\gamma/2)H^2,
+ \qquad\varphi=\phi(H/\sqrt n).
+\end{equation}
+Here $K_F,s_F\ge0$ are complete Fourier error bounds and $A_F$ bounds
+the constant moment/gap term. This inequality retains all frequency
+windows and their gates from Section~\ref{v9:entry:ordered-update};
+the following algebra does not replace those analytic or finite inputs.
+The cell contains ranges for $\rho,\gamma,K_1,\Omega,\varphi$ belonging
+to this same law. Write their lower moment endpoints as $r_l,g_l$.
+
+There are two ordered raw ceilings. The preceding pass supplies the
+positive density floor $\varphi_l$ used in \eqref{v9:resources:raw}.
+After bounding that polynomial one obtains a new ceiling
+$\mathcal R_c\le T<Nc_-r_l$, where $c_-\le c\le c_+$.
+Only now set
+\[
+ \eta=\frac{c_-r_l-T/N}{2}>0,\qquad
+ \mathcal U=(n+H^2)a+n\phi(0)D/6+n^{3/2}\mathcal L.
+\]
+All three costs in $\mathcal U$ are nonnegative. The phase-price formula
+of Corollary~\ref{v9:core:phase-price} gives
+\begin{equation}\label{v9:resources:price}
+ \mathcal U\le\mathcal R_c-\eta H^2.
+\end{equation}
+To see the ordering directly, put $w=H^2/(2n)$ and
+$M=c\rho-\phi(0)D/6$. Conservation gives
+$e^{-w}M\ge c\rho-T/n>0$, and therefore
+\[
+ \mathcal R_c-\mathcal U=n(1-e^{-w})M
+ =n(e^w-1)e^{-w}M
+ \ge\tfrac12H^2(c\rho-T/n)\ge\eta H^2.
+\]
+The density floor is not inferred from this new bound and then fed back
+into the polynomial that produced it.
+
+For each $t\in\{c_-,c_+\}$ define
+\begin{align}
+ B_t&=K_F+tA_F,&
+ Q_t&=tr_l+\min_{v\in[\varphi_l,2/5]}vg_l/2+\eta,
+       \label{v9:resources:quadratics}\\
+ F_{t,+}&=\max(tK_1+v\Omega)+s_F,&
+ F_{t,-}&=-\min(tK_1+v\Omega)+s_F.\notag
+\end{align}
+The extrema in the second line range over the recorded rectangular
+intervals for $K_1,v,\Omega$. The expression is affine in each variable
+separately, so its extrema occur at the eight corners. The separate
+gate $Q_t>0$ must hold for both target endpoints.
+
+\begin{proposition}[One-cell signed resource]\label{v9:resources:cell}
+For $h=|H|$ and the actual sign $\varepsilon$ of $H$,
+\begin{equation}\label{v9:resources:envelope}
+ 0\le\mathcal U\le
+ \min\left\{T,\max_{t\in\{c_-,c_+\}}
+                 (B_t+F_{t,\varepsilon}h-Q_th^2)\right\}.
+\end{equation}
+At $H=0$ both signed branches give the same value.
+\end{proposition}
+\begin{proof}
+For fixed $h\ge0$, the maximum or negative minimum defining the signed
+linear coefficient is a maximum of affine functions of $t$ and hence
+convex. The remaining terms in the polynomial are affine in $t$.
+Its maximum on $[c_-,c_+]$ is bounded by the larger endpoint value.
+Apply \eqref{v9:resources:raw} and \eqref{v9:resources:price}; independently,
+$\mathcal U\le\mathcal R_c\le T$. This proves the minimum with $T$.
+In particular a negative signed slope remains negative. Replacing it by
+zero is unnecessary and discards information.
+\end{proof}
+
+\subsection{Closed-region maxima and necessary noise filters}
+\label{v9:resources:regions}
+On $p\in[l,u]\subset(0,1)$ and $0\le\lambda\le\Lambda$, the exact
+variance identities give
+\[
+ \theta=\frac{\lambda}{nv+\lambda},\qquad
+ m^2=\frac{v^2}{v+\lambda/n},\qquad v=p(1-p).
+\]
+Thus with the actual minimum and maximum $v_-,v_+$ over the interval,
+\begin{equation}\label{v9:resources:noise-filter}
+\begin{gathered}
+ \theta\le\Theta_\Lambda:=\frac{\Lambda}{Nv_-+\Lambda},\qquad
+ \sqrt{\frac{v_-^2}{v_-+\Lambda/N}}\le m\le\sqrt{v_+},\\
+ 1-2u-2(1-l)\Theta_\Lambda\le\beta
+       \le1-2l+2u\Theta_\Lambda.
+\end{gathered}
+\end{equation}
+Indeed $v^2/(v+s)$ increases with $v>0$ and decreases with $s\ge0$.
+The beta bounds follow by enlarging each coefficient in the exact signed
+second-moment inequalities outward. This deliberately conservative filter
+is valid on either side of $1/2$. It also includes the limit $n\to\infty$;
+no finite upper bound on $n$ is needed.
+
+Consider a closed rectangle $h\in[h_0,h_1]$,
+$\lambda\in[\lambda_0,\lambda_1]$ on the probability panel. Retain
+every moment cell whose $p,m,\beta$ intervals meet the necessary ranges
+in \eqref{v9:resources:noise-filter}, with $\Lambda=\lambda_1$, and
+whose previously acquired phase ceiling is at least $h_0$.
+Only disjoint ranges can be discarded. In each retained cell clip $h_1$
+by that phase ceiling. A concave quadratic $B+Fh-Qh^2$, $Q>0$,
+has its maximum at the vertex clipped to this closed interval:
+\[
+ h_* =\max\{h_0,\min(h_1,F/(2Q))\}.
+\]
+Take the maximum of the two target-endpoint maxima, intersect with that
+cell's $T$, and finally take the maximum over every retained cell.
+Denote the result by $S_\varepsilon$. Then
+\begin{equation}\label{v9:resources:rectangle}
+ \mathcal U\le S_\varepsilon
+\end{equation}
+on the whole closed rectangle. Shared endpoints remain in every
+intersecting cell; both phase signs are retained at zero. An empty list
+excludes a rectangle only relative to the complete ancestor cover.
+A negative $S_\varepsilon$ excludes it because $\mathcal U\ge0$.
+
+\begin{condition}[Complete signed resource export]\label{v9:resources:phase-condition}
+The selected fourth pass covers all 2,048 moment boxes and retains every
+one of its 682 active cells. Both endpoint quadratics are reconstructed
+on each active cell, giving 1,364 quadratics with their preceding density
+floors and current positive phase prices. Rejected cells retain their
+valid exclusion reasons; no missing or unclassified box is interpreted
+as impossible. Every resource rectangle uses all incident active cells
+and the complete signed maxima described above.
+\end{condition}
+
+This finite condition is checked by the exact replay and separate
+coefficient reconstruction accompanying the selected entry. Its role is
+to certify the actual-law cover and the rational bounds used here.
+It does not prove contact, conservation or a Fourier remainder theorem.
+Retaining the signed quadratics requires no new frequency integration;
+it preserves information already contained in that last signed pass.
+

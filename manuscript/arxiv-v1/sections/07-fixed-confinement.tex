@@ -1,0 +1,747 @@
+\section{Conditional confinement in Bernoulli coordinates}
+\label{v9:confinement:section}
+
+Two different statements will be proved. Low noise gives half-amplitude
+confinement on the acquired probability range $[0.40,0.53]$ by one
+continuous polynomial argument. A separate signed-deletion calculation
+covers the full acquired noise range on $[0.41,0.42]$. Neither statement
+asserts the subsequent strict count comparison. Both preserve the
+orientation selected for the fixed-target maximizing pair.
+
+\subsection{Conditional statement and acquired application}
+Retain the fixed-target hypotheses of Section~\ref{v9:resources:section}:
+$n\ge42$, nonnegative excess $a$, $c=\CE$, closed-support
+contact, and the true predecessor $C_{n-1}\le c$. The actual raw threshold
+$H$ can have either sign. Assume an actual central gap $(-A,B)$ with
+$A,B>0$, and write
+\[
+ p=\Pp(X>0),\quad q=1-p,\quad m=\E X_+=\E X_-,\quad
+ \bar A=m/q,\quad \bar B=m/p,\quad \ell=\bar A+\bar B,
+\]
+\[
+ X=\ell(Y-p),\qquad Y=B_0+U,\qquad
+ B_0=\mathbf1_{\{X>0\}},\qquad \E(U\mid B_0)=0.
+\]
+Define $U_i$ as the conditional value of $U$ on $\{B_0=i\}$.
+Assume the already acquired bounds
+\begin{equation}\label{v9:confinement:entry}
+ p\in[2/5,3/5],\qquad |U|<3/5,\qquad
+ d=1-(A+B)/\ell<9/125,
+ \qquad \lambda=n\E U^2\le3/40.
+\end{equation}
+The gap implies $A\le\bar A$, $B\le\bar B$, and hence $d\ge0$.
+
+\begin{theorem}\label{v9:confinement:theorem}
+Under these hypotheses, the entire conditional supports satisfy
+$|U|<1/2$. The conclusion is uniform in all raw $H$ and all $n\ge42$.
+It includes the closed noise endpoint $\lambda=3/40$ and zero noise.
+\end{theorem}
+
+The probability interval in this abstract theorem is $[0.4,0.6]$.
+The currently acquired entry supplies the incoming strip and inward bounds
+only on the union of panels 40--52, namely $[0.40,0.53]$. The application
+below is restricted to that smaller interval. In particular this section
+does not acquire the strip on $(0.53,0.6]$ or treat the larger-noise region.
+
+\subsection{One common moment enclosure}
+Put $v=pq$, $s=\E U^2=\lambda/n$, and
+$\theta=\E(X-\E[X\mid B_0])^2$. Conditional centering and variance
+give the exact identities
+\begin{equation}\label{v9:confinement:identities}
+ \ell^2=(v+s)^{-1},\qquad
+ \theta=\frac{s}{v+s}=\frac{\lambda}{nv+\lambda},\qquad
+ \ell^2=\frac{1-\theta}{v}.
+\end{equation}
+Throughout \eqref{v9:confinement:entry}, $6/25\le v\le1/4$ and
+$\max(p,q)\le3/5$. Use the rational constants
+\[
+ \Theta=\frac{37}{5000},\qquad E=\frac{249}{125},\qquad
+ r=\frac{221}{200}.
+\]
+Then
+\[
+ \theta\le\frac{5}{677}<\Theta,\qquad
+ \ell^2\ge4(1-\Theta)>E^2,
+\]
+with exact differences
+$\Theta-5/677=49/3385000$ and $4(1-\Theta)-E^2=73/31250$.
+
+Because $B_0$ is the actual sign of $X$, the absolute cubic
+expansion has no sign approximation:
+\begin{equation}\label{v9:confinement:cubic}
+ \rho:=\E|X|^3=\ell^3\left\{v(1-2v)
+       +3\E[|B_0-p|U^2]
+       +\E[\operatorname{sgn}(B_0-p)U^3]\right\}.
+\end{equation}
+The linear term vanishes by conditional centering. The incoming strip,
+used before the conclusion, gives $|U|^3\le(3/5)U^2$ and
+$|B_0-p|\le3/5$. Also $\ell^3\le v^{-3/2}$. Therefore
+\[
+ \rho\le\rho_B(v)+\frac{12/5}{v^{3/2}}\frac\lambda n,
+ \qquad \rho_B(v)=\frac{1-2v}{\sqrt v}.
+\]
+The function $\rho_B$ decreases on $(0,1/4]$, since its derivative is
+$-\tfrac12v^{-3/2}-v^{-1/2}<0$. The exact squared comparison
+\[
+ 24^2(6/25)^3-(12/5)^2=\frac{34416}{15625}>0
+\]
+gives $\rho\le\rho_B(6/25)+24\lambda/n<r$. For the last step,
+\[
+ r-\frac3{70}=\frac{1487}{1400}>0,\qquad
+ \left(r-\frac3{70}\right)^2\frac6{25}
+       -\left(\frac{13}{25}\right)^2=\frac{8707}{24500000}>0.
+\]
+
+If $\theta_\pm$ are the two nonnegative conditional variance contributions
+in physical coordinates, their sum is $\theta$. Expanding the signed
+second moment gives
+\[
+ \beta:=\E[X|X|]=(1-\theta)(1-2p)+\theta_+-\theta_-.
+\]
+Consequently, for the actual $p$, including $p>1/2$,
+\begin{equation}\label{v9:confinement:beta}
+ 1-2p-2(1-p)\Theta\le\beta\le1-2p+2p\Theta.
+\end{equation}
+All these bounds concern one common marginal. No assertion about
+independent conditional laws or a moment relaxation is used.
+
+\subsection{All-threshold contact and exterior rays}
+\begin{lemma}[Uniform heat bound and ray continuation]\label{v9:confinement:heat}
+Under fixed-target contact, nonnegative excess and the sharp predecessor,
+let $r\ge\rho$ and let $b$ bound the directional signed moment: $\beta$
+on the positive ray, $-\beta$ on the negative ray. At a radius $u>\sqrt3$,
+the polynomials \eqref{v9:confinement:Q}--\eqref{v9:confinement:P} below
+satisfy the following implication. If $Q_{r,b}(u)<0$ and
+$P_{r,b}(u)<0$, that boundary is absent from the closed support. If also
+$Q',Q'',L,L',L''<0$ there, with the moment cap held fixed, the entire
+closed exterior ray is absent. This assertion requires no probability
+panel or incoming noise strip and is uniform in all raw $H$ and $n\ge42$.
+\end{lemma}
+\begin{proof}
+For $w=n-1$, $s_n=\sqrt{n/w}$, $F_w(t)=\Phi(t/\sqrt w)$ and
+$e_n=n(s_n-1)-1/2$, fixed-target contact and the predecessor bound give,
+at every closed-support point $t$,
+\begin{equation}\label{v9:confinement:contact}
+ 0\le\mathcal H_n(H,t)
+       +c\{-|t|^3+\tfrac32\rho t^2+3\beta t+\rho e_n\}
+       -na,
+\end{equation}
+where
+\[
+ \frac{\mathcal H_n(H,t)}{n^{3/2}}
+ =F_w(H-t)-F_n(H)+tF_n'(H)-\frac{t^2-1}{2}F_n''(H).
+\]
+The term $-na$ is nonpositive and may be dropped. This is a
+fixed-target statement; no equality between $c$ and the actual score is
+assumed.
+
+Expand the first term spatially through degree four. Expand the other
+three terms in variance through orders two, one and one, using
+$\partial_w F_w=F_w''/2$. At $t=\pm u$, cancellations give
+\[
+ \frac{\mathcal H_n(H,\pm u)}{s_n^3}
+ =\pm A_u(1-z^2)\phi(z)
+       +\frac{H_4(u)}{24\sqrt w}\phi'''(z)+R,
+\]
+\[
+ z=H/\sqrt w,\quad A_u=(u^3-3u)/6,
+ \qquad H_4(u)=u^4-6u^2+3.
+\]
+The absolute bounds for the four remainders are
+\[
+ \frac{u^5\|\phi^{(4)}\|_\infty}{120w},\quad
+ \frac{\|\phi^{(5)}\|_\infty}{48w^{3/2}},\quad
+ \frac{u\|\phi^{(4)}\|_\infty}{8w},\quad
+ \frac{|u^2-1|\|\phi^{(5)}\|_\infty}{16w^{3/2}}.
+\]
+Gaussian Fourier inversion, integrating absolute powers of frequency,
+gives $\|\phi^{(4)}\|_\infty\le3\phi(0)<6/5$ and
+$\|\phi^{(5)}\|_\infty\le8/\pi<51/20$.
+For $u\ge1$ their sum is at most
+\[
+ \frac{u^5/100+3u/20}{w}
+      +\frac{51(3u^2-2)}{960w^{3/2}}.
+\]
+Thus the remainder extends below the earlier $u\ge5/2$ presentation.
+For $u>\sqrt3$, $A_u>0$, and the elementary bounds
+$\|(1-z^2)\phi(z)\|_\infty=\phi(0)$ and
+$\|\phi'''\|_\infty\le2/\pi<2\phi(0)$ control both signs.
+
+Set $S=81/80$, $c_0=819/2000<c$ and $e=8/875$.
+For $n\ge42$, $s_n<S$, $\sqrt w>6$, and $e_n<e$.
+For completeness,
+$ne_n=s_n^2(2s_n+1)/(2(s_n+1)^2)$ is increasing for $s_n\ge1$;
+its value at $S$ is $793881/2073680<48/125$.
+Define
+\begin{align}
+ E_u&=u^5/4100+3u/820+17(3u^2-2)/78720,\notag\\
+ Q_{r,b}(u)&=-u^3+\tfrac32ru^2+3bu+er,\label{v9:confinement:Q}\\
+ P_{r,b}(u)&=\tfrac25S^3\{A_u+|H_4(u)|/72\}
+                  +S^3 E_u+c_0Q_{r,b}(u).\label{v9:confinement:P}
+\end{align}
+If the directional signed moment is at most $b$, $Q<0$ licenses replacing
+the positive multiplier $c$ by $c_0$. Then $P<0$ contradicts
+\eqref{v9:confinement:contact} at that boundary for every raw $H$.
+
+To continue along a physical ray, hold $r,b$ fixed. Direct differentiation
+of the exact heat expression gives, with $z=H/\sqrt n$ and
+$y=(H-t)/\sqrt n$,
+\[
+ \partial_t\mathcal H_n=n\phi(z)+Ht\phi(z)-ns_n\phi(s_ny).
+\]
+Taylor's theorem and $\|\phi''\|_\infty=\phi(0)$ bound the spatial
+remainder by $\phi(0)t^2/2$. Since
+$\partial_s[s\phi(sy)]=-\phi''(sy)$, the variance contribution is at
+most $\phi(0)n(s_n-1)$. Hence
+\[
+ |\partial_t\mathcal H_n|<\tfrac25(t^2/2+1/2+e).
+\]
+Put $L_{r,b}(u)=\tfrac25(u^2/2+1/2+e)+c_0Q'_{r,b}(u)$.
+If $Q,Q',Q'',L,L',L''$ are negative at a boundary, the signs persist
+along the whole ray: $Q'''=-6$ and $L''=2/5-6c_0<0$.
+Thus the contact upper bound strictly decreases there. Boundary atoms
+and the entire closed exterior ray are excluded.
+\end{proof}
+
+\subsection{A continuous one-parameter certificate}
+For the negative ray use $z=p$ and the signed moment $-\beta$; for the
+positive ray use $z=1-p$ and $\beta$. In both cases $z\in[2/5,3/5]$,
+and \eqref{v9:confinement:beta} gives the directional cap
+\[
+ b_z=2z-1+2(1-z)\Theta.
+\]
+This folds the actual probability, not the endpoints of a probability
+panel. It does not reflect the chosen discrepancy or change its law.
+Take the boundary $u=E(z+1/2)$. Thus
+\[
+ u\in[u_0,u_1]=[2241/1250,2739/1250],\qquad
+ b_z=\alpha u+\delta,
+ \quad\alpha=\frac{4963}{4980},\quad\delta=-\frac{9889}{5000}.
+\]
+Here $u_0^2>3$, so $H_4'(u)=4u(u^2-3)>0$;
+$H_4(u_1)<-2.75$ proves $H_4<0$ on this whole interval.
+Let $\mathcal P(u)=P_{r,\alpha u+\delta}(u)$.
+Replacing $|H_4|$ by $-H_4$ in \eqref{v9:confinement:P} gives an explicit quintic
+$\mathcal P(u)=\sum_{j=0}^5 a_j u^j$, with
+\begin{align*}
+ a_5&=S^3/4100,& a_4&=-\tfrac25S^3/72,\\
+ a_3&=\tfrac25S^3/6-c_0,&
+ a_2&=\tfrac25S^3/12+51S^3/78720+c_0(3r/2+3\alpha),\\
+ a_1&=-\tfrac25S^3/2+3S^3/820+3c_0\delta,&
+ a_0&=-\tfrac25S^3/24-34S^3/78720+c_0er.
+\end{align*}
+The exact rational endpoint inequalities are
+\[
+ \mathcal P'''(u_0)<-2.24,\qquad \mathcal P'''(u_1)<-2.27,
+ \qquad \mathcal P'(u_0)>0.915,\quad \mathcal P'(u_1)>0.745.
+\]
+Indeed $\mathcal P'''$ is a convex quadratic, with second derivative
+$120a_5>0$. Its negative endpoint values make it negative throughout.
+Therefore $\mathcal P'$ is concave and exceeds the chord between its
+positive endpoint values. It follows that $\mathcal P$ increases and
+\begin{equation}\label{v9:confinement:margin}
+ \mathcal P(u)\le\mathcal P(u_1)
+ =-\frac{4560620039489147528734839}{25625000000000000000000000}
+ <-0.1779.
+\end{equation}
+One stronger-looking shortcut is false:
+$\mathcal P''(u_0)>0.0228$. It is not used.
+
+The multiplier and ray signs require a separate calculation.
+The boundary family
+\[
+ \mathcal Q(u)=Q_{r,\alpha u+\delta}(u)
+ =-u^3+(3r/2+3\alpha)u^2+3\delta u+er
+\]
+has total derivatives $\mathcal Q''(u_0)<-1.46$ and
+$\mathcal Q'(u_1)=179223/6250000>0.0286$.
+Since $\mathcal Q''$ decreases, $\mathcal Q'$ decreases and stays
+positive. Hence $\mathcal Q$ increases, and
+$\mathcal Q(u)\le\mathcal Q(u_1)<-1.198$.
+
+For each physical ray the directional cap is fixed. Its derivatives,
+evaluated across the boundary family, are instead
+\begin{align*}
+ q_1(u)&=-3u^2+(3r+3\alpha)u+3\delta,&
+ q_2(u)&=-6u+3r,\\
+ l(u)&=\tfrac25(u^2/2+1/2+e)+c_0q_1(u),&
+ l_1(u)&=\tfrac25u+c_0q_2(u),\qquad l_2=\tfrac25-6c_0.
+\end{align*}
+They are not the total derivatives of $\mathcal Q$.
+The following rational upper bounds certify their signs on the interval:
+\begin{center}
+\begin{tabular}{lrr}\toprule
+family & value at $u_0$ & total derivative at $u_0$\\\midrule
+$q_1$ & $<-4.272$ & $<-4.452$\\
+$q_2$ & $<-7.441$ & $=-6$\\
+$l$   & $<-0.903$ & $<-1.105$\\
+$l_1$ & $<-2.330$ & $=-2.057$\\\bottomrule
+\end{tabular}
+\end{center}
+The two quadratic families have negative constant second derivatives
+$q_1''=-6$ and $l''=-2.057$; the others are affine decreasing.
+Thus all four stay negative, as does $l_2=-2.057$.
+Together with $\mathcal Q<0$, these are the six required signs at every
+boundary. Holding its actual directional cap fixed, the preceding ray
+argument excludes the whole exterior ray beyond each boundary.
+
+\subsection{Completion, application and remaining premises}
+For each actual $p$ the two excluded rays start at
+\[
+ u_-=E(p+1/2),\qquad u_+=E(3/2-p).
+\]
+Because $\ell>E$, the remaining support satisfies
+$-1/2<Y=X/\ell+p<3/2$ strictly. The already proved actual gap supplies
+\[
+ U_0\le(\bar A-A)/\ell\le d<9/125,
+ \qquad U_1\ge-(\bar B-B)/\ell\ge-d>-9/125.
+\]
+For $B_0=0$ the new lower bound is $U_0>-1/2$;
+for $B_0=1$ the new upper bound is $U_1<1/2$.
+This proves Theorem~\ref{v9:confinement:theorem}. If $\lambda=0$, then $\E U^2=0$
+and $U=0$ directly. There is no division by noise or limiting argument.
+
+\begin{corollary}\label{v9:confinement:application}
+Retain the accepted fixed-target entry and the ordered elementary
+moment/gap contraction on its 30 probability panels. On its acquired
+subrange $p\in[0.40,0.53]$, all actual $n\ge42$ with
+$\lambda\in[0,3/40]$ satisfy $|U|<1/2$ for every raw $H$.
+The previously acquired inward bound $d<0.072<1/4$ is retained.
+\end{corollary}
+\begin{proof}
+That antecedent provides the strip $|U|<0.6$ on the 13 closed panels
+40--52 and $d\le0.0719539227<0.072$.
+Their closed union is $[0.40,0.53]$. Apply the theorem at the actual $p$.
+\end{proof}
+
+\subsection{The central panel at larger noise}
+\label{v9:confinement:high-setup}
+We now restrict to the oriented panel $p\in[l,h]=[0.41,0.42]$ and use
+\eqref{v9:resources:central-entry}. Set
+\[
+ N=42,\quad\Theta=0.054,\quad d_0=0.069,\quad
+ E=1.9706,\quad F_\ell=2.034,\quad \sigma_0=0.6,
+\]
+\[
+ r_0=1/2,\quad\tau=1/5,\quad\zeta=10^{-5},\quad
+ \kappa=997/15000<\phi(0)/6,
+\]
+\[
+ c_l=0.4095<c=\CE<c_u=0.40974.
+\]
+Here $E$ is a lower scale bound and $\sigma_0$ is the incoming strip
+width, not $\sqrt{10}$. These constants replace the older floor-47,
+width-$0.55$ confinement parameters; every gate below uses floor 42
+and the already acquired width $0.6$.
+
+Use distinct count-coordinate inner endpoints
+$a_0=p-A/\ell$, $b_0=p+B/\ell$.
+They are support points with $0\le a_0\le d$, $1-d\le b_0\le1$ and
+$b_0-a_0=1-d$. The inner inequalities $U_0\le a_0$, $U_1\ge b_0-1$
+are weak; strictness comes from $d<d_0$. Let
+\[
+ x=np+H/\ell,\quad \nu=\operatorname{Law}\left(x-\sum_{i<n}Y_i\right),
+ \qquad J_{\rm gap}=\int_{[a_0,b_0)}(y-a_0)\nu(dy).
+\]
+The central gap contributes $m\ell J_{\rm gap}=(1-\theta)J_{\rm gap}$
+to the scalar leakage, so
+\begin{equation}\label{v9:confinement:leakage}
+ \mathcal L\ge(1-\theta)J_{\rm gap}.
+\end{equation}
+Write $g(y)=\nu([y,\infty))$ and let $Q_c$ be the count-coordinate
+contact majorant, with $g\le Q_c$ everywhere and equality on the closed
+support. Differentiating fixed-target contact gives
+\begin{equation}\label{v9:confinement:contact-derivative}
+ \sqrt n(-Q_c'(y))=\ell\phi(H/\sqrt n)
+ +\frac\ell n\{3c\beta+(H\phi(H/\sqrt n)+3c\rho)t-3ct|t|\},
+ \qquad t=\ell(y-p).
+\end{equation}
+The excess changes only an additive constant. The multiplier here is
+$c$, not an upper bound on the actual score.
+
+\subsubsection{One resource for displacement, noise and leakage}
+\label{v9:confinement:simplex}
+Define the nonnegative endpoint distances
+\[
+ M_+=\E[X-B;X>0]=m-pB,\qquad M_-=\E[-X-A;X<0]=m-qA.
+\]
+With $\sigma=\sqrt{10}$, the endpoint expansion of the actual defect gives
+\begin{align*}
+ D\ge{}&m\{\sqrt{\sigma+1}A-\sqrt{\sigma-1}B\}^2
+ +2(\sigma+2)B^2M_++2(\sigma+4)A^2M_-\\
+ &+3(\sigma+1)B\theta_++3(\sigma+3)A\theta_-.
+\end{align*}
+Indeed put $Z=X-B\ge0$ on the positive class. Then
+\[
+ T_+=2B^2M_++3B\E[Z^2;X>0]+\E[Z^3;X>0],\quad
+ R_+=BM_++\E[Z^2;X>0].
+\]
+The combination $(\sigma-1)T_++6BR_+$ gives the stated positive
+terms because $\E[Z^2;X>0]\ge\theta_+$. The negative expansion is the
+same magnitude calculation with $\sigma+1$. The remaining constant
+term is the square since $2\sqrt{(\sigma+1)(\sigma-1)}=6$.
+Discard this nonnegative square and use $A\ge E(l-d_0)$,
+$B\ge E(1-h-d_0)$. The positive coefficients
+\begin{align*}
+ c_+&=2(5.16)E^2(1-h-d_0)^2,&c_-&=2(7.16)E^2(l-d_0)^2,\\
+ b_*&=\min\{3(4.16)E(1-h-d_0),3(6.16)E(l-d_0)\}
+\end{align*}
+satisfy
+\begin{equation}\label{v9:confinement:endpoint-cost}
+ D\ge c_+M_++c_-M_-+b_*\theta,\qquad
+ d=\frac{M_+/p+M_-/q}{\ell},\qquad
+ \epsilon:=\E|U|\le\frac{2(M_++M_-)}\ell.
+\end{equation}
+The last bound follows signwise from
+$\E|Z-\E Z|\le2\E Z$ for $Z\ge0$.
+
+On a closed noise band $[\lambda_0,\lambda_1]$, let $S_\varepsilon$
+be the whole-rectangle resource from \eqref{v9:resources:rectangle}.
+Because $n\theta=\ell^2\lambda\ge E^2\lambda_0$, the single common
+budget implies
+\begin{equation}\label{v9:confinement:resource-simplex}
+ nc_+M_++nc_-M_-+n^{3/2}\mathcal L/\kappa\le R_*,
+ \qquad R_*=S_\varepsilon/\kappa-b_*E^2\lambda_0.
+\end{equation}
+A strictly negative $R_*$ excludes a law; equality is retained.
+With $\alpha=\min\{c_+lE,c_-(1-h)E\}>0$ and $G=R_*/\alpha$, the
+same simplex gives $nd\le G$. These costs are simultaneous, so the
+defect budget cannot be spent independently on each one.
+
+\subsubsection{Concentration at both deleted indices}
+\label{v9:confinement:concentration}
+Independently couple the two conditional noises and sample an independent
+Bernoulli label. This realizes the actual marginal as
+$Y=U_0+B_0(1+U_1-U_0)$, with increment at least $1-d>0$.
+Conditional on all pairs, an interval of diameter strictly less than
+$1-d$ selects an antichain of label sets. For an antichain $\mathcal A$
+in $j$ labels, a uniformly random permutation gives a chain meeting it
+at most once. Taking expectations yields
+\[
+ \sum_{A\in\mathcal A}\binom j{|A|}^{-1}\le1,\qquad
+ \Pp(\mathcal A)=\sum_{A\in\mathcal A}\binom j{|A|}^{-1}
+        \binom j{|A|}p^{|A|}q^{j-|A|}
+ \le\max_k\binom jk p^kq^{j-k}.
+\]
+Conditioning back proves the bound for the actual iid sum, also after
+an independent shift. Strict diameter is essential: a closed interval
+equal to a Bernoulli increment can contain both atoms.
+
+Both actual deleted indices satisfy $j\ge n-2\ge40$. Put
+\[
+ r_L=l-(1-l)/40,\quad r_R=h+h/40,\qquad
+ v_*=\min\{r_L(1-r_L),r_R(1-r_R)\}.
+\]
+The gate $0<r_L<r_R<1$ holds. Adjacent binomial-mass ratios give
+$(j+1)p-1\le k\le(j+1)p$ for a mode; hence $r=k/j\in[r_L,r_R]$
+and the mode is interior. The classical finite Stirling inequalities
+$\sqrt{2\pi j}(j/e)^j<j!<
+\sqrt{2\pi j}(j/e)^j e^{1/(12j)}$ give
+\[
+ \sqrt j\binom jk p^kq^{j-k}
+ <\frac{\phi(0)e^{1/(12j)-jD(r\Vert p)}}{\sqrt{r(1-r)}}
+ <\frac{0.4}{\sqrt{v_*}(1-1/480)}<M.
+\]
+Here entropy is nonnegative by Jensen's inequality, and
+$e^z\le(1-z)^{-1}$ for $0\le z<1$ follows termwise from its power
+series. Choose $M$ by taking the downward $10^{-10}$ grid square root of
+$0.16/[v_*(1-1/480)^2]$ and adding one grid unit; thus $M$ is strictly
+larger than the exact root.
+Thus every interval of strict width below $1-d$ has probability less
+than $M/\sqrt j$. No bound on $C_{n-2}$ is assumed. Finally
+\begin{equation}\label{v9:confinement:deleted-factor}
+ F_d=1.037,\qquad F_d^2>\max\{(42/41)^3,42/40\}.
+\end{equation}
+These ratios decrease with $n$ and control the distance factor from
+$n-1$ summands and the noise/pair-event factor from $n-2$ summands.
+
+\subsubsection{Signed deletion, including endpoint atoms}
+\label{v9:confinement:deletion}
+Let $m_n=n-1$, $Z=x-\sum_{i=1}^{m_n}Y_i$,
+$\mu=x-m_np=p+H/\ell$, and let $K$ count the labels. For a removed label
+define $T_i(I)=\Pp(x-\sum_{k<m_n}Y_k-i-U_i\in I)$.
+Exchangeability and $m_np-K=Z-\mu+\sum U_k$ give exactly
+\begin{align*}
+ \nu(I)-T_1(I)&=\frac{\E[(Z-\mu+\sum U_k)\ind_I(Z)]}{m_np},\\
+ T_0(I)-\nu(I)&=\frac{\E[(Z-\mu+\sum U_k)\ind_I(Z)]}{m_nq}.
+\end{align*}
+For a removed full pair, the remaining conditional interval probability
+is $f(Y_k)\in[0,M/\sqrt{n-2}]$. Since $\E U_k=0$,
+\[
+ \E[U_kf(Y_k)]\le\frac{M}{\sqrt{n-2}}\E(U_k)_+
+                  =\frac{\epsilon M}{2\sqrt{n-2}}.
+\]
+The signed term gives the factor $\epsilon/2$ and also covers
+deterministic conditional noise.
+
+For independently coupled noises let $\Delta=U_1-U_0$.
+Then $\Delta\ge-d$, $\E\Delta=0$, and
+$\operatorname{Var}\Delta\le s/p$, since $p<q$ and $s=\lambda/n$.
+On $\Delta\le\tau$, the point for $T_1$ in $I$ maps to the point for
+$T_0$ in $I^+=I+1+[-d,\tau]$. Conditional concentration, Cantelli and
+Markov applied to $\Delta+d\ge0$ give
+\begin{align}
+ T_1(I)&\le T_0(I^+)+\frac M{\sqrt{n-2}}\Pp(\Delta>\tau),\notag\\
+ \Pp(\Delta>\tau)&\le\min\left\{\frac{s}{s+p\tau^2},\frac d{d+\tau}\right\}
+ \le B_\tau:=\min\left\{\frac{\lambda_1}{\lambda_1+Nl\tau^2},
+                         \frac G{N\tau+G}\right\}.
+ \label{v9:confinement:bad}
+\end{align}
+The exceptional event is strict; $\Delta=\tau$ is in the good event.
+All intervals below have strict widths below $1-d$. If $D_I,D_J$
+bound the positive parts of their upper endpoints minus $\mu$, the two
+deletion identities imply
+\begin{equation}\label{v9:confinement:deletion-error}
+ \sqrt n\,\nu(I)\le\sqrt n\,\nu(I^+)+A_*/n+
+             a_e\epsilon+B_*^{\rm err}\Pp(\Delta>\tau),
+\end{equation}
+where
+\[
+ a_e=\frac{F_dM}{2}\left(\frac1l+\frac1{1-h}\right),\quad
+ A_*=F_dM\left(\frac{D_I}l+\frac{D_J}{1-h}\right),\quad
+ B_*^{\rm err}=F_dM.
+\]
+Indeed $\sqrt n/(n-1)^{3/2}\le F_d/n$ and
+$\sqrt{n/(n-2)}\le F_d$. Half-open intervals may be enlarged to closed
+ones for upper concentration bounds; no CDF continuity is assumed.
+
+\subsubsection{Whole-band slope bounds}
+\label{v9:confinement:slopes}
+Fix $|H|\in[h_0,h_1]$ with its original sign and a noise band
+$[\lambda_0,\lambda_1]$. Let $r_B$ be the outward upper bound for
+$(1-2l(1-l))/\sqrt{l(1-l)}$ obtained by dividing its numerator by the downward $10^{-10}$ grid
+square root of $l(1-l)$, and set
+\[
+ \rho_*=\min\{1.22,r_B+24\lambda_1/N\},\quad
+ \beta_-=0.09736,\quad\beta_+=0.234,
+\]
+\[
+ \varphi_-=0.39886(1-h_1^2/(2N))>0,\qquad
+ v_H^+=\begin{cases}0.4h_1,&H\ge0,\\-\varphi_-h_0,&H\le0.\end{cases}
+\]
+The coefficient 24 is licensed by the incoming $0.6$ strip:
+$24^2[l(1-l)]^3>[3(1-l)+0.6]^2$. It follows from the same-law
+cubic expansion before the smaller strip is acquired. The density
+floor follows from $e^{-z}\ge1-z$; $v_H^+$ bounds $H\phi(H/\sqrt n)$
+in the correct direction for both signs.
+
+Take $B^*=1.2>\sqrt{(1-l)/l}$ and $f=0.4F_\ell$. Define
+\begin{align*}
+ C_{{\rm sl},-}&=F_\ell\pos{(v_H^++3c_u\rho_*)^2/(12c_l)-3c_l\beta_-},\\
+ C_{{\rm sl},+}&=F_\ell\pos{0.4h_1B^*+3c_uB^*(B^*-1)-3c_l\beta_-},\\
+ L_g&=E\varphi_--\max(C_{{\rm sl},-},C_{{\rm sl},+})/N,\\
+ U_+&=f+\frac{F_\ell}{N}
+       \left\{3c_u\beta_++\frac{(0.4h_1+3c_u\rho_*)^2}{12c_l}\right\}.
+\end{align*}
+For $t\le0$, the bracket in \eqref{v9:confinement:contact-derivative}
+is bounded below by
+$3c_l\beta_-+(v_H^++3c_u\rho_*)t+3c_lt^2$.
+The gate $v_H^++3c_u\rho_*>0$ permits this square completion.
+On the central positive interval $0\le t\le B^*$ use $\rho\ge1$ and
+$t(t-1)\le B^*(B^*-1)$ for $t\ge1$; for $t\le1$ the latter term
+has favorable sign. Thus $L_g$ is a lower slope throughout the central
+gap. On the full positive half-line, completing the downward quadratic
+gives the upper slope $U_+$. Negative corrections in lower bounds and
+positive corrections in upper bounds use $\ell/n\le F_\ell/N$.
+
+The lower exterior interval has a sharper slope. Put
+\[
+ t_*=-E(l+\tau+\zeta),\quad B(t)=\beta_-+\rho_*t+t^2,\quad
+ B_{\min}=B(\min\{t_*,-\rho_*/2\}).
+\]
+For $t\le t_*<0$,
+\[
+ 3c(\beta+\rho t+t^2)+H\phi t
+ \ge3c_lB(t)+v_H^+t+3(c_u-c_l)\min(0,B_{\min}).
+\]
+First use $\beta\ge\beta_-$, $\rho\le\rho_*$ and $t<0$; when varying
+$c$, only the possible negative part of $B$ incurs the final correction.
+Minimize the remaining upward quadratic at
+$\min\{t_*,-(v_H^++3c_l\rho_*)/(6c_l)\}$ and denote the total minimum
+by $q_*$. Then
+\[
+ L=E\varphi_--F_\ell\pos{-q_*}/N
+\]
+is a lower slope on the entire lower interval. The finite gates require
+$L>0$, $L_g>0$ and $U_+>0$ on every box.
+
+\subsubsection{Two strict interval contradictions}
+\label{v9:confinement:intervals}
+For a putative support point $a_0-r$, $r\ge r_0$, take
+\[
+ I=[a_0-r,a_0-d-\tau-\zeta],\qquad
+ I^+=[a_0-r+1-d,b_0-\zeta].
+\]
+The incoming strip gives $r<\sigma_0+d_0$. The exact gates
+$g_0=1-\sigma_0-2d_0>0$ and $\sigma_0+d_0<1-d_0$ place
+$I^+\subset[a_0+g_0,b_0)$ and make both widths strictly less than $1-d$.
+The intervals are disjoint. Contact at the left endpoint and the
+global majorant at the right endpoint give
+\[
+ \sqrt n\,\nu(I)\ge L(r-d-\tau-\zeta),\qquad
+ \nu(I^+)\le J_{\rm gap}/g_0.
+\]
+Indeed
+$\nu([a_0-r,a_0-d-\tau-\zeta))\ge
+Q_c(a_0-r)-Q_c(a_0-d-\tau-\zeta)$; a closed interval only increases
+its mass. No contact at the right endpoint is needed.
+For the directed distances use
+\[
+ v_H=\begin{cases}-h_0/F_\ell,&H\ge0,\\h_1/E,&H\le0,\end{cases}\qquad
+ D_I=\pos{v_H-l-\tau-\zeta},\quad D_J=\pos{v_H+1-l-\zeta}.
+\]
+These are independent of $r$. Substitution in the deletion bound shows
+that a lower support point would require
+\begin{equation}\label{v9:confinement:lower-necessary}
+ L(r-\tau-\zeta)\le Ld+a_e\epsilon+\sqrt nJ_{\rm gap}/g_0+
+                     A_*/n+B_*^{\rm err}\Pp(\Delta>\tau).
+\end{equation}
+As $L>0$, a strict contradiction at $r=r_0$ excludes the entire lower
+part of the acquired strip.
+
+For a putative support point $y\ge1+r_0$, take
+\[
+ I=[a_0,a_0+\tau],\qquad I^+=[b_0,a_0+1+2\tau].
+\]
+The strict gates $d_0+2\tau<r_0$, $1-d_0-\tau>0$ and
+$1-2d_0-2\tau>0$ give disjointness, widths below $1-d$, and
+$I^+\subset[b_0,y)$. Since
+$\nu([a_0,b_0))=Q_c(a_0)-Q_c(b_0)$ and
+$\nu([a_0+\tau,b_0))\le J_{\rm gap}/\tau$, contact implies
+\[
+ \sqrt n\,\nu(I)\ge L_g(1-d)-\sqrt nJ_{\rm gap}/\tau,\qquad
+ \sqrt n\,\nu(I^+)\le U_+(\sigma_0+d).
+\]
+The last bound uses contact at $b_0,y$, includes an atom at $b_0$ and
+excludes the contacting atom at $y$. The strict containment is essential.
+For this side use
+\[
+ D_I=\pos{d_0+\tau+h_1/E-l},\qquad
+ D_J=\pos{1+d_0+2\tau+h_1/E-l}.
+\]
+An upper support point would therefore require
+\begin{equation}\label{v9:confinement:upper-necessary}
+ L_g-\sigma_0U_+\le(L_g+U_+)d+a_e\epsilon+
+            \sqrt nJ_{\rm gap}/\tau+A_*/n+B_*^{\rm err}\Pp(\Delta>\tau).
+\end{equation}
+
+\subsubsection{Two error bounds on the same resource simplex}
+\label{v9:confinement:errors}
+For either side its right-hand error is
+$a_dd+a_e\epsilon+a_J\sqrt nJ_{\rm gap}+A_*/n+
+B_*^{\rm err}\Pp(\Delta>\tau)$, with
+\[
+ (a_d,a_J)=
+ \begin{cases}(L,1/g_0),&\text{lower side},\\
+              (L_g+U_+,1/\tau),&\text{upper side}.\end{cases}
+\]
+Equations \eqref{v9:confinement:endpoint-cost} and
+\eqref{v9:confinement:leakage} give the three linear costs per unit of
+\eqref{v9:confinement:resource-simplex}:
+\[
+ z_+=\frac{a_d/l+2a_e}{Ec_+},\qquad
+ z_-=\frac{a_d/(1-h)+2a_e}{Ec_-},\qquad z_J=\frac{\kappa a_J}{1-\Theta}.
+\]
+For example the positive contribution is at most
+$(a_d/l+2a_e)M_+/E=z_+(nc_+M_+)/n$; the leakage contribution is at
+most $z_J(n^{3/2}\mathcal L/\kappa)/n$. Let $z=\max(z_+,z_-,z_J)$.
+The gate $zR_*+A_*>0$ licenses replacing $n$ by $N$, giving
+\begin{equation}\label{v9:confinement:error0}
+ \mathcal E_0=(zR_*+A_*)/N+B_*^{\rm err}B_\tau.
+\end{equation}
+This includes retained $R_*=0$ boxes; resource equality is not excluded.
+
+A second bound pays for the pair event inside the same simplex. At the
+three nonzero vertices, upper linear-cost/displacement pairs are
+\begin{align*}
+ (v_+,w_+)&=\left(z_+R_*/N,\frac{R_*}{Ec_+l}\right),&
+ (v_-,w_-)&=\left(z_-R_*/N,\frac{R_*}{Ec_-(1-h)}\right),\\
+ (v_J,w_J)&=(z_JR_*/N,0).
+\end{align*}
+They bound the linear error and $nd$. The nonnegative origin contributes
+zero and can be included without changing their maximum. For $t,x\ge0$,
+\[
+ \frac{x}{N\tau+x}\le
+ \frac{N\tau}{(N\tau+t)^2}x+\frac{t^2}{(N\tau+t)^2},
+\]
+because the difference is $N\tau(x-t)^2/[(N\tau+x)(N\tau+t)^2]\ge0$.
+Use $d/(d+\tau)=nd/(n\tau+nd)\le nd/(N\tau+nd)$. Every tangent gives
+\begin{equation}\label{v9:confinement:errort}
+ \mathcal E_t=\frac{A_*}{N}+
+ \max_{i\in\{+,-,J\}}\left\{v_i+B_*^{\rm err}
+                 \frac{N\tau}{(N\tau+t)^2}w_i\right\}
+ +B_*^{\rm err}\frac{t^2}{(N\tau+t)^2}.
+\end{equation}
+Take the minimum of \eqref{v9:confinement:error0} and the eleven valid
+bounds \eqref{v9:confinement:errort} at $t=jG/10$, $j=0,\ldots,10$.
+Each bounds one actual resource simplex; no incompatible maximizing
+allocations are combined.
+
+\begin{condition}[Complete central-panel confinement gates]
+\label{v9:confinement:high-condition}
+Use both signs of $H$, eight closed phase bands
+$[907j/4000,907(j+1)/4000]$, $j=0,\ldots,7$, and eight closed noise
+bands $[3k/40,3(k+1)/40]$, $k=0,\ldots,7$.
+Retain all 128 boxes in the coverage list. On each use the complete
+incident-cell resource of Condition~\ref{v9:resources:phase-condition}.
+Exclude only an empty incident list, strictly negative $S_\varepsilon$
+or strictly negative $R_*$. Otherwise check all domains, directed roots,
+positive slopes and inverse-index gates above, then require both strict
+inequalities, with the error computed for the respective side,
+\begin{equation}\label{v9:confinement:strict-gates}
+ L(r_0-\tau-\zeta)>\mathcal E,\qquad
+ L_g-\sigma_0U_+>\mathcal E.
+\end{equation}
+For the lowest noise band the all-threshold low-noise theorem may
+replace these two ray gates.
+\end{condition}
+
+\begin{theorem}[Complete conditional confinement on the central panel]
+\label{v9:confinement:central}
+Under the fixed-target entry and contact hypotheses, the panel
+contraction and signed-resource conditions, and
+Condition~\ref{v9:confinement:high-condition}, every actual $n\ge42$ with
+$p\in[0.41,0.42]$ satisfies $|U|<1/2$ on the entire conditional
+supports and $d<0.069<1/4$.
+\end{theorem}
+\begin{proof}
+The acquired $|H|<1.814$ and $\lambda<0.6$ lie inside the closed cover.
+The 16 first-band boxes are covered by
+Corollary~\ref{v9:confinement:application}, uniformly in $H$.
+On the 112-box complement the exact gate evaluation has this census;
+the finite inequalities themselves, not just the count, are required:
+\begin{center}
+\begin{tabular}{lr}\toprule
+necessary exclusion or strict conclusion&boxes\\\midrule
+no incident actual moment cell&14\\
+negative whole-rectangle resource&5\\
+noise lower-endpoint cost exceeds the resource&65\\
+both strict contact-ray inequalities&28\\\bottomrule
+\end{tabular}
+\end{center}
+All 56 inequalities in the last row have strict margin greater than
+$0.00892011917$. The lower contradiction extends to every
+$r\in[r_0,\sigma_0+d_0)$ because its error is independent of $r$ and
+$L>0$. The upper contradiction already applies to every support point
+$y\ge1+r_0$ in the acquired strip. No support point therefore lies at
+or below $a_0-r_0$ or at or above $1+r_0$. Since $a_0\ge0$,
+$b_0\ge1-d$ and $d<d_0<r_0$, both conditional noises have strict
+amplitude below $r_0$. Boundary atoms are included in the contradictions.
+The seam $3/40$ belongs to both adjacent closed bands; both phase signs
+are retained at $H=0$.
+\end{proof}
+
+The finite gates in the final condition were checked by exact replay
+and a separate reconstruction of the interval, slope and common-resource
+formulas. This computational statement is separate from the analytic
+derivation. The unassisted confinement diagnostics remain failed
+sufficient bounds in their recorded low-noise boxes; the composition
+uses the proved low-noise theorem there without changing those failures.
+
+Thus low-noise confinement is proved conditionally on $[0.40,0.53]$,
+and complete acquired-noise confinement conditionally on $[0.41,0.42]$.
+Higher noise on the other panels and strict count comparison remain
+separate obligations. In particular, count formulas requiring $p\le1/2$
+are not transferred to above-half panels by reflecting the already
+chosen discrepancy.
+
