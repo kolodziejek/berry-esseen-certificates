@@ -1,0 +1,294 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\title{A geometric region closed by the Bernoulli reserve}
+\author{}\date{28 October 2026}
+\begin{document}\maketitle
+
+The geometric budget and the Bernoulli reserve have the same quadratic
+factor $Q(p)$. We use this to close an entire part of the remaining left
+range. The proof keeps all phases and all admissible noise in that region.
+It uses no count-tail certificate: fourth moments give a summable bound
+for the signed curvature in the exact crossing identity.
+
+Write $\phi_0=(2\pi)^{-1/2}$, $\sigma=\sqrt{10}$ and
+\[
+ C_E=(3+\sigma)\phi_0/6,\quad
+ Q(p)=(6+2\sigma)(p-p_*)^2,\quad p_*=(4-\sigma)/2.
+\]
+For $Y=B+U$, put $p=\Pp(B=1)$, $q=1-p$, $v=pq$,
+$s=\E U^2$, $\lambda=ns$, $\ell=(v+s)^{-1/2}$ and $X=\ell(Y-p)$.
+The two conditional laws $U_0,U_1$ are centered. The notation $D$ denotes
+the actual support-gap budget of the v13 geometric theorem:
+\[
+ D=(3+\sigma)\E|X|^3-\E X^3-3\sum_{(a,b)}\tau_{a,b}(b-a)^2.
+\]
+
+\begin{theorem}[An excluded probability--index region]\label{g:main}
+Let $n\ge42$ be an integer and $1/3\le p\le2/5$. Suppose
+\[
+ -7/10\le U_0\le a_0,\qquad -a_1\le U_1\le7/10,
+ \quad a_0,a_1\ge0,\quad a_0+a_1\le17/250,
+\]
+\[
+ 0\le\lambda\le8/25,\qquad nD\le129/4,\qquad |H|\le46/25.
+\]
+If $nQ(p)/\sqrt v\ge24$, then, for the sum $S_n$ of $n$ iid copies of $X$,
+\[
+ \sqrt n\{\Pp(S_n\le H)-\Phi(H/\sqrt n)\}
+                  -C_E\E|X|^3<-\frac1{10n}.
+\]
+\end{theorem}
+
+The acquired budget $nD\le32.20665378$ is smaller than $129/4$;
+the cap $\lambda<8/25$ on this probability range is already proved in
+v13. Thus an acquired witness with nonnegative signed excess must satisfy
+\begin{equation}\label{g:newindex}
+                         nQ(p)/\sqrt{pq}<24.
+\end{equation}
+This improves the previous necessary bound $nQ(p)/\sqrt{pq}\le32.20665378$
+by using the actual CDF, rather than by slightly changing a noise ceiling.
+For $1/3\le p\le b$, this gives the following integer-index bounds:
+\[
+\begin{array}{c|ccccc}
+ b&1/3&.35&.375&.39&.40\\\hline
+ n\text{ at most}&125&195&490&1140&2681.
+\end{array}
+\]
+Indeed $Q(p)/\sqrt{pq}$ decreases on this interval, and the exact endpoint
+comparisons use $n=126,196,491,1141,2682$, respectively. The previous v13
+bound $n\le168$ for $p<1/3$ extends every column with $b\ge.35$ to the
+whole acquired interval $[.25,b]$. It does not extend the first column.
+The finite base and the remaining region below \eqref{g:newindex} are not
+settled. No quantitative Bernoulli reserve is asserted below $p=1/3$.
+
+\section{A summable bound for the signed curvature}
+Let $W_j$ be a sum of $n-j$ independent copies of $U_0$ and $j$ of $U_1$.
+Set $\pi_j=\Pp(\operatorname{Bin}(n,p)=j)$ and
+\[
+ B_j(t)=\E(t-j-W_j)_+-(t-j)_+,\qquad
+ \mathcal C(t)=\sum_{j=1}^{n-1}(\pi_{j+1}-\pi_j)B_j(t).
+\]
+The following lemma is independent of the geometric budget and of the
+Bernoulli theorem. It is useful on either probability range.
+
+\begin{lemma}\label{g:curvature}
+Let $n\ge2$, $0<p<1$, and put $c=(np-q-t)_+\le1$.
+Suppose $T,M\ge0$ satisfy $\E W_j^2\le T$ and $\E W_j^4\le M$
+for every $j$ with $\pi_{j+1}>\pi_j$. If
+\[
+ \max_r\Pp(\operatorname{Bin}(n+1,p)=r)
+                  \le\frac{\beta}{\sqrt{(n+1)v}},
+\]
+then
+\begin{equation}\label{g:curvbound}
+ \sqrt n\,\mathcal C(t)\le\frac{\beta}{nv^{3/2}}
+ \left\{\frac T4+c\sqrt T+
+                 \frac{27M}{256}\left(\frac53+\frac{5c}4\right)\right\}.
+\end{equation}
+For bounded conditional laws $|U_j|\le A$, one may take
+$T=\lambda/q$ and $M=A^2T+3T^2$.
+\end{lemma}
+\begin{proof}
+For $a=t-j$, centering gives
+\[
+ B_j=\tfrac12\{\E|a-W_j|-|a|\}\ge0,
+ \qquad B_j\le\sqrt T/2,\qquad a_+B_j\le T/4.
+\]
+The last bound follows from
+$\sqrt{a^2+T}-a\le T/(2a)$ for $a>0$. Also
+$(x-a)_+\le27x^4/(256a^3)$ for $a>0$: the maximum of
+$(x-a)/x^4$ is attained at $x=4a/3$. Consequently
+\[
+                       B_j\le27M/(256|a|^3)\quad(a\ne0).
+\]
+The exact adjacent-mass identity, with
+$\widetilde\pi_r=\Pp(\operatorname{Bin}(n+1,p)=r)$, is
+\[
+ \pi_{j+1}-\pi_j
+    =\frac{np-q-j}{(n+1)v}\widetilde\pi_{j+1}.
+\]
+Discard only its nonpositive terms. Its positive numerator is at most
+$(a+c)_+$. Among the remaining integer mesh points there is at most one
+with $-c<a<0$ and at most one with $0\le a<1$. Their total is bounded
+by $c\sqrt T+T/4$. For $a\ge1$, list the points as $a=b+i$, $i\ge1$,
+with $0\le b<1$. The fourth-moment bound and
+\[
+ \sum_{i\ge1}i^{-2}<5/3,\qquad \sum_{i\ge1}i^{-3}<5/4
+\]
+give the last term in braces. Both series bounds follow from their first
+few terms and an integral remainder. Multiply by the mass bound and use
+$\sqrt n/(n+1)^{3/2}\le1/n$.
+
+Finally, a positive mass difference requires $j<np-q<np$. Writing
+$s_i=\E U_i^2$, the variance
+$(n-j)s_0+js_1$ is at most $\lambda/q$, because its coefficients relative
+to $nqs_0$ and $nps_1$ are at most $1/q$ and $1$, respectively.
+Independence gives
+$\E W_j^4=\sum\E U_i^4+3(\E W_j^2)^2-3\sum(\E U_i^2)^2
+\le A^2T+3T^2$. The moment and count allocations remain those of the
+same two conditional laws.
+\end{proof}
+
+For $p\in[1/3,2/5]$ and $n\ge42$ one may take $\beta=41/100$.
+Here is a short finite justification. Put $N=n+1\ge43$, and let $r=m/N$
+for a binomial mode $m=\lfloor(N+1)p\rfloor$. Then
+$-q\le m-Np\le p$ and
+\[
+ r(1-r)\ge v\{1-1/N-2/N^2\}>39v/40.
+\]
+Finite Stirling, after discarding the nonpositive entropy exponent and
+negative denominator remainders, bounds the maximum mass by
+\[
+ \frac{\phi_0}{\sqrt{Nr(1-r)}}e^{1/(12N)}
+ <\frac{(2/5)\sqrt{40/39}(516/515)}{\sqrt{Nv}}
+ <\frac{41/100}{\sqrt{Nv}}.
+\]
+The final comparison is checked by squaring positive rational quantities.
+
+\section{The geometric cost leaves less than 0.09 noise}
+The v13 inward-cubic inequality, with $\bar d=17/250$, gives
+\[
+ nD\ge\frac{nQ/\sqrt v+
+           \lambda\min(Y_0,Y_1)/v^{3/2}}
+                {(1+\lambda/(nv))^{3/2}},
+\]
+\[
+ Y_0=3(\sigma+3)p-(\sigma+7)\bar d
+                   +2\sqrt{6(1-\bar d)(\sigma+1)p},
+\]
+\[
+ Y_1=3(\sigma+1)q-(\sigma+5)\bar d
+                   +2\sqrt{6(1-\bar d)(\sigma-1)q}.
+\]
+On $[1/3,2/5]$, both $Y_j/v^{3/2}>100$. To see this without a grid,
+divide the positive terms by $v^{3/2}$. For $Y_0$ the two denominators
+are $\sqrt p\,q^{3/2}$ and $p q^{3/2}$; for $Y_1$ they are
+$p^{3/2}\sqrt q$ and $p^{3/2}q$. Their respective maxima on this interval
+are smaller than
+\[
+                         63/200,\quad93/500,\quad49/250,\quad19/125.
+\]
+Differentiating their squares proves the endpoint locations (the second
+has its maximum at $p=2/5$). Also $v^{3/2}>13/125$,
+$\sqrt{6(1-\bar d)(\sigma+1)}>24/5$, and
+$\sqrt{6(1-\bar d)(\sigma-1)}>69/20$.
+Replacing $\sigma$ by $3.162277660$ in positive terms and by
+$3.162277661$ in negative terms now proves both bounds by rational arithmetic.
+
+Since $v\ge2/9$, $n\ge42$ and $\lambda\le8/25$, one has
+$x=\lambda/(nv)\le6/175$. The elementary inequality
+$(1+x)^{3/2}\le1+3x/2+3x^2/8$ implies
+$(1+x)^{3/2}\le1+(31/20)x$. Hence the hypotheses of Theorem~\ref{g:main}
+yield
+\[
+ 24+100\lambda\le\frac{129}{4}
+               \left(1+\frac{31}{20}\frac{3\lambda}{28}\right),
+ \qquad\text{and therefore}\qquad\lambda<9/100.
+\]
+There has been no optimization over independent moment or noise parameters.
+
+\section{Interpolation preserves the Bernoulli reserve}
+Put $t=np+H\sqrt{v+s}$, $k=\lfloor t\rfloor$, and $u=t-k\in[0,1)$.
+The support assumptions give the crossing theorem of v13, including
+$na_0\le t<n(1-a_1)$. Its exact weighted identity implies
+\begin{equation}\label{g:cross}
+ \Pp(S_n\le H)\le(1-u)F_B(k)+uF_B(k+1)+\mathcal C(t).
+\end{equation}
+The nonnegative weighted crossing loss was discarded, not estimated by
+an unrelated law. The identity uses closed lower crossing and strict upper
+crossing events and remains valid at every atom.
+
+Schulz's theorem, in its published $p\in[1/3,2/3]$ range, gives for every
+real argument the strict Bernoulli reserve
+\[
+ \sqrt n\{F_B(x)-\Phi((x-np)/\sqrt{nv})\}-C_E\rho_B
+ <-\frac{\phi_0Q(p)}{6\sqrt v}\le-\frac{4\phi_0}{n},
+ \qquad \rho_B=(1-2v)/\sqrt v.
+\]
+Only the two integer arguments $k,k+1$ are used in \eqref{g:cross}.
+This formula is not extended below $p=1/3$.
+
+We bound the normal interpolation error with its sign. Write $w=t-np$,
+and $G(x)=\Phi((x-np)/\sqrt{nv})$. The interpolation remainder satisfies
+\[
+ \sqrt n\{(1-u)G(k)+uG(k+1)-G(t)\}
+ \le\frac{\phi_0}{2nv^{3/2}}u(1-u)(u-w)_+.
+\]
+Indeed $G''(x)\le\phi_0(np-x)_+/(nv)^{3/2}$ on the entire segment.
+Since $v+s<1/4$, one has $|w|<23/25$ and
+$c=(np-q-t)_+<8/25$. For $H\le0$, the normal change from variance $v$ to
+$v+s$ is favorable. The interpolation error is bounded by
+\[
+ \frac{2/5}{nv^{3/2}}\left(\frac{23}{200}+\frac2{27}\right),
+\]
+using $u(1-u)\le1/4$ and $u^2(1-u)\le4/27$.
+For $H\ge0$ the interpolation error is at most
+$(2/5)(2/27)/(nv^{3/2})$, and the variance repair is at most
+\[
+ \frac{\phi_0ws}{2v^{3/2}}
+             <\frac{(2/5)(23/25)(9/100)/2}{nv^{3/2}}.
+\]
+This uses $1-(1+x)^{-1/2}\le x/2$; here $c=0$.
+
+The third-moment correction is favorable throughout this theorem.
+The actual marginal expansion and inward cubic bounds give
+\[
+ (v+s)^{3/2}(\rho-\rho_B)
+ \ge s\left\{3p-\frac32(1-2v)-\frac{17}{250}
+                           -\frac{3(1-2v)s}{8v}\right\}>0
+ \quad(s>0).
+\]
+Indeed $p\ge1/3$, $1-2v\le5/9$, $v\ge2/9$ and
+$s<9/(100\cdot42)$ make the braces positive. At $s=0$ the correction
+is exactly zero. This favorable sign is not asserted on the whole left
+range below $1/3$.
+
+Finally Lemma~\ref{g:curvature} applies with
+\[
+ T=3/20,\quad M=141/1000,\quad\beta=41/100,\quad
+ \sqrt T<97/250,\quad v^{3/2}>13/125.
+\]
+Let
+\[
+ S_c=\frac{3}{80}+c\frac{97}{250}
+          +\frac{27}{256}\frac{141}{1000}\left(\frac53+\frac{5c}4\right).
+\]
+For $H\le0$ and $H\ge0$, respectively, the total unfavorable errors
+in \eqref{g:cross}, multiplied by $n$, are strictly smaller than
+\[
+ E_-:=\frac{(41/100)S_{8/25}+(2/5)(23/200+2/27)}{13/125},
+\]
+\[
+ E_+:=\frac{(41/100)S_0+(2/5)(2/27)+(2/5)(23/25)(9/100)/2}{13/125}.
+\]
+Exact rational arithmetic gives
+\[
+              E_-,E_+<4\frac{19943}{50000}-\frac1{10}
+                         <4\phi_0-\frac1{10}.
+\]
+Combine this with the strict Bernoulli reserve to prove Theorem~\ref{g:main}.
+Both signs of $H$, every phase $u\in[0,1)$, zero noise and all threshold
+atoms have been included.
+
+\section*{Dependencies and limits}
+The geometric inequality is proved in\par\noindent
+\path{mathematics/simplification-v13/2026-10-28/geometry-noise.tex}.\par\noindent
+The exact weighted crossing identity is in the sibling \path{crossing.tex}.
+The external Bernoulli theorem is Theorem~1, printed page~1, of Schulz's
+\emph{The optimal Berry--Esseen constant in the binomial case} (2016),
+\href{https://d-nb.info/1197702695/34}{original thesis}.
+Finite Stirling is the same explicit remainder bound used in the retained
+count normalization. No Fourier, Poisson or count-generation program is
+an input to the new finite arithmetic.
+
+For acquired witnesses the actual central gap, the coarse geometric budget,
+left support strips and raw threshold still require their existing
+contact, sharp-predecessor and sign-specific acquisition. Applying the
+statement to a reflected branch requires these inputs for the reflected
+law. No global attainment, independent finite base through 41, comparison
+below $p=1/3$, or full conjecture is proved here.
+\end{document}

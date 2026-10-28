@@ -1,0 +1,75 @@
+{
+  "status": "PASS_GEOMETRY_BERNOULLI_REGION",
+  "gate_count": 28,
+  "gates": {
+    "sqrt10_lower": "2662311/2500000000000000",
+    "sqrt10_upper": "5259630921/1000000000000000000",
+    "denominator_sqrt_p_q3": "1489/3240000",
+    "denominator_p_sqrt_q3": "9/250000",
+    "denominator_sqrt_p3_q": "1/62500",
+    "denominator_sqrt_p3_q2": "1/15625",
+    "v_three_halves_lower": "1799/11390625",
+    "noise_root0": "1471604217/6250000000",
+    "noise_root1": "1180979217/6250000000",
+    "variance_price0_above100": "8841890273959/2418000000000",
+    "variance_price1_above100": "91164504489353/24206000000000",
+    "power_slope": "13/350",
+    "geometry_noise_price_positive": "212003/2240",
+    "geometry_forces_lambda_below09": "60027/224000",
+    "normal_density_lower": "2323770458925238058053496736872050123917570343/5634062790848461306049575796350836753845214843750",
+    "normal_density_upper": "29940667440868531788793289821361908264488529/5638916358156795855357736292779445648193359375",
+    "mode_variance_guard": "49/73960",
+    "mode_mass_upper_squared": "4633357/1379170000",
+    "zeta2": "11/3600",
+    "zeta3": "7/216",
+    "closed_crossing_left": "1278/125",
+    "closed_crossing_right": "2678/125",
+    "raw_scale_half": "11/1400",
+    "c_less_than_one": "17/25",
+    "sqrtT_upper": "17/31250",
+    "rho_correction_favorable": "32477/336000",
+    "negative_threshold_margin": "87674999/8985600000",
+    "positive_threshold_margin": "7240252289/8985600000"
+  },
+  "negative_error_upper": "2669950133/1797120000",
+  "positive_error_upper": "49577387/71884800",
+  "pi_enclosure": [
+    "708607128199708048393316197825100944557230988/225556654326271834214309451711177825927734375",
+    "69780205110613570752214743907258029213018304/22211729146640973852969847619533538818359375"
+  ],
+  "consequent_index_rows": [
+    {
+      "p": "1/3",
+      "all_n_at_least_excluded": 126,
+      "positive_squared_margin": "25919769546761/25000000000000"
+    },
+    {
+      "p": "7/20",
+      "all_n_at_least_excluded": 196,
+      "positive_squared_margin": "1034762689068304609/6250000000000000000"
+    },
+    {
+      "p": "3/8",
+      "all_n_at_least_excluded": 491,
+      "positive_squared_margin": "1349534688079122801/2560000000000000000"
+    },
+    {
+      "p": "39/100",
+      "all_n_at_least_excluded": 1141,
+      "positive_squared_margin": "10904344859986218239769/62500000000000000000000"
+    },
+    {
+      "p": "2/5",
+      "all_n_at_least_excluded": 2682,
+      "positive_squared_margin": "12538842524430921/390625000000000000"
+    }
+  ],
+  "negative_controls": [
+    "normalization_1_over_n_cannot_be_omitted",
+    "favorable_cubic_sign_not_extended_below_one_third"
+  ],
+  "proof_sha256": "9dff15bea9e724b6128f0d43a051f941aa8e4fcf1f374a8e829bc0a427b31a10",
+  "checker_sha256": "077169f282c0e8e2872d1ec3ccc2e5382ea87df72fa1dd5aabfb4362dd420c65",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "scope": "All phases and acquired noise on 1/3<=p<=.4 with n Q(p)/sqrt(pq)>=24; conditional on the stated support/budget inputs and external Bernoulli theorem."
+}
