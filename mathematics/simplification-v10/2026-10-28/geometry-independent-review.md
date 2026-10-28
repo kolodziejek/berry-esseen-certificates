@@ -22,6 +22,7 @@ contact/true-predecessor heat theorem.
 | Common geometric cost and global scalar reduction | Independently rederived from the actual-law gap budget | Analytic source review; no inference from a success marker |
 | Four quartics and two cubics | Independent rational reconstruction from the factored mathematical formulas | Fresh exact PASS; all coefficients match the constructor and all uniform derivative/tangent bounds hold |
 | One-pass panel formulas and directed arithmetic | Independently checked for directions, domains and retained closed coverage | Full source inspection; constructor's 30-panel output inspected as data, not independently replayed here |
+| Shared displacement/noise reserve | Independently derived, including convex averaging of the two cross-term bounds | Exact export and triangle comparisons checked as recorded below |
 | Actual-law controls | Normalization, gap sum, Q(sqrt10) sign arithmetic and invalid maximum-sign-cost control inspected | Constructor's exact controls were not rerun in this review |
 | Full confinement, count comparison and finite base | Not established by this component | No full acceptance or generation campaign |
 
@@ -60,10 +61,10 @@ give `AB<=w` and `A+B>=2sqrt(AB)`. Thus
 The preliminary theta<.2 uses the stronger physical noise coefficients
 before the crude linear K(p,d) is known positive. In particular
 `B>=z/barA` gives `k+/ell >= q[(sigma+5)z/w+2(sigma-1)]`, and similarly
-on the negative side. The stated lower bound3.13 and ell>=2sqrt(z)
+on the negative side. The stated lower bound 3.13 and ell>=2sqrt(z)
 therefore have the right directions.
 
-For theta in[.056,.2), both branches are concave in d. Each branch must
+For theta in [.056,.2), both branches are concave in d. Each branch must
 be checked at both feasible endpoints; the minimum of branches is not
 replaced by a maximum. At the larger endpoint the stated rational square
 comparisons give .59<g<.77, hence g(1-g)>.17, ell>1.7 and positive
@@ -89,18 +90,18 @@ the full probability interval. The negative cubic is concave throughout.
 
 For rho, the positive coefficient ratio uses x<=3.14, barB<1.8 and
 B>1.94(.46-.068); the negative ratio already exceeds sigma+1. Each
-noise coefficient is therefore at least5/2 times the corresponding
+noise coefficient is therefore at least 5/2 times the corresponding
 third-moment coefficient. The resulting bracket
-`1-2pq-(2/5)Q` is positive (at least .34), so replacing w^(3/2) by1
+`1-2pq-(2/5)Q` is positive (at least .34), so replacing w^(3/2) by 1
 is safe. The fourth quartic squares two positive quantities. Finally,
-Q/sqrt(pq) decreases on[.24,.25], since Q decreases toward p* while
+Q/sqrt(pq) decreases on [.24,.25], since Q decreases toward p* while
 pq increases. Its value at .25 exceeds D0, giving the strict lower
-probability bound and excluding the whole closed panel24.
+probability bound and excluding the whole closed panel 24.
 
 ### One evaluation per panel
 
 The first formula uses
-`Q+theta(C-Q)=(1-theta)Q+theta C`. For theta in[0,1] this is separately
+`Q+theta(C-Q)=(1-theta)Q+theta C`. For theta in [0,1] this is separately
 increasing in Q and C. Thus lower-bounding them by Q_I and C_I before
 solving for theta is valid, despite the occurrence of Q in both terms.
 The denominator C_I-Q_I is strictly positive. The new ell lower bound
@@ -109,7 +110,7 @@ back into an earlier formula.
 
 After global d<.068, K is positive. Dropping the noise term gives
 `6d(1-d)<=J_I`. Because d<1/2, the correct implication uses the smaller
-quadratic root. The code checks J_I in[0,3/2) before the root and rounds
+quadratic root. The code checks J_I in [0,3/2) before the root and rounds
 the square root downward, hence d upward. Negative residuals exclude a
 panel; equality is retained. Subsequent A and B lower bounds are positive.
 
@@ -125,6 +126,36 @@ half. The weighted lambda formula retains nD<=42D_I, rather than deriving
 it from an unweighted theta bound. Its numerator is nonnegative for any
 actual surviving law, so replacing pq by its panel maximum is valid.
 
+### Joint displacement and noise reserve
+
+The final extension also follows from the same direct budget. Set
+`x=theta/w`, `X=Theta_I/(1-Theta_I)` and `B=s^++7`. Since
+`d<=d_I` and `x<=X`, the cross-term `-B*x*d` can be bounded below
+by either `-B*X*d` or `-B*d_I*x`. The average of two valid lower
+bounds is a valid lower bound. Consequently, for any eta in [0,1],
+
+`a_eta=6(1-d_I)-(1-eta)B*X`, `c_eta=C_I-eta*B*d_I`
+
+satisfy `D>=ell*w[Q_I+a_eta*d+c_eta*x]`. The constructor checks
+`a_eta>0` and `c_eta>0` before using the line. Multiplication by n
+now gives
+
+`nD>=ell*w[n Q_I+n a_eta*d+c_eta*lambda/v]`.
+
+All terms on the right are nonnegative: in particular, clipping Q_I
+at zero is necessary here. Thus n>=42 and v<=v_max give
+
+`a_eta*d+c_eta*lambda/(42v_max)<=J_I`.
+
+This proves both the original line (eta=0) and the balanced line
+(eta=1/2), with the same reserve. The two intercepts of either line
+cannot be spent simultaneously: at its exact displacement and noise
+intercepts, the left side is 2J_I, strictly larger than J_I whenever
+J_I>0. If J_I=0 the positive coefficients force both variables to zero.
+Comparing both positive intercepts suffices to check containment of one
+such feasible triangle in another. This observation does not justify
+replacing arbitrary old panel bounds.
+
 ## Code and coverage review
 
 `geometry-check.py` reconstructs four quartics and two cubics with exact
@@ -134,13 +165,13 @@ squaring the three uncertain bases. The rho base and target are manifestly
 positive from the displayed bounds. Assertions and optimized-Python rejection
 remain intact. No floating-point value participates in an acceptance test.
 
-`geometry-panels.py` verifies the frozen v7 input SHA256, its name, all100
-closed panel endpoints, exactly30 nonempty panels24–53, the maximum incoming
+`geometry-panels.py` verifies the frozen v7 input SHA256, its name, all 100
+closed panel endpoints, exactly 30 nonempty panels 24–53, the maximum incoming
 D and final active support radius. Its square-root lower enclosure is based
 on an integer floor and is followed by exact squared comparisons. The upper
 enclosure is strictly outward. All later lo/hi operations have the correct
-directions in their positive domains. The panel53 exclusion is a strict
-negative residual, not a discarded endpoint. Every retained panel25–52 is
+directions in their positive domains. The panel 53 exclusion is a strict
+negative residual, not a discarded endpoint. Every retained panel 25–52 is
 still represented, including shared boundaries.
 
 The support tests are the retained all-threshold heat and full-ray formulas,
@@ -148,7 +179,7 @@ now with explicit contact and predecessor premises in the proposition.
 The tested radii `e_I(l+.6)` and `e_I(1-u+.6)` are lower bounds for the
 actual physical .6 boundaries, so excluding all contacts beyond them is
 sufficient. Positive and negative beta directions are separate. Both
-boundaries and all derivative signs pass exactly on panels40–52. The
+boundaries and all derivative signs pass exactly on panels 40–52. The
 code requires that complete list and compares all eight central moment,
 noise and scale bounds against their old required outward values. The
 raw-H and signed-phase bounds remain separate ancestors.
@@ -174,8 +205,22 @@ recorded data. A deliberately false uniform lower bound .02 for the positive
 theta quartic is refuted at p=.45, so this control is a real mathematical
 counterexample to the stronger scalar gate.
 
-The fresh receipt, stdout, stderr and all reviewed source hashes are under
-`runs/geometry-v10-independent-20261028/check01/`. This independently confirms
+The original scalar receipt is under
+`runs/geometry-v10-independent-20261028/check01/`. The final review of the
+additional joint-resource formulas is under `check02/`, with fresh stdout,
+stderr and all reviewed source hashes. The latter also checks all 28 retained
+panels' serialized joint reserves, positive balanced coefficients and outward
+intercepts. This is an exact export check after the separate analytic
+argument, not a second implementation of the panel bounds. At the central
+panel the new balanced intercepts .069772925988 and .551973904179 are
+strictly smaller than the old resource's .0730144376 and .5728987925,
+read from the original moment03 output. The new triangle is therefore
+contained in the old triangle. The deliberately invalid interpretation
+that allows both full intercepts simultaneously is rejected for each
+positive reserve; this control is about the abstract budget, not a
+purported actual-law counterexample.
+
+The independent interpolation confirms
 the scalar polynomial certificates. It does not recast source inspection of
 the 30-panel algorithm as an independently implemented full panel replay.
 

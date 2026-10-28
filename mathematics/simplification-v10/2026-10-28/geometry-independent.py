@@ -17,7 +17,7 @@ if not __debug__ or sys.flags.optimize:
 
 root=Path(sys.argv[1]).resolve() if len(sys.argv)>1 else Path(__file__).resolve().parents[3]
 folder=root/'mathematics/simplification-v10/2026-10-28'
-evidence=root/'runs/geometry-v10-20261028/final03/geometry-check.py.stdout.json'
+evidence=root/'runs/geometry-v10-20261028/final05/geometry-check.py.stdout.json'
 source=json.loads(evidence.read_text())
 need=lambda c,m: None if c else (_ for _ in ()).throw(ValueError(m))
 s=F('3.162277660');D=F('.76682509');T=F(7,125);w=1-T
@@ -105,6 +105,48 @@ for name,fun,x,l,curvature,target in [
 positive_actual=expressions['theta_plus'](F(9,20))
 need(positive_actual<F(1,50),'False uniform quartic lower bound .02 rejected')
 
+# These are checks of serialized reserves and triangle containment after the
+# separate analytic proof, not an independent replay of the panel algorithm.
+panel_evidence=evidence.with_name('geometry-panels.py.stdout.json')
+panel_data=json.loads(panel_evidence.read_text())
+old_evidence=root/'runs/fixed-target-v8-20261028/moment03/stdout.json'
+old_panel=next(z for z in json.loads(old_evidence.read_text())['panels']
+               if z['index']==41)
+joint_checks=[]
+for z in panel_data['panels']:
+    if z['excluded']:continue
+    theta,d,e,cap,q,c=[F(z[k]) for k in
+        ('theta','d','ell_l','D','qmin','cmin')]
+    l,u=F(z['pl']),F(z['pu'])
+    vmax=max(l*(1-l),u*(1-u),F(1,4) if l<=F(1,2)<=u else F(0))
+    reserve=cap/(e*(1-theta))-q
+    B=F('3.162277661')+7
+    a=6*(1-d)-B*theta/(2*(1-theta))
+    cbalanced=c-B*d/2
+    need(reserve==F(z['joint_reserve']),'Shared reserve export')
+    need(a==F(z['balanced_displacement_cost']),'Balanced d coefficient')
+    need(cbalanced==F(z['balanced_noise_cost']),'Balanced lambda coefficient')
+    need(a>0 and cbalanced>0 and reserve>=0,'Positive joint domains')
+    dcap=F(z['balanced_displacement_intercept'])
+    lcap=F(z['balanced_noise_intercept'])
+    need(a*dcap>=reserve,'Outward joint d intercept')
+    need(cbalanced*lcap/(42*vmax)>=reserve,'Outward joint lambda intercept')
+    # The two full intercepts together violate the common line, rather than
+    # provide an admissible rectangle. This is an abstract budget control,
+    # not a claim that this pair is realized by an actual probability law.
+    if reserve>0:
+        need(a*dcap+cbalanced*lcap/(42*vmax)>reserve,
+             'Invalid independent spending must be rejected')
+    joint_checks.append({'index':z['index'],'reserve':str(reserve),
+                         'balanced_d_intercept':str(dcap),
+                         'balanced_lambda_intercept':str(lcap)})
+    if z['index']==41:
+        need(dcap<F(old_panel['joint_displacement_intercept']),
+             'Central new triangle d intercept improves old')
+        need(lcap<F(old_panel['lambda_upper']),
+             'Central new triangle noise intercept improves old')
+need(len(joint_checks)==28,'All retained panel joint exports checked')
+
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 print(json.dumps({'status':'PASS_INDEPENDENT_DIRECT_GEOMETRY_POLYNOMIAL_RECONSTRUCTION',
  'scope':'Four quartic and two cubic continuum certificates, independently reconstructed; panel rounding and analytic hypotheses reviewed separately',
@@ -113,5 +155,9 @@ print(json.dumps({'status':'PASS_INDEPENDENT_DIRECT_GEOMETRY_POLYNOMIAL_RECONSTR
   'counterexample_p':'9/20','exact_value':str(positive_actual)},
  'reviewed_source_sha256':{p.name:sha(p) for p in [folder/'geometry.tex',
     folder/'geometry-check.py',folder/'geometry-panels.py',folder/'geometry-laws.py']},
- 'constructor_evidence_sha256':sha(evidence),'script_sha256':sha(Path(__file__)),
+ 'constructor_evidence_sha256':sha(evidence),
+ 'joint_export_checks':joint_checks,
+ 'joint_evidence_sha256':sha(panel_evidence),
+ 'old_central_resource_sha256':sha(old_evidence),
+ 'script_sha256':sha(Path(__file__)),
  'python':sys.version,'optimization':sys.flags.optimize},indent=2))
