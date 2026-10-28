@@ -1,0 +1,189 @@
+{
+  "status": "DISCOVERY_PHYSICAL_VARIANCE_TRANSPORT_ONLY",
+  "helper_sha256": "a81e8ef3cbcd71c1b00993e891b06692af09d2a16980841ceb29ea3f74d2835a",
+  "rows": [
+    {
+      "lambda": 0.05,
+      "cases": 80,
+      "worst": {
+        "lambda": 0.05,
+        "r": 0.07,
+        "physical_allocation": 1.0,
+        "margin": 0.010271894547912601,
+        "alpha": 0.58,
+        "tail": 0.00019685444281164856,
+        "anchors": [
+          0.9,
+          1.95,
+          2.95,
+          4.0
+        ]
+      },
+      "failures": 0,
+      "by_allocation": [
+        {
+          "lambda": 0.05,
+          "r": 0.01,
+          "physical_allocation": 0.0,
+          "margin": 0.019063634134700497,
+          "alpha": 0.56,
+          "tail": 0.01792844889743006,
+          "anchors": [
+            0.5,
+            1.65,
+            2.8,
+            3.5
+          ]
+        },
+        {
+          "lambda": 0.05,
+          "r": 0.03,
+          "physical_allocation": 0.25,
+          "margin": 0.020212978201018125,
+          "alpha": 0.52,
+          "tail": 0.013321296982125946,
+          "anchors": [
+            0.6,
+            1.7,
+            2.7,
+            3.7
+          ]
+        },
+        {
+          "lambda": 0.05,
+          "r": 0.08,
+          "physical_allocation": 0.5,
+          "margin": 0.01703465001636008,
+          "alpha": 0.52,
+          "tail": 0.007073181247984566,
+          "anchors": [
+            0.7,
+            1.8,
+            2.8,
+            3.8
+          ]
+        },
+        {
+          "lambda": 0.05,
+          "r": 0.07,
+          "physical_allocation": 0.75,
+          "margin": 0.013111416255671578,
+          "alpha": 0.54,
+          "tail": 0.003867930195096693,
+          "anchors": [
+            0.75,
+            1.8,
+            2.8,
+            3.85
+          ]
+        },
+        {
+          "lambda": 0.05,
+          "r": 0.07,
+          "physical_allocation": 1.0,
+          "margin": 0.010271894547912601,
+          "alpha": 0.58,
+          "tail": 0.00019685444281164856,
+          "anchors": [
+            0.9,
+            1.95,
+            2.95,
+            4.0
+          ]
+        }
+      ]
+    },
+    {
+      "lambda": 0.075,
+      "cases": 80,
+      "worst": {
+        "lambda": 0.075,
+        "r": 0.1,
+        "physical_allocation": 1.0,
+        "margin": 0.005384732838361173,
+        "alpha": 0.64,
+        "tail": 0.0012528439395597163,
+        "anchors": [
+          0.9,
+          1.95,
+          3.0,
+          4.0
+        ]
+      },
+      "failures": 0,
+      "by_allocation": [
+        {
+          "lambda": 0.075,
+          "r": 0.0,
+          "physical_allocation": 0.0,
+          "margin": 0.01659225242717031,
+          "alpha": 0.62,
+          "tail": 0.03598136179516612,
+          "anchors": [
+            0.45,
+            1.6,
+            2.75,
+            3.45
+          ]
+        },
+        {
+          "lambda": 0.075,
+          "r": 0.03,
+          "physical_allocation": 0.25,
+          "margin": 0.019363972535473124,
+          "alpha": 0.58,
+          "tail": 0.026976867047082385,
+          "anchors": [
+            0.55,
+            1.65,
+            2.65,
+            3.7
+          ]
+        },
+        {
+          "lambda": 0.075,
+          "r": 0.12,
+          "physical_allocation": 0.5,
+          "margin": 0.012568196090697668,
+          "alpha": 0.56,
+          "tail": 0.013041870254170558,
+          "anchors": [
+            0.7,
+            1.8,
+            2.8,
+            3.8
+          ]
+        },
+        {
+          "lambda": 0.075,
+          "r": 0.11,
+          "physical_allocation": 0.75,
+          "margin": 0.006919662018426561,
+          "alpha": "Cantelli",
+          "tail": 0.007832633399438826,
+          "anchors": [
+            0.75,
+            1.8,
+            2.85,
+            3.85
+          ]
+        },
+        {
+          "lambda": 0.075,
+          "r": 0.1,
+          "physical_allocation": 1.0,
+          "margin": 0.005384732838361173,
+          "alpha": 0.64,
+          "tail": 0.0012528439395597163,
+          "anchors": [
+            0.9,
+            1.95,
+            3.0,
+            4.0
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "Finite floating sample at n42; no uniform theorem or continuous coverage."
+}
