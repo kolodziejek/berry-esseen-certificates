@@ -1,0 +1,323 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\newcommand{\CE}{C_{\rm E}}
+\newtheorem{theorem}{Theorem}\newtheorem{corollary}{Corollary}
+\title{Continuous low-noise confinement without a probability grid}
+\author{Bartosz Ko\l{}odziejek \and Kacper Rodziewicz}\date{28 October 2026}
+\begin{document}\maketitle
+\noindent\textit{AI-assisted research note.} The argument and exact scalar
+checks were developed with AI assistance and reviewed separately. The
+result below is conditional on its stated analytic and entry premises;
+it is not a proof of the full sharp iid Berry--Esseen conjecture.
+
+\section{Conditional statement and acquired application}
+Let $n\ge42$ be an actual integer. Let $(P,H)$ be a fixed-target maximizing
+pair with nonnegative excess $\mathfrak a$ over $c=\CE$, where $X\sim P$
+is centered and has variance one. Retain the closed-support contact theorem
+and the true predecessor bound $C_{n-1}\le c$. The actual raw threshold
+$H$ can have either sign. Assume an actual central gap $(-A,B)$ with
+$A,B>0$, and write
+\[
+ p=\Pp(X>0),\quad q=1-p,\quad m=\E X_+=\E X_-,\quad
+ a=m/q,\quad b=m/p,\quad \ell=a+b,
+\]
+\[
+ X=\ell(Y-p),\qquad Y=\mathcal B+U,\qquad
+ \mathcal B=\mathbf1_{\{X>0\}},\qquad \E(U\mid\mathcal B)=0.
+\]
+Define $U_i$ as the conditional value of $U$ on $\{\mathcal B=i\}$.
+Assume the already acquired bounds
+\begin{equation}\label{ln:entry}
+ p\in[2/5,3/5],\qquad |U|<3/5,\qquad
+ d=1-(A+B)/\ell<9/125,
+ \qquad \lambda=n\E U^2\le3/40.
+\end{equation}
+The gap implies $A\le a$, $B\le b$, and hence $d\ge0$.
+
+\begin{theorem}\label{ln:theorem}
+Under these hypotheses, the entire conditional supports satisfy
+$|U|<1/2$. The conclusion is uniform in all raw $H$ and all $n\ge42$.
+It includes the closed noise endpoint $\lambda=3/40$ and zero noise.
+\end{theorem}
+
+The probability interval in this abstract lemma is $[0.4,0.6]$.
+The currently acquired entry supplies the incoming strip and inward bounds
+only on the union of panels 40--52, namely $[0.40,0.53]$. The application
+below is restricted to that smaller interval. In particular this note
+does not acquire the strip on $(0.53,0.6]$ or treat the larger-noise region.
+
+\section{One common moment enclosure}
+Put $v=pq$, $s=\E U^2=\lambda/n$, and
+$\theta=\E(X-\E[X\mid\mathcal B])^2$. Conditional centering and variance
+give the exact identities
+\begin{equation}\label{ln:identities}
+ \ell^2=(v+s)^{-1},\qquad
+ \theta=\frac{s}{v+s}=\frac{\lambda}{nv+\lambda},\qquad
+ \ell^2=\frac{1-\theta}{v}.
+\end{equation}
+Throughout \eqref{ln:entry}, $6/25\le v\le1/4$ and
+$\max(p,q)\le3/5$. Use the rational constants
+\[
+ \Theta=\frac{37}{5000},\qquad E=\frac{249}{125},\qquad
+ r=\frac{221}{200}.
+\]
+Then
+\[
+ \theta\le\frac{5}{677}<\Theta,\qquad
+ \ell^2\ge4(1-\Theta)>E^2,
+\]
+with exact differences
+$\Theta-5/677=49/3385000$ and $4(1-\Theta)-E^2=73/31250$.
+
+Because $\mathcal B$ is the actual sign of $X$, the absolute cubic
+expansion has no sign approximation:
+\begin{equation}\label{ln:cubic}
+ \rho:=\E|X|^3=\ell^3\left\{v(1-2v)
+       +3\E[|\mathcal B-p|U^2]
+       +\E[\operatorname{sgn}(\mathcal B-p)U^3]\right\}.
+\end{equation}
+The linear term vanishes by conditional centering. The incoming strip,
+used before the conclusion, gives $|U|^3\le(3/5)U^2$ and
+$|\mathcal B-p|\le3/5$. Also $\ell^3\le v^{-3/2}$. Therefore
+\[
+ \rho\le\rho_B(v)+\frac{12/5}{v^{3/2}}\frac\lambda n,
+ \qquad \rho_B(v)=\frac{1-2v}{\sqrt v}.
+\]
+The function $\rho_B$ decreases on $(0,1/4]$, since its derivative is
+$-\tfrac12v^{-3/2}-v^{-1/2}<0$. The exact squared comparison
+\[
+ 24^2(6/25)^3-(12/5)^2=\frac{34416}{15625}>0
+\]
+gives $\rho\le\rho_B(6/25)+24\lambda/n<r$. For the last step,
+\[
+ r-\frac3{70}=\frac{1487}{1400}>0,\qquad
+ \left(r-\frac3{70}\right)^2\frac6{25}
+       -\left(\frac{13}{25}\right)^2=\frac{8707}{24500000}>0.
+\]
+
+If $\theta_\pm$ are the two nonnegative conditional variance contributions
+in physical coordinates, their sum is $\theta$. Expanding the signed
+second moment gives
+\[
+ \beta:=\E[X|X|]=(1-\theta)(1-2p)+\theta_+-\theta_-.
+\]
+Consequently, for the actual $p$, including $p>1/2$,
+\begin{equation}\label{ln:beta}
+ 1-2p-2(1-p)\Theta\le\beta\le1-2p+2p\Theta.
+\end{equation}
+All these bounds concern one common marginal. No assertion about
+independent conditional laws or a moment relaxation is used.
+
+\section{All-threshold contact and exterior rays}
+For $w=n-1$, $s_n=\sqrt{n/w}$, $F_w(t)=\Phi(t/\sqrt w)$ and
+$e_n=n(s_n-1)-1/2$, fixed-target contact and the predecessor bound give,
+at every closed-support point $t$,
+\begin{equation}\label{ln:contact}
+ 0\le\mathcal H_n(H,t)
+       +c\{-|t|^3+\tfrac32\rho t^2+3\beta t+\rho e_n\}
+       -n\mathfrak a,
+\end{equation}
+where
+\[
+ \frac{\mathcal H_n(H,t)}{n^{3/2}}
+ =F_w(H-t)-F_n(H)+tF_n'(H)-\frac{t^2-1}{2}F_n''(H).
+\]
+The term $-n\mathfrak a$ is nonpositive and may be dropped. This is a
+fixed-target statement; no equality between $c$ and the actual score is
+assumed.
+
+Expand the first term spatially through degree four. Expand the other
+three terms in variance through orders two, one and one, using
+$\partial_w F_w=F_w''/2$. At $t=\pm u$, cancellations give
+\[
+ \frac{\mathcal H_n(H,\pm u)}{s_n^3}
+ =\pm A_u(1-z^2)\phi(z)
+       +\frac{H_4(u)}{24\sqrt w}\phi'''(z)+R,
+\]
+\[
+ z=H/\sqrt w,\quad A_u=(u^3-3u)/6,
+ \qquad H_4(u)=u^4-6u^2+3.
+\]
+The absolute bounds for the four remainders are
+\[
+ \frac{u^5\|\phi^{(4)}\|_\infty}{120w},\quad
+ \frac{\|\phi^{(5)}\|_\infty}{48w^{3/2}},\quad
+ \frac{u\|\phi^{(4)}\|_\infty}{8w},\quad
+ \frac{|u^2-1|\|\phi^{(5)}\|_\infty}{16w^{3/2}}.
+\]
+Gaussian Fourier inversion, integrating absolute powers of frequency,
+gives $\|\phi^{(4)}\|_\infty\le3\phi(0)<6/5$ and
+$\|\phi^{(5)}\|_\infty\le8/\pi<51/20$.
+For $u\ge1$ their sum is at most
+\[
+ \frac{u^5/100+3u/20}{w}
+      +\frac{51(3u^2-2)}{960w^{3/2}}.
+\]
+Thus the remainder extends below the earlier $u\ge5/2$ presentation.
+For $u>\sqrt3$, $A_u>0$, and the elementary bounds
+$\|(1-z^2)\phi(z)\|_\infty=\phi(0)$ and
+$\|\phi'''\|_\infty\le2/\pi<2\phi(0)$ control both signs.
+
+Set $S=81/80$, $c_0=819/2000<c$ and $e=8/875$.
+For $n\ge42$, $s_n<S$, $\sqrt w>6$, and $e_n<e$.
+For completeness,
+$ne_n=s_n^2(2s_n+1)/(2(s_n+1)^2)$ is increasing for $s_n\ge1$;
+its value at $S$ is $793881/2073680<48/125$.
+Define
+\begin{align}
+ E_u&=u^5/4100+3u/820+17(3u^2-2)/78720,\notag\\
+ Q_{r,b}(u)&=-u^3+\tfrac32ru^2+3bu+er,\label{ln:Q}\\
+ P_{r,b}(u)&=\tfrac25S^3\{A_u+|H_4(u)|/72\}
+                  +S^3 E_u+c_0Q_{r,b}(u).\label{ln:P}
+\end{align}
+If the directional signed moment is at most $b$, $Q<0$ licenses replacing
+the positive multiplier $c$ by $c_0$. Then $P<0$ contradicts
+\eqref{ln:contact} at that boundary for every raw $H$.
+
+To continue along a physical ray, hold $r,b$ fixed. Direct differentiation
+of the exact heat expression gives, with $z=H/\sqrt n$ and
+$y=(H-t)/\sqrt n$,
+\[
+ \partial_t\mathcal H_n=n\phi(z)+Ht\phi(z)-ns_n\phi(s_ny).
+\]
+Taylor's theorem and $\|\phi''\|_\infty=\phi(0)$ bound the spatial
+remainder by $\phi(0)t^2/2$. Since
+$\partial_s[s\phi(sy)]=-\phi''(sy)$, the variance contribution is at
+most $\phi(0)n(s_n-1)$. Hence
+\[
+ |\partial_t\mathcal H_n|<\tfrac25(t^2/2+1/2+e).
+\]
+Put $L_{r,b}(u)=\tfrac25(u^2/2+1/2+e)+c_0Q'_{r,b}(u)$.
+If $Q,Q',Q'',L,L',L''$ are negative at a boundary, the signs persist
+along the whole ray: $Q'''=-6$ and $L''=2/5-6c_0<0$.
+Thus the contact upper bound strictly decreases there. Boundary atoms
+and the entire closed exterior ray are excluded.
+
+\section{A continuous one-parameter certificate}
+For the negative ray use $z=p$ and the signed moment $-\beta$; for the
+positive ray use $z=1-p$ and $\beta$. In both cases $z\in[2/5,3/5]$,
+and \eqref{ln:beta} gives the directional cap
+\[
+ b_z=2z-1+2(1-z)\Theta.
+\]
+This folds the actual probability, not the endpoints of a probability
+panel. It does not reflect the chosen discrepancy or change its law.
+Take the boundary $u=E(z+1/2)$. Thus
+\[
+ u\in[u_0,u_1]=[2241/1250,2739/1250],\qquad
+ b_z=\alpha u+\delta,
+ \quad\alpha=\frac{4963}{4980},\quad\delta=-\frac{9889}{5000}.
+\]
+Here $u_0^2>3$, so $H_4'(u)=4u(u^2-3)>0$;
+$H_4(u_1)<-2.75$ proves $H_4<0$ on this whole interval.
+Let $\mathcal P(u)=P_{r,\alpha u+\delta}(u)$.
+Replacing $|H_4|$ by $-H_4$ in \eqref{ln:P} gives an explicit quintic
+$\mathcal P(u)=\sum_{j=0}^5 a_j u^j$, with
+\begin{align*}
+ a_5&=S^3/4100,& a_4&=-\tfrac25S^3/72,\\
+ a_3&=\tfrac25S^3/6-c_0,&
+ a_2&=\tfrac25S^3/12+51S^3/78720+c_0(3r/2+3\alpha),\\
+ a_1&=-\tfrac25S^3/2+3S^3/820+3c_0\delta,&
+ a_0&=-\tfrac25S^3/24-34S^3/78720+c_0er.
+\end{align*}
+The exact rational endpoint inequalities are
+\[
+ \mathcal P'''(u_0)<-2.24,\qquad \mathcal P'''(u_1)<-2.27,
+ \qquad \mathcal P'(u_0)>0.915,\quad \mathcal P'(u_1)>0.745.
+\]
+Indeed $\mathcal P'''$ is a convex quadratic, with second derivative
+$120a_5>0$. Its negative endpoint values make it negative throughout.
+Therefore $\mathcal P'$ is concave and exceeds the chord between its
+positive endpoint values. It follows that $\mathcal P$ increases and
+\begin{equation}\label{ln:margin}
+ \mathcal P(u)\le\mathcal P(u_1)
+ =-\frac{4560620039489147528734839}{25625000000000000000000000}
+ <-0.1779.
+\end{equation}
+One stronger-looking shortcut is false:
+$\mathcal P''(u_0)>0.0228$. It is not used.
+
+The multiplier and ray signs require a separate calculation.
+The boundary family
+\[
+ \mathcal Q(u)=Q_{r,\alpha u+\delta}(u)
+ =-u^3+(3r/2+3\alpha)u^2+3\delta u+er
+\]
+has total derivatives $\mathcal Q''(u_0)<-1.46$ and
+$\mathcal Q'(u_1)=179223/6250000>0.0286$.
+Since $\mathcal Q''$ decreases, $\mathcal Q'$ decreases and stays
+positive. Hence $\mathcal Q$ increases, and
+$\mathcal Q(u)\le\mathcal Q(u_1)<-1.198$.
+
+For each physical ray the directional cap is fixed. Its derivatives,
+evaluated across the boundary family, are instead
+\begin{align*}
+ q_1(u)&=-3u^2+(3r+3\alpha)u+3\delta,&
+ q_2(u)&=-6u+3r,\\
+ l(u)&=\tfrac25(u^2/2+1/2+e)+c_0q_1(u),&
+ l_1(u)&=\tfrac25u+c_0q_2(u),\qquad l_2=\tfrac25-6c_0.
+\end{align*}
+They are not the total derivatives of $\mathcal Q$.
+The following rational upper bounds certify their signs on the interval:
+\begin{center}
+\begin{tabular}{lrr}\toprule
+family & value at $u_0$ & total derivative at $u_0$\\\midrule
+$q_1$ & $<-4.272$ & $<-4.452$\\
+$q_2$ & $<-7.441$ & $=-6$\\
+$l$   & $<-0.903$ & $<-1.105$\\
+$l_1$ & $<-2.330$ & $=-2.057$\\\bottomrule
+\end{tabular}
+\end{center}
+The two quadratic families have negative constant second derivatives
+$q_1''=-6$ and $l''=-2.057$; the others are affine decreasing.
+Thus all four stay negative, as does $l_2=-2.057$.
+Together with $\mathcal Q<0$, these are the six required signs at every
+boundary. Holding its actual directional cap fixed, the preceding ray
+argument excludes the whole exterior ray beyond each boundary.
+
+\section{Completion, application and remaining premises}
+For each actual $p$ the two excluded rays start at
+\[
+ u_-=E(p+1/2),\qquad u_+=E(3/2-p).
+\]
+Because $\ell>E$, the remaining support satisfies
+$-1/2<Y=X/\ell+p<3/2$ strictly. The already proved actual gap supplies
+\[
+ U_0\le(a-A)/\ell\le d<9/125,
+ \qquad U_1\ge-(b-B)/\ell\ge-d>-9/125.
+\]
+For $\mathcal B=0$ the new lower bound is $U_0>-1/2$;
+for $\mathcal B=1$ the new upper bound is $U_1<1/2$.
+This proves Theorem~\ref{ln:theorem}. If $\lambda=0$, then $\E U^2=0$
+and $U=0$ directly. There is no division by noise or limiting argument.
+
+\begin{corollary}\label{ln:application}
+Retain the accepted fixed-target entry and the ordered elementary
+moment/gap contraction on its 30 probability panels. On its acquired
+subrange $p\in[0.40,0.53]$, all actual $n\ge42$ with
+$\lambda\in[0,3/40]$ satisfy $|U|<1/2$ for every raw $H$.
+The previously acquired inward bound $d<0.072<1/4$ is retained.
+\end{corollary}
+\begin{proof}
+That antecedent provides the strip $|U|<0.6$ on the 13 closed panels
+40--52 and $d\le0.0719539227<0.072$.
+Their closed union is $[0.40,0.53]$. Apply the theorem at the actual $p$.
+\end{proof}
+
+The new continuous calculation uses exact rational arithmetic and 28
+domain/endpoint inequalities, with no new probability, phase or noise
+grid. Six intentionally false conditions are rejected, including the
+incorrect second-derivative shortcut and substitution of a total
+derivative for a fixed-cap ray derivative. The earlier 13-row calculation
+and its fresh bounded antecedent replay are preserved as additional
+evidence; those heat rows are not premises of this continuous proof.
+
+The mathematical contact theorem, predecessor bound and incoming
+moment/gap acquisition remain separate premises. This result neither
+certifies a finite base nor supplies strict count exclusion. It does not
+remove any existing certificate or assert full-noise confinement on all
+13 panels. The already separate full-noise result on $[0.41,0.42]$ is
+unchanged.
+\end{document}

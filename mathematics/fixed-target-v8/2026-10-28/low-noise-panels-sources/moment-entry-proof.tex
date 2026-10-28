@@ -1,0 +1,246 @@
+\documentclass[10pt]{article}
+\usepackage[margin=.85in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\newcommand{\CE}{C_{\rm E}}\newcommand{\R}{\mathbb R}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}{Lemma}
+\title{Elementary contraction of the thirty fixed-target entry panels}
+\author{}\date{28 October 2026}
+\begin{document}\maketitle
+\noindent This is a conditional consequence of the accepted object
+\texttt{INITIAL42\_FIXED\_TARGET\_COARSE\_V7}. It does not prove a count
+comparison, confinement to half amplitude, or the finite base. The numerical
+work is exact rational arithmetic on thirty probability intervals, with no
+Fourier-kernel execution.
+
+\paragraph{Inputs and notation.}
+Let \(X\) be a centered variance-one fixed-target maximizing witness at
+\(n\ge N=42\), with nonnegative excess over \(c=\CE\).
+The previously established entry supplies \(nD\le ND_I\), the moment
+ceilings in each closed probability panel \(I=[l,u]\), and an actual central
+gap \((-A,B)\), where \(A,B>0\).
+Here \(\rho=\E|X|^3\), \(\gamma=\E X^3\), \(\beta=\E[X|X|]\),
+\(D=(3+\sqrt{10})\rho-\gamma-3J\), and \(J\) is the weighted gap sum.
+The final active rho rows also give \(|X|\le R=157/50\):
+this is the maximum of their individually acquired support radii.
+All thirty nonempty panels, indexed 24 through 53, are retained initially.
+Their data are bound by SHA256
+\texttt{61b7ad43e20046d7cbf7157e3feb61696331731e7be418f6a5fa535c2eee8bae}.
+
+Write \(p=\Pp(X>0)\), \(q=1-p\), \(m=\E X_+=\E X_->0\).
+The conditional means are \(b=m/p\), \(a=m/q\), and
+\[
+ \theta=1-\frac{m^2}{pq},\qquad
+ \ell=\frac m{pq}=\sqrt{\frac{1-\theta}{pq}},\qquad
+ \delta=1-\frac{A+B}{\ell},\qquad
+ \lambda=\frac{n\theta}{\ell^2}.
+\]
+Thus \(\delta\) is a count-coordinate inward displacement, not \(D\).
+Let \(V=b\) on the positive sign and \(V=-a\) on the negative sign;
+write \(W=X-V\). Define the two measures on nonnegative magnitudes by
+\(\int f(x)d\mu_\pm(x)=\E[W^2\mathbf1_{\{\pm X>0\}}f(|X|)]\).
+Their masses sum to \(\theta\); the central gap ensures there is no atom at zero.
+Also \(A\le a\), \(B\le b\).
+
+\paragraph{Retained analytic premise.}
+We use the actual-law outer-gap inequality
+\[
+ D\ge(\sigma-1)\E X_+^3+(\sigma+1)\E X_-^3
+       -6mAB+6BR_++6AR_-,
+ \quad \sigma=\sqrt{10},\quad
+ R_+=\E X_+^2-mB,\ R_-=\E X_-^2-mA.
+\]
+It is the input proved in the earlier weighted-gap analysis; arithmetic
+evaluation does not prove it. Substituting
+\(\E X_+^3=mb^2+\int(x+2b)d\mu_+\) and
+\(R_+=\mu_+(\R)+m(b-B)\), and their negative-sign counterparts, gives
+\begin{equation}\label{budget}
+ D\ge B_0+E_0+\int k_+d\mu_++\int k_-d\mu_-,
+\end{equation}
+where, with \(p_*=(4-\sqrt{10})/2\),
+\[
+\begin{split}
+ B_0&=\frac{(6+2\sigma)(1-\theta)^{3/2}}{\sqrt{pq}}(p-p_*)^2,\\
+ E_0&=6m\{(A+B)(a-A+b-B)+(a-A)(b-B)\},\\
+ k_+(x)&=(\sigma-1)(x+2b)+6B,\qquad
+ k_-(x)=(\sigma+1)(x+2a)+6A .
+\end{split}
+\]
+The deterministic identity is
+\((\sigma+1)p^2+(\sigma-1)q^2-6pq=(6+2\sigma)(p-p_*)^2\).
+Every displayed cost is nonnegative.
+
+\paragraph{A whole-panel iteration.}
+Set \(v_-=\min_{p\in I}pq\), \(v_+=\max_{p\in I}pq\).
+The maximum includes \(1/4\) if \(I\) crosses \(1/2\).
+Use \(\sigma_l=3.162277660<\sigma<3.162277661=\sigma_u\).
+Initially \(D\le D_I<\sigma_l-1\), and the gap bound
+\(J\le\rho+2mAB\) gives
+\[
+ AB\ge z:=(\sigma_l-1-D_I)/3>0.
+\]
+Indeed \(\rho\ge1,\gamma\le\rho,m\le1/2\) imply this inequality.
+With \(a_u=\sqrt{u/(1-u)}\), \(b_u=\sqrt{(1-l)/l}\), obtain
+\[
+ A\ge A_l=z/b_u,\quad B\ge B_l=z/a_u,\quad
+ (A+B)/\ell\ge g=2\sqrt{zv_-},\quad \delta\le1-g.
+\]
+For a currently proved \(\theta\le\Theta\), lower-bound the binary charge by
+\[
+ b_I=\frac{(6+2\sigma_l)(1-\Theta)^{3/2}}{\sqrt{v_+}}
+        \operatorname{dist}(I,[ (4-\sigma_u)/2,(4-\sigma_l)/2])^2.
+\]
+All square roots are directed outward. If \(r=D_I-b_I<0\), the entire
+closed panel is impossible. Otherwise set
+\[
+ a_l=\sqrt{(1-\Theta)l/(1-l)},\quad
+ b_l=\sqrt{(1-\Theta)(1-u)/u},
+\]
+\[
+ K=\min\{(\sigma_l-1)(B_l+2b_l)+6B_l,\
+          (\sigma_l+1)(A_l+2a_l)+6A_l\}>0.
+\]
+Equation~\eqref{budget} gives \(\theta\le r/K\).
+Intersect this bound with \(\Theta\), then recompute \(b_I,r\).
+Put \(m_l=\sqrt{(1-\Theta)v_-}\) and
+\(\ell_l=\sqrt{(1-\Theta)/v_+}\). Since
+\(E_0\ge6m\ell^2g\delta\), we may update
+\[
+ \delta\le\min\{\delta_{\rm old},r/(6m_l\ell_l^2g)\},\quad
+ g\ge1-\delta,\quad
+ A_l\gets\max\{A_l,\ell_l(l-\delta)_+\},\quad
+ B_l\gets\max\{B_l,\ell_l(1-u-\delta)_+\}.
+\]
+Only previously proved bounds enter each update. Zero residual forces
+zero noise and displacement; no division by that residual is needed.
+The implementation performs eight rounds, rounding upper bounds upward and
+lower bounds downward to \(10^{-10}\).
+
+\paragraph{Moment and weighted-noise exports.}
+For every orientation, including \(p>1/2\),
+\begin{equation}\label{beta}
+ 1-2u-2(1-u)\Theta\le\beta\le1-2l+2l\Theta.
+\end{equation}
+This follows from
+\(\beta=(1-\theta)(1-2p)+\mu_+(\R)-\mu_-(\R)\).
+The formerly convenient upper replacement \(1-2l+\Theta\) requires
+\(l\le1/2\) and must not be continued past that point.
+
+For a coherent third-moment cap, put
+\[
+ L=R+2\max(a_u,b_u),\quad
+ k=\min\{\sigma_l-1+6B_l/(R+2b_u),\
+          \sigma_l+1+6A_l/(R+2a_u)\}.
+\]
+The exact identity
+\(\rho=\rho_B(p)(1-\theta)^{3/2}+\sum_\pm\int(x+2a_\pm)d\mu_\pm\)
+gives a noise charge at most \(\min(L\theta,r/k)\).
+Let \(r_B=(1-2v_-)/\sqrt{v_-}\) and
+\(s\le(3/2)\sqrt{1-\Theta}\). Integrating the derivative proves
+\((1-\theta)^{3/2}\le1-s\theta\) for \(0\le\theta\le\Theta\).
+The maximum of this affine, piecewise expression is therefore bounded by
+\[
+ \rho\le r_B+(L-sr_B)_+\min\{\Theta,r/(kL)\}.
+\]
+Intersect with the prior rho cap.
+
+Finally \eqref{budget} implies the joint inequality
+\[
+ D\ge b_I+6m(A_l+B_l)\ell\delta+K\theta.
+\]
+Multiplying by the actual \(n\), using \(nD\le ND_I\),
+\(m\ell=1-\theta\), and \(n\theta=(1-\theta)\lambda/(pq)\),
+proves, when \(r>0\),
+\[
+ \frac{\delta}{r/[6(1-\Theta)(A_l+B_l)]}
+ +\frac{\lambda}{Nv_+r/[K(1-\Theta)]}\le1.
+\]
+This retains the weighted resource; it is not obtained by multiplying an
+arbitrary unweighted noise cap by \(N\).
+
+\begin{theorem}[Conditional all-panel result]
+The exact eight-round calculation excludes panels 24 and 53.
+On all 28 remaining panels,
+\[
+ \frac14\le p\le\frac{53}{100},\quad
+ \theta\le.0594425514,\quad \delta\le.0719539227,\quad
+ \rho\le1.4547288545,\quad \lambda\le.6314459997,
+\]
+\[
+ 1.957063175\le\ell\le2.3094010768.
+\]
+All endpoints and both signs are included.
+\end{theorem}
+\begin{proof}
+The previous inequalities justify each recorded rational update.
+The input is the full accepted closed cover, and only a strictly negative
+residual excludes a panel. All 28 retained outputs and every update are in
+the exact log; the stated constants are their outward maxima or minima.
+No sampled parameter or favorable moment optimizer is used.
+\end{proof}
+
+\paragraph{A direct support-strip check and its limit.}
+The retained fixed-target contact theorem, with sharp predecessor and
+nonnegative excess, bounds a support contact by \(H_n(H,\pm t)+cQ(t)\),
+where
+\(Q(t)=-t^3+3rt^2/2+3bt+(8/875)r\).
+Here \(r\) is a rho upper bound, and \(b=\beta_u\) on the positive ray,
+\(b=-\beta_l\) on the negative ray.
+For \(t>\sqrt3\), set
+\[
+ A_t=(t^3-3t)/6,\quad H_4=t^4-6t^2+3,\quad S=81/80,
+\quad E_t=t^5/4100+3t/820+17(3t^2-2)/78720.
+\]
+The heat expansion used in the preceding entry proof remains valid here:
+its fifth-derivative error has coefficient \(3t^2-2\), since \(t^2-1>0\).
+Using \(\|\phi'''\|_\infty<2\phi(0)\), \(\phi(0)<2/5\) and
+\(\sqrt{n-1}>6\), without any sign assumption on \(H_4\), yields
+\[
+ H_n(H,\pm t)\le \tfrac25S^3(A_t+|H_4|/72)+S^3E_t.
+\]
+Thus a negative boundary value of this expression plus
+\((819/2000)Q(t)\) excludes that boundary, provided \(Q(t)<0\).
+The exact derivative estimate is
+\(|\partial_tH_n|<\tfrac25(t^2/2+1/2+8/875)\).
+Check \(Q,Q',Q''<0\) and
+\[
+ L=\tfrac25(t^2/2+1/2+8/875)+(819/2000)Q',\quad L',L''<0.
+\]
+Their higher derivatives are negative constants, so both rays are excluded
+beyond the boundary, for every raw threshold \(H\).
+These Gaussian/contact premises are retained analytical inputs; none is
+proved by a numerical PASS.
+
+Choose the two boundaries
+\(t_-=\ell_l(l+3/5)\) and \(t_+=\ell_l(1-u+3/5)\).
+All satisfy \(t_\pm>\sqrt3\). Both pass on panels 40--52, proving
+\(Y=X/\ell+p\in(-3/5,8/5)\) there.
+On panels 25--39 the negative ray passes but the positive boundary
+upper estimate is nonnegative. This is failure of that sufficient estimate,
+not a counterexample to the strip theorem. No strip claim is made on those
+fifteen panels, and no half-amplitude confinement is claimed anywhere.
+
+\paragraph{Adversarial examples.}
+The standardized three-point law with atoms and masses
+\[
+ (-26/25,12/25),\quad(1/2,52/6977),\quad
+ (7226/7475,89401/174425)
+\]
+has \(p=13/25,\theta=1/625,\beta=-599/15625\).
+Its beta exceeds \(1-2p+\theta=-24/625\) by \(1/15625\).
+It verifies the general formula~\eqref{beta} and refutes the half-interval
+shortcut outside its hypothesis; it is not a counterexample to Berry--Esseen.
+
+A standardized Bernoulli law at \(p=13/50\) has
+\(\theta=\delta=0\), \(\beta=12/25\),
+\[
+ \rho=\frac{769}{25\sqrt{481}},\qquad
+ D=\frac{769\sqrt{10}-2043}{25\sqrt{481}}.
+\]
+It satisfies the remaining moment/defect constraints of panel 25.
+Hence these necessary constraints alone cannot exclude that whole panel.
+This law is not asserted to be a nonnegative-excess maximizing witness.
+The checker also verifies the gap-cost identity on symmetric and skew
+Bernoulli laws, their reflection, a four-point law and small distant atoms.
+Seven invalid controls reject. All work remains separate from the finite base.
+\end{document}

@@ -1,0 +1,99 @@
+{
+  "beta_family": [
+    "-9889/5000",
+    "4963/4980"
+  ],
+  "constants": {
+    "c_lower": "819/2000",
+    "ell_lower": "249/125",
+    "epsilon": "8/875",
+    "heat_scale": "81/80",
+    "noise_upper": "3/40",
+    "rho_upper": "221/200",
+    "theta": "37/5000"
+  },
+  "endpoint_gate_count": 28,
+  "false_second_derivative_shortcut": "3110682586789279179/136120000000000000000",
+  "grid_cells": 0,
+  "heat_upper": "-4560620039489147528734839/25625000000000000000000000",
+  "interval": [
+    "2241/1250",
+    "2739/1250"
+  ],
+  "mathematical_scope": "Conditional p in [2/5,3/5], all n>=42 and all raw H, lambda in [0,3/40], incoming |U|<3/5 and inward d<.072, fixed-target contact and sharp predecessor. Applied acquired entry only p in [.40,.53]. No global or high-noise claim.",
+  "polynomials": {
+    "L1_held_beta": [
+      "542997/400000",
+      "-2057/1000"
+    ],
+    "L2_held_beta": "-2057/1000",
+    "L_held_beta_family": [
+      "-155824911/70000000",
+      "85715721/33200000",
+      "-2057/2000"
+    ],
+    "P": [
+      "-57143172267/4198400000000",
+      "-138207338829/52480000000",
+      "10807077751263/5575475200000",
+      "-871173/2560000",
+      "-59049/10240000",
+      "531441/2099200000"
+    ],
+    "Q1_held_beta_family": [
+      "-29667/5000",
+      "104659/16600",
+      "-3"
+    ],
+    "Q2_held_beta": [
+      "663/200",
+      "-6"
+    ],
+    "Q_total_family": [
+      "221/21875",
+      "-29667/5000",
+      "154289/33200",
+      "-1"
+    ]
+  },
+  "rejected_controls": [
+    "false_P_second_derivative_negative_at_left",
+    "ell_lower_2_unlicensed",
+    "cubic_coefficient_18_unlicensed",
+    "sign_swapped_quartic_coefficient",
+    "missing_quintic_coefficient",
+    "total_Q_derivative_as_held_beta_ray_derivative"
+  ],
+  "status": "PASS_CONDITIONAL_CONTINUOUS_LOW_NOISE_ENDPOINT_GATES",
+  "strictly_positive_margins": {
+    "L1_at_left": "23302971/10000000",
+    "L1_family_derivative_at_left": "2057/1000",
+    "L2_constant": "2057/1000",
+    "L_at_left": "79026134301/87500000000",
+    "L_family_derivative_at_left": "917972343/830000000",
+    "L_family_second_derivative": "2057/1000",
+    "Q1_at_left": "26703897/6250000",
+    "Q1_family_derivative_at_left": "1847597/415000",
+    "Q1_family_second_derivative": "6",
+    "Q2_at_left": "37209/5000",
+    "Q2_family_derivative_at_left": "6",
+    "Q_at_right": "131112832439/109375000000",
+    "Q_total_first_at_right": "179223/6250000",
+    "Q_total_second_at_left": "606847/415000",
+    "cubic_coefficient_squared_margin": "34416/15625",
+    "ell_squared_margin": "73/31250",
+    "first_derivative_at_left": "1876504943048660267427/2050000000000000000000",
+    "first_derivative_at_right": "1528814085082543005237/2050000000000000000000",
+    "heat_at_right": "4560620039489147528734839/25625000000000000000000000",
+    "heat_radius_squared_margin": "334581/1562500",
+    "heat_scale_margin": "201/262400",
+    "quartic_at_right": "6726346126359/2441406250000",
+    "rho_remainder_positive": "1487/1400",
+    "rho_squared_margin": "8707/24500000",
+    "theta_margin": "49/3385000",
+    "third_derivative_at_left": "367541411396337/164000000000000",
+    "third_derivative_at_right": "372629895198417/164000000000000",
+    "third_derivative_convexity": "1594323/52480000"
+  },
+  "trusted_stack": "Python standard-library Fraction integer arithmetic; exact polynomial operations and endpoint/convexity proof, no project imports or external proof objects."
+}
