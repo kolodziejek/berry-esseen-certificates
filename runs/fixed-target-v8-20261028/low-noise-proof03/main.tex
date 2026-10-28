@@ -1,0 +1,230 @@
+\documentclass[10pt]{article}
+\usepackage[margin=.85in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\newtheorem{theorem}{Theorem}
+\title{A low-noise support bound on thirteen probability panels}
+\author{}\date{28 October 2026}
+\begin{document}\maketitle
+\noindent This independent check extends the direct low-noise argument to
+all thirteen closed panels in \(2/5\le p\le53/100\). It uses no Fourier
+kernel, phase export or imported numerical program. The contact and
+Gaussian estimates below remain explicit analytic premises.
+
+\paragraph{Precise conditional statement.}
+Let \(X\) have mean zero and variance one, with an actual central gap
+\((-A,B)\), \(A,B>0\), and let \(p=\Pp(X>0)\), \(q=1-p\).
+Write
+\[
+ m=\E X_+=\E X_-,\quad \ell=m/(pq),\quad
+ X=\ell(Z-p+U),\quad Z=\mathbf1_{\{X>0\}},\quad
+ \E(U\mid Z)=0 .
+\]
+The sign of \(Z-p+U\) agrees with that of \(Z-p\). Put
+\[
+ \theta=\ell^2\E U^2,\qquad \lambda=n\E U^2,\qquad
+ \delta=1-(A+B)/\ell.
+\]
+Assume \(n\ge42\), \(0\le\lambda\le3/40\),
+\(2/5\le p\le53/100\), the already acquired
+\(|U|\le3/5\), and \(\delta<.072\).
+Assume the fixed-target closed-support contact inequality with a sharp
+predecessor and nonnegative excess, and its uniform Gaussian bounds
+specified below. These premises apply to the same law.
+\begin{theorem}
+Under these hypotheses \(|U|<1/2\), including at every support atom.
+The conclusion holds for every raw threshold \(H\) and every actual
+\(n\ge42\). It makes no claim for larger noise or for other probability
+panels.
+\end{theorem}
+
+\paragraph{Probability and moment bounds.}
+Fix one closed interval \(I=[l,u]=[i/100,(i+1)/100]\),
+\(i=40,\ldots,52\), and write
+\[
+ v_-=\min_{p\in I}p(1-p),\quad v_+=\max_{p\in I}p(1-p),\quad
+ \Theta=\frac{3/40}{42v_-+3/40},\qquad
+ E_I\le\sqrt{\frac{1-\Theta}{v_+}}.
+\]
+The maximum \(v_+\) includes \(1/4\) when the interval meets \(1/2\).
+Variance gives \(\ell^2(pq+\lambda/n)=1\), hence
+\(\theta=\lambda/(npq+\lambda)\le\Theta\) and \(\ell\ge E_I>0\).
+
+Define \(s_+=\ell^2\E[U^2\mathbf1_{\{Z=1\}}]\) and
+\(s_-=\ell^2\E[U^2\mathbf1_{\{Z=0\}}]\), so
+\(s_++s_-=\theta\).
+Conditional centering and sign preservation give
+\[
+ \beta:=\E[X|X|]=(1-\theta)(1-2p)+s_+-s_-.
+\]
+Both endpoint functions decrease with \(p\), including when \(p>1/2\).
+Therefore
+\[
+ b_-=1-2u-2(1-u)\Theta\le\beta
+ \le1-2l+2l\Theta=b_+ .                                      \tag{1}
+\]
+There is no reflection of \(p\) to \(\min(p,1-p)\).
+
+Expand the absolute cubic using the same conditional marginal:
+\[
+ \rho:=\E|X|^3
+ =\ell^3\left\{pq(1-2pq)+3\E|Z-p|U^2
+                    +\E[\operatorname{sgn}(Z-p)U^3]\right\}. \tag{2}
+\]
+The linear term vanishes conditionally.
+Since \(|Z-p|\le\max(p,q)\), \(|U|^3\le(3/5)U^2\) and
+\(\ell^3\le(pq)^{-3/2}\), the non-skeleton contribution is at most
+\[
+ \frac{3\max(p,q)+3/5}{(pq)^{3/2}}\,\frac{\lambda}{n}
+ \le24\frac{\lambda}{n}.
+\]
+This coefficient is valid on the whole range, since \(pq\ge6/25\),
+\(\max(p,q)\le3/5\), and exactly
+\[
+ 24^2(6/25)^3-(12/5)^2=34416/15625>0.                       \tag{3}
+\]
+The function \((1-2v)/\sqrt v\) decreases for \(0<v\le1/4\);
+the positive skeleton in (2) is multiplied by
+\((1-\theta)^{3/2}\le1\).
+If \(s_I\le\sqrt{v_-}\), this proves the usable same-law ceiling
+\[
+ \rho\le r_I:=\frac{1-2v_-}{s_I}+\frac{24(3/40)}{42}.         \tag{4}
+\]
+No separate incompatible moment maxima are asserted to constitute a law.
+
+\paragraph{Contact and whole-ray exclusion.}
+The retained fixed-target contact inequality is
+\[
+ 0\le H_n(H,t)+c\{-|t|^3+\tfrac32\rho t^2+3\beta t+\rho e_n\}
+       -na,\qquad t\in\operatorname{supp}P,
+\]
+with \(a\ge0\), \(c=C_{\rm E}\ge819/2000\) and
+\(e_n<8/875\). The sharp predecessor is \(C_{n-1}\le c\).
+Discarding \(-na\) preserves an upper bound.
+For \(t>\sqrt3\), set
+\[
+ S=81/80,\quad A_t=(t^3-3t)/6,\quad H_4=t^4-6t^2+3,\quad
+ E_t=t^5/4100+3t/820+17(3t^2-2)/78720.
+\]
+The retained uniform heat expansion and derivative estimate imply
+\[
+ H_n(H,\pm t)\le S^3\{\tfrac25(A_t+|H_4|/72)+E_t\},\qquad
+ |\partial_t H_n(H,\pm t)|<\tfrac25(t^2/2+1/2+8/875).        \tag{5}
+\]
+These are bounds for all real raw \(H\). The absolute quartic term
+avoids a positive-\(H_4\) assumption; \(t^2>3\) ensures the cubic sign
+and the heat remainder's use of \(|t^2-1|=t^2-1\).
+
+For \(r=r_I\), use \(b=-b_-\) on the negative ray and \(b=b_+\)
+on the positive ray, and define
+\[
+ Q(t)=-t^3+\tfrac32rt^2+3bt+(8/875)r,\qquad
+ L(t)=\tfrac25(t^2/2+1/2+8/875)+(819/2000)Q'(t).
+\]
+At a boundary check
+\[
+ P(t):=S^3\{\tfrac25(A_t+|H_4|/72)+E_t\}
+                       +(819/2000)Q(t)<0,                 \tag{6}
+\]
+and \(Q,Q',Q'',L,L',L''<0\).
+The sign of \(Q\) licenses replacing \(c\) by its lower bound in
+(6). Since \(Q'''=-6\) and
+\(L''=2/5-6(819/2000)<0\), these signs persist for all larger \(t\).
+Equation (5), together with \(Q'<0\), then makes
+\(H_n(H,\pm t)+cQ(t)\) strictly decreasing. Thus the entire exterior
+ray, including its boundary, contains no support point.
+
+Take the rational boundaries
+\[
+ t_-=E_I(l+1/2),\qquad t_+=E_I(3/2-u).                       \tag{7}
+\]
+The independent exact calculation uses directed square roots of precision
+\(10^{-12}\), checks all thirteen closed intervals, and proves every
+boundary satisfies \(t_\pm^2>3\).
+All 26 inequalities (6) and all 156 continuation signs pass strictly.
+The least favorable contact upper bound is on panel 40's positive ray
+and is less than \(-.213\). Complete rational values are recorded in
+the accompanying JSON output; no sampled positivity is used.
+
+Consequently \(X\in(-t_-,t_+)\). Since \(\ell\ge E_I\) and
+\(p\in[l,u]\), this implies \(Y=X/\ell+p\in(-1/2,3/2)\).
+For \(Z=0\), the actual central gap gives
+\(U=Y\le p-A/\ell=(\ell p-A)/\ell\le\delta<.072\).
+For \(Z=1\), it gives
+\(U=Y-1\ge-(\ell q-B)/\ell\ge-\delta>-.072\).
+The exterior and inward bounds together yield \(|U|<1/2\).
+At \(\lambda=0\), conditional centering and zero conditional variance
+already give \(U=0\); no division by noise is used.
+The shared probability and noise endpoints are included.
+
+\paragraph{Scope and verification.}
+The earlier moment proof supplies
+\(Y\in(-.6,1.6)\) and \(\delta\le.0719539227\) on panels 40--52;
+their inward consequences give precisely the prior \(|U|<.6\)
+used above. Thus the new conclusion is not an input to its own proof.
+Seven negative controls reject, including an actual standardized law
+above \(p=1/2\) that refutes the shortcut \(b_+=1-2l+\Theta\).
+The checker imports only the Python standard library.
+A numerical PASS verifies the recorded rational implications, while
+the contact, heat and acquired-strip premises retain their stated
+analytic status. No larger-noise confinement or finite-base result is
+claimed.
+\paragraph{Continuous replacement of the thirteen new boundary rows.}
+There is a shorter verification with common constants
+\[
+ \Theta_0=37/5000,\qquad E_0=249/125,\qquad r_0=221/200.
+\]
+Indeed \(5/677<\Theta_0\), \(E_0^2<4(1-\Theta_0)\), and
+\((r_0-3/70)^2(6/25)>(13/25)^2\), with \(r_0>3/70\).
+These prove the requisite theta, scale and third-moment bounds for
+all \(p\in[.4,.6]\), provided the same prior strip and inward bounds
+are supplied. The acquired entry application remains only
+\(p\in[.4,.53]\).
+
+For the negative ray set \(z=p\); for the positive ray set \(z=1-p\).
+These are physical support rays for the original law, with no CDF
+reflection. The pointwise signed beta bound is
+\(b=2z-1+2(1-z)\Theta_0\). At the boundary
+\(t=E_0(z+1/2)\), this is the affine function
+\[
+ b(t)=\frac{2(1-\Theta_0)}{E_0}t-2+3\Theta_0,\qquad
+ t\in[t_0,t_1]=[1.7928,2.1912].
+\]
+The quartic \(H_4\) is increasing on this interval and negative at
+\(t_1\), hence \(|H_4|=-H_4\). Substituting \(b(t)\) into (6)
+therefore gives one explicit quintic \(\widehat P(t)\), with leading
+coefficient \(S^3/4100>0\).
+
+The third derivative \(\widehat P'''\) is a convex quadratic.
+The independent rational check gives strictly negative values at both
+endpoints, so \(\widehat P'''<0\) throughout. Consequently
+\(\widehat P'\) is concave. Its two endpoint values are strictly
+positive; concavity puts it above their positive chord. Thus
+\(\widehat P\) increases, and
+\(\widehat P(t_1)<-.1779<0\) proves every boundary inequality.
+The proposed additional condition \(\widehat P''(t_0)<0\) is false:
+its value is approximately \(+.0228525021\). It is not used in this
+corrected concavity argument; the failed preliminary check is preserved.
+
+For the continuation gates distinguish the boundary-family polynomial
+\(\widehat Q(t)=Q_{r_0,b(t)}(t)\) from derivatives holding beta fixed:
+\[
+ R_1(t)=-3t^2+3r_0t+3b(t),\qquad R_2(t)=-6t+3r_0,
+\]
+\[
+ \widehat L(t)=\tfrac25(t^2/2+1/2+8/875)+(819/2000)R_1(t),
+ \quad L_1(t)=\tfrac25t+(819/2000)R_2(t),
+ \quad L_2=\tfrac25-6(819/2000).
+\]
+The exact gates \(\widehat Q''(t_0)<0\) and
+\(\widehat Q'(t_1)>0\) prove \(\widehat Q\) increases, while
+\(\widehat Q(t_1)<0\). Both \(R_1\) and \(\widehat L\) have
+negative second derivatives and negative first derivatives at \(t_0\),
+so they decrease from strictly negative values there.
+The affine functions \(R_2,L_1\) also decrease from negative values,
+and \(L_2<0\). All six fixed-beta radial signs therefore hold at
+every boundary. Their radial continuation was already justified above.
+This proves the same strict half-amplitude result without a new
+probability grid. The acquired thirteen-panel strip remains a separate
+antecedent; it has not been removed.
+\end{document}
