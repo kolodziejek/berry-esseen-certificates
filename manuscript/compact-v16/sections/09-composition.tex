@@ -1,34 +1,72 @@
 \section{Composition and the finite boundary}\label{short:composition}
+We now separate the local exclusion from the induction that could make it
+global. The local theorem in Section~\ref{short:count:section} applies to
+every marginal satisfying its explicit strip assumptions. Contact,
+the predecessor bound and the entry predicates are used to show that an
+attained nonnegative-excess witness is one of those marginals.
+
 \begin{theorem}[Acquired-witness exclusion]\label{short:acquired-exclusion}
-Let $n\ge700$ and let $(P,H)$ attain the fixed-target maximum with
-$a\ge0$. Assume $C_{n-1}\le\CE$, the structural inequality
+Let $n\ge700$ and let $(P,H)$ attain the fixed-target maximum at $\CE$
+with $a(P,H)\ge0$. Assume $C_{n-1}\le\CE$, the structural inequality
 \eqref{v9:entry:structural}, and complete entry
 Conditions~\ref{v9:entry:two-pass-condition} and
 \ref{v9:entry:signed-condition}. Then such a pair cannot exist.
 \end{theorem}
 \begin{proof}
-Entry gives $nD\le32.20665378$ and $|H|\le1.83605680$ for the selected
-oriented law. Section~\ref{short:acq:section} gives
-$3/8<p<93/200$, inward sum below $1/250$, amplitude $3/5$ and
-$\lambda<7/20$. By \eqref{short:acq:normalization}, the standardized
-Bernoulli-plus-noise marginal is exactly $P$, with the same raw $H$.
-Theorem~\ref{short:count:local} makes $a$ strictly negative, both at
-positive noise and at zero, contradicting $a\ge0$.
+Theorem~\ref{v9:entry:theorem} gives
+\[
+ nD\le32.20665378,\qquad |H|\le1.83605680
+\]
+for the selected oriented law. Proposition~\ref{short:acq:geometry}
+then gives its actual central gap, $3/8<p<93/200$, inward sum
+$a_0+a_1<1/250$ and $\lambda<7/20$. The two contact rays of
+Proposition~\ref{short:acq:strip} give conditional amplitude $3/5$.
+This is where the sharp predecessor enters the support acquisition.
+
+Equation~\eqref{short:acq:normalization} identifies the standardized
+Bernoulli-plus-noise marginal with $P$ pointwise. Its threshold is the
+same raw $H$, and $1.83605680<46/25$. Thus all hypotheses of
+Theorem~\ref{short:count:local} hold simultaneously for this marginal.
+At positive noise the theorem gives
+\[
+ a(P,H)<-\lambda/100<0.
+\]
+At zero noise the marginal is Bernoulli and the strict finite-binomial
+theorem gives $a(P,H)<0$ directly. Both cases contradict the assumed
+nonnegative excess.
 \end{proof}
 
 \begin{theorem}[Conditional global conclusion]\label{short:global}
 Assume $C_j\le\CE$ for $1\le j\le699$, the stated external structural
 and binomial theorems, and the complete entry predicates at every least
-failure above this base. Then $C_n<\CE$ for $n\ge700$ and
-$\sup_{n\ge1}C_n=\CE$.
+failure above this base. Then
+\[
+ C_n<\CE\quad(n\ge700),\qquad C_n\le\CE\quad(n\ge1),
+ \qquad\sup_{n\ge1}C_n=\CE.
+\]
 \end{theorem}
 \begin{proof}
-A least failure of the strict bound has a true sharp predecessor by the
-base and minimality. Attainment and the closed-event reflection argument
-supply its maximizing pair with $a\ge0$; the preceding theorem excludes
-it. The independent limit~\eqref{ms:bernoulli-limit} proves sharpness.
+Suppose the strict inequality fails at some $n\ge700$, and choose the
+least such index $n_0$. The base controls every index below $700$;
+minimality controls each index from $700$ to $n_0-1$. In particular
+$C_{n_0-1}\le\CE$, including when $n_0=700$.
+
+Failure includes the equality case $C_{n_0}=\CE$. The attainment and
+reflection argument in Section~\ref{v9:core:reflection} therefore supplies
+an attained positive closed-event pair with $a\ge0$ in either case.
+By hypothesis, the full entry predicates hold at this least failure.
+The acquired-witness exclusion gives a contradiction. This proves all
+strict bounds above the base and hence all weak bounds.
+
+Finally the independent Bernoulli limit~\eqref{ms:bernoulli-limit} shows
+that the global supremum is at least $\CE$. Combined with the weak
+upper bounds, it gives the claimed equality.
 \end{proof}
-A base only through $41$ instead locates any first failure in
-$42,\ldots,699$. An unresolved earlier failure prevents the predecessor
-argument at later indices. Thus no unconditional cutoff at $700$ or
-complete finite-base proof is asserted.
+
+Under the same entry and external hypotheses, a base only through $41$
+has a different consequence: it locates a first
+failure, if one exists, in $42,\ldots,699$. An unresolved earlier failure
+would prevent us from supplying the sharp predecessor at a later index.
+The statement above therefore remains conditional on a genuine finite
+base, or on a separate complete argument closing that range.
+No unconditional cutoff at $700$ is asserted.

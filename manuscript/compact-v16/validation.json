@@ -1,16 +1,15 @@
 {
-  "status": "PASS_CANONICAL_DOCUMENT_AND_PRESERVATION",
-  "utc": "2026-10-29T14:52:37.681478+00:00",
+  "status": "PASS_READABLE_DOCUMENT_AND_PRESERVATION",
+  "utc": "2026-10-29T15:23:21.732069+00:00",
   "source_pin": "1aa1dd015e3d73fbeecc1a7acbfa395cbb560b5f",
-  "pages": 30,
-  "original_pdf_pages": 89,
-  "preceding_integration_pages": 45,
+  "pages": 40,
   "body_type_pt": 11,
   "margin_mm": 28,
   "line_spread": 1.06,
   "paragraph_skip_pt": 2,
-  "tex_files": 11,
-  "unique_labels": 106,
+  "typography_same_as_30page_revision": true,
+  "tex_files": 12,
+  "unique_labels": 108,
   "cited_works": 6,
   "unresolved_labels": [],
   "duplicate_labels": [],
@@ -18,20 +17,21 @@
   "underfull_boxes": 0,
   "tex_warnings": 0,
   "bibtex_warnings": 0,
-  "tracked_original_blobs_unchanged": 6558,
-  "old_manuscript_files_unchanged": 85,
+  "original_tracked_blobs_unchanged": 6558,
+  "original_manuscript_files_unchanged": 85,
   "final_tex_sha256": {
-    "main.tex": "08c5f0a82ea77a06431e80d132107f057d49ae1f2d9f4d22a8276d5aaa8aa670",
-    "sections/01-introduction.tex": "5b28fabcfb268e39ce0bfb438dfb90eb9f86e63e50329505ebbc446a03d1b409",
-    "sections/02-fixed-target.tex": "b11b0f7ea9be2fa1edb6efebd472195751b4d4d73f1634c7080ea91312925717",
-    "sections/05-geometry-counts.tex": "117ee15c52b8d436a815e561d2f06ae3ecd301afb1c9bb738f84eb61bbe7cd89",
-    "sections/04-fixed-entry.tex": "8bd175c242e3a8a242cf0f3a59ba071045809cb167e1323470f22220549e28af",
-    "sections/07-direct-acquisition.tex": "9ef019655aa8a84b573d8382026391c5b711ffccfbe8cb98cd2358b0bfa402ce",
-    "sections/08-direct-comparison.tex": "f01348986a4ae8aa086935011d6668a6f67a011367c1e7caec55fa352177bd9b",
-    "sections/09-composition.tex": "edc5d1a9d52f24643cfec0dd84f6d64081af47beac40ca8c0a9d99deb1b2140d",
-    "sections/10-discussion.tex": "2c67bd74a1bcc9490c7a5d4c3276c95e5911c9119d13f5896deb0728356134ca",
-    "appendices/fixed-fourier.tex": "50433e871e17466c3618ff52068f1062d085b7199e534efc8bc5b8b7da3ba067",
-    "appendices/normalization.tex": "bd2eb47abd558dcb4c0a2b50d2c9a2bb6d76512a3978b360b953e59acdc0c76d"
+    "main.tex": "98a3045d151922f31913fba0bad95e857e35c7218df8a6e1e7cdbafa84ad9b82",
+    "sections/01-introduction.tex": "e4782bb367f9ced72ce5617dc236511eedb30c4244398d482ca25565da90a7f0",
+    "sections/01b-guide.tex": "ecc828f10dcffb1b93756bf3fee7d11cefba7baffc05aa34f8dc292cc049493b",
+    "sections/02-fixed-target.tex": "e6a895dcdaa84a007e3712f931a8880158072b7b4b880c610df523b2a2864904",
+    "sections/05-geometry-counts.tex": "bca452d3c79cad297fc11a91eb34a1ce722b2b5c8a9fbee03cd836f3943ddace",
+    "sections/04-fixed-entry.tex": "f152c3ac4fd41ec65649d947e5b884a9d3312d93e14e38ae275f4601f132d7f2",
+    "sections/07-direct-acquisition.tex": "0db333a8db01cd935b3cacca109320a4789b7ed8ea81d9adfb2285f7bb999219",
+    "sections/08-direct-comparison.tex": "a6e1693a98fbab0802758376965a7ba878836c0414706120d39dee59cab19687",
+    "sections/09-composition.tex": "d98a4d79ad503c098711ad4903e31f0c3687d1103e516a100c2d7f8282e2287c",
+    "sections/10-discussion.tex": "34368fed416e711b0cd44ebf6a6fdd8f6bd971a6c383fa2f2c91dcfa90220c23",
+    "appendices/fixed-fourier.tex": "2310ef1b9276444afe3383fba7ddc8178babc0cad56f89470403b2f4956a2149",
+    "appendices/normalization.tex": "75d09ca977afe643cdf852260e1fc8ecde2fa494353e5c1c1c5b989df603492d"
   },
   "bibliography_sha256": {
     "references-added.bib": "e1de5cfc75f4314c8741993ff2faa7bc6e3681c90f6ce25eacddb42fac91e92c",
@@ -39,7 +39,7 @@
     "references-modern-a.bib": "6375a56e09258d12e6ff5b79eb240d720335f9e9030fe9ba4306a5b210bf304a",
     "references-modern-b.bib": "9b49eba5de769bad53a61b0e0d8b46faf2ed20a7588860f86d542a0c51fb5060"
   },
-  "pdf_sha256": "03e75c89ffd04f262e9b458963a47dad4b0e8f16ebc43f06e7bf95649d0b1cd4",
+  "pdf_sha256": "f890e310ce87491da69983a4ffdc530e3bb50c79adb0a0746346f1dfc8468ae3",
   "bounded_math_receipt": "checks-summary.json",
   "prior_v16_checks": {
     "count": 9,
@@ -47,21 +47,27 @@
     "reused_record_from_preceding_integration": true,
     "pinned_sources_unchanged": true
   },
-  "fresh_canonical_controls": {
+  "fresh_expansion_controls": {
     "count": 3,
-    "status": "PASS_CANONICAL_APPENDIX_AND_RETAINED_IDENTITIES",
+    "status": "PASS_READABLE_EXPANSION_CONTROLS_AND_PRESERVATION",
     "appendix_exact_gates": 19
   },
-  "scope": "Document integration, exact scalar/identity controls and scoped AI-assisted component reviews. Not full entry replay, finite-base or conjecture acceptance.",
-  "review_note": "Analytical file hashes are recorded in the scoped reports. Final main.tex additionally removes an unnecessary inputenc package and increases leading/paragraph spacing; no mathematical statement changed by those preamble edits.",
-  "visual_review": "All 30 final pages inspected in 3 contact sheets; final pages 11, 24, 28, 29 and 30 inspected at 110 dpi. No clipping, collision or missing content observed.",
+  "scoped_reviews": {
+    "core-review.json": "PASS_SCOPED_REVIEW_FILES_RELEASED",
+    "entry-review.json": "READABILITY_EXPANSION_COMPLETE_WITH_BOUNDED_SOURCE_CHECKS",
+    "fourier-review.json": "READY_FOR_PARENT_INTEGRATION",
+    "cross-core-review.json": "PASS_READ_ONLY_EXPANSION_CROSS_REVIEW",
+    "root-additions-review.json": "PASS_SCOPED_ROOT_ADDITIONS_REVIEW"
+  },
+  "scope": "Readable editorial expansion, finite scalar/identity controls and scoped AI-assisted reviews; no full numerical-entry, finite-base or global proof acceptance.",
+  "visual_review": "All 40 pages inspected in four contact sheets; pages 3, 6, 16, 26 and 37 inspected at 110 dpi, final pages 39 and 40 at 100 dpi. Final bibliography starts on a separate page. No clipping, collisions or missing content observed.",
   "portable_rebuild": {
     "status": "PASS",
-    "pages": 30,
+    "pages": 40,
     "all_page_text_identical": true,
     "compiler": "official Tectonic 0.17.0 x86_64-pc-windows-msvc",
     "untrusted_mode": true,
-    "rebuilt_pdf_sha256": "2959279cff7f8de152d01deffba26f663e70ff939c4779b883e952039f7f0061",
+    "rebuilt_pdf_sha256": "dd8de082b1922059323c04196c2b89b757e87cc4646c09dfb5c4b0bf3adead71",
     "tex_warnings": 0,
     "bibtex_warnings": 0
   }

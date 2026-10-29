@@ -1,6 +1,6 @@
 # Canonical proof route and source correspondence
 
-This 30-page compilation is based on PR #5 at
+This 40-page compilation is based on PR #5 at
 `1aa1dd015e3d73fbeecc1a7acbfa395cbb560b5f`. Repository-relative paths below
 refer to that pin. The original manuscript remains unchanged.
 
@@ -28,21 +28,22 @@ refer to that pin. The original manuscript remains unchanged.
    give the conditional global conclusion. The fixed Bernoulli example gives
    the independent sharp lower approximation. BASE41 alone leaves 42–699 open.
 
-## Included files and canonical reductions
+## Included files and readable derivations
 
 | Included file | Source and treatment |
 |---|---|
-| `sections/01-introduction.tex` | Original introduction: definitions, the independent Bernoulli lower example, six essential references and the selected route. The chronological survey and duplicate reading guide leave the compilation. |
-| `sections/02-fixed-target.tex` | Original fixed-target proof: attainment without assuming third-moment uniform integrability, contamination, reflection with atom inequality, both residuals, half-open endpoint conventions, conservation and ordered phase license. Repeated explanations are combined. |
-| `sections/05-geometry-counts.tex` | Original sign decomposition, signed Cauchy bounds, physical moment circle, actual-gap Tonelli bounds and defect decomposition. These are proved once for the same law. |
-| `sections/04-fixed-entry.tex` | Full selected coarse entry in five stages: initial support/heat, Fourier input, two passes, signed refinements, ordered cover. The duplicated Fourier derivation moves to Appendix A. All coefficients, sign/denominator guards, strict margins, same-law moment costs and pass conditions remain. |
-| `sections/07-direct-acquisition.tex` | Full selected proof from `mathematics/simplification-v16/2026-10-29/acquisition-direct.tex`: joint costs, localization, cubic noise budget, two contact rays and exact coordinate normalization. Unchanged from the 45-page integration. |
-| `sections/08-direct-comparison.tex` | `small-common.tex` and the Compact row of `unified-comparison.tex` in that v16 directory. Shared Stirling/mode/cubic ingredients, complete small-noise and five-count proofs, both signs and four exact endpoint margins. Unchanged from the 45-page integration. |
-| `sections/09-composition.tex` | v16 `composition.tex`: references the single exact normalization, states acquired exclusion and the conditional global implication. No duplicate coordinate construction. |
+| `sections/01-introduction.tex` | Original introduction: definitions, the independent Bernoulli lower example, six essential references and the selected route. A short reading guide is included separately, while the chronological survey remains omitted. |
+| `sections/01b-guide.tex` | Four-stage reading order and a notation/units table, distinguishing physical variance, count noise, inward displacement and the physical defect. |
+| `sections/02-fixed-target.tex` | Original fixed-target proof: attainment without assuming third-moment uniform integrability, contamination, reflection with atom inequality, both residuals, half-open endpoint conventions, conservation and ordered phase license. Attainment, each contamination derivative, both evaluations and the final coefficient collection are spelled out. |
+| `sections/05-geometry-counts.tex` | Original sign decomposition, signed Cauchy bounds, physical moment circle, actual-gap Tonelli bounds and defect decomposition. Conditional normalization and each signwise/gap calculation are expanded, and proved once for the same law. |
+| `sections/04-fixed-entry.tex` | Full selected coarse entry in five stages: initial support/heat, Fourier input, two passes, signed refinements, ordered cover. The duplicated Fourier derivation moves to Appendix A. All coefficients, sign/denominator guards, strict margins, same-law moment costs and pass conditions remain, with explicit explanations of their order and actual-law use. |
+| `sections/07-direct-acquisition.tex` | Full selected proof from `mathematics/simplification-v16/2026-10-29/acquisition-direct.tex`: joint costs, localization, cubic noise budget, two contact rays and exact coordinate normalization. The budget, localization and count-coordinate noise stages are signposted without changing the original argument. |
+| `sections/08-direct-comparison.tex` | `small-common.tex` and the Compact row of `unified-comparison.tex` in that v16 directory. Shared Stirling/mode/cubic ingredients, complete small-noise and five-count proofs, both signs and four exact endpoint margins. The cubic normalization, exact Stirling remainder, complete incoming-tail series, boundary terms, centered replacements, stop-loss bounds and concavity chord are spelled out. |
+| `sections/09-composition.tex` | v16 `composition.tex`: references the single exact normalization, states acquired exclusion and the conditional global implication. The same-law hypotheses, zero-noise case and each step of the least-failure implication are explained without duplicating the coordinate construction. |
 | `sections/10-discussion.tex` | Reproducibility scope and AI disclosure. |
 | `appendices/fixed-fourier.tex` | Original selected compensated Fourier enclosure. One complete LOW proof and one complete six-piece HIGH proof. A positive Stieltjes remainder identity replaces a long polynomial expansion; absolute convergence, atoms, varying actual laws and every floor/optional gate remain explicit. |
-| `appendices/normalization.tex` | Elementary Gaussian constants and one directed Machin recipe. Exact rational square comparisons explicitly prove `.4097321837023 < C_E < .4097321837025`, licensing the fine entry endpoints. |
-| `main.tex`, `references-*.bib` | 11-point type, 28 mm margins, increased leading/paragraph spacing, authors and AI disclosure. Four bibliography collections are retained; only six cited entries appear. |
+| `appendices/normalization.tex` | Elementary Gaussian constants and one directed Machin recipe, including its branch choice and positive denominators. Exact rational square comparisons explicitly prove `.4097321837023 < C_E < .4097321837025`, licensing the fine entry endpoints. |
+| `main.tex`, `references-*.bib` | 11-point type, 28 mm margins, increased leading/paragraph spacing, authors and AI disclosure. Four bibliography collections are retained; only six cited entries appear. Typography is the same as in the 30-page revision; the additional pages are explanatory content. |
 
 The needed analytical arguments are present in this PDF. Companion papers
 are not used as undeclared analytical premises. The structural, binomial
@@ -72,9 +73,9 @@ orientation before acquisition and never transfers a signed budget between laws.
 ## Evidence and remaining boundary
 
 `checks-summary.json` distinguishes the preceding nine-check v16 replay from
-fresh canonical scalar, conservation and geometry controls. The 19 appendix
+fresh scalar, conservation and geometry controls for the readable expansion. The 19 appendix
 gates use exact fractions and polynomial coefficients, not a sampled grid.
-Scoped AI-assisted reviews and examples supplement analytical proofs; they
+Independent scoped reviews also check the expanded algebra and its interfaces. Scoped AI-assisted reviews and examples supplement analytical proofs; they
 are not formal proof acceptance. Full captures remain in the local handoff;
 the public record contains derived statuses and source/output hashes.
 

@@ -4,11 +4,13 @@
 
 [Read the PDF](main.pdf) · [Editable TeX](main.tex) · [Proof/source map](SOURCE_MAP.md)
 
-The manuscript has **30 A4 pages including references**. It keeps 11-point
-body type and 28 mm margins, with 6% extra line leading and visible paragraph
-spacing. The earlier 89-page draft and the first 45-page integration are
-preserved in Git history. This revision shortens the argument by using one
-proof route, one notation and one proof of each needed identity.
+The manuscript has **40 A4 pages including references**. It keeps 11-point
+body type, 28 mm margins, 6% extra line leading and visible paragraph spacing.
+These typography settings match the 30-page revision. The extra ten pages
+restore derivation steps, explanatory transitions and a reading/notation guide.
+The original 89-page draft and the earlier 45- and 30-page integrations remain
+preserved in Git history. One canonical proof route and one consistent notation
+are retained.
 
 The complete selected analytical arguments are included: attainment/contact,
 off-contact conservation, physical moment geometry, the Fourier enclosure
@@ -47,25 +49,26 @@ The delivered PDF uses official Tectonic 0.17.0 in untrusted mode; another
 TeX distribution may paginate slightly differently. No custom fonts, images
 or shell escape are required.
 
-[Validation](validation.json) records the 11 included TeX files, 106 resolved
+[Validation](validation.json) records the 12 included TeX files, 108 resolved
 labels, six cited works, layout review and a clean portable rebuild. The
 [check summary](checks-summary.json) is explicitly a derived public record:
 
 - All nine unchanged v16 mathematical checks passed during the preceding
   integration, including the 44-event actual-law check. Their source hashes
   were preserved; this editorial revision does not claim another full replay.
-- The canonical revision freshly checks the off-contact identities, physical
+- This readable revision freshly checks the off-contact identities, physical
   geometry and 19 exact scalar/polynomial gates. The elementary target bounds
   now explicitly license the fine entry constants, and the Fourier tail has
   a short positive-remainder proof.
-- Scoped component reviews checked the reduced arguments against their actual
+- Scoped component reviews checked the expanded arguments against their actual
   consumers, including the complete 13-file entry source allowlist. No omitted
   sharp-moment theorem is required by the selected execution path.
 
 `python -I -B tools/canonical-check.py` runs the standalone exact appendix
 controls. In a complete checkout of the pinned repository,
 `python -I -B tools/recheck.py` reruns the nine v16 checks, both algebra/geometry
-controls and the appendix controls. The first historical attempt hit only
+controls and the appendix controls. Additional independent component reviews check the new conservation algebra,
+conditional moments, whole-tail series and endpoint arguments. The first historical attempt hit only
 Python's decimal-output length limit; the successful rerun allowed long integer
 serialization without changing mathematical sources or assertions.
 

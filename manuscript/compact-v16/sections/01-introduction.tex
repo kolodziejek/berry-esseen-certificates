@@ -25,6 +25,10 @@ $X=(B-p_*)/\sqrt{p_*q_*}$,
  =\frac{3+q_*-p_*}{6\sqrt{2\pi}(p_*^2+q_*^2)}=\CE.
 \end{equation}
 The last equality uses $p_*^2+q_*^2=10-3\sqrt{10}$.
+Thus one fixed two-point law already makes every constant smaller than
+$\CE$ fail for sufficiently large $n$. The remaining task is the upper
+bound, uniformly over both the marginal and the index. Strict inequalities
+at each finite index are compatible with this limiting lower bound.
 The universal upper conjecture is associated with Zolotarev
 \cite{Zolotarev1966}. We use Shevtsova's structural moment bound
 \cite{Shevtsova2013} and Schulz's strict finite-binomial theorem
@@ -34,6 +38,13 @@ Fix $c=\CE$ and maximize the excess
 \begin{equation}\label{v9:intro:excess}
  a(P,H)=\sqrt n\{\Pp_P(S_n\le H)-\Phi(H/\sqrt n)\}-c\rho(P).
 \end{equation}
+The choice of objective matters. Its target $c$ is fixed before the law
+is varied, so the same coefficient appears in the variational inequality,
+the conservation identity and the predecessor estimate. The third-moment
+penalty also controls escape of mass in a maximizing sequence. These two
+features let us study an attained law and then extract information from
+its support.
+
 The fixed moment penalty gives attainment and compact-support contact.
 Integrating contact against the zero-bias density gives one budget for
 excess, moment defect and leakage. Complete coarse Fourier entry supplies

@@ -1,27 +1,64 @@
-\section{The sign split and the physical gap defect}\label{ms:geometry-counts}
-For a standardized law put $p=\Pp(X>0)$, $q=1-p$, $v=pq$ and
-$m=\E X_+=\E X_->0$. Both sign classes have positive mass; any zero atom
-belongs to the nonpositive class. With $B_0=\ind_{X>0}$, set
+\section{The sign split and the physical gap defect}
+\label{ms:geometry-counts}
+
+The sign split gives two conditional means and two centered conditional
+noises. This is an exact description of the marginal; no nearby
+Bernoulli law has yet replaced it. The gap defect then measures how much
+room remains for these noises and for motion of the support endpoints.
+
+\subsection{Conditional means and the normalization}
+For a centered variance-one law with finite third absolute moment, put
+\[
+ p=\Pp(X>0),\quad q=1-p,\quad v=pq,\quad
+ m=\E X_+=\E X_->0,
+ \qquad B_0=\ind_{\{X>0\}}.
+\]
+Both sign classes have positive mass. An atom at zero, if present,
+belongs to the nonpositive class. Let $V=\E(X\mid B_0)$ and $W=X-V$.
+Conditional centering and the variance decomposition give
 \begin{gather*}
- V=\E(X\mid B_0),\quad W=X-V,\quad \theta=\E W^2=1-m^2/v,\\
- \ell=m/v=\sqrt{(1-\theta)/v},\quad U=W/\ell.
+ V=-m/q\quad(B_0=0),\qquad V=m/p\quad(B_0=1),\\
+ \E(W\mid B_0)=0,\qquad
+ \theta=\E W^2=1-m^2/v\in[0,1).
 \end{gather*}
-The conditional means are $-m/q$ and $m/p$, so exactly
+Thus $1-\theta$ is the variance carried by the two conditional means.
+Their distance is
+\[
+ \ell=m/v=\sqrt{(1-\theta)/v}>0.
+\]
+Set $U=W/\ell$. Since $V=\ell(B_0-p)$, we obtain
 \begin{equation}\label{ms:bernoulli-coordinates}
- X=\ell(B_0+U-p),\qquad\E(U\mid B_0)=0,\quad
- s=\E U^2=\theta/\ell^2,\quad\lambda=ns,\quad v+s=\ell^{-2}.
+ X=\ell(B_0+U-p),\qquad\E(U\mid B_0)=0.
 \end{equation}
-If $s=0$ the law is Bernoulli. Otherwise let $U_i$ be the conditional
-noises and $w_i=\E U_i^2$, $\mu_i=\E U_i^3$. Expanding each actual sign
-class, with conditional centering, gives
+Writing $U_i$ for the conditional law of $U$ given $B_0=i$, define
+\begin{gather*}
+ w_i=\E U_i^2,\quad\mu_i=\E U_i^3,\quad
+ s=qw_0+pw_1=\E U^2=\theta/\ell^2,\\
+ \lambda=ns,\qquad v+s=\ell^{-2}.
+\end{gather*}
+In particular $X=(B_0+U-p)/\sqrt{v+s}$. The noise $U$ is measured in
+units of the distance $\ell$, whereas $W$ is measured in the original
+units of $X$. If $s=0$, both conditional variances vanish and
+$U_0=U_1=0$ almost surely: this is precisely the standardized Bernoulli
+case. All third moments here are finite. Higher moments will only be
+used after support has been acquired.
+
+The signs remain those of the original split. On the nonpositive
+class, $|X|^3=\ell^3(p-U_0)^3$; on the positive class it equals
+$\ell^3(q+U_1)^3$. Expanding, and cancelling the conditional first
+moments, gives
 \begin{align}\label{ms:conditional-moments}
  \rho/\ell^3&=v(1-2v)+3v(w_0+w_1)-q\mu_0+p\mu_1,\notag\\
  \gamma/\ell^3&=v(q-p)+3v(w_1-w_0)+q\mu_0+p\mu_1,\notag\\
  \beta/\ell^2&=v(q-p)+pw_1-qw_0.
 \end{align}
-These are identities for the same marginal, not independently chosen
-moment relaxations.
+For example, $qp^3+pq^3=v(1-2v)$ and the quadratic terms are
+$3qpw_0+3pqw_1$. All three identities use the same two conditional laws;
+their moments are not independent choices.
 
+\subsection{The moment circle and the actual gaps}
+The next bounds have no compact-support hypothesis. They will first
+control a maximizing law coarsely, before a small central gap is known.
 \begin{lemma}[Moment and gap bounds]\label{ms:physical-defect}
 \label{ms:fourier:afcore:lem:physical-defect}
 For $\sigma=\sqrt{10}$ and the actual $J$ of Section~\ref{v9:core:section},
@@ -33,46 +70,99 @@ For $\sigma=\sqrt{10}$ and the actual $J$ of Section~\ref{v9:core:section},
  D:=(3+\sigma)\rho-\gamma-3J\ge0.
  \label{ms:physical-defect-definition}
 \end{gather}
-If zero is in the closed support, $D\ge(\sigma-1)\rho$.
-Otherwise its central gap $(-A,B)$ satisfies $A,B>0$, $AB\le1$ and
+If zero belongs to the closed support, $D\ge(\sigma-1)\rho$.
+Otherwise its central gap $(-A,B)$ has $A,B>0$, $AB\le1$, and
 $J\le\rho+2mAB$.
 \end{lemma}
 \begin{proof}
-Let $a_\pm=\E X_\pm^2=(1\pm\beta)/2$ and
-$b_\pm=\E X_\pm^3=(\rho\pm\gamma)/2$.
-Signwise Cauchy gives $a_\pm^2\le mb_\pm$ and
-$m^2\le pa_+$, $m^2\le qa_-$. Hence
-$m^2\le a_+a_-$ and $b_+b_-\ge m^2$, proving the circle inequality.
-Also $m\rho\ge a_+^2+a_-^2=(1+\beta^2)/2$ and
-$2m\le\sqrt{1-\beta^2}$ give the signed moment bound.
-The bounds for $m$ follow from $\E|X|\le1$ and
-$1\le\sqrt{\E|X|\E|X|^3}=\sqrt{2m\rho}$.
+Write the actual moments on the two signs as
+\[
+ a_\pm=\E X_\pm^2=(1\pm\beta)/2,\qquad
+ b_\pm=\E X_\pm^3=(\rho\pm\gamma)/2.
+\]
+All four are positive. Cauchy--Schwarz on each sign gives
+\[
+ a_\pm^2\le mb_\pm,\qquad m^2\le pa_+,\qquad m^2\le qa_-.
+\]
+The last two inequalities imply
+$m^2(1/a_++1/a_-)\le p+q=1$. Since $a_++a_-=1$, this says
+$m^2\le a_+a_-$. Consequently
+\[
+ b_+b_-\ge\frac{(a_+a_-)^2}{m^2}\ge m^2,
+ \qquad \rho^2-\gamma^2=4b_+b_-\ge4m^2.
+\]
+This is the moment circle. The same inequalities give
+\[
+ m\rho\ge a_+^2+a_-^2=(1+\beta^2)/2,
+ \qquad 2m\le\sqrt{1-\beta^2}.
+\]
+Here $a_+a_->0$, so $|\beta|<1$ and division is legitimate. Combining
+these two bounds proves the stated lower bound for $\rho$ in terms of
+$\beta$. Finally $\E|X|=2m\le1$, and another Cauchy inequality gives
+$1\le\sqrt{\E|X|\E|X|^3}=\sqrt{2m\rho}$. These prove both bounds for $m$.
 
-Signwise Tonelli gives
+For the gap estimate, recall $\tau(t)=\E[X\ind_{\{X\ge t\}}]$.
+At negative $t$, centering rewrites it as
+$-\E[X\ind_{\{X<t\}}]\ge0$; at nonnegative $t$ its sign is immediate.
+Integrating separately over the two half-lines gives
 \begin{equation}\label{ms:tau-moments}
- \int\tau=1,\qquad 2\int|t|\tau(t)dt=\rho.
+ \int_\R\tau(t)dt=1,\qquad
+ 2\int_\R|t|\tau(t)dt=\rho.
 \end{equation}
-Each gap on one side of zero obeys
-$(b-a)^2\le2\int_a^b|t|dt$. A central gap has weight $m$ and excess
-$2mAB$ over this integral; $0\le\E[(X+A)(X-B)]=1-AB$.
-Summing proves the bounds for $J$, also for countably many gaps.
-Cauchy in $\R^2$ gives $\gamma+6m\le\sqrt{10}\rho$, and therefore
-$D=3(\rho+2m-J)+(\sigma\rho-\gamma-6m)\ge0$.
-Without a central gap, $J\le\rho$ gives $D\ge(\sigma-1)\rho$.
+For a positive gap $(a,b)$,
+$(b-a)^2\le b^2-a^2=2\int_a^bt\,dt$; reflection gives the corresponding
+negative-gap inequality. A central gap $(-A,B)$ has constant weight $m$
+and
+\[
+ m(A+B)^2=2m\int_{-A}^B|t|dt+2mAB.
+\]
+Moreover $(X+A)(X-B)\ge0$ almost surely, so
+$0\le\E[(X+A)(X-B)]=1-AB$. Summing the gap inequalities against their
+constant weights, and using nonnegative Tonelli for countably many gaps,
+gives $J\le\rho+2mAB\le\rho+2m$. If zero is in the support there is
+no central gap, and the stronger estimate is $J\le\rho$.
+
+Cauchy in $\R^2$, now applied to $(\gamma,2m)$ and $(1,3)$, gives
+\[
+ \gamma+6m\le\sqrt{10}\sqrt{\gamma^2+4m^2}\le\sigma\rho.
+\]
+Hence the defect is the sum of two nonnegative losses:
+\[
+ D=3(\rho+2m-J)+(\sigma\rho-\gamma-6m)\ge0.
+\]
+In the absence of a central gap, $J\le\rho$ and $\gamma\le\rho$ give
+$D\ge(\sigma-1)\rho$. This proves all assertions, including the case
+of a zero atom.
 \end{proof}
 
-For the central gap define
+\subsection{Keeping the central and outer costs together}
+Suppose the central gap $(-A,B)$ has been acquired. Define
+\begin{gather*}
+ T_+=\E X_+^3-mB^2,\qquad T_-=\E X_-^3-mA^2,\\
+ R_+=\E X_+^2-mB,\qquad R_-=\E X_-^2-mA.
+\end{gather*}
+These quantities measure excess beyond the two gap endpoints. They are
+nonnegative because every positive support point is at least $B$, and
+every negative magnitude is at least $A$. Let
+$J_o=J-m(A+B)^2=J_o^++J_o^-$ be the outer-gap contribution.
+A positive outer gap has $a\ge B$, so
 \[
- T_+=\E X_+^3-mB^2,\quad T_-=\E X_-^3-mA^2,
- \quad R_+=\E X_+^2-mB,\quad R_-=\E X_-^2-mA.
+ (b-a)^2\le2\int_a^b(t-B)dt.
 \]
-All four quantities are nonnegative. If $J_o=J-m(A+B)^2$,
-Tonelli and the positive outer-gap inequality give
-\[
- J_o^+\le2\int_B^\infty(t-B)\tau(t)dt
- =\E[X_+(X_+-B)^2]=T_+-2BR_+;
-\]
-the negative counterpart is $J_o^-\le T_--2AR_-$. Expanding $D$ yields
+Multiplying by its constant gap weight and summing gives
+\begin{align*}
+ J_o^+&\le2\int_B^\infty(t-B)\tau(t)dt\\
+ &=\E[X_+(X_+-B)^2]=T_+-2BR_+\le T_+.
+\end{align*}
+The negative-side calculation is the same in magnitudes:
+$J_o^-\le T_--2AR_-\le T_-$. Endpoint atoms do not change these
+Lebesgue integrals; their mass is already included in $\tau$.
+
+Substitute
+$\rho=m(A^2+B^2)+T_++T_-$,
+$\gamma=m(B^2-A^2)+T_+-T_-$ and
+$J=m(A+B)^2+J_o$ into the definition of $D$.
+Using $\sqrt{\sigma+1}\sqrt{\sigma-1}=3$ completes the central square:
 \begin{equation}\label{ms:defect-decomposition}
 \begin{split}
  D={}&m\{\sqrt{\sigma+1}A-\sqrt{\sigma-1}B\}^2
@@ -80,12 +170,21 @@ the negative counterpart is $J_o^-\le T_--2AR_-$. Expanding $D$ yields
     &+3(T_++T_--J_o).
 \end{split}
 \end{equation}
-Every term is nonnegative. Thus $T_++T_-\le D/2$ and, if $D<2$,
-$m(A^2+B^2)=\rho-T_+-T_-\ge1-D/2$ gives $A+B\ge\sqrt{2-D}$.
-The stronger outer-gap bounds also give the useful joint inequality
+Every displayed term is nonnegative. In particular
+$T_++T_-\le D/(\sigma-1)\le D/2$. If $D<2$, then
+\[
+ m(A^2+B^2)=\rho-T_+-T_-\ge1-D/2.
+\]
+Since $m\le1/2$ and $A,B>0$, this gives $A+B\ge\sqrt{2-D}$.
+The signed entry estimates retain the full central square rather than
+using only this weaker distance bound.
+
+For direct acquisition it is useful to retain the two sharper
+outer-gap bounds before dropping $R_\pm$. They give
 \[
  D\ge(\sigma-1)\E X_+^3+(\sigma+1)\E X_-^3
                          -6mAB+6BR_++6AR_-.
 \]
-This retains the actual gap and conditional noises before any costs are
-weakened. It is the common starting point of the direct acquisition.
+Replace $J_o$ by $T_++T_--2BR_+-2AR_-$ in the preceding expansion.
+Direct acquisition substitutes the conditional means and noises into
+this single budget, retaining their joint cost.

@@ -1,6 +1,9 @@
 \section{The uniform Fourier enclosure}\label{v9:fourier:section}
 Fix an actual index $n\ge N\ge42$, a centered variance-one marginal $X$
-and raw threshold $H$. Their values may vary with $n$. Write
+and raw threshold $H$. Their values may vary with $n$: the estimates below are applied anew to
+that law and threshold, using common ceilings. In particular, no limiting
+law or comparison of characteristic functions at different indices is used.
+Write
 \[
  f(t)=\E e^{itX},\quad\gamma=\E X^3,\quad
  e_n(t)=e^{-nt^2/2}(1-in\gamma t^3/6),\quad V_n=f^n-e_n,
@@ -9,6 +12,10 @@ and raw threshold $H$. Their values may vary with $n$. Write
  I_0=\int_0^{1/2}\frac{|\Im(e^{-itH}V_n)|}{t^3}dt,
  \qquad I_\infty=\int_{1/2}^\infty\frac{|V_n|}{t^3}dt.
 \]
+
+The phase $e^{-itH}$ retains the raw threshold. At low frequency we use
+the imaginary part, whose cancellation is stronger than an absolute-value
+bound on $V_n$; on the tail an absolute-value bound is sufficient.
 
 \paragraph{Compensated inversion.}
 \begin{lemma}\label{v9:fourier:inversion}
@@ -21,20 +28,41 @@ $\int x^2d|\mu|<\infty$, every $H\in\R$ satisfies
 with absolute convergence.
 \end{lemma}
 \begin{proof}
-Integration by parts gives
-$\int_0^\infty(ty-\sin ty)t^{-3}dt=\pi y|y|/4$.
-Indeed positive Tonelli computes its constant from
-$\int_0^\infty(1-\cos t)t^{-2}dt
-=\int_0^\infty s\{s^{-1}-s/(s^2+1)\}ds=\pi/2$.
-The compensated integrand has the sign of $y$; its absolute double integral
-for $y=x-H$ is $\pi\int(x-H)^2d|\mu|/4<\infty$.
-Absolute Fubini and $\int(x-H)d\mu=0$ prove the claim, including atoms.
+First take $y>0$ and substitute $v=ty$. Integration by parts gives
+\[
+ \int_0^\infty\frac{ty-\sin ty}{t^3}dt
+ =\frac{y^2}{2}\int_0^\infty\frac{1-\cos v}{v^2}dv
+ =\frac\pi4y^2.
+\]
+The boundary term vanishes: $v-\sin v=O(v^3)$ at zero and $O(v)$ at
+infinity. To evaluate the constant, insert
+$v^{-2}=\int_0^\infty s e^{-sv}ds$. Positive Tonelli gives
+\[
+ \int_0^\infty\frac{1-\cos v}{v^2}dv
+ =\int_0^\infty s\{s^{-1}-s/(s^2+1)\}ds=\pi/2.
+\]
+Oddness extends the first identity to $\pi y|y|/4$ for every real $y$.
+Moreover $ty-\sin ty$ has the sign of $y$. Thus, for $y=x-H$, the
+absolute double integral against $d|\mu|(x)dt$ equals
+$\pi\int(x-H)^2d|\mu|/4<\infty$.
+Absolute Fubini is now justified. Since
+$\int(x-H)d\mu=0$, the linear compensation disappears and gives the
+stated Fourier integral. This argument uses measures directly: atoms,
+including an atom at $H$, require no continuity convention.
 \end{proof}
 Apply this to the sum law minus the scale-$\sqrt n$ pushforward of
 $\phi(x)\{1+\gamma(x^3-3x)/(6\sqrt n)\}dx$.
 The comparator has mass one, mean zero and transform $e_n$.
-Gaussian integration by parts, with $q_z'''=4\delta_z$, gives the exact
-core remainder and its bound:
+For $z=H/\sqrt n$, the identity $q_H(\sqrt n x)=nq_z(x)$ fixes the
+normalization. Three Gaussian integrations by parts, interpreted
+distributionally using $q_z'''=4\delta_z$, give
+\[
+ \int q_z(x)(x^3-3x)\phi(x)dx=4\phi(z).
+\]
+Consequently the signed measure in the inversion lemma integrates $q_H$
+to $n\varepsilon$, with exactly the $\varepsilon$ of the core identity.
+Multiplication by $-\sqrt n/2$ therefore gives its remainder
+$E_n=-n^{3/2}\varepsilon/2$ and the bound:
 \begin{equation}\label{v9:fourier:ledger}
  E_n=\frac{2\sqrt n}{\pi}\int_0^\infty
        \frac{\Im(e^{-itH}V_n)}{t^3}dt,
@@ -90,10 +118,23 @@ Integrating $r_6$ and $R_2$ after division by $t^3$ costs $L_2/n$:
 $n-1\ge2a_0n$, $(n-2)(45-M)/96\ge b_0n$, and
 $\int_0^\infty t^3e^{-At^2}dt=1/(2A^2)$,
 $\int_0^\infty t^5e^{-At^2}dt=A^{-3}$.
-For $b=n-1$, the remaining rotated leading imaginary part is bounded by
-$ne^{-bt^2/2}\{(Z+A|H|)t^5+bAg t^7/6\}$.
-Its integral is at most
-$\Lambda_N(Z+A|H|+Ag/2)/\sqrt n$.
+It remains to integrate the fourth- and fifth-order terms in
+\eqref{v9:fourier:taylor}; taking absolute values too early would lose
+the fourth-order cancellation. Put $b=n-1$. After rotation the real
+fourth-order coefficient contributes a sine of $Ht+b\gamma t^3/6$,
+whereas the fifth-order coefficient contributes a cosine. Hence their
+imaginary part is at most
+\[
+ ne^{-bt^2/2}\{(Z+A|H|)t^5+bAg t^7/6\}.
+\]
+After division by $t^3$, use
+\[
+ \int_0^\infty t^2e^{-bt^2/2}dt=\sqrt{\pi/2}\,b^{-3/2},\qquad
+ \int_0^\infty t^4e^{-bt^2/2}dt=3\sqrt{\pi/2}\,b^{-5/2}.
+\]
+These produce $\Lambda_n(Z+A|H|+Ag/2)/\sqrt n$.
+Since $n/(n-1)\le N/(N-1)$, this is bounded by the stated expression
+with $\Lambda_N$.
 Finally, putting $u=n\gamma t^3/6$ gives
 \[
  |\Im(e^{-itH}(h^n-e_n))|
@@ -167,7 +208,13 @@ The optional first term requires $2Nc_q>1$, and the optional fourth
 $N\kappa b^2\ge1/4$. Without an optional gate, retain the simple term.
 \end{proposition}
 \begin{proof}
-Separate $|f|^n$ and the entire comparator. On $[1/2,b]$,
+We first bound the characteristic function on $[1/2,b]$, then partition
+the remaining half-line around its possible lattice peaks. The comparator
+is integrated over the entire half-line separately. The six terms record
+these disjoint purposes: the initial interval, nonzero-cell cores and
+wings, two parts of the zero cell, and the comparator.
+
+On $[1/2,b]$,
 $|f|^n\le e^{-nc(t^2)}\le e^{-nc_*}$ and $\int t^{-3}dt<2$,
 giving $T_1$. Its optional chord follows from
 $c(u)-c_q-s(u-1/4)=(M+3)(u-1/4)(81/100-u)/24\ge0$.
@@ -181,31 +228,58 @@ times $1-xQ(x)$, where $Q(x)=\int_0^\infty e^{-u}/(x+u)du$.
 For $P(u)=u^2-4u+2$ and $D_x=P(-x)=x^2+4x+2$, use
 $P(u)-D_x=(u+x)(u-x-4)$ and
 $\int_0^\infty P(u)e^{-u}du=\int_0^\infty uP(u)e^{-u}du=0$.
-Two divisions therefore give
+The two zero integrals follow from $\int_0^\infty u^k e^{-u}du=k!$.
+For clarity, the two divisions are
+\[
+ \int_0^\infty\frac{P(u)e^{-u}}{x+u}du=D_xQ(x)-x-3,
+\]
+\[
+ \int_0^\infty\frac{P(u)^2e^{-u}}{x+u}du
+ =D_x\int_0^\infty\frac{P(u)e^{-u}}{x+u}du.
+\]
+Indeed, the remainder in the second equality is the integral of
+$P(u)(u-x-4)$, which vanishes by those two zero moments. Thus
 \[
  Q(x)-\frac{x+3}{D_x}
  =\frac1{D_x^2}\int_0^\infty\frac{P(u)^2e^{-u}}{x+u}du\ge0.
 \]
-Thus $1-xQ(x)\le L(x)$, proving the formula and the optional chord term.
+This positive remainder proves $1-xQ(x)\le L(x)$ for every $x>0$,
+not just for large $x$. It proves \eqref{v9:fourier:tail}; applying that
+formula to the chord majorant, extended to $[1/2,\infty)$, proves the
+optional first term.
 
 For $t\ge b$, symmetrization and convex Jensen give
 \[
  |f(t)|^n\le e^{-n\E\sin^2(t(X-X')/2)}
  \le\E[e^{-n\alpha\sin^2(tD/2)}\mid\mathcal E].
 \]
-Positive Tonelli permits a separate partition for each $D$:
+Here $|f|^2=1-2\E\sin^2(t(X-X')/2)$, so $1-v\le e^{-v}$ first
+gives the exponential. Restricting the expectation to $\mathcal E$ and
+using its probability at least $\alpha$ then gives the conditional Jensen
+bound. Positive Tonelli permits a separate partition for each $D$:
 with $\ell=2\pi/D$, use $[0,\ell/2]$ and nonzero cells
 $t=\ell(j+v)$, $j\ge1$, $|v|\le1/2$.
+This distance-dependent partition is made inside the conditional integral;
+it does not assume a common lattice for the original law.
 On $|v|\le r$, $|\sin\pi v|\ge h|v|$; on the wings it is at least $hr$,
 by $\sin x\ge x-x^3/6$ and monotonicity on $[0,\pi/2]$.
 Taylor's remainder gives
 \[
  \{(j-v)^{-3}+(j+v)^{-3}\}/2\le j^{-3}+6(j-r)^{-5}v^2.
 \]
-Extend the Gaussian core integral to $\R$. Its zeroth and second moments,
-the Jacobian $t^{-3}dt=D^2(j+v)^{-3}dv/(4\pi^2)$ and the conditional
-second-moment bound give $T_2$; decreasing-integral tails beyond $20$ give
-$S_3,S_5$. The wing weight is at most
+Pair $v$ with $-v$ and extend each nonnegative Gaussian core integral to
+$\R$. With $a=n\alpha h^2$, its two required moments are
+$\int_{\R}e^{-av^2}dv=\sqrt{\pi/a}$ and
+$\int_{\R}v^2e^{-av^2}dv=\sqrt\pi/(2a^{3/2})$.
+The Jacobian is $t^{-3}dt=D^2(j+v)^{-3}dv/(4\pi^2)$. After multiplying
+by $\sqrt n$ and averaging $D^2$, these factors give
+\[
+ \frac{M_E}{4\pi^{3/2}h\sqrt\alpha}
+ \sum_{j\ge1}\{j^{-3}+3(j-r)^{-5}/(n\alpha h^2)\}.
+\]
+For decreasing summands the tails beyond $20$ are bounded by their
+integrals from $20$ to infinity. These are $1/800$ and
+$[4(20-r)^4]^{-1}$, respectively, proving $T_2$. The wing weight is at most
 $\int_{\ell/2}^\infty t^{-3}dt=D^2/(2\pi^2)$, giving $T_3$.
 Extending these sets below $b$ only increases their bounds.
 In the zero cell, $u=tD/2\le\pi/2$. On $u\le1/2$,

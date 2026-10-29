@@ -29,7 +29,17 @@ $0<4(1/5-1/(3\cdot5^3))-1/239
 <4\arctan(1/5)-\arctan(1/239)<1<\pi/2$
 fix the first-quadrant branch (use $\pi/2=2\int_0^1(1+t^2)^{-1}dt>1$).
 Hence Machin's identity is $\pi=16\arctan(1/5)-4\arctan(1/239)$.
-Integrating the finite geometric expansion of $(1+t^2)^{-1}$ gives
+The branch check is needed because tangent addition alone determines an
+angle only modulo $\pi$. All quantities in the lower and upper angle
+bounds above are elementary; the upper bound follows from
+$4\arctan(1/5)<4/5<1$.
+For $0<x<1$, integrating the finite geometric identity gives the exact
+remainder
+\[
+ \arctan x-s_k(x)=(-1)^k\int_0^x\frac{t^{2k}}{1+t^2}dt.
+\]
+Even $k$ gives a lower bound and odd $k$ an upper bound. Applying these
+opposite directions to the two terms of Machin's identity gives
 \[
  \pi_-:=16s_{12}(1/5)-4s_3(1/239)<\pi
  <16s_{11}(1/5)-4s_4(1/239)=:\pi_+.
@@ -44,7 +54,11 @@ Use the rational endpoints
 \[
  c_-=.4097321837023,\qquad c_+=.4097321837025.
 \]
-Squaring gives $r_-^2<10<r_+^2$; direct integer multiplication gives
+Squaring gives $r_-^2<10<r_+^2$. Recall that
+$\CE^2=(19+6\sqrt{10})/(72\pi)$: its numerator increases with
+$\sqrt{10}$ and its denominator with $\pi$. Thus the lower enclosure
+uses $r_-$ with $\pi_+$ and the upper one uses $r_+$ with $\pi_-$.
+Direct integer multiplication gives
 \[
  c_-^2<\frac{19+6r_-}{72\pi_+}
  <\CE^2<\frac{19+6r_+}{72\pi_-}<c_+^2.

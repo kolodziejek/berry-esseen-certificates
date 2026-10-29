@@ -118,34 +118,34 @@
     },
     "provenance": "Rerun during the preceding 45-page integration; exact sources preserved, not claimed rerun again for pagination."
   },
-  "fresh_canonical_controls": {
-    "status": "PASS_CANONICAL_APPENDIX_AND_RETAINED_IDENTITIES",
-    "utc": "2026-10-29T14:47:09.965667+00:00",
+  "fresh_expansion_controls": {
+    "status": "PASS_READABLE_EXPANSION_CONTROLS_AND_PRESERVATION",
+    "utc": "2026-10-29T15:23:21.665385+00:00",
     "source_pin": "1aa1dd015e3d73fbeecc1a7acbfa395cbb560b5f",
     "checks": {
       "canonical-check": {
-        "source": "manuscript/compact-v16-30/tools/canonical-check.py",
+        "source": "manuscript/compact-v16/tools/canonical-check.py",
         "source_sha256": "489afdc77c96215914ee7019e721a14e9c50376c211cd2d9eddd7af96e8a716f",
-        "status": "PASS_CANONICAL_CONSTANTS_AND_MILLS_IDENTITIES",
         "returncode": 0,
-        "seconds": 0.09400000001187436,
-        "stdout_sha256": "b36ffef358af044cf4cb47d2805b84cc1f1daa967d127ef151b9ed120fb125bb",
+        "status": "PASS_CANONICAL_CONSTANTS_AND_MILLS_IDENTITIES",
+        "seconds": 0.09399999998277053,
+        "stdout_sha256": "13164c690b5fcbe0f1017404352bfdc2e9c6bd4d61344eefb068d90e098f5d03",
         "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "conservation": {
         "source": "mathematics/fixed-target-v8/2026-10-28/conservation-check.py",
         "source_sha256": "78000a48d29f1d055d88bfd7bc1e7907b3ea8b327400ef6572e94161ab05623d",
-        "status": "PASS_EXACT_OFF_CONTACT_CONSERVATION",
         "returncode": 0,
-        "seconds": 0.35999999998603016,
+        "status": "PASS_EXACT_OFF_CONTACT_CONSERVATION",
+        "seconds": 0.34400000001187436,
         "stdout_sha256": "3d58d4bf2777ccfc3af094a6445190977b5486fa4ad99b07298dcca5308ad991",
         "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "geometry": {
         "source": "mathematics/strategy-v4/2026-10-27/check_geometry.py",
         "source_sha256": "1c5004dac9b42381a54e5c327ac80b57d16fc02485b5a5443e7d06fb41987c4a",
-        "status": "PASS_BOUNDED_GEOMETRY_CONTROLS",
         "returncode": 0,
+        "status": "PASS_BOUNDED_GEOMETRY_CONTROLS",
         "seconds": 0.10899999999674037,
         "stdout_sha256": "a4fef4a210e62479b96d6fd2d9041b54d43307b1c5f926d827810fa7a6f560c9",
         "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -153,12 +153,19 @@
     },
     "original_tracked_blobs_unchanged": 6558,
     "original_manuscript_files_unchanged": 85,
-    "scope": "Finite scalar/polynomial controls and two unchanged algebra/geometry checks, plus byte preservation; no full Fourier/entry replay, finite base or conjecture acceptance."
+    "scope": "Exact finite appendix/core/geometry controls and original byte preservation; no full Fourier entry replay, finite-base or conjecture acceptance."
   },
-  "reviews": {
-    "core_geometry": "PASS_SCOPED_CORE_GEOMETRY_CONSUMER_REVIEW",
-    "entry_selected_consumers": "PASS_READ_ONLY_CONSUMER_DEPENDENCY_AND_COMPOSITION_REVIEW",
-    "fourier": "PASS_SHORT_FOURIER_SCALAR_AND_SCOPE_REVIEW"
+  "scoped_reviews": {
+    "core-review.json": "PASS_SCOPED_REVIEW_FILES_RELEASED",
+    "entry-review.json": "READABILITY_EXPANSION_COMPLETE_WITH_BOUNDED_SOURCE_CHECKS",
+    "fourier-review.json": "READY_FOR_PARENT_INTEGRATION",
+    "cross-core-review.json": "PASS_READ_ONLY_EXPANSION_CROSS_REVIEW",
+    "root-additions-review.json": "PASS_SCOPED_ROOT_ADDITIONS_REVIEW"
   },
-  "scope": "Derived statuses and hashes, not original captures or numerical/full-proof acceptance. Component reviews are AI-assisted and scoped."
+  "scope": "Derived statuses and source/output hashes. Reviews are AI-assisted and scoped; original captures remain in the local handoff. No full-entry, finite-base or global proof acceptance.",
+  "path_mapping": {
+    "local_manuscript_directory": "manuscript/compact-v16-40",
+    "published_manuscript_directory": "manuscript/compact-v16",
+    "explanation": "Same bytes; public canonical-check source path points to the published copy."
+  }
 }
