@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-29T07:35:54.129939+00:00",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "sources": {
+    "unified-actual.py": "63bb6fc6853ccc4853eccb8debf12b63dcabf43e2fb56905e1a6d4a877fd5bdc",
+    "unified-check.py": "0f834fd4b7cf146e7eff1b0eb4fab35737f643fcf15251675b1b6f6dc25ee492",
+    "unified-comparison.tex": "2be0dc58973a281accb66cf3c8dffd7209592e68278ef4c0c46805708e374938",
+    "unified-run.py": "f9cc604f2e112684657988f57d98e90548999aa7962bd282fcb28117a5a53155"
+  },
+  "commands": [
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/unified-v16/mathematics/simplification-v16/2026-10-29/unified-check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.026492749999999995
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/unified-v16/mathematics/simplification-v16/2026-10-29/unified-actual.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.195051292
+    }
+  ],
+  "scope": "Bounded scalar acceptance and exact actual-law controls; no historical driver run",
+  "status": "PASS_UNIFIED_CHECKS"
+}
