@@ -1,0 +1,32 @@
+{
+  "status": "PASS_COUNTS_V16_BOUNDED_REPLAY",
+  "inputs": {
+    "counts-actual.py": "b6f0b9eb70d40aabb5ab87f105c1df99fc3b5e2bddfc7ada61194af844bae41c",
+    "counts-check.py": "e28ae247c79ef410d1ba435a6d44054c4a4561ff105d71a3bdaf96da6de6206a",
+    "counts-analytic.tex": "f8de66097a1dfce316d30e5c70999987e77100c5efae52177ef68853eff981dc",
+    "counts-run.py": "7d2fe4c9c87bd52ca9537f3783d914eda1a4a16874563000273e29e2005d269b"
+  },
+  "results": [
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/counts-v16/mathematics/simplification-v16/2026-10-29/counts-check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.06081437499999999
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/counts-v16/mathematics/simplification-v16/2026-10-29/counts-actual.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 10.430832208
+    }
+  ],
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]"
+}

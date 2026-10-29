@@ -1,0 +1,15 @@
+{
+  "status": "PASS_VISUAL_INSPECTION",
+  "source_sha256": "b6aabeb75a3c9bbcc28beb4e6bc8b259ba2ff5aee793877fbb5b92dfbc94cb5f",
+  "pdf_sha256": "bdb63f55374a50af2d3185471e5d3980b0373bebc89b98a0f61c419072be8927",
+  "pages": 4,
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "render_command": "pdftoppm -png -r 90 build02/counts-analytic.pdf build02/page",
+  "render_returncode": 0,
+  "observations": "No overflow, clipped equations, missing glyphs or unreadable dependency paths. Page4 contains limitations and citation. No compiler warnings in final log."
+}
