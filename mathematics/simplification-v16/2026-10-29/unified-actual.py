@@ -96,8 +96,9 @@ for row,n,p,A,d,lamlo,lamhi,kap,cm,r in [
                                 'sum_five_losses':str(sum(gs)),'analytic_reserve':str(reserve)})
                 CASES+=1
 
-# Full identity for an actual common-noise marginal. At t=2 the conditional
-# sum and the frozen four-fold noise both have an atom exactly at zero.
+# Full identity for an actual common-noise marginal. The conditional sum
+# has atoms at t=2-e and t=2+e; the frozen four-fold noise has an atom at
+# zero. Thus t=2 itself tests a frozen-noise collision, not a sum atom.
 n=5;p=Q(2,5);e=Q(1,100)
 noise=BinomialNoise(n,-e,e)
 frozen=BinomialNoise(n-1,-e,e)
