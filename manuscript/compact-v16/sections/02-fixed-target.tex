@@ -1,11 +1,15 @@
-\section{Fixed-target extremality and conservation}
+\section{Fixed-target extremizers and the conserved resource}
 \label{v9:core:section}
 
-We maximize excess above a fixed target $c$, retaining that excess
-through contact and conservation. Sums have independent identically
-distributed summands with mean zero, variance one and finite third
-absolute moment $\rho$. Fix $n\ge2$, $c>0$, and a real raw sum threshold
-$H$. Set
+We optimize the excess above a fixed candidate constant. This gives a
+variational problem whose coefficient is known before any acquisition
+step. The positive excess is retained through the contact calculation
+and the conserved identity; it becomes a nonnegative term in the final
+resource. No upper bound for the maximizing normalized score is needed.
+Throughout, sums have
+independent identically distributed summands with mean zero, variance one
+and finite third absolute moment $\rho$. Fix $n\ge2$, $c>0$, and a real
+raw sum threshold $H$. Set
 \begin{gather*}
  z=H/\sqrt n,\quad F=\Pp(S_n\le H),\quad
  a=\sqrt n\{F-\Phi(z)\}-c\rho,\\
@@ -70,18 +74,10 @@ $\epsilon$, with derivative $n(h(y)-F)$ even at an atom collision.
 The normal argument is
 $(H-n\epsilon y)/\sqrt{nv_\epsilon}$, whose derivative is
 $-\sqrt n y-H(y^2-1)/(2\sqrt n)$.
-The standardized third absolute moment is the centered third moment
-multiplied by $v_\epsilon^{-3/2}$. Its derivative is therefore
-\[
- |y|^3-\rho-3y\beta-\tfrac32\rho(y^2-1).
-\]
-Combining this with the two event derivatives gives precisely $I(y)$.
-Every perturbed, standardized marginal is admissible for sufficiently
-small $\epsilon\ge0$, so maximality makes this right derivative
-nonpositive.
+The one-sided derivative of the excess is exactly \eqref{v9:core:contact};
+maximality makes it nonpositive.
 
-Integrating against $P$ gives zero: $\E h(X)=F$, $\E X=0$,
-$\E X^2=1$ and $\E|X|^3=\rho$ cancel the terms. They are all integrable.
+Its integral against $P$ is zero. All terms are integrable.
 The closed-event map $h$ is upper semicontinuous; at an atom it takes
 the larger one-sided value. Thus $I$ is upper semicontinuous. Strict
 negativity at a closed-support point would hold with a uniform negative
@@ -121,18 +117,19 @@ The nonempty set of failing indices at least $N$ has a least member.
 The preceding equivalence supplies its maximizing pair. Indices below
 $N$ use the finite base; the other earlier indices use minimality.
 \end{proof}
-Entry will use the true predecessor $C_{n-1}\le c$, without an upper
-bound on the maximizing score $c+a/\rho$.
+Thus an argument excluding every such pair for $n\ge N$ would give
+strict bounds above the finite base, including exclusion of equality.
+The subsequent entry argument uses only $C_{n-1}\le c$; it does not
+use an upper bound for the actual score $c+a/\rho$. The finite base
+and the eventual exclusion remain separate obligations.
 
 Equivalently, $\Delta=Q-h\ge0$ everywhere and $\Delta=0$ on the closed
 support, where
 \begin{equation}\label{v9:core:Q}
-\begin{split}
- Q(y)={}&F+\frac{H\varphi+c\rho}{2n^{3/2}}
- -\frac{n\varphi+3c\beta}{n^{3/2}}y\\
- &-\frac{H\varphi+3c\rho}{2n^{3/2}}y^2
+ Q(y)=F+\frac{H\varphi+c\rho}{2n^{3/2}}
+ -\frac{n\varphi+3c\beta}{n^{3/2}}y
+ -\frac{H\varphi+3c\rho}{2n^{3/2}}y^2
  +\frac c{n^{3/2}}|y|^3.
-\end{split}
 \end{equation}
 
 \subsection{Zero-bias integration and the exact identity}
@@ -209,9 +206,7 @@ the support integral in \eqref{v9:core:residuals}, gives
  +\frac{3c\beta J/2+(H\varphi+3c\rho)J_1-3cJ_2}{n^{3/2}}-L+B.
 \end{equation}
 
-For the second evaluation, write $g(X)-g(0)=\int_0^Xg'(t)dt$.
-Multiply by $X$, take expectations separately on each sign, and use
-centering on the negative half-line. Fubini then gives
+For the second evaluation, signwise Fubini proves
 $\int\tau g'=\E[Xg(X)]$ for absolutely continuous $g$ with bounded
 derivative on the relevant compact range. In particular
 \[
@@ -261,23 +256,35 @@ then multiply by $n$ and collect terms. This is
 term defining $B$ and $\xi$ vanishes.
 \end{proof}
 
-Appendix~\ref{v9:fourier:section} represents this same $E_n$ by a
-compensated Fourier integral. The support residual also explains why
-conservation must not be used without contact. For instance, if $X$ is
-uniform on $[-\sqrt3,\sqrt3]$ and $H=0$, there are no support gaps,
-yet $B=cK_q/n^{3/2}=3c\sqrt3/(40n^{3/2})>0$.
-The Lebesgue support integral in $B$ is therefore essential.
+The compensated Fourier representation of this same $E_n$ is proved in
+Appendix~\ref{v9:fourier:section}. Its comparator has transform
+$e^{-nt^2/2}(1-in\gamma t^3/6)$. The residual identity also explains
+why applying the residual-free formula to arbitrary laws would be invalid.
+For example, let $X$ be uniform on $[-\sqrt3,\sqrt3]$ and take
+$H=0$. There are no support gaps, $F=T=1/2$, $\beta=\gamma=0$,
+and $K_q=3\sqrt3/40$. Therefore
+$B=\int_K\tau\Delta=cK_q/n^{3/2}>0$.
+Omitting the support integral would give a false identity, even though
+the gap sums are all empty. This is an off-contact negative control,
+not a counterexample to the contact theorem.
 
 \subsection{A positive resource and its ordered phase price}
 
-The geometric inequalities in the next section apply to the same
-marginal and its actual support gaps. Lemma~\ref{ms:physical-defect}
-proves that, for $\sigma=\sqrt{10}$,
+Put $m=\E X_+=\E X_->0$ and $\sigma=\sqrt{10}$.
+Signwise Cauchy gives $a_\pm^2\le mb_\pm$ and
+$m^2\le a_+a_-$, where $a_\pm=\E X_\pm^2$ and
+$b_\pm=\E X_\pm^3$. Therefore $b_+b_-\ge m^2$, or
+$\gamma^2+4m^2\le\rho^2$. A gap on one side of zero has
+$(v-u)^2\le2\int_u^v|t|dt$. If a central gap $(-A,B)$ exists,
+its extra contribution is $2mAB$, and
+$0\le\E[(X+A)(X-B)]=1-AB$. Signwise Tonelli then gives
+$J\le\rho+2m$. It follows that
 \begin{equation}\label{v9:core:defect}
- D=(3+\sigma)\rho-\gamma-3J\ge0.
+ D=(3+\sigma)\rho-\gamma-3J
+ =3(\rho+2m-J)+(\sigma\rho-\gamma-6m)\ge0.
 \end{equation}
-We use this fact here and give its signwise moment and gap proof once,
-in Section~\ref{ms:geometry-counts}.
+The last term is nonnegative by Cauchy in two dimensions.
+These statements hold with or without an atom at zero.
 
 Specialize to $c=\CE=(3+\sigma)\phi(0)/6$ and contact. With
 $w=H^2/(2n)$, $e=e^{-w}$, the identity becomes
@@ -288,7 +295,7 @@ If $a\ge0$, every term is nonnegative. This specialization to $\CE$
 is essential for this definition of $D$.
 
 \begin{corollary}[Raw bound, density, and phase price]\label{v9:core:license}\label{v9:core:phase-price}
-At an attaining pair with $a\ge0$ and $c=\CE$, assume $n\ge N\ge2$,
+At such a contact pair with $a\ge0$, assume $n\ge N\ge2$,
 $\rho\ge l>0$, $0<c_-\le c$, and a proved raw bound
 $\mathcal R_c\le T<Nc_-l$. A negative $T$ excludes the pair.
 Otherwise
@@ -308,13 +315,7 @@ The general master identity gives
         \ge c\rho-T/n>0.
 \]
 Thus $M_c>0$ and, since $D\ge0$, $M_c\le c\rho$.
-Dividing by $c\rho>0$ gives
-\[
- e\ge1-\frac{T}{nc\rho}\ge1-\frac{T}{Nc_-l}>0,
-\]
-where $T\ge0$ is used in the second inequality. This is the density
-bound, since $\varphi=\phi(0)e$.
-Regrouping \eqref{v9:core:positive} gives
+The density bound follows. Regrouping \eqref{v9:core:positive} gives
 $\mathcal R_c=\mathcal U+n(1-e)M_c$, proving the unweighted bound.
 Finally
 \[
@@ -326,8 +327,11 @@ This prices one term once. It is a bound on $\mathcal U$, not an
 improved bound on the raw remainder.
 \end{proof}
 
-The order is essential at each actual index: first a raw ceiling proves
-$M_c>0$ and a density floor; only then may the phase term improve
-$\mathcal U$. A smaller resource ceiling cannot replace the raw ceiling
-in that license. Common scalar bounds on a closed moment cell make the
-conclusions uniform even when the maximizing law varies with $n$.
+Every conclusion holds at each actual index and raw threshold. Common
+bounds on a closed moment cell make the result uniform even when the
+maximizing law varies with $n$. There is no exchange of a limit with
+contact, support gaps, moments, or an integral. In particular, the order
+of use is essential: a raw ceiling first proves $M_c>0$ and a density
+floor; only then may the Gaussian phase term be subtracted to improve
+$\mathcal U$. A smaller resource ceiling is not a replacement for the
+raw ceiling in that licensing step.

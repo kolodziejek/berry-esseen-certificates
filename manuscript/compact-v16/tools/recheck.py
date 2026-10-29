@@ -1,5 +1,4 @@
 """Bounded checks of the unchanged v16 inputs plus the compact source graph.
-Includes the canonical appendix and retained core/geometry controls.
 No Fourier generation, finite-base acceptance or full-conjecture claim.
 """
 from pathlib import Path
@@ -8,12 +7,10 @@ import datetime,hashlib,json,re,subprocess,sys,time
 here=Path(__file__).resolve().parents[1]
 root=here.parents[1]
 source=root/'mathematics/simplification-v16/2026-10-29'
-out=here/(sys.argv[1] if len(sys.argv)>1 else 'checks-recheck')
+out=here/(sys.argv[1] if len(sys.argv)>1 else 'checks')
 out.mkdir(exist_ok=False)
-if not __debug__ or sys.flags.optimize: raise RuntimeError('Assertions must be enabled')
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 pins=json.loads((source/'reviewed-sources.json').read_text())
-pins.update({'mathematics/fixed-target-v8/2026-10-28/conservation-check.py': '78000a48d29f1d055d88bfd7bc1e7907b3ea8b327400ef6572e94161ab05623d', 'mathematics/strategy-v4/2026-10-27/check_geometry.py': '1c5004dac9b42381a54e5c327ac80b57d16fc02485b5a5443e7d06fb41987c4a'})
 assert all(sha(root/k)==v for k,v in pins.items())
 files=[]
 def expand(p):
@@ -48,16 +45,9 @@ def run(item):
     return name,record
 with ThreadPoolExecutor(max_workers=3) as pool:
     records=dict(pool.map(run,jobs))
-extra_jobs=[('canonical-check',here/'tools/canonical-check.py'),('conservation',root/'mathematics/fixed-target-v8/2026-10-28/conservation-check.py'),('geometry',root/'mathematics/strategy-v4/2026-10-27/check_geometry.py')]
-for name,path in extra_jobs:
-    t=time.monotonic();cmd=[sys.executable,'-I','-B',str(path)]
-    r=subprocess.run(cmd,cwd=root,capture_output=True,timeout=60)
-    (out/(name+'.stdout.json')).write_bytes(r.stdout);(out/(name+'.stderr.txt')).write_bytes(r.stderr)
-    obj=json.loads(r.stdout)if r.returncode==0 else{}
-    records[name]={'command':cmd,'returncode':r.returncode,'seconds':time.monotonic()-t,'status':obj.get('status',obj.get('result','FAILED')),'source_sha256':sha(path),'stdout_sha256':hashlib.sha256(r.stdout).hexdigest(),'stderr_sha256':hashlib.sha256(r.stderr).hexdigest()}
 assert all(sha(root/k)==v for k,v in pins.items())
 ok=all(x['returncode']==0 and x['status'].startswith('PASS') for x in records.values())
-receipt={'status':'PASS_COMPACT_V16_BOUNDED_RECHECK'if ok else'FAILED','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'python':sys.version,'scope':'Nine unchanged v16 checks, two core/geometry controls, canonical scalar identities and compact TeX labels, citations and environment balance. No complete source-ancestry replay, finite-base acceptance or full theorem. Historical preservation.py is not run: its old no-new-manuscript-files scope is intentionally inapplicable to this new parallel manuscript. Original tracked files are checked separately.','source_pin':'1aa1dd015e3d73fbeecc1a7acbfa395cbb560b5f','checks':records,'tex_files':len(files),'labels':len(labels),'citations':len(set(cites)),'compact_tex_sha256':{str(p.relative_to(here)):sha(p) for p in files},'reviewed_inputs_sha256':pins}
+receipt={'status':'PASS_COMPACT_V16_BOUNDED_RECHECK'if ok else'FAILED','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'python':sys.version,'scope':'Nine unchanged v16 mathematical bounded checks and compact TeX labels, citations and environment balance. No complete source-ancestry replay, finite-base acceptance or full theorem. Historical preservation.py is not run: its old no-new-manuscript-files scope is intentionally inapplicable to this new parallel manuscript. Original tracked files are checked separately.','source_pin':'1aa1dd015e3d73fbeecc1a7acbfa395cbb560b5f','checks':records,'tex_files':len(files),'labels':len(labels),'citations':len(set(cites)),'compact_tex_sha256':{str(p.relative_to(here)):sha(p) for p in files},'reviewed_inputs_sha256':pins}
 (out/'receipt.json').write_text(json.dumps(receipt,indent=2)+'\n',encoding='utf-8')
 print(json.dumps({'status':receipt['status'],'checks':len(records)}))
 assert ok

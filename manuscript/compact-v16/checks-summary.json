@@ -1,171 +1,124 @@
 {
-  "record_type": "DERIVED_PUBLIC_CHECK_SUMMARY",
+  "status": "PASS_COMPACT_V16_BOUNDED_RECHECK",
+  "utc": "2026-10-29T14:13:49.474915+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
   "source_pin": "1aa1dd015e3d73fbeecc1a7acbfa395cbb560b5f",
-  "preceding_v16_replay": {
-    "status": "PASS_COMPACT_V16_BOUNDED_RECHECK",
-    "utc": "2026-10-29T14:13:49.474915+00:00",
-    "checks": {
-      "acquisition-check.py": {
-        "returncode": 0,
-        "seconds": 0.2029999999795109,
-        "status": "PASS_SCALAR_ACQUISITION_N700",
-        "source_sha256": "e5513d294a2564f350e17d2d581a8d2033ce7832e8a55e23219bfb479a3c910d",
-        "stdout_sha256": "b67144c1606d9e1120bd4e9a0b0591ed83cc576cc07584bf4189ec8bbb6c41a3",
-        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "unified-check.py": {
-        "returncode": 0,
-        "seconds": 0.1879999999946449,
-        "status": "PASS_UNIFIED_GENERIC_SCALARS",
-        "source_sha256": "0f834fd4b7cf146e7eff1b0eb4fab35737f643fcf15251675b1b6f6dc25ee492",
-        "stdout_sha256": "4834278a4c9dd2df9c161908c37da9852e60a274e2cf422041b129b23cfe3850",
-        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "unified-actual.py": {
-        "returncode": 0,
-        "seconds": 0.34400000001187436,
-        "status": "PASS_UNIFIED_ACTUAL_LAWS",
-        "source_sha256": "73c2a62c116234b7dfaeeec14217e315809d00556f5076e8f3898ebe097e4755",
-        "stdout_sha256": "43e58eeb269361033be27c15e36b248d1b464284d1f1ac6ebd10665070a955be",
-        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "small-check.py": {
-        "returncode": 0,
-        "seconds": 0.14000000001396984,
-        "status": "PASS_ELEMENTARY_COMPACT_SMALL_NOISE_SCALARS",
-        "source_sha256": "adc0a97358d933cedf734a8c7c86975ec5fc30c621a01d5c1e7094cf19900e33",
-        "stdout_sha256": "d0c5dffe0f9193a811edcdb7789acff777c1147687d77dabe31a4de4038db431",
-        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "small-review-actual.py": {
-        "returncode": 0,
-        "seconds": 64.68700000000536,
-        "status": "PASS_SMALL_REVIEW_ACTUAL_LAWS",
-        "source_sha256": "87a154af87fc682629c2298e856d1e05a64eaf581947e92e29423d59aada442b",
-        "stdout_sha256": "c27d80b04c7518be6721bb475bb41b0a97ce8b70fac2fd6e375297b93e486676",
-        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "counts-check.py": {
-        "returncode": 0,
-        "seconds": 0.20399999999790452,
-        "status": "PASS_RIGHT_ANALYTIC_003_TO_036",
-        "source_sha256": "e28ae247c79ef410d1ba435a6d44054c4a4561ff105d71a3bdaf96da6de6206a",
-        "stdout_sha256": "edbd21c5d37dd7099fb070479c67fb9096f1421a6dcbfcd5133b36aacb17bbb6",
-        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "small-review-check.py": {
-        "returncode": 0,
-        "seconds": 0.20300000000861473,
-        "status": "PASS_INDEPENDENT_COMMON_SMALL_NOISE",
-        "source_sha256": "3f19b5a048b88d7351d407d253286c2d5478e70a2f68a2d2c527f897bd4dd156",
-        "stdout_sha256": "8f17e77730535bb82c74031f67a18b89c103b5715fc254f3b96692e6aafb8ab3",
-        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "unified-review-check.py": {
-        "returncode": 0,
-        "seconds": 0.26500000001396984,
-        "status": "PASS_INDEPENDENT_UNIFIED_REVIEW",
-        "source_sha256": "2c1d97212db63709b286cc347b873221fd9ad640e9c58fa7ee251834f170d1d8",
-        "stdout_sha256": "c83dbf1e60a82ce3bc5df699c38e4426c7305a1135c2ef27eb8207318b6d46ee",
-        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "acquisition-review.py": {
-        "returncode": 0,
-        "seconds": 0.25,
-        "status": "PASS_INDEPENDENT_ACQUISITION_JOIN_REVIEW",
-        "source_sha256": "09f3862a8d0372e10b69554a3faf1ab5140217c4b7acb6585d8b266d0a17923f",
-        "stdout_sha256": "cccd272f42277254f8b5efecee19478f0579da67b664a2eae55586da454d7f2f",
-        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    "reviewed_inputs_sha256": {
-      "mathematics/simplification-v16/2026-10-29/acquisition-audit.md": "865d09b40de5c414761a97fa327db50cc0e723dd94e64c4bae1129acc4d13b50",
-      "mathematics/simplification-v16/2026-10-29/acquisition-check.py": "e5513d294a2564f350e17d2d581a8d2033ce7832e8a55e23219bfb479a3c910d",
-      "mathematics/simplification-v16/2026-10-29/acquisition-direct.pdf": "2519d0e400763f24a120ca869ca5cd73b35c352f3de7fc188201ae8bf3bddc2d",
-      "mathematics/simplification-v16/2026-10-29/acquisition-direct.tex": "c996f20f2202def6fb945f6e7c809a0517930a1a97402e1d11aedd840f88a6fd",
-      "mathematics/simplification-v16/2026-10-29/acquisition-review-sources.json": "034e673ee4f1dbd3addee6d45aad4f7efa3cfb82a7d6bb32d7227b5c723bab9b",
-      "mathematics/simplification-v16/2026-10-29/acquisition-review.md": "9338d05ffa75e95987f9f66cbb4b9a88dd52e3a739fe3beb7bf73e2a993f50eb",
-      "mathematics/simplification-v16/2026-10-29/acquisition-review.py": "09f3862a8d0372e10b69554a3faf1ab5140217c4b7acb6585d8b266d0a17923f",
-      "mathematics/simplification-v16/2026-10-29/acquisition-sources.json": "e02c73a8b6c766828e583dcd0b6f81bd4bebbd93b20e4835b65e3e48d23c1548",
-      "mathematics/simplification-v16/2026-10-29/composition.pdf": "2654428399048d3c8806fd4543ebdc54ba554212515f49e57345f6c62f4d07ff",
-      "mathematics/simplification-v16/2026-10-29/composition.tex": "76f4a3b591adf7ba6a03461f4fe28c9c5c0fb81d273a404bfe017c38676743fc",
-      "mathematics/simplification-v16/2026-10-29/coordinator-review.md": "6d3b46b6b17b56a32945ab73a448393ef97931a179d0e60fdd5e5b0d900a2e0a",
-      "mathematics/simplification-v16/2026-10-29/counts-actual.py": "b6f0b9eb70d40aabb5ab87f105c1df99fc3b5e2bddfc7ada61194af844bae41c",
-      "mathematics/simplification-v16/2026-10-29/counts-analytic.pdf": "bdb63f55374a50af2d3185471e5d3980b0373bebc89b98a0f61c419072be8927",
-      "mathematics/simplification-v16/2026-10-29/counts-analytic.tex": "b6aabeb75a3c9bbcc28beb4e6bc8b259ba2ff5aee793877fbb5b92dfbc94cb5f",
-      "mathematics/simplification-v16/2026-10-29/counts-check.py": "e28ae247c79ef410d1ba435a6d44054c4a4561ff105d71a3bdaf96da6de6206a",
-      "mathematics/simplification-v16/2026-10-29/counts-run.py": "7d2fe4c9c87bd52ca9537f3783d914eda1a4a16874563000273e29e2005d269b",
-      "mathematics/simplification-v16/2026-10-29/counts-status.md": "6894932b4dc107961ef3a08f43386303f7477016363157ab2ea346c4475d7f16",
-      "mathematics/simplification-v16/2026-10-29/preservation.py": "21903724fd3e848973f159f810081acf1642fc9e20ecef8d4ba21756d5280e9a",
-      "mathematics/simplification-v16/2026-10-29/run_checks.py": "d87e978ea3e021cee5e7bdf46c808c259ec13900a81bdb29c9706e993249b428",
-      "mathematics/simplification-v16/2026-10-29/run_one.py": "190d934068cd796535df93f41a7e52ba2d7a30ff8496bdd0b96a78837ce022ba",
-      "mathematics/simplification-v16/2026-10-29/small-check.py": "adc0a97358d933cedf734a8c7c86975ec5fc30c621a01d5c1e7094cf19900e33",
-      "mathematics/simplification-v16/2026-10-29/small-common.pdf": "6ae352f373cef2c6c7119610d2d10b5d9d42f170d0183c30d02244d82368912e",
-      "mathematics/simplification-v16/2026-10-29/small-common.tex": "da583ea6712fa159345aa22d402faaa5cd60c518aec51c8aff033c09df636e11",
-      "mathematics/simplification-v16/2026-10-29/small-review-actual.py": "87a154af87fc682629c2298e856d1e05a64eaf581947e92e29423d59aada442b",
-      "mathematics/simplification-v16/2026-10-29/small-review-check.py": "3f19b5a048b88d7351d407d253286c2d5478e70a2f68a2d2c527f897bd4dd156",
-      "mathematics/simplification-v16/2026-10-29/small-review-report.md": "a4cb624300b2be8517f2ae2ef7c31228667d72a6d99a66468de85dacedfca6a6",
-      "mathematics/simplification-v16/2026-10-29/unified-actual.py": "73c2a62c116234b7dfaeeec14217e315809d00556f5076e8f3898ebe097e4755",
-      "mathematics/simplification-v16/2026-10-29/unified-check.py": "0f834fd4b7cf146e7eff1b0eb4fab35737f643fcf15251675b1b6f6dc25ee492",
-      "mathematics/simplification-v16/2026-10-29/unified-comparison.pdf": "2b4577f4e3de5e102a9584a488695d085f7808042c32872f6ba5165173e51292",
-      "mathematics/simplification-v16/2026-10-29/unified-comparison.tex": "2be0dc58973a281accb66cf3c8dffd7209592e68278ef4c0c46805708e374938",
-      "mathematics/simplification-v16/2026-10-29/unified-review-check.py": "2c1d97212db63709b286cc347b873221fd9ad640e9c58fa7ee251834f170d1d8",
-      "mathematics/simplification-v16/2026-10-29/unified-review.md": "f8d41a16311509932bf3fa46c836aa9ad89da60183b6891254f41988a192cca7",
-      "mathematics/simplification-v16/2026-10-29/unified-run.py": "f9cc604f2e112684657988f57d98e90548999aa7962bd282fcb28117a5a53155",
-      "mathematics/simplification-v16/2026-10-29/unified-source-manifest.json": "1aede82973edc67ff1c3d7b0946da696dd39701d4333e641af6143b7905ed5ac",
-      "mathematics/simplification-v16/2026-10-29/unified-status.md": "97a1c347c50da3af8b238df15bb7ecb02936b5bb438b45cf2ff19a3f9e5590b9",
-      "mathematics/simplification-v10/2026-10-28/actual_law_checks.py": "351997e80de8895ac87b4e5dfeb33efc28e16c934bfef8f41ccf2af20ee59e07"
-    },
-    "provenance": "Rerun during the preceding 45-page integration; exact sources preserved, not claimed rerun again for pagination."
+  "scope": "Nine unchanged v16 mathematical bounded checks and compact TeX labels, citations and environment balance. No complete source-ancestry replay, finite-base acceptance or full theorem. Historical preservation.py is not run: its old no-new-manuscript-files scope is intentionally inapplicable to this new parallel manuscript. Original tracked files are checked separately.",
+  "tex_files": 13,
+  "labels": 119,
+  "citations": 23,
+  "reviewed_inputs_sha256": {
+    "mathematics/simplification-v16/2026-10-29/acquisition-audit.md": "865d09b40de5c414761a97fa327db50cc0e723dd94e64c4bae1129acc4d13b50",
+    "mathematics/simplification-v16/2026-10-29/acquisition-check.py": "e5513d294a2564f350e17d2d581a8d2033ce7832e8a55e23219bfb479a3c910d",
+    "mathematics/simplification-v16/2026-10-29/acquisition-direct.pdf": "2519d0e400763f24a120ca869ca5cd73b35c352f3de7fc188201ae8bf3bddc2d",
+    "mathematics/simplification-v16/2026-10-29/acquisition-direct.tex": "c996f20f2202def6fb945f6e7c809a0517930a1a97402e1d11aedd840f88a6fd",
+    "mathematics/simplification-v16/2026-10-29/acquisition-review-sources.json": "034e673ee4f1dbd3addee6d45aad4f7efa3cfb82a7d6bb32d7227b5c723bab9b",
+    "mathematics/simplification-v16/2026-10-29/acquisition-review.md": "9338d05ffa75e95987f9f66cbb4b9a88dd52e3a739fe3beb7bf73e2a993f50eb",
+    "mathematics/simplification-v16/2026-10-29/acquisition-review.py": "09f3862a8d0372e10b69554a3faf1ab5140217c4b7acb6585d8b266d0a17923f",
+    "mathematics/simplification-v16/2026-10-29/acquisition-sources.json": "e02c73a8b6c766828e583dcd0b6f81bd4bebbd93b20e4835b65e3e48d23c1548",
+    "mathematics/simplification-v16/2026-10-29/composition.pdf": "2654428399048d3c8806fd4543ebdc54ba554212515f49e57345f6c62f4d07ff",
+    "mathematics/simplification-v16/2026-10-29/composition.tex": "76f4a3b591adf7ba6a03461f4fe28c9c5c0fb81d273a404bfe017c38676743fc",
+    "mathematics/simplification-v16/2026-10-29/coordinator-review.md": "6d3b46b6b17b56a32945ab73a448393ef97931a179d0e60fdd5e5b0d900a2e0a",
+    "mathematics/simplification-v16/2026-10-29/counts-actual.py": "b6f0b9eb70d40aabb5ab87f105c1df99fc3b5e2bddfc7ada61194af844bae41c",
+    "mathematics/simplification-v16/2026-10-29/counts-analytic.pdf": "bdb63f55374a50af2d3185471e5d3980b0373bebc89b98a0f61c419072be8927",
+    "mathematics/simplification-v16/2026-10-29/counts-analytic.tex": "b6aabeb75a3c9bbcc28beb4e6bc8b259ba2ff5aee793877fbb5b92dfbc94cb5f",
+    "mathematics/simplification-v16/2026-10-29/counts-check.py": "e28ae247c79ef410d1ba435a6d44054c4a4561ff105d71a3bdaf96da6de6206a",
+    "mathematics/simplification-v16/2026-10-29/counts-run.py": "7d2fe4c9c87bd52ca9537f3783d914eda1a4a16874563000273e29e2005d269b",
+    "mathematics/simplification-v16/2026-10-29/counts-status.md": "6894932b4dc107961ef3a08f43386303f7477016363157ab2ea346c4475d7f16",
+    "mathematics/simplification-v16/2026-10-29/preservation.py": "21903724fd3e848973f159f810081acf1642fc9e20ecef8d4ba21756d5280e9a",
+    "mathematics/simplification-v16/2026-10-29/run_checks.py": "d87e978ea3e021cee5e7bdf46c808c259ec13900a81bdb29c9706e993249b428",
+    "mathematics/simplification-v16/2026-10-29/run_one.py": "190d934068cd796535df93f41a7e52ba2d7a30ff8496bdd0b96a78837ce022ba",
+    "mathematics/simplification-v16/2026-10-29/small-check.py": "adc0a97358d933cedf734a8c7c86975ec5fc30c621a01d5c1e7094cf19900e33",
+    "mathematics/simplification-v16/2026-10-29/small-common.pdf": "6ae352f373cef2c6c7119610d2d10b5d9d42f170d0183c30d02244d82368912e",
+    "mathematics/simplification-v16/2026-10-29/small-common.tex": "da583ea6712fa159345aa22d402faaa5cd60c518aec51c8aff033c09df636e11",
+    "mathematics/simplification-v16/2026-10-29/small-review-actual.py": "87a154af87fc682629c2298e856d1e05a64eaf581947e92e29423d59aada442b",
+    "mathematics/simplification-v16/2026-10-29/small-review-check.py": "3f19b5a048b88d7351d407d253286c2d5478e70a2f68a2d2c527f897bd4dd156",
+    "mathematics/simplification-v16/2026-10-29/small-review-report.md": "a4cb624300b2be8517f2ae2ef7c31228667d72a6d99a66468de85dacedfca6a6",
+    "mathematics/simplification-v16/2026-10-29/unified-actual.py": "73c2a62c116234b7dfaeeec14217e315809d00556f5076e8f3898ebe097e4755",
+    "mathematics/simplification-v16/2026-10-29/unified-check.py": "0f834fd4b7cf146e7eff1b0eb4fab35737f643fcf15251675b1b6f6dc25ee492",
+    "mathematics/simplification-v16/2026-10-29/unified-comparison.pdf": "2b4577f4e3de5e102a9584a488695d085f7808042c32872f6ba5165173e51292",
+    "mathematics/simplification-v16/2026-10-29/unified-comparison.tex": "2be0dc58973a281accb66cf3c8dffd7209592e68278ef4c0c46805708e374938",
+    "mathematics/simplification-v16/2026-10-29/unified-review-check.py": "2c1d97212db63709b286cc347b873221fd9ad640e9c58fa7ee251834f170d1d8",
+    "mathematics/simplification-v16/2026-10-29/unified-review.md": "f8d41a16311509932bf3fa46c836aa9ad89da60183b6891254f41988a192cca7",
+    "mathematics/simplification-v16/2026-10-29/unified-run.py": "f9cc604f2e112684657988f57d98e90548999aa7962bd282fcb28117a5a53155",
+    "mathematics/simplification-v16/2026-10-29/unified-source-manifest.json": "1aede82973edc67ff1c3d7b0946da696dd39701d4333e641af6143b7905ed5ac",
+    "mathematics/simplification-v16/2026-10-29/unified-status.md": "97a1c347c50da3af8b238df15bb7ecb02936b5bb438b45cf2ff19a3f9e5590b9",
+    "mathematics/simplification-v10/2026-10-28/actual_law_checks.py": "351997e80de8895ac87b4e5dfeb33efc28e16c934bfef8f41ccf2af20ee59e07"
   },
-  "fresh_expansion_controls": {
-    "status": "PASS_READABLE_EXPANSION_CONTROLS_AND_PRESERVATION",
-    "utc": "2026-10-29T15:23:21.665385+00:00",
-    "source_pin": "1aa1dd015e3d73fbeecc1a7acbfa395cbb560b5f",
-    "checks": {
-      "canonical-check": {
-        "source": "manuscript/compact-v16/tools/canonical-check.py",
-        "source_sha256": "489afdc77c96215914ee7019e721a14e9c50376c211cd2d9eddd7af96e8a716f",
-        "returncode": 0,
-        "status": "PASS_CANONICAL_CONSTANTS_AND_MILLS_IDENTITIES",
-        "seconds": 0.09399999998277053,
-        "stdout_sha256": "13164c690b5fcbe0f1017404352bfdc2e9c6bd4d61344eefb068d90e098f5d03",
-        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "conservation": {
-        "source": "mathematics/fixed-target-v8/2026-10-28/conservation-check.py",
-        "source_sha256": "78000a48d29f1d055d88bfd7bc1e7907b3ea8b327400ef6572e94161ab05623d",
-        "returncode": 0,
-        "status": "PASS_EXACT_OFF_CONTACT_CONSERVATION",
-        "seconds": 0.34400000001187436,
-        "stdout_sha256": "3d58d4bf2777ccfc3af094a6445190977b5486fa4ad99b07298dcca5308ad991",
-        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "geometry": {
-        "source": "mathematics/strategy-v4/2026-10-27/check_geometry.py",
-        "source_sha256": "1c5004dac9b42381a54e5c327ac80b57d16fc02485b5a5443e7d06fb41987c4a",
-        "returncode": 0,
-        "status": "PASS_BOUNDED_GEOMETRY_CONTROLS",
-        "seconds": 0.10899999999674037,
-        "stdout_sha256": "a4fef4a210e62479b96d6fd2d9041b54d43307b1c5f926d827810fa7a6f560c9",
-        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
+  "evidence_kind": "DERIVED_PUBLIC_CHECK_SUMMARY; original raw captures retained in local handoff, not included here.",
+  "checks": {
+    "acquisition-check.py": {
+      "returncode": 0,
+      "seconds": 0.2029999999795109,
+      "status": "PASS_SCALAR_ACQUISITION_N700",
+      "source_sha256": "e5513d294a2564f350e17d2d581a8d2033ce7832e8a55e23219bfb479a3c910d",
+      "stdout_sha256": "b67144c1606d9e1120bd4e9a0b0591ed83cc576cc07584bf4189ec8bbb6c41a3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
-    "original_tracked_blobs_unchanged": 6558,
-    "original_manuscript_files_unchanged": 85,
-    "scope": "Exact finite appendix/core/geometry controls and original byte preservation; no full Fourier entry replay, finite-base or conjecture acceptance."
+    "unified-check.py": {
+      "returncode": 0,
+      "seconds": 0.1879999999946449,
+      "status": "PASS_UNIFIED_GENERIC_SCALARS",
+      "source_sha256": "0f834fd4b7cf146e7eff1b0eb4fab35737f643fcf15251675b1b6f6dc25ee492",
+      "stdout_sha256": "4834278a4c9dd2df9c161908c37da9852e60a274e2cf422041b129b23cfe3850",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "unified-actual.py": {
+      "returncode": 0,
+      "seconds": 0.34400000001187436,
+      "status": "PASS_UNIFIED_ACTUAL_LAWS",
+      "source_sha256": "73c2a62c116234b7dfaeeec14217e315809d00556f5076e8f3898ebe097e4755",
+      "stdout_sha256": "43e58eeb269361033be27c15e36b248d1b464284d1f1ac6ebd10665070a955be",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "small-check.py": {
+      "returncode": 0,
+      "seconds": 0.14000000001396984,
+      "status": "PASS_ELEMENTARY_COMPACT_SMALL_NOISE_SCALARS",
+      "source_sha256": "adc0a97358d933cedf734a8c7c86975ec5fc30c621a01d5c1e7094cf19900e33",
+      "stdout_sha256": "d0c5dffe0f9193a811edcdb7789acff777c1147687d77dabe31a4de4038db431",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "small-review-actual.py": {
+      "returncode": 0,
+      "seconds": 64.68700000000536,
+      "status": "PASS_SMALL_REVIEW_ACTUAL_LAWS",
+      "source_sha256": "87a154af87fc682629c2298e856d1e05a64eaf581947e92e29423d59aada442b",
+      "stdout_sha256": "c27d80b04c7518be6721bb475bb41b0a97ce8b70fac2fd6e375297b93e486676",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "counts-check.py": {
+      "returncode": 0,
+      "seconds": 0.20399999999790452,
+      "status": "PASS_RIGHT_ANALYTIC_003_TO_036",
+      "source_sha256": "e28ae247c79ef410d1ba435a6d44054c4a4561ff105d71a3bdaf96da6de6206a",
+      "stdout_sha256": "edbd21c5d37dd7099fb070479c67fb9096f1421a6dcbfcd5133b36aacb17bbb6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "small-review-check.py": {
+      "returncode": 0,
+      "seconds": 0.20300000000861473,
+      "status": "PASS_INDEPENDENT_COMMON_SMALL_NOISE",
+      "source_sha256": "3f19b5a048b88d7351d407d253286c2d5478e70a2f68a2d2c527f897bd4dd156",
+      "stdout_sha256": "8f17e77730535bb82c74031f67a18b89c103b5715fc254f3b96692e6aafb8ab3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "unified-review-check.py": {
+      "returncode": 0,
+      "seconds": 0.26500000001396984,
+      "status": "PASS_INDEPENDENT_UNIFIED_REVIEW",
+      "source_sha256": "2c1d97212db63709b286cc347b873221fd9ad640e9c58fa7ee251834f170d1d8",
+      "stdout_sha256": "c83dbf1e60a82ce3bc5df699c38e4426c7305a1135c2ef27eb8207318b6d46ee",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "acquisition-review.py": {
+      "returncode": 0,
+      "seconds": 0.25,
+      "status": "PASS_INDEPENDENT_ACQUISITION_JOIN_REVIEW",
+      "source_sha256": "09f3862a8d0372e10b69554a3faf1ab5140217c4b7acb6585d8b266d0a17923f",
+      "stdout_sha256": "cccd272f42277254f8b5efecee19478f0579da67b664a2eae55586da454d7f2f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
   },
-  "scoped_reviews": {
-    "core-review.json": "PASS_SCOPED_REVIEW_FILES_RELEASED",
-    "entry-review.json": "READABILITY_EXPANSION_COMPLETE_WITH_BOUNDED_SOURCE_CHECKS",
-    "fourier-review.json": "READY_FOR_PARENT_INTEGRATION",
-    "cross-core-review.json": "PASS_READ_ONLY_EXPANSION_CROSS_REVIEW",
-    "root-additions-review.json": "PASS_SCOPED_ROOT_ADDITIONS_REVIEW"
-  },
-  "scope": "Derived statuses and source/output hashes. Reviews are AI-assisted and scoped; original captures remain in the local handoff. No full-entry, finite-base or global proof acceptance.",
-  "path_mapping": {
-    "local_manuscript_directory": "manuscript/compact-v16-40",
-    "published_manuscript_directory": "manuscript/compact-v16",
-    "explanation": "Same bytes; public canonical-check source path points to the published copy."
-  }
+  "reproduction": "From repository checkout: python -I -B manuscript/compact-v16/tools/recheck.py FRESH_OUTPUT_DIRECTORY_NAME. The driver invokes unchanged source-pinned v16 programs with-Xint_max_str_digits=0."
 }

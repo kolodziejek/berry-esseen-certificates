@@ -1,47 +1,27 @@
-\subsection{Reading the proof}\label{ms:guide}\label{ms:notation}
-The argument follows one marginal through four stages. The distinction
-between acquiring hypotheses and applying the resulting comparison is
-useful when reading the longer calculations.
-\begin{enumerate}[leftmargin=*,itemsep=3pt]
-\item Section~\ref{v9:core:section} selects an attained fixed-target
-maximum and derives contact and conservation. The support becomes compact
-before fourth and higher moments enter.
-\item Sections~\ref{ms:geometry-counts} and~\ref{v9:entry:section}
-turn conservation into coarse bounds for its physical gap defect and raw
-threshold. The entry includes explicit finite certificate conditions;
-Appendix~\ref{v9:fourier:section} supplies their analytical Fourier bounds.
-\item Section~\ref{short:acq:section} uses those coarse bounds to acquire
-one support strip. Its moment geometry is independent of contact; the two
-outer support rays use contact and the actual sharp predecessor.
-\item Section~\ref{short:count:section} compares every law in that strip
-with a binomial law. It needs only the strip hypotheses. Section~\ref{short:composition}
-then states precisely how this local exclusion composes with a finite base.
-\end{enumerate}
+\subsection{Reading the argument}\label{ms:guide}\label{ms:notation}
+The proof follows one chain: fixed-target maximum, contact and budget,
+coarse entry, one support strip, and count comparison. The first step
+selects one actual marginal; no later relaxation changes that marginal.
+Reflection selects positive closed-event orientation before entry, so
+its signed defect is acquired in the orientation where it is used.
+The complete Fourier predicates enter only at coarse entry. The later
+estimates are analytical, with finite rational inequalities specified
+in the proof.
 
-There are two coordinate systems. The physical random variable $X$ is
-centered and has variance one. Its sign indicator is $B_0=\ind_{\{X>0\}}$,
-with $p=\Pp(B_0=1)$ and $q=1-p$. Subtract the conditional means and divide
-by their separation $\ell$ to obtain the count noise $U$. The exact relation is
+For $B=\ind_{\{X>0\}}$, put $p=\Pp(B=1)$, $q=1-p$, $v=pq$ and
+$m=\E X_+=\E X_->0$. If $W=X-\E(X\mid B)$ and $\ell=m/v$, then
 \[
- X=\ell(B_0+U-p),\qquad \E(U\mid B_0)=0.
+ X=\ell(B+U-p),\quad U=W/\ell,\quad \theta=\E W^2,
+ \quad s=\E U^2,\quad \lambda=ns=\frac{n\theta}{\ell^2}.
 \]
-The following quantities will recur; each is defined again where used.
-\[
-\begin{array}{c|l}
- \theta & \E\{X-\E(X\mid B_0)\}^2\\
- s & \E U^2=\theta/\ell^2\\
- \lambda & ns\\
- a_0,a_1 & \text{inward support displacements in count coordinates}\\
- D & (3+\sqrt{10})\rho-\gamma-3J
-\end{array}
-\]
-Here $\gamma=\E X^3$, $\beta=\E[X|X|]$, and $J$ is the actual weighted
-support-gap sum. The letters $d=a_0+a_1$ and $D$ have different roles:
-$d$ measures inward displacement, whereas $D$ is the physical moment defect.
-The normalization satisfies $pq+s=\ell^{-2}$, so reconstruction leaves
-both the actual law and the raw threshold $H$ unchanged.
+Thus $\theta$ and $\lambda$ use different units; $v+s=\ell^{-2}$.
+The inward displacements $a_0,a_1$ are also in count coordinates, and
+$d=a_0+a_1$. The physical defect is the distinct symbol
+$D=(3+\sqrt{10})\rho-\gamma-3J$, where
+$\gamma=\E X^3$, $\beta=\E[X|X|]$ and $J$ is the weighted support-gap
+sum. Reconstructing $X$ from $B+U$ leaves the raw threshold $H$ unchanged.
 
-Reflection chooses the positive closed-event orientation before entry.
-All subsequent signed quantities are acquired in that orientation.
-Alternative smaller-index routes and wider comparison domains are preserved
-in the repository; they are not extra premises of this selected route.
+The main text gives the variational, geometric, entry and comparison
+arguments. The appendices contain the Fourier enclosure used at entry
+and elementary Gaussian constants. Alternative smaller-index and local
+routes remain in the repository, outside this selected compilation.

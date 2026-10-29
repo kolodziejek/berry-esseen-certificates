@@ -1,9 +1,26 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{23}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bell(2026{\natexlab{a}})]{BellExtremizers2026}
+Logan Bell.
+\newblock Extremizers for the independent {Berry--Esseen} inequality.
+\newblock Manuscript dated 2026-10-06; collection version 0.7.0; source
+  snapshot f61bc638774bfa1165065462f98fe31efade30bf, 2026{\natexlab{a}}.
+\newblock URL
+  \url{https://github.com/epicycloids/independent-berry-esseen-bounds/blob/f61bc638774bfa1165065462f98fe31efade30bf/paper/extremizers/extremizers.pdf}.
+
+\bibitem[Bell(2026{\natexlab{b}})]{BellIndependent2026}
+Logan Bell.
+\newblock An upper bound on the {Berry--Esseen} constant for independent
+  summands.
+\newblock Manuscript dated 2026-10-06; collection version 0.7.0; source
+  snapshot f61bc638774bfa1165065462f98fe31efade30bf, 2026{\natexlab{b}}.
+\newblock URL
+  \url{https://github.com/epicycloids/independent-berry-esseen-bounds/blob/f61bc638774bfa1165065462f98fe31efade30bf/paper/independent-berry-esseen.pdf}.
 
 \bibitem[Berry(1941)]{Berry1941}
 Andrew~C. Berry.
@@ -13,11 +30,28 @@ Andrew~C. Berry.
   (1):\penalty0 122--136, 1941.
 \newblock \doi{10.1090/S0002-9947-1941-0003498-3}.
 
+\bibitem[BerryEsseenLean()]{BerryEsseenLean2026}
+BerryEsseenLean.
+\newblock {BerryEsseenLean}: {Berry--Esseen} eventual sharpness in {Lean}.
+\newblock Lean 4 formalization accompanying the manuscript of Hengzhi He and
+  Guang Cheng, 2026.
+\newblock URL
+  \url{https://github.com/UCLA-Trustworthy-AI-Lab/BerryEsseenLean/tree/2b97fa7400dd85fc98b829224c89b0f986789395}.
+\newblock Commit 2b97fa7400dd85fc98b829224c89b0f986789395; designated endpoints
+  retain explicit external mathematical inputs; Lean v4.28.0.
+
 \bibitem[Esseen(1942)]{Esseen1942}
 Carl-Gustav Esseen.
 \newblock On the {Liapunoff} limit of error in the theory of probability.
 \newblock \emph{Arkiv f{\"o}r Matematik, Astronomi och Fysik}, 28A\penalty0
   (9):\penalty0 1--19, 1942.
+
+\bibitem[Esseen(1945)]{Esseen1945}
+Carl-Gustav Esseen.
+\newblock Fourier analysis of distribution functions. {A} mathematical study of
+  the {Laplace--Gaussian} law.
+\newblock \emph{Acta Mathematica}, 77:\penalty0 1--125, 1945.
+\newblock \doi{10.1007/BF02392223}.
 
 \bibitem[Esseen(1956)]{Esseen1956}
 Carl-Gustav Esseen.
@@ -26,12 +60,66 @@ Carl-Gustav Esseen.
   160--170, 1956.
 \newblock \doi{10.1080/03461238.1956.10414946}.
 
+\bibitem[Goldstein and Reinert(1997)]{GoldsteinReinert1997}
+Larry Goldstein and Gesine Reinert.
+\newblock {Stein}'s method and the zero bias transformation with application to
+  simple random sampling.
+\newblock \emph{The Annals of Applied Probability}, 7\penalty0 (4):\penalty0
+  935--952, 1997.
+\newblock \doi{10.1214/aoap/1043862419}.
+
+\bibitem[He and Cheng(2026)]{hecheng2026eventually}
+Hengzhi He and Guang Cheng.
+\newblock The {Berry--Esseen} constant conjecture is eventually true, 2026.
+\newblock URL \url{https://arxiv.org/abs/2609.06358v3}.
+\newblock Version 3, revised 30 September 2026.
+
+\bibitem[Lin(2026)]{lin2026berryesseen}
+Yongxi Lin.
+\newblock {Berry--Esseen} bounds in {Lean}.
+\newblock GitHub repository, 2026.
+\newblock URL \url{https://github.com/CoolRmal/BerryEsseen}.
+\newblock Accompanying proof document: The i.i.d. Berry--Esseen constant is at
+  most 0.423: a machine-checked proof, 13 September 2026, paper/upper-0423.pdf.
+  Commit bfb22608ad18b4fa9fda8dd9a1ed2c2b6fbc29e7; accessed 27 October 2026.
+
+\bibitem[Prawitz(1972)]{Prawitz1972}
+H{\aa}kan Prawitz.
+\newblock Limits for a distribution, if the characteristic function is given in
+  a finite domain.
+\newblock \emph{Scandinavian Actuarial Journal}, 1972\penalty0 (2):\penalty0
+  138--154, 1972.
+\newblock \doi{10.1080/03461238.1972.10404645}.
+
+\bibitem[Rodziewicz and
+  Ko{\l}odziejek(2026)]{rodziewiczkolodziejek2026momentdefects}
+Kacper Rodziewicz and Bartosz Ko{\l}odziejek.
+\newblock Moment defects and sharp iid {Berry--Esseen} bounds.
+\newblock Hexagon preprint hexagon:2610.00147v3, 2026.
+\newblock URL \url{https://hexagonmath.org/2610.00147v3}.
+\newblock Working draft, version 3, 17 October 2026; accessed 27 October 2026.
+
 \bibitem[Schulz(2016)]{Schulz2016}
 Jona Schulz.
 \newblock \emph{The optimal {Berry--Esseen} constant in the binomial case}.
 \newblock PhD thesis, Universit{\"a}t Trier, 2016.
 \newblock URL
   \url{https://ubt.opus.hbz-nrw.de/frontdoor/index/index/docId/732}.
+
+\bibitem[Shevtsova(2011)]{Shevtsova2011}
+Irina Shevtsova.
+\newblock On the absolute constants in the {Berry--Esseen} type inequalities
+  for identically distributed summands, 2011.
+\newblock URL \url{https://arxiv.org/abs/1111.6554v1}.
+
+\bibitem[Shevtsova(2014)]{shevtsova2014complex}
+Irina Shevtsova.
+\newblock On the accuracy of the approximation of the complex exponent by the
+  first terms of its {Taylor} expansion with applications.
+\newblock \emph{Journal of Mathematical Analysis and Applications},
+  418\penalty0 (1):\penalty0 185--210, 2014.
+\newblock \doi{10.1016/j.jmaa.2014.03.075}.
+\newblock URL \url{https://arxiv.org/abs/1301.2783v3}.
 
 \bibitem[Shevtsova(2013)]{Shevtsova2013}
 Irina~G. Shevtsova.
@@ -42,6 +130,49 @@ Irina~G. Shevtsova.
 \newblock URL \url{https://www.mathnet.ru/eng/ia252}.
 \newblock In Russian.
 
+\bibitem[Tao and {contributors}(2026)]{tao2026berryesseenregistry}
+Terence Tao and {contributors}.
+\newblock The {Berry--Esseen} constant.
+\newblock Optimization Constants in Mathematics, Problem 19a, 2026.
+\newblock URL
+  \url{https://github.com/teorth/optimizationproblems/blob/e95af44bc6ae938f545a0fc62cd1b6c1f6088a56/constants/19a.md}.
+\newblock Repository snapshot e95af44bc6ae938f545a0fc62cd1b6c1f6088a56;
+  accessed 27 October 2026.
+
+\bibitem[Tyurin(2010)]{Tyurin2010}
+I.~S. Tyurin.
+\newblock Refinement of the upper bounds of the constants in {Lyapunov}'s
+  theorem.
+\newblock \emph{Russian Mathematical Surveys}, 65\penalty0 (3):\penalty0
+  586--588, 2010.
+\newblock \doi{10.1070/RM2010v065n03ABEH004688}.
+
+\bibitem[van Beek(1972)]{vanBeek1972}
+Paul van Beek.
+\newblock An application of {Fourier} methods to the problem of sharpening the
+  {Berry--Esseen} inequality.
+\newblock \emph{Zeitschrift f{\"u}r Wahrscheinlichkeitstheorie und Verwandte
+  Gebiete}, 23:\penalty0 187--196, 1972.
+\newblock \doi{10.1007/BF00536558}.
+
+\bibitem[Xiao and Li(2026)]{xiao2026berryesseen}
+Haonan Xiao and Chunlin Li.
+\newblock A 0.4395 upper bound for the i.i.d. {Berry--Esseen} constant.
+\newblock GitHub repository, 2026.
+\newblock URL \url{https://github.com/haonan-xiao/iid-berry-esseen}.
+\newblock Accompanying paper: paper/berry-esseen-04395.pdf. Commit
+  f00d781c8c42908bf4aef2739129442a0919fa38; accessed 27 October 2026.
+
+\bibitem[Yan(2026)]{Yan2026ProbabilityApproximation}
+Asher Yan.
+\newblock {ProbabilityApproximation}: {Berry--Esseen} bounds for independent
+  sums.
+\newblock Lean 4 software, release v0.9.6, 2026.
+\newblock URL
+  \url{https://github.com/Polarnova/ProbabilityApproximation/releases/tag/v0.9.6}.
+\newblock Commit c89fba908a33ba741836407f43c67609e2d05279; Lean and Mathlib
+  v4.32.0. Cite the original mathematical sources for theorems used.
+
 \bibitem[Zolotarev(1966)]{Zolotarev1966}
 Vladimir~M. Zolotarev.
 \newblock An absolute estimate of the remainder term in the central limit
@@ -49,5 +180,12 @@ Vladimir~M. Zolotarev.
 \newblock \emph{Theory of Probability and its Applications}, 11\penalty0
   (1):\penalty0 95--105, 1966.
 \newblock \doi{10.1137/1111005}.
+
+\bibitem[Zolotarev(1967)]{Zolotarev1967}
+Vladimir~M. Zolotarev.
+\newblock A sharpening of the inequality of {Berry--Esseen}.
+\newblock \emph{Zeitschrift f{\"u}r Wahrscheinlichkeitstheorie und Verwandte
+  Gebiete}, 8:\penalty0 332--342, 1967.
+\newblock \doi{10.1007/BF00531598}.
 
 \end{thebibliography}

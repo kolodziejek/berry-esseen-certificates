@@ -1,41 +1,42 @@
-# One strip and two noise estimates
+# One strip and two noise estimates: compact manuscript
 
 **Bartosz Kołodziejek and Kacper Rodziewicz — review draft, 29 October 2026.**
 
-[Read the PDF](main.pdf) · [Editable TeX](main.tex) · [Proof/source map](SOURCE_MAP.md)
+[Read the PDF](main.pdf) · [Editable TeX](main.tex) · [Source and dependency map](SOURCE_MAP.md)
 
-The manuscript has **40 A4 pages including references**. It keeps 11-point
-body type, 28 mm margins, 6% extra line leading and visible paragraph spacing.
-These typography settings match the 30-page revision. The extra ten pages
-restore derivation steps, explanatory transitions and a reading/notation guide.
-The original 89-page draft and the earlier 45- and 30-page integrations remain
-preserved in Git history. One canonical proof route and one consistent notation
-are retained.
+The current compilation has **45 A4 pages**, including references, at the
+original 11-point type size and 28 mm margins. It integrates the selected
+v16 argument from [PR #5](https://github.com/kolodziejek/berry-esseen-certificates/pull/5),
+pinned at `1aa1dd015e3d73fbeecc1a7acbfa395cbb560b5f`. The reduction from the
+89-page draft comes from selecting one proof route, replacing its obsolete
+branches and removing repeated exposition. It does not come from smaller type.
 
-The complete selected analytical arguments are included: attainment/contact,
-off-contact conservation, physical moment geometry, the Fourier enclosure
-and ordered entry implication, acquisition of one support strip, and the two
-noise comparisons. Atoms, both threshold signs and complete incoming tails
-remain explicit. The numerical entry is stated as exact certificate conditions.
+The text gives the needed analytical proofs in one compilation: fixed-target
+attainment and contact, conservation and moment geometry, the selected coarse
+entry implication and its Fourier enclosure, direct acquisition of one strip,
+and complete small- and larger-noise count comparisons. The count arguments
+retain every phase, threshold atoms and complete incoming tails.
 
-## Mathematical scope
+## Exact mathematical scope
 
-This is a **conditional research draft**. The local comparison applies to
-every law in its stated strip at `n >= 700`. Acquiring the strip for an
-extremal witness requires the actual sharp predecessor and the complete
-entry predicates. The global implication still requires a genuine base
-through **699**. A base only through 41 leaves indices 42–699 unresolved.
-Neither finite base is established here, and the manuscript does not claim
-a completed proof of the sharp iid Berry–Esseen conjecture.
+The local comparison holds for every actual marginal in the stated strip at
+`n >= 700`. To acquire that strip for an attained nonnegative-excess witness,
+the argument still needs the true sharp predecessor and the complete coarse
+entry predicates. Consequently the global theorem is **conditional on a
+genuine base through 699**, together with those retained inputs. A base only
+through 41 would locate a first failure in 42–699; it would not exclude it.
+Neither base is established by this manuscript. This is not a completed proof
+of the sharp iid Berry–Esseen conjecture.
 
-The source reference is [PR #5](https://github.com/kolodziejek/berry-esseen-certificates/pull/5)
-at `1aa1dd015e3d73fbeecc1a7acbfa395cbb560b5f`. All 6,558 original tracked
-blobs, including all 85 files in `../arxiv-v1/`, were checked unchanged.
-Substantial AI assistance is disclosed on the title page and in the text.
+The original 89-page manuscript and all 85 of its tracked files remain
+unchanged in `../arxiv-v1/`. Earlier smaller-index results, diagnostic failures
+and certificates are preserved. The compact document is a separate editorial
+integration, ready for review rather than a change to their acceptance status.
+Substantial AI assistance is disclosed on the title page and in the discussion.
 
-## Build and checks
+## Build
 
-From this directory, with a current TeX Live:
+With TeX Live, from this directory:
 
 ```sh
 pdflatex -no-shell-escape -interaction=nonstopmode -halt-on-error main.tex
@@ -44,36 +45,34 @@ pdflatex -no-shell-escape -interaction=nonstopmode -halt-on-error main.tex
 pdflatex -no-shell-escape -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-The supplied `main.bbl` also permits compilation without running BibTeX.
-The delivered PDF uses official Tectonic 0.17.0 in untrusted mode; another
-TeX distribution may paginate slightly differently. No custom fonts, images
-or shell escape are required.
+The supplied `main.bbl` also permits three pdfLaTeX passes without BibTeX.
+No custom fonts, external images, network execution or shell escape is needed.
+The delivered PDF was compiled with the standalone official **Tectonic
+0.17.0** compiler. It is not an exported desktop-preview PDF; the page count
+can differ slightly with another TeX distribution.
 
-[Validation](validation.json) records the 12 included TeX files, 108 resolved
-labels, six cited works, layout review and a clean portable rebuild. The
-[check summary](checks-summary.json) is explicitly a derived public record:
+## What the checks mean
 
-- All nine unchanged v16 mathematical checks passed during the preceding
-  integration, including the 44-event actual-law check. Their source hashes
-  were preserved; this editorial revision does not claim another full replay.
-- This readable revision freshly checks the off-contact identities, physical
-  geometry and 19 exact scalar/polynomial gates. The elementary target bounds
-  now explicitly license the fine entry constants, and the Fourier tail has
-  a short positive-remainder proof.
-- Scoped component reviews checked the expanded arguments against their actual
-  consumers, including the complete 13-file entry source allowlist. No omitted
-  sharp-moment theorem is required by the selected execution path.
+All **nine unchanged v16 mathematical checks passed again** during this
+integration: eight fast checks and the full 44-event actual-law check. A derived public
+[check summary](checks-summary.json) records their status, return codes and
+source/output hashes. Full original commands and raw captures are retained
+in the local source handoff; they are not included in this public PR. Source checks also
+account for **13 included TeX files, 119 labels and 23 cited works**. The
+integrated comparison's four endpoint margins and its parameter guards were
+separately reconstructed with exact rational arithmetic.
 
-`python -I -B tools/canonical-check.py` runs the standalone exact appendix
-controls. In a complete checkout of the pinned repository,
-`python -I -B tools/recheck.py` reruns the nine v16 checks, both algebra/geometry
-controls and the appendix controls. Additional independent component reviews check the new conservation algebra,
-conditional moments, whole-tail series and endpoint arguments. The first historical attempt hit only
-Python's decimal-output length limit; the successful rerun allowed long integer
-serialization without changing mathematical sources or assertions.
+The first check attempt stopped only at Python's 4,300-digit decimal-output
+limit; its record is preserved in the local handoff. Repeating the unchanged programs
+with `-X int_max_str_digits=0` permits serialization of the large exact
+fractions; it changes neither their arithmetic nor their assertions.
+The original v16 records of ten bounded jobs, including the separate source
+preservation job, also remain unchanged. Neither replay is a full coarse
+Fourier reproduction or a proof of the finite base.
 
-These checks supplement the written proofs. They do not establish the full
-coarse entry predicates, missing finite base, external theorems or a Lean
-formalization. The original entry coverage, directed arithmetic and external
-inputs remain part of the stated trust boundary. This draft PR requests author
-review; no completed-proof acceptance, arXiv submission or merge is claimed.
+The numerical trust boundary still includes the complete entry checkers,
+their coverage and directed-enclosure semantics, the executing arithmetic
+implementation, and the stated external mathematical theorems. A successful
+document build, an AI review or a recorded PASS label does not discharge those
+inputs. This draft PR claims no full Lean formalization, new numerical generation
+campaign, completed-proof acceptance, arXiv submission or merge.

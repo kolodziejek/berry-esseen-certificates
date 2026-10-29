@@ -37,10 +37,6 @@ $U_1\ge-a_1$, and
  \qquad\lambda<\frac7{20}.\label{short:acq:outputs}
 \end{gather}
 These conclusions require no contact or predecessor hypothesis.
-They express three consequences of a small defect: localization of the
-sign probability, a small inward displacement of the gap, and a small
-conditional noise. They will be proved from one common inequality, so
-the costs being combined all belong to the same actual marginal.
 \end{proposition}
 
 \begin{proof}
@@ -53,7 +49,6 @@ $0\le d<1$. Put $v=pq$ and $w=1-\theta=v\ell^2$, and define
  Q(p)=(\sigma+1)p^2+(\sigma-1)q^2-6pq
        =(6+2\sigma)(p-p_*)^2.
 \]
-\paragraph{The common budget.}
 We first retain all the costs of the actual conditional noises. Let
 \[
  \int f\,d\mu_\pm
@@ -83,13 +78,6 @@ Add the central contribution $m(A_-+A_+)^2$ and use
 with the negative counterparts. Expansion yields
 \eqref{short:acq:budget}. This also proves the budget for countably many
 gaps by monotone convergence; endpoint atoms do not alter the integrals.
-
-\paragraph{Localize before sharpening the prices.}
-The quadratic $Q$ measures departure from the distinguished two-point
-probability. The term $E_0$ prices the inward displacement, while the
-two integrals price the conditional variances. All are nonnegative.
-We first obtain a rough interval where every price is uniformly positive,
-and only then improve the individual bounds.
 
 Hereafter use $3.162277660<\sigma<3.162277661$. The weaker gap estimate
 $J\le\rho+2mA_-A_+$, together with $\rho\ge1$, $\gamma\le\rho$ and
@@ -180,10 +168,7 @@ The signed-second-moment identity gives
 \]
 its endpoints imply $.066148<\beta<.2527$.
 
-\paragraph{The noise budget in count coordinates.}
-The comparison needs $\lambda=n\theta/\ell^2$, so a bound on the
-one-variable variance $\theta$ alone is not the desired conclusion.
-The factor $n$ is recovered by retaining the cubic cost rather than
+To bound the scaled noise $\lambda$, retain the cubic cost rather than
 only its sign. If $Z$ is centered, $Z\le a$, $a>0$, and $t=\E Z^2$, then
 \[
  0\le\E[(a-Z)(Z+t/a)^2]=at-\E Z^3-t^2/a.
@@ -294,10 +279,7 @@ The inward endpoints and conditional centering are the actual ones from
 Proposition~\ref{short:acq:geometry}.
 \end{proof}
 
-\paragraph{Return to the original marginal.}
-The two ray bounds concern the conditional supports of the original law.
-They do not introduce a new optimizing distribution. The pointwise
-normalization is worth recording once:
+The pointwise normalization is worth recording once:
 \begin{equation}\label{short:acq:normalization}
  1=v\ell^2+\theta,\qquad s=\E U^2=\theta/\ell^2,
  \qquad v+s=\ell^{-2},\qquad
