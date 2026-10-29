@@ -1,0 +1,17 @@
+{
+  "returncode": 0,
+  "command": "compile_latex.py main.tex --compiler texlive --output-directory texlive --json (absolute paths in stdout.json)",
+  "source_sha256": "e76f793e12338c9811d0f832fc7da25c95304cbea33663d0d92908cfa671689d",
+  "wrapper_sha256": "67c7b9a31cafe593feedb5688785c89c72f08dd0d6b20689b9faa6a39663a3d6",
+  "pdf_sha256": "9cf6895bc01174f9d89b75b5c3492358f2c844128968a383e026e557dfe0d2a4",
+  "pages": 5,
+  "warnings": [],
+  "render_command": [
+    "pdftoppm",
+    "-r",
+    "75",
+    "-png",
+    "texlive/main.pdf",
+    "render/page"
+  ]
+}

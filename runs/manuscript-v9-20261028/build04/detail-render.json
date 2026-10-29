@@ -1,0 +1,53 @@
+[
+  {
+    "command": [
+      "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/pdftoppm",
+      "-f",
+      "20",
+      "-l",
+      "20",
+      "-r",
+      "105",
+      "-png",
+      "-singlefile",
+      "runs/manuscript-v9-20261028/build04/texlive/main.pdf",
+      "runs/manuscript-v9-20261028/build04/render/detail-20"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/pdftoppm",
+      "-f",
+      "72",
+      "-l",
+      "72",
+      "-r",
+      "105",
+      "-png",
+      "-singlefile",
+      "runs/manuscript-v9-20261028/build04/texlive/main.pdf",
+      "runs/manuscript-v9-20261028/build04/render/detail-72"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/pdftoppm",
+      "-f",
+      "74",
+      "-l",
+      "74",
+      "-r",
+      "105",
+      "-png",
+      "-singlefile",
+      "runs/manuscript-v9-20261028/build04/texlive/main.pdf",
+      "runs/manuscript-v9-20261028/build04/render/detail-74"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  }
+]

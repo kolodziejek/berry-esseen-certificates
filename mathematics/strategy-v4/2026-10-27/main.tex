@@ -1,0 +1,51 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,array}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hyphens]{url}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\R}{\mathbb R}
+\newcommand{\CE}{C_{\mathrm E}}
+\newcommand{\ind}{\mathbf1}
+\newcommand{\supp}{\operatorname{supp}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\title{Toward a shorter proof of the sharp iid Berry--Esseen bound:\\
+fixed-target excess and a common noise measure}
+\author{Bartosz Ko{\l}odziejek \and Kacper Rodziewicz}
+\date{27 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Subtracting the proposed Berry--Esseen bound before maximizing fixes
+the coefficient in the contact equation. We prove attainment for this
+excess problem, derive its zero-bias identity, and state exact conditions
+under which existing scalar estimates transfer to the new extremizer.
+Under those conditions, a first-failure argument needs no upper-excess
+entry bound. We also give a short proof of a sharp family of gap inequalities
+and retain a common positive measure when bounding conditional noise.
+These are analytic reductions. A complete finite base and uniform local
+exclusion remain to be established; this note does not prove the conjecture.
+\end{abstract}
+\input{excess}
+\input{geometry}
+\input{alternatives}
+\input{inversion}
+\paragraph{Use of AI.}
+AI systems were used substantially in developing, checking and writing
+this note. The external suggestions were treated as proof candidates:
+the accompanying audits record accepted arguments, counterexamples and
+remaining assumptions. Independent AI review is not human peer review
+or formal verification.
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

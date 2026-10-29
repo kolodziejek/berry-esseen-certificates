@@ -1,0 +1,104 @@
+{
+  "status": "PASS_BOUNDED_CENTRAL_GAP_EVENT",
+  "finite_laws": [
+    {
+      "name": "symmetric Bernoulli",
+      "rho": "1",
+      "D_lower": "8113883/50000000",
+      "D_upper": "162277661/1000000000",
+      "chosen_d": "1/5",
+      "strict_gap_gate": true,
+      "gap_squared_actual": "4",
+      "gap_squared_lower": "8441518439112563/2702847075000000",
+      "event_probability": "1/2",
+      "probability_lower": "1/2",
+      "conditional_second": "4",
+      "conditional_second_upper": "4"
+    },
+    {
+      "name": "skew Bernoulli with chosen d>2",
+      "rho": "4721/3560",
+      "D_lower": "440005641643/178000000000",
+      "D_upper": "8800112837581/3560000000000",
+      "chosen_d": "5/2",
+      "strict_gap_gate": true,
+      "gap_squared_actual": "7921/1600",
+      "gap_squared_lower": "5627368044860409923/9622135587000000000",
+      "event_probability": "3200/7921",
+      "probability_lower": "6336800/22287841",
+      "conditional_second": "7921/1600",
+      "conditional_second_upper": "22287841/3168400"
+    },
+    {
+      "name": "reflected skew Bernoulli",
+      "rho": "4721/3560",
+      "D_lower": "92905641643/178000000000",
+      "D_upper": "1858112837581/3560000000000",
+      "chosen_d": "3/5",
+      "strict_gap_gate": true,
+      "gap_squared_actual": "7921/1600",
+      "gap_squared_lower": "11575135485020136641/3207378529000000000",
+      "event_probability": "3200/7921",
+      "probability_lower": "6336800/22287841",
+      "conditional_second": "7921/1600",
+      "conditional_second_upper": "22287841/3168400"
+    },
+    {
+      "name": "gapped three-point law",
+      "rho": "20299/20000",
+      "D_lower": "470403711017/1000000000000",
+      "D_upper": "9408074240639/20000000000000",
+      "chosen_d": "1/2",
+      "strict_gap_gate": true,
+      "gap_squared_actual": "4",
+      "gap_squared_lower": "145800247998935916337/54056941500000000000",
+      "event_probability": "47959/96800",
+      "probability_lower": "200000000/412049401",
+      "conditional_second": "4862/1205",
+      "conditional_second_upper": "412049401/100000000"
+    },
+    {
+      "name": "gapped law whose sufficient gate fails",
+      "rho": "71/60",
+      "D_lower": "8976085693/3000000000",
+      "D_upper": "179521713931/60000000000",
+      "chosen_d": "3",
+      "strict_gap_gate": false
+    },
+    {
+      "name": "zero atom rejects the gap gate",
+      "rho": "5/4",
+      "D_lower": "158113883/40000000",
+      "D_upper": "3162277661/800000000",
+      "chosen_d": "4",
+      "strict_gap_gate": false
+    }
+  ],
+  "generic_HIGH_window_gates": [
+    {
+      "window": "1/8",
+      "smallest_monotonicity_margin": "50054436049269073/61394125331496552"
+    },
+    {
+      "window": "4/25",
+      "smallest_monotonicity_margin": "300322037/162552963"
+    },
+    {
+      "window": "9/50",
+      "smallest_monotonicity_margin": "300322037/162552963"
+    },
+    {
+      "window": "1/5",
+      "smallest_monotonicity_margin": "300322037/162552963"
+    },
+    {
+      "window": "11/50",
+      "smallest_monotonicity_margin": "300322037/162552963"
+    },
+    {
+      "window": "1/4",
+      "smallest_monotonicity_margin": "300322037/162552963"
+    }
+  ],
+  "scope": "No24cell acquisition or HIGH evaluation. Conditional event interface and bounded exact controls only."
+}

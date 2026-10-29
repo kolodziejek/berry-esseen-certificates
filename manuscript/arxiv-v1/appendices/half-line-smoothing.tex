@@ -1,0 +1,341 @@
+\section{Closed-half-line smoothing}\label{v9:prawitz:appendix}
+The finite-index reduction in Appendix~\ref{r4bridge:section} needs a
+majorant for the closed event, including equality at an atom. We give its
+construction and normalization here. This appendix is independent of the
+Fourier remainder used in the fixed-target coarse entry.
+
+\subsection{Exact half-line smoothing}
+\label{ms:fourier:kernel}
+
+We construct a majorant of the closed half-line and justify its
+expectation under an integrable random variable. Its value at the boundary
+is part of the proof, because the finite-index laws can have atoms.
+
+Write $\phi$ and $\Phi$ for the standard normal density and distribution
+function. All terminating decimals are exact rational numbers. The
+imaginary unit is $i$. Symbols introduced within a subsection, including
+$D$, $R$, $L$, $s$ and $K$, are local to that subsection unless explicitly
+carried forward. In particular the moment defect $D$, an auxiliary distance
+bound, and the Bernoulli inward displacement $d$ are different quantities.
+
+The one-sided kernel is
+\[
+ K(t)=\frac{1-t}{2}+\frac{i}{2}
+       \left((1-t)\cot(\pi t)+\frac1\pi\right),\qquad 0<t<1.
+\]
+For $\kappa\in\{K,\overline K\}$, $0<b\le1$ and
+$g(t)=g(0)+O(t)$ with real $g(0)$, the convention throughout is
+\begin{equation}\label{ms:fourier:kernel-convention}
+ \mathfrak I_{\kappa,b}(g)
+ =2\lim_{\epsilon\downarrow0}\operatorname{Re}
+       \int_\epsilon^b\kappa(t)g(t)\,dt.
+\end{equation}
+Only the real-part improper limit is intended; the unmodified complex
+integral need not converge. The proof below establishes directly that
+\[
+ M(x)=\tfrac12+\mathfrak I_{K,1}(e^{2\pi itx})
+       \ge\mathbf1_{(-\infty,0]}(x),\qquad
+ 1-M(-x)\le\mathbf1_{(-\infty,0)}(x),
+\]
+including atoms at the boundary, and justifies the expectation identity
+for an integrable random variable.
+
+\subsubsection{A real-variable Beurling construction}
+
+Set
+
+\[
+ W(x)=\left(\frac{\sin\pi x}{\pi x}\right)^2\quad(x\ne0),
+ \qquad W(0)=1,
+\]
+
+and define the continuous odd function
+
+\begin{equation}
+ H_B(x)=\sum_{m=1}^{\infty}\{W(x-m)-W(x+m)\}+2xW(x).
+ \label{ms:fourier:kernel-1}
+\end{equation}
+
+The series converges absolutely and locally uniformly on the real line:
+for \(|x|\le R\) and \(m>2R+1\), each shifted term is bounded by a
+constant times \(m^{-2}\). Thus the function and all the integer values in
+what follows are unambiguous. In particular,
+
+\begin{equation}
+ H_B(0)=0,\qquad H_B(j)=\operatorname{sgn}(j)
+ \quad(j\in\mathbb Z\setminus\{0\}).                 \label{ms:fourier:kernel-2}
+\end{equation}
+
+Here \(\operatorname{sgn}(0)=0\). The corresponding classical Beurling
+majorant is \(B=H_B+W\). For noninteger \(x\), its series is
+
+\begin{equation}
+ B(x)=\left(\frac{\sin\pi x}{\pi}\right)^2
+ \left\{\frac2x+\sum_{m=0}^{\infty}\frac1{(x-m)^2}
+                    -\sum_{m=1}^{\infty}\frac1{(x+m)^2}\right\}.
+ \label{ms:fourier:kernel-3}
+\end{equation}
+
+We prove the needed inequality directly, without importing an extremality
+or Fourier-transform theorem about \(B\).
+
+The elementary partial-fraction identity
+
+\begin{equation}
+ \sum_{m\in\mathbb Z}\frac1{(y-m)^2}
+       =\frac{\pi^2}{\sin^2\pi y},\qquad y\notin\mathbb Z,
+ \label{ms:fourier:kernel-4}
+\end{equation}
+
+has the following short proof. Integrate
+\(\pi\cot(\pi z)/(z-y)^2\) counterclockwise over the square with vertices
+\(\pm(N+\tfrac12)\pm i(N+\tfrac12)\). The cotangent is uniformly bounded
+on these edges: on the vertical edges it is a multiple of a hyperbolic
+tangent, and on the horizontal edges its modulus is bounded by
+\(\coth(\pi(N+\tfrac12))\). The denominator is of order \(N^2\) and the
+perimeter of order \(N\), so the integral tends to zero. Its residues are
+\((m-y)^{-2}\) at \(m=-N,\ldots,N\), and
+\(-\pi^2\csc^2(\pi y)\) at \(y\). The residue theorem and absolute
+convergence give \eqref{ms:fourier:kernel-4}.
+
+For \(y>0\), \(y\notin\mathbb Z\), put
+
+\[
+ A(y)=\left(\frac{\sin\pi y}{\pi}\right)^2,
+ \qquad S(y)=\sum_{m=1}^{\infty}(y+m)^{-2}.
+\]
+
+Subtracting \eqref{ms:fourier:kernel-4} from \eqref{ms:fourier:kernel-1} gives exactly
+
+\begin{equation}
+ H_B(y)-1=A(y)\left\{\frac2y-\frac1{y^2}-2S(y)\right\}.
+ \label{ms:fourier:kernel-5}
+\end{equation}
+
+The decreasing positive function \(s\mapsto(y+s)^{-2}\) satisfies
+
+\begin{equation}
+ S(y)\le\int_0^\infty(y+s)^{-2}\,ds=\frac1y
+       \le\frac1{y^2}+S(y).
+ \label{ms:fourier:kernel-6}
+\end{equation}
+
+Consequently the expression in braces in \eqref{ms:fourier:kernel-5} lies between
+\(-y^{-2}\) and \(y^{-2}\). Hence
+
+\[
+ |H_B(y)-1|\le W(y)\quad(y>0).
+\]
+
+Positive integer points follow directly from \eqref{ms:fourier:kernel-2}. Oddness of \(H_B\) and
+evenness of \(W\), together with their values at zero, now prove
+
+\begin{equation}
+ |H_B(x)-\operatorname{sgn}(x)|\le W(x)
+ \qquad(x\in\mathbb R).                              \label{ms:fourier:kernel-7}
+\end{equation}
+
+This is the required sign-function majorization, with its normalization
+proved rather than assumed.
+
+\subsubsection{Recovering the exact Fourier kernel}
+
+Elementary integration gives, for every real \(x\),
+
+\begin{equation}
+ W(x)=2\int_0^1(1-t)\cos(2\pi tx)\,dt.              \label{ms:fourier:kernel-8}
+\end{equation}
+
+For \(0<r<1\), insert \eqref{ms:fourier:kernel-8} into the absolutely convergent Abel-weighted
+series. Termwise integration is legitimate because
+\(\sum_{m\ge1}r^m<\infty\). The cosine subtraction formula gives
+
+\begin{equation}
+ \begin{aligned}
+ \sum_{m\ge1}r^m\{W(x-m)-W(x+m)\}
+   &=4\int_0^1(1-t)\sin(2\pi tx)
+               \sum_{m\ge1}r^m\sin(2\pi mt)\,dt\\
+   &=4\int_0^1(1-t)\sin(2\pi tx)
+        \frac{r\sin(2\pi t)}{1-2r\cos(2\pi t)+r^2}\,dt.
+ \end{aligned}                                                    \label{ms:fourier:kernel-9}
+\end{equation}
+
+For \(0<t<1\),
+
+\begin{equation}
+ \left|\frac{r\sin(2\pi t)}{1-2r\cos(2\pi t)+r^2}\right|
+ \le\frac12|\cot(\pi t)|,
+ \label{ms:fourier:kernel-10}
+\end{equation}
+
+since the denominator is
+\((1-r)^2+4r\sin^2(\pi t)\). The right side of \eqref{ms:fourier:kernel-9}, including its
+remaining factors, is therefore dominated by
+
+\[
+ 2(1-t)|\sin(2\pi tx)|\,|\cot(\pi t)|.
+\]
+
+This is integrable at both endpoints: the sine is \(O_x(t)\) at zero,
+and \((1-t)\cot(\pi t)\) is bounded at one. Dominated convergence on
+the integral side and absolute convergence on the series side allow
+\(r\uparrow1\). The fraction in \eqref{ms:fourier:kernel-9} tends to
+\(\tfrac12\cot(\pi t)\). Also, direct integration gives
+
+\begin{equation}
+ 2xW(x)=\frac2\pi\int_0^1\sin(2\pi tx)\,dt,          \label{ms:fourier:kernel-11}
+\end{equation}
+
+including \(x=0\). Combining \eqref{ms:fourier:kernel-1} and \eqref{ms:fourier:kernel-9}–\eqref{ms:fourier:kernel-11},
+
+\begin{equation}
+ H_B(x)=2\int_0^1 R(t)\sin(2\pi tx)\,dt,
+ \qquad R(t)=(1-t)\cot(\pi t)+\frac1\pi.
+ \label{ms:fourier:kernel-12}
+\end{equation}
+
+Every integral in \eqref{ms:fourier:kernel-12} is a convergent real integral. No principal-value
+Fourier manipulation has been used.
+
+Now take exactly the manuscript's kernel
+
+\begin{equation}
+ K(t)=\frac{1-t}{2}+\frac i2 R(t),\qquad0<t<1.
+ \label{ms:fourier:kernel-13}
+\end{equation}
+
+Equations \eqref{ms:fourier:kernel-8} and \eqref{ms:fourier:kernel-12} establish the exact identity
+
+\begin{equation}
+ \boxed{\displaystyle
+ M(x):=\frac12+2\lim_{\epsilon\downarrow0}\operatorname{Re}
+       \int_\epsilon^1K(t)e^{2\pi itx}\,dt
+       =\frac{1-H_B(x)+W(x)}2=\frac{1+B(-x)}2.}
+ \label{ms:fourier:kernel-14}
+\end{equation}
+
+In particular, the exponent has the \emph{positive} sign and the imaginary
+part of \(K\) has the \emph{positive} sign. The minus sign on \(H_B\) comes
+from taking the real part of \(iR(t)e^{2\pi itx}\).
+
+\subsubsection{Closed boundary, cardinal values and the minorant}
+
+For \(x<0\), \eqref{ms:fourier:kernel-7} gives \(M(x)\ge1\); for \(x>0\), it gives
+\(M(x)\ge0\). At the boundary, \eqref{ms:fourier:kernel-2} and \(W(0)=1\) give
+
+\begin{equation}
+ M(0)=1.                                             \label{ms:fourier:kernel-15}
+\end{equation}
+
+Thus this majorizes the \emph{closed} half-line, including a point mass at
+zero, rather than merely the half-height convention for a jump:
+
+\begin{equation}
+ M(x)\ge1_{(-\infty,0]}(x),\qquad
+ 1-M(-x)\le1_{(-\infty,0)}(x).
+ \label{ms:fourier:kernel-16}
+\end{equation}
+
+The second inequality follows by subtracting the first inequality at
+\(-x\) from one; its endpoint is open. Direct cardinal values are
+
+\begin{equation}
+ M(j)=1_{\{j\le0\}},\qquad1-M(-j)=1_{\{j<0\}}
+ \quad(j\in\mathbb Z).                              \label{ms:fourier:kernel-17}
+\end{equation}
+
+The proof also gives the useful global error bound
+
+\begin{equation}
+ 0\le M(x)-1_{(-\infty,0]}(x)\le W(x)
+ \quad(x\in\mathbb R).                              \label{ms:fourier:kernel-18}
+\end{equation}
+
+At zero the left-hand error is exactly zero; it is not obtained by
+assigning half of an atom to each side. In particular \(0\le M\le2\).
+
+\subsubsection{Expectations and the compensated identity}
+
+Suppose \(U\) is real and \(\E|U|<\infty\), and use the convention
+\(\psi_U(t)=\E e^{2\pi itU}\). Since
+\(2\int_0^1\operatorname{Re}K(t)\,dt=1/2\), \eqref{ms:fourier:kernel-14} can be written
+
+\begin{equation}
+ M(u)=1+2\operatorname{Re}\int_0^1
+             K(t)\{e^{2\pi itu}-1\}\,dt.             \label{ms:fourier:kernel-19}
+\end{equation}
+
+The complex integral in \eqref{ms:fourier:kernel-19} is absolutely convergent. Indeed,
+\(K(t)=i/(2\pi t)+1/2+O(t)\) at zero, \(K\) is bounded near one,
+and
+
+\[
+ \E|e^{2\pi itU}-1|\le2\pi t\,\E|U|.
+\]
+
+Consequently
+\(\int_0^1|K(t)|\E|e^{2\pi itU}-1|\,dt<\infty\), so ordinary
+absolute Fubini applies to \eqref{ms:fourier:kernel-19}. Restoring the constant real part gives
+
+\begin{equation}
+ \E M(U)=\frac12+
+     2\lim_{\epsilon\downarrow0}\operatorname{Re}
+        \int_\epsilon^1K(t)\psi_U(t)\,dt.            \label{ms:fourier:kernel-20}
+\end{equation}
+
+Since \(\psi_{-U}=\overline{\psi_U}\), conjugation similarly yields
+
+\begin{equation}
+ \E\{1-M(-U)\}=\frac12-
+     2\lim_{\epsilon\downarrow0}\operatorname{Re}
+        \int_\epsilon^1\overline{K(t)}\psi_U(t)\,dt.
+ \label{ms:fourier:kernel-21}
+\end{equation}
+
+These are the two expectation identities under the real-part
+improper convention \eqref{ms:fourier:kernel-convention}. All expectations are finite; \eqref{ms:fourier:kernel-18} even gives
+boundedness of the majorant without a moment assumption. The first
+absolute moment is a sufficient hypothesis for the stated compensated
+Fourier/Fubini argument. The uncompensated complex integral itself need
+not converge.
+
+\subsubsection{Four-summand smoothing normalization}
+
+Let \(Y\) be integrable, let \(h\in\mathbb R\), and let \(T>0\). For
+\(\chi_Y(s)=\E e^{isY}\), apply \eqref{ms:fourier:kernel-16} and \eqref{ms:fourier:kernel-20} to
+\(U=T(Y-h)/(2\pi)\). The resulting exact normalization is
+
+\begin{equation}
+ \Pp(Y\le h)\le\frac12+
+  2\lim_{\epsilon\downarrow0}\operatorname{Re}
+       \int_\epsilon^1K(t)e^{-iTth}\chi_Y(Tt)\,dt.
+ \label{ms:fourier:kernel-22}
+\end{equation}
+
+For the four-summand application,
+\(Z=(X_1+\cdots+X_4)/2\), \(\varphi_P(s)=\E e^{isX_1}\),
+and iid summands, choose \(T=6\). Independence gives
+\(\chi_Z(6t)=\varphi_P(3t)^4\). Thus \eqref{ms:fourier:kernel-22} is exactly
+
+\begin{equation}
+ F_Z(x)\le\frac12+\int_0^1\operatorname{Re}
+   \{\widehat K(t)e^{-6itx}\varphi_P(3t)^4\}\,dt,
+ \qquad \widehat K=2K,
+ \label{ms:fourier:kernel-23}
+\end{equation}
+
+the physical four-summand smoothing normalization. Writing \(D=x-Z\) and
+\(S(t)=tR(t)\), its real integrand is exactly
+
+\begin{equation}
+ (1-t)\E\cos(6Dt)+S(t)\E[6D\operatorname{sinc}(6Dt)],
+ \qquad \operatorname{sinc}(v)=\sin(v)/v,
+ \label{ms:fourier:kernel-24}
+\end{equation}
+
+with the continuous value at zero. This verifies both the factor six
+and the sign of the sine term. No non-atomicity, finite-support, density,
+or continuity-at-the-threshold assumption is needed. For \eqref{ms:fourier:kernel-23}, iid
+independence and integrability are sufficient; the manuscript's bounded
+support assumptions imply integrability.
+

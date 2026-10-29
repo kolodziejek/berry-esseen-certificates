@@ -1,0 +1,29 @@
+{
+  "status": "PASS_UNION_SCOPE_AND_NORMALIZATION_CONTROLS",
+  "source_sha256": {
+    "mathematics/simplification-v12/2026-10-28/comparison-union.tex": "31645628932501a0265959123b5d452b09116b77792fc2401c6a18eacdbb754a",
+    "mathematics/simplification-v12/2026-10-28/leftcount.tex": "f038aa62e039bfe48482fe69c1438553e90f7c246bf0fa74322115c33ea76ea9",
+    "mathematics/simplification-v12/2026-10-28/outer.tex": "72ff7ae27bdbecfa0a535dd62e52417de9bab370b7004af8b86e9e99f491facc",
+    "mathematics/simplification-v12/2026-10-28/compound-proof.tex": "5b9d8428b6aa10bc3fff44114cd26c482b88692f76dd624b841c79d5b4a753fa",
+    "mathematics/simplification-v11/2026-10-28/counts-v11.tex": "209f173c19a73c4fecf5aaf9aa2732c30b72266ff3f1673ddd52fa4a4e6c4641",
+    "mathematics/simplification-v10/2026-10-28/moderate-noise.tex": "bda129c029de36bac7a8455ec3f1e7f7726cea9b21bf89671be7e9095f775074",
+    "mathematics/simplification-v11/2026-10-28/leftpanels.tex": "63b11a2df99e2bf8af24040bebe522946adb4496cd7b9c993e190ee9d1340c26",
+    "mathematics/simplification-v10/2026-10-28/geometry.tex": "e753afc6a731f728119d38d422a2ab5e3c890a1e2ef0b40a6841ec83d7a185b2",
+    "manuscript/arxiv-v1/sections/04-fixed-entry.tex": "db7156ca43f874b29216d6f297d74ea79ace4b988ec200a93a169e0d342498d8",
+    "manuscript/arxiv-v1/sections/02-fixed-target.tex": "5a00687b76390fcaa4c57f9f893d070b23bf3119eda8aa4b82d66c3b4c0b509b"
+  },
+  "closed_refinement_strata": 28,
+  "actual_marginal_mapping_controls": 12,
+  "wrong_variance_scaling_controls": 12,
+  "negative_controls": [
+    "missing negative-inner phase",
+    "noise gap between .03 and .032",
+    "phase interval shorter than one",
+    "reflection equality at an atom",
+    "theta substituted for theta/ell^2"
+  ],
+  "CE_square_lower": "679780612808708182797094762111018142919267435309122290906954511694864253997802734375/4049194309239338550412477928076102692462063074643063933086699701063079822006640099328",
+  "CE_square_upper": "248510389698441502446000339416170027781907133181708819881887485859498161281085205078125/1480281780083585645952042148136057470587615801466921384732957080044404939421025602789376",
+  "scope": "Union and units only; component comparison theorems and acquired-witness hypotheses remain stated mathematical inputs. Negative-inner constructor authorship disclosed.",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]"
+}

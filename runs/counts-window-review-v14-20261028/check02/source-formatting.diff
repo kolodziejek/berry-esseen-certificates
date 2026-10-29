@@ -1,0 +1,24 @@
+--- /Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/counts-window-review-v14/runs/counts-window-review-v14-20261028/check01/reviewed-source.tex	2026-10-28 21:30:44
++++ /Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v14/mathematics/simplification-v14/2026-10-28/large-index.tex	2026-10-28 21:31:36
+@@ -44,8 +44,8 @@
+ base and the intermediate indices remain separate obligations.
+ 
+ \section{The exact crossing formula}
+-Use the independent conditional pairs and increasing mesh from
+-\texttt{simplification-v13/2026-10-28/crossing.tex}:
++Use the independent conditional pairs and increasing mesh from\par\noindent
++\path{simplification-v13/2026-10-28/crossing.tex}:
+ \[
+  T_j=j+W_j=j+\sum_{i\le j}U_{1i}+\sum_{i>j}U_{0i},
+  \qquad T_K\le t<T_{K+1}.
+@@ -197,8 +197,8 @@
+  \log(m!)=(m+\tfrac12)\log m-m+\tfrac12\log(2\pi)+r_m,
+                   \qquad0<r_m<1/(12m),\quad m\ge1.
+ \]
+-Its elementary integral-remainder proof is retained in
+-\texttt{manuscript/arxiv-v1/appendices/count-comparison.tex}, the paragraph
++Its elementary integral-remainder proof is retained in\par\noindent
++\path{manuscript/arxiv-v1/appendices/count-comparison.tex}, the paragraph
+ beginning ``For completeness, the finite Stirling formula used here is''.
+ We use neither a limiting local CLT nor an unspecified asymptotic remainder.
+ 

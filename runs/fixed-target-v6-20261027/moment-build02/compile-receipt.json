@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/moment-coupling-v6/mathematics/fixed-target-v6/2026-10-27/moment-main.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/moment-coupling-v6/runs/fixed-target-v6-20261027/moment-build02/texlive",
+    "--json"
+  ],
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/moment-coupling-v6",
+  "started_utc": "2026-10-27T20:04:18.893746+00:00",
+  "ended_utc": "2026-10-27T20:04:19.728854+00:00",
+  "returncode": 0,
+  "inputs_sha256": {
+    "mathematics/fixed-target-v6/2026-10-27/moment.tex": "655ad13c499bb3d1e83d66e21c66444a0b2375f8f8e1de108893b7069e32c31c",
+    "mathematics/fixed-target-v6/2026-10-27/moment-main.tex": "14ed2ff9c386f7be684519539bb437e43c67a41e6693d12ba6a53c46433cf18a"
+  }
+}

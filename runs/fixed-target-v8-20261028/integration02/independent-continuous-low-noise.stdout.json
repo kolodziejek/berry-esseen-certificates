@@ -1,0 +1,83 @@
+{
+  "beta_affine": [
+    "-9889/5000",
+    "4963/4980"
+  ],
+  "common_ell": "249/125",
+  "common_rho": "221/200",
+  "common_theta": "37/5000",
+  "negative_endpoint_gates": {
+    "H4_right": "-6726346126359/2441406250000",
+    "L1_left": "-23302971/10000000",
+    "L2": "-2057/1000",
+    "L_left": "-79026134301/87500000000",
+    "P3_left": "-367541411396337/164000000000000",
+    "P3_right": "-372629895198417/164000000000000",
+    "P_right": "-4560620039489147528734839/25625000000000000000000000",
+    "Q1_left": "-26703897/6250000",
+    "Q2_left": "-37209/5000",
+    "Q_right": "-131112832439/109375000000",
+    "domain": "-334581/1562500",
+    "negative_P1_left": "-1876504943048660267427/2050000000000000000000",
+    "negative_P1_right": "-1528814085082543005237/2050000000000000000000",
+    "negative_total_Q1_right": "-179223/6250000",
+    "total_L_derivative_left": "-917972343/830000000",
+    "total_Q1_derivative_left": "-1847597/415000",
+    "total_Q2_left": "-606847/415000"
+  },
+  "noise_interval": [
+    "0",
+    "3/40"
+  ],
+  "p_interval": [
+    "2/5",
+    "53/100"
+  ],
+  "quintic": [
+    "-57143172267/4198400000000",
+    "-138207338829/52480000000",
+    "10807077751263/5575475200000",
+    "-871173/2560000",
+    "-59049/10240000",
+    "531441/2099200000"
+  ],
+  "radial_polynomials": {
+    "L": [
+      "-155824911/70000000",
+      "85715721/33200000",
+      "-2057/2000"
+    ],
+    "L1": [
+      "542997/400000",
+      "-2057/1000"
+    ],
+    "L2": [
+      "-2057/1000"
+    ],
+    "Q": [
+      "221/21875",
+      "-29667/5000",
+      "154289/33200",
+      "-1"
+    ],
+    "Q1": [
+      "-29667/5000",
+      "104659/16600",
+      "-3"
+    ],
+    "Q2": [
+      "663/200",
+      "-6"
+    ]
+  },
+  "rejected_extra_condition": {
+    "P2_left": "3110682586789279179/136120000000000000000",
+    "note": "P2(left)<0 is false and unnecessary; use concavity of P1 and both endpoint signs."
+  },
+  "scope": "Entire continuous p and low-noise domain under the same acquired-strip/contact premises. Total boundary-family derivatives are used only for interval verification; radial continuation holds beta fixed. No larger-noise or other-panel result.",
+  "status": "PASS_CONTINUOUS_FOLDED_LOW_NOISE_CONCAVE_DERIVATIVE",
+  "u_interval": [
+    "2241/1250",
+    "2739/1250"
+  ]
+}

@@ -1,0 +1,416 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=28mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\R}{\mathbb R}
+\newcommand{\pos}[1]{(#1)_+}
+\setlength{\emergencystretch}{2em}
+\title{Elementary reductions for the fixed-target argument}
+\author{Bartosz Ko{\l}odziejek \and Kacper Rodziewicz}
+\date{28 October 2026}
+\begin{document}
+\maketitle
+\noindent These are scoped analytic reductions, not a proof of the sharp
+iid Berry--Esseen conjecture. They were independently derived from the
+external suggestions supplied for the present revision. AI systems were
+used substantially in the derivation, checking and writing of this note.
+The current manuscript and its certificates are unchanged.
+
+\section{One fifth-moment inequality}
+Let $X$ have mean zero and variance one, and assume $\E|X|^5<\infty$.
+Write
+\begin{gather*}
+ m=\E X_+=\E X_->0,\quad \rho=\E|X|^3,\quad M_j=\E|X|^j,\\
+ \beta=\E[X|X|],\quad\gamma=\E X^3,\quad\delta=\gamma-\rho\beta.
+\end{gather*}
+Both strict signs have positive probability, so $|\beta|<1$.
+An atom at zero is allowed. Put
+\[
+ P_s=\frac{(\rho+\gamma)\pos{\delta}^2}{8(1+\beta)^2}
+       +\frac{(\rho-\gamma)\pos{-\delta}^2}{8(1-\beta)^2}.
+\]
+\begin{theorem}\label{v10:primitive:fifth}
+Under these hypotheses,
+\begin{equation}\label{v10:primitive:combined}
+ \frac{\rho M_4}{2}-\frac{M_5}{4}
+ \le \frac{\rho^3}{4}-P_s-\frac{\delta^2}{16m}.
+\end{equation}
+Its loss dominates each of the three former losses
+\[
+ P_s,\qquad \frac{\delta^4}{4\rho(1-\beta^2)^2},\qquad
+ \frac{\delta^2}{8m}.
+\]
+\end{theorem}
+\begin{proof}
+For one sign let $Y=X_+$ or $X_-$ and put
+$a=\E Y^2$, $b=\E Y^3$, $d=b-\rho a$, and
+$V=\E[Y^3(Y-\rho)^2]$. Cauchy gives
+\[
+ d^2=\{\E[Y^{1/2}Y^{3/2}(Y-\rho)]\}^2\le mV.
+\]
+If $d\ge0$, the fourth and fifth moments $c=\E Y^4$ and
+$e=\E Y^5$ satisfy $c\ge b^2/a$ and $e\ge c^2/b$. Hence
+\[
+ V=e-2\rho c+\rho^2b\ge(c-\rho b)^2/b
+   \ge b(b/a-\rho)^2=bd^2/a^2.
+\]
+The second inequality uses $c\ge b^2/a\ge\rho b$; it would not
+follow by squaring a negative lower bound.
+
+On the two signs,
+\[
+ a_\pm=(1\pm\beta)/2,\quad b_\pm=(\rho\pm\gamma)/2,
+ \quad d_\pm=\pm\delta/2.
+\]
+Use the stronger bound on the sign with $d_\pm\ge0$, and the bound
+$V_\mp\ge d_\mp^2/m$ on the other sign. Since
+\[
+ V_++V_-=M_5-2\rho M_4+\rho^3,
+\]
+division by four proves \eqref{v10:primitive:combined}. If $\delta=0$
+both losses vanish and the same identity proves the claim.
+
+For domination, suppose first that $\delta>0$. Signwise Cauchy gives
+$mb_+\ge a_+^2$, so $P_s=b_+\delta^2/(16a_+^2)
+\ge\delta^2/(16m)$. Thus the combined loss dominates $\delta^2/(8m)$.
+Also
+\[
+ \delta/2=b_+a_--b_-a_+\le b_+a_-,\qquad b_+\le\rho,
+\]
+so $\delta^2\le4\rho b_+a_-^2$. As $1-\beta^2=4a_+a_-$,
+this proves $P_s\ge\delta^4/[4\rho(1-\beta^2)^2]$.
+The case $\delta<0$ is the same calculation with the signs exchanged.
+\end{proof}
+
+The new addition charges different signs of one nonnegative square.
+It does not justify adding the old full weighted loss to $P_s$.
+For example, the variance-one centered law
+\begin{gather*}
+ \Pp(X=-1/4)=396/425,\quad\Pp(X=4)=99/1700,\\
+ \Pp(X=-1/2)=1/125,\quad\Pp(X=2)=1/500
+\end{gather*}
+violates the assertion with loss $P_s+\delta^2/(8m)$: its excess
+over the available square is greater than $0.0267$. The new loss is
+smaller than that square by more than $0.0201$.
+
+\section{The first moment from one determinant}
+\begin{theorem}\label{v10:primitive:first}
+Suppose additionally $|X|\le R$. Necessarily $1\le\rho\le R$ and
+\begin{equation}\label{v10:primitive:root}
+ 2m\le U(R,\rho):=
+ \frac{R+\rho+\sqrt{(R-\rho)(4R^3-3R-\rho)}}{2R^2}.
+\end{equation}
+This upper bound equals
+\begin{equation}\label{v10:primitive:inf}
+ \inf_{a>0}\frac{R-\rho+2a+Ra^2}{a(2R+a)}.
+\end{equation}
+It is nondecreasing in $R$ and nonincreasing in $\rho$ on
+$1\le\rho\le R$. Therefore a closed parameter cell may use
+$U(R_{\rm upper},\rho_{\rm lower})$, with its square root rounded upwards.
+\end{theorem}
+\begin{proof}
+For $Y=|X|$ and $u=\E Y$, the matrix
+\[
+ \E\left[(R-Y)\begin{pmatrix}1\\Y\end{pmatrix}
+                     \begin{pmatrix}1&Y\end{pmatrix}\right]
+ =\begin{pmatrix}R-u&Ru-1\\Ru-1&R-\rho\end{pmatrix}
+\]
+is positive semidefinite. Its determinant gives
+\[
+ -R^2u^2+(R+\rho)u+R^2-R\rho-1\ge0.
+\]
+The discriminant is $(R-\rho)(4R^3-3R-\rho)$; solving the quadratic
+proves \eqref{v10:primitive:root}. The radicand is nonnegative, since
+$R\ge\rho\ge1$ and $4R^3-3R-\rho\ge4R(R^2-1)\ge0$.
+
+For completeness, the infimum identity can also be checked without a
+formal minimization. For $1< R$ and $1\le\rho<R$, the upper root $U$
+satisfies $1/R<U\le1<R$. Indeed the determinant polynomial is positive
+at $u=1/R$, nonpositive at $u=1$, and decreases for $u\ge1$.
+At
+\[
+ a_*=(RU-1)/(R-U)>0
+\]
+the quadratic
+\[
+ (R-U)a^2+2(1-RU)a+(R-\rho)
+\]
+has zero minimum, because its determinant vanishes. It is nonnegative
+for every $a$. Dividing by $a(2R+a)>0$ proves that the expression in
+\eqref{v10:primitive:inf} is at least $U$, with equality at $a_*$.
+When $\rho=R>1$, its infimum as $a\downarrow0$ is $1/R=U$.
+When $R=1$, also $\rho=1$ and the expression is identically one.
+
+For fixed $a>0$ the expression decreases in $\rho$. Its derivative
+in $R$ has the sign of
+$a^3-3a+2\rho\ge-2+2\rho\ge0$.
+Taking infima proves both monotonicity statements, including endpoints.
+\end{proof}
+
+This replaces the eleven sampled auxiliary values of $a$ by their exact
+optimal value. It does not replace the stronger signwise matrix constraints;
+those remain separate valid information about the same law.
+
+\section{A calculus proof for the cosine constant}
+\begin{theorem}\label{v10:primitive:cosine}
+For every $0\le x\le1$,
+\[
+ 1-\cos(2\pi x)\le\frac{4553}{1000}x.
+\]
+\end{theorem}
+\begin{proof}
+For $y>0$ put $h(y)=(1-\cos y)/y$. The derivative has the sign of
+$N(y)=y\sin y+\cos y-1$. On $(0,\pi)$ its sign is the sign of
+$y-\tan(y/2)$. The function $\tan(y/2)-y$ decreases up to $\pi/2$
+and increases thereafter to infinity; it is negative at $\pi/2$.
+It therefore has exactly one zero $y_*$ in $(\pi/2,\pi)$.
+On $(\pi,2\pi)$, $N(y)<0$. Thus the maximum of $h$ on $[0,2\pi]$
+is attained at $y_*$, and the half-angle identity gives
+\[
+ h(y_*)=\frac{2y_*}{1+y_*^2}.
+\]
+
+Take $y_0=23311/10000$. The six-term alternating lower bound is
+\begin{equation}\label{v10:primitive:cosine-check}
+ N(y_0)>\sum_{j=1}^{6}
+   \frac{(-1)^{j-1}(2j-1)y_0^{2j}}{(2j)!}
+ >\frac3{200000}>0.
+\end{equation}
+The alternating remainder has the asserted sign: the ratio of successive
+term magnitudes is $y_0^2/[(2j-1)(2j+2)]$, which is below one for every
+$j\ge6$ and decreases. Since $\pi/2<y_0<\pi$, this proves $y_* > y_0$.
+The function $y/(1+y^2)$ decreases for $y>1$. Using $\pi<355/113$, we get
+\[
+ \max_{0<x\le1}\frac{1-\cos(2\pi x)}x
+ =\frac{4\pi y_*}{1+y_*^2}
+ <\frac{4(355/113)y_0}{1+y_0^2}
+ <\frac{4553}{1000}-\frac1{10000}.
+\]
+The last comparison and \eqref{v10:primitive:cosine-check} are exact
+rational inequalities. To make the elementary constant enclosure
+reproducible, use
+$\pi=16\arctan(1/5)-4\arctan(1/239)$ and the alternating arctangent
+series, with eight and two terms respectively. Their outward intervals
+already prove $3<\pi<355/113$. Machin's identity follows by the tangent
+addition formula and the fact that the angle in question lies in $(0,\pi/2)$.
+The case $x=0$ is immediate.
+\end{proof}
+
+The constant $23/5$ follows since $4553/1000<23/5$.
+Consequently both former Bernstein coefficient tables can be replaced by
+this one calculus argument and its few rational comparisons. This changes
+neither the harmonic span domain nor the other count-comparison hypotheses.
+The value $9/2$ is not a valid replacement constant: at $x=3/8$ the ratio
+is $(8+4\sqrt2)/3>9/2$.
+
+\section{A common two-sign transfer for every sample size}
+Here only $\E X=0$, $\E X^2=1$ and $\rho=\E|X|^3<\infty$ are needed;
+bounded support is not required. Define probability measures on $(0,\infty)$ by
+\[
+ \mu_\pm(dy)=\frac y m\Pp(\pm X\in dy,\ \pm X>0),
+ \qquad c_\pm=\int y\,d\mu_\pm(y)>0.
+\]
+These are the distributions obtained by weighting each strict sign by its
+absolute magnitude. Define
+\[
+ Q=\frac m{c_-}\delta_{-c_-}
+  +\left(1-\frac m{c_-}-\frac m{c_+}\right)\delta_0
+  +\frac m{c_+}\delta_{c_+},\qquad
+ \eta=\rho(P)-\rho(Q).
+\]
+\begin{theorem}\label{v10:primitive:transfer}
+$Q$ is a probability measure with the same first two moments as $P$,
+and
+\begin{equation}\label{v10:primitive:variance}
+ \eta=m\{\operatorname{Var}_{\mu_-}Y+
+                  \operatorname{Var}_{\mu_+}Y\}\ge0.
+\end{equation}
+For the characteristic functions $\psi$ of $P$ and $g$ of $Q$,
+\begin{equation}\label{v10:primitive:char}
+ |\psi(t)-g(t)|\le\frac{|t|^3}{6}\eta\qquad(t\in\R).
+\end{equation}
+For every integer $n\ge1$,
+\begin{equation}\label{v10:primitive:power}
+ |\psi(t)^n-g(t)^n-ng(t)^{n-1}(\psi(t)-g(t))|
+ \le\frac{n(n-1)}2|\psi(t)-g(t)|^2
+ \le\frac{n(n-1)}{72}|t|^6\eta^2.
+\end{equation}
+All statements include zero atoms and $\eta=0$.
+\end{theorem}
+\begin{proof}
+On each sign Cauchy gives
+$m^2\le\Pp(\pm X>0)\E X_\pm^2
+=\Pp(\pm X>0)mc_\pm$.
+Thus $m/c_\pm\le\Pp(\pm X>0)$ and the mass at zero in $Q$ is
+nonnegative. Its strict-sign first and second moments equal those of $P$:
+they are $m$ and $mc_\pm$. Its third absolute moment is
+$m(c_-^2+c_+^2)$, whereas that of $P$ is
+$m\int y^2(d\mu_-+d\mu_+)$. This proves \eqref{v10:primitive:variance}.
+If $\eta=0$, both $\mu_\pm$ are point masses at $c_\pm$; the original
+law is then exactly $Q$, including its possible zero atom.
+
+For $\sigma\in\{-1,1\}$ put
+\[
+ h_{\sigma,t}(y)=\frac{e^{i\sigma ty}-1}{y}
+      =i\sigma t\int_0^1 e^{i\sigma tsy}\,ds,
+\]
+with the continuous definition at zero. The integral representation gives
+\[
+ h_{\sigma,t}''(y)=(i\sigma t)^3\int_0^1s^2e^{i\sigma tsy}\,ds,
+ \qquad |h_{\sigma,t}''(y)|\le |t|^3/3.
+\]
+Taylor's formula along the real segment from $c_\sigma$ to $y$ yields
+\[
+ h(y)-h(c_\sigma)-h'(c_\sigma)(y-c_\sigma)
+ =(y-c_\sigma)^2\int_0^1(1-r)
+             h''(c_\sigma+r(y-c_\sigma))\,dr.
+\]
+Every integral is justified by the finite second moment of $\mu_\sigma$.
+The linear term integrates to zero. Finally,
+\[
+ \psi(t)-g(t)=m\sum_{\sigma\in\{-1,1\}}
+ \left\{\int h_{\sigma,t}(y)\,d\mu_\sigma(y)
+                         -h_{\sigma,t}(c_\sigma)\right\}.
+\]
+Taking absolute values proves \eqref{v10:primitive:char}. The same two
+measures occur at every frequency; no independent frequencywise law has
+been introduced.
+
+For $n\ge2$, the segment joining the two characteristic functions lies
+in the closed unit disk. Taylor's formula for $z^n$ along this segment
+bounds the second remainder by $n(n-1)|\psi-g|^2/2$.
+For $n=1$ the remainder is zero. This proves \eqref{v10:primitive:power}.
+\end{proof}
+
+For the normalized sum, replace $t$ by $t/\sqrt n$ in
+\eqref{v10:primitive:power}; the last bound becomes
+$(n-1)|t|^6\eta^2/(72n^2)$. This is an all-$n$ transfer, not a
+uniform CDF estimate: inversion, smoothing reserves and any signed
+first-order improvement remain separate requirements.
+
+The coefficient $1/6$ in \eqref{v10:primitive:char} is sharp. For
+$0<\varepsilon<1/6$, take masses
+$1/2-\varepsilon,3\varepsilon,1/2-3\varepsilon,\varepsilon$
+at $-1,0,1,2$. This law is centered with variance one. Only the positive
+size-biased sign has nonzero variance, so
+$\E_P X^3-\E_Q X^3=\eta>0$. Its characteristic difference has leading
+term $-it^3\eta/6$, with absolute remainder at most
+$|t|^4(\E_P X^4+\E_Q X^4)/24$. Thus the proposed smaller coefficient
+$1/7$ fails whenever
+$0<|t|<4\eta/[7(\E_P X^4+\E_Q X^4)]$.
+
+\begin{remark}[What the transfer does not replace]
+The reference $Q$ can have three atoms and is not automatically Bernoulli.
+The modulus bound alone cannot supply a favorable signed Fourier response,
+a sharp finite-base comparison, or the stronger zero-mass radius used in
+some existing numerical estimates. The earlier response and price
+identities must remain wherever those extra constraints are used.
+The present formulation replaces only the scalar defect/response/remainder
+construction and supplies a common version for every $n$.
+\end{remark}
+
+\section{One compact domain for the finite base}
+This last reduction uses an external inequality, unlike the elementary
+moment and transfer propositions above. Set
+$c=(3+\sqrt{10})/(6\sqrt{2\pi})$ and let $\Delta_n(P)$ denote the
+Kolmogorov distance from the normalized iid sum to the standard normal.
+\begin{theorem}\label{v10:primitive:finite}
+Assume the universal affine bound
+\[
+ \sqrt n\,\Delta_n(P)\le\frac{3031}{10000}
+                         \left(\rho+\frac{323}{500}\right).
+\]
+For $1\le n\le41$, every attaining fixed-target pair $(P,H)$ with
+\[
+ a=\sqrt n\{\Pp(S_n\le H)-\Phi(H/\sqrt n)\}-c\rho\ge0
+\]
+satisfies
+\[
+ \rho<\frac{7361}{4000}<1.841,\qquad
+ \operatorname{supp}P\subset(-13,13),\qquad |H|<26.
+\]
+No predecessor inequality is assumed.
+\end{theorem}
+\begin{proof}
+The moment bound follows from $c>819/2000$ and direct division:
+\[
+ \rho<\frac{(3031/10000)(323/500)}{819/2000-3031/10000}
+      =\frac{7361}{4000}.
+\]
+The fixed-target contamination inequality is
+\begin{align*}
+ I(y)={}&n^{3/2}(h(y)-F)+ny\phi(H/\sqrt n)
+       +\tfrac12H\phi(H/\sqrt n)(y^2-1)\\
+       &+\tfrac32c\rho(y^2-1)-c(|y|^3-\rho-3y\beta)\le0,
+\end{align*}
+with equality on the closed support, where
+$F=\Pp(S_n\le H)$ and $h(y)=\Pp(S_{n-1}\le H-y)$.
+For $n=1$ the same contamination calculation has
+$h(y)=\mathbf1_{\{y\le H\}}$; no deleted random summand is required.
+The usual fixed-$n$ attainment argument also applies at $n=1$: its tightness,
+moving closed threshold and third-moment penalty steps do not require
+$n\ge2$. Thus the finite-base extremal reduction has no exceptional first
+index.
+
+Let $u=|y|\ge1$. We have $|\beta|\le1$,
+$\phi(0)<2/5$, $\sup_z|z\phi(z)|=\phi(1)<1/4$,
+$\sqrt n<13/2$, and $819/2000<c<41/100$.
+In particular $n^{3/2}<533/2$ and
+\[
+ I(y)\le P(u):=266.5+1.944715u^2+17.63u-0.4095u^3.
+\]
+To check the coefficients, the linear coefficient is
+$41(2/5)+3(41/100)=17.63$ and the quadratic coefficient is
+$13/16+(3/2)(41/100)(1841/1000)=1.944715$.
+The constant contribution of the two $c\rho$ terms is $-c\rho/2$,
+which can be dropped; there is no additional positive constant to retain.
+The term with $H\phi$ is bounded by $(13/16)(u^2-1)$ before its
+negative constant is dropped. All displayed decimals are exact rationals.
+
+Exact evaluation gives
+\[
+ P(13)<-75,\quad P'(13)<-139,\quad P''(13)<-28,
+ \quad P'''=-2457/1000<0.
+\]
+It follows successively that $P'',P',P$ are negative on $[13,\infty)$.
+Closed-support contact therefore excludes both exterior rays, including
+their boundary points.
+
+If $H<0$, Chebyshev gives $F\le n/H^2$; if $H>0$, the positive
+discrepancy is at most $1-\Phi(H/\sqrt n)\le n/H^2$.
+Thus $|H|\ge26$ would imply
+\[
+ \sqrt n(F-\Phi(H/\sqrt n))<\frac{533/2}{26^2}
+   =\frac{819}{2000}-\frac{397}{26000}<c\rho,
+\]
+contradicting $a\ge0$.
+The elementary constants used above follow from the same directed
+$\pi$ bounds as in the cosine proof, directed squares around $\sqrt{10}$,
+and $e>8/3$, which gives $\phi(1)<1/4$ from $\pi>3$.
+\end{proof}
+
+This is one compact finite-index problem, not a solution of that problem.
+The reference law in Proposition~\ref{v10:primitive:transfer} can still
+have three atoms, and a complete estimate of its sums and the original-law
+response remains necessary.
+
+\section{Verification boundary}
+The proofs above establish their stated analytic implications. The accompanying
+exact script checks rational coefficient identities, scalar signs and a
+fixed adversarial collection of actual centered variance-one laws, including
+atoms at zero, reflected skew laws, arbitrarily small mixture weights and
+a distant atom. It also rejects the false stronger fifth-moment sum and
+the false cosine and characteristic constants described above. Such tests
+are checks on the derivations, not substitutes for their proofs.
+
+These reductions need no new dense parameter cover. Applying their stronger
+bounds to the full entry or local comparison still requires the original
+domain and coverage conditions. No old proof object is deleted, no target
+is weakened, and no complete finite-base or global conclusion is asserted.
+\end{document}

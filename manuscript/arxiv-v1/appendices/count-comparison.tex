@@ -1,0 +1,636 @@
+\section{Conditional-count estimates}\label{v9:count:appendix}
+\label{ms:fourier:local}
+This appendix supplies the analytic estimates needed after confinement.
+Its statements are conditional on their displayed support, probability,
+count and sign hypotheses. In particular, the formulas requiring $p<1/2$
+do not cover the entire acquired range $[.25,.53]$. Neither reflection nor
+the half-amplitude result alone fills that gap. No complete numerical
+comparison cover is asserted here.
+
+\subsection{The comparison and its domain}\label{ms:fourier:cut49:shortloc:section}
+
+A law concentrated near two points has a natural integer count and a small
+centered error. We compare it with its own Bernoulli count. The same exact
+identity handles every noise regime. There are two useful estimates of its
+right side: discard all but the nearest outgoing count, or retain all counts
+through a random cutoff. The estimates share their normalization, moments,
+and tail bounds; only the final scalar witness changes.
+
+\paragraph{The identity and sufficient inequalities}
+
+Let $0<p\le1/2$, $q=1-p$, $v=pq$, and let
+\[
+ Y=B+U,\qquad \Pp(B=1)=p,\qquad \E(U\mid B)=0.
+\]
+The two actual conditional laws $U_0,U_1$ obey
+\begin{equation}\label{ms:fourier:cut49:shortloc:support}
+ |U_j|\le A,\quad U_0\le a_0,\quad U_1\ge-a_1,\quad
+ a_0,a_1\ge0,\quad d=a_0+a_1\le d_0<\min(p,q),\quad d_0\le A.
+\end{equation}
+Write $s_j=\E U_j^2$, $s=qs_0+ps_1$, $\lambda=ns$,
+$\ell=(v+s)^{-1/2}$, $\theta=s/(v+s)$ and
+$\rho=\E|\ell(Y-p)|^3$. At the actual threshold choose
+\[
+ x=np+H/\ell=k+u,\qquad k\in\{1,\ldots,n-1\},\quad |u|\le\tfrac12,
+ \qquad \delta=k-np=H/\ell-u.
+\]
+Either nearest integer is allowed at a tie. Put
+\[
+ \pi_j=\binom njp^jq^{n-j},\quad F_B(j)=\Pp(\operatorname{Bin}(n,p)\le j),
+ \qquad \rho_B=(1-2v)/\sqrt v,
+\]
+with $\pi_j=0$ outside $[0,n]$. Let $W_j$ be an independent sum of $j$
+copies of $U_1$ and $n-j$ copies of $U_0$. The signed scores are
+\[
+ C=\frac{\sqrt n}{\rho}\{\Pp(\textstyle\sum Y_i\le x)-\Phi(H/\sqrt n)\},
+ \qquad C_B=\frac{\sqrt n}{\rho_B}\{F_B(k)-\Phi(\delta/\sqrt{nv})\}.
+\]
+The fixed target is $c=\CE$, with $c\ge c_*>0$; one may take
+$c_*=0.4$. The actual ratio $C$ is used only to name the excess
+$a=\rho(C-c)$. It is not the coefficient in the moment correction.
+Define
+\begin{align}
+ f(u)&=\frac{\Phi((\delta+u)/\sqrt{n(v+s)})-
+                    \Phi(\delta/\sqrt{n(v+s)})}{\pi_k},\label{ms:fourier:cut49:shortloc:f}\\
+ Q&=\Pp(\textstyle\sum Y_i\le k+u)-F_B(k),\nonumber\\
+ \mathcal R&=\sqrt n\{\Phi(\delta/\sqrt{nv})-
+                 \Phi(\delta/\sqrt{n(v+s)})\}+c(\rho_B-\rho).\nonumber
+\end{align}
+Equation~\eqref{ms:master-identity}, with $V_j=W_j$ and the same
+interior count $k$, gives the exact identity
+\begin{equation}\label{ms:fourier:cut49:shortloc:master}
+ a+\rho_B(c-C_B)=\sqrt n\pi_k\{Q/\pi_k-f(u)\}+\mathcal R.
+\end{equation}
+In particular, the phase $u$, the sign of $H$, and both conditional laws
+refer to the same marginal throughout.
+
+\begin{theorem}[Parameterized local comparison]\label{ms:fourier:cut49:shortloc:theorem}
+Fix $n\ge N$, $\lambda>0$ and a closed parameter cell on which
+\eqref{ms:fourier:cut49:shortloc:support} holds. Suppose $\sqrt n\pi_k\ge m>0$.
+Either of the following witnesses proves $a+\rho_B(c-C_B)<-\varepsilon\lambda$.
+\begin{enumerate}
+\item \emph{Nearest-count witness.} Valid bounds $O,T,R_0,\kappa$ satisfy
+\[
+ \Pp(W_k>u)+f(u)\ge O,\quad
+ \sum_{i\ge1}\Pp(W_{k+i}\le u-i)\le T,\quad
+ \pi_{k+i}/\pi_k\le R_0,\quad \mathcal R\le\kappa\lambda/n.
+\]
+Only legal counts occur in the sum; adding positive upper bounds for
+other counts is allowed. If $D=O-R_0T>0$ and
+\begin{equation}\label{ms:fourier:cut49:shortloc:directtest}
+             mD-\kappa\lambda/n>\varepsilon\lambda,
+\end{equation}
+the conclusion follows.
+\item \emph{Whole-count witness.} Bounds $B(\lambda)<0$ and $I(\lambda)\ge0$
+satisfy
+\[
+ a+\rho_B(c-C_B)\le\sqrt n\pi_k\lambda B(\lambda)
+                                      +\lambda I(\lambda)/n.
+\]
+It is enough that
+\begin{equation}\label{ms:fourier:cut49:shortloc:whole-test}
+                  mB(\lambda)+I(\lambda)/N<-\varepsilon.
+\end{equation}
+\end{enumerate}
+The witnesses may differ from cell to cell. A finite closed cover and a
+separate treatment of $\lambda=0$ therefore suffice for a complete local
+comparison.
+\end{theorem}
+\begin{proof}
+The signed count identity \eqref{ms:count-difference}, with $V_j=W_j$, is
+\begin{equation}\label{ms:fourier:cut49:shortloc:count}
+ Q=-\sum_{i=0}^{k}\pi_{k-i}\Pp(W_{k-i}>u+i)
+       +\sum_{i=1}^{n-k}\pi_{k+i}\Pp(W_{k+i}\le u-i).
+\end{equation}
+Apply Proposition~\ref{ms:local-witnesses} with $m_0=m$.
+The legal counts, closed incoming events and strict outgoing events are
+identical. In the second alternative the present hypothesis $I\ge0$
+makes its $\max(0,I)/N$ exactly $I/N$, yielding
+\eqref{ms:fourier:cut49:shortloc:whole-test}.
+\end{proof}
+
+\paragraph{Binomial normalization and the variance correction}
+
+Here is an explicit finite recipe for the constants required above.
+Let $p\in[p_-,p_+]\subset(0,1/2)$, $n\ge N$, $\lambda\le\Lambda$,
+$\theta\le\Theta$, and $|\delta|\le\Delta$, where $\Delta\ge1$ also includes
+every binomial mode. Choose $0<r_-<p_- -\Delta/N$ and
+$p_++\Delta/N<r_+<1/2$. Let $v_*>0$ be a lower bound for $p(1-p)$.
+Choose positive $E,L,R$ bounding, on $[r_-,r_+]$,
+\[
+ |D'''(r\Vert p)|=\frac{1-2r}{r^2(1-r)^2},\qquad
+ |(\log(r(1-r)))'|=\frac{1-2r}{r(1-r)},\qquad
+ \frac1{12r(1-r)},
+\]
+respectively, where $D(r\Vert p)=r\log(r/p)+(1-r)\log((1-r)/q)$.
+Then, with $Z(t)=Lt/2+R+Et^3/(6N)$,
+\begin{equation}\label{ms:fourier:cut49:shortloc:mass}
+ \sqrt n\pi_k=\frac{\phi(0)}{\sqrt v}
+       e^{-\delta^2/(2nv)+\zeta},\qquad n|\zeta|<Z(|\delta|).
+\end{equation}
+For completeness, the finite Stirling formula used here is
+\[
+ \log(j!)=(j+\tfrac12)\log j-j+\tfrac12\log(2\pi)+r_j,
+ \qquad 0<r_j<1/(12j).
+\]
+If $a_j=\log(j!)-(j+1/2)\log j+j$ and $z=(2j+1)^{-1}$, the integrated
+geometric series gives
+$0<a_j-a_{j+1}=\sum_{i\ge1}z^{2i}/(2i+1)<1/[12j(j+1)]$.
+Summing gives the remainder relative to $\lim a_j$. The integration-by-parts
+recursion for $\int_0^{\pi/2}\sin^j t\,dt$ and the inequalities between three
+successive integrals give Wallis's product; its finite product equals
+$e^{4a_j-2a_{2j}}j/[2(2j+1)]$ and tends to $\pi/2$. Thus
+$\lim a_j=\tfrac12\log(2\pi)$. Applying this formula to $n!,k!,(n-k)!$
+and Taylor-expanding $D$ and the logarithmic prefactor proves
+\eqref{ms:fourier:cut49:shortloc:mass}; the factorial error is at most $1/[12nr(1-r)]$.
+
+Consequently a valid mass lower bound is any positive
+\begin{equation}\label{ms:fourier:cut49:shortloc:m}
+ m<\frac{0.39886}{\sqrt{p_+(1-p_+)}}
+          \left[1-\frac{\Delta^2/(2v_*)+Z(\Delta)}N\right].
+\end{equation}
+The same formula at a mode proves $\sqrt n\max_j\pi_j<1$ whenever
+$v_*[1-Z(\Delta)/N]^2>0.4^2$ and $Z(\Delta)<N$.
+The rational bounds $0.39886<\phi(0)<0.4$ follow, for example, by the
+alternating arctangent series in Machin's identity.
+
+Differentiating \eqref{ms:fourier:cut49:shortloc:f} gives
+\begin{equation}\label{ms:fourier:cut49:shortloc:logder}
+ \log f'=-\tfrac12\log(1+s/v)+\delta^2/(2nv)
+                   -(\delta+u)^2/(2n(v+s))-\zeta.
+\end{equation}
+Thus $n|\log f'|\le B_0\lambda+P(D,a)$ on $|\delta|\le D\le\Delta$,
+$|u|\le a\le1/2$, where
+\[
+ B_0>\frac1{2v_*}+\frac{\Delta^2}{2Nv_*^2},\qquad
+ P(D,a)=\frac{2Da+a^2}{2v_*}+Z(D).
+\]
+Choose $0<b<1$ above $[B_0\Lambda+P(\Delta,1/2)]/N$ and put
+$F=(1-b)^{-1}$. The elementary estimates $e^z\le(1-z)^{-1}$ and
+$1-e^{-z}\le z$ imply
+\begin{equation}\label{ms:fourier:cut49:shortloc:derivative}
+ |f'-1|\le(B_1\lambda+P_1)/n,\qquad B_1=FB_0,\quad P_1=FP(D,a).
+\end{equation}
+This supplies both a derivative interval $l_f\le f'\le h_f$ and the
+finer phase-error bound $|u-f(u)|\le a(B_1\lambda+P_1)/n$.
+
+The exact count variance is
+\begin{equation}\label{ms:fourier:cut49:shortloc:variance}
+ t_j=\E W_j^2=\lambda+(j-np)(s_1-s_0),\qquad
+ |s_1-s_0|\le s/p\le c_v s,\quad c_v\ge1/p_-.
+\end{equation}
+It gives $\omega_-\lambda\le t_k\le\omega_+\lambda$ with
+$\omega_\pm=1\pm c_vD/N$. All uses below require the checked condition
+$\omega_->0$. Also
+$t_{k+i}\le iV_*\lambda$ for $V_*=1+c_v(\Delta+1)/N$.
+The binomial recursion gives, for every legal $i\ge1$,
+\begin{equation}\label{ms:fourier:cut49:shortloc:ratio}
+ \frac{\pi_{k+i}}{\pi_k}\le R_0,
+ \qquad R_0>1+\frac{p_++\Delta-1}
+ {Nv_*[1-(\Delta-1)/(Np_-)]},
+\end{equation}
+provided the denominator is positive and $p_++\Delta<2$.
+Indeed the first ratio has this bound and all subsequent rising factors
+are at most one. No count outside $[0,n]$ is used in this recursion.
+
+Finally \eqref{ms:fourier:cut49:shortloc:support} fixes the signs inside the absolute cubic.
+Expansion and centering give
+\[
+ \E|Y-p|^3=v(1-2v)+3pq(s_0+s_1)
+                   +p\E U_1^3-q\E U_0^3
+ \ge v(1-2v)+(3p-d)s.
+\]
+The inequality $(1+z)^{3/2}\le1+3z/2+3z^2/8$ for $z\ge0$ yields
+\begin{equation}\label{ms:fourier:cut49:shortloc:cubic}
+ (v+s)^{3/2}(\rho-\rho_B)\ge s
+     \left(6p-3p^2-\tfrac32-d-\frac{3(1-2v)s}{8v}\right).
+\end{equation}
+Let $Q_*>0$ be a lower bound for the bracket and
+$m_c\le c_*/[p_+(1-p_+)+\Lambda/N]^{3/2}$.
+The normal variance correction is nonpositive for $\delta\le0$;
+for $\delta>0$ its derivative in $s$ is at most $0.4\delta/(2v^{3/2})$.
+Therefore
+\begin{equation}\label{ms:fourier:cut49:shortloc:repair}
+ \mathcal R\le(P_*D_+-m_cQ_*)\lambda/n,
+ \qquad P_*\ge\frac{0.4}{2v_*^{3/2}},\quad D_+\ge\delta_+.
+\end{equation}
+One may take $D_+=D$, but retaining the positive part is often decisive.
+All bounds concern $v+s$, which can exceed $1/4$.
+
+\paragraph{Two elementary tools for probabilities}
+
+\begin{lemma}[A shifted quartic]\label{ms:fourier:cut49:shortloc:quartic}
+Suppose $W$ is a sum of independent centered variables bounded in absolute
+value by $A$, and $t=\E W^2$. Let $K_0\ge(9+6\sqrt3)/4$ and $a>0$.
+For $r\ge0$ and $\sigma\in\{-1,1\}$,
+\begin{equation}\label{ms:fourier:cut49:shortloc:quarticformula}
+ \Pp(W+\sigma r>0)\ge
+ \frac{(3a^2-A^2)t-3t^2-4Art-6r^2t-r^4
+                      +3a^2r^2+2\sigma a^3r}{K_0a^4}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The polynomial $h_a(z)=(-z^4+3a^2z^2+2a^3z)/(K_0a^4)$ is below
+$\mathbf1_{\{z>0\}}$: it is nonpositive for $z\le0$, and its maximum for
+$z>0$ is at $z/a=(1+\sqrt3)/2$ and is at most one. Independence gives
+$|\E W^3|\le At$ and $\E W^4\le A^2t+3t^2$.
+Expand $\E h_a(W+\sigma r)$ and apply these two inequalities.
+The value at the threshold is zero, so atoms require no limiting argument.
+\end{proof}
+
+\begin{lemma}[One common tail bound]\label{ms:fourier:cut49:shortloc:tails}
+If independent centered $X_i\le A$ have total variance at most $V$, then,
+for $b>0$, their sum has upper tail bounded by the minimum of one and
+\begin{equation}\label{ms:fourier:cut49:shortloc:tailmin}
+ \begin{gathered}
+ \frac{V}{V+b^2},\qquad
+ \mathcal B(A,V,b)=e^{b/A}\left(\frac{V}{V+Ab}\right)^{b/A+V/A^2},\qquad
+ \frac{\E(P_\mu-j)_+^3}{(b/A+\mu-j)^3},\\
+ \mu=V/A^2,\qquad 0\le j<b/A+\mu.
+ \end{gathered}
+\end{equation}
+where $P_\mu$ is Poisson. The same holds for a lower tail when $|X_i|\le A$.
+All bounds apply to closed events, hence also to strict events.
+\end{lemma}
+\begin{proof}
+Cantelli's bound follows by applying Markov to $(\sum X_i+V/b)^2$.
+Taylor's integral remainder gives
+$\E e^{zX_i}\le\exp\{\E X_i^2(e^{zA}-1-zA)/A^2\}$
+for $z\ge0$. Multiply and use $z=A^{-1}\log(1+Ab/V)$ to get $\mathcal B$.
+The zero-variance case is immediate.
+
+For the third bound, smooth $f(x)=(x-t)_+^3$ by a nonnegative smooth
+compactly supported density. Then $f'',f''',f''''\ge0$. For
+$\mathcal Af(x)=f(x+A)-f(x)-Af'(x)$, the Taylor quotient
+\[
+ \frac{f(x+y)-f(x)-yf'(x)}{y^2}
+       =\int_0^1(1-r)f''(x+ry)\,dr
+\]
+is nondecreasing in $y$. A centered $X\le A$ of variance $v$ consequently
+satisfies $\E f(x+X)\le f(x)+(v/A^2)\mathcal Af(x)$.
+For $\mathcal P_zf(x)=\E f(x+A(P_z-z))$,
+$\partial_z\mathcal P_zf=\mathcal P_z\mathcal Af$ and
+\[
+ \partial_z^2\mathcal P_zf=\mathcal P_z\mathcal A^2f\ge0,\qquad
+ \mathcal A^2f(x)=\int_0^A\!\int_0^A(A-r)(A-w)f''''(x+r+w)\,dr\,dw.
+\]
+Thus $\mathcal P_{v/A^2}f\ge f+(v/A^2)\mathcal Af$. Replace the independent
+variables successively; translations and expectations preserve the derivative
+signs and Poisson rates add. Increasing the total variance to $V$ is permitted
+by Jensen after adding independent centered Poisson noise. Removing the
+smoothing is justified by bounded actual upper supports and finite Poisson
+third moments. Markov at $t=A(j-\mu)$ proves the displayed bound.
+\end{proof}
+
+These bounds have finite rational evaluations. For example,
+\begin{align}\label{ms:fourier:cut49:shortloc:poissonfinite}
+ \E(P_\mu-j)_+^3={}&\mu^3+3(1-j)\mu^2+(1-3j+3j^2)\mu-j^3\\
+ &+e^{-\mu}\sum_{h=0}^{\lfloor j\rfloor}\frac{\mu^h(j-h)^3}{h!}.\nonumber
+\end{align}
+Replacing $e^{-\mu}$ by $(\sum_{h=0}^{24}\mu^h/h!)^{-1}$ enlarges the
+nonnegative correction. Alternatively sum the positive Poisson series
+through 32; the remaining tail is at most its first term divided by
+$1-\mu(34-j)^3/[34(33-j)^3]$, provided $j<33$ and that ratio is below one.
+For Bennett, put $x=Ab/V$ and
+$L=[(b/A+\mu)\log(1+x)-b/A]$. The positive series
+$\log(1+x)=2\sum_{h\ge0}z^{2h+1}/(2h+1)$, $z=x/(2+x)$, gives lower
+bounds for $L$; any positive lower exponential series gives an upper bound
+for $e^{-L}$. Rounding a positive lower $L$ down before exponentiation is
+also valid. These are choices of rational witnesses, not optimization claims.
+
+\paragraph{The nearest-count witness, including vanishing noise}
+
+For $u=-r\le0$, add $-h_fr$ to \eqref{ms:fourier:cut49:shortloc:quarticformula} with
+$\sigma=1$; for $u=r\ge0$, add $l_fr$ with $\sigma=-1$.
+Both bound $\Pp(W_k>u)+f(u)$ from below. For a cell
+$t\in[t_-,t_+]$, $r\in[r_-,r_+]$, this expression is concave in $t$
+(second derivative $-6/(K_0a^4)$), so only $t_-,t_+$ are needed.
+At each endpoint, bound a monomial with positive coefficient at $r_-$
+and one with negative coefficient at $r_+$. Any rational $a>0$ is a valid
+witness. Other valid choices are
+\begin{equation}\label{ms:fourier:cut49:shortloc:ownother}
+ \frac{r_-^2}{t_++r_-^2}-h_fr_+\quad(u\le0),\qquad l_fr_-\quad(u\ge0).
+\end{equation}
+They follow from Cantelli and nonnegativity, respectively. Their maximum
+or one selected witness is valid without an optimality proof.
+
+For incoming counts use $t_{k+i}\le iV_*\lambda$. On $u\in[-r_+,-r_-]$
+the first distance is $1+r_-$ and every later distance is at least $i$.
+On $u\in[r_-,r_+]$ they are $1-r_+$ and $i(1-r_+/2)$ for $i\ge2$.
+Let $b,b_o$ be these first and later distances. On $\lambda\in[L,U]$,
+let $T_1$ be any bound from Lemma~\ref{ms:fourier:cut49:shortloc:tails} at $(A,V_*U,b)$.
+Since $\mathcal B(A,iV,ib)=\mathcal B(A,V,b)^i$, all later counts total at most
+$B^2/(1-B)$ for $B=\mathcal B(A,V_*U,b_o)<1$. Thus
+\begin{equation}\label{ms:fourier:cut49:shortloc:midtest}
+ D=O-R_0\{T_1+B^2/(1-B)\}>0,\qquad
+ mD-\kappa U/N>\varepsilon U
+\end{equation}
+proves the entire cell when $\kappa\ge0$. This sign condition is required on each cell. The argument applies to
+both central and left probability panels.
+
+A cell touching $\lambda=0$ requires estimates proportional to $\lambda$;
+a positive lower endpoint may not be substituted. The following rescaling
+provides them. Put $r=zt$, $t_*=\omega_+U$ and $d_a=K_0a^4$.
+The shifted quartic plus $br$, divided by $t$, becomes
+\begin{equation}\label{ms:fourier:cut49:shortloc:scaledown}
+ F_{\sigma,b}(z,t)=\frac{3a^2-A^2-3t}{d_a}
+ +\left(\frac{2\sigma}{K_0a}+b-\frac{4At}{d_a}\right)z
+ +\frac{3a^2t-6t^2}{d_a}z^2-\frac{t^3z^4}{d_a}.
+\end{equation}
+It extends to $t=0$ and is concave in $t$. On $0\le z\le z_0$, replacing
+$z^4$ by $z_0^2z^2$ gives a lower quadratic at $t=t_*$; at $t=0$ it is
+linear. Endpoints and a clipped quadratic vertex therefore give an exact
+lower bound $J(\sigma,b,z_0)$ for the whole rectangle.
+
+For negative phase choose $z_-,c_->0$ and verify
+\begin{gather}\label{ms:fourier:cut49:shortloc:tinynegative}
+ J(1,-h_f,z_-)>c_-,\quad
+ \frac{z_-^2}{1+z_-^2t_*}-h_fz_->c_-,\quad
+ \frac{2z_-}{(1+z_-^2t_*)^2}>h_f,\\
+ \frac1{1+4t_*}-\frac{h_f}{2}>c_-t_*,\qquad z_-t_*<1/2.\nonumber
+\end{gather}
+The quartic handles $r\le z_-t$. Beyond that point use
+$r^2/(t+r^2)-h_fr$. Its derivative at $r=z_-t$ is positive by the third
+gate; its second derivative has just one sign change, so any later critical
+point is a maximum. Its minimum is at $z_-t$ or $1/2$, covered by the other
+gates. Hence the own count exceeds $c_-t$.
+For positive phase choose $z_+,c_+>0$ with
+\begin{equation}\label{ms:fourier:cut49:shortloc:tinypositive}
+ J(-1,l_f,z_+)>c_+,\qquad l_fz_+>c_+,\qquad z_+t_*<1/2.
+\end{equation}
+The quartic handles $r\le z_+t$ and the normal term handles the rest.
+The own count exceeds $c_+t$ and also exceeds $l_fr$.
+
+For incoming tails proportional to $\lambda$, fix a Poisson anchor $j$.
+A positive series term of index $h$ divided by
+$\lambda(b/A+\mu-j)^3$ has logarithmic derivative, multiplied by $\lambda$,
+\[
+ h-1-\mu-\frac{3\mu}{b/A+\mu-j},\qquad \mu=V_*\lambda/A^2.
+\]
+If $b/A-j>0$ and this is nonnegative at $\lambda=U$ for the first positive
+index, it is nonnegative for every term and all $0<\lambda\le U$.
+Therefore the Poisson bound divided by $\lambda$ is largest at $U$.
+Likewise $B^2/[\lambda(1-B)]$ is increasing whenever
+$\lambda B'/B\ge1/2$. Differentiating the Bennett formula gives
+\[
+ \lambda B'/B=b/A-\mu\log(1+b/(A\mu));
+\]
+The function $g(\mu)=b/A-\mu\log(1+b/(A\mu))$ decreases because
+$\log(1+x)>x/(1+x)$ for $x>0$. Moreover the logarithmic derivative of
+$B^2/[\lambda(1-B)]$, multiplied by $\lambda$, is
+$2g-1+gB/(1-B)\ge0$ when $g\ge1/2$. Thus checking the gate at $U$
+proves the whole interval. A rational upper bound for the logarithm
+verifies that gate. On cells using the fixed positive bound $l_fr_-$ instead,
+unscaled endpoint tails suffice: after a positive bracket is checked, divide
+it by $U$ to obtain a lower bound per $\lambda$. These arguments, followed by
+\eqref{ms:fourier:cut49:shortloc:directtest}, prove the nearest-count comparison uniformly down to arbitrary positive
+noise, including a deterministic conditional component.
+
+\paragraph{The whole-count witness}
+
+Assume $\zeta=1-d_0>1/2$. Couple all $2n$ conditional variables independently and
+set $W_j=\sum_{i\le j}U_{1,i}+\sum_{i>j}U_{0,i}$, extending it constantly
+outside $[0,n]$. Every increment of $j+W_j$ is at least $\zeta$. Define
+\[
+ K=\max\{j\in\mathbb Z:j+W_j\le k+u\},\qquad R=K-k.
+\]
+The coupling of Section~\ref{ms:counts}, with $V_j=W_j$, gives
+\begin{equation}\label{ms:fourier:cut49:shortloc:cutoff}
+                  \Pp(\textstyle\sum Y_i\le k+u)=\E F_B(k+R).
+\end{equation}
+Let $\chi=(n+1)p-k<2$ and $m_B=\max_j\pi_j$. For every integer $r$,
+\begin{equation}\label{ms:fourier:cut49:shortloc:curvature}
+ F_B(k+r)-F_B(k)-r\pi_k\le\frac{m_B}{(n+1)v}
+ \left[(\chi-1)_+r_++\chi_+\binom{r_-}{2}+\binom{r_-}{3}\right].
+\end{equation}
+This is Lemma~\ref{ms:crossing-curvature}, with the same zero extension,
+$\chi<2$ and interior count. Its proof requires only an increment lower
+bound $\zeta>1/2$. Here $d\le d_0$ gives increments at least $1-d_0=\zeta$,
+and $\zeta\le1$ follows from $d_0\ge0$.
+
+Write $t=\E W_k^2$. Crossing monotonicity and Cauchy--Schwarz give
+\begin{equation}\label{ms:fourier:cut49:shortloc:crossingmoments}
+ \E R_+\le\frac{t}{(\zeta-u)^2},\quad
+ \E\binom{R_-}{2}\le\frac{t}{[\zeta+\min(u,\zeta/3)]^2},\quad
+ \E\binom{R_-}{3}\le\frac{t\sqrt{A^2+3t}}{(2\zeta-1/2)^3}.
+\end{equation}
+These are the crossing-moment bounds of Lemma~\ref{ms:crossing-curvature}
+with $A_U=A$, $V_k=W_k$, $|u|\le1/2$ and the increment lower bound
+$\zeta=1-d_0$. The lemma includes the strict outgoing crossing and the
+fourth-moment estimate from independence and conditional centering.
+
+\paragraph{The marked crossing.}
+Let $D_i=U_{1,i}-U_{0,i}$, $\vartheta=\E(D_i)_+=\E(D_i)_-$,
+$0<\eta\le1$, and $R_f=\E\{u+\eta-W_k\}$. The two deleted laws are
+\[
+ A_0\overset{d}=kU_1+(n-k-1)U_0,\qquad
+ A_1\overset{d}=(k-1)U_1+(n-k)U_0.
+\]
+Then
+\begin{align}
+ \E R&\le u+\eta-R_f+J,\label{ms:fourier:cut49:shortloc:mark}\\
+ J&=\frac{\vartheta}{\eta}\sum_{i\ge1}
+ \{\Pp(A_0\le u+d_0-\zeta i)+\Pp(A_1>u+\eta+i-A)\}.\nonumber
+\end{align}
+Here are the pathwise details. Put $z=u-W_k$ and mark
+\[
+ Z_f=\sum_{i=1}^{n-k}(D_{k+i})_-\mathbf1_{\{W_k\le u-\zeta i\}},\quad
+ Z_b=\sum_{i=1}^{k}(D_{k-i+1})_+\mathbf1_{\{W_k>u+\eta+i\}}.
+\]
+If $R>z+\eta$, the crossing activates the marks through $R$: for $R>0$
+use $z\ge \zeta R$, while for $R<0$ use $z<R-\eta$. In either case
+$R\le z+Z_f+Z_b$. Hence if $h=R-\lfloor z+\eta\rfloor>0$,
+$Z_f+Z_b>h-1+\eta\ge\eta h$. Thus
+$R\le\lfloor z+\eta\rfloor+(Z_f+Z_b)/\eta$ on every path.
+On an active forward mark $U_0>U_1\ge-d_0$; deleting its pair implies
+$A_0\le u+d_0-\zeta i$. On a backward mark delete $U_1\le A$ to obtain the
+strict event for $A_1$. The remaining sum is independent of the entire
+pair, so the expectations factor. Extending to all $i\ge1$ adds only
+nonnegative bounds. Finally $|R|\le1+(|W_k|+|u|)/\zeta$ proves integrability
+and permits expectations. No coupling has replaced either deleted marginal.
+
+\paragraph{A finite bound for every mark.}
+Fix $\lambda\in[L,U]$, $L>0$, and $t\le\omega_+\lambda$; put
+$T_L=\omega_+L$, $T_U=\omega_+U$. On a phase subcell $u\in[v_l,v_h]$,
+for $i=1,2$ let $b_1=\zeta i-d_0-v_h>0$ and $b_2=i-A+v_l>0$.
+Lemma~\ref{ms:fourier:cut49:shortloc:tails} gives a bound $\omega_+\lambda K_i^{\rm ind}$,
+where
+\[
+ K_i^{\rm ind}=\sum_{j=1}^2\min\left\{\frac1{b_j^2+T_L},
+                          \frac{\overline P(A,T_U,b_j)}{T_L}\right\}.
+\]
+The denominator $T_L$ is a lower bound for the chosen upper envelope
+$\omega_+\lambda$, not for any actual variance.
+Alternatively couple $A_0=Z+U_1$, $A_1=Z+U_0$ with
+$Z\overset d=(k-1)U_1+(n-k-1)U_0$. The two events project into
+$Z\le-\alpha$ and $Z>\beta$, where
+$\alpha=\zeta i-2d_0-v_h>0$, $\beta=i-A-d_0+v_l>0$.
+For any $z\in(-\alpha,\beta)$ their sum is at most
+$(\omega_+\lambda+z^2)/\min(z+\alpha,\beta-z)^2$.
+Consequently a second kernel is
+\[
+ K_i^{\rm com}=\frac{1+z^2/T_L}{\min(z+\alpha,\beta-z)^2},\qquad
+ z=\max\{-T_L/\beta,\min((\beta-\alpha)/2,T_L/\alpha)\}.
+\]
+This center is inside the interval; differentiating the two quadratic
+ratios on either side of the midpoint proves its optimality, although
+any interior rational center suffices. Take the smaller kernel on each
+phase subcell and the maximum over their closed cover. Denote it $K_i$.
+For $i\ge3$ use fourth moments and the convex midpoint integral for
+$(cx-b)^{-4}$. On $u\in[u_l,u_h]$ this gives
+\begin{equation}\label{ms:fourier:cut49:shortloc:K}
+ K=K_1+K_2+\frac{A^2+3T_U}{3\zeta}
+  \left\{\frac1{((5/2)\zeta-A-u_h)^3}
+                 +\frac1{((5/2)\zeta-A+u_l)^3}\right\},\qquad
+ J\le\frac{\vartheta}{\eta}\omega_+\lambda K.
+\end{equation}
+All denominators must be positive. Indeed, the tail fourth moment is at
+most $A^2t+3t^2$, and integration from $5/2$ to infinity covers every
+remaining integer, including the harmless added illegal counts.
+
+If the same-law resource supplies $nd<G$ and
+$G^2<c_vNL$, then
+\begin{equation}\label{ms:fourier:cut49:shortloc:theta}
+ \vartheta\le\frac{c_vG\lambda}{c_vn\lambda+G^2}.
+\end{equation}
+To prove this, for centered $X\ge-b$, $\E X^2\le V$ and $b^2\le V$,
+the quadratic $b(X-V/b)^2/(b+V/b)^2$ majorizes $X_-$ on $[-b,\infty)$.
+Its expectation is at most $bV/(V+b^2)$. Apply this to $D_i\ge-d$,
+using $\operatorname{Var}(D_i)=s_0+s_1\le c_v\lambda/n$, and monotonicity
+in $b\le\sqrt V$. The case $d=0$ is immediate. With $\eta=z\lambda$,
+$z>0$, $zU\le1$, \eqref{ms:fourier:cut49:shortloc:K} becomes
+\begin{equation}\label{ms:fourier:cut49:shortloc:Jfinal}
+ \frac J\lambda\le\frac{\omega_+Kc_vG}{z(c_vN\lambda+G^2)}.
+\end{equation}
+
+\paragraph{The fractional-part gain.}
+The following implication assumes the scalar majorization and its rational
+constant enclosures stated below. Their finite arithmetic acceptance is a
+separate condition.
+If each centered summand has support span at most $0<b<1$ and the sum has
+variance $t$, then, for any real $w$ and
+$0<r_*\le2\sin^2(\pi b)/b^2$,
+\begin{equation}\label{ms:fourier:cut49:shortloc:harmonic}
+             \E\{w-W\}\ge\frac5{23}(1-e^{-r_*t}).
+\end{equation}
+Indeed $1-\cos(2\pi x)\le(23/5)x$ for $0\le x\le1$.
+A finite proof of this sole scalar inequality is recorded below.
+For an independent copy $Z'$ of one summand, concavity of sine on
+$[0,\pi b]$ gives
+\[
+ |\E e^{2\pi iZ}|^2
+ =1-2\E\sin^2\pi(Z-Z')
+ \le e^{-4\sin^2(\pi b)\operatorname{Var}(Z)/b^2}.
+\]
+Multiply square roots over the independent summands and use periodicity.
+This argument includes zero variances and integer collisions, and is
+valid up to $b<1$ by Lemma~\ref{v9:harmonic:span}. The other count
+denominator gates are unchanged.
+Here the conditional spans are at most $A+d_0$, so this is the $b$ to use.
+
+For a reproducible scalar proof, $x\ge10/23$ follows from $1-\cos\le2$.
+On $[0,10/23]$ use the degree-ten alternating upper polynomial for
+$1-\cos(2\pi x)$, with directed coefficients:
+\[
+ Q(x)=\sum_{j=1}^5\frac{(-1)^{j+1}(2\pi_jx)^{2j}}{(2j)!},\qquad
+ \pi_j=\begin{cases}3.141592653589794,&j\text{ odd},\\
+                       3.141592653589793,&j\text{ even}.\end{cases}
+\]
+Put
+$P(x)=23/5-Q(x)/x$. On the eight intervals with left endpoint $a_j=5j/92$
+and width $w=5/92$, its degree-nine Bernstein coefficients are
+\[
+ b_{jk}=\sum_{i=0}^k\frac{\binom ki}{\binom9i}
+           \sum_{h=i}^9[x^h]P(x)\binom hi a_j^{h-i}w^i,
+ \qquad 0\le j<8,\quad0\le k\le9.
+\]
+All 80 rational coefficients exceed $4492/100000$. This finite
+comparison is reproduced by the independent rational check accompanying
+the manuscript; together with the displayed formula it proves the scalar
+majorization. Expansion in powers of the unit-interval coordinate
+proves the formula; Bernstein weights are nonnegative and sum to one.
+The alternating remainder and the stated rational bounds on $\pi$ follow
+from the same elementary series above. This completely specifies the
+scalar comparison. To obtain a rational rate throughout $0<b<1$, put
+$y=\min(b,1-b)$ and $x=3.14159y$. Since $0<y\le1/2$,
+$\sin(\pi b)=\sin(\pi y)\ge\sin x$, and the alternating bound
+\[
+ 0<x-x^3/6+x^5/120-x^7/5040\le\sin x
+\]
+is valid. Positivity follows from $x^2<3$ for the first two terms
+and $x^2<42$ for the last pair. Squaring this positive rational lower
+bound therefore gives a valid rate below $2\sin^2(\pi b)/b^2$.
+Folding at $1/2$ is essential: decreasing the sine argument would not be
+monotone on the whole unfurled interval.
+
+Set $r=r_*\omega_-$, require $rU<3$, and define
+\begin{equation}\label{ms:fourier:cut49:shortloc:gain}
+ g=\frac5{23}\left(\frac{r^3L^2}{6}-\frac{r^4L^3}{24}
+                     +\frac{r^5L^4}{120}-\frac{r^6L^5}{720}\right).
+\end{equation}
+The sixth-order Taylor lower bound for $1-e^{-r\lambda}$ gives
+$R_f/\lambda\ge5r/23-5r^2\lambda/46+g$. The discarded higher-order
+part is increasing as a function of $\lambda$ for $r\lambda<3$:
+its derivative has the sign of $48-18x+(24/5)x^2-x^3>0$ on $[0,3]$.
+For instance this polynomial has positive degree-three Bernstein
+coefficients $48,30,132/5,51/5$ there. Thus freezing it at $L$ is valid.
+
+\paragraph{One final expression.}
+On a signed phase cell find an interval $[x_l,x_h]$ containing $H/\ell$
+by its four endpoint quotients, using positive bounds for $\ell$.
+Let
+\[
+ D=\max(|x_l-u_h|,|x_h-u_l|),\quad
+ D_+=\max(0,x_h-u_l),\quad a=\max(|u_l|,|u_h|),\quad b_\chi=p_+-x_l.
+\]
+The same formula allows coarser upper bounds $D,D_+,b_\chi$, as used by
+the central certificate. Check $D\le\Delta$ and $b_\chi+u_h<2$.
+With $\omega_\pm=1\pm c_vD/N$, the curvature coefficient is
+\begin{equation}\label{ms:fourier:cut49:shortloc:V}
+ V_0=\frac{\omega_+}{v_*}\left[
+ \sup_{u_l\le u\le u_h}\left\{
+ \frac{(b_\chi+u-1)_+}{(\zeta-u)^2}
+ +\frac{(b_\chi+u)_+}{[\zeta+\min(u,\zeta/3)]^2}\right\}
+ +\frac{\sqrt{A^2+3T_U}}{(2\zeta-1/2)^3}\right].
+\end{equation}
+On a rational phase subcell, both numerators are bounded at the right
+endpoint; the first denominator is smallest there, and the second is
+smallest at the left endpoint. This proves the supremum bound, including
+both kinks. Equations \eqref{ms:fourier:cut49:shortloc:cutoff}--\eqref{ms:fourier:cut49:shortloc:crossingmoments},
+$\sqrt n m_B\le1$, and \eqref{ms:fourier:cut49:shortloc:master} now give the whole-count
+witness with
+\begin{align}\label{ms:fourier:cut49:shortloc:BI}
+ B(\lambda)&=z+\frac{\omega_+Kc_vG}{z(c_vN\lambda+G^2)}
+                      -\frac{5r}{23}+\frac{5r^2\lambda}{46}-g,\\
+ I(\lambda)&=V_0+aB_1+\frac{aP_1}{\lambda}+P_*D_+-m_cQ_*.
+ \nonumber
+\end{align}
+We used $|u-f(u)|\le a(B_1\lambda+P_1)/n$ and $\sqrt n\pi_k\le1$.
+Every constant is fixed before $\lambda$ varies. Both $B$ and
+$mB+I/N$ are convex on $\lambda>0$; $I$ is decreasing. Thus their two
+endpoint gates $B<0$, $I>0$, $mB+I/N<-0.001$ prove the entire closed noise
+cell. Thus this argument supplies the analytic implication for each of the three
+whole-count estimates, conditional on its own complete cover and endpoint gates.
+
+
+\paragraph{The zero-noise endpoint and the remaining composition}
+\label{ms:fourier:zero-noise}
+If $\lambda=0$, then $p,q>0$ and conditional centering imply
+$U_0=U_1=0$ almost surely. The actual law is its Bernoulli comparison law.
+The zero-noise argument in Section~\ref{ms:counts} places an attained
+positive closed-CDF maximum at a binomial atom, so $u=0$ and $C=C_B$.
+The external all-probability binomial theorem of
+\cite[Theorem~1]{Schulz2016}, when applied with its stated hypotheses,
+then supplies the sharp Bernoulli upper bound. An equality-inclusive
+exclusion requires a separately justified strict finite-index version. For positive noise, the local
+conclusion requires every parameter cell to satisfy one of the displayed
+strict tests. No selection of historical table rows, completeness of a
+finite cover, or fresh acceptance of those tests is asserted here.
+
+The mathematical composition therefore still requires: the actual contact
+witness; already acquired common-law support, moments and signed resources;
+any additional concentration hypotheses used in acquiring confinement; valid normalization and positivity
+of every divisor; a complete cover of all signs, phases and noise values;
+and acceptance of the stated finite gates on that cover. No step replaces
+an $n-2$ convolution by an $n-1$ convolution or infers a uniform statement
+from a fixed-law asymptotic limit.

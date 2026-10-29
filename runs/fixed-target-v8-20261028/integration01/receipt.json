@@ -1,0 +1,170 @@
+{
+  "started_utc": "2026-10-28T10:35:47.521028+00:00",
+  "python": "3.9.6",
+  "optimization": 0,
+  "driver_sha256": "fb2f3fd84dc135310e56b289a158ff399967de3c85fa69a25becaf31d39a32de",
+  "checks": [
+    {
+      "name": "root4",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v8/2026-10-28/root4-check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.091080583,
+      "source_sha256": "89c0244aaf67735fb7ce756ae03a8be84805aa8a4f70ba63b6364cee6e7981f7",
+      "stdout_sha256": "afdcc47f3fd1e954d5b0450c04dd18ca37d57e09902108fd56a8e456f5040038",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "moments",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v8/2026-10-28/moment-entry-v8.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.09916679200000003,
+      "source_sha256": "429a5280a40c8104b7b589b3184d73cc8b2332d2639595886c868d0c9e30d3a3",
+      "stdout_sha256": "5495b0335378211808a143d6c9d7387fcd48412bcd30165098e0aae912b04d2c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "independent-phase",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v8/2026-10-28/phase-review-check.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 1.174035417,
+      "source_sha256": "3acfcc9e49e3ba8c85e030e7459fdb42399597fe42c17e503cc1a40b3c9a02d4",
+      "stdout_sha256": "77e6b5815fdeae9d12a30b5176f7896ba78f993ec2f7719555541700172a66d9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "phase-regions",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v8/2026-10-28/phase_region.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.5948717079999999,
+      "source_sha256": "b7065a317fee58fd4076016c4e8a215a6808ec17dd9cc35a30ef2398fe2f78a7",
+      "stdout_sha256": "2873b4d7b6cd325f828cb2039e4b731248fc9a3aa758be6b202e4b4a7a0ab924",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "independent-small-noise",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v8/2026-10-28/small-noise-check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.047482082999999786,
+      "source_sha256": "d1c1871b1ebe6bf554762cc5921d38a05f0b2e635664913ecabe20bf925029d3",
+      "stdout_sha256": "34220ec64ab2e558da96a01a4574448c3637d22500f51ee16e2c6786c3e0e6eb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "direct-heat",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v8/2026-10-28/phase-confinement-heat.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.04687624999999995,
+      "source_sha256": "23669542b58d2476977a0692234517ef05fce9034b9881a381b7c1708cef6954",
+      "stdout_sha256": "f8b3547b28d79bd6f0a166e81c1af8cd71b781b105731fac1c64b78d41001b39",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "probability-limit",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v8/2026-10-28/probability-probe.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 3.1776711660000005,
+      "source_sha256": "dba9096ddc15676aea5b0e8ccce70d336352bdf5caf43f76948f1c23a2bdf1cc",
+      "stdout_sha256": "54bf31be3d0cb7964b78a61c449816b1690e556cba1ba36fe0d5bf5280058418",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "complete-panel",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v8/2026-10-28/phase-confinement.py",
+        "--evidence",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/runs/fixed-target-v8-20261028/integration01/panel-replay",
+        "--partition",
+        "equal",
+        "--compose-heat"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 12.10279375,
+      "source_sha256": "8f5260920d73d1ef8bf63f192a2adcbc0cfc67ab1fc87368c8764dee3689186d",
+      "stdout_sha256": "39a2675a16c1ae51a3304295bf1ca21c3a0a4fcf6e6f18bf0e4b64cfa9e1c215",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "Eight bounded checks, complete one-panel confinement join, isolated ancestor binding and baseline preservation; not global confinement/count/BASE41.",
+  "panel_cover_binding": {
+    "counts": {
+      "direct all-threshold heat lemma": 16,
+      "two strict confinement rays": 28,
+      "resource exclusion": 84
+    },
+    "remaining_strict_rays": 56,
+    "smallest_margin": "23206405837500441481329068010623965067129130410346520077486181230570539669271387865478464736051372064115942296479513511677798247600870266221423245034172388216319890602609477728447392592915274787250075138148188943623344789206385821623039818218747248992790947082957111751011032825948655381831181821726479121089640385238257053666891523650923725162159331036615220473052509644800995681862936758438187275773334488118521308983598766714425185811613953014627695962011863193424969532455523456490820837362687557137869358345536644583768201286025554452543886829050297864783763402562871013006384164423412541747881562468087513227638648610845015697516712723495609322050472717433208624813827986552894017731361733241185772545364341967380141910899831288293992294573903721876239725325780406926462259675119357460721993295271748600597667027229725397551546990899/2601580246438035798944304587697845670846687657313908106017689874760223286494520856577633419748767117829765970641656259435474145579884437085578077890057389344552123309686187439934177602598651215058182398289544253946989668623535625275872521999554462993742302060353017956438867367646441441725896711379657903845609530840028727256575952086679228767915644072669349951838367817290246309790419899470230975077019850852152425779695371000717981847952837461048178873209204410611492571734559650363364124874167550048154911033647272673770874797440969642234241051243183370042926354258509969212415181918713299350122845629872031229339569633431153149589364580360497792236271426348913779643003615776486323973177118269361445941723106473305754656036026129550078908355812163942612992000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "scope": "Separate cover/accounting check; formulas independently reviewed elsewhere."
+  },
+  "isolated_entry_binding": {
+    "receipt_sha256": "251a4606136549f8faa8fd5bfd367bbd64c3f2f4e43c1ee4b434be6f4092c7da",
+    "stdout_sha256": "2b6f9cb8b47348bb5c8285261e68861f7be650935f54c19caa72ffa98d2a8dd3",
+    "summary": {
+      "execution_status": "Fresh allowlist-copy isolated replay of the two-quadratic ancestor and all four selected signed passes.",
+      "inherited_rejected_controls": 19,
+      "mathematical_status": "Same conditional fixed-target theorem as the frozen v7 acceptor; no new analytic or finite-base acceptance.",
+      "nonempty_probability_panels": 30,
+      "probability_panels": 100,
+      "proof_sha256": "61b7ad43e20046d7cbf7157e3feb61696331731e7be418f6a5fa535c2eee8bae",
+      "signed_cells": 11264,
+      "status": "PASS_ISOLATED_REPRODUCTION_FIXED_ENTRY_V7",
+      "trusted_stack": "Python interpreter and standard library, OS/filesystem, SHA256; no concurrent hostile modification of the fresh private directory.",
+      "wrapper_rejected_controls": [
+        "missing fixed proof",
+        "altered fixed proof bytes",
+        "altered acceptor before parsing",
+        "unlisted executable in copied tree",
+        "mutated inherited kernel"
+      ]
+    }
+  },
+  "repaired_phase_binding": {
+    "summary_sha256": "efd961260d295810f899a7f94dc554ab23a1b486ed0e693ffc22d15575ed044f",
+    "status": "PASS_REPAIRED_PHASE_ACCEPTOR_AUTHENTICITY",
+    "export_sha256": "b18599468c975032f4078e7a5f734fd6430b2b7da583789de58d9537d323f690"
+  },
+  "status": "PASS_BOUNDED_V8_INTEGRATION",
+  "baseline": "6346fc1b4432bc5982822aa696eb566ed9e1e1ee",
+  "unchanged_baseline_entries": 2748,
+  "materialized_baseline_files_checked": 182,
+  "sparse_baseline_blobs_checked": 2566,
+  "completed_utc": "2026-10-28T10:36:05.190857+00:00"
+}

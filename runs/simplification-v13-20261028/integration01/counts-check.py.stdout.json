@@ -1,0 +1,206 @@
+{
+  "status": "PASS_STRUCTURAL_COUNT_CONTROLS",
+  "actual_law_cases": 32,
+  "curvature_checks": 160,
+  "concentration_checks": 96,
+  "symmetric_center_checks": 3,
+  "four_moment_obstruction": "-5/144",
+  "correlated_initial_increment_covariance": "-216/15625",
+  "closed_window_boundary_counterexample": "3/4 > 1/2",
+  "records": [
+    {
+      "n": 2,
+      "law": 0,
+      "p": "2/5",
+      "lambda": "18/625"
+    },
+    {
+      "n": 2,
+      "law": 0,
+      "p": "1/2",
+      "lambda": "18/625"
+    },
+    {
+      "n": 2,
+      "law": 1,
+      "p": "2/5",
+      "lambda": "18/625"
+    },
+    {
+      "n": 2,
+      "law": 1,
+      "p": "1/2",
+      "lambda": "3/125"
+    },
+    {
+      "n": 2,
+      "law": 2,
+      "p": "2/5",
+      "lambda": "12/625"
+    },
+    {
+      "n": 2,
+      "law": 2,
+      "p": "1/2",
+      "lambda": "3/125"
+    },
+    {
+      "n": 2,
+      "law": 3,
+      "p": "2/5",
+      "lambda": "0"
+    },
+    {
+      "n": 2,
+      "law": 3,
+      "p": "1/2",
+      "lambda": "0"
+    },
+    {
+      "n": 4,
+      "law": 0,
+      "p": "2/5",
+      "lambda": "36/625"
+    },
+    {
+      "n": 4,
+      "law": 0,
+      "p": "1/2",
+      "lambda": "36/625"
+    },
+    {
+      "n": 4,
+      "law": 1,
+      "p": "2/5",
+      "lambda": "36/625"
+    },
+    {
+      "n": 4,
+      "law": 1,
+      "p": "1/2",
+      "lambda": "6/125"
+    },
+    {
+      "n": 4,
+      "law": 2,
+      "p": "2/5",
+      "lambda": "24/625"
+    },
+    {
+      "n": 4,
+      "law": 2,
+      "p": "1/2",
+      "lambda": "6/125"
+    },
+    {
+      "n": 4,
+      "law": 3,
+      "p": "2/5",
+      "lambda": "0"
+    },
+    {
+      "n": 4,
+      "law": 3,
+      "p": "1/2",
+      "lambda": "0"
+    },
+    {
+      "n": 7,
+      "law": 0,
+      "p": "2/5",
+      "lambda": "63/625"
+    },
+    {
+      "n": 7,
+      "law": 0,
+      "p": "1/2",
+      "lambda": "63/625"
+    },
+    {
+      "n": 7,
+      "law": 1,
+      "p": "2/5",
+      "lambda": "63/625"
+    },
+    {
+      "n": 7,
+      "law": 1,
+      "p": "1/2",
+      "lambda": "21/250"
+    },
+    {
+      "n": 7,
+      "law": 2,
+      "p": "2/5",
+      "lambda": "42/625"
+    },
+    {
+      "n": 7,
+      "law": 2,
+      "p": "1/2",
+      "lambda": "21/250"
+    },
+    {
+      "n": 7,
+      "law": 3,
+      "p": "2/5",
+      "lambda": "0"
+    },
+    {
+      "n": 7,
+      "law": 3,
+      "p": "1/2",
+      "lambda": "0"
+    },
+    {
+      "n": 42,
+      "law": 0,
+      "p": "2/5",
+      "lambda": "378/625"
+    },
+    {
+      "n": 42,
+      "law": 0,
+      "p": "1/2",
+      "lambda": "378/625"
+    },
+    {
+      "n": 42,
+      "law": 1,
+      "p": "2/5",
+      "lambda": "378/625"
+    },
+    {
+      "n": 42,
+      "law": 1,
+      "p": "1/2",
+      "lambda": "63/125"
+    },
+    {
+      "n": 42,
+      "law": 2,
+      "p": "2/5",
+      "lambda": "252/625"
+    },
+    {
+      "n": 42,
+      "law": 2,
+      "p": "1/2",
+      "lambda": "63/125"
+    },
+    {
+      "n": 42,
+      "law": 3,
+      "p": "2/5",
+      "lambda": "0"
+    },
+    {
+      "n": 42,
+      "law": 3,
+      "p": "1/2",
+      "lambda": "0"
+    }
+  ],
+  "scope": "Exact finite controls of proved structural lemmas, not full larger-noise Berry-Esseen acceptance. The four-moment obstruction is not claimed to be an iid sum.",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]"
+}

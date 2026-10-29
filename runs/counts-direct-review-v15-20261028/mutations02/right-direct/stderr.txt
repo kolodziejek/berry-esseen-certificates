@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/counts-direct-review-v15/mathematics/simplification-v15/2026-10-28/counts-direct-review-check.py", line 15, in <module>
+    if hashlib.sha256((args.source_dir/name).read_bytes()).hexdigest()!=pin:raise RuntimeError('Reviewed source bytes changed: '+name)
+RuntimeError: Reviewed source bytes changed: right-direct.tex

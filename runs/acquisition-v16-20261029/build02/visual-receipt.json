@@ -1,0 +1,13 @@
+{
+  "status": "FOUR_PAGES_INSPECTED",
+  "proof_sha256": "c996f20f2202def6fb945f6e7c809a0517930a1a97402e1d11aedd840f88a6fd",
+  "pdf_sha256": "2519d0e400763f24a120ca869ca5cd73b35c352f3de7fc188201ae8bf3bddc2d",
+  "pages": {
+    "page-1.png": "6b9a930f99f5d33de2e21759c585bd3a116f6625844f2a17e7dd346482c76a3e",
+    "page-2.png": "f16d8d58452d5a28b0063da0002f05bb83ad58a1f9a3bd1f7d2e7a3fb8993cb4",
+    "page-3.png": "909ab70d49208a93b8a37c3c4286171977f878d46c9f96e3eb1bcbe508f73538",
+    "page-4.png": "e8b86210fe15d857ef3d5364433b7f61682e331066a82462d058f0acd1f2cc54"
+  },
+  "method": "Pages1-2 byte-identical to the visually inspected build01 render; changed pages3-4 individually inspected after build02. All four final pages covered.",
+  "findings": "No clipping, overlap, missing equations or unresolved references; final compiler log has no overfull, underfull, or LaTeX warning."
+}

@@ -1,0 +1,297 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\R}{\mathbb R}
+\newcommand{\CE}{C_{\rm E}}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}[lemma]{Proposition}
+\newtheorem{corollary}[lemma]{Corollary}
+\title{A conditional-span improvement and a resonance obstruction}
+\author{Research note: fixed-target route, 27 October 2026}
+\date{}
+\begin{document}
+\maketitle
+
+\section{What a strict count comparison actually needs}
+For a centered variance-one law put $p=\Pp(X>0)$, $q=1-p$,
+$m=\E X_+$, $\ell=m/(pq)$, and
+$X=\ell(B+U-p)$, where $B=\mathbf1_{X>0}$ and
+$\E(U\mid B)=0$. Write $s=\E U^2$ and $\lambda=ns$.
+Let $np+H/\ell=k+u$, with an interior integer count $k$ and
+$|u|\le1/2$. All variables are constructed from the same marginal.
+
+For fixed target $c=\CE$, define
+$a=\sqrt n\{F_n(H)-\Phi(H/\sqrt n)\}-c\rho$.
+The exact count identity has left side
+\[
+                     a+\rho_B(c-C_B),
+\]
+where $C_B$ is the actual matched-binomial score. If $a\ge0$ and
+the external Bernoulli theorem gives $C_B\le c$, this is nonnegative.
+Thus a whole-count upper bound of the form
+\[
+ \sqrt n\pi_k\lambda B(\lambda)+\frac{\lambda}{n}I(\lambda)
+\]
+is contradictory for $\lambda>0$ whenever valid constants satisfy
+\begin{equation}\label{ex:final}
+ B(\lambda)<0,\qquad
+ m_0B(\lambda)+\frac{\max(0,I(\lambda))}{N}<0,
+ \quad \sqrt n\pi_k\ge m_0>0,
+ \quad n\ge N.
+\end{equation}
+The first sign gate is necessary before applying a lower mass bound.
+Zero noise is handled separately by the Bernoulli theorem.
+
+Neither $D<0.784$ nor a raw Fourier bound below $2.24$ occurs in
+\eqref{ex:final}. Those are prescribed outputs of the retained initial
+acceptor. They supply later acquisition inputs through its particular
+dependency chain; they are not necessary scalar constants in every possible
+count proof. Conversely, obtaining a smaller $D$ alone does not establish
+the conditional support, amplitude, marked-crossing and Gaussian-repair
+hypotheses needed to produce $B,I$. The example below shows why.
+
+There is a useful exact test for the remaining marked parameter. On a
+fixed positive noise value, the retained whole-count formula has the form
+\[
+ B(\lambda)=z+\frac{A_\lambda}{z}-F_\lambda,
+ \quad A_\lambda\ge0,\quad0<z\le1/U,
+\]
+where $\eta=z\lambda\le1$ on the noise band $[L,U]$.
+Write $F=F_\lambda-\max(0,I(\lambda))/(Nm_0)$ and $Z=1/U$.
+Then \eqref{ex:final} follows at this noise value precisely when
+$z+A_\lambda/z<F$ for an allowed $z$.
+For $A_\lambda>0$ the minimum is
+\begin{equation}\label{ex:onevariable}
+ \min_{0<z\le Z}\left(z+\frac{A_\lambda}{z}\right)
+ =\begin{cases}
+    2\sqrt{A_\lambda},&Z^2\ge A_\lambda,\\
+    Z+A_\lambda/Z,&Z^2<A_\lambda.
+   \end{cases}
+\end{equation}
+This follows by differentiating, or completing
+$(\sqrt z-\sqrt{A_\lambda/z})^2$ and checking the boundary.
+If $A_\lambda=0$, feasibility is exactly $F>0$; the infimum zero is
+not attained. In the interior case the exact rational gate is
+$F>0$ and $F^2>4A_\lambda$. Equality does not suffice.
+For a full closed noise band a common $z$ must still satisfy both
+endpoint gates before using the existing convexity proof; optimizing $z$
+separately at the endpoints does not establish that common witness.
+In particular a zero fractional-part gain makes this whole-count formula
+nonnegative for every $z>0$, even if the mark cost vanishes. It cannot be
+repaired simply by shrinking the weighted resource.
+
+\section{The harmonic argument works up to span one}
+For a real number $x$, write $\{x\}=x-\lfloor x\rfloor$.
+
+\begin{lemma}[Extended conditional-span domain]\label{ex:harmonic}
+Let $Z_1,\ldots,Z_j$ be independent real variables, each supported in an
+interval of length at most $b$, where $0<b<1$.
+Put $W=\sum_i Z_i$ and $t=\sum_i\operatorname{Var}(Z_i)$.
+Suppose $K>0$ satisfies
+\[
+                  1-\cos(2\pi x)\le Kx\quad(0\le x\le1).
+\]
+For every $w\in\R$ and every
+$0<r\le2\sin^2(\pi b)/b^2$,
+\begin{equation}\label{ex:gain}
+                     \E\{w-W\}\ge K^{-1}(1-e^{-rt}).
+\end{equation}
+In particular $K=8$ is valid without a finite scalar certificate.
+The inherited value $K=23/5$, or its accepted improvement, may be retained
+when its separate scalar majorization has been proved.
+\end{lemma}
+\begin{proof}
+Let $Z_i'$ be an independent copy. Since $|Z_i-Z_i'|\le b$ and sine is
+concave on $[0,\pi]$, the chord from $0$ to $\pi b$ gives
+\[
+ \sin^2\bigl(\pi(Z_i-Z_i')\bigr)
+ \ge\frac{\sin^2(\pi b)}{b^2}(Z_i-Z_i')^2.
+\]
+Consequently, writing $v_i=\operatorname{Var}(Z_i)$,
+\[
+ |\E e^{2\pi iZ_i}|^2
+ =1-2\E\sin^2\bigl(\pi(Z_i-Z_i')\bigr)
+ \le1-\frac{4\sin^2(\pi b)}{b^2}v_i
+ \le e^{-2rv_i}.
+\]
+The intermediate right side is nonnegative because it bounds the
+nonnegative left side. Taking square roots and multiplying, using
+independence, gives $|\E e^{2\pi iW}|\le e^{-rt}$. Periodicity then gives
+\[
+ K\E\{w-W\}\ge1-\Re\E e^{2\pi i(w-W)}
+                \ge1-|\E e^{2\pi iW}|\ge1-e^{-rt}.
+\]
+No centering or continuous distribution assumption was used. To verify
+$K=8$, the function $y-1+\cos y$ is nondecreasing for $y\ge0$, since its
+derivative is $1-\sin y\ge0$. Thus $1-\cos(2\pi x)\le2\pi x<8x$ for
+$x>0$; $\pi<4$ also follows directly from
+$\pi=4\int_0^1(1+y^2)^{-1}\,dy<4$. Equality at $x=0$ is harmless.
+\end{proof}
+
+The earlier count proof restricts $b<1/2$ at this step. The same proof in
+fact gives Lemma~\ref{ex:harmonic} throughout $b<1$. For example,
+$b=3/4$ permits the exact rate $r=16/9$.
+This extends only the harmonic component. It does not extend other
+denominator, binomial, support or noise gates. In the retained whole-count
+notation a sufficient acquired span is $b=A+d_0$; it must be a bound on
+each actual conditional residual, not on its variance.
+
+For example, on a phase interval $[u_l,u_h]$, the retained individual
+first-mark denominators are positive when
+$1-2d_0-u_h>0$ and $1-A+u_l>0$, with $c=1-d_0$.
+On the full phase interval $[-1/2,1/2]$, these become $d_0<1/4$
+and $A<1/2$. They imply $A+d_0<3/4<1$, so the extended harmonic
+lemma adds no further span restriction there. The optional common-mark
+bound has additional gates. None of these inequalities alone establishes
+the final score, and a larger span gives a smaller harmonic rate that must
+be used in that score.
+
+\begin{proposition}[The boundary is a real obstruction]\label{ex:boundary}
+No strictly positive uniform rate in \eqref{ex:gain} is possible for all
+independent positive-variance summands of support span at most one.
+Even a uniformly positive rate as $b\uparrow1$ is impossible.
+\end{proposition}
+\begin{proof}
+For $0<\varepsilon<1$, let $Z$ equal $\varepsilon-1$ with probability
+$\varepsilon$, and $\varepsilon$ otherwise. It is centered, has positive
+variance $\varepsilon(1-\varepsilon)$ and span one.
+For $j$ independent copies, $W=j\varepsilon-M$ with integer-valued
+$M$, so $\{j\varepsilon-W\}=0$ identically. The right side of
+\eqref{ex:gain} is positive for every $r>0$ and finite $K>0$.
+
+For the boundary limit, the centered variable taking values $\pm b/2$
+with equal probabilities has variance $b^2/4$ and characteristic modulus
+$|\cos(\pi b)|$. As $b\uparrow1$, this modulus tends to one while the
+variance tends to $1/4$. A positive uniform exponential decay rate would
+contradict these limits. Directly for \eqref{ex:gain}, choose $w=-b/2$:
+then $\E\{w-Z\}=(1-b)/2\to0$, also contradicting a positive uniform
+rate with finite fixed $K$. In fact $1-|\cos(\pi b)|$ vanishes quadratically
+in $1-b$, consistently with the rate in Lemma~\ref{ex:harmonic}.
+\end{proof}
+
+\section{An actual iid law with arbitrarily small moment resources}
+The obstruction can be realized by the actual conditional laws of a
+centered, variance-one iid marginal with a large central gap. It is not
+merely an optimizer of a moment relaxation.
+
+For rational $\varepsilon,t>0$, set
+\begin{equation}\label{ex:family}
+ q=\frac{1+\varepsilon-\varepsilon^2}{1+t^2},\quad
+ p=1-q,\quad r=tq,
+ \qquad 0<\varepsilon<p<1.
+\end{equation}
+Let $Y$ take the values $\varepsilon-1,\varepsilon,1$ with respective
+probabilities $q\varepsilon,q(1-\varepsilon),p$, and put $X=(Y-p)/r$.
+Direct calculation gives
+\[
+ \E Y=p,\quad
+ \operatorname{Var}(Y)=q\{p+\varepsilon(1-\varepsilon)\}=r^2.
+\]
+Therefore $X$ is exactly centered and standardized. The first two atoms
+are negative, and the third is positive. In the actual sign split,
+$\ell=1/r$, $U_1=0$, and
+\[
+ U_0=\begin{cases}\varepsilon-1,&\text{probability }\varepsilon,\\
+                  \varepsilon,&\text{probability }1-\varepsilon.
+       \end{cases}
+\]
+Thus the actual conditional amplitude is $1-\varepsilon$, its span is
+one, the normalized central-gap increment is $c_{\rm gap}=1-\varepsilon$,
+and $\lambda=nq\varepsilon(1-\varepsilon)$.
+In particular the central gap is wide even when the harmonic estimate
+fails completely.
+
+For a fixed interior count $k$, the actual conditional sum has the law
+\[
+ V_k=(n-k)\varepsilon-\operatorname{Bin}(n-k,\varepsilon).
+\]
+With $w=(n-k)\varepsilon$, its fractional-part gain is zero. For the four
+examples checked below, $n=42$, $k=17$ and
+$u=\eta=w/2$ give a legal phase $|u|\le1/2$, $0<\eta\le1$, and
+$w=u+\eta$, exactly as in the marked-crossing argument. Its own-count
+variance is $(n-k)\varepsilon(1-\varepsilon)>0$.
+
+The physical defect is computed from the actual gaps, not from the
+two-point skeleton:
+\[
+ \rho=\E|X|^3,\quad\gamma=\E X^3,\quad
+ J=\sum_{x_i<x_{i+1}}
+       \left(\sum_{x_j\ge x_{i+1}}p_jx_j\right)(x_{i+1}-x_i)^2,
+ \qquad D=(3+\sqrt{10})\rho-\gamma-3J.
+\]
+The exact checker uses rational moments and the directed enclosure
+\[
+ 3.162277660168379331<\sqrt{10}<3.162277660168379332,
+\]
+verified by squaring positive rationals. Its first law, with
+$\varepsilon=1/100$, $t=21/25$, is explicitly
+\[
+\begin{array}{c|ccc}
+x&-198687/70693&-169661/212079&25/21\\\hline
+\Pp(X=x)&10099/1705600&999801/1705600&6957/17056.
+\end{array}
+\]
+It has $|X|<2.811$, $1.11975<\rho<1.11976$, and
+$0.67024<D<0.670241$. The four fixed examples satisfy:
+\begin{center}\small
+\begin{tabular}{@{}cccc@{}}\toprule
+$\varepsilon$ & $t$ & strict upper bound for $D$ & strict upper bound for $\lambda$\\\midrule
+$10^{-2}$ & $21/25$ & $0.670241$ & $0.246199$\\
+$10^{-3}$ & $21/25$ & $0.070624$ & $0.024625$\\
+$10^{-6}$ & $21/25$ & $0.000738$ & $0.000025$\\
+$10^{-9}$ & $849/1000$ & $0.0000001$ & $0.0000001$\\\bottomrule
+\end{tabular}
+\end{center}
+Every example satisfies its own recorded v6 moment-cell defect bound,
+weighted $nD$ bound, and strict actual-gap criterion, as well as $D<0.784$.
+This is a fresh exact comparison with the pinned table, not a replay of
+the Fourier calculation that originally produced that table.
+
+The last example also meets every listed moment, probability and inner-gap
+bound of the retained response theorem's central row 19. Its sole failed
+listed domain bound is the support radius $1.84$: its rare outer atom has
+magnitude greater than $2.875$. Thus that theorem cannot be applied on
+the strength of its favorable moment bounds alone.
+
+\begin{corollary}[No moment-only amplitude implication]\label{ex:arbitrary}
+For every $\delta>0$ there is an actual centered variance-one finite law
+supported in $[-96/25,96/25]$, with positive conditional noise,
+$D<\delta$ and $\lambda<\delta$ at $n=42$, whose negative conditional
+residual span is exactly one and whose fractional-part gain vanishes
+at a legal marked phase. The normalized central-gap increment can be
+arbitrarily close to one.
+\end{corollary}
+\begin{proof}
+At $\varepsilon=0$ the positive-weight part of \eqref{ex:family} is
+the standardized two-point law at $-t,1/t$, with positive probability
+$p=t^2/(1+t^2)$. Its defect is
+\[
+ D_B=\frac{(6+2\sqrt{10})(p-p_*)^2}{\sqrt{p(1-p)}},
+ \qquad p_*=(4-\sqrt{10})/2.
+\]
+This follows by substituting $\rho_B,\gamma_B$ and $J_B=t+1/t$.
+Choose positive rational $t$ arbitrarily near
+$\sqrt{p_*/(1-p_*)}$. Then $D_B$ is arbitrarily small.
+For this fixed $t$, let positive rational $\varepsilon$ tend to zero.
+All moments are continuous. The extra outer-gap weight tends to zero,
+so the displayed finite gap formula gives $D\to D_B$ as well;
+$\lambda\to0$ while the conditional span remains one.
+At the limiting value of $t$, the outer atom tends to
+$-(1+2t^2)/t$. Here $0.84<t<0.85$, so its magnitude is less than
+$2(0.85)+1/0.84<3$. The support is therefore within
+$[-96/25,96/25]$ in a neighborhood. The sign, phase and positive-noise
+conditions also hold for all sufficiently small $\varepsilon$.
+\end{proof}
+
+These laws are not asserted to satisfy a maximizing contact inequality,
+nonnegative fixed-target excess, or all new signed-acquisition outputs.
+They do not refute the sharp conjecture or the retained local theorem.
+They refute the proposed implication from small moment resources and an
+actual central gap alone to a positive fractional-part gain or a small
+conditional amplitude. Contact-based confinement or a quantitatively
+proved replacement for harmonic nonresonance remains an essential missing
+edge in that shortcut.
+
+\end{document}

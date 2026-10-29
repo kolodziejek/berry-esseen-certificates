@@ -1,0 +1,319 @@
+{
+  "status": "PASS_ALLOCATION_PRESERVING_OWN_COUNT_CONTROLS",
+  "scope": "Local analytic inequalities and bounded actual-law controls; no full moderate-noise comparison",
+  "normalization_gates": {
+    "sqrt_variance": "191/875000",
+    "near_delta": "329/12500",
+    "normal_lower": "18377/2016000",
+    "normal_upper": "13577/1920000",
+    "normal_variance_coefficient": "91/256",
+    "moment_sign_gate_through_point_one": "4/125"
+  },
+  "actual_laws": 36,
+  "moment_cases": 360,
+  "own_event_cases": 360,
+  "cubic_repair_cases": 360,
+  "fixtures": [
+    {
+      "n": 42,
+      "p": "2/5",
+      "lambda": "1/20",
+      "allocation": "0",
+      "a0": "5/1512",
+      "a1": "0"
+    },
+    {
+      "n": 42,
+      "p": "2/5",
+      "lambda": "1/20",
+      "allocation": "1/2",
+      "a0": "5/3024",
+      "a1": "5/2016"
+    },
+    {
+      "n": 42,
+      "p": "2/5",
+      "lambda": "1/20",
+      "allocation": "1",
+      "a0": "0",
+      "a1": "5/1008"
+    },
+    {
+      "n": 42,
+      "p": "2/5",
+      "lambda": "3/40",
+      "allocation": "0",
+      "a0": "5/1008",
+      "a1": "0"
+    },
+    {
+      "n": 42,
+      "p": "2/5",
+      "lambda": "3/40",
+      "allocation": "1/2",
+      "a0": "5/2016",
+      "a1": "5/1344"
+    },
+    {
+      "n": 42,
+      "p": "2/5",
+      "lambda": "3/40",
+      "allocation": "1",
+      "a0": "0",
+      "a1": "5/672"
+    },
+    {
+      "n": 42,
+      "p": "1/2",
+      "lambda": "1/20",
+      "allocation": "0",
+      "a0": "1/252",
+      "a1": "0"
+    },
+    {
+      "n": 42,
+      "p": "1/2",
+      "lambda": "1/20",
+      "allocation": "1/2",
+      "a0": "1/504",
+      "a1": "1/504"
+    },
+    {
+      "n": 42,
+      "p": "1/2",
+      "lambda": "1/20",
+      "allocation": "1",
+      "a0": "0",
+      "a1": "1/252"
+    },
+    {
+      "n": 42,
+      "p": "1/2",
+      "lambda": "3/40",
+      "allocation": "0",
+      "a0": "1/168",
+      "a1": "0"
+    },
+    {
+      "n": 42,
+      "p": "1/2",
+      "lambda": "3/40",
+      "allocation": "1/2",
+      "a0": "1/336",
+      "a1": "1/336"
+    },
+    {
+      "n": 42,
+      "p": "1/2",
+      "lambda": "3/40",
+      "allocation": "1",
+      "a0": "0",
+      "a1": "1/168"
+    },
+    {
+      "n": 42,
+      "p": "53/100",
+      "lambda": "1/20",
+      "allocation": "0",
+      "a0": "25/5922",
+      "a1": "0"
+    },
+    {
+      "n": 42,
+      "p": "53/100",
+      "lambda": "1/20",
+      "allocation": "1/2",
+      "a0": "25/11844",
+      "a1": "25/13356"
+    },
+    {
+      "n": 42,
+      "p": "53/100",
+      "lambda": "1/20",
+      "allocation": "1",
+      "a0": "0",
+      "a1": "25/6678"
+    },
+    {
+      "n": 42,
+      "p": "53/100",
+      "lambda": "3/40",
+      "allocation": "0",
+      "a0": "25/3948",
+      "a1": "0"
+    },
+    {
+      "n": 42,
+      "p": "53/100",
+      "lambda": "3/40",
+      "allocation": "1/2",
+      "a0": "25/7896",
+      "a1": "25/8904"
+    },
+    {
+      "n": 42,
+      "p": "53/100",
+      "lambda": "3/40",
+      "allocation": "1",
+      "a0": "0",
+      "a1": "25/4452"
+    },
+    {
+      "n": 43,
+      "p": "2/5",
+      "lambda": "1/20",
+      "allocation": "0",
+      "a0": "5/1548",
+      "a1": "0"
+    },
+    {
+      "n": 43,
+      "p": "2/5",
+      "lambda": "1/20",
+      "allocation": "1/2",
+      "a0": "5/3096",
+      "a1": "5/2064"
+    },
+    {
+      "n": 43,
+      "p": "2/5",
+      "lambda": "1/20",
+      "allocation": "1",
+      "a0": "0",
+      "a1": "5/1032"
+    },
+    {
+      "n": 43,
+      "p": "2/5",
+      "lambda": "3/40",
+      "allocation": "0",
+      "a0": "5/1032",
+      "a1": "0"
+    },
+    {
+      "n": 43,
+      "p": "2/5",
+      "lambda": "3/40",
+      "allocation": "1/2",
+      "a0": "5/2064",
+      "a1": "5/1376"
+    },
+    {
+      "n": 43,
+      "p": "2/5",
+      "lambda": "3/40",
+      "allocation": "1",
+      "a0": "0",
+      "a1": "5/688"
+    },
+    {
+      "n": 43,
+      "p": "1/2",
+      "lambda": "1/20",
+      "allocation": "0",
+      "a0": "1/258",
+      "a1": "0"
+    },
+    {
+      "n": 43,
+      "p": "1/2",
+      "lambda": "1/20",
+      "allocation": "1/2",
+      "a0": "1/516",
+      "a1": "1/516"
+    },
+    {
+      "n": 43,
+      "p": "1/2",
+      "lambda": "1/20",
+      "allocation": "1",
+      "a0": "0",
+      "a1": "1/258"
+    },
+    {
+      "n": 43,
+      "p": "1/2",
+      "lambda": "3/40",
+      "allocation": "0",
+      "a0": "1/172",
+      "a1": "0"
+    },
+    {
+      "n": 43,
+      "p": "1/2",
+      "lambda": "3/40",
+      "allocation": "1/2",
+      "a0": "1/344",
+      "a1": "1/344"
+    },
+    {
+      "n": 43,
+      "p": "1/2",
+      "lambda": "3/40",
+      "allocation": "1",
+      "a0": "0",
+      "a1": "1/172"
+    },
+    {
+      "n": 43,
+      "p": "53/100",
+      "lambda": "1/20",
+      "allocation": "0",
+      "a0": "25/6063",
+      "a1": "0"
+    },
+    {
+      "n": 43,
+      "p": "53/100",
+      "lambda": "1/20",
+      "allocation": "1/2",
+      "a0": "25/12126",
+      "a1": "25/13674"
+    },
+    {
+      "n": 43,
+      "p": "53/100",
+      "lambda": "1/20",
+      "allocation": "1",
+      "a0": "0",
+      "a1": "25/6837"
+    },
+    {
+      "n": 43,
+      "p": "53/100",
+      "lambda": "3/40",
+      "allocation": "0",
+      "a0": "25/4042",
+      "a1": "0"
+    },
+    {
+      "n": 43,
+      "p": "53/100",
+      "lambda": "3/40",
+      "allocation": "1/2",
+      "a0": "25/8084",
+      "a1": "25/9116"
+    },
+    {
+      "n": 43,
+      "p": "53/100",
+      "lambda": "3/40",
+      "allocation": "1",
+      "a0": "0",
+      "a1": "25/4558"
+    }
+  ],
+  "illustrative_gain": {
+    "new": "55479/800000",
+    "old": "-13641/800000",
+    "difference": "54/625"
+  },
+  "negative_controls": [
+    "Wrong favorable sign coefficient fails on actual centered positive-noise law",
+    "Finite-sum correction does not preserve allocation concavity",
+    "Minimum of convex tail bounds need not be convex"
+  ],
+  "source_sha256": "e8293c54cdead4a241b5f70d2526bc922c2116293a854df929449596842b18b2",
+  "script_sha256": "ad20b72b367cc213d1f3783858ee4a84c19d2f4c02c8b89fd157a97ebe5f1a8c",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]"
+}

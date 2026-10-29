@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/small-review-v16/mathematics/simplification-v16/2026-10-29/small-review-check.py", line 14, in <module>
+    if hashlib.sha256(raw).hexdigest()!=PIN:raise ValueError('Unreviewed proof bytes')
+ValueError: Unreviewed proof bytes

@@ -1,0 +1,33 @@
+{
+  "final": {
+    "active_signed_cells": 654,
+    "cells_below2": 14,
+    "cells_below_target": 14,
+    "max_D": "74519531/100000000",
+    "max_raw": "42891723/20000000",
+    "remaining_rho_cells": 14,
+    "rho_upper": "71527/48000",
+    "step": 6,
+    "tested_signed_cells": 1792
+  },
+  "input_sha256": {
+    "runs/fixed-target-v6-20261027/signed-two-pass02/stdout.json": "c52122bea63beaed83de741a347863a39fb0faeaa34dec5dc4b2741a0a88594a",
+    "runs/fixed-target-v7-20261027/signed07/receipt.json": "87d00f8d45d1f6029f3a9da706481184334a772c2f78db43cce21e58667add4d",
+    "runs/fixed-target-v7-20261027/signed07/stdout.json": "aa21e4a83cb5008028e9c885a603feeb8c6ba3d8bb4c5cd4b70e87a6a6c7cb5a"
+  },
+  "limitations": "No constructor imports, no numerical leaf reevaluation, no Fourier or BASE41 acceptance.",
+  "rejected_controls": [
+    "missing rho row",
+    "duplicate identity",
+    "wrong initial raw",
+    "false peak",
+    "lost signed cells"
+  ],
+  "signed_cells_accounted": 14848,
+  "source_pins": {
+    "signed_core.py": "1f40ccb90eb58a7f84dc61a0a5dd9bf6e6eb4e341aa6c9c6d049d08451f5211b",
+    "signed_probe.py": "1bec84b1d7be1046f02a5eded4242b253fc98ce040d5b94c5dbb1942c7166fd6",
+    "signed_support.py": "eecb06e65d8520d7cc06fc34217e06e1c0b1840dd8d687621e6828923769a4c4"
+  },
+  "status": "PASS_STRUCTURAL_ACCOUNTING_ONLY"
+}

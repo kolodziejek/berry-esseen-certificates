@@ -1,0 +1,73 @@
+{
+  "result": "PASS",
+  "checks": 240,
+  "right_phase_noise_strata": 28,
+  "mapping_cases": 12,
+  "negative_controls": [
+    "replace s by standardized theta",
+    "replace s by standardized theta",
+    "replace s by standardized theta",
+    "replace s by standardized theta",
+    "replace s by standardized theta",
+    "replace s by standardized theta",
+    "replace s by standardized theta",
+    "replace s by standardized theta",
+    "replace s by standardized theta",
+    "extend right comparison to coarse p=.535",
+    "infer common .6 strip from .7 strip",
+    "infer left C range from C>=.4 alone",
+    "delete compound negative-inner component",
+    "delete zero-noise Bernoulli branch",
+    "equate reflected closed error with original negative closed error",
+    "reflect probability interval without reacquisition",
+    "infer unconditional700 from BASE41 plus conditional tail"
+  ],
+  "source_pins": {
+    "right": {
+      "path": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v15/mathematics/simplification-v15/2026-10-28/right-direct.tex",
+      "sha256": "5946340c178bc54c5094fcde567ec2c260a1abd0d39daf16306dadbb12971d67"
+    },
+    "left": {
+      "path": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v15/mathematics/simplification-v15/2026-10-28/geometry-left.tex",
+      "sha256": "3de45fc739fd304b9e8c073fd0cc20537faa04033ae0323b63b7144f072a845f"
+    },
+    "old-right03": {
+      "path": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/join-review-v15/mathematics/simplification-v11/2026-10-28/counts-v11.tex",
+      "sha256": "209f173c19a73c4fecf5aaf9aa2732c30b72266ff3f1673ddd52fa4a4e6c4641"
+    },
+    "left01": {
+      "path": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/join-review-v15/mathematics/simplification-v12/2026-10-28/leftcount.tex",
+      "sha256": "f038aa62e039bfe48482fe69c1438553e90f7c246bf0fa74322115c33ea76ea9"
+    },
+    "right-outer": {
+      "path": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/join-review-v15/mathematics/simplification-v12/2026-10-28/outer.tex",
+      "sha256": "72ff7ae27bdbecfa0a535dd62e52417de9bab370b7004af8b86e9e99f491facc"
+    },
+    "right-inner": {
+      "path": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/join-review-v15/mathematics/simplification-v12/2026-10-28/compound-proof.tex",
+      "sha256": "5b9d8428b6aa10bc3fff44114cd26c482b88692f76dd624b841c79d5b4a753fa"
+    },
+    "geometry-noise": {
+      "path": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/join-review-v15/mathematics/simplification-v13/2026-10-28/geometry-noise.tex",
+      "sha256": "f538debff3c902dc03aea4a3ebee64e19f414a6e8cc68aae0c803ccdb886e9de"
+    },
+    "left-strip": {
+      "path": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/join-review-v15/mathematics/simplification-v11/2026-10-28/leftpanels.tex",
+      "sha256": "63b11a2df99e2bf8af24040bebe522946adb4496cd7b9c993e190ee9d1340c26"
+    },
+    "right-strip": {
+      "path": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/join-review-v15/mathematics/simplification-v10/2026-10-28/geometry.tex",
+      "sha256": "e753afc6a731f728119d38d422a2ab5e3c890a1e2ef0b40a6841ec83d7a185b2"
+    },
+    "coarse-entry": {
+      "path": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/join-review-v15/manuscript/arxiv-v1/sections/04-fixed-entry.tex",
+      "sha256": "db7156ca43f874b29216d6f297d74ea79ace4b988ec200a93a169e0d342498d8"
+    },
+    "reflection-first-failure": {
+      "path": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/join-review-v15/manuscript/arxiv-v1/sections/02-fixed-target.tex",
+      "sha256": "5a00687b76390fcaa4c57f9f893d070b23bf3119eda8aa4b82d66c3b4c0b509b"
+    }
+  },
+  "checker_sha256": "ea0aaedcdeb642a55d9fcbb4cfaace394b2461368c23759838edc73cb55d00df",
+  "scope": "Component-domain composition; does not reprove component inequalities or acquisition."
+}

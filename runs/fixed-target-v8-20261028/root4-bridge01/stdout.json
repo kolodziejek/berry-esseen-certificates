@@ -1,0 +1,36 @@
+{
+  "Q_only_replacement_counterexample": {
+    "actual_CDF": "81/65536",
+    "eta": "45/224",
+    "raw_H": "-6",
+    "reference_CDF": "0",
+    "rho": "43/32"
+  },
+  "complete_C4_claim": false,
+  "counts": {
+    "actual_laws": 9,
+    "closed_threshold_collisions": 103,
+    "conditional_cantelli_events": 1105,
+    "conditional_moment_pairs": 45,
+    "polynomial_common_measure_identities": 65,
+    "reject_complementary_reflection_mass": 7,
+    "zero_excess_contact_cases": 4
+  },
+  "iid_required_control": {
+    "dependent_all_equal_CDF": "1/2",
+    "iid_CDF": "5/16",
+    "raw_H": "-2"
+  },
+  "native_ROOT4_executed": false,
+  "negative_controls": [
+    "Q-only CDF replacement",
+    "complementary reflected sign mass",
+    "dependent vector with iid binomial weights",
+    "half-sized raw midpoint reserve",
+    "half-sized H chord reserve",
+    "lower-only denominator for negative numerator"
+  ],
+  "source_imports": false,
+  "status": "PASS_BOUNDED_EXACT_ROOT4_PHYSICAL_CONTROLS",
+  "tail_Phi_lower": "2812380626649/3006477107200"
+}

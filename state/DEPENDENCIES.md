@@ -1,94 +1,46 @@
-# Third-round proof-reference dependencies — 27 October 2026
+# Selected dependency graph — v16, 29 October 2026
 
-- The scalar LOCAL42 reformulation is equivalent only because positive
-  closed attainment makes the extremal-pair set nonempty and its conjunction
-  has no omitted pair-dependent premise. Equality remains included.
-- The Fourier affine-resource specialization with D<=D_* uses N=n in the
-  weighted theorem. The floor-N version still requires nD<=N d_D.
-- Coarse Gaussian constants do not establish the fifteen-decimal pi endpoints;
-  the finer Machin/alternating-series recipes remain explicit.
-- The finite paired rectangle retains R<2g, M>=3 and its signed exact Gaussian
-  integral. Only common polynomial/norm derivations are cross-referenced.
-- The strict-gap concentration proof is index-independent; its separate
-  floor47/J0=45 mass bound remains. No reference extends it to floor42 by itself.
-- Curvature convexity uses corrected bracket3(b+u−1)+2(c−u)>0; other pieces
-  still require c<=1 and u<=1/2. The theorem's domain and zero-clamp gates stay.
+Definitions and exact joins:mathematics/simplification-v16/2026-10-29/composition.tex.
+Source locations and old-edge removals:acquisition-audit.md in the same folder.
+All actual distributions on an edge are the same oriented iid marginal.
 
-# Manuscript revision dependency clarifications — 27 October 2026
+1. Failure -> positive closed-event orientation -> compact attained fixed-target
+   witness atCE with nonnegative excess. Retained attainment/reflection input.
+   True C_(n-1)<=CE is a separate predecessor premise.
+2. Witness + predecessor + retained structural/conservation/support/Fourier
+   inputs + complete2coarse/4signed certificate -> nD<=32.20665378 and
+   raw|H|<=1.83605680. The11264-box and internal100-panel contracts remain.
+3. Compact standardized law + n>=700 + that actual weighted D budget ->
+   actual central gap,p in(.375,.465),d<.004,theta<.0036,ell>1.996,
+   rho<9/8,beta(.066148,.2527),lambda<.35. New scalar proof needs no
+   inherited probability panel or numerical radius.
+4. Step3 + actual fixed-target contact/heat bounds + nonnegative excess +
+   true predecessor -> common amplitude.6 by two complete contact rays.
+5. Step3+4 + acquired rawH -> full common-strip local theorem:
+   (a)0<lambda<=.01:small-common.tex,allC>=0,shifted phase[-.3,.7],
+      complete fourth-moment tails and quartic own-count minorant;
+   (b).01<=lambda<=.35:unified-comparison.tex Compact row,five counts,
+      full signed curvature/normal/cubic corrections,four endpoints;
+   (c)lambda0:actual Bernoulli directly.
+   Schulz strict all-p theorem supplies the binomial input in all branches.
+6. Negative excess contradicts the acquired nonnegative witness at n>=700.
+   With genuineBASE41 and implications at every least failure, any first
+   failure lies42..699. This is NOT an unconditional cutoff700.
 
-- The exact conserved identity requires one common actual iid marginal,
-  closed-support contact, positive score and bounded support before higher
-  moments. Gap leakage uses `[a,b)`, excluding the upper-endpoint atom.
-- Unweighting needs an established raw remainder ceiling `r_0 < 2N/5`
-  with `C >= C_E` and `n >= N >= 2`. Positivity of `gamma+3J` then follows;
-  `D >= 0` by itself does not give it.
-- Extra phase curvature additionally needs a positive previous density
-  floor and `0.4095 rho - d_D/15 > 0`. The weighted bound is `nD <= Nd_D`.
-- The exact count identity does not by itself give errors relative to
-  arbitrarily small conditional variance. Those uniform bounds remain
-  separate analytic steps in LOCAL42.
-- Zero physical defect implies the oriented extremal Bernoulli law by
-  the nonnegative decomposition. A reflected law need not have zero D.
-- No edge into BASE41 or complete LOCAL42 has been removed in this revision.
-  Full unique Fourier-atlas content remains in the manuscript.
+Pointwise mapping:U=(X-m_B)/ell,E(U|B)=0,1=v ell²+theta,
+s=theta/ell²,v+s=ell^-2,lambda=ns=n theta/ell².
+RawH is unchanged; the count threshold is np+H/ell.
+Reflection requires reacquisition; signedD andp interval are not invariant.
 
-# Manuscript dependency checkpoint — 27 October 2026
+New proof removes downstream panels/noise tables and all selected Poisson,
+Pinelis and291-cell edges. General gap/cubic identities and contact remain.
+The acquisition note deliberately also records a fallback v15 join; its old
+small-noise dependencies are absent from the selected v16 composition only.
+The wider n>=200 right union still retains the v11 scalar Poisson estimate;
+no claims are extended to n42..199 or to old theorems' full original domains.
 
-The main conditional theorem is BASE41 (independent sharp prefix) plus
-LOCAL42 (equality-inclusive actual-law exclusion) plus proved attainment
-and uniform smoothing. It is not an arithmetic-PASS theorem by definition.
-
-Source correspondence: manuscript/arxiv-v1/research/manuscript-review.md.
-The main text includes attainment/contact, smoothing, support65, physical
-joint defect, count/crossing identities, score charge and exact curvature.
-Appendices include moment domains, normalization, uniform42 interpretation,
-legacy support, the full retained Fourier/local derivations, signed finite42
-refinements and S4/S6/A3–A18 finite arguments. Supplied proof-candidate scope
-and unexecuted numerical predicates are explicit.
-
-C5 consumes genuine C4, global contact, direct n>=2 support and all six
-whole-H endpoint predicates before supported Fourier. Rational ray gates
-alone, the coarse global Gaussian bound, and the new n>=42 theorem do not
-prove those endpoints. G4 also retains the G3 certificate condition.
-The harmonic4553 refinement retains896 rational coefficient predicates.
-
-# Dependency checkpoint — 27 October 2026
-
-Proposed upper-index route, retaining exact hypotheses:
-
-    genuine BASE41 + support-free smoothing + equality-compatible attainment
-      -> least n>=42 with C_n>=C_E: zero predecessor decrement,
-         n(C_n-C_E)<3003/10250, own cap73/175, both deleted caps<.4253
-    zero loss + attained same-law contact + actual ordered moment resources
-      + Gaussian derivative norms through5 + direct derivative bound
-      -> elementary three-case support for all65 calls at actual n>=42
-    complete original resources/confinement + signed phase quadratic envelope
-      + retained score-excess charge + original same-law joint geometry
-      -> tighter coherent inward/noise intercepts, specified empty sectors
-    full whole-count comparison + original LOW gates
-      -> exact3-candidate curvature + zero-clamp transport of strict target
-    surviving TINY/MID/150LOW + zero-noise Bernoulli + new complete join
-      -> conditional LOCAL42; first failure then gives strict tail42.
-
-Read mathematics/reduction2/2026-10-27/{elementary-support,local-kernel,
-tighter-resources}.md for exact statements, source hashes/lines, and edge
-hypotheses. Earlier uniform42.md carries all-index interface obligations.
-No truth of actual acquired resources follows from static JSON/hash binding.
-
-Removals for this NEW alternative support argument: old radial Bernstein,
-new14-group672-coefficient support positivity, fifth-order signed identity,
-fourth-derivative tangent and its domination gates. Contact, scale inequality,
-initial moment inequalities, actual acquisition and remaining local work stay.
-Resource pruning occurs only AFTER acquisition; no ancestor is removed.
-
-Candidate upper-module legacy count238->171->169, before new joins; final169
-is19 native+150 LOW. Four signed profile calls and TINY/MID sectors are internal
-work, not additional whole task savings. Current BASE41 provider closure and
-shared consumers remain unresolved; no whole-repository dead-code conclusion.
-
-Separate one-pass prototype: original152 fresh outputs + original pinned
-serialization/coverage/indices + binder controls -> same old output contract
-without duplicate evaluation. Changed curvature/resources/150 labels require
-a new contract; old byte pins intentionally reject them. Native path untested.
-Any defect in retained analytic/numerical premises propagates to all downstream
-claims. Global sharpness also requires the independent lower approximation.
+Mathematical status:local components derived and independently reviewed;
+acquired/global implications conditional at the listed boundary.
+Execution status:finite scalar/actual-law/review gates freshPASS; final combined
+receipt is runs/simplification-v16-20261029/integration01/receipt.json.
+No new complete Fourier acceptance, finite base, or formalization claimed.

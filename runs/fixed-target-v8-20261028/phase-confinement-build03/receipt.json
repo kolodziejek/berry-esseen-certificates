@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/phase-confinement-v8/mathematics/fixed-target-v8/2026-10-28/phase-confinement-proof/main.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/phase-confinement-v8/runs/fixed-target-v8-20261028/phase-confinement-build03",
+    "--json"
+  ],
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/phase-confinement-v8",
+  "returncode": 0,
+  "elapsed_seconds": 0.9858880043029785,
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "input_sha256": "1ea8f5873c6c90ebfb309d1c663a2b29a384e37716367ad4183092f7a942601d",
+  "helper_sha256": "1b8034d6f4def5eb52cfde6a2701d8ad1df2b265323713bea626ace85e756cd7",
+  "stdout_sha256": "b900311c7777d6563a4c24263a1ca2b53eb7854cf4c4dcc6cd37c63e1f146f65",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "artifacts_sha256": {
+    "main.pdf": "47581c4524941ee5d38cfd0967c7fd65dab769efa616b84195fc50928f2c2c48",
+    "main.log": "12bf2bc6cb96c276febf2b57d4c8cdc71438a35a61658c3827a74abbeadc19ad"
+  }
+}

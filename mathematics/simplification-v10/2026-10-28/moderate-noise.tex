@@ -1,0 +1,370 @@
+\section{Direct comparison on the full interval \texorpdfstring{$0<ns\le1/50$}{0 < ns <= 1/50}}
+\label{v10:moderate}
+
+The following argument uses one outgoing count and elementary estimates for
+the incoming counts. Its only non-elementary probability input is the
+quadratic-hinge Poisson comparison stated below. It needs the original
+$3/5$ conditional strip, but neither half-amplitude confinement nor
+fractional-part smoothing, marked crossings, or count curvature. The
+conclusion is uniform as the noise tends to zero.
+
+\begin{theorem}\label{v10:moderate:theorem}
+Let $n\ge42$, $2/5\le p\le53/100$, $q=1-p$, and $Y=B+U$, where
+$\Pp(B=1)=p$ and $\E(U\mid B)=0$. Write $U_j$ for the conditional law
+of $U$ given $B=j$. Assume
+\[
+ |U_j|\le3/5,\quad U_0\le a_0,\quad U_1\ge-a_1,
+ \qquad a_0,a_1\ge0,\quad d:=a_0+a_1\le9/125.
+\]
+Put $v=pq$, $s=\E U^2$, $\lambda=ns$, $\ell=(v+s)^{-1/2}$,
+$X=\ell(Y-p)$, $\rho=\E|X|^3$, and $\rho_B=(1-2v)/\sqrt v$.
+Let $S_n$ be the sum of $n$ independent copies of $X$. Suppose
+\[
+             0<\lambda\le U_*:=1/50,\qquad |H|\le46/25.
+\]
+Choose an integer $k$ and a phase $u\in[-34/125,91/125]$ with
+$np+H/\ell=k+u$, and put $\delta=k-np$.
+If $F_B$ is the distribution function of $\mathrm{Bin}(n,p)$, then
+$1\le k\le n-1$ and, for every $C\ge0$,
+\begin{align*}
+ \Delta_C:={}&\sqrt n\{\Pp(S_n\le H)-\Phi(H/\sqrt n)\}-C\rho\\
+ &-\sqrt n\{F_B(k)-\Phi(\delta/\sqrt{nv})\}+C\rho_B
+                         <-\lambda/100.
+\end{align*}
+In particular, the sharp Bernoulli bound with $C=\CE$ excludes a
+nonnegative fixed-target excess under these hypotheses.
+\end{theorem}
+
+The interval for $u$ has length one, so the anchor always exists. The
+one-sided strip assumptions enter only the third-moment comparison.
+The comparison itself does not assume contact, a least counterexample,
+or a predecessor theorem. Those are separate obligations for acquiring
+its hypotheses in a global proof.
+
+\subsection{Conditioning and normalization}
+Let $W_j$ be the sum of $j$ independent variables with law $U_1$ and
+$n-j$ with law $U_0$, and let $\pi_j=\binom njp^jq^{n-j}$, zero outside
+the legal counts. Define
+\[
+ \begin{gathered}
+ f(u)=\frac{\Phi((\delta+u)/\sqrt{n(v+s)})-
+                  \Phi(\delta/\sqrt{n(v+s)})}{\pi_k},\\
+ O=\Pp(W_k>u)+f(u),\qquad
+ T=\sum_{i=1}^{n-k}\Pp(W_{k+i}\le u-i).
+ \end{gathered}
+\]
+Conditioning gives the exact identity
+\begin{align*}
+ \Pp(S_n\le H)-F_B(k)
+ ={}&-\sum_{i=0}^k\pi_{k-i}\Pp(W_{k-i}>u+i)\\
+ &+\sum_{i=1}^{n-k}\pi_{k+i}\Pp(W_{k+i}\le u-i).
+\end{align*}
+Thus, if $\pi_{k+i}/\pi_k\le R_0$,
+\begin{equation}\label{v10:moderate:master}
+ \Delta_C\le-\sqrt n\pi_k(O-R_0T)+\mathcal R,
+\end{equation}
+where
+\[
+ \mathcal R=\sqrt n\{\Phi(\delta/\sqrt{nv})-
+             \Phi(\delta/\sqrt{n(v+s)})\}+C(\rho_B-\rho).
+\]
+Outgoing events are strict and incoming events closed throughout.
+
+Here $v\ge v_*:=6/25$ and
+$\sqrt{v+s}<501/1000$. Write
+$\Xi=(46/25)(501/1000)$. Then $|\delta|<D:=33/20$ globally;
+if $|u|\le1/20$, then $|\delta|<1$. In particular $k$ is interior and
+$9/25<k/n<23/40$. On the segment joining $p$ to $k/n$,
+\[
+ |D'''(r\Vert p)|\le6,\quad
+ |(\log(r(1-r)))'|\le5/4,\quad
+ 1/(12r(1-r))<3/8.
+\]
+The absolute values matter because this segment can cross $1/2$.
+Finite Stirling and Taylor's theorem therefore imply
+\begin{equation}\label{v10:moderate:mass}
+ \sqrt n\pi_k=\frac{\phi(0)}{\sqrt v}
+       \exp\{-\delta^2/(2nv)+e\},\qquad
+ n|e|<Z(D_0):=5D_0/8+3/8+D_0^3/42
+\end{equation}
+whenever $|\delta|\le D_0\le D$. This uses the finite formula
+$\log(j!)=(j+1/2)\log j-j+\tfrac12\log(2\pi)+r_j$ with
+$0<r_j<1/(12j)$; its proof is retained in
+\texttt{appendices/count-comparison.tex}, at the paragraph beginning
+``For completeness, the finite Stirling formula used here is''.
+The three errors in \eqref{v10:moderate:mass} are bounded by
+$D_0^3/n^2$, $5D_0/(8n)$, and $3/(8n)$.
+
+For the derivative below, the actual count and $\delta$ are held fixed:
+\[
+ \log f'(t)=-\tfrac12\log(1+s/v)+\frac{\delta^2}{2nv}
+                -\frac{(\delta+t)^2}{2n(v+s)}-e.
+\]
+If $|t|\le b$ and $|\delta|\le D_0$, this gives
+\begin{equation}\label{v10:moderate:derivative}
+ n|\log f'(t)|\le\tfrac83\lambda+
+                 \frac{2D_0b+b^2}{2v_*}+Z(D_0).
+\end{equation}
+Indeed $1/(2v_*)+D^2/(2\cdot42v_*^2)<8/3$ bounds the coefficient
+arising from the variance change. Using
+$0.39886<\phi(0)<0.4$, $e^{-x}\ge1-x$ and
+$e^x\le(1-x)^{-1}$ yields
+\[
+\begin{array}{c|cc}
+ & |u|\le1/20&-34/125\le u\le91/125\\\hline
+ \sqrt n\pi_k\text{ lower bound}&73/100&13/20\\
+ f'\text{ lower bound}&19/20&4/5\\
+ f'\text{ upper bound}&21/20&5/4\\
+ \pi_{k+i}/\pi_k\text{ upper bound}&53/50&3/2\\
+ \mathcal R\text{ upper bound}&2\lambda/n&3\lambda/n
+\end{array}
+\]
+For the global ratio use $\sqrt n\max_j\pi_j<17/20$, obtained from
+\eqref{v10:moderate:mass} at a mode, whose displacement is at most one.
+In the inner range the first exact binomial ratio is at most
+$1+(53/100)/(42v_*)<53/50$. Subsequent ratios are at most one because
+$(n+1)p-k<153/100<2$.
+
+Two improvements for positive phase will be used. For $0\le u\le1/10$
+we have $|\delta|<21/20$, and \eqref{v10:moderate:derivative} gives
+$f'(t)>19/20$. For $0\le u\le91/125$, use
+$\delta=\xi-u$, $|\xi|\le\Xi$. Since $t\mapsto2\delta t+t^2$ is
+convex on $[0,u]$, its maximum is at most
+$\max(0,2\Xi u-u^2)$. Thus
+\[
+ \log f'(t)\ge-\frac1n
+   \left\{\frac{\lambda+2\Xi(91/125)-(91/125)^2}{2v_*}+Z(D)\right\},
+\]
+and $f'(t)>9/10$. Here $91/125<\Xi$, so $2\Xi u-u^2$ is increasing
+on the whole interval. No phase differentiation of the count is used.
+
+To justify the repair row, $a_0<p$ and $a_1<q$ fix the two signs.
+The conditional cubic expansion, with $r=\min(p,q)$, gives
+\[
+ \E|Y-p|^3\ge v(1-2v)+(3r-d)s.
+\]
+Indeed $U_1^3\ge-a_1U_1^2$ and $U_0^3\le a_0U_0^2$.
+The inequality $(1+x)^{3/2}\le1+3x/2+3x^2/8$ then yields
+\[
+ (v+s)^{3/2}(\rho-\rho_B)
+ \ge s\{3r-\tfrac32(1-2v)-d-3(1-2v)s/(8v)\}>0.
+\]
+The bracket is positive from $r\ge2/5$, $v\ge v_*$, and
+$s\le1/2100$. Hence the $C$ term in $\mathcal R$ can be discarded
+for every $C\ge0$. Differentiation of the normal term bounds it by
+$(7/4)\delta_+s$, since $0.2/v_*^{3/2}<7/4$. This proves the table.
+
+Finally, if $s_j=\E U_j^2$, then
+$|s_1-s_0|\le s/\min(p,q)\le(5/2)s$. Consequently
+\begin{equation}\label{v10:moderate:variances}
+ \frac{79}{84}\lambda\le\E W_k^2\le\frac{89}{84}\lambda
+      \quad(|u|\le1/20),\qquad
+ \E W_k^2\le\frac{11}{10}\lambda\quad\hbox{globally},
+\end{equation}
+and $\E W_{k+i}^2\le iV\lambda$ for $i\ge1$, where $V=9/8$ in
+the inner range and $V=7/6$ globally.
+
+\subsection{A rational Poisson bound for all incoming counts}
+We use Pinelis, \emph{On the Bennett--Hoeffding inequality},
+\href{https://arxiv.org/abs/0902.4058}{arXiv:0902.4058}, Proposition~2.8
+and Corollary~2.11, printed page~9. If independent centered summands
+are bounded above by $A>0$ and their total variance is at most $V_0$,
+their sum $Z$ satisfies, with $\mu=V_0/A^2$,
+\begin{equation}\label{v10:moderate:p2}
+ \Pp(Z\ge b)\le
+ \frac{\E(P_\mu-j)_+^2}{(b/A+\mu-j)^2}
+ \quad\text{whenever }j<b/A+\mu,
+\end{equation}
+where $P_\mu$ is Poisson with mean $\mu$. To see the substitution,
+apply the stated quadratic-hinge moment comparison to
+$(x-A(j-\mu))_+^2$ and then Markov's inequality. This also proves the
+closed-tail version directly. In particular the theorem permits variance
+inflation before choosing $j$; no unproved monotonicity in $\mu$ is needed.
+We apply it to $-W_{k+i}$, whose summands also have upper bound $A=3/5$.
+
+For $i=1$, choose $j=1$. Since
+\[
+ \E(P_\mu-1)_+^2=\mu^2-\mu+1-e^{-\mu}
+                    \le\mu^2(1/2+\mu/6),
+\]
+the first incoming probability, when $u\le h<1-A$, is at most
+\begin{equation}\label{v10:moderate:first}
+ Q(\mu,h):=\frac{\mu^2(1/2+\mu/6)}{((1-h)/A-1+\mu)^2},
+ \qquad\mu=V\lambda/A^2.
+\end{equation}
+The exponential inequality follows from Taylor's theorem with its
+nonnegative fourth-order remainder.
+
+For $i\ge2$, choose the integer hinge $j=i$ and inflate the variance
+to $iV\lambda$. If $P$ is any nonnegative integer, then
+\[
+ (P-i)_+^2\le\binom{P}{i+1},\qquad
+ \E(P_{i\mu}-i)_+^2\le\frac{(i\mu)^{i+1}}{(i+1)!}.
+\]
+For the first inequality write $P=i+r$, $r\ge1$. At $i=2$ it is
+$6r^2\le r(r+1)(r+2)$, equivalent to $(r-1)(r-2)\ge0$ for integer
+$r$; increasing $i$ increases the binomial coefficient. The expectation
+is the Poisson factorial moment, obtained directly by shifting its series.
+If $u\le h$, with $h\ge0$, set
+$b_h=1/A-1-h/(2A)>0$. Then
+\[
+ (i-u)/A+i\mu-i\ge i(b_h+\mu)>0,
+\]
+so all hinges are admissible and
+\[
+ \Pp(W_{k+i}\le u-i)\le
+    \frac{i^{i-1}\mu^{i+1}}{(i+1)!(b_h+\mu)^2}.
+\]
+The ratio of successive coefficients $i^{i-1}/(i+1)!$ is less than
+$e<3$. The first term is $\mu^3/[3(b_h+\mu)^2]$. Therefore, when
+$3\mu<1$,
+\begin{equation}\label{v10:moderate:rest}
+ \sum_{i\ge2}\Pp(W_{k+i}\le u-i)
+ \le J(\mu,h):=\frac{\mu^3}{3(b_h+\mu)^2(1-3\mu)}.
+\end{equation}
+This is an infinite-tail bound, not a truncated numerical sum. Illegal
+counts are absent from the original sum and only increase its upper bound.
+
+We will use $Q+J$ for negative and inner phases, and Cantelli plus $J$
+for positive outer phases. To obtain bounds relative to arbitrarily small
+$\lambda$, note that $J(\mu,h)/\lambda$ increases with $\mu$:
+apart from a positive constant it is
+$\mu^2/\{(b_h+\mu)^2(1-3\mu)\}$. If
+$a_h=(1-h)/A-1>0$ and $\mu\le a_h$, then $Q(\mu,h)/\lambda$
+also increases, being proportional to
+$\mu(a_h+\mu)^{-2}(1/2+\mu/6)$.
+All these conditions are checked below at $\lambda=U_*$.
+
+\subsection{A lower bound for the own count}
+For a centered independent sum $W$ with summands bounded in absolute
+value by $A$ and variance $t$, the moment expansion gives
+$|\E W^3|\le At$ and $\E W^4\le A^2t+3t^2$.
+Set $\alpha=1/2$ and
+\[
+ h_\alpha(x)=\frac{-x^4+3\alpha^2x^2+2\alpha^3x}{5\alpha^4}.
+\]
+The numerator factors as $-x(x+\alpha)^2(x-2\alpha)$, so it is
+nonpositive for $x\le0$; its positive maximum is
+$(9+6\sqrt3)\alpha^4/4<5\alpha^4$.
+Thus $h_\alpha\le\mathbf1_{(0,\infty)}$, including at zero. For
+$r\ge0$ and $\sigma\in\{-1,1\}$, expansion gives
+\[
+ \Pp(W+\sigma r>0)\ge
+ \frac{(3\alpha^2-A^2)t-3t^2-4Art-6r^2t-r^4
+                  +3\alpha^2r^2+2\sigma\alpha^3r}{5\alpha^4}.
+\]
+Put $T_*=(89/84)U_*=89/4200$. After adding $br$, dividing by
+$t>0$, and writing $r=zt$, the lower bound becomes
+\begin{align*}
+ F_{\sigma,b}(z,t)={}&\frac{3\alpha^2-A^2-3t}{5\alpha^4}
+ +\left(\frac{2\sigma}{5\alpha}+b-\frac{4At}{5\alpha^4}\right)z\\
+ &+\frac{3\alpha^2t-6t^2}{5\alpha^4}z^2
+       -\frac{t^3z^4}{5\alpha^4}.
+\end{align*}
+For fixed $z\ge0$ this is concave in $t\ge0$, so its minimum over
+$0\le t\le T_*$ occurs at an endpoint. At each endpoint, replacing
+$z^4$ by $z_0^2z^2$ gives a lower quadratic on $0\le z\le z_0$.
+The endpoints and any eligible vertex give
+\begin{align*}
+ F_{1,-21/20}(z,t)&>3/8 &&(0\le z\le2),\\
+ F_{-1,19/20}(z,t)&>1 &&(0\le z\le3/2).
+\end{align*}
+Their exact rational margins are at least respectively
+\[
+ \frac{72589549}{5788125000},\qquad \frac{5518861753}{126554117375}.
+\]
+This proves the bounds on rectangles, including their limiting edge
+$t=0$; it is not a sampled small-noise assertion.
+
+For $u=-r$ and $r\ge2t$, Cantelli gives
+$O\ge r^2/(t+r^2)-(21/20)r$. At $r=2t$ this is greater than
+$(3/8)t$, and its derivative in $r$ is positive there. The derivative
+$2rt/(t+r^2)^2-21/20$ first increases and then decreases, because its
+derivative has the sign of $t-3r^2$. Hence any later stationary point
+is a maximum, and the minimum on $[2t,1/20]$ is at an endpoint.
+At $r=1/20$ the desired bound is checked at $t=T_*$, since the left
+side decreases and $(3/8)t$ increases with $t$.
+The switch $2T_*<1/20$ is valid. For positive phase the quartic
+handles $0\le r\le3t/2$; beyond it,
+$O\ge f(r)>(19/20)r>t$. Also $3T_*/2<1/20$.
+Together with \eqref{v10:moderate:variances}, this proves
+\begin{equation}\label{v10:moderate:own}
+                  O>\frac38\frac{79}{84}\lambda
+                         \quad\text{if }|u|\le1/20.
+\end{equation}
+
+\subsection{Four closed phase intervals complete the comparison}
+All remaining quantities in this paragraph are rational numbers evaluated
+at $U_*=1/50$. Define
+\[
+ \mu_I=\frac{(9/8)U_*}{A^2}=\frac1{16},\qquad
+ \mu_G=\frac{(7/6)U_*}{A^2}=\frac7{108}.
+\]
+The four values of $b_h$, for $h=0,1/20,1/10,91/125$, are
+$2/3,5/8,7/12,3/50$, all positive; $3\mu_G<1$.
+For the two uses of $Q$, $a_{1/20}=7/12>\mu_I$ and
+$a_0=2/3>\mu_G$.
+
+\paragraph{Inner phase: $|u|\le1/20$.}
+Put $T_I=Q(\mu_I,1/20)+J(\mu_I,1/20)$. The monotonicity proved
+above gives $T\le(T_I/U_*)\lambda$. The bracket in
+\eqref{v10:moderate:master} is positive, and
+\[
+ \frac{73}{100}\left\{\frac38\frac{79}{84}
+              -\frac{53}{50}\frac{T_I}{U_*}\right\}
+       -\frac2{42}-\frac1{100}
+                 =\frac{113307367}{16930513600}>0.
+\]
+This proves the strict comparison, uniformly for $\lambda\downarrow0$.
+
+\paragraph{Negative outer phase: $-34/125\le u\le-1/20$.}
+Put $T_G=(11/10)U_*$ and
+\[
+ L_-:=\min_{r\in\{1/20,34/125\}}
+               \left\{\frac{r^2}{T_G+r^2}-\frac54r\right\}.
+\]
+The derivative is positive at $r=1/20$ and has at most one later
+zero, a maximum, by the same derivative argument as above. Hence
+Cantelli gives $O\ge L_-$. Since $u\le0$,
+$T\le Q(\mu_G,0)+J(\mu_G,0)$. The final sufficient margin is
+\[
+ \frac{13}{20}\left\{L_--\frac32[Q(\mu_G,0)+J(\mu_G,0)]\right\}
+       -\frac{3U_*}{42}-\frac{U_*}{100}
+             =\frac{95575595137}{4788968940000}>0.
+\]
+
+\paragraph{Positive near phase: $1/20\le u\le1/10$.}
+Write $t_G=(7/6)U_*$. Then $O\ge(19/20)(1/20)$ and Cantelli
+bounds the first incoming term by $t_G/(t_G+(9/10)^2)$. Therefore
+\[
+ \frac{13}{20}\left\{\frac{19}{400}
+    -\frac32\left[\frac{t_G}{t_G+(9/10)^2}+J(\mu_G,1/10)\right]\right\}
+       -\frac{3U_*}{42}-\frac{U_*}{100}
+                    =\frac{8209}{4872000}>0.
+\]
+
+\paragraph{Positive far phase: $1/10\le u\le91/125$.}
+Use $O\ge(9/10)u$. The function
+\[
+            u\longmapsto\frac9{10}u-\frac32\frac{t_G}{t_G+(1-u)^2}
+\]
+is concave on this interval, since $3(1-u)^2>t_G$; its minimum
+$L_+$ is therefore attained at one of the two endpoints. Finally
+\[
+ \frac{13}{20}\{L_+-\tfrac32J(\mu_G,91/125)\}
+       -\frac{3U_*}{42}-\frac{U_*}{100}
+                      =\frac{389390249}{17290880250}>0.
+\]
+All brackets are positive before applying the lower mass bound.
+In the outer intervals, replacing $\lambda$ by $U_*$ only decreases
+the own-count lower bound and increases incoming tails and repairs.
+Thus these absolute margins imply the required comparison for every
+$0<\lambda\le U_*$. The four closed intervals cover the full phase
+range, including their shared endpoints. This proves the theorem.
+
+The 62 scalar gates in \texttt{moderate\_noise\_check.py} check all
+constants above by rational arithmetic. The analytic coverage follows
+from the monotonicity, concavity, and geometric-series arguments, not
+from a parameter grid. The theorem leaves $\lambda>1/50$ and the
+remaining $p$ panels open. In particular it does not justify deleting
+the existing half-amplitude or count certificates globally.

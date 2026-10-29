@@ -1,0 +1,25 @@
+{
+  "status": "PASS_INDEPENDENT_SAVED_DATA_AND_HIGH_NOISE_FORMULAS",
+  "source_pins": {
+    "mathematics/fixed-target-v8/2026-10-28/phase-confinement-sources/phase-coefficients.json": "b18599468c975032f4078e7a5f734fd6430b2b7da583789de58d9537d323f690",
+    "runs/fixed-target-v8-20261028/phase-confinement05/stdout.json": "e5dd725d31b2e67a634a8ae7b6cd630e899457a96280a2f2ee3b3612eed9ba90"
+  },
+  "counts": {
+    "low_noise": 16,
+    "empty": 14,
+    "negative_resource": 5,
+    "noise_exclusion": 65,
+    "high_noise_two_rays": 28
+  },
+  "high_noise_strict_gates": 56,
+  "strict_margin_lower": "0.00892011917",
+  "preserved_failed_unassisted_gates": 8,
+  "controls_rejected": [
+    "missing box",
+    "duplicate box",
+    "reversed boxes"
+  ],
+  "producer_executed": false,
+  "inherited_modules_imported": false,
+  "scope": "Checks saved-data resource maxima and high-noise formulas; analytic and original entry dependencies require the accompanying proof review."
+}

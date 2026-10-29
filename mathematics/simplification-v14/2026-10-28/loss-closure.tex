@@ -1,0 +1,198 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\newcommand{\CE}{C_{\rm E}}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\title{The sharp Berry--Esseen bound survives small independent noise}
+\author{}\date{28 October 2026}
+\begin{document}\maketitle
+
+If the two conditional noise laws are identical, the marginal is a
+Bernoulli variable plus independent noise. Conditioning on that noise
+allows us to apply the sharp binomial theorem at a random threshold.
+A finite Taylor replacement then compares the smoothed Gaussian term
+with the Gaussian of the correct total variance. The increase in the
+third absolute moment pays for this error. The resulting argument covers
+every sample size and threshold in this subclass.
+
+\begin{theorem}\label{thm:closure}
+Let $B\sim\mathrm{Bern}(p)$, where $1/4\le p\le3/4$, and let $U$
+be independent of $B$, centered, and supported on an interval of length
+at most $1/5$. Put
+\[
+ v=p(1-p),\quad s=\E U^2,\quad
+ X=\frac{B-p+U}{\sqrt{v+s}},\quad \rho=\E|X|^3,\qquad
+ \CE=\frac{3+\sqrt{10}}{6\sqrt{2\pi}}.
+\]
+For independent copies $X_1,\ldots,X_n$, every positive integer $n$ satisfies
+\begin{equation}\label{eq:main}
+ \sqrt n\,\sup_{H\in\mathbb R}
+ \left|\Pp(X_1+\cdots+X_n\le H)-\Phi(H/\sqrt n)\right|
+ \le \CE\rho-\frac{3s}{1000v^{3/2}}.
+\end{equation}
+In particular the sharp Berry--Esseen bound holds for this class, with
+a strict relative-noise margin when $s>0$. No upper bound on $ns$,
+lower bound on $n$, threshold restriction, acquisition or contact
+hypothesis is required.
+\end{theorem}
+
+\section{The two estimates}
+The only external probability theorem used is Schulz's sharp binomial
+bound \cite[Theorem 1, printed p.~1]{Schulz}. For $B_n\sim\mathrm{Bin}(n,p)$,
+$0<p<1$ and every $n\ge1$, it states
+\begin{equation}\label{eq:schulz}
+ \sup_{z\in\mathbb R}
+ \left|\Pp(B_n\le z)-\Phi\!\left(\frac{z-np}{\sqrt{nv}}\right)\right|
+ <\frac{\CE\rho_B}{\sqrt n},
+ \qquad \rho_B=\frac{1-2v}{\sqrt v}.
+\end{equation}
+This uses closed distribution functions and includes both signs and all
+real thresholds. No restricted-parameter sharpening is invoked.
+
+\begin{lemma}[A smooth replacement with its complete remainder]
+\label{lem:smooth}
+Let $U_1,\ldots,U_n$ be independent copies of a centered variable with
+variance $s$ and finite third absolute moment $m_3$.
+For every real $t$,
+\begin{align}\label{eq:smooth}
+ &\left|\E\Phi\!\left(\frac{t-np-\sum_iU_i}{\sqrt{nv}}\right)
+       -\Phi\!\left(\frac{t-np}{\sqrt{n(v+s)}}\right)\right|\\
+ &\hspace{25mm}\le
+ \frac{\phi(0)}{6\sqrt n\,v^{3/2}}
+                  \left(m_3+\sqrt{\frac8\pi}\,s^{3/2}\right).\notag
+\end{align}
+\end{lemma}
+\begin{proof}
+For $f(w)=\Phi((t-np-w)/\sqrt{nv})$,
+\[
+       \|f'''\|_\infty\le\frac{\phi(0)}{(nv)^{3/2}}.
+\]
+Indeed $\Phi'''(x)=(x^2-1)\phi(x)$ has absolute maximum $\phi(0)$:
+the other possible nonzero extrema are at $x=\pm\sqrt3$, with value
+$2e^{-3/2}\phi(0)<\phi(0)$.
+
+Replace $U_1,\ldots,U_n$ one at a time by independent
+$G_i\sim N(0,s)$. Conditional on all the other terms, Taylor's formula
+through degree two has remainder bounded by
+$\|f'''\|_\infty|x|^3/6$. Means and second moments cancel.
+Each replacement therefore costs at most
+$\|f'''\|_\infty(m_3+\E|G_i|^3)/6$.
+The Gaussian third absolute moment is
+$\E|G_i|^3=\sqrt{8/\pi}\,s^{3/2}$. Summing the $n$ remainders gives
+the stated bound, since a Gaussian sum of variance $ns$ convolved
+with the Gaussian CDF of variance $nv$ gives variance $n(v+s)$.
+The argument is finite, uniform in $t$, and remains valid at $s=0$.
+\end{proof}
+
+\begin{lemma}[The moment increase pays for smoothing]\label{lem:moment}
+Under Theorem~\ref{thm:closure}'s hypotheses,
+\begin{equation}\label{eq:moment}
+ \rho-\rho_B\ge\frac{27}{400}\frac{s}{v^{3/2}},
+ \qquad
+ \frac{\phi(0)}6\left(m_3+\sqrt{\frac8\pi}s^{3/2}\right)
+       \le\frac3{125}s .
+\end{equation}
+\end{lemma}
+\begin{proof}
+Put $m_3=\E|U|^3$ and $\mu_3=\E U^3$. Write the containing interval as
+$[-a,b]$, with $a,b\ge0$ and $d=a+b\le1/5$; centering permits this choice. Then
+\[
+ |U|\le d,\qquad s\le ab\le d^2/4\le1/100,\qquad
+ m_3\le ds,\qquad |\mu_3|\le ds.
+\]
+The variance bound follows by averaging
+$(U+a)(b-U)\ge0$.
+
+Since $|U|\le1/5<\min(p,1-p)$, the sign of $B-p+U$ is fixed by $B$.
+Expanding the two cubics gives the exact identity
+\begin{equation}\label{eq:rawmoment}
+ \E|B-p+U|^3=v(1-2v)+6vs+(2p-1)\mu_3.
+\end{equation}
+For $x\ge0$, Taylor's formula gives
+$(1+x)^{3/2}\le1+\frac32x+\frac38x^2$, because the third derivative
+is negative. Consequently
+\begin{align*}
+ (v+s)^{3/2}(\rho-\rho_B)
+ &\ge s\left[9v-\frac32-|2p-1|d
+              -\frac38(1-2v)\frac{s}{v}\right]\\
+ &\ge s\left[\frac3{16}-\frac1{10}-\frac1{80}\right]
+   =\frac3{40}s .
+\end{align*}
+Here $v\ge3/16$, $|2p-1|\le1/2$, $1-2v\le5/8$ and $s/v\le4/75$.
+Also
+\[
+ \left(\frac{v}{v+s}\right)^{3/2}
+ \ge\left(\frac{75}{79}\right)^{3/2}>\frac9{10}.
+\]
+This proves the first bound in \eqref{eq:moment}.
+
+Finally $\phi(0)<2/5$, $\sqrt{8/\pi}<8/5$, and $\sqrt s\le1/10$ give
+\[
+ \frac{\phi(0)}6
+       \left(m_3+\sqrt{\frac8\pi}s^{3/2}\right)
+ \le\frac1{15}\left(\frac15+\frac85\frac1{10}\right)s
+ =\frac3{125}s.
+\]
+All constants are independent of $n$, the threshold and the law.
+\end{proof}
+
+\section{Completion and scope}
+\begin{proof}[Proof of Theorem~\ref{thm:closure}]
+Let $Y_i=B_i+U_i$, with all Bernoulli and noise variables independent.
+For every raw threshold $t$, condition on $W=\sum_iU_i$ and use
+\eqref{eq:schulz}. Lemma~\ref{lem:smooth} then gives
+\[
+ \sqrt n\left|
+ \Pp\Big(\sum_iY_i\le t\Big)
+       -\Phi\!\left(\frac{t-np}{\sqrt{n(v+s)}}\right)\right|
+ \le\CE\rho_B+\frac3{125}\frac{s}{v^{3/2}}.
+\]
+The elementary inequality $\CE>2/5$ and Lemma~\ref{lem:moment} imply
+\[
+ \CE(\rho-\rho_B)\ge\frac{27}{1000}\frac{s}{v^{3/2}}.
+\]
+Since $27/1000-3/125=3/1000$, subtraction proves \eqref{eq:main}
+after setting $t=np+H\sqrt{v+s}$ and taking the supremum.
+Conditioning retains every threshold atom; only the smooth Gaussian
+term was differentiated.
+\end{proof}
+
+The constant estimates need only $25/8<\pi<22/7$. The upper bound follows
+from
+\[
+ 22/7-\pi=\int_0^1\frac{x^4(1-x)^4}{1+x^2}\,dx>0;
+\]
+the integral of the alternating geometric polynomial through $-x^{126}$
+in $(1+x^2)^{-1}$ gives the lower bound. Moreover
+$\CE^2>37/(72\pi)>259/1584>4/25$, since $\sqrt{10}>3$.
+The companion rational checker verifies these finite inequalities and
+the exact cubic expansions on actual finite laws. It does not reprove
+Schulz's theorem.
+
+If $U_0$ and $U_1$ are the two conditional noise laws in the acquired
+Bernoulli coordinates and their laws coincide, then $B$ and $U$ are
+independent. The common support lies in $[-a_1,a_0]$, so its width is
+at most $.072$ on the right and $.068$ on the left. The theorem therefore
+excludes every such acquired contrary witness, including positive noise
+above the currently certified regional ceilings. It also applies well
+outside that acquired setting.
+
+This removes the count and Poisson comparison computations for precisely
+this common-noise subclass. It does not show that every extremizer has
+equal conditional noise laws, nor does it prove the finite base or the
+global conjecture. It bounds the sharp Berry--Esseen excess; it does not
+assert domination by the discrepancy at every chosen Bernoulli anchor.
+The unweighted crossing estimate and its phase counterexamples in
+\texttt{loss-common.tex} are supplementary and are not dependencies of
+this proof.
+
+\begin{thebibliography}{1}
+\bibitem{Schulz}
+J. Schulz, \emph{The optimal Berry--Esseen constant in the binomial case},
+doctoral dissertation, Universit\"at Trier, 2016.
+Theorem 1, printed p.~1 (PDF page 11).
+\url{https://d-nb.info/1197702695/34}.
+\end{thebibliography}
+\end{document}

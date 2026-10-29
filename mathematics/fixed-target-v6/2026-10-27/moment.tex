@@ -1,0 +1,181 @@
+% Inputtable analytic fragment. Wrapper: moment-main.tex.
+\section{Using the joint moment circle in initial acquisition}
+\label{v6moment:section}
+
+Let $P$ be centered with variance one and finite third absolute moment.
+Write
+\[
+ \rho=\mathbb E|X|^3,\quad \gamma=\mathbb EX^3,\quad
+ \beta=\mathbb E[X|X|],\quad m=\mathbb EX_+=\mathbb EX_->0,
+ \quad \sigma=\sqrt{10}.
+\]
+All moments in this note belong to this one marginal. The moment-circle
+inequality is already present in the manuscript's Lemma
+\texttt{ms:physical-defect}; the new step here is its explicit inversion
+and use in the initial scalar feedback. No new independent bound for the
+Berry--Esseen constant is claimed.
+
+\begin{lemma}[Same-law moment constraint]\label{v6moment:circle}
+For $a_\pm=\mathbb EX_\pm^2=(1\pm\beta)/2$ and
+$b_\pm=\mathbb EX_\pm^3=(\rho\pm\gamma)/2$,
+\begin{equation}\label{v6moment:sign}
+ mb_\pm\ge a_\pm^2,\qquad m^2\le a_+a_-,\qquad
+ \gamma^2+4m^2\le\rho^2.
+\end{equation}
+An atom at zero is allowed.
+\end{lemma}
+\begin{proof}
+Both signs have positive probability, since the law is centered and
+nondegenerate. Cauchy--Schwarz applied on each sign to
+$X_\pm^{1/2},X_\pm^{3/2}$ gives $a_\pm^2\le mb_\pm$.
+If $p_\pm=P(\pm X>0)$, a second application gives
+$m^2\le p_\pm a_\pm$. Thus
+\[
+ m^2(1/a_++1/a_-)\le p_++p_-\le1.
+\]
+As $a_++a_-=1$, this proves $m^2\le a_+a_-$, without assigning a zero
+atom a false sign. Multiplying the first two bounds gives
+\[
+ b_+b_-\ge(a_+a_-)^2/m^2\ge m^2.
+\]
+Since $4b_+b_-=\rho^2-\gamma^2$, the circle follows. In particular
+$2m\le1$ and $2m\le\sqrt{\rho^2-\gamma^2}$.
+\end{proof}
+
+For completeness, use the actual gap sum $J$ of the manuscript and its
+conserved defect
+\[
+ D=(3+\sigma)\rho-\gamma-3J.
+\]
+Its gap bound $J\le\rho+2m$ remains valid before a central gap is
+established. Indeed, on each gap lying on one side of zero,
+$(b-a)^2\le2\int_a^b|x|\,dx$. Summing with its nonnegative gap weight
+and using $2\int |x|\tau(x)\,dx=\rho$ gives the one-sided contribution.
+If a central gap $(-A,B)$ exists, its additional contribution is $2mAB$.
+Since $(X+A)(X-B)\ge0$ on support,
+$0\le\mathbb E[(X+A)(X-B)]=1-AB$. Thus $AB\le1$ and the bound follows.
+If zero belongs to support there is no central gap. Consequently
+\begin{equation}\label{v6moment:defect}
+ D\ge\sigma\rho-\gamma-6m
+ \ge\sigma\rho-\gamma-3\sqrt{\rho^2-\gamma^2}.
+\end{equation}
+The first relation is an inequality, not an alternative definition of $D$.
+
+\begin{lemma}[Inverting a defect ceiling]\label{v6moment:inverse}
+Suppose $1\le l\le\rho\le u$, $D\le d$ with $d\ge0$, and
+$\sigma_l\le\sqrt{10}$. Put $a_l=\sigma_l-d/l$. Define
+\[
+ Y(a)=
+ \begin{cases}
+ -1,&a\le-1,\\
+ \displaystyle\frac{a-3\sqrt{10-a^2}}{10},&-1<a\le\sqrt{10}.
+ \end{cases}
+\]
+Then $\gamma/\rho\ge Y(a_l)$. A rational lower bound $y_l\le Y(a_l)$
+with $y_l\ge-1$ yields the valid cell bound
+\begin{equation}\label{v6moment:cellgamma}
+ \gamma\ge
+ \begin{cases}l y_l,&y_l\ge0,\\u y_l,&y_l<0.\end{cases}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Let $y=\gamma/\rho\in[-1,1]$. Dividing
+\eqref{v6moment:defect} by $\rho$ gives
+\[
+ f(y):=y+3\sqrt{1-y^2}\ge\sigma-D/\rho
+ \ge\sigma_l-d/l=a_l.
+\]
+The case $a_l\le-1$ imposes no new lower bound. On
+$[-1,1/\sqrt{10}]$, $f$ increases continuously from $-1$ to
+$\sqrt{10}$; its derivative in the interior is
+$1-3y/\sqrt{1-y^2}$ and changes sign only at $1/\sqrt{10}$.
+Solving $f(y)=a$ on this increasing branch gives
+$10y^2-2ay+a^2-9=0$ and the stated smaller root.
+It has $a-y\ge0$, including $-1\le a\le0$, because there
+$\sqrt{10-a^2}\ge-3a$. Hence squaring introduces no spurious branch.
+Every $y$ below this root has $f(y)<a$, proving the lower bound.
+Finally multiplying $\gamma/\rho\ge y_l$ by the positive $\rho$
+requires the endpoint $l$ for $y_l\ge0$ and $u$ for $y_l<0$.
+\end{proof}
+
+In exact computation the square root in $Y$ is rounded upward, so the
+negative root term rounds $Y$ downward. The branch $a_l\le-1$ keeps
+the whole interval. The implementation also intersects with the two
+previously justified bounds $\gamma\ge-g$ and
+$\gamma\ge\sigma_l l-3-d$. Thus
+\begin{align}
+ g_l&=\max\{-g,\sigma_l l-3-d,\text{bound in
+ \eqref{v6moment:cellgamma}}\},\label{v6moment:gl}\\
+ \rho-\gamma&\le
+ \min\{2u,(1-\sigma_l)l+3+d,u-g_l\}.
+ \label{v6moment:diff}
+\end{align}
+These inequalities retain the same actual $m$, $\rho$ and $\gamma$;
+they do not independently optimize over moments from different laws.
+
+\subsection{Ordered raw and conserved-resource bounds}
+\label{v6moment:update}
+Assume the previously audited fixed-target contact/transfer identity,
+initial support $|X|\le96/25$, its scalar Fourier enclosure for all
+$n\ge N=42$, and $c=C_{\rm E}$, for a maximizing witness with
+nonnegative excess and the nonnegative loss and defect in that identity.
+For each of the 24 closed cells
+\[
+ [r_i,r_{i+1}],\qquad r_i=1+3361i/96000,\quad0\le i<24,
+\]
+start from the freshly recomputed first-pass raw ceiling $T$.
+Use rational bounds
+\[
+ c_-=0.4097321837023<c<c_+=0.4097321837025
+\]
+and
+$\phi_l=997/2500<\phi(0)$. The license $T<Nc_-l$ gives
+\[
+ \phi(H/\sqrt n)\ge\phi_l\left(1-\frac{T}{Nc_-l}\right)=:\phi_-.
+\]
+The previous resource ceiling $U$ gives $D\le d=6U/(N\phi_l)$,
+with outward rounding. Insert \eqref{v6moment:gl} and
+\eqref{v6moment:diff} into the constant charge and signed curvature
+of the same unsigned Fourier bound. In particular,
+\[
+ q(t)=\max\{tl-g/5,\ tl+\tfrac12\min(\phi_-g_l,(2/5)g_l)\}>0.
+\]
+The constant term $A$, Fourier constant $K_F$ and linear coefficient
+$f(t)$ otherwise keep the first pass's coherent moment and Fourier bounds.
+For fixed $|H|$, their upper envelope
+$K_F+tA+f(t)|H|-q(t)H^2$ is affine in $t$: the two alternatives
+in $q$ have the same slope $l$. Therefore its maximum over
+$t\in[c_-,c_+]$ occurs at an endpoint before square completion.
+
+Compute the new raw ceiling as the minimum of the old $T$ and the
+outward-rounded value
+\[
+ \max_{t=c_-,c_+}\{K_F+tA+f(t)^2/(4q(t))\}.
+\]
+The already proved conserved phase price
+$\eta=(c_-l-T/N)/2>0$, formed from this \emph{raw} ceiling, then permits
+\[
+ U_{\rm new}=\min\left\{U,
+ \overline{\max_{t=c_-,c_+}
+ \{K_F+tA+f(t)^2/[4(q(t)+\eta)]\}}\right\}.
+\]
+Bars denote upward rational rounding. Update
+$d_{\rm new}=\min\{d,\overline{6U_{\rm new}/(N\phi_l)}\}$.
+Every step uses the previous defect to obtain a new raw bound before
+obtaining a new resource and defect bound. In particular, $U$ never
+replaces $T$ in the density license. No cell is dropped or treated as a
+realizable law merely because its necessary constraints are consistent.
+
+\subsection{Bounded result and remaining gap}
+Six such updates were computed with exact fractions. All 24 cells remain
+covered, including shared endpoints. Their final upper bounds are
+\[
+ T\le15.9597095614,\qquad U\le13.2193008732,
+ \qquad D\le4.7353850385.
+\]
+Twenty cells have $D<4$ and ten have $D<2$. The earlier coarse calculation
+had nineteen cells with $D<4$, so the circle closes one of its five
+remaining sufficient gates. Four high-moment cells still fail that gate.
+The primitive Fourier/support/contact inputs remain explicit analytic
+dependencies; exact arithmetic does not establish them. This computation
+is not a completed initial acquisition, finite base, or local exclusion.

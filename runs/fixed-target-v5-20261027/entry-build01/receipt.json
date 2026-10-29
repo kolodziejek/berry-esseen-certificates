@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/excess-entry-v5/mathematics/fixed-target-v5/2026-10-27/entry-main.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/excess-entry-v5/runs/fixed-target-v5-20261027/entry-build01/build",
+    "--json"
+  ],
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/excess-entry-v5",
+  "returncode": 0,
+  "elapsed_seconds": 1.698617458,
+  "inputs": {
+    "mathematics/fixed-target-v5/2026-10-27/entry-main.tex": "49f337f2a01a73283fa03016425e215c343a3da8cec33a9e452ebf3480f0910f",
+    "mathematics/fixed-target-v5/2026-10-27/entry.tex": "bfeef93770e5c51e2c5b11854aa1c51509262f30a5562108584540f1dc934606"
+  }
+}

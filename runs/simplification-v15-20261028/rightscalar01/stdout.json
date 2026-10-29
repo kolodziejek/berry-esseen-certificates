@@ -1,0 +1,96 @@
+{
+  "status": "PASS_RIGHT_SIGNED_200_SCALARS",
+  "gate_count": 32,
+  "gates": {
+    "raw scale": "51/250000",
+    "raw displacement": "1/3125",
+    "bump displacement premise": "2/125",
+    "interior crossing lower": "16169/250",
+    "interior crossing upper": "19669/250",
+    "window displacement": "19/250",
+    "left window interior": "19269/250",
+    "right window interior": "22519/250",
+    "window variance 19/50": "7/1250",
+    "window variance 11/20": "7/400",
+    "phi lower": "1889/437500",
+    "five masses": "169/27600",
+    "variance power": "27/200000",
+    "sqrt T coefficient": "23/188",
+    "curvature c": "3/500",
+    "mode linear loss": "3/25",
+    "mode quadratic loss": "3/25",
+    "mode variance ratio": "49/73960",
+    "mode mass coefficient": "4633357/1379170000",
+    "cubic repair": "27723/80000",
+    "negative negative quadratic coefficient": "57523709667/918944000000",
+    "negative cubic coefficient ceiling": "99677/12800000",
+    "negative negative fourth coefficient": "812017791/2048000000",
+    "negative strict concavity": "3/250",
+    "negative endpoint 3/40": "25119429575049427/137901181501440000000000",
+    "negative endpoint 9/25": "268366434873815431/273546655200000000000000",
+    "positive negative quadratic coefficient": "44262772167/918944000000",
+    "positive cubic coefficient ceiling": "99677/12800000",
+    "positive negative fourth coefficient": "812017791/2048000000",
+    "positive strict concavity": "3/250",
+    "positive endpoint 3/40": "1100595788991482551/1792715359518720000000000",
+    "positive endpoint 9/25": "4530691307601187/21042050400000000000000"
+  },
+  "polynomials": {
+    "negative": {
+      "W": [
+        "0",
+        "48197201/196000000",
+        "-19402851/32000000",
+        "6940323/12800000",
+        "-812017791/2048000000"
+      ],
+      "E": [
+        "158279/126360",
+        "34606009/7038720",
+        "20679375/1837888"
+      ],
+      "P": [
+        "-158279/25272000",
+        "1822105141267/8622432000000",
+        "-608890109667/918944000000",
+        "6940323/12800000",
+        "-812017791/2048000000"
+      ],
+      "endpoint_values": [
+        "837774797050823049427/137901181501440000000000",
+        "705198096885273815431/273546655200000000000000"
+      ]
+    },
+    "positive": {
+      "W": [
+        "0",
+        "48197201/196000000",
+        "-19402851/32000000",
+        "6940323/12800000",
+        "-812017791/2048000000"
+      ],
+      "E": [
+        "800/3159",
+        "3444821/879840",
+        "1921875/229736"
+      ],
+      "P": [
+        "-4/3159",
+        "116579419837/538902000000",
+        "-595629172167/918944000000",
+        "6940323/12800000",
+        "-812017791/2048000000"
+      ],
+      "endpoint_values": [
+        "20667523260320795642551/1792715359518720000000000",
+        "236664471540107601187/21042050400000000000000"
+      ]
+    }
+  },
+  "negative_controls": [
+    "normalized mass 4/5 is false at n200,p1/2",
+    "same scalar certificate fails at n100"
+  ],
+  "proof_sha256": "cb7e304c7c0441149a3226de09a285adced048863bbde5340fa706051dbc8e38",
+  "scope": "Exact continuous-domain scalar checks for two concave quartics and analytic guards; not a finite parameter sample or a proof of acquisition."
+}

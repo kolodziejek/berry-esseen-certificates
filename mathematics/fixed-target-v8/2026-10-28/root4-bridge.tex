@@ -1,0 +1,312 @@
+\section{The original-law bridge for ROOT4}
+\label{r4bridge:section}
+
+This note proves a conditional analytic implication, not the terminal
+ROOT4 inequalities or their implementation. The sole smoothing input is
+the closed-half-line Prawitz majorant stated below. All other steps in
+this note are proved for the original iid marginal, including laws with
+infinite support inside a bounded interval and atoms at zero or at a
+threshold. No optimizer or contact assumption is used.
+
+Let $X$ have mean zero, variance one, $|X|\le R=17/4$, and
+$\rho=\E|X|^3<46/25$. Set
+\[
+ u=\E X_+=\E X_->0,\quad v_\pm=\E X_\pm^2,
+ \quad a=v_-/u,\quad b=v_+/u,\quad
+ w=u/a+u/b,\quad \vartheta=v_+-v_-.
+\]
+Both $v_\pm$ and $a,b$ are positive; also $a,b\le R$.
+Signwise Cauchy gives $u/a\le\Pp(X<0)$ and
+$u/b\le\Pp(X>0)$, so $0<w\le1$. The canonical probability
+\[
+ Q=(u/a)\delta_{-a}+(1-w)\delta_0+(u/b)\delta_b
+\]
+has the same first and second moments on each strict half-line as $P$.
+Put $r=\rho(Q)$ and $\eta=\rho-r$.
+
+\subsection{One actual measure, including all contact atoms}
+For $y=|X|$, let $c=b$ on the positive tag and $c=a$ on the
+negative tag, and put $W=y(y-c)^2$ (zero at $X=0$). Direct expansion gives
+\begin{align}
+ \E W&=\eta\ge0,\label{r4bridge:excess}\\
+ \E X^3&=b-a+\E[\operatorname{sgn}(X)W],\notag\\
+ \E X^4&=a^2-ab+b^2+\E[(y+2c)W].\label{r4bridge:moments}
+\end{align}
+Indeed $y^3=W+2cy^2-c^2y$ and
+$y^4=(y+2c)W+3c^2y^2-2c^3y$; integrate on each tag using
+$\E[y;\text{tag}]=u$ and $\E[y^2;\text{tag}]=uc$.
+If $\eta=0$, then $P$ is supported on $\{-a,0,b\}$ and its
+first two moments force $P=Q$. This case requires no defect probability.
+
+For $\eta>0$, define the single tagged probability $\nu=W\,dP/\eta$.
+It charges neither zero nor either contact. On its domain set
+\[
+ k_0=(c^2y)^{-1},\qquad k_2=(y-c)^{-2},\qquad k_1=(y-c)^{-1}.
+\]
+Then, writing $p_0=1-w$,
+\begin{align}
+ \eta\int k_0\,d\nu&=p_0-P\{0\},\notag\\
+ \eta\int_{\sigma} k_2\,d\nu&=u-c_\sigma P\{\sigma c_\sigma\},
+ &\int_{\sigma}k_1\,d\nu&=0.\label{r4bridge:budgets}
+\end{align}
+To check the first formula, $Wk_0=(y-c)^2/c^2$ off zero and
+contacts; its integral on a tag is $P(\text{tag})-u/c$.
+For $k_2$, cancellation gives $y$ only away from the contact,
+so the omitted contact mass must be subtracted. For $k_1$ it gives
+$y(y-c)$, whose integral is zero even after omitting the contact.
+All integrals exist; for $k_1$, Cauchy uses the finite $k_2$ integral.
+
+Let $\psi(q)=\E e^{\mathrm iqX}$ and $g(q)=\int e^{\mathrm iqx}\,dQ(x)$.
+Hermite interpolation of $f(y)=e^{\mathrm i\sigma qy}$ at $0,c,c$ gives
+\[
+ f(y)-L_f(y)=y(y-c)^2 r_q(\sigma,y),\qquad
+ r_q=f[0,c,c,y].
+\]
+The interpolant is quadratic with constant $f(0)=1$. Its linear and
+quadratic integrals match on each tag; its constants match only after
+both tags and the zero atoms are combined. Consequently
+\begin{equation}
+ \psi(q)-g(q)=\eta\int r_q\,d\nu.\label{r4bridge:response}
+\end{equation}
+This identity uses the same measure at all frequencies. The integral
+form of a third divided difference gives $|r_q|\le |q|^3/6$.
+For completeness another bound is $|r_q|\le q^2/y$: write
+\[
+ L_f(y)=f(c)+f'(c)(y-c)
+       +\frac{f(0)-f(c)+cf'(c)}{c^2}(y-c)^2.
+\]
+The quadratic coefficient and the first-order Taylor remainder at $c$
+are bounded by $q^2/2$ and $q^2(y-c)^2/2$, respectively. Division
+gives the claim. Thus the following three radii are valid:
+\begin{equation}
+ |\psi(q)-g(q)|\le
+ \min\{\eta|q|^3/6,\ \max(a,b)^2p_0q^2,\ 1+|g(q)|\}.
+ \label{r4bridge:radii}
+\end{equation}
+The mass radius follows from $1/y=c^2k_0$ and \eqref{r4bridge:budgets}.
+
+For arbitrary finite coefficients $\kappa_j$, define
+$A=\Re\sum_j4\kappa_jg(q_j)^3r_{q_j}$. If fixed prices
+$\lambda_0,\lambda_+,\lambda_-\ge0$ and signed $\theta_\pm$ satisfy
+\[
+ A-\lambda_0k_0-\lambda_\sigma k_2-\theta_\sigma k_1\le S
+\]
+on the entire tagged domain, then
+\begin{equation}
+ \Re\sum_j4\kappa_jg(q_j)^3(\psi(q_j)-g(q_j))
+ \le p_0\lambda_0+u(\lambda_++\lambda_-)+S\eta=:\Gamma(\eta).
+ \label{r4bridge:price}
+\end{equation}
+This holds for each actual $P$, not for a purported sufficiency
+characterization of all measures satisfying the budgets. Enlarging
+that class in an upper-bound problem is safe. Price choices must precede
+the supremum; signed equality prices and a negative $S$ are retained.
+At $\eta=0$ the response is zero and the displayed right side is
+nonnegative, so the same bound applies directly.
+
+\subsection{The physical smoothing and its two reserves}
+Let $Z=(X_1+\cdots+X_4)/2$ with independent copies of this same law.
+The input Prawitz inequality is, for every real $x$,
+\begin{equation}
+ \Pp(Z\le x)\le J_P(x):=\frac12+
+ \int_0^1\Re\{\widehat K(t)e^{-6\mathrm itx}\psi(3t)^4\}\,dt,
+ \quad \widehat K(t)=1-t+\mathrm i[(1-t)\cot(\pi t)+1/\pi].
+ \label{r4bridge:prawitz}
+\end{equation}
+Only the real integrand is integrated. Put $S(t)=t\Im\widehat K(t)$.
+Its endpoint-continuous extension satisfies
+\begin{equation}
+ 0\le S\le1/3,\qquad |S'|<2,\qquad |S''|<5.
+ \label{r4bridge:kernel}
+\end{equation}
+Here are explicit sufficient bounds. The cotangent partial fractions give
+\[
+ S=\pi^{-1}-2\pi^{-1}(A+MG),\quad
+ A=t^2/(1+t),\ M=t^2(1-t),\
+ G=\sum_{j\ge2}(j^2-t^2)^{-1}.
+\]
+On $[0,1]$,
+$|A'|\le3/4$, $|A''|\le2$, $|M|\le1/6$,
+$|M'|\le1$, $|M''|\le4$, and
+$G\le3/4$, $|G'|\le10/27$, $|G''|\le106/135$.
+The first sum telescopes; the latter two follow from
+$j^2-t^2\ge3j^2/4$ and
+$\sum_{j\ge2}j^{-k}\le2^{-k}+\int_2^\infty s^{-k}\,ds$.
+The derivative series converge uniformly. With $\pi>3$, these imply
+$|S'|<19/18$, $|S''|<223/54$. Nonnegativity follows directly from
+$(1-t)\cot(\pi(1-t))\le1/\pi$ when $t>1/2$, and from the
+nonnegative cotangent when $t\le1/2$. The positive partial-fraction
+terms give $S\le1/\pi<1/3$.
+
+Set $D=x-Z$, $A_x(t)=\E\cos(6Dt)$ and
+$L_x(t)=\E[6D\operatorname{sinc}(6Dt)]$. The regular real integrand
+is $(1-t)A_x(t)+S(t)L_x(t)$. Since
+$\operatorname{sinc}(v)=\int_0^1\cos(sv)\,ds$,
+\[
+ |A_x'|\le6m_1,\ |A_x''|\le36m_2,\quad
+ |L_x|\le6m_1,\ |L_x'|\le18m_2,\ |L_x''|\le72m_3,
+ \quad m_j=\E|D|^j.
+\]
+Differentiation under these bounded-moment integrals and the product rule
+therefore give
+\begin{equation}
+ |F_x''(t)|\le42m_1+108m_2+24m_3.\label{r4bridge:F2}
+\end{equation}
+All four copies are used to obtain
+\[
+ \E D^2=x^2+1=:D_2,\qquad
+ \E D^4=x^4+6x^2-2x\E X^3+(\E X^4+9)/4.
+\]
+Thus for valid whole-cell moment bounds $\kappa_*\ge|\E X^3|$ and
+$M_*\ge\E X^4$, put
+$D_4=x^4+6x^2+2|x|\kappa_*+(M_*+9)/4$.
+Then $m_1\le\sqrt{D_2}$ and $m_3\le\sqrt{D_2D_4}$.
+The bounds \eqref{r4bridge:moments} supply these without an additional
+fourth-moment premise. On $|x|\le2$, $m_2\le5$, $\E D^4<54$,
+$m_1<9/4$, $m_3<33/2$, so \eqref{r4bridge:F2} is less than $2061/2$.
+
+Choose $N\ge1$, $t_j=(j+1/2)/N$, $q_j=3t_j$ and
+$\kappa_j(H)=\widehat K(t_j)e^{-\mathrm iq_jH}/N$.
+Composite midpoint quadrature has error at most $\sup|F''|/(24N^2)$.
+Consequently the raw numerator $2(J_P(H/2)-\Phi(H/2))$ has the
+single reserve
+\begin{equation}
+ Q_H=\min\left\{\frac{687}{8N^2},
+ \frac{42\sqrt{D_2}+108D_2+24\sqrt{D_2D_4}}{12N^2}\right\}.
+ \label{r4bridge:quad}
+\end{equation}
+This quadrature is for the original law once, before reference expansion.
+Neither the reference nor its response/remainder needs another quadrature.
+
+To control threshold joins, suppose $a_j\ge|g(q_j)|$ and $e_j$
+bounds $|\psi(q_j)-g(q_j)|$ uniformly on the entire excess cell.
+The actual characteristic function is $1$-Lipschitz, since
+$\E|X|\le1$. Hence
+\[
+ P_j=\min(1,a_j+e_j+3/(2N))
+\]
+bounds $|\psi(3t)|$ throughout its frequency cell. Define $d_j$ as
+the smaller of the two integrals over that cell of
+\[
+ t^2(1-t)+t/3,\qquad t^2(1-t)+t(1-t)/2.
+\]
+Both dominate $t^2|\widehat K(t)|$: use
+$|\widehat K|\le1-t+\Im\widehat K$ and, for the second,
+$S\le(1-t)(1+2t)/(\pi(1+t))\le(1-t)/2$.
+Their full integrals are $1/4$ and $1/6$. Thus
+\[
+ |J_P''(x)|\le B:=36\sum_jd_jP_j^4.
+\]
+For the smooth physical function $G_P(H)=2(J_P(H/2)-\Phi(H/2))$,
+$|G_P''|\le(B+1/4)/2$, since $\sup|\Phi''|<1/4$.
+On any raw-threshold interval of length $h$, its chord lies above
+$G_P$ up to the single reserve
+\begin{equation}
+ E_H=h^2(B+1/4)/16.\label{r4bridge:H}
+\end{equation}
+There is no differentiation or interpolation of the CDF. The moment
+reserve \eqref{r4bridge:quad} may be computed separately at each node;
+the curvature reserve is common to the whole geometry/excess cell.
+
+\subsection{A precise conditional certificate implication}
+\begin{theorem}[Low-excess original-law bridge]
+Fix a geometry cell, an excess interval $[L,U]\subset[0,\infty)$,
+and raw nodes $-4\le H_0<\cdots<H_m\le25/8$ of spacing at most $h$.
+Assume all the following bounds are valid for every actual standardized
+$P$ in this cell, with $\rho=r+\eta<46/25$ and $\eta\in[L,U]$.
+At each node let $M_H\ge C_H(Q)-Tr$, where
+\[
+ C_H(Q)=1+2\Re\sum_j\kappa_j(H)g(q_j)^4-2\Phi(H/2).
+\]
+Let $\Gamma_H(\eta)$ be a whole-domain price bound
+\eqref{r4bridge:price}, and let $R_{2,H}(\eta)$ bound
+\[
+ \sum_j|\kappa_j(H)|
+ |\psi(q_j)^4-g(q_j)^4-4g(q_j)^3(\psi(q_j)-g(q_j))|.
+\]
+Suppose the complete row
+\[
+ P_H(\eta)=M_H+Q_H+E_H+2\Gamma_H(\eta)+2R_{2,H}(\eta)-T\eta
+\]
+is a convex quadratic, nonpositive at $L$ and $U$, at every node.
+Then $2\{\Pp(X_1+\cdots+X_4\le H)-\Phi(H/2)\}\le T\rho$
+for every $H\in[H_0,H_m]$ and every such law, including $\eta=0$.
+\end{theorem}
+\begin{proof}
+Expand the actual fourth power at each frequency. The linear part is
+controlled by the one common measure, and the remaining complex part
+by its full nonnegative modulus bound. Midpoint quadrature yields
+$G_P(H)-T\rho\le P_H(\eta)-E_H$ at each node.
+Convexity gives $P_H(\eta)\le0$ on $[L,U]$. The chord inequality
+\eqref{r4bridge:H} now implies $G_P(H)-T\rho\le0$ between nodes.
+Finally use \eqref{r4bridge:prawitz}. All these inequalities hold for
+one arbitrary law throughout; no law is reconstructed from a relaxation.
+\end{proof}
+
+An elementary permitted remainder is obtained from
+\[
+ \psi^4-g^4-4g^3(\psi-g)
+  =(\psi-g)^2(\psi^2+2\psi g+3g^2).
+\]
+If $|g|\le a\le1$ and $|\psi-g|\le A+B\eta$ nonnegatively on
+the whole cell, freeze $p=\min(1,a+\max(A+BL,A+BU))$.
+Then $(A+B\eta)^2(p^2+2pa+3a^2)$ is a convex quadratic remainder.
+Other complete bounds, including a proven disk/lens bound, may replace
+it. Their correctness remains a premise if not proved separately.
+Selecting a whole valid row independently at each node is safe;
+interpolating a pointwise minimum of candidate curves is not needed.
+
+For $H\le-4$, Cantelli gives $F_Z(H/2)\le1/5$.
+For $H\ge25/8$, the elementary normal bound $\Phi(25/16)>4/5$
+gives the same raw numerator bound $2/5$. Since $\rho\ge1$, both
+positive-score tails are at most $2/5<T=4097/10000$.
+To verify that normal bound directly, $\pi<22/7$ gives
+$\phi(0)>997/2500$ by squaring. With $x=25/16$, the exponential
+Taylor lower bound gives
+\[
+ \Phi(x)\ge\frac12+\frac{997}{2500}
+       \left(x-\frac{x^3}{6}+\frac{x^5}{40}-\frac{x^7}{336}\right)
+       >\frac45.
+\]
+
+\subsection{The independent count route and reflection}
+Let $p=P(X\ge0)$, $q=1-p$. Both are positive. Conditioning on the
+number $j$ of nonnegative observations gives mass $\binom4j p^jq^{4-j}$.
+Conditional on any fixed sign pattern, independence retains independent
+conditional marginals. Thus $Z$ has conditional mean and variance
+\[
+ \mu_j=\frac{u(j-4p)}{2pq},\qquad
+ V_j=\frac14\left[j\left(\frac{v_+}{p}-\frac{u^2}{p^2}\right)
+ +(4-j)\left(\frac{v_-}{q}-\frac{u^2}{q^2}\right)\right].
+\]
+The same moments hold after mixing patterns with that count. Closed-event
+Cantelli yields the source bound $A_j(x)=1$ for $x\ge\mu_j$ and
+$A_j(x)=V_j/(V_j+(\mu_j-x)^2)$ otherwise. This includes $V_j=0$.
+Cauchy gives
+$w(1-\vartheta)/2\le p\le1-w(1+\vartheta)/2$.
+Taking upper bounds on all five $A_j$ on a cell and then a valid upper
+bound of their single binomial mixture preserves the original-law bound.
+No arbitrary dependent sign allocation can replace the iid weights.
+
+Any complete count-based above-cut bound, or independent all-law
+large-$\rho$ bound, can join the low-excess theorem when both closed
+ranges cover their common cutoff. A parent geometry may be replaced by
+all four closed children, each with its own complete low/high cover.
+No unexecuted terminal inequality is supplied by this observation.
+
+For the reflected law $\widetilde P=\mathcal L(-X)$, $a,b$ are swapped,
+$\vartheta$ changes sign, $\eta$ and $\rho$ are unchanged, and
+\[
+ \widetilde p=P(X\le0)=1-p+P\{0\},\qquad
+ \widetilde\psi(q)=\overline{\psi(q)}.
+\]
+The raw phase $e^{-\mathrm iqH}$ is retained when evaluating its own
+threshold $H$. Applying both positive closed bounds covers the negative
+CDF discrepancy because
+\[
+ \Phi(x)-F_Z(x)\le\Phi(x)-F_Z(x-)
+     =F_{-Z}(-x)-\Phi(-x).
+\]
+Equality at an atom is not assumed. These facts supply the analytic
+coverage implication only. Complete numerical enclosures, their selected
+implementation, and the unrestricted-owner localization remain separate.

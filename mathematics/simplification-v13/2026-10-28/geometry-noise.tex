@@ -1,0 +1,290 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\title{Inward displacement pays for conditional noise}
+\author{}\date{28 October 2026}
+\begin{document}\maketitle
+
+A centered noise cannot have large variance and a small upper endpoint
+without a negative third moment. Keeping that third moment in the gap
+budget gives a stronger noise cost. This argument uses the actual central
+gap; it needs neither the outer support strips nor a count comparison.
+It reduces the acquired global noise ceiling from $.616$ to $.36$, and
+to $.32$ on the left range. It also confines the part below $p=1/3$ to
+the indices $42\le n\le168$.
+
+\section{The common-law geometric inequality}
+Let $X$ be centered, with variance one and compact support, with an
+actual central gap $(-A_-,A_+)$ and no atom at zero.
+Let $n$ be a positive integer. Write
+\[
+ p=\Pp(X>0),\quad q=1-p,\quad v=pq,\quad
+ m=\E X_+=\E X_-,\quad\ell=m/v.
+\]
+Use its actual sign $B=\mathbf1_{X>0}$ to write
+$X=\ell(B+U-p)$, so $\E(U\mid B)=0$. Put
+\[
+ a_0=p-A_-/\ell,\qquad a_1=q-A_+/\ell,\qquad
+ d=a_0+a_1,\quad s_j=\E(U^2\mid B=j),
+\]
+\[
+ s=qs_0+ps_1,\quad\lambda=ns,\quad
+ \lambda_0=nqs_0,\quad\lambda_1=nps_1.
+\]
+Thus $a_j\ge0$, $U_0\le a_0$, $U_1\ge-a_1$,
+$\lambda_0+\lambda_1=\lambda$, and $\ell=(v+s)^{-1/2}$.
+For $\sigma=\sqrt{10}$ define
+\[
+ Q(p)=(\sigma+1)p^2+(\sigma-1)q^2-6pq
+       =(6+2\sigma)(p-p_*)^2,\qquad p_*=(4-\sigma)/2,
+\]
+\[
+ D=(3+\sigma)\rho-\gamma-3J,\quad
+ \rho=\E|X|^3,\quad\gamma=\E X^3,
+ \quad J=\sum_{(a,b)}\tau_{a,b}(b-a)^2.
+\]
+The sum is over the bounded support gaps and
+$\tau(t)=\E[X\mathbf1_{X\ge t}]$ is constant on each gap.
+There are at most countably many gaps. Their nonnegative contributions
+are interpreted as a monotone sum; the integral bounds below apply to
+each finite subcollection and then to the full sum by monotone convergence.
+Compact support makes the displayed moment bounds finite.
+All quantities in this note refer to one actual law.
+
+\begin{lemma}[One-sided cubic cost]\label{g:cubic}
+If $Z$ is centered, $Z\le a$ almost surely, $a>0$, and
+$t=\E Z^2$, then
+\[
+                 \E Z^3\le at-t^2/a.
+\]
+If $a=0$, centering forces $Z=0$ almost surely.
+\end{lemma}
+\begin{proof}
+Expand the nonnegative expectation
+$\E[(a-Z)(Z+t/a)^2]=at-\E Z^3-t^2/a$.
+No lower support endpoint is used. Apply this also to $-U_1$.
+\end{proof}
+
+Fix $0\le\bar d<1$ with $d\le\bar d$, and define
+\begin{align*}
+ Y_0(p)&=3(\sigma+3)p-(\sigma+7)\bar d
+       +2\sqrt{6(1-\bar d)(\sigma+1)p},\\
+ Y_1(p)&=3(\sigma+1)q-(\sigma+5)\bar d
+       +2\sqrt{6(1-\bar d)(\sigma-1)q}.
+\end{align*}
+
+\begin{theorem}[A probability--noise--allocation budget]\label{g:budget}
+Under the preceding hypotheses,
+\begin{equation}\label{g:newbudget}
+ nD\ge\frac{nvQ(p)+\lambda_0Y_0(p)+\lambda_1Y_1(p)}
+                    {(v+\lambda/n)^{3/2}}.
+\end{equation}
+In particular the numerator is at least
+$nvQ(p)+\lambda\min(Y_0(p),Y_1(p))$.
+\end{theorem}
+\begin{proof}
+We retain the two residual noise measures separately in the direct gap
+budget. For example the positive outer gaps satisfy
+\[
+ J_o^+\le2\int_{A_+}^{\infty}(t-A_+)\tau(t)\,dt
+       =\E[X_+(X_+-A_+)^2],
+\]
+with the reflected expression on the negative side. Adding the actual
+central gap gives the exact lower-budget expansion used in v10:
+\begin{align*}
+ nD(v+s)^{3/2}\ge{}&nvQ+6nv\{d(1-d)+a_0a_1\}\\
+ &+3(\sigma+3)p\lambda_0+3(\sigma+1)q\lambda_1
+       -6a_0\lambda_0-6a_1\lambda_1\\
+ &-(\sigma+1)nq\E U_0^3+(\sigma-1)np\E U_1^3.
+\end{align*}
+This is the expansion of the common geometric cost before replacing a
+conditional cubic by its endpoint bound; see
+\path{mathematics/simplification-v10/2026-10-28/geometry.tex},
+the proof of the common geometric cost. The integration includes endpoint atoms;
+individual integration endpoints have Lebesgue measure zero.
+
+Lemma~\ref{g:cubic} improves the last line, giving
+\begin{align*}
+ nD(v+s)^{3/2}\ge{}&nvQ+6nv\{d(1-d)+a_0a_1\}\\
+ &+\{3(\sigma+3)p-(\sigma+7)a_0\}\lambda_0
+  +\{3(\sigma+1)q-(\sigma+5)a_1\}\lambda_1\\
+ &+\frac{(\sigma+1)\lambda_0^2}{nqa_0}
+  +\frac{(\sigma-1)\lambda_1^2}{npa_1}.
+\end{align*}
+A term with $a_j=0$ has $\lambda_j=0$ and is simply absent;
+there is no division by zero. Bound $a_j\le\bar d$ in the two negative
+linear terms and use
+$d(1-d)+a_0a_1\ge(1-\bar d)(a_0+a_1)$.
+For each $j$, apply the arithmetic--geometric mean inequality to its
+central-displacement and reciprocal-cubic costs. For example
+\[
+ 6nv(1-\bar d)a_0+
+       \frac{(\sigma+1)\lambda_0^2}{nqa_0}
+ \ge2\lambda_0\sqrt{6(1-\bar d)(\sigma+1)p}.
+\]
+The other group is identical with $p,q$ and $\sigma+1,\sigma-1$
+interchanged. This proves \eqref{g:newbudget}.
+\end{proof}
+
+The allocation $\lambda_1/\lambda$ has not been optimized independently
+of the law. The full inequality may be retained as a shared resource;
+replacing its affine allocation term by its smaller endpoint is only a
+conservative simplification. No contact, convolution or predecessor
+assumption was used in Theorem~\ref{g:budget}.
+
+\section{Consequences for the acquired domain}
+The following are existing global geometric outputs of the selected
+coarse entry, not conclusions of a count calculation:
+\begin{equation}\label{g:input}
+ n\ge42,\quad p\in[1/4,27/50],\quad d\le17/250,
+ \quad0\le\lambda\le77/125,\quad nD\le B_*:=32.20665378.
+\end{equation}
+The strict $p>1/4$, $d<17/250$ and $\lambda<77/125$ previously proved
+may safely be weakened to these closed premises. Only the incoming
+coarse entry and direct gap geometry are needed; the $.6/ .7$ support
+strips are not needed for the conclusions below.
+
+\begin{theorem}\label{g:ceiling}
+Under \eqref{g:input}, one has the following strict noise ceilings:
+\[
+\begin{array}{c|cccc}
+ p\text{ at most}&3/10&1/3&2/5&27/50\\\hline
+ \lambda\text{ less than}&1/6&1/4&8/25&9/25
+\end{array}
+\]
+Moreover the following integer-index implications hold:
+\[
+\begin{array}{c|rrrrrr}
+ p\text{ at most}&.30&1/3&.35&.375&.39&.40\\\hline
+ n\text{ at most}&84&168&262&657&1530&3598.
+\end{array}
+\]
+\end{theorem}
+\begin{proof}
+Set $H_j=Y_j/v$. On the stated domain,
+$v\ge3/16$, $0\le Q\le9/25$ and $H_j>30$.
+These elementary bounds are checked with rational square comparisons.
+For fixed $p$, put
+\[
+ F_j(n,\lambda)=
+ \frac{nQ+H_j\lambda}{\sqrt v\{1+\lambda/(nv)\}^{3/2}}.
+\]
+Theorem~\ref{g:budget} gives $nD\ge\min_jF_j$.
+Writing $z=\lambda/n\le11/750$, the sign of its derivative in
+$\lambda$ is that of
+\[
+ H_j\{1-z/(2v)\}-3Q/(2v)
+ \ge30\{1-(11/750)/(2(3/16))\}
+               -3(9/25)/(2(3/16))>0.
+\]
+For fixed positive $\lambda$, $F_j$ also increases in $n$:
+apart from a positive factor it is
+$(Q/z+H_j)/(1+z/v)^{3/2}$, which decreases in $z$.
+Thus to exclude $\lambda\ge L$ it suffices to check
+$F_0(42,L)>B_*$ and $F_1(42,L)>B_*$ on the relevant probability
+interval. This is an algebraic monotonicity argument, not a perturbation
+or limit of actual laws.
+
+Here is a small exact certificate for these eight continuous inequalities.
+Use
+\[s_-=3.162277660<\sigma<s_+=3.162277661.\]
+In each $Y_j$ replace its positive coefficients by $s_-$ and its negative
+coefficient by $s_+$. Replace its square-root term by the chord joining
+rational lower bounds at the two interval endpoints. Concavity of the
+square root puts this affine chord below the square root on the entire
+interval. Call the resulting affine polynomial $y_j(p)$, and let $Q_-$
+denote $Q$ with $\sigma$ replaced by $s_-$.
+For $N=42$ form
+\[
+ R_j(p)=NvQ_-(p)+Ly_j(p),\qquad
+ P_j(p)=N^3R_j(p)^2-B_*^2(Nv+L)^3.
+\]
+Positive $R_j$ and $P_j$ prove the desired inequality without a sign
+ambiguity from squaring. The polynomial degrees are four and eight.
+For the four intervals and ceilings in the first table, all degree-four
+Bernstein coefficients are positive on the whole interval. The degree-eight
+coefficients are also positive on the whole interval, except for the global
+$j=1$ polynomial, for which the four equal closed subintervals suffice.
+There are 139 strictly positive coefficients in total, on eleven closed
+polynomial intervals. The script constructs the polynomials from these
+formulas, rather than loading fitted coefficients. It also verifies each
+square-root enclosure before using it. This proves the first table.
+
+Monotonicity at $\lambda=0$ gives $D\ge Q(p)/\sqrt{pq}$.
+On $[1/4,2/5]$ this ratio decreases: $Q$ is positive and decreasing,
+while $pq$ is increasing. For each upper endpoint $b$ and index $N_b$
+in the second table, the exact positive-base comparison is
+\[
+             (N_b+1)^2Q_-(b)^2>B_*^2b(1-b).
+\]
+It excludes $n\ge N_b+1$ when $p\le b$, proving the second table.
+\end{proof}
+
+The same inequality gives explicit near-critical localization:
+\[
+ |p-p_*|\le
+ \sqrt{\frac{B_*}{2(6+2\sqrt{10})n}}
+ <\frac{23}{20\sqrt n}.
+\]
+In particular no acquired witness with $n\ge169$ lies below $1/3$,
+and no acquired witness with $n\ge3599$ lies at or below $.4$.
+These remove whole probability/index regions before count comparison;
+they do not certify the remaining finite indices.
+
+\section{The Bernoulli gap: exactly the available scope}
+Schulz's original thesis, \emph{The optimal Berry--Esseen constant in the
+binomial case} (2016), Theorem~1 on printed page~1, supplies the strict
+finite-$n$ bound at $C_E$ for every $0<p<1$. Its sharper formula is stated
+only for $p\in[1/3,2/3]$; see the
+\href{https://d-nb.info/1197702695/34}{original thesis}.
+For $1/3\le p\le1/2$, that formula yields the weighted reserve
+\[
+ C_E\rho_B-\sqrt n\,\sup_x|F_B(x)-\Phi((x-np)/\sqrt{nv})|
+ >\frac{Q(p)}{6\sqrt{2\pi v}}
+   =\frac{2C_E(p-p_*)^2}{\sqrt v}.
+\]
+This is an exact algebraic identity, not a new extension of the external
+theorem. Below $1/3$ we retain only strictness. The geometric index bound
+now confines that unresolved quantitative-gap range to $42\le n\le168$.
+No Bernoulli-gap premise is used in the new noise ceiling.
+
+The thesis gives a warning example on printed pages 26--27:
+$n=217$, $p=77/2604$, evaluated at $k=6$. Our exact rational normal
+enclosure independently confirms that the sharper formula fails there.
+This lies outside the acquired probability interval and does not refute
+its possible extension to $[1/4,1/3)$; it rules out an unrestricted
+extrapolation.
+
+\section{Checks, an obstruction, and the remaining work}
+The scalar checker uses exact rational arithmetic for the 139 coefficients
+and all denominator, monotonicity and integer-index gates. A separate
+actual-law check computes every support gap and its weight, retaining
+threshold atoms, rather than treating conditional means as support points.
+It includes zero conditional noise, both variance allocations, symmetric
+and skew Bernoulli limits, tiny positive defects, and inward cubic equality
+cases. Each positive-noise law is also checked after reflection, with its
+actual sign probability and conditional variance allocations exchanged.
+These examples test the formulas; they do not prove the continuous
+domain by sampling.
+
+There is a concrete limit to the reduction. Take $n=42$, $p=3/10$,
+$U_1=0$, and let the centered law $U_0$ be supported on
+$\{-3/5,5/882\}$. Then $\lambda=1/10$, $d=5/882$,
+and the standardized law obeys the global support and geometric bounds,
+including $nD<27<32.20665378$. It lies below $1/3$ and above the completed
+left count range $.01$. Thus these necessary geometric data alone do not
+remove every remaining left case. No contact or nonnegative-excess premise
+is asserted for this example.
+
+The new bounds make all count work at $\lambda\ge.36$ unnecessary for
+an acquired witness, and all left count work at $\lambda\ge.32$
+unnecessary. Smaller left probability ranges have the stronger ceilings
+in Theorem~\ref{g:ceiling}. Their derivation requires no outer-strip or
+heat/ray calculation. The coarse entry, actual gap, original geometric
+bootstrap and their contact/predecessor ancestry remain. Count comparison
+below the new ceilings, signed/reflected acquisition, and the independent
+finite base through 41 remain open obligations. No previous theorem,
+certificate or manuscript source is changed.
+\end{document}

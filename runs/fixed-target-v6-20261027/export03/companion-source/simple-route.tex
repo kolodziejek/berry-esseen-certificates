@@ -1,0 +1,165 @@
+\section{A shorter conditional entry statement}
+
+Let $P$ be a centered variance-one fixed-target maximizing witness,
+$n\ge N=42$, with actual support in $[-96/25,96/25]$ and
+$1\le\rho=\E|X|^3\le7361/4000$. Put $c=\CE$, raw threshold $H$,
+$e=\exp[-H^2/(2n)]$ and $\phi_0=(2\pi)^{-1/2}$.
+Assume the fixed-target contact/transfer identity
+\begin{equation}\label{twopass:identity}
+ (n+H^2)a+nc\rho(1-e)+n\phi_0 eD/6+n^{3/2}L=\mathcal R_c(H),
+ \qquad a,L,D\ge0,
+\end{equation}
+with the actual conserved defect
+$D=(3+\sqrt{10})\rho-\gamma-3J$.
+The complete retained low- and high-frequency estimates are also premises.
+They supply on each moment cell a raw quadratic enclosure
+\begin{equation}\label{twopass:raw}
+ \mathcal R_c(H)\le K_F+cA+f(c)|H|-q(c)H^2.
+\end{equation}
+Every moment and gap in this statement belongs to the same law.
+
+Use the 24 closed cells $[r_i,r_{i+1}]$ with
+$r_i=1+3361i/96000$, $0\le i<24$, and rational enclosures
+\[
+ c_-=0.4097321837023<c<c_+=0.4097321837025,
+\]
+\[
+ \phi_l=997/2500<\phi_0,\qquad
+ \sigma_l=3.162277660<\sqrt{10}.
+\]
+The signed Cauchy theorem supplies a gap-free cap $K$ for $|K_1|$.
+The fifth-moment square replaces $8\rho^3/27$ by $\rho^3/4$ in the
+first unsigned constant branch. Concretely, for a cell $[l,u]$ with
+$|\beta|\le b$, $|\gamma|\le g$, $M_4\le M$, and retained gap coefficient
+$\Gamma\ge0$, use
+\begin{align*}
+ A(\Delta)=\min\bigl\{&\tfrac32b(2u+1)+\tfrac32\Gamma\Delta
+       +\tfrac38u^2(u+1)+u^3/4-l/2,\\
+                     &\tfrac32b(2u+1)+2uM-l/2\bigr\}.
+\end{align*}
+Set $f(t)=tK+v_H+s_F$. Here $K_F,v_H,s_F,M,b,g,\Gamma$ are exactly the freshly reconstructed
+first-cover quantities; no incomplete Fourier window is substituted.
+
+\subsection{The only phase price needed}
+
+A raw ceiling $\mathcal R_c\le T<Nc_-l$ licenses a positive density floor
+$\phi_-:=\phi_l(1-T/(Nc_-l))$ by \eqref{twopass:identity}.
+It also gives a quadratic price without any higher-degree maximization.
+Indeed, with $M_c=c\rho-\phi_0D/6$,
+\[
+ eM_c=(1+H^2/n)a+c\rho+\sqrt nL-\mathcal R_c/n
+       \ge c\rho-T/n>0.
+\]
+Since $\exp(w)-1\ge w$ for $w=H^2/(2n)$,
+\[
+ n(1-e)M_c\ge\frac{H^2}{2}(c\rho-T/n)
+             \ge\eta H^2,\qquad \eta=(c_-l-T/N)/2>0.
+\]
+Rearranging \eqref{twopass:identity} consequently bounds the conserved
+resource
+\begin{equation}\label{twopass:resource}
+ S:=(n+H^2)a+n\phi_0D/6+n^{3/2}L
+ \le\mathcal R_c-\eta H^2.
+\end{equation}
+Thus a bound $S\le U$ implies $nD\le6U/\phi_l$ and
+$D\le6U/(N\phi_l)$. A resource ceiling is never used in place of $T$
+to license the density or to compute $\eta$.
+
+\subsection{Two ordered passes}
+
+In pass 1, take $\Delta=2u$, $A=A(2u)$ and $q(t)=tl-g/5$.
+All divisors are strictly positive. For either pass, first compute
+\begin{equation}\label{twopass:squares}
+ T_{\rm new}=\min\left\{T_{\rm valid},
+  \overline{\max_{t=c_-,c_+}\{K_F+tA+f(t)^2/(4q(t))\}}\right\},
+\end{equation}
+where $T_{\rm valid}$ is the retained first raw bound, also intersected
+with the preceding raw bound when available. A bar means upward rounding
+to a multiple of $10^{-10}$; an underline below means downward rounding
+to that same grid.
+Form $\eta$ from this new raw bound, then compute
+\[
+ U_{\rm new}=\min\left\{T_{\rm new},U_{\rm valid},
+  \overline{\max_{t=c_-,c_+}
+    \{K_F+tA+f(t)^2/[4(q(t)+\eta)]\}}\right\}.
+\]
+Omit $U_{\rm valid}$ on the first pass. The bound $S\le T_{\rm new}$
+is licensed by the positive $M_c$ just proved. Set
+$d_{\rm new}=\overline{6U_{\rm new}/(N\phi_l)}$ and retain the minimum
+with any preceding defect bound.
+
+For pass 2, use only pass 1's $T_1,d_1$. The same-law circle gives,
+without a central gap,
+\[
+ D\ge\sqrt{10}\rho-\gamma-3\sqrt{\rho^2-\gamma^2}.
+\]
+Put $a_0=\sigma_l-d_1/l$. If $a_0\le-1$, take $y_l=-1$;
+otherwise obtain the rational lower bound
+$y_l\le(a_0-3\sqrt{10-a_0^2})/10$ by rounding the square root upward.
+The circle inversion proves
+\[
+ g_l=\max\{-g,\sigma_l l-3-d_1,\underline{\min(ly_l,uy_l)}\}\le\gamma.
+\]
+Its proof uses the increasing lower branch of
+$y+3\sqrt{1-y^2}$; it does not require a previously acquired support gap.
+Now use
+\begin{align*}
+ \Delta&=\min\{2u,(1-\sigma_l)l+3+d_1,u-g_l\},\\
+ A&=\min\{A(2u),A(\Delta)\},\\
+ q(t)&=\max\{tl-g/5,\ tl+\tfrac12\min(\phi_-g_l,(2/5)g_l)\}.
+\end{align*}
+The actual gamma sign is retained. Both alternatives in $q$ have slope
+$l$, so $q(t)$ is affine in $t$. For fixed $|H|$, the raw and resource
+quadratics are affine in $t$; their maxima occur at the two endpoints
+before square completion. All bounds use previous inputs before obtaining
+new conclusions. No central-gap estimate is used in either pass.
+
+\begin{theorem}[Conditional two-pass entry]\label{twopass:result}
+Under the stated support, contact/transfer and complete Fourier premises,
+the two passes on all 24 closed cells prove
+\begin{align*}
+ \mathcal R_c&\le11.5164967977, & S&\le9.9790315907,\\
+ D&\le3.5746638454<4, & nD&\le150.1358815051.
+\end{align*}
+Moreover the closed support of the witness has an actual central gap
+$(-A_0,B_0)$ with $A_0,B_0>0$.
+\end{theorem}
+\begin{proof}
+The exact rational checker evaluates \eqref{twopass:squares} and its
+resource counterpart on every cell, retaining closed shared endpoints:
+\[
+\begin{array}{c|r|r|r|c}
+ \text{pass}&\max T&\max U&\max d&\text{cells passing the gap test}\\\hline
+ 1&13.2818901598&10.9330610254&3.9164138937&23\\
+ 2&11.5164967977&9.9790315907&3.5746638454&24.
+\end{array}
+\]
+The second pass gives, in every cell, the strict margin
+\[
+ (\sigma_l-1)l-d_2\ge
+ 526024602543/1600000000000>0.
+\]
+It remains to justify what that test means. If zero belongs to the
+closed support, every complementary gap lies on one side of zero.
+For such a gap $(a,b)$,
+$(b-a)^2\le2\int_a^b|x|\,dx$.
+Summing with its nonnegative zero-bias weight gives $J\le\rho$.
+Since $\gamma\le\rho$, this implies
+$D\ge(\sqrt{10}-1)\rho\ge(\sigma_l-1)l$, a contradiction.
+Thus zero is outside the closed support. Centering and positive variance
+place support on both signs; its nearest endpoints define the required
+central gap.
+\end{proof}
+
+The checker freshly computes the first-cover primitives and then exactly
+48 cell passes. It does not import the higher-degree phase routine.
+Ten cells also have $D<2$; fourteen do not. The theorem acquires an actual
+gap and a weighted defect bound, not the later much smaller defect,
+conditional-noise bounds or complete probability panels required for a
+local comparison. No existing certificate is removed by this result.
+
+For this fixed cover the independent check also verifies that none of the
+retained minima improves the freshly completed quadratic ceilings in either
+pass. The fresh quadratics therefore suffice on their own: an earlier raw
+ceiling is not an additional mathematical premise of the two-pass result.
+The retained Fourier and moment estimates remain its premises.

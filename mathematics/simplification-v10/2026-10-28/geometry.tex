@@ -1,0 +1,380 @@
+\section{A direct geometric bound}
+\label{v10:geometry}
+The moment argument can be made without a succession of feedback updates.
+The useful quantity is a single cost for changing the sign probability,
+moving the inner support endpoints, and adding conditional noise. We prove
+its scalar consequences directly, then evaluate it once on each of the
+already available probability intervals.
+
+Let $X$ have mean zero, variance one and compact support with an actual
+central gap $(-A,B)$, where $A,B>0$ are support endpoints. Set
+\[
+ p=\mathbb P(X>0),\quad q=1-p,\quad v=pq,\quad
+ m=\mathbb EX_+=\mathbb EX_-,\quad \bar A=m/q,\quad\bar B=m/p,
+\]
+\[
+ \theta=1-m^2/v,\quad w=1-\theta,\quad
+ \ell=m/v=\sqrt{w/v},\quad d=1-(A+B)/\ell.
+\]
+There is no atom at zero. Conditional means give $A\le\bar A=\ell p$,
+$B\le\bar B=\ell q$, so $0\le d<1$. Write
+$W=X-\mathbb E[X\mid\mathbf1_{X>0}]$ and define measures on magnitudes by
+\[
+ \int f\,d\mu_\pm=\mathbb E[W^2\mathbf1_{\{\pm X>0\}}f(|X|)].
+\]
+Their total mass is $\theta$. For $\sigma=\sqrt{10}$ put
+\[
+ Q(p)=(\sigma+1)p^2+(\sigma-1)q^2-6pq
+      =(6+2\sigma)(p-p_*)^2,\qquad p_*=(4-\sigma)/2.
+\]
+Let $\rho=\mathbb E|X|^3$, $\gamma=\mathbb EX^3$,
+$\beta=\mathbb E[X|X|]$,
+$J=\sum_{(a,b)}\tau_{a,b}(b-a)^2$, and
+$D=(3+\sigma)\rho-\gamma-3J$. The sum is over bounded support gaps and
+$\tau(t)=\mathbb E[X\mathbf1_{X\ge t}]$ is constant on each gap.
+
+\begin{proposition}[One common geometric cost]\label{v10:geometry:cost}
+With the preceding definitions,
+\begin{equation}\label{v10:geometry:direct}
+ D\ge\ell\{wQ(p)+6wd(1-d)+\theta K(p,d)\},
+\end{equation}
+where
+\[
+ K(p,d)=\min\{3(\sigma+1)q-(\sigma+5)d,
+                    3(\sigma+3)p-(\sigma+7)d\}.
+\]
+No maximizing-contact or predecessor hypothesis is needed for this
+geometric inequality.
+\end{proposition}
+\begin{proof}
+For the positive outer gaps,
+\[
+ J_o^+\le2\int_B^\infty(t-B)\tau(t)\,dt
+       =\mathbb E[X_+(X_+-B)^2],
+\]
+and the same inequality holds on the negative side. Endpoint atoms are
+included; isolated integration endpoints have zero Lebesgue measure.
+Add the central gap contribution $m(A+B)^2$. Substitution gives
+\[
+ D\ge \ell wQ(p)+E_0+\int k_+\,d\mu_++\int k_-\,d\mu_-,
+\]
+\[
+ E_0=6m\{(A+B)(\bar A-A+\bar B-B)+(\bar A-A)(\bar B-B)\},
+\]
+\[
+ k_+(x)=(\sigma-1)(x+2\bar B)+6B,\qquad
+ k_-(x)=(\sigma+1)(x+2\bar A)+6A.
+\]
+For completeness, the substitutions use
+$\mathbb EX_+^3=m\bar B^2+\int(x+2\bar B)d\mu_+$ and its negative
+analogue, together with
+$\mathbb EX_+^2-mB=\mu_+(\mathbb R)+m(\bar B-B)$.
+Put $a_0=(\bar A-A)/\ell$, $a_1=(\bar B-B)/\ell$. Then
+$a_0,a_1\ge0$, $a_0+a_1=d$, and
+\[
+ E_0/\ell=6w\{d(1-d)+a_0a_1\}.
+\]
+On the positive measure $x\ge B$, so
+$k_+(x)/\ell\ge3(\sigma+1)q-(\sigma+5)a_1$.
+On the negative measure the corresponding lower bound is
+$3(\sigma+3)p-(\sigma+7)a_0$.
+Drop $a_0a_1$, use $a_i\le d$, and sum the two nonnegative measures.
+Their combined mass is $\theta$, proving the result.
+\end{proof}
+
+\subsection{Direct global localization}
+The following numerical premises are the coarse entry's global output.
+They are not conclusions of the older moment iteration:
+\begin{equation}\label{v10:geometry:input}
+ p\in[.24,.54],\quad n\ge42,\quad nD\le32.20665378,
+ \qquad |X|\le157/50.
+\end{equation}
+Only the final third-moment bound uses the support radius. Define
+\[
+ D_0=.76682509,\quad s=3.162277660,\quad s^+=3.162277661,
+ \quad z=(s-1-D_0)/3,
+\]
+\[
+ T=7/125=.056,\quad W_0=1-T=.944,\quad d_0=17/250=.068.
+\]
+All displayed decimals in this section denote exact rationals.
+
+\begin{theorem}\label{v10:geometry:global}
+Under \eqref{v10:geometry:input},
+\[
+ p>1/4,\qquad \theta<.056,\qquad d<.068,\qquad
+ \lambda:=n\theta/\ell^2<.616,\qquad \rho<1.426.
+\]
+The numerical part reduces to four quartics, two cubics and elementary
+rational inequalities specified below.
+\end{theorem}
+\begin{proof}
+The preceding outer-gap bound also gives $J\le\rho+2mAB$. Thus
+\[
+ D\ge\sigma\rho-\gamma-6mAB\ge\sigma-1-3AB,
+\]
+using $\rho\ge1$, $\gamma\le\rho$, $m\le1/2$. Consequently
+\begin{equation}\label{v10:geometry:domain}
+ AB\ge z>0,\quad w\ge AB\ge z,\qquad
+ 0\le d\le1-2\sqrt{zv/w}=:d_{\max}.
+\end{equation}
+Here $AB\le\bar A\bar B=w$ and $A+B\ge2\sqrt{AB}$.
+
+First, $\theta<1/5$ follows without iteration. Since
+$B\ge z/\bar A$, the positive coefficient in the common budget satisfies
+\[
+ k_+/\ell\ge q\{(\sigma+5)z/w+2(\sigma-1)\}\ge3.13.
+\]
+The negative coefficient is bounded by
+$p\{(\sigma+7)z/w+2(\sigma+1)\}\ge3.13$ in the same direction.
+These last bounds use $w\le1$, $q\ge.46$, $p\ge.24$.
+Therefore $D\ge3.13\ell\theta$; since $\ell\ge2\sqrt z$, a value
+$\theta\ge1/5$ would give $D\ge(313/250)\sqrt z>D_0$.
+
+Suppose next $T\le\theta<1/5$. For fixed $p,\theta$, each branch
+of \eqref{v10:geometry:direct} is concave in $d$. It suffices to
+exclude $d=0$ and $d=d_{\max}$. At the latter endpoint put
+$g=1-d_{\max}=2\sqrt{zv/w}$. Exact rational square comparisons give
+$.59<g<.77$, $g(1-g)>.17$ and $\ell>1.7$.
+Both noise coefficients are positive, since
+$3(\sigma+1)q,3(\sigma+3)p>4.4$ and
+$4.4-(s^++7)\cdot.41>0$. Hence the inward cost alone exceeds
+$1.7\cdot6\cdot.8\cdot.17>D_0$.
+At $d=0$ the two branches are
+\[
+ F_C(\theta)=\sqrt{(1-\theta)/v}\{(1-\theta)Q(p)+\theta C(p)\},
+\]
+where $C(p)=3(\sigma+1)q$ or $3(\sigma+3)p$.
+Their derivative has the sign of
+$(2-3\theta)C-3(1-\theta)Q$, which is positive because
+$Q\le.4$, $C>4.4$, $\theta\le.2$.
+It remains to prove $F_C(T)>D_0$.
+
+Here and below replace $\sigma$ by its rational lower bound $s$ in
+$Q,C$, writing $Q_s,C_s$. The required positive-base squared inequalities
+are
+\[
+ P_\pm(p)=W_0\{W_0Q_s(p)+TC_{s,\pm}(p)\}^2-D_0^2p(1-p)>0.
+\]
+They have $P_\pm''\ge2D_0^2$ on $[.24,.54]$. If a twice differentiable
+function satisfies $P''\ge2a>0$, then
+\begin{equation}\label{v10:geometry:tangent}
+ P(p)\ge P(x)-P'(x)^2/(4a).
+\end{equation}
+This follows by integrating the second derivative and completing the square.
+The exact evaluations at $x=.45,.39$ give respectively lower bounds
+$.0017$ and $.011$. This excludes both endpoints and proves $\theta<T$.
+
+From \eqref{v10:geometry:domain}, $d<.42$. Each branch of the direct
+bound now increases in $d$, since
+$6W_0(1-2\cdot.42)-T(s^++7)>0$.
+At $d=d_0$, it also increases in $\theta$: the derivative numerator is
+\[
+ (2-3\theta)(C-(\sigma+5\text{ or }\sigma+7)d_0)
+ -3(1-\theta)\{Q+6d_0(1-d_0)\}>0.
+\]
+The least value is therefore at $\theta=0$. The remaining inequality is
+\[
+ P_d(p)=\{Q_s(p)+6d_0(1-d_0)\}^2-D_0^2p(1-p)>0.
+\]
+Again $P_d''\ge2D_0^2$; formula~\eqref{v10:geometry:tangent} at $.424$
+gives a lower bound $.0012$. Thus $d<d_0$.
+
+Since the direct bound increases in $d$, it gives
+$D\ge\ell\{wQ+\theta C\}$ for at least one of the two values of $C$.
+Multiplying by $n$ and using $n\theta=w\lambda/v$ yields
+\[
+ \lambda\le\max\left\{
+ \frac{p[17.558-42Q(p)]}{3(\sigma+1)},
+ \frac{q[17.558-42Q(p)]}{3(\sigma+3)}\right\}.
+\]
+Here $\ell w\ge2W_0^{3/2}$ and
+$32.20665378/(2W_0^{3/2})<17.558$.
+The numerators are positive since $Q\le.4$. Replacing $Q,\sigma$ by
+their lower enclosures gives rational cubics
+$U_+,U_-$. The positive cubic increases up to $p=1/3$ and satisfies
+$U_+''\le-13$ thereafter. The negative cubic has $U_-''\le-12$
+on the entire interval. The concave counterpart of
+\eqref{v10:geometry:tangent}, evaluated at $.455$ and $.392$, gives
+$U_+<.615289$, $U_-<.565358$, proving the stated bound on $\lambda$.
+
+For the third moment, $\ell>1.94$, $B>1.94(.46-.068)$ and
+$\bar B<1.8$. Thus, for $x\le3.14$,
+\[
+ \frac{k_+(x)}{x+2\bar B}
+ \ge s-1+\frac{6\cdot1.94(.46-.068)}{3.14+3.6}>5/2;
+\]
+the negative ratio is already at least $\sigma+1>5/2$.
+The exact third-moment identity and common budget imply
+\[
+ \rho\le\frac{w^{3/2}}{\sqrt v}\{1-2v-\tfrac25Q(p)\}+\tfrac25D_0
+ \le\frac{1-2v-\tfrac25Q_s(p)}{\sqrt v}+\tfrac25D_0.
+\]
+The bracket is positive since $Q\le.4$. For
+$M=1.426-\tfrac25D_0$, the final quartic is
+\[
+ P_\rho(p)=M^2p(1-p)-\{1-2p(1-p)-\tfrac25Q_s(p)\}^2.
+\]
+It satisfies $P_\rho''\ge.4$ on the full interval, and
+\eqref{v10:geometry:tangent} at $.258$, with $a=.2$, gives
+$P_\rho>.00015$. Positivity of both squared bases proves $\rho<1.426$.
+Finally $D\ge Q(p)/\sqrt{pq}$ follows by the already proved monotonicities
+in $d$ and $\theta$. This ratio decreases on $[.24,.25]$, and its value
+at $.25$ exceeds $D_0$ by an exact squared comparison. Hence $p>1/4$.
+\end{proof}
+
+\paragraph{Finite arithmetic.}
+The four quartics are specified by their displayed formulas, not by fitted
+coefficients. Their second derivatives are quadratic, whose minima on a
+closed interval occur at endpoints or at the eligible vertex. Cubic second
+derivatives are affine. Thus the stated derivative bounds and tangent
+values require only rational evaluations. The accompanying pure-Python
+checker reconstructs the polynomials and performs these operations with
+\texttt{Fraction}. It also checks positivity before squaring and the
+rational enclosures $s^2<10<(s^+)^2$. These checks prove precisely the
+scalar inequalities used above, conditional on the analytic derivation.
+
+\subsection{One evaluation on each probability interval}
+The global lemma also removes the repeated updates needed to obtain the
+existing support strips. Let a closed entry panel be $I=[l,u]$, with
+$D\le D_I$ and $nD\le42D_I$. Put $v_-,v_+$ for its actual minimum and
+maximum of $p(1-p)$, including $1/4$ when the panel crosses $1/2$.
+Let $Q_I=\max(0,\min_I Q_s)$ and
+\[
+ C_I=\min\{3(s+1)(1-u),3(s+3)l\},\qquad e_0=\sqrt{W_0/v_+}.
+\]
+Since $D\ge\ell\{Q+\theta(C-Q)\}$ and $\ell\ge e_0$, a negative
+$D_I/e_0-Q_I$ excludes the whole panel. Otherwise one evaluation gives
+\begin{equation}\label{v10:geometry:panel}
+ \Theta_I=\min\left(T,\frac{D_I/e_0-Q_I}{C_I-Q_I}\right),\quad
+ e_I=\sqrt{(1-\Theta_I)/v_+},\quad
+ J_I=\frac{D_I}{e_I(1-\Theta_I)}-Q_I,
+\end{equation}
+\[
+ d_I=\min\left(d_0,\frac{1-\sqrt{1-2J_I/3}}2\right),\quad
+ A_I=e_I(l-d_I),\quad B_I=e_I(1-u-d_I).
+\]
+All roots and divisions are checked on their stated domains. If $J_I<0$
+the panel is impossible; otherwise the smaller quadratic root is correct
+because the global result has already proved $d<.068<1/2$.
+These inequalities follow from
+$D\ge\ell w\{Q+6d(1-d)\}$, since the noise coefficients remain positive.
+
+For a coherent third-moment estimate define
+\[
+ \bar A_u=\sqrt{u/(1-u)},\quad\bar B_u=\sqrt{(1-l)/l},\quad
+ L_I=R+2\max(\bar A_u,\bar B_u),
+\]
+\[
+ k_I=\min\{s-1+6B_I/(R+2\bar B_u),\;
+                 s+1+6A_I/(R+2\bar A_u)\},\quad
+ r_I=D_I-e_I(1-\Theta_I)Q_I.
+\]
+The noise term in $\rho$ is at most $\min(L_I\theta,r_I/k_I)$.
+Write $r_B=(1-2v_-)/\sqrt{v_-}$ and
+$\alpha_I=(3/2)\sqrt{1-\Theta_I}$. Integrating the derivative of
+$(1-\theta)^{3/2}$ gives the affine bound
+$1-\alpha_I\theta$, which stays positive since
+$\alpha_I\theta\le(3/2)T<1$. Hence
+\[
+ \rho\le\min\left(1.426,\;
+ r_B+(L_I-\alpha_Ir_B)_+
+             \min\{\Theta_I,r_I/(k_IL_I)\}\right).
+\]
+This is the maximum of two affine pieces meeting at their turnover; it
+does not combine incompatible allocations of the same noise.
+The other exports are
+\[
+ 1-2u-2(1-u)\Theta_I\le\beta\le1-2l+2l\Theta_I,
+ \qquad e_I\le\ell\le1/\sqrt{v_-},
+\]
+\[
+ \lambda\le\frac{v_+}{C_I}
+      \left\{\frac{42D_I}{e_I(1-\Theta_I)}-42Q_I\right\}.
+\]
+The same calculation retains a joint displacement--noise constraint. Set
+\[
+ a_I^*=6(1-d_I)-\frac{\Theta_I}{1-\Theta_I}(s^++7)>0.
+\]
+In the direct budget,
+$6wd(1-d)-\theta(\sigma+5\text{ or }\sigma+7)d\ge w a_I^*d$.
+Multiply by $n$, use $n\theta=w\lambda/v$, $n\ge42$ and
+$\ell w\ge e_I(1-\Theta_I)$. All remaining costs are nonnegative, so
+\begin{equation}\label{v10:geometry:joint}
+ a_I^*d+\frac{C_I\lambda}{42v_+}\le J_I.
+\end{equation}
+If $J_I=0$ this forces $d=\lambda=0$; otherwise it is a single shared
+budget with intercepts $J_I/a_I^*$ and $42v_+J_I/C_I$. It does not permit
+spending the full reserve independently on displacement and noise.
+A second useful line follows by bounding the same mixed cost in the other
+direction, using $d\le d_I$. Averaging the two valid lower bounds gives
+\[
+ \widehat a_I d+\frac{\widehat C_I\lambda}{42v_+}\le J_I,\qquad
+ \widehat a_I=6(1-d_I)-\frac{\Theta_I(s^++7)}{2(1-\Theta_I)},\quad
+ \widehat C_I=C_I-\frac{(s^++7)d_I}{2}.
+\]
+Both coefficients are checked positive. This uses
+$2(\theta/w)d\le[\Theta_I/(1-\Theta_I)]d+d_I(\theta/w)$, so it averages
+valid bounds for the same cost rather than adding two expenditures.
+All these are direct formulas; no result is fed back into an earlier formula.
+
+\begin{proposition}[Connection with the current entry]
+For the thirty closed nonempty panels of the selected v7 entry, the preceding
+single evaluation excludes panels 24 and 53 and retains panels 25 through 52.
+Under the fixed-target contact and sharp-predecessor hypotheses of the
+retained heat/ray lemma, outward rational evaluation supplies all thirteen existing
+$|U|<.6$ strips on $p\in[.40,.53]$ through the retained all-threshold
+heat and ray inequalities. On $[.41,.42]$ it gives
+\[
+ \theta\le.049086874003,\quad d\le.066505471827,\quad
+ \rho\le1.204660335428,\quad\lambda\le.526219192656,
+\]
+\[
+ 1.975749037978\le\ell\le2.033209198406,
+ \qquad .103059226156\le\beta\le.220251236683.
+\]
+The averaged joint bound has outward intercepts $.069772925988$ and
+$.551973904179$, both smaller than the old central moment resource's
+$.0730144376$ and $.5728987925$. These imply every outward moment, noise
+and scale premise used by the
+current central-panel confinement theorem. The raw-threshold and signed
+phase bounds still come from their original separate predecessors.
+\end{proposition}
+\begin{proof}
+The direct formulas above prove the moment and scale bounds on each entire
+closed panel. The finite check reads only the named entry's frozen input,
+retains all thirty nonempty panels, and uses directed rational square roots.
+For the strip test put $t_-=e_I(l+.6)$, $t_+=e_I(1-u+.6)$, with $r$ the
+proved rho cap and $b=-\beta_l$ or $b=\beta_u$, respectively. The retained
+all-threshold contact lemma bounds the contact expression at $t>\sqrt3$ by
+\[
+ \frac25 S^3\left\{\frac{t^3-3t}{6}
+                +\frac{|t^4-6t^2+3|}{72}\right\}
+ +S^3\left\{\frac{t^5}{4100}+\frac{3t}{820}
+                 +\frac{17(3t^2-2)}{78720}\right\}+c_0Q_r(t),
+\]
+where $S=81/80$, $c_0=819/2000$, $e=8/875$ and
+$Q_r(t)=-t^3+3rt^2/2+3bt+er$. At both boundaries the finite check requires
+this expression negative and
+\[
+ Q_r,Q_r',Q_r''<0,\qquad
+ L=\tfrac25(t^2/2+1/2+e)+c_0Q_r'<0,\quad L',L''<0.
+\]
+These are the existing whole-ray sufficient conditions, with their original
+index, contact and predecessor hypotheses. Both sides pass exactly on panels
+40 through 52. All thirteen closed intervals and both endpoints are retained;
+the other fifteen panels are not claimed to satisfy these strip tests.
+The displayed central vector consists of outward bounds from its single
+rational evaluation; direct comparisons with the previous central theorem's
+premises give the asserted connection.
+\end{proof}
+
+\paragraph{What this replaces.}
+The eight-round moment iteration is unnecessary for the four global
+bounds, the probability exclusions, the thirteen incoming strips and the
+central-panel input vector just listed. The actual v7 entry, its support
+radius and weighted $nD$ bound, the common gap budget and the heat/ray
+lemma remain dependencies. This is not a proof of the remaining
+high-noise panels, the count comparison or the finite base. Any downstream
+calculation using individual old panel bounds requires a new input-by-input
+check; the global improvements alone do not authorize such substitutions.

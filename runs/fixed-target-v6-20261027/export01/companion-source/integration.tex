@@ -1,0 +1,83 @@
+\section{Stronger bounds and the remaining numerical gap}
+
+The two-pass route above is sufficient for the initial support geometry.
+There are two bounded refinements. They give stronger quantitative
+information but are not needed to justify that route.
+
+First, keep the full phase correction in \eqref{v6:identity}. The
+appendix shows that its maximization over all real $n\ge42$ reduces to
+a degree-six polynomial at the floor index. A short concavity test
+leaves one critical point, enclosed by rational bisection. Combined with
+the same moment coefficients, a single pass gives
+\[
+ T\le13.2818901598,\qquad U\le10.7965952605,\qquad
+ D\le3.8675294672.
+\]
+Every cell already has $D<(\sigma-1)\rho$; the smallest rationally
+certified cell margin is greater than $0.03589975$.
+Six further circle/density updates give $D\le3.3579256801$.
+The selected quadratic must itself satisfy its strict raw gate before
+the exponential estimate is used. A better bound obtained elsewhere by
+taking a minimum does not certify that condition for this quadratic.
+
+Second, the actual central gap supplies a better symmetrization event.
+For independent $X,X'$, use their opposite-sign event with probability
+at least $1/(2u^2)$, conditional second moment at most $4u^2$, and the
+proved distance bound in the preceding section. Re-evaluate the
+\emph{complete} retained high-frequency bound, including all six pieces.
+Keep the smaller of this valid bound and the original universal bound.
+The lower-frequency estimate remains unchanged. Six bounded updates on
+the same 24 cells give
+\[
+ T\le9.3684595861,\qquad U\le8.3681296416,\qquad
+ D\le2.9976105609,\qquad nD\le125.8996435547.
+\]
+Sixteen cells satisfy $D<2$; eight do not. All 24 eventually improve
+their high-frequency bound. None is omitted. The gap is established
+\emph{before} its event is used, so this step does not assume its own
+conclusion.
+
+\begin{center}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Selected calculation & Upper bound for $U$ & Upper bound for $D$ & Gap cells\\
+\midrule
+Two elementary passes & $9.979032$ & $3.574664$ & $24/24$\\
+Full phase, one pass & $10.796596$ & $3.867530$ & $24/24$\\
+Full phase, six circle updates & $9.373986$ & $3.357926$ & $24/24$\\
+Full phase, six actual-gap updates & $8.368130$ & $2.997611$ & $24/24$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The decimal entries are outward upper bounds, not measured values of an
+extremizing law. The different rows have different dependencies and are
+not successive required stages of one proof.
+
+\paragraph{Acceptance and its limits.}
+The initial cells are
+$[1+3361i/96000,1+3361(i+1)/96000]$, $0\le i<24$.
+All include their endpoints. The checkers freshly reconstruct the
+first-cover constants from pinned source copies and use exact fractions,
+directed square roots and explicit continuous-domain maxima. They
+record both endpoints of the enclosure of $c$, complete high-frequency
+terms and the ordered previous-defect/new-raw/new-resource transitions.
+Separate checks reject missing, duplicated or reordered cells, invalid
+sign/moment gates, reversed root rounding, corrupted tables and an
+unlicensed phase envelope. Actual-law controls include Bernoulli,
+three- and four-point laws, zero atoms and tiny distant atoms; the last
+are rejected when they lie outside the acquired support domain.
+
+Independent reviews rederive the moment and phase arguments. The
+combined polynomial review reconstructs the coefficients and certifies
+concavity by an independent Bernstein calculation. These checks do not
+independently prove the retained Fourier primitives or validate their
+entire dependency graph. A fresh arithmetic success proves only the
+specified scalar implication under those premises.
+
+The retained initial acceptor asks for much more: its final targets
+include $D<0.784$, raw remainder below $2.24$, and further probability
+panels. Neither the two-pass result nor the stronger refinements above
+establish that contract. The final signed support/noise domains,
+confinement of both deleted sums, strict count exclusion, zero-noise
+binomial comparison and independent finite base remain necessary.
+No existing certificate, driver or target has been removed or weakened.

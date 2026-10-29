@@ -1,0 +1,20 @@
+{
+  "status": "PASS_RENDERED_PROOF_INSPECTION",
+  "pages": 7,
+  "all_pages_visually_inspected": true,
+  "issues": [],
+  "source_sha256": "f038aa62e039bfe48482fe69c1438553e90f7c246bf0fa74322115c33ea76ea9",
+  "pdf_sha256": "9251e16600a7d70fd40707d980b092c695f831d5c0881cf693eacc2eafc3eaf9",
+  "log_sha256": "1baf953a51da667c8d7d773269c37d0119bdcae10e43b4a9233fa3e1cf3aac7e",
+  "overfull_underfull_warning_lines": [],
+  "render_command": "pdftoppm -png -r 90 leftcount.pdf pages/page",
+  "page_sha256": {
+    "page-1.png": "07f0fce33d7a4cd9438791a7f766ee162d29d9cdef631cb0cdb8c022770c837a",
+    "page-2.png": "57d0bd6131c3cb1acd38c4e86792d80116244a1daca56b4f8c3b08e375fd40fe",
+    "page-3.png": "80b7e0b6aba7bf50d7d187a193d34a655cf933a89fcfa1bdf5a79f6550d4e6f5",
+    "page-4.png": "d8b8bf26dd02f25953cbb4d60b99bfac5149ff565c0986a4f146849d3e895852",
+    "page-5.png": "2c9aefb75e78cb55dee609a6774d84be4c37e6288be03e885b0051087168a33d",
+    "page-6.png": "10abff7a00d08bda816afe279ac5ab1a98a2c7b9a481165d412d7e814fdce652",
+    "page-7.png": "b7ed6762c24e189c87fa31e32f2714778e55642dcd4ae4037f0ce0563b958ba1"
+  }
+}

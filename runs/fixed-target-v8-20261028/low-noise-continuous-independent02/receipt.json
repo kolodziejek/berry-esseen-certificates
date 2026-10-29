@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "mathematics/fixed-target-v8/2026-10-28/reviews/low-noise-continuous-independent.py"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 0.018782291000000003,
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "source_sha256": "ea4be9226903a0ce375db7eae4325c7f9efe6794d730f1cc7ef6a1374fda33dc",
+  "stdout_sha256": "31be411940fdeaad401a8df2cdc0393dc82f89c415ae339758dddd3bc29b153c",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "criterion": "P1 concavity and both positive endpoint values; original unnecessary P2 sign is false and retained in prior failed evidence"
+}

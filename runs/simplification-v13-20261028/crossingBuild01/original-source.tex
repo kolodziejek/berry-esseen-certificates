@@ -1,0 +1,151 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,microtype,hyperref}
+\newtheorem{theorem}{Theorem}\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\title{Combining all conditional counts by one crossing identity}
+\author{}\date{28 October 2026}
+\begin{document}\maketitle
+
+Separate upper bounds on incoming counts discard cancellation with outgoing
+counts. The following identity retains every count of the same iid law.
+Its leading loss has the correct sign for all noise levels. The proof is a
+finite calculation; no Poisson theorem, tail truncation, or parameter grid
+enters it. The unequal binomial weights still require a separate estimate.
+
+\begin{theorem}\label{thm:mesh}
+Let $U_0,U_1$ be integrable, centered conditional-noise laws with
+\[
+ U_0\le a_0,\qquad -a_1\le U_1\le A_1,
+ \quad a_0,a_1,A_1\ge0,\quad a_0+a_1<1,\quad A_1+a_1\le1.
+\]
+Take $2n$ mutually independent variables $U_{0i},U_{1i}$ with these laws,
+and define
+\[
+ T_j=j+\sum_{i\le j}U_{1i}+\sum_{i>j}U_{0i},\quad 0\le j\le n.
+\]
+If $na_0\le t<n(1-a_1)$, there is a unique $K\in\{0,\ldots,n-1\}$
+with $T_K\le t<T_{K+1}$. Put
+\[
+ b=\min\{1-A_1-a_1,1-a_0-a_1\}\ge0,\qquad R=t-T_K.
+\]
+Then
+\begin{equation}\label{eq:gain}
+              g_n(t):=t-\E K\ \ge\ \E\min\{R,b\}\ \ge0.
+\end{equation}
+More precisely, let $D=1+U_1$, $F_0(x)=\Pp(U_0\le x)$,
+$M_0(x)=\E[U_0\mathbf1_{\{U_0\le x\}}]$, and
+\begin{align*}
+ h(x)&=F_0(x)\{\Pp(D>x)-\E(D-x)_+\}-M_0(x),\\
+ R_i&=t-(i-1)-\sum_{l<i}U_{1l}-\sum_{l>i}U_{0l}.
+\end{align*}
+The exact cancellation identity is
+\begin{equation}\label{eq:identity}
+                       g_n(t)=\sum_{i=1}^n\E h(R_i).
+\end{equation}
+\end{theorem}
+\begin{proof}
+Each increment $T_i-T_{i-1}=1+U_{1i}-U_{0i}$ is at least
+$1-a_0-a_1>0$. The threshold assumptions give $T_0\le t<T_n$.
+Thus the closed lower and strict upper crossing events partition the
+sample space, even when $t$ is an atom of a conditional sum.
+
+Write $W_j=T_j-j$ and $O=T_{K+1}-t$. The identity
+$T_{K+1}=K+1+W_{K+1}$ gives
+\[
+                   t-\E K=1+\E W_{K+1}-\E O.               \tag{3}
+\]
+Expand the selected noise sum as
+\[
+ W_{K+1}=\sum_{i=1}^n U_{0i}
+       +\sum_{i=1}^n(U_{1i}-U_{0i})\mathbf1_{\{T_{i-1}\le t\}}.
+\]
+The event in the $i$th summand is $\{U_{0i}\le R_i\}$.
+Both $R_i$ and $U_{0i}$ are independent of the centered $U_{1i}$, so
+\[
+                      \E W_{K+1}=-\sum_i\E M_0(R_i).       \tag{4}
+\]
+It is generally positive, not zero. A naive optional-stopping argument
+would lose this correction.
+
+Condition on $R_i=x$. Crossing at $i$ means $U_{0i}\le x<D_i$.
+Independence of the pair gives crossing probability
+$F_0(x)\Pp(D>x)$ and the overshoot contribution
+$F_0(x)\E(D-x)_+$. Sum these quantities in (3), using that crossing
+probabilities sum to one, and use (4). This proves \eqref{eq:identity}.
+
+Set $m=1-a_1$. If $x<m$, then $D>x$ almost surely and $\E D=1$;
+therefore
+\[
+                         h(x)=\E(x-U_0)_+\ge0.             \tag{5}
+\]
+In this case it is also at least the conditional expected value of
+$\min\{x-U_0,b\}$ on the crossing event. If $x\ge m$, then
+$x>a_0$, hence $F_0(x)=1$ and $M_0(x)=0$. Since $D\le1+A_1$,
+\[
+ h(x)=\Pp(D>x)-\E(D-x)_+
+       \ge(1-A_1-a_1)\Pp(D>x)\ge b\Pp(D>x).               \tag{6}
+\]
+At a crossing in this second case the age is $x-U_0\ge m-a_0\ge b$.
+Consequently (5)--(6), summed over the unique crossing, give
+\eqref{eq:gain}. Formula (6) is used at $x=m$, so atoms at the lower
+endpoint of $D$ introduce no change of convention. All selected sums are
+integrable, and every sum in the proof is finite.
+\end{proof}
+
+\section*{An exact replacement for the separate count sums}
+For $Y=B+U$ with $\Pp(B=1)=p$ and these conditional laws, the conditional
+distribution of a raw iid sum given $j$ successes is precisely that of
+$T_j$. With $F_B$ the $\mathrm{Bin}(n,p)$ CDF,
+\begin{equation}\label{eq:cdf}
+            \Pp(Y_1+\cdots+Y_n\le t)=\E F_B(K).
+\end{equation}
+The coupling is auxiliary: it preserves each conditional law, hence
+preserves the actual iid mixture. It does not impose independence between
+$K$ and the binomial count or substitute an optimized relaxation.
+
+For the acquired right strip, $a_0+a_1\le.072$ and $A_1=.6$, one may
+take $b=.328$ in \eqref{eq:gain}; for the left strip, inward sum at most
+$.068$ and $A_1=.7$ give $b=.232$. For $n\ge42$, $p\in[.25,.53]$,
+$s=\E U^2$, $ns\le.616$ and $|H|\le1.84$, put
+$t=np+H\sqrt{p(1-p)+s}$. Then
+\[
+ .25n-.948<t<.53n+.948,\qquad
+                   na_0\le t<n(1-a_1).
+\]
+Indeed $\sqrt{1/4+.616/42}<.515$ and $1.84(.515)<.948$;
+the remaining two inequalities hold already at $n=42$. Thus the
+cancellation identity covers the whole retained acquired noise range.
+It makes no assertion that the acquisition hypotheses themselves hold
+without their existing contact and predecessor dependencies.
+
+To state exactly what remains, put $v=p(1-p)$,
+$\rho=\E|Y-p|^3/(v+s)^{3/2}$, $\rho_B=(1-2v)/\sqrt v$, and $t=k+u$.
+For $\pi_k=\Pp(B_n=k)$ and
+$Q_k(j)=F_B(j)-F_B(k)-\pi_k(j-k)$, the direct comparison is exactly
+\begin{align}\label{eq:delta}
+ \Delta_C={}&-\sqrt n\,\pi_k g_n(t)+\sqrt n\,\E Q_k(K)
+              +\sqrt n\,\pi_k u\notag\\
+ &-\sqrt n\left[
+ \Phi\!\left(\frac{t-np}{\sqrt{n(v+s)}}\right)
+ -\Phi\!\left(\frac{k-np}{\sqrt{nv}}\right)\right]
+              +C(\rho_B-\rho).
+\end{align}
+The leading count contribution in this formula has the correct sign, for
+all phases, with both conditional noise laws present. This is stronger than
+an asymptotic assertion: every identity is exact for the actual sample size.
+But neither $\E Q_k(K)$ nor the two repairs in \eqref{eq:delta} has been
+absorbed by \eqref{eq:gain}. That joint inequality is the remaining task.
+The current general count certificates therefore remain dependencies of the
+accepted comparison. They cannot be removed merely because the leading
+term has been simplified.
+
+\section*{Controls and limitations}
+The companion exact checks reconstruct all conditional sums and the local
+kernel $h$ separately, including closed collisions and strict crossings.
+They check \eqref{eq:identity}, \eqref{eq:gain}, \eqref{eq:cdf} and the
+nonzero selected-noise bias. They also include a false extension: take
+$U_0=0$ and $D=9/10,39/20$ with probabilities $19/21,2/21$.
+At $n=2$, $t=9/10$, $\E K-t=1/210>0$; here $A_1+a_1=21/20>1$.
+No assertion of strict gain proportional to $s$, or of the full sharp
+Berry--Esseen bound, follows from this note alone.
+\end{document}

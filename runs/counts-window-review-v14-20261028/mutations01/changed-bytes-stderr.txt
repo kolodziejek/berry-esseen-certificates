@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/counts-window-review-v14/mathematics/simplification-v14/2026-10-28/counts-window-review-check.py", line 15, in <module>
+    if hashlib.sha256(data).hexdigest()!=PIN:raise RuntimeError('Reviewed source changed')
+RuntimeError: Reviewed source changed

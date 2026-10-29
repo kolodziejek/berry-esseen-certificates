@@ -1,0 +1,117 @@
+\section{What the first cover proves}
+\label{v5num:section}
+
+The numerical obligation in Section~\ref{v5entry:raw} is small enough to
+test directly. Take $N=42$, $R=96/25$ and the 24 closed intervals with
+endpoints
+\[
+ r_i=1+\frac{3361i}{96000},\qquad 0\le i\le24.
+\]
+Adjacent intervals share their endpoint; no boundary or sign class is
+discarded. Enclose the fixed coefficient, using Machin's formula and
+rational square-root bounds, by
+\[
+ c_-=0.4097321837023<\CE<c_+=0.4097321837025.
+\]
+These numbers do not enclose the maximizing law's actual score.
+
+On $[l,u]$, use the moment bounds of \eqref{v5entry:mom}. The low
+triple is the sixth-order triangle estimate; the high estimate is the
+minimum of six complete six-term bounds, at windows
+$1/8,4/25,9/50,1/5,11/50,1/4$. Every window's gates are checked before
+its complete bound is admitted. With the notation of the preceding
+section, set
+\[
+ q(t)=tl-g/5,\quad f(t)=tk+v_H+s_F,\quad
+ B(t)=K_F+tA_*+\frac{f(t)^2}{4q(t)}.
+\]
+For fixed $H$, the pre-completion expression
+$K_F+tA_*+f(t)|H|-q(t)H^2$ is affine in $t$.
+Its supremum over $H$ is convex. Hence the sharper endpoint choice
+\[
+ T_i=\max\{B(c_-),B(c_+)\}
+\]
+is valid for all intermediate $t$, including $\CE$. All divisors are
+strictly positive. The retained source functions and the explicit rational
+reconstruction are listed in \texttt{cell.md}; \texttt{cell\_check.py}
+computes the full cover afresh.
+
+The exact fractions imply the outward rounded bounds
+\begin{equation}\label{v5num:raw-results}
+ \max_i T_i/r_i<9.455732088645<10,\qquad
+ \min_i(42c_-r_i-T_i)>13.996057920754.
+\end{equation}
+Thus, conditional on the full stated Fourier estimates, the first license
+holds on the entire initial moment domain. The last cell has
+$T_{23}<17.069861855816$, above the old sufficient uniform cutoff
+$2N/5=16.8$. It nevertheless passes the moment-sensitive cutoff.
+This example explains why the change of gate matters.
+
+\subsection{Three ordered refinements}
+Keep a raw ceiling $T$, a conserved-resource ceiling $U$ and a defect
+ceiling $d$ as separate quantities. Initially $U=T$ and
+$d=6U/(N\phi_-)$, with $\phi_-=997/2500<\phi(0)$.
+All retained ceilings in the following computation are rounded upward
+to multiples of $10^{-10}$.
+
+At each step, the previous raw ceiling gives
+\[
+ \phi_{\min}=\phi_-\left(1-\frac{T}{Nc_-l}\right)>0.
+\]
+The gap bound $J\le\rho+2m$, where $m=\E X_+\le1/2$, implies
+\[
+ D\ge\sqrt{10}\rho-\gamma-6m.
+\]
+It is an inequality, not an identity. Thus, with
+$\sigma_-=3.162277660<\sqrt{10}$, the previous defect ceiling yields
+\[
+ \gamma_{\min}=\max(-g,\sigma_-l-3-d),\qquad
+ \rho-\gamma\le\min(2u,(1-\sigma_-)l+3+d).
+\]
+Use the latter to improve only the negative-gap part of $A_1$ in
+Section~\ref{v5entry:raw}; retain its minimum with the old constant bound.
+The sign-correct new curvature is
+\[
+ q(t)=\max\left(tl-g/5,\;
+ tl+\tfrac12\min(\phi_{\min}\gamma_{\min},(2/5)\gamma_{\min})\right).
+\]
+All bounds are frozen during the endpoint maximum. Both alternatives
+have slope $l$ in $t$, so the same convexity argument applies.
+Recompute the raw upper envelope and take its minimum with the previous
+$T$. This new raw bound now licenses the phase price
+\[
+ \eta=\tfrac12(c_-l-T/N)>0.
+\]
+Lemma~\ref{v5entry:phase} bounds the conserved resource by the endpoint
+envelope with denominator $4(q(t)+\eta)$. Take its minimum with the
+previous $U$, then update $d$ by $6U/(N\phi_-)$.
+Every update uses already justified bounds; the desired defect is never
+an input to its own proof. In particular, $U$ is never substituted for
+$T$ in the Gaussian-weight license.
+
+The following are outward upper bounds from exactly three steps, with
+all 24 cells retained:
+\begin{center}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Stage & maximum $T$ & maximum $U$ & maximum $d$ & cells with $d<4$\\
+\midrule
+Initial &17.0698618559&17.0698618559&6.1147234045&---\\
+Step 1 &17.0698618559&13.9304183554&4.9901197720&19\\
+Step 2 &17.0698618559&13.9304183554&4.9901197720&19\\
+Step 3 &17.0698618559&13.9304183554&4.9901197720&19\\
+\bottomrule
+\end{tabular}
+\end{center}
+The last resource bound also gives the weighted statement
+$nD\le209.585030422267$; it is not inferred merely from an unweighted
+bound on $D$. Some lower moment cells improve at steps 2 and 3, but the
+worst cell does not. In the final cell the acquired lower bound on
+$\gamma$ is still $-1.84025$.
+
+The five cells numbered 19--23 remain outside the sufficient $D<4$
+regime. A finer bound coupling the moments, or a new structural
+restriction, is needed there. The first license has been checked; the
+full initial acquisition and the local exclusion have not. This 24-cell
+cover must not be compared with the size of the older dense acquisition
+as though both computations established the same conclusion.

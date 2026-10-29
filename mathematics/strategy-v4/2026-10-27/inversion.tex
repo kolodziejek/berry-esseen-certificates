@@ -1,0 +1,35 @@
+\section{The compensated inversion identity used above}
+
+For completeness, the Fourier identity in the fixed-target calculation
+has the same short proof as in the manuscript. Let $\mu$ be a finite
+signed measure with zero mass and first moment, and finite absolute
+second moment. Then, for every real $H$,
+\[
+ \int(x-H)|x-H|\,d\mu(x)
+ =-\frac4\pi\int_0^\infty
+       \frac{\Im(e^{-itH}\widehat\mu(t))}{t^3}\,dt.
+\]
+The right side is absolutely convergent. Indeed, scaling and one
+integration by parts give
+\[
+ \int_0^\infty\frac{ty-\sin(ty)}{t^3}\,dt
+       =\frac\pi4y|y|.
+\]
+To check the constant, use $t^{-2}=\int_0^\infty s e^{-st}\,ds$ and
+Tonelli to obtain
+\[
+ \int_0^\infty\frac{1-\cos t}{t^2}\,dt
+ =\int_0^\infty\left(1-\frac{s^2}{s^2+1}\right)ds=\frac\pi2.
+\]
+For fixed $y$, the compensated integrand has its sign, so its absolute
+integral is $\pi y^2/4$. Hence Fubini against $|\mu|$ is justified by
+$\int(x-H)^2\,d|\mu|(x)<\infty$. The linear term vanishes by the
+two zero moments, proving the identity and absolute convergence.
+
+Applied to the sum law minus its Gaussian and cubic signed comparator,
+this proves the inversion step in the conservation calculation. The
+characteristic function of the latter comparator is
+$e^{-nt^2/2}(1-in\gamma t^3/6)$; its mass and first moment agree
+with those of the sum. This identity does not provide any numerical
+upper bound on its integral. Such a bound still needs the stated
+low-frequency and high-frequency estimates.

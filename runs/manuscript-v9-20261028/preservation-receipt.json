@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python3",
+    "-I",
+    "-B",
+    "manuscript/arxiv-v1/research/v9_checks/preservation.py"
+  ],
+  "returncode": 0,
+  "stdout_sha256": "468f507b77369f9932ffb5c7827af5b414b9e644752f141cec419a1cbaf92507",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source_sha256": "87dd9a1f509900e8e315e906b604129c019f702f2b75a4d512033df25da358eb",
+  "recording_python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "checked_counts": {
+    "baseline_entries": 2748,
+    "materialized_bytes_checked": 182,
+    "sparse_tree_index_bindings": 2566
+  }
+}

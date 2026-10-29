@@ -1,0 +1,6 @@
+{
+  "status": "FAILED_INTEGRATION_DRIVER",
+  "observed_process_returncode": 1,
+  "reason": "Driver attempted git cat-file on an unmaterialized promisor blob; the implicit network fetch failed. No blob was downloaded.",
+  "evidence_scope": "Subprocess check streams and exact driver snapshot are preserved; the aggregate exception was observed in the terminal tool output."
+}

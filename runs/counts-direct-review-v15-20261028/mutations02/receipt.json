@@ -1,0 +1,27 @@
+{
+  "status": "PASS_ALL_EXPECTED_SOURCE_REJECTIONS",
+  "checker_sha256": "fceebf56b62185b03af584dd2fc18b847bb373b7211ced3425b86b9607742667",
+  "records": [
+    {
+      "name": "changed loss-direct.tex",
+      "returncode": 1,
+      "elapsed_seconds": 0.03559858300000052
+    },
+    {
+      "name": "changed right-direct.tex",
+      "returncode": 1,
+      "elapsed_seconds": 0.03500512499999964
+    },
+    {
+      "name": "missing-option",
+      "returncode": 2,
+      "elapsed_seconds": 0.03558845800000121
+    },
+    {
+      "name": "missing-directory",
+      "returncode": 1,
+      "elapsed_seconds": 0.03754491700000173
+    }
+  ],
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]"
+}

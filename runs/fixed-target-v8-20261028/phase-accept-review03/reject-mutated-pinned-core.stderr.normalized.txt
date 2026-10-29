@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<REVIEW_ROOT>/runs/fixed-target-v8-20261028/phase-accept-review03/sandbox/mathematics/fixed-target-v8/2026-10-28/accept_phase.py", line 63, in <module>
+    if __name__=='__main__':main()
+  File "<REVIEW_ROOT>/runs/fixed-target-v8-20261028/phase-accept-review03/sandbox/mathematics/fixed-target-v8/2026-10-28/accept_phase.py", line 30, in main
+    for p,h in PINS.items():need(sha256((ROOT/p).read_bytes()).hexdigest()==h,'pinned source before execution '+p)
+  File "<REVIEW_ROOT>/runs/fixed-target-v8-20261028/phase-accept-review03/sandbox/mathematics/fixed-target-v8/2026-10-28/accept_phase.py", line 20, in need
+    if not ok:raise ValueError(why)
+ValueError: pinned source before execution mathematics/fixed-target-v8/2026-10-28/phase_core.py

@@ -1,0 +1,29 @@
+{
+  "utc": "2026-10-28T17:41:42.537329Z",
+  "returncode": 0,
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/counts-v11/runs/counts-v11-20261028/build02/main.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/counts-v11/runs/counts-v11-20261028/build02/texlive",
+    "--json"
+  ],
+  "input_sha256": {
+    "runs/counts-v11-20261028/build02/main.tex": "734d9fc9a1a30280adf4410b04091406269f2632517421f89d6b3a7a852c1746",
+    "mathematics/simplification-v11/2026-10-28/counts-v11.tex": "209f173c19a73c4fecf5aaf9aa2732c30b72266ff3f1673ddd52fa4a4e6c4641"
+  },
+  "artifact_sha256": {
+    "runs/counts-v11-20261028/build02/texlive/main.pdf": "cc9f980c1d570d93bc0ea458a145ea391823c8807d0fd57bf832579f0cebf29f",
+    "runs/counts-v11-20261028/build02/page-1.png": "2275436d188555100bd51ba7bd953d0ed00dc3998f6d8cbfbcdfc42e8b31ce09",
+    "runs/counts-v11-20261028/build02/page-2.png": "41cd1c0d12865957e3c882d6f8f8fc96fbf55c914b5c3043631351e07f915ce6",
+    "runs/counts-v11-20261028/build02/page-3.png": "1dfe753a7ebb00022baea5e9a5ca8e1e748c83e42a05a5ef96499733e7bedabe",
+    "runs/counts-v11-20261028/build02/page-4.png": "75848aa4ce5047d1f90ef51b704cfeeaa1a77d50884decca94678c7c485daf0f"
+  },
+  "visual_review": {
+    "pages": 4,
+    "status": "All four pages inspected. Equations readable, no clipping; final compiler log has no warnings or overfull boxes."
+  }
+}

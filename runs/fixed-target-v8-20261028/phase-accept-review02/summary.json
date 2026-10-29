@@ -1,0 +1,39 @@
+{
+  "acceptor_sha256": "3a0fc9dda618bfc463073971058fba9f9240850ff050aa10f0f30dc0badcf0bd",
+  "cache_gap": {
+    "all_source_pins_unchanged": true,
+    "altered_candidate_accepted": true,
+    "cached_bytecode_sha256": "2b435df55f84937173139c4f0f896278a99444d97ce35306ea25cb26c359fc81",
+    "unreviewed_field_cells": 682
+  },
+  "candidate_sha256": "b18599468c975032f4078e7a5f734fd6430b2b7da583789de58d9537d323f690",
+  "clean_replay_pass": true,
+  "independent_active_cells": 682,
+  "independent_scheduled_cells": 2048,
+  "limits": "No independent reconstruction of inherited numerical kernel inequalities; accepted v7 ancestry remains a premise.",
+  "pins": {
+    "mathematics/fixed-target-v5/2026-10-27/cell-sources/high_window_core.py": "53e181be63852e21abc3f44191cce7237c46d9e9d7868d3b6b94fccb606c7232",
+    "mathematics/fixed-target-v5/2026-10-27/cell-sources/kernel.py": "d71f58b7527c3cf6d2146d816e5d124f6f331d1b153e5aaedee5182707647f12",
+    "mathematics/fixed-target-v7/2026-10-27/accept_entry.py": "fe8197d6943c4decb7421bd1c162d7ec24045fdb3ea1215356249b4be620d69d",
+    "mathematics/fixed-target-v7/2026-10-27/entry-proof.json": "61b7ad43e20046d7cbf7157e3feb61696331731e7be418f6a5fa535c2eee8bae",
+    "mathematics/fixed-target-v7/2026-10-27/signed_core.py": "1f40ccb90eb58a7f84dc61a0a5dd9bf6e6eb4e341aa6c9c6d049d08451f5211b",
+    "mathematics/fixed-target-v7/2026-10-27/signed_support.py": "eecb06e65d8520d7cc06fc34217e06e1c0b1840dd8d687621e6828923769a4c4",
+    "mathematics/fixed-target-v8/2026-10-28/build_phase_core.py": "f39b10eed0da60f35b37393cd046f72dd2d45bd58afd60cf3e82b339de113bdd",
+    "mathematics/fixed-target-v8/2026-10-28/phase_core.py": "c9cc7e5a0e5637faafc912882cdb9bcd28bda5fa9982304ede2ab412c724ee7a",
+    "mathematics/fixed-target-v8/2026-10-28/phase_probe.py": "fe59af3964c7cb6800d7f667c1ffd958ecf2bf7ae42728129999d6914b523fc8"
+  },
+  "reconstructed_endpoint_quadratics": 1364,
+  "rejected_comparison_controls": [
+    "nested boolean integer",
+    "nested float integer",
+    "noncanonical rational",
+    "rational numeric instead of string",
+    "lost signed endpoint",
+    "changed curvature",
+    "unknown nested field",
+    "NaN field",
+    "changed parent source",
+    "nested duplicate JSON key"
+  ],
+  "status": "REVIEW_FOUND_BYTECODE_AUTHENTICITY_GAP"
+}

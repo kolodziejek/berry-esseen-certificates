@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v15/mathematics/simplification-v15/2026-10-28/geometry-left.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v15/runs/simplification-v15-20261028/leftbuild03",
+    "--json"
+  ],
+  "returncode": 0,
+  "source_sha256": "3de45fc739fd304b9e8c073fd0cc20537faa04033ae0323b63b7144f072a845f",
+  "elapsed_seconds": 1.1624185,
+  "utc": "2026-10-28T22:25:19.839680+00:00",
+  "change": "Weaken two displayed strict inequalities at vanishing endpoints; all theorem targets and constants unchanged."
+}

@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/Library/TeX/texbin/latexmk",
+    "-norc",
+    "-pdf",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-outdir=/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/runs/fixed-target-v8-20261028/portable-low-noise01/build",
+    "main.tex"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 0.9137162088882178,
+  "archive_sha256": "4422b1bc6d852e2ef928e94d4a9060003e601da33bbfb20fe83795742020cab1",
+  "pages": 5,
+  "all_extracted_page_text_identical": true,
+  "warning_lines": [],
+  "source_sha256": "7ab1eaaf4820ae7e91e220c86883805937205aa933800cea0cc1bf4ecb448f1a"
+}

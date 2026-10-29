@@ -1,0 +1,312 @@
+\section{Fixed-target contact and conservation with explicit residuals}
+\label{v8con:section}
+
+The purpose of this note is to close the contact-to-conservation implication,
+including its endpoint conventions. It also supplies an identity away from
+contact, which can be checked on arbitrary finite laws. It establishes no
+numerical acquisition schedule or final exclusion. Throughout, sums have
+independent identically distributed summands with mean zero, variance one
+and finite third absolute moment $\rho$. Fix $n\ge2$, $c>0$, and a real
+raw sum threshold $H$. Set
+\[
+ z=H/\sqrt n,\quad F=\Pp(S_n\le H),\quad
+ a=\sqrt n\{F-\Phi(z)\}-c\rho,
+ \quad\varphi=\phi(z),\quad\beta=\E[X|X|],\quad\gamma=\E X^3.
+\]
+In particular $a$ is not divided by $\rho$.
+
+\subsection{Attainment, contamination and the entire closed support}
+
+\begin{proposition}\label{v8con:attainment}
+For each fixed $n$ and $c>0$, the supremum of $a$ over these laws and
+thresholds is attained, and its attaining discrepancy is positive.
+At every maximizing pair,
+\begin{align}
+ I(y)={}&n^{3/2}\{h(y)-F\}+ny\varphi
+       +\tfrac12H\varphi(y^2-1)\notag\\
+ &+\tfrac32c\rho(y^2-1)-c\{|y|^3-\rho-3y\beta\}\le0,
+ \qquad h(y)=\Pp(S_{n-1}\le H-y),\label{v8con:contact}
+\end{align}
+with equality on the whole closed support. That support is compact.
+Neither statement assumes $a\ge0$ or $H\ge0$.
+\end{proposition}
+\begin{proof}
+Write $A$ for the supremum. Since $\rho\ge1$ and the discrepancy is
+at most one, $A\le\sqrt n-c$. Symmetric Bernoulli evaluated at $H=n$
+gives $A\ge\sqrt n(1-\Phi(\sqrt n))-c>-c$.
+For a maximizing sequence, $a_j\to A$ and
+$c\rho_j\le\sqrt n-a_j$ give a common third-moment ceiling.
+The discrepancies satisfy $\sqrt n(F_j-\Phi(H_j/\sqrt n))
+=a_j+c\rho_j\ge a_j+c>\eta$ eventually for some $\eta>0$.
+Chebyshev bounds the negative threshold tail by $n/H_j^2$;
+the positive discrepancy is at most the normal tail, also at most
+$n/H_j^2$. Thus $H_j$ is bounded.
+
+Tightness gives a subsequence $P_j\Rightarrow P$, $H_j\to H$ and
+$\rho_j\to b$. The common third-moment ceiling $M$ gives tail
+bounds $\int_{|x|>K}x^2dP_j\le M/K$ and
+$\int_{|x|>K}|x|dP_j\le M/K^2$. Bounded continuous truncations
+therefore preserve mean and variance. Lower semicontinuity gives
+$1\le\rho(P)\le b$. For fixed $n$, the sum laws converge weakly.
+Applying the closed-set inequality first at $H+t$ and then letting
+$t\downarrow0$ gives
+$\limsup F_j(H_j)\le F_P(H)$, including an atom at $H$.
+Consequently
+\[
+ a(P,H)\ge A+c\{b-\rho(P)\}\ge A.
+\]
+Maximality forces equality and $\rho(P)=b$. Convergence of third
+moments is a conclusion here; it was not inferred from bounded third
+moments. The discrepancy remains positive since $A+c\rho\ge A+c>0$.
+
+For contact, contaminate the raw marginal by
+$(1-\epsilon)P+\epsilon\delta_y$. Its mean is $\epsilon y$,
+variance $v_\epsilon=1+\epsilon(y^2-1)-\epsilon^2y^2$, and centered
+third absolute moment has derivative $|y|^3-\rho-3y\beta$ at zero.
+The last assertion follows by dominated differentiation of
+$|x-\epsilon y|^3$, with bound $3|y|(|x|+|y|)^2$.
+Evaluate the standardized law at the standardized image of the fixed
+raw event $S_n\le H$. The raw event probability is a polynomial in
+$\epsilon$, with derivative $n(h(y)-F)$ even at an atom collision.
+The normal argument is
+$(H-n\epsilon y)/\sqrt{nv_\epsilon}$, whose derivative is
+$-\sqrt n y-H(y^2-1)/(2\sqrt n)$.
+The one-sided derivative of the excess is exactly \eqref{v8con:contact};
+maximality makes it nonpositive.
+
+Its integral against $P$ is zero. All terms are integrable.
+The closed-event map $h$ is upper semicontinuous; at an atom it takes
+the larger one-sided value. Thus $I$ is upper semicontinuous. Strict
+negativity at a closed-support point would hold with a uniform negative
+margin on a neighborhood of positive $P$-mass, contradicting its zero
+integral. Finally $I(y)\le-c|y|^3+C_2y^2+C_1|y|+C_0$ for constants
+depending on this pair. It is strictly negative on both sufficiently
+distant rays, proving compact support. No higher moments were used
+before this step.
+\end{proof}
+
+The sign of the attained maximum detects the corresponding row failure,
+including equality. If $C_n$ denotes the supremum of the normalized
+absolute discrepancy, reflection gives, including an atom at $H$,
+\[
+ \Pp(-S_n\le-H)-\Phi(-z)
+ =\Phi(z)-\Pp(S_n<H)\ge\Phi(z)-F.
+\]
+Thus each negative closed-CDF error is bounded by a positive closed-CDF
+error of the reflected law; equality at an atom is not assumed.
+Consequently $C_n$ is also the supremum of positive
+closed scores $r$. Since $a=\rho(r-c)$, $C_n<c$ gives
+$A\le C_n-c<0$, and $C_n>c$ gives $A>0$. If $C_n=c$, choose
+$r_j\uparrow c$ with $r_j\ge c/2$. Then
+$\rho_j\le2\sqrt n/c$, so $\rho_j(r_j-c)\to0$ and $A=0$.
+Hence a weak failure $C_n\ge c$ supplies an attained pair with $a\ge0$.
+This does not supply any finite base or exclude that pair.
+
+Equivalently, $\Delta=Q-h\ge0$ everywhere and $\Delta=0$ on the closed
+support, where
+\begin{equation}\label{v8con:Q}
+ Q(y)=F+\frac{H\varphi+c\rho}{2n^{3/2}}
+ -\frac{n\varphi+3c\beta}{n^{3/2}}y
+ -\frac{H\varphi+3c\rho}{2n^{3/2}}y^2
+ +\frac c{n^{3/2}}|y|^3.
+\end{equation}
+
+\subsection{An identity that exposes both contact uses}
+
+We now allow an arbitrary compactly supported standardized law, retaining
+the definitions of $a,Q,h,\Delta$ above without assuming contact.
+Put $\nu=\mathcal L(H-S_{n-1})$ and
+$\tau(t)=\E[X\mathbf1_{X\ge t}]$. Then $\tau\ge0$, $\int\tau=1$.
+Over the bounded complementary intervals $(u,v)$ of the closed support
+$K$, define
+\begin{align*}
+ J&=\sum\tau_{u,v}(v-u)^2,&
+ J_1&=\sum\tau_{u,v}\int_u^v(t-u)t\,dt,\\
+ J_2&=\sum\tau_{u,v}\int_u^v(t-u)t|t|\,dt,&
+ L&=\sum\tau_{u,v}\int_{[u,v)}(t-u)\,d\nu(t).
+\end{align*}
+Here $\tau_{u,v}$ is the constant interior value. Introduce two
+contact residuals:
+\begin{equation}\label{v8con:residuals}
+ \xi=\E[X\Delta(X)],\qquad
+ B=\int_K\tau(t)\Delta(t)\,dt
+       +\sum_{(u,v)}\tau_{u,v}(v-u)\Delta(v).
+\end{equation}
+The integral over $K$ is a Lebesgue integral, not an expectation under $P$.
+It must be retained when the closed support has positive Lebesgue measure.
+If $K\subset[-R,R]$, then $J\le2R$, $|J_1|\le RJ/2$,
+$|J_2|\le R^2J/2$, and $0\le L\le2R$. Also $\Delta$ is bounded on
+the convex hull, so the sum in $B$ is absolutely convergent because
+$\sum\tau_{u,v}(v-u)\le1$.
+
+Let $M_4=\E X^4$, $M_5=\E|X|^5$, and put
+\[
+ K_q=M_5/4-\rho M_4/2-3\beta\gamma/2+\rho/2,
+ \qquad K_1=\E[X|X|^3]-3\beta-3\rho\gamma/2,
+\]
+\[
+ U=J_1+(M_4-3)/6,\quad
+ \varepsilon=\E q_z(S_n/\sqrt n)-\E q_z(Z_0)
+                  -2\gamma\varphi/(3\sqrt n),\quad
+ q_z(x)=(x-z)|x-z|,
+\]
+where $Z_0$ is standard normal. Define $E_n=-n^{3/2}\varepsilon/2$ and
+\begin{equation}\label{v8con:R}
+ \mathcal R_c=c(3\beta J/2+3\rho J_1-3J_2-K_q)
+ +H(cK_1+\varphi U)-H^2(c\rho+\gamma\varphi/2)+E_n.
+\end{equation}
+
+\begin{theorem}[Conservation with contact residuals]\label{v8con:general}
+For every such law, every $H\in\mathbb R$ and every $c>0$,
+\begin{equation}\label{v8con:offcontact}
+ (n+H^2)a+nc\rho-\frac{n\varphi}{6}(\gamma+3J)+n^{3/2}L
+ =\mathcal R_c+n^{3/2}(B-H\xi).
+\end{equation}
+At a fixed-target maximizing pair, $B=\xi=0$. Hence the exact
+fixed-target master identity follows, with coefficient $n+H^2$.
+\end{theorem}
+\begin{proof}
+There are two direct evaluations of $\mathcal A=\int\tau\Delta$.
+Since $h(t)=\nu([t,\infty))$, one has
+$h(t)=h(v)+\nu([t,v))$ inside a gap. Thus bounded Fubini gives
+\[
+ \int_u^v\Delta(t)dt=(v-u)\Delta(v)
+ +\int_u^v(t-u)(-Q'(t))dt
+ -\int_{[u,v)}(t-u)d\nu(t).
+\]
+An atom at $v$ belongs to $h(v)$ and is not in the last integral;
+an atom at $u$ is included but multiplied by zero. Summing, including
+the support integral in \eqref{v8con:residuals}, gives
+\begin{equation}\label{v8con:first}
+ \mathcal A=\frac{\varphi J}{2\sqrt n}
+ +\frac{3c\beta J/2+(H\varphi+3c\rho)J_1-3cJ_2}{n^{3/2}}-L+B.
+\end{equation}
+
+For the second evaluation, signwise Fubini proves
+$\int\tau g'=\E[Xg(X)]$ for absolutely continuous $g$ with bounded
+derivative on the relevant compact range. In particular
+\[
+ \int t\tau=\gamma/2,\quad \int t^2\tau=M_4/3,
+ \quad\int |t|^3\tau=M_5/4.
+\]
+Apply that same identity conditionally to
+$g_s(x)=\min(s+x,H)$ and then use exchangeability. The choice of
+derivative at its single corner is immaterial under the density $\tau$.
+It follows directly that
+\[
+ \int\tau(t)h(t)dt=\E[X_n\min(S_n,H)]
+ =\frac1n\E[S_n\min(S_n,H)]
+ =T,
+\]
+where $T=\E[(Z^2-zZ)\mathbf1_{Z\le z}]$, $Z=S_n/\sqrt n$.
+The last expression vanishes at an endpoint atom. Integrating
+\eqref{v8con:Q} against $\tau$ therefore yields
+\begin{equation}\label{v8con:second}
+ \mathcal A=F-\frac{\gamma\varphi}{2\sqrt n}
+ +\frac{H\varphi(3-M_4)/6+cK_q}{n^{3/2}}-T.
+\end{equation}
+
+Set $M=\E[Z\mathbf1_{Z\le z}]$. Since
+$\E[Xh(X)]=M/\sqrt n$, integration of $XQ(X)$ against $P$ gives
+\begin{equation}\label{v8con:firstmoment}
+ M+\varphi=-\frac{\gamma H\varphi}{2n}+\frac{cK_1}{n}-\sqrt n\xi.
+\end{equation}
+The pointwise identity
+$q_z(x)=(x-z)^2-2(x-z)^2\mathbf1_{x\le z}$, with the same identity
+for a normal variable, gives
+\[
+ T-\Phi(z)=-\varepsilon/2-\gamma\varphi/(3\sqrt n)
+              +z(M+\varphi)-z^2(F-\Phi(z)).
+\]
+Inserting \eqref{v8con:firstmoment} and
+$\sqrt n(F-\Phi(z))=c\rho+a$ into \eqref{v8con:second} gives
+\begin{align*}
+ \sqrt n\mathcal A={}&c\rho+a-\gamma\varphi/6+P_0/n
+                    +\sqrt n\varepsilon/2+H\sqrt n\xi,\\
+ P_0={}&H^2(c\rho+a+\gamma\varphi/2)
+       -H\{cK_1+\varphi(M_4-3)/6\}+cK_q.
+\end{align*}
+Equate this with \eqref{v8con:first} multiplied by $\sqrt n$,
+then multiply by $n$ and collect terms. This is
+\eqref{v8con:offcontact}. Under closed-support contact, every
+term defining $B$ and $\xi$ vanishes.
+\end{proof}
+
+The compensation/Fourier theorem already proved in the v7 note applies
+to this same $E_n$; its comparator has transform
+$e^{-nt^2/2}(1-in\gamma t^3/6)$. It is not a new contact premise.
+The residual identity above also explains why testing the residual-free
+formula on arbitrary nonmaximizing laws would be an invalid test.
+For example, let $X$ be uniform on $[-\sqrt3,\sqrt3]$ and take
+$H=0$. There are no support gaps, $F=T=1/2$, $\beta=\gamma=0$,
+and $K_q=3\sqrt3/40$. Therefore
+$B=\int_K\tau\Delta=cK_q/n^{3/2}>0$.
+Omitting the support integral would give a false identity, even though
+the gap sums are all empty. This is an off-contact negative control,
+not a counterexample to the contact theorem.
+
+\subsection{Defect positivity and the first resource license}
+
+Put $m=\E X_+=\E X_->0$ and $\sigma=\sqrt{10}$.
+Signwise Cauchy gives $a_\pm^2\le mb_\pm$ and
+$m^2\le a_+a_-$, where $a_\pm=\E X_\pm^2$ and
+$b_\pm=\E X_\pm^3$. Therefore $b_+b_-\ge m^2$, or
+$\gamma^2+4m^2\le\rho^2$. A gap on one side of zero has
+$(v-u)^2\le2\int_u^v|t|dt$. If a central gap $(-A,B)$ exists,
+its extra contribution is $2mAB$, and
+$0\le\E[(X+A)(X-B)]=1-AB$. Signwise Tonelli then gives
+$J\le\rho+2m$. It follows that
+\begin{equation}\label{v8con:defect}
+ D=(3+\sigma)\rho-\gamma-3J
+ =3(\rho+2m-J)+(\sigma\rho-\gamma-6m)\ge0.
+\end{equation}
+The last term is nonnegative by Cauchy in two dimensions.
+These statements hold with or without an atom at zero.
+
+Specialize to $c=\CE=(3+\sigma)\phi(0)/6$ and contact. With
+$w=H^2/(2n)$, $e=e^{-w}$, the identity becomes
+\begin{equation}\label{v8con:positive}
+ \mathcal R_c=(n+H^2)a+nc\rho(1-e)+\frac{n\phi(0)e}{6}D+n^{3/2}L.
+\end{equation}
+If $a\ge0$, every term is nonnegative. This specialization to $\CE$
+is essential for this definition of $D$.
+
+\begin{corollary}\label{v8con:license}
+At such a contact pair with $a\ge0$, assume $n\ge N\ge2$,
+$\rho\ge l>0$, $0<c_-\le c$, and a proved raw bound
+$\mathcal R_c\le T<Nc_-l$. A negative $T$ excludes the pair.
+Otherwise
+\begin{gather*}
+ \gamma+3J>0,\qquad e\ge1-T/(Nc_-l)>0,\\
+ \mathcal U:=(n+H^2)a+n\phi(0)D/6+n^{3/2}L
+       \le\mathcal R_c,\\
+ \mathcal U\le\mathcal R_c-\tfrac12(c_-l-T/N)H^2.
+\end{gather*}
+No condition $D<2$ or own-score upper bound is required.
+\end{corollary}
+\begin{proof}
+Set $M_c=c\rho-\phi(0)D/6=\phi(0)(\gamma+3J)/6$.
+The general master identity gives
+\[
+ eM_c=(1+H^2/n)a+c\rho+\sqrt n L-\mathcal R_c/n
+        \ge c\rho-T/n>0.
+\]
+Thus $M_c>0$ and, since $D\ge0$, $M_c\le c\rho$.
+The density bound follows. Regrouping \eqref{v8con:positive} gives
+$\mathcal R_c=\mathcal U+n(1-e)M_c$, proving the unweighted bound.
+Finally
+\[
+ n(1-e)M_c=n(e^w-1)eM_c
+ \ge\frac{H^2}{2}(c\rho-T/n)
+ \ge\frac{H^2}{2}(c_-l-T/N).
+\]
+This prices one term once. It is a bound on $\mathcal U$, not an
+improved bound on the raw remainder.
+\end{proof}
+
+All conclusions are at each actual index and raw threshold. A common
+moment cell and common raw upper bound make them uniform even for
+varying maximizing laws. There is no exchange of a limit in $n$ with
+contact, gaps, moments or an integral. The remaining application inputs
+are the quantitative support/moment bounds, complete Fourier envelope,
+ordered numerical acquisition and final exclusion, each at its own scope.

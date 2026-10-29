@@ -1,0 +1,465 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\CE}{C_E}
+\title{A joint count--moment estimate on the left probability range}
+\author{}
+\date{28 October 2026}
+\begin{document}
+\maketitle
+
+The third absolute moment can decrease when noise is added to a Bernoulli
+law with parameter below $1/3$. Estimating that decrease separately from
+the own-count loss is wasteful: both estimates involve the same two
+conditional third moments. Combining them first produces the positive
+reserve in Lemma~\ref{lc:joint}. This is enough to extend the noise range
+from $1/500$ to $1/100$ on the whole interval $p\in[1/4,2/5]$.
+No subdivision of that probability interval or Bernoulli reserve is used.
+
+\begin{theorem}[LEFT-01]\label{lc:main}
+Let $n\ge42$, $1/4\le p\le2/5$, $q=1-p$, and $Y=B+U$, where
+$B$ is Bernoulli with parameter $p$ and $\E(U\mid B)=0$.
+Suppose the conditional laws $U_j$ satisfy
+\[
+ -A\le U_0\le a_0,\qquad -a_1\le U_1\le A,\qquad
+ A=7/10,\quad a_0,a_1\ge0,\quad a_0+a_1\le17/250.
+\]
+Put $v=pq$, $s=\E U^2$, $\lambda=ns$, $\ell=(v+s)^{-1/2}$,
+$X=\ell(Y-p)$, $\rho=\E|X|^3$, and $\rho_B=(1-2v)/\sqrt v$.
+Assume $0<\lambda\le1/100$ and $|H|\le46/25$.
+Let $S_n$ be a sum of $n$ independent copies of $X$.
+Choose $k\in\mathbb Z$ and $u$ by
+\[
+ np+H/\ell=k+u,\qquad -109/500\le u\le391/500,
+ \qquad \delta=k-np.
+\]
+Such an anchor always exists, and it is interior: $1\le k\le n-1$.
+For every $819/2000\le C\le41/100$, writing $F_B$ for the
+distribution function of $\operatorname{Bin}(n,p)$, one has
+\begin{align*}
+ \Delta_C={}&\sqrt n\{\Pp(S_n\le H)-\Phi(H/\sqrt n)\}-C\rho\\
+ &-\sqrt n\{F_B(k)-\Phi(\delta/\sqrt{nv})\}+C\rho_B
+ <-\lambda/100.
+\end{align*}
+\end{theorem}
+
+The constant $\CE=(3+\sqrt{10})/(6\sqrt{2\pi})$ lies strictly between
+the two stated bounds. The external strict Bernoulli theorem therefore
+excludes a nonnegative excess at target $\CE$ under these hypotheses.
+At $\lambda=0$ the law is itself Bernoulli. The comparison theorem has
+no contact or predecessor premise. Those premises remain necessary for
+the separate acquisition of its support and threshold bounds. Reflected
+events require applying the acquisition and comparison to the reflected
+law; a bound on one signed branch is not an unqualified two-sided result.
+
+\section{Condition on the actual count}
+Throughout set
+\[
+ l=-109/500,\quad h=391/500,\quad b=1/20,\quad U_*=1/100,
+ \quad v_*=3/16,\quad D=17/10.
+\]
+The phase interval has width one, so
+$k=\lfloor np+H/\ell-l\rfloor$ is an admissible choice.
+Let $W_j$ be the sum of $j$ independent copies of $U_1$ and $n-j$
+independent copies of $U_0$, all independent. Write
+$\pi_j=\binom njp^jq^{n-j}$, set $m=\sqrt n\pi_k$, and define
+\[
+ f(u)=\frac{\Phi((\delta+u)/\sqrt{n(v+s)})-
+                  \Phi(\delta/\sqrt{n(v+s)})}{\pi_k}.
+\]
+\[
+ O=\Pp(W_k>u)+f(u),\qquad
+ T_{\rm in}=\sum_{i=1}^{n-k}\Pp(W_{k+i}\le u-i).
+\]
+Exact conditioning gives
+\begin{align*}
+ \Pp(S_n\le H)-F_B(k)
+ ={}&-\sum_{i=0}^k\pi_{k-i}\Pp(W_{k-i}>u+i)\\
+ &+\sum_{i=1}^{n-k}\pi_{k+i}\Pp(W_{k+i}\le u-i).
+\end{align*}
+Thus, if $\pi_{k+i}/\pi_k\le R$ on the legal incoming counts,
+\begin{equation}\label{lc:master}
+ \Delta_C\le-m(O-RT_{\rm in})+R_N+C(\rho_B-\rho),\qquad
+ R_N=\sqrt n\{\Phi(\delta/\sqrt{nv})-
+                     \Phi(\delta/\sqrt{n(v+s)})\}.
+\end{equation}
+All outgoing events are strict; incoming events are closed. No continuity
+assumption or removal of threshold atoms enters this identity.
+
+\section{Uniform finite normalization}
+We give the constants explicitly because the small improvement in
+normalization helps the left range. Here $v_*\le v\le6/25$ and
+$\sqrt{v+s}<491/1000$. Consequently
+\[
+ |\delta|<D,\qquad |\delta|<1\ (|u|\le b),\qquad
+ |\delta|<101/100\ (|u|\le1/10).
+\]
+The segment from $p$ to $k/n$ is contained in $(1/5,9/20)$ globally,
+and in $(9/40,17/40)$ in the last two cases. This proves that $k$ is
+interior. On these segments, respectively,
+\[
+\begin{array}{c|ccc}
+ &|D'''(r\Vert p)|&|\{\log(r(1-r))\}'|&1/(12r(1-r))\\\hline
+\text{global}&24&4&53/100\\
+\text{near}&19&16/5&12/25
+\end{array}
+\]
+are strict upper bounds. They follow from
+$D'''(r\Vert p)=-(1-2r)/(r^2(1-r)^2)$ and the endpoint bounds for
+$r(1-r)$. Finite Stirling,
+\[
+ \log(j!)=(j+1/2)\log j-j+\tfrac12\log(2\pi)+r_j,
+ \qquad 0<r_j<1/(12j),
+\]
+and Taylor's theorem yield
+\begin{equation}\label{lc:mass}
+ m=\frac{\phi(0)}{\sqrt v}
+      \exp\{-\delta^2/(2nv)+e\},\qquad n|e|<Z(D_0),
+\end{equation}
+where, when $|\delta|\le D_0$,
+\[
+ Z_g(D_0)=2D_0+53/100+4D_0^3/42,\qquad
+ Z_n(D_0)=(8/5)D_0+12/25+(19/6)D_0^3/42.
+\]
+For example the entropy error before multiplication by $n$ is bounded
+by $19D_0^3/(6n^2)$ on the near segment; the prefactor and factorial
+errors are bounded by $(8/5)D_0/n$ and $12/(25n)$.
+The finite factorial proof is retained in
+\path{manuscript/arxiv-v1/appendices/count-comparison.tex}, line 131.
+
+At a fixed count,
+\[
+ \log f'(z)=-\tfrac12\log(1+s/v)+\frac{\delta^2}{2nv}
+                -\frac{(\delta+z)^2}{2n(v+s)}-e.
+\]
+Since $1/(2v_*)+D^2/(84v_*^2)<4$, for $|z|\le b_0$ this gives
+\[
+ n|\log f'(z)|\le4\lambda+
+             \frac{2D_0b_0+b_0^2}{2v_*}+Z(D_0).
+\]
+Apply $e^{-x}\ge1-x$ and $e^x\le(1-x)^{-1}$, using
+$(D_0,b_0)=(D,h),(1,b),(101/100,1/10)$ and the corresponding $Z$.
+In \eqref{lc:mass}, use $\sqrt v<49/100$ and
+$19943/50000<\phi(0)<2/5$. The resulting bounds are
+\begin{equation}\label{lc:table}
+\begin{array}{c|cc}
+ &|u|\le b&l\le u\le h\\\hline
+ m\text{ lower bound}&18/25&57/100\\
+ f'\text{ lower bound}&47/50&2/3\\
+ f'\text{ upper bound}&213/200&3/2\\
+ \pi_{k+i}/\pi_k\text{ upper bound}&53/50&9/5
+\end{array}
+\end{equation}
+We also have $f'>93/100$ for $|u|\le1/10$. All bounds hold on
+the whole interval of integration defining $f$.
+At a binomial mode the displacement is at most one. Equation
+\eqref{lc:mass} gives $\sqrt n\max_j\pi_j<1$, proving the global
+ratio bound in \eqref{lc:table}. In the inner interval the first ratio
+is at most $1+p/(nv)<53/50$; all subsequent ratios are at most one,
+since $p-\delta<7/5<2$.
+
+Write $s_j=\E U_j^2$. Because $|s_1-s_0|\le4s$,
+$\E W_j^2=\lambda+(j-np)(s_1-s_0)$. Hence for $t=\E W_k^2$,
+\begin{equation}\label{lc:variances}
+ (19/21)\lambda\le t\le(23/21)\lambda\quad(|u|\le b),\qquad
+ t\le(7/6)\lambda\quad\text{globally}.
+\end{equation}
+For the incoming counts $\E W_{k+i}^2\le iV\lambda$, where
+$V=6/5$ in the inner interval and $V=4/3$ globally.
+
+The normal repair satisfies $R_N\le(5/2)\delta_+s$, since
+$0.2/v_*^{3/2}<5/2$. The inward caps fix the signs in $|Y-p|$.
+Using $U_0^3\le a_0U_0^2$, $U_1^3\ge-a_1U_1^2$, and
+$(1+x)^{3/2}\le1+3x/2+3x^2/8$ for $x\ge0$ gives
+\[
+ (v+s)^{3/2}(\rho-\rho_B)
+ \ge s\{3\min(p,q)-\tfrac32(1-2v)-17/250
+                           -3(1-2v)s/(8v)\}.
+\]
+The expression in braces is at least $-B_-$, where
+\[
+ B_-=\tfrac32(1-2v_*)+17/250-\tfrac34+
+                         3(1-2v_*)U_*/(8\cdot42v_*).
+\]
+Rational squaring verifies $(41/100)B_-/v_*^{3/2}<4/3$.
+Thus the separate repairs in \eqref{lc:master} are bounded by $4s$
+in the inner interval and $6s$ globally. We shall improve that bound
+near the negative phase origin by combining the moments first.
+
+\section{The joint reserve}
+Set $\alpha=27/50$ and $M=5\alpha^4$. The polynomial
+\[
+ h_\alpha(x)=\frac{-x^4+3\alpha^2x^2+2\alpha^3x}{M}
+                                  \le\mathbf1_{(0,\infty)}(x)
+\]
+is a strict-event minorant: its numerator is
+$-x(x+\alpha)^2(x-2\alpha)$, and its positive maximum is
+$(9+6\sqrt3)\alpha^4/4<5\alpha^4$.
+For $r\ge0$ define the familiar separate-moment lower expression
+\begin{equation}\label{lc:L}
+ L(r,t)=\frac{(3\alpha^2-A^2-6r^2)t-3t^2-4Art
+                        -r^4+3\alpha^2r^2+2\alpha^3r}{M}.
+\end{equation}
+
+\begin{lemma}\label{lc:joint}
+Under the theorem's hypotheses, if $u=-r$ and $0\le r\le b$, then
+\[
+ m\Pp(W_k>-r)+C(\rho-\rho_B)>mL(r,t)+\tfrac74s.
+\]
+\end{lemma}
+\begin{proof}
+Put $N_0=n-k$, $N_1=k$, $T_j=N_js_j$, and $\mu_j=\E U_j^3$.
+The convex function $x^2-\kappa x$ attains its maximum at an endpoint,
+so
+\[
+ \E U_0^4-\kappa\mu_0\le
+       \max\{A^2+\kappa A,a_0^2-\kappa a_0\}s_0,
+\]
+and the corresponding coefficient for $U_1$ is
+$\max\{A^2-\kappa A,a_1^2+\kappa a_1\}$.
+Centering and independence give
+\[
+ \E W_k^3=N_0\mu_0+N_1\mu_1,\quad
+ \E W_k^4=\sum\E U_i^4+3t^2-3\sum(\E U_i^2)^2.
+\]
+The exact marginal identity is
+\[
+ \rho=\ell^3\{v(1-2v)+3v(s_0+s_1)+p\mu_1-q\mu_0\}.
+\]
+In $m\E h_\alpha(W_k+r)+C(\rho-\rho_B)$, the two cubic prices
+are therefore
+\[
+ \kappa_0=-4r-\gamma q/N_0,\qquad
+ \kappa_1=-4r+\gamma p/N_1,\qquad
+ \gamma=C\ell^3M/m.
+\]
+The outer endpoint coefficients apply if
+$\kappa_0\ge-(A-a_0)$ and $\kappa_1\le A-a_1$.
+Indeed $\ell^3<25/2$, $m>18/25$, $q/N_0<1/38$, $p/N_1<1/38$,
+and the exact inequality
+\[
+ 4b+\frac{(41/100)(25/2)M}{(18/25)38}<A-17/250
+\]
+proves both guards. The reciprocal count bounds follow from
+$|\delta|<1$, $p\ge1/4$ and $q\ge3/5$.
+
+Consequently the fourth/cubic contribution is at least
+\[
+ -A^2t+4Ar(T_0-T_1)+\gamma A(qs_0+ps_1)-3t^2.
+\]
+Here the favorable $3\sum(\E U_i^2)^2$ was discarded. Bound
+$T_0-T_1\ge-t$ and $v(s_0+s_1)\ge\min(p,q)s$. Applying the same
+power inequality to the Bernoulli normalization now gives
+\begin{align*}
+ m\Pp(W_k>-r)+C(\rho-\rho_B)&\ge mL(r,t)\\
+ &+C\ell^3s\{A+3\min(p,q)-\tfrac32(1-2v)
+                         -3(1-2v)s/(8v)\}.
+\end{align*}
+The braces are at least
+\[
+ B_+=A+\tfrac34-\tfrac32(1-2v_*)-
+                           3(1-2v_*)U_*/(8\cdot42v_*).
+\]
+Finally $(819/2000)B_+>(7/4)(491/1000)^3$ and
+$\sqrt{v+s}<491/1000$. This proves the claim. Notice the reserve
+is proportional to $s=\lambda/n$, not to $\lambda$.
+\end{proof}
+
+\section{The own count at small phase}
+The usual absolute-moment bounds
+$|\E W_k^3|\le At$ and $\E W_k^4\le A^2t+3t^2$ are enough
+outside the use of Lemma~\ref{lc:joint}.
+After shifting the quartic by $\sigma r$, adding $cr$, dividing by
+$t>0$, and setting $r=zt$, their lower expression is
+\begin{align*}
+ F_{\sigma,c}(z,t)={}&\frac{3\alpha^2-A^2-3t}{M}
+ +\left(\frac{2\sigma}{5\alpha}+c-\frac{4At}{M}\right)z\\
+ &+\frac{3\alpha^2t-6t^2}{M}z^2-\frac{t^3z^4}{M}.
+\end{align*}
+Let $T_*=(23/21)U_*$ and $z_0=3/2$. The following checks are
+on entire rectangles, not a sampled mesh:
+\[
+ F_{1,-213/200}>1/4,\qquad F_{-1,47/50}>4/5
+       \quad(0\le z\le z_0,\ 0\le t\le T_*).
+\]
+For the first polynomial, its $z$ derivative is at most
+$2/(5\alpha)-213/200+6\alpha^2T_*z_0/M<0$.
+It is concave in $t$, so its minimum is among $(z_0,0),(z_0,T_*)$.
+For the second polynomial its $z$ derivative is bounded below by
+$47/50-2/(5\alpha)-4AT_*/M-4T_*^3z_0^3/M>0$;
+the quadratic derivative omitted here is nonnegative since
+$3\alpha^2-6T_*>0$. Its minimum is therefore at $(0,T_*)$.
+All three corner values exceed the stated bounds.
+
+For negative phase beyond $r=z_0t$ use Cantelli:
+\[
+ O\ge G_t(r):=\frac{r^2}{t+r^2}-\frac{213}{200}r>t/2,
+                         \qquad z_0t\le r\le b.
+\]
+To verify the last inequality, $G_t'$ first increases and then decreases.
+It is positive at $z_0t$, so the minimum on this interval is at an
+endpoint. At the switch,
+$G_t(z_0t)/t=z_0^2/(1+z_0^2t)-(213/200)z_0>1/2$.
+At $b$, $G_t(b)-t/2>0$. Both tests are decreasing in $t$ and are
+checked at $T_*$; also $z_0T_*<b$.
+For positive phase after $r=z_0t$, use
+$O\ge f(r)\ge(47/50)r>(4/5)t$.
+
+Combining the first quartic bound with Lemma~\ref{lc:joint} and
+$R_N\le(5/2)s$ gives a repair of at most $(3/4)s$ when
+$-z_0t\le u\le0$. For the remaining negative inner phases use the
+Cantelli own bound $t/2$ and repair $4s$. For positive inner phases
+the own bound is $4t/5$ with repair $4s$.
+
+\section{The incoming counts, including the infinite tail}
+We retain the quadratic-hinge comparison of Pinelis,
+\emph{On the Bennett--Hoeffding inequality},
+\href{https://arxiv.org/abs/0902.4058}{arXiv:0902.4058},
+Proposition 2.8 and Corollary 2.11. For independent centered summands
+bounded above by $A$, with total variance at most $V_0$, it gives
+\[
+ \Pp(Z\ge x)\le\frac{\E(P_\mu-j)_+^2}{(x/A+\mu-j)^2},
+ \qquad \mu=V_0/A^2,\quad j<x/A+\mu,
+\]
+where $P_\mu$ is Poisson. This follows by applying its moment inequality
+to the quadratic hinge at $A(j-\mu)$ and then Markov's inequality;
+increasing the variance upper bound is allowed. We apply it to $-W_{k+i}$,
+preserving the closed event and using the same two conditional marginals.
+
+Set $\mu=V\lambda/A^2$. For $u\le h_0<1-A$, the first incoming
+count is bounded by
+\[
+ Q(\mu,h_0)=\frac{\mu^2(1/2+\mu/6)}{((1-h_0)/A-1+\mu)^2}.
+\]
+Indeed the hinge is $j=1$ and
+$\E(P_\mu-1)_+^2=\mu^2-\mu+1-e^{-\mu}\le\mu^2/2+\mu^3/6$.
+For integer $i\ge2$, $(P-i)_+^2\le\binom P{i+1}$ pointwise.
+For $i=2$ this is $(r-1)(r-2)\ge0$ at integer $r=P-i\ge1$;
+increasing $i$ increases the binomial coefficient at fixed $r$.
+The Poisson numerator is consequently at most $(i\mu)^{i+1}/(i+1)!$.
+For $j=2$ or $3$ put
+\[
+ b_j(h_0)=1/A-1-h_0/(jA),\qquad
+ J_2(\mu,h_0)=\frac{\mu^3}{3(b_2(h_0)+\mu)^2(1-3\mu)},
+\]
+\[
+ J_3(\mu,h_0)=\frac{3\mu^4}{8(b_3(h_0)+\mu)^2(1-3\mu)}.
+\]
+If $h_0\ge0$, $b_j(h_0)>0$ and $3\mu<1$, these bound the sum
+of incoming probabilities from count $i=j$ onwards. The hinge at count
+$i$ has denominator at least $i(b_j(h_0)+\mu)$, and the successive
+coefficient ratio is
+$[i/(i+2)](1+1/i)^i<e<3$.
+This proves the geometric sum for all counts, without truncation.
+In particular $b_3(h)=59/1050>0$, whereas the second hinge cannot be
+used at $h$. At large positive phase the first two counts are instead
+bounded by Cantelli.
+
+All the displayed tail bounds increase with $\lambda$. Also
+$Q(c\lambda,h_0)/\lambda$ increases while
+$c\lambda\le(1-h_0)/A-1$, and $J_2(c\lambda,h_0)/\lambda$ increases
+when $b_2(h_0)>0$. The first assertion follows by differentiating
+$\mu(1/2+\mu/6)/(a+\mu)^2$; its derivative has numerator
+$a/2+\mu(a/3-1/2)>0$ for $0\le\mu\le a$.
+Thus these estimates are uniform down to arbitrarily small positive noise.
+
+\section{Closing the four phase intervals}
+All remaining arithmetic consists of the following rational comparisons.
+Let
+\[
+ \mu_I=(6/5)U_*/A^2,\qquad \mu_G=(4/3)U_*/A^2,
+ \quad R_I=53/50,\quad R_G=9/5.
+\]
+In the inner interval define
+\[
+ T_-=Q(\mu_I,0)+J_2(\mu_I,0),\qquad
+ T_+=Q(\mu_I,b)+J_2(\mu_I,b).
+\]
+For the three inner cases the expression
+\[
+ \frac{18}{25}\left(c\frac{19}{21}-R_I T_\pm/U_*\right)
+                         -a/42-1/100
+\]
+is strictly positive with
+\[
+ (c,T_\pm,a)=(1/4,T_-,3/4),\quad(1/2,T_-,4),\quad(4/5,T_+,4).
+\]
+The bracket itself is positive in each case. Equations
+\eqref{lc:master}--\eqref{lc:variances}, the joint estimate and the
+tail monotonicity therefore give $\Delta_C<-\lambda/100$ throughout
+$[-b,b]$. The first of these three margins is
+$314105373/15227387000>0$.
+
+For negative outer phase set $T_G=7U_*/6$ and
+\[
+ B_-^{\rm out}=
+ \min_{r\in\{b,-l\}}\left\{\frac{r^2}{T_G+r^2}-\frac32r\right\}
+           -R_G\{Q(\mu_G,0)+J_2(\mu_G,0)\}.
+\]
+The minimum really is at the endpoints: the derivative of the expression
+in braces first increases and then decreases and is positive at $b$.
+This handles $u\in[l,-b]$.
+For the positive intervals put $t_G=4U_*/3$ and
+\[
+ K(u)=\frac{t_G}{t_G+(1-u)^2}+
+                  \frac{2t_G}{2t_G+(2-u)^2}.
+\]
+On $[b,1/10]$ use the bracket
+\[
+ B_+^{\rm near}=(93/100)b-R_G\{K(1/10)+J_3(\mu_G,1/10)\}.
+\]
+On $[1/10,h]$ use
+\[
+ B_+^{\rm far}=\min_{u\in\{1/10,h\}}
+                   \{(2/3)u-R_GK(u)\}-R_GJ_3(\mu_G,h).
+\]
+Here the endpoint minimum is valid by concavity, since
+$3(1-h)^2>t_G$ and $3(2-h)^2>2t_G$.
+For each of these three positive brackets, the exact check is
+\[
+                 (57/100)B-6U_*/42-U_*/100>0.
+\]
+The respective margins are
+\[
+ \frac{12211588349}{224360220000},\qquad
+ \frac{5230759451}{6254703000000},\qquad
+ \frac{32120174181617}{2611470546230000}.
+\]
+They prove the required inequality because $\lambda\le U_*$.
+The four closed intervals
+\[
+ [l,-b],\qquad [-b,b],\qquad [b,1/10],\qquad [1/10,h]
+\]
+cover the entire phase domain. The inner switch uses the actual variance $t$,
+and both sides include its endpoint. This completes the proof.
+
+\section*{Verification and scope}
+\path{leftcount-check.py} verifies all 88 strict scalar gates with
+\texttt{Fraction}, including every branch guard, positive denominator,
+phase join and final margin. Machin's formula with alternating remainders
+supplies rational enclosures for $\pi$, so the stated normal and $C_E$
+bounds are also checked. The checker rejects missing, duplicated, reordered
+and gapped phase lists. Other negative controls reject the unguarded
+endpoint price, the invalid second hinge at $h$, and the attempt to close
+this $1/100$ argument after discarding its joint reserve.
+
+The unfavorable moment sign is not hypothetical: for $p=13/50$,
+$U_1=0$, and $U_0=\pm1/1000$ equiprobably, rational squaring gives
+$\rho<\rho_B$. This refutes deleting that correction, not LEFT-01.
+The separate actual-law script checks the new coupled inequality at exact
+atoms and at tiny positive noise. Such finite examples test implementation
+and conventions; they do not establish the uniform theorem.
+
+For the acquired witnesses the left-panel heat/ray strips of v11 imply
+$U_0>-.6$ and $U_1<.7$, which imply the amplitude assumption used here.
+Their contact, nonnegative-excess and sharp-predecessor premises remain
+ancestors, as do the raw threshold and direct geometry bounds. This result
+replaces the count exclusion only for $p\in[.25,.4]$ and
+$0<\lambda\le.01$ at the stated target range. It neither proves a
+finite base through 41 nor excludes the remaining larger-noise region.
+It does not delete an existing certificate or alter a previous theorem.
+\end{document}

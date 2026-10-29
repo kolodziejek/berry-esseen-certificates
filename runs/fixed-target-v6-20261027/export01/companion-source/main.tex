@@ -1,0 +1,111 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,longtable}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\CE}{C_{\mathrm E}}
+\newcommand{\Pp}{\mathbb P}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\title{Obtaining a support gap from fixed-target excess\\
+\large A conditional reduction of the initial acquisition}
+\author{Bartosz Ko\l odziejek \and Kacper Rodziewicz}
+\date{27 October 2026 --- research continuation, version 6}
+\begin{document}
+\maketitle
+\begin{abstract}
+The fixed-target formulation removes the need to estimate an unknown
+extremal score before using it as a coefficient. We now close a further
+initialization gap: a coarse cover of the third-moment interval suffices
+to obtain an actual central gap in the support. The main new estimate
+bounds a signed fourth-moment charge using signwise Cauchy--Schwarz.
+We give the derivation, the scalar acceptance rule, and the precise
+remaining dependencies. The resulting acquisition is conditional on the
+retained complete Fourier bounds; it is not a proof of the sharp
+Berry--Esseen conjecture or of the final local exclusion.
+\end{abstract}
+
+\section{The point of the reduction}
+Fix $c=C_{\mathrm E}=(3+\sqrt{10})/(6\sqrt{2\pi})$. For a centered,
+variance-one law $P$, put $\rho=\E|X|^3$ and maximize the excess
+\[
+ a=\sqrt n\{F_{P^{*n}}(H)-\Phi(H/\sqrt n)\}-c\rho.
+\]
+Here $H$ is a raw sum threshold. At a least failing index, the earlier
+fixed-target argument supplies an attained witness with $a\ge0$ and
+sharp predecessor bounds. The contact coefficient is the known number
+$c$, even though the witness's ratio score equals $c+a/\rho$.
+This distinction removes the score-cap feedback from the initial entry.
+It does not remove attainment, contact, or the analytic Fourier error.
+
+The earlier entry establishes
+\[
+ n\ge42,\qquad 1\le\rho\le7361/4000,\qquad |X|\le96/25.
+\]
+The support and moment statements require the fixed-target contact
+argument and the stated external structural inequality. They are premises
+of this note. The earlier 24-cell calculation obtained a first density
+license but left five cells outside the sufficient $D<4$ regime.
+The improvement below closes that obstacle on the whole interval and,
+more significantly, obtains actual support geometry before using any
+central-gap refinement.
+
+Write $\sigma=\sqrt{10}$ and let $J$ be the actual weighted gap sum.
+The physical defect and conserved resource are
+\[
+ D=(3+\sigma)\rho-\gamma-3J\ge0,\qquad
+ U=(n+H^2)a+\frac{n\phi(0)D}{6}+n^{3/2}\mathcal L,
+\]
+where $\gamma=\E X^3$ and $\mathcal L\ge0$ is the contact loss.
+The raw remainder $R_c$ satisfies
+\begin{equation}\label{v6:identity}
+ R_c=U+n(1-e^{-H^2/(2n)})
+                 \left(c\rho-\frac{\phi(0)D}{6}\right).
+\end{equation}
+A raw bound and a resource bound have different uses. A raw ceiling
+licenses a lower Gaussian density; a resource ceiling bounds $nD$.
+The computations below keep them separate at every step. In the two-pass
+statement we write the physical resource as $S$ and its numerical ceiling
+as $U$.
+
+\paragraph{What is proved here.}
+The moment inequalities are proved for actual bounded laws, with both
+signs and zero atoms allowed. Their insertion into the retained scalar
+Fourier enclosure is checked by exact rational arithmetic on a complete
+closed cover. The resulting acquisition remains conditional on the
+contact/support premises and the full low- and high-frequency inequalities.
+No historical arithmetic success is used as a proof of those inequalities.
+The source and execution record accompanies this note.
+
+\input{signed-proof/signed.tex}
+\input{moment-core.tex}
+\input{simple-route.tex}
+\input{central-gap.tex}
+\input{integration.tex}
+\input{shortening.tex}
+\appendix
+\input{phase.tex}
+
+\section{Provenance and review scope}
+The preceding fixed-target companion supplies attainment, contact and
+conservation. The entry note supplies the initial support argument and
+the first scalar cover. Exact source paths are listed in the accompanying
+README.
+The current directory contains the complete new TeX arguments, exact
+checkers, independent review reports and a portable source archive.
+The measured manuscript inventory and line-level dependency map are in
+\texttt{compression-map.md}. It distinguishes source removal from a
+replacement's use in a new proof composition.
+
+AI systems were used to develop candidate arguments, write and revise this
+note, implement exact checks, and conduct separate adversarial reviews.
+Agreement between AI reviews is not a mathematical validation. The proof
+arguments and executable checks are supplied for the authors' and other
+readers' scrutiny. Remaining mathematical premises are stated explicitly;
+this document is a research deliverable, not a claim of a complete proof.
+\end{document}

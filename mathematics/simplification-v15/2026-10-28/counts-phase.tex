@@ -1,0 +1,192 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\title{The integer anchor matters at small noise}
+\author{Research note, 28 October 2026}\date{}
+\begin{document}\maketitle
+
+The central asymmetric comparison cannot be extended to all thresholds by
+always taking the integer part of the raw threshold. The following example
+uses an actual iid three-point law, an exact atom, and rational bounds on the
+normal integral. It also explains why the retained shifted-anchor theorem
+is unaffected. A second result replaces a square-root noise term in the
+binomial curvature estimate by actual first absolute moments.
+
+\section{A counterexample to a fixed floor-anchor extension}
+For a centered Bernoulli-coordinate law $Y=B+U$, write
+\[
+ v=p(1-p),\quad s=\E U^2,\quad V=v+s,\quad
+ \rho=\E|Y-p|^3/V^{3/2},\quad \rho_B=(1-2v)/\sqrt v.
+\]
+At raw threshold $t$, define the comparison with integer anchor $j$ by
+\begin{align*}
+ \Delta_C(t,j)={}&\sqrt n\left\{\Pp(Y_1+\cdots+Y_n\le t)-F_B(j)
+ -\Phi\!\left(\frac{t-np}{\sqrt{nV}}\right)
+ +\Phi\!\left(\frac{j-np}{\sqrt{nv}}\right)\right\}\\
+ &+C(\rho_B-\rho),
+\end{align*}
+where the $Y_i$ are independent copies and $F_B$ is the binomial CDF.
+
+\begin{theorem}\label{thm:counter}
+Take $n=42$, $p=1/2$, $A=3/5$, $\varepsilon=1/350000$, $U_0=0$,
+and the centered conditional law $U_1\in\{-\varepsilon,A\}$.
+Put
+\[
+ h=21\varepsilon=3/50000,\qquad t=21-h.
+\]
+Then $\lambda=ns=9/250000$, the inward displacement is
+$\varepsilon<.072$, and $|H|=|t-21|/\sqrt V<1.84$.
+For every $0\le C\le1$,
+\[
+             \Delta_C(t,\lfloor t\rfloor)>1/250.
+\]
+In contrast, $\Delta_C(t,21)<0$ for every $C\ge0$.
+\end{theorem}
+\begin{proof}
+The probability of the rare positive conditional jump is
+$\theta=\varepsilon/(A+\varepsilon)=1/210001$.
+If the binomial count is at most 21 and none of its conditional jumps is
+rare, the sum is at most $21(1-\varepsilon)=t$. A union bound therefore gives
+\[
+ \Pp(Y_1+\cdots+Y_n\le t)\ge F_B(21)-21\theta.
+\]
+Here $\lfloor t\rfloor=20$ and
+$\pi_{21}=\binom{42}{21}/2^{42}$.
+
+Since $t<21$, the normal interval in the comparison is at most
+$\Phi(0)-\Phi(-a)$, where $a=\sqrt{2/21}$.
+Using $e^{-x^2/2}\le1-x^2/2+x^4/8$ and $\phi(0)<2/5$ yields
+\begin{align*}
+ \sqrt{42}\{\Phi(0)-\Phi(-a)\}
+ &\le 2\phi(0)\left(1-\frac1{63}+\frac1{4410}\right)\\
+ &<\frac45\frac{1447}{1470}.
+\end{align*}
+The standard constant bound $\phi(0)<2/5$ follows from $\pi>25/8$.
+For example Machin's identity and alternating arctangent bounds give the
+strict rational lower bound
+$\pi>16(1/5-1/375)-4/239>25/8$.
+
+Put $w=A\varepsilon$. The raw third absolute moment is exactly
+\[
+ M_3=\frac18+\frac34w+\frac12w(A-\varepsilon).
+\]
+Since $V\ge1/4$, $\rho\le8M_3$, while $\rho_B=1$.
+Thus for $0\le C\le1$ the penalty is at least $-(8M_3-1)$.
+Finally $162/25<\sqrt{42}<649/100$. Consequently
+\begin{align*}
+ \Delta_C(t,20)
+ &>\frac{162}{25}\pi_{21}-\frac{649}{100}\,21\theta
+    -\frac45\frac{1447}{1470}-(8M_3-1)\\
+ &=\frac{185046727061827375519549}{37666554485145600000000000}
+ >\frac1{250}.
+\end{align*}
+Every number on the last line is rational. No computed normal CDF is used.
+The variance and raw threshold bounds follow by squaring positive quantities.
+
+For the other anchor, a count of at least 22 cannot contribute even if all
+its jumps are short. At count 21, at least one rare jump moves the sum strictly
+above $t$. Thus
+\[
+ \Pp(Y_1+\cdots+Y_n\le t)
+ \le F_B(21)-\pi_{21}\{1-(1+1/210000)^{-21}\}.
+\]
+Bernoulli's inequality bounds the bracket below by $1/10001$.
+The adverse normal change from the central anchor is less than
+$\phi(0)h/\sqrt V<(4/5)h$. Jensen gives $\rho\ge1$, so for every $C\ge0$
+\[
+ \Delta_C(t,21)<-\frac{162}{25}\frac{\pi_{21}}{10001}+\frac45h<0.
+\]
+The last strict inequality is another rational check. The event at $t$ is
+closed throughout: the common short-jump configuration lies exactly at it.
+\end{proof}
+
+The sharp Bernoulli coefficient $C_E=(3+\sqrt{10})/(6\sqrt{2\pi})$
+lies in $(0,1)$, so the counterexample includes that coefficient. It is a
+counterexample to a proposed choice of comparison anchor, not to the
+Berry--Esseen conjecture.
+
+\section{Audit of the retained anchor rules}
+The retained v12 union theorem explicitly supplies an integer anchor. Its
+right-hand proof chooses phase $u=t-j\in[-.272,.728]$; equivalently one may
+choose $j=\lfloor t+.272\rfloor$. The v11 theorem states the same phase
+interval. In Theorem~\ref{thm:counter} this anchor is 21 and its phase is
+$-3/50000$, exactly the anchor proved favorable above.
+
+The v14 larger-noise theorem explicitly takes $j=\lfloor t\rfloor$, but
+assumes $\lambda\ge.075$. The present noise is $9/250000<.075$, so it does
+not meet that theorem's hypotheses. The v14 join with the smaller-noise
+result remains valid: the external strict Bernoulli theorem holds at every
+integer anchor. The join needs existence of a suitable anchor in each
+component, not agreement of the two anchors. No retained theorem is refuted;
+any prose or implementation identifying these anchors uniformly would need
+correction.
+
+For a fixed actual law and threshold, changing anchors gives exactly
+\[
+ \Delta_C(t,20)-\Delta_C(t,21)
+ =\sqrt{42}\{\pi_{21}-\Phi(0)+\Phi(-\sqrt{2/21})\}.
+\]
+This positive, noise-independent quantity explains why a small-defect proof
+cannot absorb a wrong anchor in an error merely proportional to the noise.
+
+\section{A curvature bound using first absolute moments}
+Let $v_j=\E U_j^2$, $e_j=\E(U_j)_+=\E(U_j)_-$, and
+$\ell_1=(1-p)e_0+pe_1$. For any real $t$, set
+\[
+ B_j=\E(t-j-W_j)_+-(t-j)_+,\quad
+ \mathcal C(t)=\sum_{j=1}^{n-1}(\pi_{j+1}-\pi_j)B_j,\quad
+ c=(np-(1-p)-t)_+.
+\]
+\begin{lemma}\label{lem:firstmoment}
+For centered independent conditional summands of finite second moments,
+\[
+ \sqrt n\,\mathcal C(t)
+ \le\frac\lambda{4v\sqrt n}
+ +\frac c v\min\left\{
+       \frac{\sqrt\lambda}{2\sqrt{n+1}},\sqrt n\,\ell_1\right\}.
+\]
+For either one-noisy conditional two-point family with outward size $A$
+and inward size $\varepsilon$,
+\[
+ \ell_1=\frac s{A+\varepsilon},\qquad
+ \sqrt n\,\mathcal C(t)
+ \le\frac\lambda{4v\sqrt n}
+             +\frac{c\lambda}{v(A+\varepsilon)\sqrt n}.
+\]
+The second remainder is linear in arbitrarily small positive noise.
+\end{lemma}
+\begin{proof}
+The retained v13 proof gives $B_j\ge0$ and
+$(t-j)_+B_j\le\operatorname{Var}(W_j)/4$. Also
+\[
+ B_j\le\E(W_j)_+\le(n-j)e_0+je_1.
+\]
+For the first inequality use put--call parity separately for $t-j\ge0$
+and $t-j\le0$; for the second use subadditivity of the positive part.
+Write $\widetilde\pi_r$ for the $\operatorname{Bin}(n+1,p)$ masses.
+The exact binomial difference formula is
+\[
+ \pi_{j+1}-\pi_j
+ =\frac{np-(1-p)-j}{(n+1)v}\widetilde\pi_{j+1}.
+\]
+Discard negative coefficients, and bound the positive numerator by
+$(t-j)_++c$. The variance part sums to at most $(n+1)s/4$.
+With $r=j+1$, the other part is bounded by the expectation of
+$(n+1-r)e_0+re_1$ over the full binomial range, hence by
+$(n+1)\ell_1$. Therefore
+$\mathcal C\le s/(4v)+c\ell_1/v$.
+Combine this with the independently retained square-root curvature bound.
+For a centered two-point variable on $\{-A,\varepsilon\}$, or its reflection,
+its variance is $A\varepsilon$ and each one-sided first moment is
+$A\varepsilon/(A+\varepsilon)$. This proves the final specialization.
+\end{proof}
+
+The companion exact checks verify the counterexample, the favorable shifted
+anchor, and the new curvature inequality on actual laws, including two noisy
+conditional laws, tiny defects and exact atom collisions. A bounded floating
+exploration of moderate-noise phases found no failure among its tested laws;
+that observation is discovery evidence only and proves no uniform phase domain.
+\end{document}

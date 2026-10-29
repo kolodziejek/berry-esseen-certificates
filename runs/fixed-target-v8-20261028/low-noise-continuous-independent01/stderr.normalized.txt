@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<REVIEW_ROOT>/mathematics/fixed-target-v8/2026-10-28/reviews/low-noise-continuous-independent.py", line 69, in <module>
+    if __name__=='__main__':main()
+  File "<REVIEW_ROOT>/mathematics/fixed-target-v8/2026-10-28/reviews/low-noise-continuous-independent.py", line 62, in main
+    need(all(x<0 for x in gates.values()),'all strict endpoint/derivative gates')
+  File "<REVIEW_ROOT>/mathematics/fixed-target-v8/2026-10-28/reviews/low-noise-continuous-independent.py", line 13, in need
+    if not ok:raise ValueError(why)
+ValueError: all strict endpoint/derivative gates

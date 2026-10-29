@@ -1,0 +1,30 @@
+{
+  "status": "PASS_VISUAL_INSPECTION",
+  "documents": [
+    {
+      "document": "four-page final right comparison",
+      "pdf": "runs/simplification-v15-20261028/rightbuild02/right-direct.pdf",
+      "sha256": "ff3be43ff38c57e0cf8f1f82389fd4d719f71395a6ffd640c2f0f6dc8bc47fd7",
+      "rendered_pages": 4,
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "findings": "All equations and text legible; no clipping, overlap or missing symbols."
+    },
+    {
+      "document": "three-page corrected anchor note",
+      "pdf": "runs/simplification-v15-20261028/anchorbuild02/counts-phase.pdf",
+      "sha256": "fa41ebe04606ee21958db81c4615fc247afc1bec222202d2b8a7b9af56281e38",
+      "rendered_pages": 3,
+      "inspected_pages": [
+        1,
+        2,
+        3
+      ],
+      "findings": "All equations and text legible; no clipping, overlap or missing symbols."
+    }
+  ]
+}

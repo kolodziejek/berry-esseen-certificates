@@ -1,0 +1,194 @@
+\section{The small-noise half-amplitude step without more cells}
+\label{sn:section}
+
+Fix an actual integer $n\ge42$. Let $(P,H)$ be a fixed-target maximizing
+pair with nonnegative excess $\mathfrak a$ over $c=C_E$, and assume the
+true predecessor bound $C_{n-1}\le c$. Retain the closed-support contact
+theorem. Suppose the already acquired panel bounds give
+\[
+ p=\Pp(X>0)\in[41/100,42/100],\quad
+ X=\ell(Y-p),\quad Y=B+U,\quad B=\mathbf1_{X>0},\quad
+ \E(U\mid B)=0,
+\]
+\[
+ |U|<3/5,\qquad U_0\le d<69/1000,\qquad U_1\ge-d,
+ \qquad\lambda=n\E U^2\le3/40.
+\]
+Here $X$ is centered with variance one and $\ell>0$. In particular the
+initial strip is established before this argument uses bounded conditional
+moments. These are statements about one actual marginal; no relaxation is
+assumed to be a probability law.
+
+\begin{theorem}\label{sn:theorem}
+Under these hypotheses $|U|<1/2$. The conclusion holds for every raw
+threshold $H\in\mathbb R$, both discrepancy orientations after their
+proper closed reflection, and every actual index $n\ge42$. It includes
+$\lambda=0$ without taking a positive-noise limit.
+\end{theorem}
+
+\subsection{Moment bounds that vanish with the actual noise}
+Write $q=1-p$, $v=pq$, $s=\E U^2=\lambda/n$ and
+$\theta=\E(X-\E[X\mid B])^2$. Conditional centering and variance give
+\[
+ \ell=(v+s)^{-1/2},\quad
+ \theta=\frac{s}{v+s}=\frac{\lambda}{nv+\lambda},\quad
+ m^2=v(1-\theta),\quad m=\E X_+.
+\]
+Put $v_-=2419/10000$, $v_+=609/2500$ and
+$\Theta=733/100000$. Then
+\[
+ \theta\le\frac{3/40}{42v_-+3/40}<\Theta,
+ \qquad \ell>\frac{1009}{500}=2.018,
+\]
+where the latter follows by the exact square comparison
+$(1009/500)^2v_+<1-\Theta$.
+
+The sign of $B-p+U$ is the actual sign used to define $B$. Expanding
+the absolute cubic on these two actual sign classes, and using conditional
+centering, yields the exact identity
+\[
+ \rho=\ell^3\left\{v(1-2v)+3\E[|B-p|U^2]
+                  +\E[\operatorname{sgn}(B-p)U^3]\right\}.
+\]
+Since $|U|\le3/5$ and $p<1/2$,
+\[
+ \rho\le\rho_B(p)+\frac{3(1-p)+3/5}{v^{3/2}}\frac\lambda n,
+ \qquad \rho_B(p)=\frac{1-2pq}{\sqrt{pq}}.
+\]
+The function $\rho_B$ decreases on this panel. The exact comparisons
+\[
+ 24^2v_-^3>\{3(1-41/100)+3/5\}^2,
+ \qquad (21/20)^2v_->(1-2v_-)^2
+\]
+therefore imply
+\begin{equation}
+ \rho<\frac{21}{20}+24\frac{3/40}{42}
+       =\frac{21}{20}+\frac3{70}<\frac{1093}{1000}=:r.
+ \label{sn:rho}
+\end{equation}
+This proves the coefficient24 from the previously acquired strip; it
+does not assume the half-amplitude conclusion.
+
+Let $\theta_\pm$ be the two unnormalized conditional variance contributions.
+They are nonnegative and sum to $\theta$. Consequently
+\[
+ \beta=\E[X|X|]=1-2p-2q\theta+2\theta_+,
+ \quad 1-2p-2q\theta\le\beta\le1-2p+2p\theta.
+\]
+Both bounding functions, with $\theta$ replaced outward by $\Theta$,
+decrease in $p$. Thus
+\begin{equation}
+ \frac{151}{1000}<1-2(42/100)-2(58/100)\Theta
+ \le\beta\le1-2(41/100)+2(41/100)\Theta<\frac{187}{1000}.
+ \label{sn:beta}
+\end{equation}
+No assertion of uniform integrability, optimizer structure, or independent
+conditional noise laws is used in these single-marginal moment identities.
+
+\subsection{Uniform Gaussian contact bounds at the new boundaries}
+At every point $t$ of the closed support, fixed-target contact gives
+\begin{equation}
+ 0\le\mathcal H_n(H,t)+c\{-|t|^3+\tfrac32\rho t^2+3\beta t+\rho e_n\}
+                  -n\mathfrak a,\qquad
+ e_n=n(\sqrt{n/(n-1)}-1)-\tfrac12.
+ \label{sn:contact}
+\end{equation}
+Set $v_n=n-1$, $s_n=\sqrt{n/v_n}$ and $F_v(x)=\Phi(x/\sqrt v)$.
+The exact heat expression is
+\[
+ \frac{\mathcal H_n(H,t)}{n^{3/2}}
+ =F_{v_n}(H-t)-F_n(H)+tF_n'(H)-\frac{t^2-1}{2}F_n''(H).
+\]
+Expand the spatial term through degree four. In the other three terms,
+expand in the variance variable to orders two, one, one, using
+$\partial_vF_v=F_v''/2$. After cancellation,
+\[
+ \frac{\mathcal H_n(H,\pm u)}{s_n^3}
+ =\pm\frac{u^3-3u}{6}(1-z^2)\phi(z)
+  +\frac{u^4-6u^2+3}{24\sqrt{v_n}}\phi'''(z)+R,
+ \quad z=H/\sqrt{v_n}.
+\]
+The four Taylor remainders are bounded by
+\[
+ \frac{u^5\|\phi^{(4)}\|_\infty}{120v_n},\quad
+ \frac{u\|\phi^{(4)}\|_\infty}{8v_n},\quad
+ \frac{\|\phi^{(5)}\|_\infty}{48v_n^{3/2}},\quad
+ \frac{|u^2-1|\|\phi^{(5)}\|_\infty}{16v_n^{3/2}}.
+\]
+Fourier inversion of the Gaussian gives
+$\|\phi''\|_\infty\le\phi(0)$,
+$\|\phi'''\|_\infty\le2/\pi<2\phi(0)$,
+$\|\phi^{(4)}\|_\infty\le3\phi(0)<6/5$, and
+$\|\phi^{(5)}\|_\infty\le8/\pi<51/20$.
+These follow by integrating the absolute powers of frequency; the last
+comparison uses $\pi>160/51$. Thus for every $u\ge1$,
+\[
+ |R|\le\frac{u^5/100+3u/20}{v_n}
+          +\frac{51(3u^2-2)}{960v_n^{3/2}}.
+\]
+This is the precise domain extension: the remainder requires only
+$u\ge1$, and the positive leading coefficient requires $u>\sqrt3$.
+The sign of $u^4-6u^2+3$ is handled by its absolute value.
+
+For $n\ge42$, $s_n<81/80=:S$, $\sqrt{v_n}>6$ and $e_n<8/875$.
+For the last bound, $s_n<101213/100000$ by squaring, and the increasing
+function $s^2/(s+1)-1/2$ is less than $8/875$ at that rational upper.
+Set $c_-=819/2000<c$ and
+\begin{align*}
+ E(u)&=u^5/4100+3u/820+17(3u^2-2)/78720,\\
+ Q_{r,b}(u)&=-u^3+\tfrac32ru^2+3bu+(8/875)r,\\
+ P_{r,b}(u)&=\tfrac25S^3\left\{\frac{u^3-3u}{6}
+                     +\frac{|u^4-6u^2+3|}{72}\right\}
+                    +S^3E(u)+c_-Q_{r,b}(u).
+\end{align*}
+At a boundary with $Q_{r,b}<0$, this is an upper bound for the right
+side of \eqref{sn:contact}, after dropping $-n\mathfrak a\le0$.
+For the negative ray use $b=-151/1000$, and for the positive ray
+$b=187/1000$, by \eqref{sn:beta}. The multiplier substitution is made
+only after checking the sign of $Q$.
+
+Here the two rational boundaries are
+\[
+ u_-=459/250=1.836,\qquad u_+=2179/1000=2.179.
+\]
+Both exceed $\sqrt3$. Independent exact arithmetic verifies
+\[
+ P_{r,-151/1000}(u_-)<0,\qquad P_{r,187/1000}(u_+)<0.
+\]
+For full rays, the derivative is bounded uniformly in H by
+\[
+ |\partial_t\mathcal H_n(H,t)|
+ \le\phi(0)\{t^2/2+1/2+e_n\}.
+\]
+Indeed separate the second-order spatial remainder of the normal density
+at variance n, bounded by $\phi(0)t^2/(2n^{3/2})$, from its variance
+change. The heat integral for the latter, multiplied by $n^{3/2}$,
+is at most $\phi(0)n(s_n-1)=\phi(0)(1/2+e_n)$.
+At each boundary the checker verifies the six strict signs
+\[
+ Q,Q',Q'',L,L',L''<0,\qquad
+ L(u)=\tfrac25(u^2/2+1/2+8/875)+c_-Q'(u).
+\]
+Since $Q'''=-6$ and $L''=2/5-6c_-<0$, these signs persist forever.
+With the moment caps fixed, the contact expression decreases on each
+ray from its strictly negative boundary. Hence the entire closed rays
+$(-\infty,-u_-]$ and $[u_+,\infty)$ are absent from the support.
+
+\subsection{Amplitude and the closed seam}
+Finally,
+\[
+ u_-<\frac{1009}{500}(41/100+1/2),\qquad
+ u_+<\frac{1009}{500}(3/2-42/100).
+\]
+Therefore $-1/2<Y<3/2$ throughout the support. Together with the
+previously acquired inward bounds $U_0\le d<0.069$ and $U_1\ge-d$, this
+gives $|U|<1/2$. If $\lambda=0$, conditional variances are zero and
+$U=0$ almost surely directly; the proof never divides by $\lambda$.
+
+To join this lemma to the existing eight equal noise bands, use it on
+the entire closed band $[0,3/40]$, for every H. Retain the separately
+verified contact/resource gates on the other seven closed bands covering
+$[3/40,3/5]$. Their shared endpoint $3/40$ is included in both covers.
+The lemma does not assert those other gates pass; their complete source
+binding and finite inequalities remain separate premises. No added noise
+or phase cell is required for this alternative composition.

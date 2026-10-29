@@ -1,0 +1,194 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\newcommand{\E}{\mathbb E}\newcommand{\CE}{C_{\rm E}}
+\newtheorem{lemma}{Lemma}\newtheorem{proposition}{Proposition}
+\title{Joining signed phase resources to a bounded confinement test}
+\author{Bounded research note}\date{28 October 2026}
+\begin{document}\maketitle
+
+\section{Scope and retained entry}
+Let an actual fixed-target maximizing law at $n\ge N=42$ have
+nonnegative excess $\mathfrak a$ over $c=\CE$. Retain fixed-target contact,
+the sharp predecessor $C_{n-1}\le c$, and the accepted four-pass signed
+entry cover, including its complete Fourier estimates and ordered
+same-law acquisition. The previous panel result supplies, on
+$p\in[l,h]=[0.41,0.42]$,
+\[
+ \theta<0.054,\quad d<0.069,\quad \rho<1.22,
+ \quad0.09736\le\beta\le0.234,\quad
+ 1.9706<\ell<2.034,\quad\lambda<0.6,
+\]
+\[
+ \operatorname{supp}Y\subset(-0.6,1.6),\qquad |U|<0.6,
+ \quad X=\ell(Y-p),\quad Y=B+U,\quad\E(U\mid B)=0.
+\]
+Here $\theta=\E(X-\E[X\mid B])^2$, $\lambda=n\E U^2$, and
+$d=1-(A+B)/\ell$ uses the actual central gap $(-A,B)$.
+The physical defect is $D=(3+\sqrt{10})\rho-\gamma-3J$.
+The goal of this test is $|U|<1/2$. It does not achieve that goal.
+
+\section{A whole-rectangle resource from actual moment cells}
+For each retained moment cell, write its proved scalar raw bound as
+\begin{equation}\label{pc:raw}
+ \mathcal R_c\le K_F+cA+H(cK_1+\varphi W)+s|H|-q(c)H^2,
+ \qquad \varphi=\phi(H/\sqrt n).
+\end{equation}
+The cell retains ranges for $\rho,\beta,\gamma,m,p$ and the signed
+quantities $K_1,W$, with the same-law density license
+$\varphi\in[\varphi_-,2/5]$. Its separately proved raw ceiling is
+$T<Nc_-\rho_-$; put
+\[
+ \eta=(c_-\rho_- -T/N)/2>0.
+\]
+The fixed-target phase-price identity then gives
+\begin{equation}\label{pc:resource}
+ \mathcal U:=(n+H^2)\mathfrak a+n\phi(0)D/6+n^{3/2}L_{\rm leak}
+ \le \mathcal R_c-\eta H^2.
+\end{equation}
+All quantities in these inequalities refer to one law and raw threshold.
+In particular, $\mathcal U$ is a joint resource, not just a defect bound.
+
+For each endpoint $t\in\{c_-,c_+\}$, define
+\[
+ B_t=K_F+tA,\quad Q_t=q(t)+\eta,
+\]
+\[
+ F_{t,+}=\max(tK_1+\varphi W)+s,\qquad
+ F_{t,-}=-\min(tK_1+\varphi W)+s,
+\]
+where maxima and minima range over all eight corners of the recorded
+$K_1,\varphi,W$ rectangle. Their multiaffine form makes the corner
+evaluation valid on the full rectangle. For fixed $|H|$, maximizing
+affine functions of $c$ is convex, so the two endpoints bound every
+$c\in[c_-,c_+]$. Also $Q_t>0$ is explicitly checked.
+Thus, for each sign $\epsilon$ of $H$,
+\begin{equation}\label{pc:cell}
+ \mathcal U\le
+ \min\left\{T,\max_{t\in\{c_-,c_+\}}
+             (B_t+F_{t,\epsilon}|H|-Q_tH^2)\right\}.
+\end{equation}
+The first entry $T$ is a valid, possibly loose, upper bound because
+$\mathcal U\le\mathcal R_c$.
+
+\begin{lemma}[Necessary noise filtering]\label{pc:noise}
+Let $v=p(1-p)\in[v_-,v_+]$ and $0\le\lambda\le\lambda_+$.
+Every actual law at every $n\ge N$ satisfies
+\[
+ \theta\le\Theta_\lambda:=\frac{\lambda_+}{Nv_-+\lambda_+},\qquad
+ \sqrt{\frac{v_-^2}{v_-+\lambda_+/N}}\le m\le\sqrt{v_+},
+\]
+\[
+ 1-2h-2(1-l)\Theta_\lambda\le\beta
+       \le1-2l+2h\Theta_\lambda.
+\]
+\end{lemma}
+\begin{proof}
+The exact identities are
+\[
+ \lambda=\frac{nv\theta}{1-\theta},\qquad
+ m^2=v(1-\theta)=\frac{v^2}{v+\lambda/n}.
+\]
+The last expression increases with $v$ and $n$ and decreases with
+$\lambda$. This proves both moment bounds, including the limit
+$n\longrightarrow\infty$ in the upper bound. Conditional centering gives
+$\beta=(1-\theta)(1-2p)+\mu_+(\mathbb R)-\mu_-(\mathbb R)$,
+where the two nonnegative masses sum to $\theta$. Hence
+\[
+ 1-2p-2(1-p)\theta\le\beta\le1-2p+2p\theta.
+\]
+Replacing each coefficient outward on $p\in[l,h]$ proves the stated
+conservative bounds. The argument also covers zero noise and does not
+assume $p\le1/2$.
+\end{proof}
+
+For a closed rectangle
+$|H|\in[h_0,h_1]$, $\lambda\in[\lambda_0,\lambda_1]$, discard a moment
+cell only if its $p,m,\beta$ range is disjoint from the necessary ranges,
+or if its proved upper bound on $|H|$ is strictly below $h_0$.
+The noise filter uses only $\lambda_1$. For every remaining cell, clip
+$h_1$ by that cell's phase ceiling. Maximize each concave quadratic in
+\eqref{pc:cell} at the two endpoints and, when included, its vertex.
+Take the maximum over both target endpoints and every remaining cell,
+and the cellwise minimum with $T$. Call the result $S_\epsilon$.
+This bounds $\mathcal U$ throughout the closed rectangle. All equalities
+at seams and all intersecting moment cells remain included. If no cell
+remains, the rectangle contains no law allowed by the ancestor cover.
+If $S_\epsilon<0$, nonnegativity of $\mathcal U$ excludes the rectangle.
+
+\section{The retained confinement gates}
+Keep exactly the preceding $|U|<0.6$ strip, target $r_0=1/2$, inward
+bound $d_0=0.069$, and both buffers $\tau=1/5$. The geometric gates are
+\[
+ 1-0.6-2d_0>0,\quad d_0+2\tau<r_0,\quad
+ 1-d_0-\tau>0,\quad1-2d_0-2\tau>0.
+\]
+The lower intervals also have strict diameter below the actual increment.
+The deleted sums retain indices $n-1,n-2\ge40$ and the antichain cap;
+no second deleted-score hypothesis is substituted for that proof.
+The signed slopes, positivity gates, same-law moment coefficients and
+two resource error families are unchanged from the preceding test.
+On each rectangle replace only its phase resource by $S_\epsilon$.
+
+In particular the remaining moment resource is
+\[
+ R_*=S_\epsilon/\kappa-b_*E^2\lambda_0,\qquad
+ \kappa=997/15000,\quad E=1.9706.
+\]
+A strictly negative value excludes the rectangle. Equality is not
+automatically excluded: the new bound is non-strict, and all subsequent
+inverse-index sign gates are retained. The old and tangent error bounds
+are each valid for the same resource simplex; their minimum is used.
+Every accepted contact contradiction is a strict positive margin.
+
+\section{Exact outcome and remaining failure}
+Use eight equal closed phase bands of width $907/4000=0.22675$ up to
+$1.814$, eight equal closed noise bands of width $3/40=0.075$ up to
+$0.6$, and both signs. There are exactly 128 boxes.
+The new calculation excludes 87 boxes: 16 have no incident moment cell,
+6 have negative joint resource, and 65 have insufficient resource for
+their lower noise endpoint. The other 41 boxes have 82 ray gates;
+74 pass and 8 fail. Every lower-ray gate passes.
+
+All failures are upper-ray gates on the first noise band $[0,0.075]$.
+In the table, $j$ denotes the closed phase band
+$[907j/4000,907(j+1)/4000]$. Displayed margins are approximations only;
+the log records exact rationals.
+\begin{center}
+\begin{tabular}{ccr}\toprule
+sign of $H$&$j$&contact side minus error\\\midrule
+$+$&1&$-0.004052969$\\
+$+$&2&$-0.015160061$\\
+$+$&3&$-0.013432901$\\
+$-$&1&$-0.008291001$\\
+$-$&2&$-0.025939179$\\
+$-$&3&$-0.035976266$\\
+$-$&4&$-0.034114818$\\
+$-$&5&$-0.001378038$\\\bottomrule
+\end{tabular}
+\end{center}
+The worst box has $H<0$, $|H|\in[0.68025,0.907]$. Its resource ceiling
+is approximately $0.6695213783$, contact side $0.2349977631$, and error
+majorant $0.2709740296$. Failure of this sufficient bound is neither a
+counterexample to confinement nor evidence for a maximizing law in the box.
+The zero-noise case itself has $U=0$ exactly; that does not remove the
+positive-noise portion of these closed boxes.
+
+\section{Reproduction and acceptance boundary}
+The computation reads frozen source copies and a frozen phase export,
+verifies their byte pins, and proves the export instrumentation reversible
+to the original signed kernel. It freshly reproduces the entire last
+signed stage: 2048 original moment boxes, 682 active cells. It compares
+the full ordered active-cell output, not a stored success marker, and
+reconstructs all 1364 signed endpoint quadratics before joining resources.
+Ten malformed or false controls reject, including missing, duplicate,
+reordered and sign-swapped cells, altered curvature, an unlicensed phase
+price, and a false whole-panel success claim.
+
+This fresh execution does not re-prove the accepted earlier entry stages,
+the analytic Fourier estimates, or the contact theorem. Mathematical
+status: the resource join is a conditional all-index implication, and
+the whole half-amplitude test remains unproved. Execution status: fresh
+exact replay and join, with the eight failed gates preserved. No native
+certificate campaign, finite-base acceptance, or global theorem is claimed.
+\end{document}

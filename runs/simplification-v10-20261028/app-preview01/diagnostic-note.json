@@ -1,0 +1,7 @@
+{
+  "observed_tool": "compile_latex_document",
+  "result": "compile-failed",
+  "cause": "The document compiler could not read ../small-noise.tex outside the dedicated project folder: PermissionError, Operation not permitted.",
+  "repair": "Copy the canonical proof bytes into the dedicated project as proof.tex and change the input to that file; the mathematical source is unchanged.",
+  "status_of_existing_pdf": "The earlier four-page TeX Live build succeeded and was visually inspected."
+}

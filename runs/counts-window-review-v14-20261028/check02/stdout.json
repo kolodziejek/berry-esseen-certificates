@@ -1,0 +1,180 @@
+{
+  "status": "PASS_INDEPENDENT_WINDOW_TAIL_FINAL",
+  "reviewed_source_sha256": "58c5cb0d372a1e4a898102a67523434dbaddc80679fe4891b8543f5accc4045c",
+  "complete_tail_coefficient": "5536030025/631986840576",
+  "independent_mass_squared_bound": "327987551647/571824000000",
+  "final_residual": "2411/356400",
+  "margin_above_lambda_over_200": "629/356400",
+  "actual_binomial_cases": 27,
+  "minimum_actual_normalized_mass_squared_lower_12decimals": "582862757801/1000000000000",
+  "negative_controls": {
+    "wide_window": "sqrt(n)pi_(np+50) < 3/4 at n6000,p1/2",
+    "false_common_residual_variance": "actual residual fourth moment exceeds A^2 lambda+3lambda^2"
+  },
+  "records": [
+    {
+      "n": 6000,
+      "p": "2/5",
+      "i": 2389,
+      "offset_from_floor_np": -11
+    },
+    {
+      "n": 6000,
+      "p": "2/5",
+      "i": 2400,
+      "offset_from_floor_np": 0
+    },
+    {
+      "n": 6000,
+      "p": "2/5",
+      "i": 2411,
+      "offset_from_floor_np": 11
+    },
+    {
+      "n": 6000,
+      "p": "1/2",
+      "i": 2989,
+      "offset_from_floor_np": -11
+    },
+    {
+      "n": 6000,
+      "p": "1/2",
+      "i": 3000,
+      "offset_from_floor_np": 0
+    },
+    {
+      "n": 6000,
+      "p": "1/2",
+      "i": 3011,
+      "offset_from_floor_np": 11
+    },
+    {
+      "n": 6000,
+      "p": "53/100",
+      "i": 3169,
+      "offset_from_floor_np": -11
+    },
+    {
+      "n": 6000,
+      "p": "53/100",
+      "i": 3180,
+      "offset_from_floor_np": 0
+    },
+    {
+      "n": 6000,
+      "p": "53/100",
+      "i": 3191,
+      "offset_from_floor_np": 11
+    },
+    {
+      "n": 6001,
+      "p": "2/5",
+      "i": 2389,
+      "offset_from_floor_np": -11
+    },
+    {
+      "n": 6001,
+      "p": "2/5",
+      "i": 2400,
+      "offset_from_floor_np": 0
+    },
+    {
+      "n": 6001,
+      "p": "2/5",
+      "i": 2411,
+      "offset_from_floor_np": 11
+    },
+    {
+      "n": 6001,
+      "p": "1/2",
+      "i": 2989,
+      "offset_from_floor_np": -11
+    },
+    {
+      "n": 6001,
+      "p": "1/2",
+      "i": 3000,
+      "offset_from_floor_np": 0
+    },
+    {
+      "n": 6001,
+      "p": "1/2",
+      "i": 3011,
+      "offset_from_floor_np": 11
+    },
+    {
+      "n": 6001,
+      "p": "53/100",
+      "i": 3169,
+      "offset_from_floor_np": -11
+    },
+    {
+      "n": 6001,
+      "p": "53/100",
+      "i": 3180,
+      "offset_from_floor_np": 0
+    },
+    {
+      "n": 6001,
+      "p": "53/100",
+      "i": 3191,
+      "offset_from_floor_np": 11
+    },
+    {
+      "n": 10000,
+      "p": "2/5",
+      "i": 3989,
+      "offset_from_floor_np": -11
+    },
+    {
+      "n": 10000,
+      "p": "2/5",
+      "i": 4000,
+      "offset_from_floor_np": 0
+    },
+    {
+      "n": 10000,
+      "p": "2/5",
+      "i": 4011,
+      "offset_from_floor_np": 11
+    },
+    {
+      "n": 10000,
+      "p": "1/2",
+      "i": 4989,
+      "offset_from_floor_np": -11
+    },
+    {
+      "n": 10000,
+      "p": "1/2",
+      "i": 5000,
+      "offset_from_floor_np": 0
+    },
+    {
+      "n": 10000,
+      "p": "1/2",
+      "i": 5011,
+      "offset_from_floor_np": 11
+    },
+    {
+      "n": 10000,
+      "p": "53/100",
+      "i": 5289,
+      "offset_from_floor_np": -11
+    },
+    {
+      "n": 10000,
+      "p": "53/100",
+      "i": 5300,
+      "offset_from_floor_np": 0
+    },
+    {
+      "n": 10000,
+      "p": "53/100",
+      "i": 5311,
+      "offset_from_floor_np": 11
+    }
+  ],
+  "scope": "Independent continuum window, complete-tail and terminal-scalar audit, conditional on the separately reviewed unweighted gain and phase/normal bounds. No constructor code imported.",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]"
+}

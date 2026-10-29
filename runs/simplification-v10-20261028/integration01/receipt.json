@@ -1,0 +1,120 @@
+{
+  "status": "PASS_BOUNDED_V10_COMPONENT_CHECKS",
+  "checks": {
+    "primitives_check.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v10/mathematics/simplification-v10/2026-10-28/primitives_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.18363379200000002,
+      "source_sha256": "b50691624ba914588f0253314e410ef94a1537e00eed1e790683c5fae6d6e267",
+      "source_unchanged": true,
+      "status": "PASS_PRIMITIVE_EXACT_CHECKS"
+    },
+    "counts_check.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v10/mathematics/simplification-v10/2026-10-28/counts_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 4.140125417,
+      "source_sha256": "de5dbd757c45b258b166eabf0d05e24d8f104e2f99e1b06061c1ffdaa8c07185",
+      "source_unchanged": true,
+      "status": "PASS_SHIFTED_COUNT_IDENTITIES_AND_BOUNDED_CONTROLS"
+    },
+    "geometry-check.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v10/mathematics/simplification-v10/2026-10-28/geometry-check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.072202125,
+      "source_sha256": "b60f6b06dd7d9d318dcdeafcf2b4eb9adf051838702b2ed54f74494c3ddc82a2",
+      "source_unchanged": true,
+      "status": "PASS_DIRECT_GLOBAL_GEOMETRY_GATES"
+    },
+    "geometry-panels.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v10/mathematics/simplification-v10/2026-10-28/geometry-panels.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.08584208400000001,
+      "source_sha256": "c5cf12b2bf1114cbd661a195cb824b66b4170f55a90356a8cd5d7d38e070b7af",
+      "source_unchanged": true,
+      "status": "PASS_DIRECT_ONE_PASS_PANEL_CALCULATIONS"
+    },
+    "geometry-laws.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v10/mathematics/simplification-v10/2026-10-28/geometry-laws.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.09551633300000001,
+      "source_sha256": "82bc67c53ed90c2640f225c1e7ca3ccf02903e3e3d9fa9db82d7713a50b9002f",
+      "source_unchanged": true,
+      "status": "PASS_DIRECT_BUDGET_ACTUAL_LAW_CONTROLS"
+    },
+    "geometry-independent.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v10/mathematics/simplification-v10/2026-10-28/geometry-independent.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.07067120799999999,
+      "source_sha256": "7857f539b22a0c445b09c3bf96995f225d22a11adff217be2714b65e2587f896",
+      "source_unchanged": true,
+      "status": "PASS_INDEPENDENT_DIRECT_GEOMETRY_POLYNOMIAL_RECONSTRUCTION"
+    },
+    "small_noise_check.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v10/mathematics/simplification-v10/2026-10-28/small_noise_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.05403762499999998,
+      "source_sha256": "823c74206cfcf7c12610cecfda53c7b033ba272db54945f297970e557c78a8c4",
+      "source_unchanged": true,
+      "status": "PASS_UNIFORM_SMALL_NOISE_SCALAR_GATES"
+    },
+    "small_noise_review_check.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v10/mathematics/simplification-v10/2026-10-28/small_noise_review_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.06434691599999998,
+      "source_sha256": "a7bab910e350d9a30b37faf63165f0e75e3d4ee1409043cdfa1a708699f80253",
+      "source_unchanged": true,
+      "status": "PASS_INDEPENDENT_SMALL_NOISE_POLYNOMIAL_AND_MARGIN_REVIEW"
+    }
+  },
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "time_utc": "2026-10-28T15:24:48.911664+00:00",
+  "script_sha256": "e0e08e6e1f8d14e795cae85d7fa39d315219183395c838ffe0932f5cc683b594",
+  "proof_pins": {
+    "primitives.tex": "128ae379f00b2d22f7b3a69573b8eda10cbfd3097d74d30e7eef94a13332b147",
+    "geometry-main.tex": "f420a6a7d4435cd38f64f45cf39f8d92823363e32954dddf536e65c73ae8852d",
+    "small-noise.tex": "41c07e67ba978d051e65e57a66bdfa3dcff57fdf887c99fbe43cf5c0fd4bba6f",
+    "geometry.tex": "e753afc6a731f728119d38d422a2ab5e3c890a1e2ef0b40a6841ec83d7a185b2",
+    "counts.tex": "e76f793e12338c9811d0f832fc7da25c95304cbea33663d0d92908cfa671689d"
+  },
+  "scope": "Bounded component arithmetic, not a full theorem or ancestor replay"
+}

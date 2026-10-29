@@ -1,0 +1,305 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,hyperref,booktabs}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\title{A constant variance bound removes the distant count tail}
+\author{}\date{28 October 2026}
+\begin{document}\maketitle
+
+The incoming counts need not be assigned variances growing with their
+distance from the own count. Their variances have a common bound. Using
+that bound after the first one or two counts produces a factorial tail,
+and extends most of the direct comparison to $ns\le .075$. The only
+phase interval left out of this note is $-.15<u<0$.
+
+\begin{theorem}\label{thm:outer}
+Let $n\ge42$, $2/5\le p\le53/100$, $q=1-p$, and $Y=B+U$, where
+$\Pp(B=1)=p$ and $\E(U\mid B)=0$. The two conditional laws satisfy
+\[
+ |U_j|\le3/5,\quad U_0\le a_0,\quad U_1\ge-a_1,
+ \qquad a_j\ge0,\quad a_0+a_1\le9/125.
+\]
+Put $v=pq$, $s=\E U^2$, $\lambda=ns$, $X=(Y-p)/\sqrt{v+s}$,
+$\rho=\E|X|^3$, $\rho_B=(1-2v)/\sqrt v$, and $U_*=3/40$.
+Suppose $0<\lambda\le U_*$, $|H|\le46/25$, and $C\ge2/5$.
+Choose $k\in\mathbb Z$ with $np+H\sqrt{v+s}=k+u$, where
+\[
+ u\in[-34/125,-3/20]\ \cup\ [0,91/125].
+\]
+Let $\delta=k-np$, let $F_B$ be the $\mathrm{Bin}(n,p)$ CDF, and
+let $S_n$ be the sum of $n$ independent copies of $X$. Then
+\begin{align*}
+ \Delta_C={}&\sqrt n\{\Pp(S_n\le H)-\Phi(H/\sqrt n)\}-C\rho\\
+ &-\sqrt n\{F_B(k)-\Phi(\delta/\sqrt{nv})\}+C\rho_B
+ <-\lambda/100.
+\end{align*}
+\end{theorem}
+The theorem assumes the conditional representation and support bounds;
+it does not acquire them. In particular it is not a full Berry--Esseen
+theorem, nor does it settle the omitted negative phase. The old $ns\le.03$
+comparison covers that omitted phase only at its old noise scale.
+
+\section{Conditioning and normalization}
+Write $v_j=\E U_j^2$, and let $W_j$ be the sum of $j$ independent
+$U_1$ variables and $n-j$ independent $U_0$ variables. Put
+$\pi_j=\binom njp^jq^{n-j}$, $m=\sqrt n\pi_k$, and
+\begin{gather*}
+ f(u)=\frac{\Phi((\delta+u)/\sqrt{n(v+s)})-
+                  \Phi(\delta/\sqrt{n(v+s)})}{\pi_k},\\
+ O=\Pp(W_k>u)+f(u),\qquad
+ T=\sum_{i=1}^{n-k}\Pp(W_{k+i}\le u-i).
+\end{gather*}
+For any upper bound $R$ on $\pi_{k+i}/\pi_k$, conditioning gives
+\begin{equation}\label{eq:master}
+ \Delta_C\le-m(O-RT)+\mathcal R,
+ \quad \mathcal R=\sqrt n\{\Phi(\delta/\sqrt{nv})-
+ \Phi(\delta/\sqrt{n(v+s)})\}+C(\rho_B-\rho).
+\end{equation}
+Indeed the own count loses $\pi_k\Pp(W_k>u)$, each larger count
+can add only its closed incoming probability, and all other outgoing
+terms are nonpositive. This accounts for atoms at every threshold.
+
+Set $A=3/5$, $v_*=6/25$, $N=42$, and
+$\Xi=(46/25)(251/500)$. We have $\sqrt{v+s}<251/500$,
+$|\delta|<\Xi+|u|\le413/250$, $1\le k\le n-1$, and
+$9/25<k/n<23/40$. Finite Stirling expansion gives, for $|\delta|\le D$,
+\begin{equation}\label{eq:stirling}
+ m=\frac{\phi(0)}{\sqrt v}
+       \exp\{-\delta^2/(2nv)+e\},\qquad
+ n|e|<Z(D):=5D/8+3/8+D^3/42.
+\end{equation}
+For completeness, on the segment $[9/25,23/40]$ the third derivative
+of the binary relative entropy has absolute value less than $6$,
+the derivative of $\log(x(1-x))$ has absolute value less than $5/4$,
+and the combined factorial remainder has absolute value less than
+$3/(8n)$. Taylor expansion at $p$ gives the three displayed error
+terms. The last assertion follows from
+$0<\log(m!)-(m+1/2)\log m+m-\tfrac12\log(2\pi)<1/(12m)$
+and $x(1-x)>.23$: the absolute difference of the positive remainder
+at $n$ and the sum of the two subtracted positive remainders is at
+most the larger of their separate upper bounds.
+These statements use only $k,n-k>0$. The derivative constants are
+checked from $x(1-x)>.23$ and $|1-2x|\le.28$.
+
+For the same fixed $\delta$,
+\[
+ \log f'(t)=-\tfrac12\log(1+s/v)+\frac{\delta^2}{2nv}
+       -\frac{(\delta+t)^2}{2n(v+s)}-e.
+\]
+It follows, for $|t|\le b$, that
+\begin{equation}\label{eq:log}
+ n|\log f'(t)|\le\tfrac83\lambda+(2Db+b^2)/(2v_*)+Z(D).
+\end{equation}
+For a positive phase, the better signed estimate
+$2\delta t+t^2\le\max(0,2\Xi u-u^2)$, $0\le t\le u$, may
+replace $2Db+b^2$ when proving a lower bound for $f'$.
+To see this, write $\delta=\xi-u$, $|\xi|\le\Xi$; the convex
+quadratic in $t$ is bounded by its two endpoint values. The resulting
+bound increases for $0\le u\le91/125<\Xi$.
+
+Using $.39886<\phi(0)<.4$, $e^{-x}\ge1-x$ and
+$e^x\le(1-x)^{-1}$ gives the following rational estimates.
+Every table entry is a strict bound.
+The value of $f'$ is needed only between $0$ and the actual $u$.
+\[
+\begin{array}{c|c|c|c|c|c}
+ \text{phase}&D&m\text{ lower}&f'&R\text{ upper}&\mathcal R\text{ upper}\\\hline
+ {[0,.075]}&1&.73&>.96&1.06&(.75)\lambda/n\\
+ {[-.272,-.15]}&1.2&.71&<1.08&1.08&(1.1)\lambda/n\\
+ {[.075,.15]}&1.075&.73&>.95&1.07&(.88125)\lambda/n\\
+ {[.15,.728]}&1.652&.65&>.9&1.143&(1.891)\lambda/n
+\end{array}
+\]
+Here the binomial ratio at step $j$ equals
+$1+(p-\delta-j)/(nv+q(\delta+j))$.
+For the first three rows only the first factor can exceed one;
+bound it by
+$1+(.53+D-1)/(42v_*-.6(D-1))$.
+For the last row multiply this bound by
+$1+(.53+D-2)/(42v_*)$; all later factors are at most one.
+
+We justify the repair column. Conditional signs are fixed since
+$a_0<p$ and $a_1<q$. Cubic expansion and $U_0^3\le a_0U_0^2$,
+$U_1^3\ge-a_1U_1^2$ give
+\[
+ \E|Y-p|^3\ge v(1-2v)+(3\min(p,q)-a_0-a_1)s.
+\]
+The elementary bound $(1+x)^{3/2}\le1+3x/2+3x^2/8$ for $x\ge0$
+therefore yields
+\[
+ (v+s)^{3/2}(\rho-\rho_B)
+ \ge s(87/250-13s/16).
+\]
+Since $(2/5)(87/250-13U_*/(16N))>(251/500)^3$, we have
+$C(\rho-\rho_B)>s$. Differentiating the normal term in its variance
+shows it is at most $(7/4)\delta_+s$. Thus
+\begin{equation}\label{eq:repair}
+ \mathcal R<(7D/4-1)\lambda/n.
+\end{equation}
+No higher moment of an unconfined law has been used.
+
+\section{A factorial bound for the complete incoming tail}
+We use the quadratic-hinge Poisson comparison of Pinelis,
+\emph{On the Bennett--Hoeffding inequality},
+\href{https://arxiv.org/abs/0902.4058}{arXiv:0902.4058},
+Proposition~2.8 and Corollary~2.11. For independent centered summands
+bounded above by $A$ and with total variance at most $V$, it gives
+\[
+ \Pp(Z\ge b)\le
+ \frac{\E(P_\mu-j)_+^2}{(b/A+\mu-j)^2},
+ \quad \mu=V/A^2,\quad b/A+\mu-j>0,
+\]
+where $P_\mu$ is Poisson. Variance inflation is allowed by the theorem;
+we never assume that the displayed quotient is monotone in $\mu$.
+
+As $|v_1-v_0|\le(5/2)s$, the count at distance $i$ has variance
+at most $\lambda[1+(5/2)(D+i)/n]$. More importantly, every legal
+count has variance at most
+\begin{equation}\label{eq:commonvariance}
+ n\max(v_0,v_1)\le(5/2)\lambda.
+\end{equation}
+Use the first bound for one or two initial counts, then the second
+bound for all the rest.
+
+\begin{lemma}\label{lem:tail}
+With $\mu=(5/2)\lambda/A^2$, let $m_0\ge2$ be an integer.
+If $D_{m_0}:=m_0(1/A-1)-u/A+\mu>0$ and $\mu<m_0+2$, then
+\[
+ \sum_{i=m_0}^{n-k}\Pp(W_{k+i}\le u-i)
+ \le J_{m_0}(\mu,u):=
+ \frac{\mu^{m_0+1}}
+ {(m_0+1)!D_{m_0}^2(1-\mu/(m_0+2))}.
+\]
+\end{lemma}
+\begin{proof}
+Apply the comparison to $-W_{k+i}$, using the common variance bound
+and the integer hinge $j=i$. For every integer $l\ge0$ and $i\ge2$,
+$(l-i)_+^2\le\binom l{i+1}$. Indeed, writing $l=i+h$, $h\ge1$,
+the right side is at least $\binom{h+2}{3}\ge h^2$; the last
+inequality is equivalent to $(h-1)(h-2)\ge0$.
+Poisson factorial moments then bound the numerator by
+$\mu^{i+1}/(i+1)!$. The hinge denominators increase with $i$,
+so successive terms have ratio at most $\mu/(i+2)\le\mu/(m_0+2)$.
+Summing the infinite geometric majorant proves the claim and includes
+all finite incoming counts. Starting this argument at $i=1$ is false:
+at $l=3$, $4>\binom32$.
+\end{proof}
+
+For the first count we use
+\[
+ Q(\mu,u)=\frac{\mu^2(1/2+\mu/6)}{((1-u)/A-1+\mu)^2}.
+\]
+This follows from $\E(P_\mu-1)_+^2=\mu^2-\mu+1-e^{-\mu}
+\le\mu^2/2+\mu^3/6$, provided its unsquared denominator is positive.
+For the second count, a variance bound $A^2\mu_2$ gives
+$\mu_2^3/[6((2-u)/A-2+\mu_2)^2]$.
+All these denominators, and all geometric denominators below, are
+checked positive on their entire stated domains.
+
+\section{The three outer intervals reduce to endpoint inequalities}
+In this section every variance is inflated to its value at $U_*$.
+Put $\mu_G=(5/2)U_*/A^2=25/48$. For the negative interval,
+Cantelli and the normal derivative bound give
+\[
+ O\ge L_-:=\min_{r\in\{3/20,34/125\}}
+ \left\{\frac{r^2}{(15/14)U_*+r^2}-\frac{27r}{25}\right\}.
+\]
+The derivative is positive at $r=3/20$ and has only a single maximum
+before decreasing, so a minimum on the interval occurs at an endpoint.
+The complete tail is at most
+\[Q((8/7)U_*/A^2,-3/20)+J_2(\mu_G,-3/20).\]
+This uses monotonicity in $u$ only, after fixing the inflated variances.
+
+For the next positive interval $[3/40,3/20]$, use
+\[
+ O-RT\ge\frac{19u}{20}-\frac{107}{100}
+ \left\{Q((9/8)U_*/A^2,u)+J_2(\mu_G,u)\right\}.
+\]
+The right side is concave in $u$, since its subtracted terms are
+positive multiples of reciprocals of squared positive affine functions.
+Its two endpoints suffice.
+
+For $3/20\le u\le91/125$, set $D=413/250$,
+$t_1=(7/6)U_*$ and $\mu_2=U_*[1+(5/2)(D+2)/42]/A^2$.
+Cantelli bounds the first incoming event, giving
+\[
+ O-RT\ge\frac{9u}{10}-\frac{1143}{1000}
+ \left\{\frac{t_1}{t_1+(1-u)^2}
+ +\frac{\mu_2^3}{6((2-u)/A-2+\mu_2)^2}+J_3(\mu_G,u)\right\}.
+\]
+This is again concave: the first tail term has nonnegative second
+derivative because $3(1-91/125)^2>t_1$, and the others are convex
+reciprocal squares. Thus two more endpoints suffice.
+Multiplying by the relevant lower bound for $m$ and subtracting
+$(7D/4-1)U_*/42+U_*/100$ gives a strictly positive rational number
+in all five tests. Their minimum exceeds $17/10000$.
+Each test also proves $O-RT>0$, as needed when replacing $m$ by
+its lower bound. The use of $U_*$ in the repair and desired margin
+is conservative for every $0<\lambda\le U_*$.
+
+\section{The positive inner interval is one polynomial calculation}
+Here $0\le u\le3/40$. Put $\alpha=16/25$, $M=5\alpha^4$ and
+$t=\E W_k^2$. The quartic
+\[
+ h(x)=(-x^4+3\alpha^2x^2+2\alpha^3x)/M
+       \le\mathbf1_{(0,\infty)}(x)
+\]
+has numerator $-x(x+\alpha)^2(x-2\alpha)$ and positive-half-line
+maximum $(9+6\sqrt3)/20<1$. Since $\E W_k^3$ has absolute value
+at most $At$ and $\E W_k^4\le A^2t+3t^2$, expansion at $W_k-u$
+and $f(u)\ge(24/25)u$ yield
+\begin{equation}\label{eq:quartic}
+ O\ge L(t,u):=
+ \frac{(3\alpha^2-A^2)t-3t^2-4Aut-6u^2t-u^4
+       +3\alpha^2u^2-2\alpha^3u}{M}+\frac{24u}{25}.
+\end{equation}
+This is concave in $t$, and
+$(79/84)\lambda\le t\le(89/84)\lambda$.
+Use the actual $\lambda$ in the tail, with
+$\mu_1=25\lambda/8$ and $\mu_G=125\lambda/18$. It remains to show,
+for each $c\in\{79/84,89/84\}$,
+\begin{equation}\label{eq:innergoal}
+ \frac{73}{100}\{L(c\lambda,u)-\tfrac{53}{50}
+ [Q(\mu_1,u)+J_2(\mu_G,u)]\}
+       -(\tfrac{3}{168}+\tfrac1{100})\lambda>0.
+\end{equation}
+Here the $3/168$ is the normal repair after the unit cubic gain.
+
+This last verification is a small exact polynomial certificate. Set
+\[
+ d_1=2/3-5u/3+25\lambda/8,\quad
+ d_2=4/3-5u/3+125\lambda/18,\quad d_3=1-125\lambda/72.
+\]
+Multiply the left side of \eqref{eq:innergoal} by
+$6d_1^2d_2^2d_3>0$. The result $P_c(\lambda,u)$ has degree at
+most $7$ in $\lambda$ and $8$ in $u$. Write
+$P_c=\sum a_{kl}\lambda^ku^l$. Its tensor Bernstein coefficients
+on the single square $[0,3/40]^2$ are exactly
+\[
+ b_{ij}=\sum_{k\le i,l\le j}a_{kl}(3/40)^{k+l}
+       \frac{\binom ik}{\binom7k}\frac{\binom jl}{\binom8l},
+ \qquad 0\le i\le7,\quad0\le j\le8.
+\]
+The source \texttt{outer-check.py} constructs these polynomials from
+\eqref{eq:quartic}--\eqref{eq:innergoal} using rational arithmetic,
+and checks all $144$ coefficients: $b_{00}=0$ and every other
+coefficient is strictly positive, for both values of $c$.
+The transform follows from
+$x^k=\sum_{i=k}^m\binom ik/\binom mk\,B_i^m(x)$.
+Bernstein basis functions are nonnegative and sum to one. At every
+point of the square except $(0,0)$ at least one nonzero-index basis
+function is positive. Consequently $P_c>0$ whenever $\lambda>0$,
+including all boundary phases. This proves \eqref{eq:innergoal} and
+completes the theorem.
+
+\section{What the check does and does not establish}
+The acceptance script checks the scalar normalization and endpoint
+inequalities and reconstructs both coefficient arrays. Missing, repeated,
+reordered and corrupted arrays are rejected; removing the cubic gain
+or increasing the noise endpoint to $.1$ fails a genuine sufficient
+inequality. The proof above supplies the analytic reduction; an arithmetic
+PASS alone supplies neither that reduction nor acquisition of its premises.
+The independent review and saved runs are separate files. No inherited
+certificate or manuscript is replaced by this component.
+\end{document}

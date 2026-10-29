@@ -1,0 +1,219 @@
+{
+  "status": "PASS_BOUNDED_COMMON_RESPONSE",
+  "python": "3.9.6",
+  "scope": "New conditional moment-polynomial bound on CENTRAL19; no acquisition, full raw remainder or LOCAL42 acceptance",
+  "archive_sha256": "43b606138f826b47e3f174957088285349aebc82a928627e9e66fe370471be52",
+  "manifest_sha256": "c8d6228d6a1abd0b25a2f69ed35ae78f1e719a58e27e4fedf5af28e942469cdf",
+  "row_source": "work/toward40_20261007/audit43/capsule/work/below49_20261006/acquisition/central42_confinement_candidate.json",
+  "row_sha256": "2f95d0271996eb9868c2fffcdfb0fa2646a99c2cf588e70d063178e27d07246d",
+  "selected_fields": {
+    "pl": "209/500",
+    "pu": "21/50",
+    "theta": "12657/1000000",
+    "rho": "214889/200000",
+    "beta": "174581/1000000",
+    "beta_lo": "72659/500000",
+    "A": "810731/1000000",
+    "B": "284079/250000",
+    "radius": "46/25"
+  },
+  "derived": {
+    "J1_upper": "28828879/30000000",
+    "mean_minus": [
+      "21/25",
+      "213/250"
+    ],
+    "mean_plus": [
+      "29/25",
+      "119/100"
+    ]
+  },
+  "constant_responses": [
+    {
+      "polynomial": [
+        "435879881/36000000",
+        "320027/90000",
+        "-17/400",
+        "-1/4"
+      ],
+      "denominator": [
+        "14739/1250",
+        "54/25"
+      ],
+      "domain": [
+        "113/100",
+        "46/25"
+      ],
+      "derivative_numerator": [
+        "94650067/6000000",
+        "-250563/250000",
+        "-11169/1250",
+        "-27/25"
+      ],
+      "stationary_bracket": [
+        "5251527468679/4398046511104",
+        "65644093358523/54975581388800"
+      ],
+      "stationary_upper": "108470462524383977746847166894841556696894207/98236260023255534344264678042592112908697600",
+      "endpoint_ratios": [
+        "4189573/3795200",
+        "610174249/567561600"
+      ],
+      "bound": "221/200"
+    },
+    {
+      "polynomial": [
+        "895536247/375000000",
+        "289067/90000",
+        "47/400",
+        "-1/4"
+      ],
+      "denominator": [
+        "14811/1250",
+        "104/25"
+      ],
+      "domain": [
+        "81/100",
+        "46/25"
+      ],
+      "derivative_numerator": [
+        "131822587531/4687500000",
+        "696117/250000",
+        "-41989/5000",
+        "-52/25"
+      ],
+      "stationary_bracket": [
+        "91374863653183/54975581388800",
+        "182749727306469/109951162777600"
+      ],
+      "stationary_upper": "1720487140152208248969900327032486020079475511/4676340115007506606416329672897305195315200000",
+      "endpoint_ratios": [
+        "3700448369/11413800000",
+        "8030635741/21941100000"
+      ],
+      "bound": "3/8"
+    }
+  ],
+  "linear_responses": [
+    {
+      "name": "H>=0,+",
+      "polynomial": [
+        "-53693/20000",
+        "62/75",
+        "7/6"
+      ],
+      "denominator": [
+        "14739/1250",
+        "54/25"
+      ],
+      "domain": [
+        "113/100",
+        "46/25"
+      ],
+      "endpoint_slacks": [
+        "17641/6250",
+        "77287/1500000"
+      ]
+    },
+    {
+      "name": "H>=0,-",
+      "polynomial": [
+        "3189/1000",
+        "-19/80",
+        "-5/6"
+      ],
+      "denominator": [
+        "14811/1250",
+        "104/25"
+      ],
+      "domain": [
+        "81/100",
+        "46/25"
+      ],
+      "endpoint_slacks": [
+        "289437/1000000",
+        "671233/187500"
+      ]
+    },
+    {
+      "name": "H<=0,+",
+      "polynomial": [
+        "19321/5000",
+        "-83/400",
+        "-1"
+      ],
+      "denominator": [
+        "14739/1250",
+        "54/25"
+      ],
+      "domain": [
+        "113/100",
+        "46/25"
+      ],
+      "endpoint_slacks": [
+        "41787/200000",
+        "171313/62500"
+      ]
+    },
+    {
+      "name": "H<=0,-",
+      "polynomial": [
+        "-157893/62500",
+        "88/125",
+        "1"
+      ],
+      "denominator": [
+        "14811/1250",
+        "104/25"
+      ],
+      "domain": [
+        "81/100",
+        "46/25"
+      ],
+      "endpoint_slacks": [
+        "201963/50000",
+        "21186/15625"
+      ]
+    }
+  ],
+  "split_benchmark": "173316497/113512320",
+  "strict_ratio_reserve": "239426917/567561600",
+  "control_law": {
+    "xs": [
+      "-533/617",
+      "-517/617",
+      "717/617",
+      "733/617"
+    ],
+    "ps": [
+      "29/100",
+      "29/100",
+      "21/100",
+      "21/100"
+    ],
+    "theta": "64/380689",
+    "moments": {
+      "rho": "244097553/234885113",
+      "beta": "1522244/9517225",
+      "gamma": "76125000/234885113",
+      "mu4": "160246554721/144924114721",
+      "eta5": "107416522962945/89418178782857",
+      "zeta4": "1799989311116/3623102868025"
+    },
+    "J": "751634/380689",
+    "J1": "212608922821/434772344163",
+    "J2": "11296082584500187/26825453634857100"
+  },
+  "rejected_controls": [
+    "too_small_ratio_target",
+    "wrong_stationary_direction",
+    "omit_one_sign",
+    "zero_noise_claim_from_positive_example",
+    "replace_actual_gap_by_skeleton_gap"
+  ],
+  "input_sha256": {
+    "mathematics/strategy-v4/2026-10-27/geometry.tex": "717b0913c34966d03cfa964259031b9b71f0ec53fd0b80c799a5ae3e758fbb9b",
+    "mathematics/strategy-v4/2026-10-27/excess.tex": "a7105d57f4f353a7fcdd32947b1feae044b3df5dc29558afb48c575e9ea4a2d0",
+    "mathematics/fixed-target-v5/2026-10-27/response_check.py": "06a2afc6a0b964f34c6d87c1a48ff9780a650c63724f98fdcdefeb3848f36526"
+  }
+}

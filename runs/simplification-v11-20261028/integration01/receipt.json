@@ -1,0 +1,167 @@
+{
+  "status": "PASS_BOUNDED_V11_CHECKS",
+  "checks": {
+    "leftpanels-check.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v11/mathematics/simplification-v11/2026-10-28/leftpanels-check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.074515334,
+      "source_sha256": "4ee39220b240f7777a6457c2dc2f5f3536dd7f225b7b9287ea0d666d42ee18d5",
+      "source_unchanged": true,
+      "stdout_sha256": "7c529c55285daa9112d466daf577219742bad7c0fa4fe829af9c92abbd773569",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_LEFT_PANELS_POINT_SEVEN_STRIP"
+    },
+    "allpanel_check.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v11/mathematics/simplification-v11/2026-10-28/allpanel_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.05510625000000001,
+      "source_sha256": "75c8e09509354ecfad9d1172b4a4f41f7b06e62195ced817b240f5471ad3d844",
+      "source_unchanged": true,
+      "stdout_sha256": "c33a4af169892b3edd226228bb5d1926397e92f96726b166895c30aa86996230",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_ALLPANEL_SCALAR_GATES"
+    },
+    "allpanel_actual.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v11/mathematics/simplification-v11/2026-10-28/allpanel_actual.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 1.4488439579999999,
+      "source_sha256": "236dbfad724245ab252deb113b62ac333a3f8baa4382417151ed316306a4fc66",
+      "source_unchanged": true,
+      "stdout_sha256": "67f47b161ea7bb46ffb06c208e55825f7a35781594ad136551164f78dd97f682",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_ALLPANEL_EXACT_SELECTED_EVENTS"
+    },
+    "allpanel-review-check.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v11/mathematics/simplification-v11/2026-10-28/allpanel-review-check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.340701333,
+      "source_sha256": "c0365a5658c869f7b781b7efd480e7f0878b5159e2fdc9697bb0b4c39060a567",
+      "source_unchanged": true,
+      "stdout_sha256": "73574aa9f5ccf410bde2323c97181bdc5f054775b5408cd570e1cea0464320f0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_INDEPENDENT_ALLPANEL_REVIEW_CHECKS"
+    },
+    "owncount_check.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v11/mathematics/simplification-v11/2026-10-28/owncount_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.47424529200000004,
+      "source_sha256": "03a677a31bd2591b7c4c99d12bf9b1ef541288977310290320b2bb83499e7a99",
+      "source_unchanged": true,
+      "stdout_sha256": "6cad28caf782fc85509920e4e14aa0ace05434e5a17ee438bef8503abe6d7b6e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_ALLOCATION_PRESERVING_OWN_COUNT_CONTROLS"
+    },
+    "counts-v11-check.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v11/mathematics/simplification-v11/2026-10-28/counts-v11-check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.076463958,
+      "source_sha256": "dfeba7bc10dcdcd41bdfde30c415239f5776434acf36415a919339db0a928225",
+      "source_unchanged": true,
+      "stdout_sha256": "917282dd078d8afb5a473c7b36be8e1e65d690c10796754a639018bae321b9df",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_UNIFORM_COMPARISON_LAMBDA_LE_3_OVER_100"
+    },
+    "counts-v11-actual.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v11/mathematics/simplification-v11/2026-10-28/counts-v11-actual.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 2.001237417,
+      "source_sha256": "ec91e51f8dce07ce7ff4d7b338c519153c6e982712dc147e70b1032174fc94fa",
+      "source_unchanged": true,
+      "stdout_sha256": "044c96a92a89575f3f6520c9c7c292a9997049334462834e98aca48cb24d5aa2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_EXACT_RARE_JUMP_AND_COLLISION_CONTROLS"
+    },
+    "counts_v11_independent.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v11/mathematics/simplification-v11/2026-10-28/counts_v11_independent.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v11"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.38246704100000006,
+      "source_sha256": "11c6847f4d79ac260cba19e1a9dcff7e7a88946d6c996bca29ddc1ad9782c51f",
+      "source_unchanged": true,
+      "stdout_sha256": "e1515b7318a341f155d815bf8449aa0caa5cf1ad8bead07f28a9b827c92fcf8d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_INDEPENDENT_THREE_HUNDREDTHS_REVIEW"
+    },
+    "extended_actual.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v11/mathematics/simplification-v11/2026-10-28/extended_actual.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 1.074701584,
+      "source_sha256": "bebbef85c6ed364c50015ec90ac8a78e340ef8e2bc5b3e3d6d08dc9759b6beee",
+      "source_unchanged": true,
+      "stdout_sha256": "4a36192472de58207e6e093e7385546a120caea56c02f255bca39c36a310f2f5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_EXACT_SELECTED_EXTENDED_NOISE_EVENTS"
+    },
+    "preservation.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v11/mathematics/simplification-v11/2026-10-28/preservation.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.4589076670000001,
+      "source_sha256": "99047a1668d3ef69043c2a563a3d6f421aee1bdf8a17a42f51f3da0219135343",
+      "source_unchanged": true,
+      "stdout_sha256": "8b098862d2cf282d770b3a6c78c8ea61a3cb723e684bbacad39c1517bc34f3ef",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_RESEARCH_BASELINE_AND_MANUSCRIPT_PRESERVATION"
+    }
+  },
+  "proof_source_sha256": {
+    "owncount.tex": "3c340c46210ea8d2fa4c030355480e56773944eff3f0fd0af595d488347e497e",
+    "leftpanels.tex": "63b11a2df99e2bf8af24040bebe522946adb4496cd7b9c993e190ee9d1340c26",
+    "allpanel.tex": "bd9d32de7000391edbc6a94547316b7c88234cc9aaf6d2c4f4c2d2de183dbf15",
+    "leftpanels-main.tex": "1c564f1f92b8453f0a55894bf2a4a85c4ea1d71c545cc6c1d98ef0d0bbd10c3e",
+    "counts-v11.tex": "209f173c19a73c4fecf5aaf9aa2732c30b72266ff3f1673ddd52fa4a4e6c4641"
+  },
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "time_utc": "2026-10-28T17:45:59.314338+00:00",
+  "driver_sha256": "74b9eb35464719bf0fcbb10eae0eb18de07acf37540cc8255528c245c29d05f8",
+  "scope": "Bounded new component checks and integrity; no complete conjecture acceptance or ancestor replay"
+}

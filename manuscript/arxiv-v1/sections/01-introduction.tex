@@ -123,45 +123,59 @@ and Cheng, relative to explicitly listed external mathematical inputs~\cite{Berr
 
 \subsection{The present approach and its scope}\label{ms:scope}
 
-The analytic starting point is a maximizing law at a fixed sample size.
-Its first variation gives a contact inequality at every support point.
-We integrate that inequality against the density of the zero-bias
-transform, introduced by Goldstein and Reinert~\cite{GoldsteinReinert1997}.
-The resulting identity connects the normal-approximation error to a
-nonnegative moment defect and a Fourier remainder. The defect singles out
-Esseen's two-point law; its quantitative form controls conditional noise
-and the displacement of the two parts of the support at the same time.
-The sign decomposition then turns the original sum into an exact binomial
-mixture. Related zero-bias methods appear in Tyurin's work and, for
-independent summands, in Bell's transport paper~\cite{Tyurin2010,BellTransport2026}.
+Rather than first finding the largest normalized ratio $C_n$, fix
+$c=\CE$ and maximize the excess
+\begin{equation}\label{v9:intro:excess}
+ a(P,H)=\sqrt n\{\Pp_P(S_n\le H)-\Phi(H/\sqrt n)\}-c\rho(P).
+\end{equation}
+The target coefficient stays fixed when the law is varied. If the sharp
+bound fails at index $n$, this problem has a maximizing pair with positive
+excess. The equality case also has an attained witness when $C_n=c$.
+The negative third-moment penalty is useful: it prevents loss of third
+moment in a maximizing limit, without assuming uniform integrability of
+third moments. The contact inequality and this compactness argument are
+proved in Section~\ref{v9:core:section}.
 
-The reductions developed here address four parts of the argument.
-The one-step recurrence of Theorem~\ref{ms:one-step} controls the first
-index $n\ge42$ with $C_n\ge\CE$, assuming a sharp base through $41$;
-Lemma~\ref{ms:first-failure-entry} then gives zero predecessor loss and
-$0\le n(C_n-\CE)<3003/10250$. Proposition~\ref{ms:04:three-bounds}
-uses this zero loss to prove support bounds by boundary estimates and
-monotonicity. Retaining $n(C_n-\CE)\rho$ in the conserved identity
-sharpens the joint bound on noise and endpoint displacement
-(Corollary~\ref{ms:conserved:phase-resource} and
-Lemma~\ref{ms:06:charge}). Finally, Theorem~\ref{ms:curvature-thm}
-replaces the curvature maximization by at most three explicit candidates.
-The support and resource statements keep their stated moment and
-Fourier hypotheses.
-
-The all-index conclusion remains conditional. Theorem~\ref{ms:conditional-global}
-shows that an independent sharp base $C_j\le\CE$ for $1\le j\le41$,
-together with the equality-inclusive local exclusion of
-Assumption~\ref{ms:local42}, implies
+Integrating contact against the zero-bias density connects the excess to a
+Fourier remainder and the nonnegative defect
 \[
- C_n<\CE\quad(n\ge42),\qquad C^*=\CE.
+ D=(3+\sqrt{10})\rho-\gamma-3J.
 \]
-Establishing the local exclusion requires both analytic implications and
-complete finite certificates. The new reductions do not by themselves
-establish that assumption or the finite base. Section~\ref{ms:certificates}
-records their verification status in one place.
+Here $\gamma=\E X^3$ and $J$ measures the actual support gaps, as defined in
+Section~\ref{ms:geometry-counts}. The identity retains the whole term
+$(n+H^2)a$. It therefore gives one budget for the error excess, the defect
+and leakage, rather than separate bounds whose best cases need not occur
+for the same law. The zero-bias transform was introduced by Goldstein and
+Reinert~\cite{GoldsteinReinert1997}; related normal-approximation methods
+appear in Tyurin and, for independent summands, in Bell's transport
+work~\cite{Tyurin2010,BellTransport2026}.
 
-An earlier, AI-assisted working draft is available on
-Hexagon~\cite{rodziewiczkolodziejek2026momentdefects}; the present paper
-reorganizes that material and develops the reductions above. None of the
-bounds reported in the recent works cited above is used here.
+The main quantitative advances concern what happens before the final
+count comparison. The selected coarse entry uses two quadratic updates
+and four signed updates. Its Fourier bounds are proved in
+Appendix~\ref{v9:fourier:section}; the finite calculation keeps the sign of
+the third moment and feeds the defect back into the first moment.
+Elementary inequalities then give simultaneous moment, gap and noise
+bounds. For small noise, contact excludes both exterior support rays by
+one polynomial argument, uniformly in the raw threshold and sample size.
+For larger noise on $p\in[.41,.42]$, a signed resource calculation completes
+the same confinement step. The different scopes of these results are
+stated in Sections~\ref{v9:resources:section} and
+\ref{v9:confinement:section}.
+
+Confinement is not the final comparison. Conditioning on the number of
+positive summands gives an exact binomial mixture, and the remaining
+error must be bounded proportionally to its conditional noise variance,
+even as that variance tends to zero. Section~\ref{ms:counts} and
+Appendix~\ref{v9:count:appendix} give the identities and sufficient bounds.
+They are not accompanied here by a complete acceptance over the remaining
+domain. The finite base $C_j\le\CE$, $1\le j\le41$, is another independent
+obligation. Section~\ref{ms:certificates} states exactly how these missing
+pieces would complete the proof and separates mathematical results from
+arithmetic checks.
+
+An earlier AI-assisted working draft is available on
+Hexagon~\cite{rodziewiczkolodziejek2026momentdefects}. The present paper
+replaces its main proof organization by the fixed-target argument above.
+None of the bounds reported in the recent projects cited above is used as
+a premise of this argument.

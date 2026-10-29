@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/mathematics/fixed-target-v5/2026-10-27/main.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/runs/fixed-target-v5-20261027/note-build02/build",
+    "--json"
+  ],
+  "python": "3.9.6",
+  "returncode": 0,
+  "elapsed_seconds": 1.8515984589999999,
+  "source_sha256": {
+    "mathematics/fixed-target-v5/2026-10-27/count-cost.tex": "653464a3d72866309bfe03c5310e7a9b0d868ba13cf8747f93898e2085ecf51b",
+    "mathematics/fixed-target-v5/2026-10-27/entry-main.tex": "49f337f2a01a73283fa03016425e215c343a3da8cec33a9e452ebf3480f0910f",
+    "mathematics/fixed-target-v5/2026-10-27/main.tex": "d435add30e00b73e0a045bfccd7fed20399984e1389e25d9fc993bd76dbbdab0",
+    "mathematics/fixed-target-v5/2026-10-27/numerical-cover.tex": "c7b50e40d6fec341f70da75aabaed5443609b8a9cc34f9c4cc10a0bb973f7298",
+    "mathematics/fixed-target-v5/2026-10-27/entry.tex": "8019f58a017922afbdc1c666cd2dca39818b4b46303f192170a5e12abda6fb93",
+    "mathematics/fixed-target-v5/2026-10-27/response-proof/response.tex": "274c9f75df734313cdbd34b62eb74629988bb981f3ba83e376a0b682a1a9aa1b",
+    "mathematics/fixed-target-v5/2026-10-27/response-proof/main.tex": "0eebb2b4c648c232fc961cc78e4f1d7f744894830c3540638eb5524469819ea2"
+  }
+}

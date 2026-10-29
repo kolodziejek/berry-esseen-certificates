@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "<REVIEW_ROOT>/runs/fixed-target-v8-20261028/phase-accept-review03/sandbox/mathematics/fixed-target-v8/2026-10-28/accept_phase.py", line 63, in <module>
+    if __name__=='__main__':main()
+  File "<REVIEW_ROOT>/runs/fixed-target-v8-20261028/phase-accept-review03/sandbox/mathematics/fixed-target-v8/2026-10-28/accept_phase.py", line 31, in main
+    blob=args.proof.read_bytes();obj=json.loads(blob,object_pairs_hook=unique)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+  File "<REVIEW_ROOT>/runs/fixed-target-v8-20261028/phase-accept-review03/sandbox/mathematics/fixed-target-v8/2026-10-28/accept_phase.py", line 23, in unique
+    for k,v in pairs:need(k not in d,'duplicate JSON key');d[k]=v
+  File "<REVIEW_ROOT>/runs/fixed-target-v8-20261028/phase-accept-review03/sandbox/mathematics/fixed-target-v8/2026-10-28/accept_phase.py", line 20, in need
+    if not ok:raise ValueError(why)
+ValueError: duplicate JSON key

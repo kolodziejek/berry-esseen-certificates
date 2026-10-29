@@ -1,7 +1,7 @@
 \section{One-step smoothing and the first failure}
 \label{ms:smoothing}
 
-A one-step smoothing argument bounds $C_n$ in terms of $C_{n-1}$. If a sharp base through $41$ is known, the first index $n\ge42$
+A one-step smoothing argument bounds $C_n$ in terms of $C_{n-1}$ at every index $n\ge2$. If a sharp base through $41$ is known, the first index $n\ge42$
 with $C_n\ge\CE$ satisfies $0\le C_n-\CE<0.3/n$. The estimate holds for every law in $\mathcal P$.
 
 \begin{lemma}[Elementary Gaussian constants]
@@ -69,24 +69,39 @@ discrepancy; strict events follow by taking limits of closed ones.
 
 \begin{lemma}[Entry at a sharp predecessor]
 \label{ms:first-failure-entry}
-If $n\ge42$ and $C_{n-1}\le\CE\le C_n$, then
+For $n\ge2$ put $s_n=\sqrt{n/(n-1)}$ and
+\begin{equation}\label{ms:first-failure-excess}
+ \varepsilon_n=\frac n{n-1}
+ \left\{\frac{\CE}{s_n+1}+\frac{s_n}{15}
+                     +\frac{2s_n}{25\sqrt{n-1}}\right\}.
+\end{equation}
+If $C_{n-1}\le\CE\le C_n$, then
 \[
- 0\le n(C_n-\CE)<\frac{3003}{10250}<\frac3{10},\qquad
- C_n<\frac{73}{175}<\frac{2113}{5000},\qquad
+ 0\le n(C_n-\CE)\le\varepsilon_n,\qquad
  n(C_{n-1}-C_n)_+=0.
 \]
 For every marginal $P\in\mathcal P$,
-$n(R_{n-1}(P)-C_n)_+=0$ as well.
+$n(R_{n-1}(P)-C_n)_+=0$ as well. The sequence $\varepsilon_n$
+strictly decreases. In particular, if $n\ge42$, then
+\[
+ 0\le n(C_n-\CE)<\frac{3003}{10250}<\frac3{10},\qquad
+ C_n<\frac{73}{175}<\frac{2113}{5000}.
+\]
 \end{lemma}
 \begin{proof}
 Let $s=\sqrt{n/(n-1)}$ and $c=\CE$. From
 \eqref{ms:smoothing-recurrence} and
-$n(s-1)=(n/(n-1))/(s+1)$,
+$n(s-1)=(n/(n-1))/(s+1)$, we obtain
+$n(C_n-c)\le\varepsilon_n$.
+As a function of $s>1$, the right side is
 \[
- n(C_n-c)\le\frac n{n-1}
- \left\{\frac c{s+1}+\frac s{15}
-                         +\frac{2s}{25\sqrt{n-1}}\right\}.
+ c\frac{s^2}{s+1}+\frac{s^3}{15}
+                       +\frac{2s^3\sqrt{s^2-1}}{25}.
 \]
+Each term increases with $s$; for the first use
+$(s^2/(s+1))'=s(s+2)/(s+1)^2>0$. Since $s_n$ decreases,
+$\varepsilon_n$ decreases. Also
+$R_{n-1}(P)\le C_{n-1}\le c\le C_n$, proving both zero-loss statements.
 For $n\ge42$, the ratio $n/(n-1)$ is at most $42/41$,
 $\sqrt{n-1}>6$, and $1<s<81/80$. The latter follows at the endpoint
 from $41\cdot81^2-42\cdot80^2=201>0$ and then from monotonicity.
@@ -98,30 +113,34 @@ Using $c<41/100$ gives the strict bound
 \]
 The reserve below $3/10$ is $36/5125$. Consequently
 $C_n<c+0.3/n<0.41+0.3/42=73/175$, whose reserve below $0.4226$ is
-$191/35000$. Finally $R_{n-1}(P)\le C_{n-1}\le c\le C_n$, so both
-positive parts vanish.
+$191/35000$.
 \end{proof}
 
 \begin{proposition}[First failure of the strict bound]
 \label{ms:least-contrary}
-Assume $C_j\le\CE$ for $1\le j\le41$. If some $C_n\ge\CE$ with
-$n\ge42$, there is a least such index, and at that index
-Lemma~\ref{ms:first-failure-entry} holds, while
+Let $N_0\ge2$ be an integer, and assume $C_j\le\CE$ for
+$1\le j<N_0$. If some $C_n\ge\CE$ with $n\ge N_0$, there is a least
+such index. At that index every $C_j$ with $1\le j<n$ is at most
+$\CE$, Lemma~\ref{ms:first-failure-entry} holds, and
+$n(C_n-\CE)\le\varepsilon_{N_0}$. If $n\ge3$, both deleted indices satisfy
 \[
  C_{n-1},C_{n-2}\le\CE<0.41<0.4253.
 \]
 Consequently, any argument that excludes an extremal pair under these
-conditions at every $n\ge42$ proves $C_n<\CE$ for all $n\ge42$.
+conditions at every $n\ge N_0$ proves $C_n<\CE$ for all $n\ge N_0$.
+At $n=2$ only the predecessor $C_1$ is used; there is no $C_0$ premise.
 \end{proposition}
 \begin{proof}
 The positive integers are well ordered. Below the least chosen index,
-the indices from $42$ onward have $C_j<\CE$, and the earlier ones have the
-assumed weak bound. At $n=42$ the required predecessors are $41$ and $40$;
-at later indices the same conclusion holds. Apply the scalar lemma and
+the indices from $N_0$ onward have $C_j<\CE$, and the earlier ones have the
+assumed weak bound. Apply the scalar lemma and its monotonicity, and
 then Lemma~\ref{ms:attainment}. The exclusion argument therefore applies at this
 index, a contradiction.
 \end{proof}
 
-Choosing instead the least $n\ge42$ with $C_n>\CE$ gives the same
-conclusions with $C_{n-1},C_{n-2}\le\CE<C_n$; this weaker version already
-suffices for $C^*=\CE$ (Section~\ref{ms:certificates}).
+The application in Section~\ref{ms:certificates} takes $N_0=42$; its
+endpoint predecessors are exactly $41$ and $40$. Choosing instead the
+least $n\ge N_0$ with $C_n>\CE$ gives weak predecessors and zero loss,
+but an exclusion of such indices proves only $C_n\le\CE$.
+Neither version supplies the support, resource or local-comparison
+hypotheses of an exclusion argument at a new index floor.

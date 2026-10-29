@@ -1,0 +1,7 @@
+EXACT PASS: contact polynomial moments, two slack expansions, hinge elimination, (n+H^2)a.
+NEGATIVE CONTROL: replacing (n+H^2)a by n a leaves exactly H^2 a.
+{"detected_closed_upper_gap_mutations": 98, "finite_laws": 8, "raw_mixture_derivatives": 324, "zero_bias_and_hinge_cases": 108}
+NEGATIVE CONTROL: open-event contact loses upper semicontinuity at an atom.
+NEGATIVE CONTROL: bounded rho family has rho->2 but limiting Bernoulli rho=1 (UI3 fails).
+NEGATIVE CONTROL: comparison <= exact binomial margin permits a=0.
+Scope: exact algebra and finite-law identities only; no certificate acceptance or optimizer sampling.

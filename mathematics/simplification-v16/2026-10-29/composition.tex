@@ -1,0 +1,122 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\newcommand{\CE}{C_{\rm E}}
+\newtheorem{theorem}{Theorem}\newtheorem{corollary}[theorem]{Corollary}
+\title{One acquired strip and two noise estimates}
+\author{}\date{29 October 2026}
+\begin{document}\maketitle
+
+The new comparison has one probability interval and one support strip.
+Below noise $1/100$, the loss at a single count dominates the entire incoming
+tail by fourth moments. Above that point, five neighboring counts retain
+enough crossing loss, and four rational endpoint checks finish the argument.
+The acquisition reaches this common strip directly from the coarse defect
+budget and two contact rays. This note gives the exact joins and the remaining
+conditional boundary. No claim about arbitrary laws follows from a strip
+theorem without the acquisition step.
+
+For a centered variance-one marginal $P$ and its independent copies, write
+\[
+\mathcal E(P,n,H)=\sqrt n\{\Pp(X_1+\cdots+X_n\le H)
+                         -\Phi(H/\sqrt n)\}-\CE\E|X|^3,
+\qquad \CE=\frac{3+\sqrt{10}}{6\sqrt{2\pi}}.
+\]
+Here $H$ is a raw sum threshold. In particular its normal argument is
+$H/\sqrt n$, not $H$.
+
+\begin{theorem}[Complete local comparison]\label{th:local}
+Let $n\ge700$ be an integer and $Y=B+U$, where $B$ is Bernoulli of parameter
+$p\in[3/8,93/200]$ and $\E(U\mid B)=0$. Suppose the conditional noises obey
+\[
+ -3/5\le U_0\le a_0,\qquad -a_1\le U_1\le3/5,\qquad
+ a_0,a_1\ge0,\quad a_0+a_1\le1/250.
+\]
+Put $v=p(1-p)$, $s=\E U^2$, $\lambda=ns$, and
+$X=(Y-p)/\sqrt{v+s}$. If $0<\lambda\le7/20$ and $|H|\le46/25$, then
+$\mathcal E(P,n,H)<-\lambda/100$. At $\lambda=0$ one has
+$\mathcal E(P,n,H)<0$.
+\end{theorem}
+\begin{proof}
+For $0<\lambda\le1/100$, apply Theorem~1 of
+\texttt{small-common.tex}. Choose an integer $k$ so that
+$np+H\sqrt{v+s}=k+u$, with $u\in[-3/10,7/10]$.
+The interval has length one, and the proof checks that the anchor is interior.
+At $C=\CE\ge0$, that theorem bounds the difference between $\mathcal E$
+and the signed binomial excess at $k$ by $-\lambda/100$.
+Schulz's strict finite-binomial theorem (Theorem~1, 2016 thesis) bounds the
+latter excess by zero for every $0<p<1$ and finite $n$.
+
+For $1/100\le\lambda\le7/20$, use the Compact row of Theorem~1 in
+\texttt{unified-comparison.tex}. All probability, support, inward and threshold
+hypotheses agree literally. Its floor anchor need not equal the small-noise
+anchor: both conclusions concern the same $\mathcal E(P,n,H)$.
+The shared noise endpoint is included in both statements; there is no phase
+or noise gap. At zero noise, $U=0$ almost surely, so the same strict binomial
+theorem applies directly. A limit of positive-noise margins is not used.
+\end{proof}
+
+\begin{theorem}[Conditional acquired-witness exclusion]\label{th:acquired}
+Suppose $n\ge700$ and $(P,H)$ is a compact, centered variance-one attained
+fixed-target witness at $\CE$, with $\mathcal E(P,n,H)\ge0$ and true sharp
+predecessor $C_{n-1}\le\CE$. Assume the retained closed-support contact and
+all-threshold heat bounds hold for this witness. Suppose the complete coarse
+entry theorem supplies, for this same oriented law,
+\[
+ nD\le32.20665378,\qquad |H|\le1.83605680,
+ \quad D=(3+\sqrt{10})\rho-\gamma-3J,
+\]
+where $\rho=\E|X|^3$, $\gamma=\E X^3$ and $J$ is its actual weighted
+support-gap sum. Then such a witness cannot exist.
+\end{theorem}
+\begin{proof}
+The scalar theorem in \texttt{acquisition-direct.tex} first establishes an
+actual gap across zero, with $p=\Pp(X>0)\in(3/8,93/200)$.
+Write $m_j=\E(X\mid B=j)$ and $\ell=m_1-m_0>0$, where
+$B=\mathbf1_{X>0}$. Centering gives $m_0=-p\ell$ and $m_1=(1-p)\ell$.
+With $U=(X-m_B)/\ell$ and $\theta=\E(X-m_B)^2$, total variance gives
+\[
+ 1=v\ell^2+\theta,\qquad s=\E U^2=\theta/\ell^2,
+ \qquad v+s=\ell^{-2},\qquad X=\frac{B+U-p}{\sqrt{v+s}}.
+\]
+Thus the normalized marginal in Theorem~\ref{th:local} is exactly the
+original law, with $\lambda=n\theta/\ell^2<7/20$ and inward sum $d<1/250$.
+It is not an optimizer of a relaxation or a separately chosen product law.
+The two contact rays in the second acquisition theorem give the common
+amplitude $3/5$. The raw threshold obeys $|H|<46/25$. These are every
+hypothesis of Theorem~\ref{th:local}, which yields $\mathcal E<0$ and the
+contradiction. Neither the old left/right probability panels nor an additional
+noise-localization table enters this implication.
+\end{proof}
+
+\section*{The global boundary is unchanged}
+For any sum $S$,
+\[
+ \Pp(-S\le-H)-\Phi(-H/\sqrt n)
+ =\Phi(H/\sqrt n)-\Pp(S<H)
+ \ge\Phi(H/\sqrt n)-\Pp(S\le H).
+\]
+The gap between the last two expressions is the atom at $H$. This selects
+the positive closed-event orientation; it does not transport the signed
+$D$ budget to a reflected law. Attainment and entry must apply afresh to
+the chosen oriented witness.
+
+If a genuine base establishes $C_j\le\CE$ through $j=41$, and the retained
+attainment, contact and entry implications hold at every least failure, then any
+first failure of the sharp bound is in $42,\ldots,699$. Minimality supplies
+the predecessor needed in Theorem~\ref{th:acquired}. This does not prove an
+unconditional cutoff at $700$: an unresolved earlier failure invalidates
+that predecessor argument at later rows. A genuine base through $699$, or
+an independent argument closing the remaining range, is still needed.
+
+The coarse Fourier certificate, its two coarse and four signed entry passes,
+and their internal cover obligations are retained. The new proof removes
+only downstream probability-panel localization, old numerical noise tables,
+the separate left/right local union, the Poisson-tail comparisons and the
+291-cell negative-inner certificate from this acquired $n\ge700$ route.
+The old results at smaller indices and all their proof objects are preserved.
+Exact scalar checks and actual-law controls accompany these proofs; they
+do not independently establish the retained analytic inputs or the finite base.
+\end{document}

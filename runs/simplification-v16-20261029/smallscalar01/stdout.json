@@ -1,0 +1,117 @@
+{
+  "status": "PASS_ELEMENTARY_COMPACT_SMALL_NOISE_SCALARS",
+  "gate_count": 61,
+  "positive_gates": {
+    "variance maximum below quarter": "339/280000",
+    "global delta bound": "7/150",
+    "inner delta bound": "3/100",
+    "Stirling segment lower": "11/4200",
+    "Stirling segment upper": "11/4200",
+    "segment variance": "31/10000",
+    "entropy third derivative": "45/529",
+    "log prefactor derivative": "8/115",
+    "factorial remainder": "7/552",
+    "interior count lower": "1559/6",
+    "interior count upper": "2231/6",
+    "log derivative lambda coefficient": "433/14175",
+    "inner log denominator": "2445741/2450000",
+    "inner normal derivative lower": "20241/2450000",
+    "inner normal derivative upper": "2019841/244574100",
+    "global log denominator": "49086209/49612500",
+    "global normal derivative lower": "465959/49612500",
+    "global normal derivative upper": "22771659/2454310450",
+    "phi lower": "1889/437500",
+    "own binomial mass": "14959771/396900000",
+    "mode variance price": "49/73960",
+    "mode coefficient": "4633357/1379170000",
+    "maximum binomial mass": "791/640000",
+    "global count ratio": "1/15",
+    "inner count ratio": "751/43750",
+    "inner subsequent ratio": "107/200",
+    "actual conditional signs lower": "371/1000",
+    "actual conditional signs upper": "531/1000",
+    "actual favorable cubic": "226879/700000",
+    "normal variance coefficient": "18839/1638400",
+    "global normal repair": "2/3",
+    "physical own variance lower": "23/6300",
+    "physical own variance upper": "23/6300",
+    "complete reciprocal-power sum 4": "4079/12960000",
+    "complete reciprocal-power sum 3": "7/216",
+    "complete reciprocal-power sum 2": "11/3600",
+    "full inner fourth-moment tail": "366421/54734820",
+    "full outer fourth-moment tail": "517411/198450000",
+    "strict-event polynomial minorant max": "13/36",
+    "negative quadratic decreasing at 0": "313/1300",
+    "negative quartic rectangle endpoint 0": "1559697/5712200",
+    "negative quadratic decreasing at 101/10000": "358097530127/1462323200000",
+    "negative quartic rectangle endpoint 101/10000": "803404433619/5849292800000",
+    "positive quadratic increasing at 0": "287/1300",
+    "positive quartic rectangle endpoint 0": "90567/142805",
+    "positive quadratic increasing at 101/10000": "110291/714025",
+    "positive quartic rectangle endpoint 101/10000": "1259697/2284880",
+    "switch lies in inner interval": "697/20000",
+    "Cantelli derivative at switch": "310971825619/167354628100",
+    "Cantelli first endpoint": "695493/8181800",
+    "Cantelli second endpoint": "111709/787500",
+    "positive inner beyond switch": "177/200",
+    "own count reserve": "1/250",
+    "outer Cantelli initial derivative": "1060081/198450",
+    "negative outer endpoint 1/20": "467/63000",
+    "negative outer endpoint 3/10": "226777/500500",
+    "positive outer endpoint 1/20": "347289/130321000",
+    "positive outer endpoint 7/10": "121/13500",
+    "final inner margin": "3387/140000",
+    "final negative outer margin": "70681/7000",
+    "final positive outer margin": "2089/700"
+  },
+  "inner_tail_coefficient": "35803792/68418525",
+  "outer_tail_coefficient": "84816089/198450000",
+  "quartic_rectangle": [
+    {
+      "phase": "negative",
+      "t": "0",
+      "coefficients": [
+        "35250/28561",
+        "-313/1300",
+        "0"
+      ],
+      "minimum_lower": "4987017/5712200"
+    },
+    {
+      "phase": "negative",
+      "t": "101/10000",
+      "coefficients": [
+        "526125/456976",
+        "-219259/714025",
+        "30314967291/1462323200000"
+      ],
+      "minimum_lower": "4312980113619/5849292800000"
+    },
+    {
+      "phase": "positive",
+      "t": "0",
+      "coefficients": [
+        "35250/28561",
+        "287/1300",
+        "0"
+      ],
+      "minimum_lower": "35250/28561"
+    },
+    {
+      "phase": "positive",
+      "t": "101/10000",
+      "coefficients": [
+        "526125/456976",
+        "110291/714025",
+        "30314967291/1462323200000"
+      ],
+      "minimum_lower": "526125/456976"
+    }
+  ],
+  "negative_controls": [
+    "count-independent maximum variance is too coarse",
+    "same positive-phase bound fails at .75"
+  ],
+  "proof_sha256": "4bf5f99e5356d116a84b9277a86fe8edf171bd96a31450664e91b124bb6b80bd",
+  "scope": "Complete rational guards after analytic reductions; no Pinelis/Poisson evaluator, proof cells, sampling or acquisition claim."
+}

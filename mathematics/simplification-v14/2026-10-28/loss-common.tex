@@ -1,0 +1,200 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\newcommand{\fracpart}[1]{\left\{#1\right\}}
+\newtheorem{theorem}{Theorem}\newtheorem{proposition}[theorem]{Proposition}
+\title{A quantitative crossing loss for common conditional noise}
+\author{}\date{28 October 2026}
+\begin{document}\maketitle
+
+The general crossing identity gives a nonnegative loss, but a weighted
+comparison needs a quantitative estimate. For the subclass in which the
+two conditional noise laws coincide, an elementary characteristic-function
+argument gives a lower bound proportional to the noise variance. A stronger
+suggestion---a positive gain above the noiseless phase---is false for actual
+four-point iid laws, including in the moderate-noise range.
+
+\section{The common-noise subclass}
+Let $U$ be centered with support in $[-a_1,a_0]$, where
+$a_0,a_1\ge0$ and $a_0+a_1\le9/125=.072$. Let $U_1,\ldots,U_n$ be
+independent copies, $W=\sum_{i=1}^nU_i$, $s=\E U^2$ and $\lambda=ns$.
+Here the subscripts label copies, not the two Bernoulli groups: both
+conditional groups have this same law.
+For
+\[
+                 na_0\le t<n(1-a_1)
+\]
+define the unweighted crossing loss by its conditional marginals:
+\[
+ g_n(t)=t-\sum_{j=1}^n\Pp(j+W\le t).
+\]
+This is exactly $t-\E K$ in the general crossing theorem. Its value
+depends only on the conditional marginals, not on the chosen ordered
+coupling.
+
+\begin{theorem}\label{thm:common}
+Under these hypotheses,
+\begin{equation}\label{eq:bound}
+ g_n(t)=\E\fracpart{t-W}
+ \ \ge\ \frac{119\lambda}{44(1+17\lambda)}.
+\end{equation}
+Consequently
+\[
+ 0\le\lambda\le\frac9{25}\quad\Longrightarrow\quad
+       g_n(t)\ge\frac38\lambda,
+ \qquad
+ 0\le\lambda\le\frac8{25}\quad\Longrightarrow\quad
+       g_n(t)\ge\frac25\lambda.
+\]
+The result holds for every positive integer $n$ and includes threshold
+atoms with the closed-CDF convention.
+\end{theorem}
+\begin{proof}
+Use the auxiliary coupling $\widetilde T_j=j+W$. Every conditional
+marginal is correct. The endpoint bounds imply $0\le t-W<n$ surely, so its
+crossing index is $\lfloor t-W\rfloor$. Hence
+\[
+ g_n(t)=t-\E\lfloor t-W\rfloor
+       =\E\fracpart{t-W},
+\]
+using $\E W=0$. The floor includes its integer endpoint, as required for
+the closed lower crossing.
+
+Put $\phi=\E e^{2\pi{\rm i}U}$ and let $U'$ be an independent copy.
+The elementary cosine inequality
+$1-\cos z\ge z^2/2-z^4/24$ gives, for $|x|\le9/125$,
+\[
+ 1-\cos(2\pi x)
+ \ge\left(2\pi^2-\frac23\pi^4(9/125)^2\right)x^2
+ \ge17x^2.
+\]
+The last inequality follows from $3<\pi<22/7$ and the rational check
+\begin{equation}\label{eq:constant}
+ 18-\frac23(22/7)^4(9/125)^2>17.
+\end{equation}
+Thus
+\[
+ 1-|\phi|^2=\E[1-\cos(2\pi(U-U'))]\ge34s.
+\]
+Centering and $(U+a_1)(a_0-U)\ge0$ give
+$s\le a_0a_1\le(9/125)^2/4$, so $34s<1$.
+For $r=n/2$, convexity of $(1-x)^{-r}$ on $[0,1)$ yields
+\[
+ |\phi|^n\le(1-34s)^{n/2}\le\frac1{1+17ns}.
+\]
+
+For $0\le x\le1$, $\sin^2(\pi x)\le\sin(\pi x)\le\pi x$.
+Independence of the copies of $U$ therefore implies
+\begin{align*}
+ g_n(t)&\ge\frac1\pi\E\sin^2(\pi(t-W))\\
+       &=\frac{1-\Re\{e^{2\pi{\rm i}t}\overline{\phi}^{\,n}\}}{2\pi}\\
+       &\ge\frac{1-|\phi|^n}{2\pi}
+        \ge\frac{119\lambda}{44(1+17\lambda)}.
+\end{align*}
+At $\lambda=9/25$ the coefficient of $\lambda$ in the last expression
+is $2975/7832>3/8$; at $\lambda=8/25$ it is
+$2975/7084>2/5$. Its monotonicity proves the stated linear bounds.
+\end{proof}
+
+For completeness, the two numerical bounds on $\pi$ need no numerical
+library. Using $\pi=4\int_0^1(1+x^2)^{-1}\,dx$, the finite geometric
+lower polynomial through $-x^{14}$ has integral greater than $3/4$.
+Also polynomial division gives
+\[
+ \frac{22}{7}-\pi
+       =\int_0^1\frac{x^4(1-x)^4}{1+x^2}\,dx>0.
+\]
+The cosine bound follows by integrating the fourth-derivative bound
+$\cos z\le1$ in Taylor's formula.
+
+\paragraph{Relation to the acquired strips.}
+If the conditional laws coincide, the lower bound for the second group and
+the upper bound for the first force their common law into $[-a_1,a_0]$.
+Thus its diameter is at most the inward sum, even though the separate
+outer amplitudes can be $.6$ or $.7$. The theorem applies throughout
+the right noise ceiling $\lambda<.36$ and the left ceiling $\lambda<.32$.
+For $p\in[.25,.53]$, $n\ge42$, $|H|\le1.84$ and
+$t=np+H\sqrt{p(1-p)+s}$, the interior-threshold condition follows as in
+the retained crossing theorem. Indeed
+$\sqrt{1/4+.36/42}<.515$, and the displacement from $np$ is less than
+$.948$, smaller than either endpoint margin already at $n=42$.
+These are conditional range checks, not a proof of acquisition.
+
+\section{A gain above the noiseless phase is impossible}
+Write $u=\fracpart t$. In the absence of noise, $g_n(t)=u$.
+Even in the common-noise subclass, a positive bound for $g_n(t)-u$
+cannot hold.
+
+\begin{proposition}\label{prop:excess}
+Suppose additionally that $U$ is symmetric. If $1/2\le u<1$, then
+\[
+                              g_n(t)\le u.
+\]
+For $U=\pm1/100$ with equal probabilities, $n=42$, $p=1/2$ and
+$t=21+3/4$, the inequality is strict:
+\begin{equation}\label{eq:counter}
+ g_{42}(t)-\frac34
+       =-2^{-42}\sum_{m=0}^{8}\binom{42}{m}<0.
+\end{equation}
+This is an actual four-point iid mixture satisfying the right and left
+noise-support caps and the raw-threshold bound.
+\end{proposition}
+\begin{proof}
+For each real $w$ and $u\in[1/2,1)$,
+\[
+ \lfloor u-w\rfloor+\lfloor u+w\rfloor
+             \ge\lfloor2u\rfloor-1\ge0.
+\]
+Symmetry therefore gives $\E\lfloor u-W\rfloor\ge0$, while centering gives
+$g_n(t)-u=-\E\lfloor u-W\rfloor$.
+
+In the explicit example, $W=(2M-42)/100$ with
+$M\sim\mathrm{Bin}(42,1/2)$ and $|W|\le.42$. The floor
+$\lfloor3/4-W\rfloor$ equals one exactly when $M\le8$, and otherwise zero.
+This proves \eqref{eq:counter}. Its noise is
+$\lambda=42/10000=21/5000$. The standardized raw threshold is
+\[
+                         H=\frac{75}{\sqrt{2501}}<1.84.
+\]
+The actual marginal is $Y=B+U$, with independent $B\sim\mathrm{Bern}(1/2)$
+and $U=\pm.01$, and $X=(Y-1/2)/\sqrt{.25+.0001}$.
+It is a standardized four-point iid law, not a moment relaxation.
+\end{proof}
+
+The failure is not confined to tiny noise. With $U=\pm1/40$,
+$n=512$, $p=1/2$ and $t=256+3/4$, one has $\lambda=8/25=.32$
+and $H^2=900/401<1.84^2$. Symmetry gives nonpositive excess;
+it is strictly negative because $W=3/10$ has positive probability and
+\[
+ \lfloor3/4-3/10\rfloor+\lfloor3/4+3/10\rfloor=1.
+\]
+A left-strip example is $n=160$, $p=7/20$, the same common noise and
+$t=56+3/4$: here $\lambda=1/10$, inward sum $.05$, and
+$H^2=900/365<1.84^2$. Both examples satisfy the corresponding outer
+amplitude bounds as well. They are not asserted to satisfy extremizer
+contact; their role is to test a proposed implication from the stated
+noise/threshold hypotheses.
+
+There can also be exactly zero excess at positive noise: in the
+42-summand example, choose $t=21+1/2$. Since $|W|\le.42$,
+$\lfloor1/2-W\rfloor=0$ surely, and $g_n(t)=1/2$.
+
+\section{Limits of this result}
+The proof of \eqref{eq:bound} uses one common noise law and independence
+of its copies. It does not establish the same constant for unequal
+conditional laws. Independence is essential: if all 42 noises equal one
+common random sign times $1/42$, then $W=\pm1$. At $t=21$ the loss is
+zero, although the sum of the marginal variances is $1/42>0$ and the
+support/threshold caps hold. This is a counterexample to dropping
+independence, not an iid counterexample.
+
+The bound is unweighted. The full comparison contains
+$\sum_i\pi_i g_i(t)$, signed binomial curvature, phase interpolation, and
+normal and third-moment repairs. A lower bound for $\sum_i g_i(t)$ alone
+does not allocate this loss to indices with sufficiently large $\pi_i$.
+Accordingly no retained comparison certificate is removed here.
+The exact checker independently reconstructs the common-noise sums and
+the conditional count sums, including all closed collisions used above.
+\end{document}

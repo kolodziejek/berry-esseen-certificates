@@ -1,0 +1,26 @@
+{
+  "source_sha256": "210a69606c9928312ade9ec9a0a8cc7c5afc5bd0ba0d654804f8bd8c7bd0f794",
+  "method": "Executed only literal constants and pure schema functions selected by AST; no numeric modules imported.",
+  "results": [
+    {
+      "mutation": "numeric true",
+      "outcome": "ACCEPTED",
+      "location": [
+        3,
+        16
+      ]
+    },
+    {
+      "mutation": "floating index",
+      "outcome": "ACCEPTED",
+      "location": [
+        3,
+        16
+      ]
+    }
+  ],
+  "earlier_harness_attempt": "Failed before validation: omitted tuple-assigned C0/C1. Corrected harness; not an acceptor failure.",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "final_harness_returncode": 0,
+  "final_harness_stderr": ""
+}

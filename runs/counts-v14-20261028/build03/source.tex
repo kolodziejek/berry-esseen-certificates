@@ -1,0 +1,291 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\title{Two neighboring crossing kernels and an asymmetric larger-noise comparison}
+\author{Research note, 28 October 2026}\date{}
+\begin{document}\maketitle
+
+The nonnegative kernels in the general crossing identity allow neighboring
+counts to be combined before estimating their probabilities. This eliminates
+all but one incoming count from the lower bound below. As an application we
+prove the central comparison through $\lambda=.36$ when exactly one
+conditional law has two-point noise. This is a restricted theorem about
+actual iid laws, not a replacement for the general larger-noise comparison.
+
+\section{A two-count reserve}
+Use the notation and hypotheses of the retained crossing theorem:
+$U_0,U_1$ are centered, independent conditional laws,
+\[
+ -A_0\le U_0\le a_0,\quad -a_1\le U_1\le A_1,
+ \qquad a_0+a_1<1,\quad A_1+a_1\le1.
+\]
+For mutually independent copies put
+\[
+ W_j=\sum_{l\le j}U_{1l}+\sum_{l>j}U_{0l},\quad T_j=j+W_j,
+ \quad L_j(t)=\E(t-T_j)_+.
+\]
+Assume $na_0\le t<n(1-a_1)$ and write
+\[
+ g_i(t)=L_{i-1}(t)-L_i(t)-\Pp(T_i\le t)\ge0.
+\]
+Nonnegativity is the analytic conclusion of the crossing theorem, not an
+arithmetic assumption imposed on test cases.
+
+\begin{theorem}[Paired reserve]\label{thm:pair}
+For any integer $1\le k\le n-1$, put $u=t-k$. Then
+\begin{align}\label{eq:pair}
+ g_k+g_{k+1}
+ ={}&u+\Pp(W_k>u)+\E(W_{k-1}-u-1)_+\notag\\
+ &-\E\bigl[(u-W_{k+1})\mathbf1_{\{W_{k+1}\le u-1\}}\bigr].
+\end{align}
+In particular, if $Q$ bounds the last expectation and
+$\pi_j=\binom njp^j(1-p)^{n-j}$, then
+\begin{equation}\label{eq:weightedpair}
+ \sum_{i=1}^n\pi_i g_i\ge
+ \min\{\pi_k,\pi_{k+1}\}\{u+\Pp(W_k>u)-Q\}.
+\end{equation}
+The incoming event in these formulas is closed.
+\end{theorem}
+\begin{proof}
+Add the two local identities to obtain
+$g_k+g_{k+1}=L_{k-1}-L_{k+1}-\Pp(T_k\le t)-\Pp(T_{k+1}\le t)$.
+Centering and put--call parity give
+$L_{k-1}=u+1+\E(W_{k-1}-u-1)_+$.
+Also $L_{k+1}+\Pp(T_{k+1}\le t)$ equals the last expectation in
+\eqref{eq:pair}, including an atom at $W_{k+1}=u-1$, where its weight is one.
+This proves the identity. Drop its nonnegative outgoing stop-loss and then
+use $g_i\ge0$ to prove \eqref{eq:weightedpair}. No independence of $W_k$
+and $W_{k+1}$ is asserted or needed.
+\end{proof}
+
+\begin{lemma}[One hinge bounds the weighted incoming event]\label{lem:hinge}
+Let $b=1-u$ and choose $y<b$ with $y\ge-1-u$. For every real $z$,
+\[
+ (u+z)\mathbf1_{\{z\ge b\}}
+       \le\frac{(z-y)_+^2}{(b-y)^2}.
+\]
+Thus any justified quadratic-hinge bound for $Z=-W_{k+1}$ gives a bound
+on $Q$ in Theorem~\ref{thm:pair} without an additional factor.
+Use the raw hinge quotient: clipping it at one as for an ordinary probability
+is not generally valid for this weighted expectation.
+\end{lemma}
+\begin{proof}
+For $z\ge b$, the derivative of $(u+z)/(z-y)^2$ has the sign of
+$-(z+y+2u)$. This is nonpositive because $b+y+2u=1+u+y\ge0$.
+The ratio at $b$ is $1/(b-y)^2$. Below $b$ the desired left side is zero.
+\end{proof}
+
+There is also a reduction to one conditional sum. With $d=a_0+a_1$ and
+$\zeta=1-d$, the auxiliary coupling gives $W_{k+1}\ge W_k-d$ pathwise.
+Consequently
+\begin{equation}\label{eq:onelaw}
+ g_k+g_{k+1}\ge u+\E\left[
+ \mathbf1_{\{W_k>u\}}-(u-W_k+d)\mathbf1_{\{W_k\le u-\zeta\}}\right].
+\end{equation}
+Indeed the incoming event implies $W_k\le u-\zeta$, and its weight is
+at most $u-W_k+d$. The affine left tail in \eqref{eq:onelaw} must be kept;
+a polynomial for the indicator alone is not a valid minorant of it.
+
+\section{An elementary lower bound for the central binomial masses}
+\begin{lemma}\label{lem:mass}
+If $n\ge42$, $p\in[2/5,53/100]$ and $k=np$ is an integer, then
+\[
+ \sqrt n\min\{\pi_k,\pi_{k+1}\}>\frac12,
+ \qquad k\ge17,\quad n-k\ge20.
+\]
+\end{lemma}
+\begin{proof}
+For any integer-valued variable of variance $V$ and largest atom $M$,
+add an independent uniform variable on $[-1/2,1/2]$. The resulting density
+is at most $M$ and has variance $V+1/12$. A density bounded by $M$ has
+variance at least $1/(12M^2)$: about its mean its tail probability is at
+least $(1-2Mr)_+$, and integrate $2r(1-2Mr)_+$ over $r\ge0$.
+Thus $M\ge1/\sqrt{12V+1}$.
+
+For the binomial law with integer mean, $\pi_k$ is its largest mass and
+$\pi_{k+1}/\pi_k=k/(k+1)\ge17/18$. Since $p(1-p)\le1/4$,
+\[
+ \sqrt n\min\{\pi_k,\pi_{k+1}\}
+ \ge\frac{17}{18\sqrt{3+1/42}}>\frac12.
+\]
+The last strict inequality is the rational comparison
+$289/81>127/42$. The integer bounds follow from $np\ge16.8$
+and $n(1-p)\ge19.74$.
+\end{proof}
+
+\section{The complete comparison for two asymmetric families}
+Write $v=p(1-p)$, $s=(1-p)\E U_0^2+p\E U_1^2$, $\lambda=ns$,
+and $Y=B+U$. Put
+\[
+ \rho=\frac{\E|Y-p|^3}{(v+s)^{3/2}},\qquad
+ \rho_B=\frac{1-2v}{\sqrt v}.
+\]
+At the central integer anchor $t=k=np$ the normal terms agree exactly.
+The direct comparison is therefore
+\[
+ \Delta_C=\sqrt n\{\Pp(Y_1+\cdots+Y_n\le k)-F_B(k)\}
+                       +C(\rho_B-\rho).
+\]
+The signed-curvature lemma from the retained v13 note, whose hypothesis
+$t\ge np-(1-p)$ holds here, gives
+\begin{equation}\label{eq:master}
+ \Delta_C\le-\sqrt n\sum_i\pi_i g_i
+             +\frac{\lambda}{4v\sqrt n}+C(\rho_B-\rho).
+\end{equation}
+
+\begin{theorem}[Central asymmetric comparison through $\lambda=.36$]\label{thm:family}
+Let $n\ge42$, $p\in[2/5,53/100]$, $k=np\in\mathbb Z$, $A=3/5$,
+and $0<\lambda\le A^2=9/25$. Consider either of the following centered
+conditional laws, with the probabilities uniquely determined by centering:
+\begin{enumerate}
+\item $U_0\in\{-A,\varepsilon\}$, $U_1=0$,
+      where $\varepsilon=\lambda/((n-k)A)$;
+\item $U_0=0$, $U_1\in\{-\varepsilon,A\}$,
+      where $\varepsilon=\lambda/(kA)$.
+\end{enumerate}
+For every $C\ge0$ the central comparison is strict. More precisely,
+\[
+ \Delta_C<-\frac1{240}\quad\hbox{in case 1},\qquad
+ \Delta_C<-\frac{25}{48}\lambda\quad\hbox{in case 2}.
+\]
+Both families satisfy the right-strip bounds $A=.6$, $d\le.072$ and
+$H=0$. The theorem includes $\lambda=.36$ and exact atom collisions.
+\end{theorem}
+\begin{proof}
+We first check the cubic term rather than dropping it without a sign.
+For either family the inward support is at most $A/17<.072$. More generally,
+within the right strip with $d\le.072$, the signs of $Y-p$ on its two
+conditional supports are fixed. Expanding the two cubes, using
+$\E U_0^3\le a_0\E U_0^2$ and $\E U_1^3\ge-a_1\E U_1^2$, gives
+\begin{align*}
+ (v+s)^{3/2}(\rho-\rho_B)
+ &\ge (3\min(p,1-p)-d)s\notag\\
+ &\quad-(1-2v)\left(\frac32s+\frac{3s^2}{8v}\right)\\
+ &\ge s\left(\frac{87}{250}-\frac{13}{16}s\right)>0.
+\end{align*}
+Here $(1+x)^{3/2}\le1+3x/2+3x^2/8$ for $x\ge0$,
+$v\ge6/25$ and $s\le(9/25)/42$. Thus $C(\rho_B-\rho)\le0$.
+
+In case 1 put $m=n-k\ge20$ and $\mu=\lambda/A^2\in(0,1]$, so
+$\varepsilon=A\mu/m$. If $J$ counts the rare negative jumps in the own
+count, then
+\[
+ W_k=m\varepsilon-(A+\varepsilon)J,
+ \quad J\sim\operatorname{Bin}\left(m,\frac\mu{m+\mu}\right).
+\]
+Consequently $W_k>0$ exactly when $J=0$, and
+\begin{equation}\label{eq:ownnegative}
+ \Pp(W_k>0)=(1+\mu/m)^{-m}>e^{-\mu}\ge e^{-1}>1/3.
+\end{equation}
+The last elementary inequality follows from $e<3$.
+For the incoming count put $c=A+\varepsilon$, $b=(m-1)\varepsilon$;
+then $Z=-W_{k+1}=cJ-b$ with
+$J\sim\operatorname{Bin}(m-1,\mu/(m+\mu))$ and
+$Q=\E[Z\mathbf1_{\{Z\ge1\}}]$.
+
+If $0<\mu\le2/5$, the incoming event requires $J\ge2$, because
+$c-b=A-(m-2)\varepsilon<1$. Hence
+\[
+ Q\le c\E J(J-1)\le A\mu^2,
+ \qquad \Pp(W_k>0)\ge1-\mu.
+\]
+The latter follows from the union bound on the own rare jumps. Therefore
+$\Pp(W_k>0)-Q\ge1-2/5-(3/5)(2/5)^2=63/125>2/15$.
+
+If $2/5\le\mu\le1$, then
+\[
+ 2c-b=A\{2-\mu(1-3/m)\}\le249/250<1,
+\]
+so the incoming event requires $J\ge3$. For $j\ge3$,
+$(cj-b)/(j(j-1))$ decreases with $j$, since its consecutive difference
+has the positive numerator $c(j+1)-2b$. Thus
+\begin{align}\label{eq:qfactorial}
+ Q&\le\frac{3c-b}{6}\E J(J-1)\notag\\
+  &=\frac A6\frac{\mu^2\{3-(1-4/m)\mu\}(1-1/m)(1-2/m)}{(1+\mu/m)^2}
+  \le\frac A3=\frac15.
+\end{align}
+For completeness, the $\mu$-dependent fraction increases on $[0,1]$:
+its derivative has the positive numerator
+$\mu\{6-3(1-4/m)\mu-(1-4/m)\mu^2/m\}$.
+At $\mu=1$, the final inequality reduces, with $h=1/m$, to
+$(1+2h)(1-h)(1-2h)\le(1+h)^2$; their difference is
+$3h+5h^2-4h^3\ge0$. Combining \eqref{eq:ownnegative} and
+\eqref{eq:qfactorial} yields the paired reserve $>2/15$.
+Theorem~\ref{thm:pair} and Lemma~\ref{lem:mass} give
+$\sqrt n\sum_i\pi_i g_i>1/15$.
+Since $v\ge6/25$ and $\sqrt n>6$,
+\[
+ \frac\lambda{4v\sqrt n}<\frac{9/25}{4(6/25)6}=\frac1{16}.
+\]
+Equation~\eqref{eq:master} proves the first conclusion.
+
+In case 2 put $\mu=\lambda/A^2$, so $\varepsilon=A\mu/k$.
+Now $W_k=(A+\varepsilon)J-k\varepsilon$ and $W_k>0$ exactly when
+$J\ge1$. Bernoulli's inequality gives
+\[
+ \Pp(W_k>0)=1-(1+\mu/k)^{-k}
+       \ge\frac\mu{1+\mu}\ge\frac\mu2.
+\]
+Moreover $-W_{k+1}\le(k+1)\varepsilon\le54/85<1$, so $Q=0$.
+Therefore the normalized paired loss is greater than $\mu/4$.
+Again using \eqref{eq:master},
+\[
+ \Delta_C<-\frac\lambda{4A^2}+\frac\lambda{4(6/25)6}
+           =-\frac{25}{48}\lambda.
+\]
+All threshold and support assumptions hold: the inward bound is
+$\varepsilon\le A/17$, and $t=np$ lies between $na_0$ and $n(1-a_1)$.
+\end{proof}
+
+\section{A bounded selected-noise bias}
+The following observation is useful independently of the two-point families.
+Let $K$ be the unique crossing index from the retained crossing theorem,
+and let $\zeta=1-a_0-a_1$. If also
+\[
+ A_0+a_0<\zeta,\qquad A_1+a_1<\zeta,
+\]
+then
+\begin{equation}\label{eq:bias}
+ 0\le\E W_{K+1}\le\E(U_0)_+\le a_0,
+ \qquad 0\le-\E W_K\le\E(U_1)_-\le a_1.
+\end{equation}
+To see this, the leave-pair residuals
+$R_i=t-(i-1)-\sum_{l<i}U_{1l}-\sum_{l>i}U_{0l}$ decrease by at least
+$\zeta$ on every sample. The truncated centered mean
+$M_0(x)=\E[U_0\mathbf1_{\{U_0\le x\}}]$ vanishes outside
+$[-A_0,a_0)$ and satisfies $0\le-M_0(x)\le\E(U_0)_+$.
+At most one residual lies in that interval. The exact bias identity
+$\E W_{K+1}=-\sum_i\E M_0(R_i)$ proves the first assertion.
+For the other sign, write
+$W_K=\sum_i[U_{1i}\mathbf1_{\{T_i\le t\}}+U_{0i}\mathbf1_{\{T_i>t\}}]$.
+The second term has mean zero because $U_{0i}$ is independent of $T_i$.
+Thus $\E W_K=\sum_i\E M_1(R_i-1)$. Its active interval is
+$[1-a_1,1+A_1)$, proving the second assertion. These half-open intervals include
+lower-endpoint atoms; the upper endpoint contributes zero by centering.
+The acquired right strip has both width bounds, since each width is at
+most $.672<.928\le\zeta$.
+
+\section{Scope, dependencies and tests}
+The paired identity uses the general crossing theorem in
+\texttt{crossing.tex} in the v13 research notes (28 October 2026).
+The normalized family theorem additionally uses the signed-curvature lemma
+in the adjacent \texttt{counts-tools.tex}; its proof there handles all
+counts and finite sample sizes. The present proof of the family theorem
+uses no external Poisson comparison and no numerical grid.
+
+The companion exact checks test the identities, the same-sum inequality,
+weighted quadratic hinges, the selected-bias caps and actual family
+comparisons, including rare jumps and collision endpoints. They preserve
+negative controls for a missing closed collision, an inadmissible hinge, and
+unjustified clipping of a weighted expectation at one.
+The acceptance gates are finite algebraic checks of the inequalities displayed
+above, not samples presented as uniform coverage.
+
+No conclusion here removes the general count certificates. The proved
+family requires $H=0$, $np$ integral and one noiseless conditional law;
+general conditional laws and nonzero phases still need a uniform lower bound
+on the paired weighted reserve, or another way to absorb curvature.
+\end{document}

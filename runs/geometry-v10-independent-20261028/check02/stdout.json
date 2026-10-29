@@ -1,0 +1,241 @@
+{
+  "status": "PASS_INDEPENDENT_DIRECT_GEOMETRY_POLYNOMIAL_RECONSTRUCTION",
+  "scope": "Four quartic and two cubic continuum certificates, independently reconstructed; panel rounding and analytic hypotheses reviewed separately",
+  "source_root": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/geometry-v10",
+  "constructor_imports": false,
+  "checks": [
+    {
+      "name": "theta_plus",
+      "degree": 4,
+      "second_derivative_lower": "181316487261009752336993/9765625000000000000000",
+      "tangent_point": "9/20",
+      "global_lower": "24246252838737281357369130898745197354528604831/14019506422364904880523681640625000000000000000000",
+      "strict_target": "17/10000"
+    },
+    {
+      "name": "theta_minus",
+      "degree": 4,
+      "second_derivative_lower": "187639955163588152336993/9765625000000000000000",
+      "tangent_point": "39/100",
+      "global_lower": "2479749917719380537965750551184918131921427778643031/219054787849451638758182525634765625000000000000000000",
+      "strict_target": "11/1000"
+    },
+    {
+      "name": "displacement",
+      "degree": 4,
+      "second_derivative_lower": "99609929320474993/5000000000000000",
+      "tangent_point": "53/125",
+      "global_lower": "1087852937351373086890705747704351629861511/897248411031353912353515625000000000000000000",
+      "strict_target": "3/2500"
+    },
+    {
+      "name": "rho",
+      "degree": 4,
+      "second_derivative_lower": "7888598496707711231/19531250000000000000",
+      "tangent_point": "129/500",
+      "global_lower": "7211751067996310764161286745880840766343511/47683715820312500000000000000000000000000000000",
+      "strict_target": "3/20000"
+    },
+    {
+      "name": "lambda_positive",
+      "degree": 3,
+      "second_derivative_upper": "-2800000000/208113883",
+      "global_upper": "623452733900249505023211301/1013486486157701922600000000",
+      "strict_target": "615289/1000000"
+    },
+    {
+      "name": "lambda_negative",
+      "degree": 3,
+      "second_derivative_upper": "-13416655108/1100406725",
+      "global_upper": "707362345469206790916867889/1251573463002010548339843750",
+      "strict_target": "282679/500000"
+    }
+  ],
+  "negative_control": {
+    "false_theta_plus_uniform_lower": "1/50",
+    "counterexample_p": "9/20",
+    "exact_value": "469937516126270310755793/195312500000000000000000000"
+  },
+  "reviewed_source_sha256": {
+    "geometry.tex": "e753afc6a731f728119d38d422a2ab5e3c890a1e2ef0b40a6841ec83d7a185b2",
+    "geometry-check.py": "b60f6b06dd7d9d318dcdeafcf2b4eb9adf051838702b2ed54f74494c3ddc82a2",
+    "geometry-panels.py": "c5cf12b2bf1114cbd661a195cb824b66b4170f55a90356a8cd5d7d38e070b7af",
+    "geometry-laws.py": "82bc67c53ed90c2640f225c1e7ca3ccf02903e3e3d9fa9db82d7713a50b9002f"
+  },
+  "constructor_evidence_sha256": "fb241e432917c3d286918afe425b1fe3a48783f880b9d56df4830a627760bb70",
+  "joint_export_checks": [
+    {
+      "index": 25,
+      "reserve": "111488016054369028543511457391393/3910882386291918675908812500000000",
+      "balanced_d_intercept": "4806759469/1000000000000",
+      "balanced_lambda_intercept": "50106109243/1000000000000"
+    },
+    {
+      "index": 26,
+      "reserve": "20915551029165359325767586338664233/274388294501536329677720250000000000",
+      "balanced_d_intercept": "13064366199/1000000000000",
+      "balanced_lambda_intercept": "66546158117/500000000000"
+    },
+    {
+      "index": 27,
+      "reserve": "2007154656524125465709661330377147/16762934961095781629352093750000000",
+      "balanced_d_intercept": "10412200379/500000000000",
+      "balanced_lambda_intercept": "207417365331/1000000000000"
+    },
+    {
+      "index": 28,
+      "reserve": "5258378473556426878336947841207409/32852221180648933416024250000000000",
+      "balanced_d_intercept": "28211784139/1000000000000",
+      "balanced_lambda_intercept": "274805779229/1000000000000"
+    },
+    {
+      "index": 29,
+      "reserve": "101820655835119019907928359346333/516224892864476803443952500000000",
+      "balanced_d_intercept": "35188958309/1000000000000",
+      "balanced_lambda_intercept": "83826943753/250000000000"
+    },
+    {
+      "index": 30,
+      "reserve": "29377327486947208901854374616145443/127001509376814318119784750000000000",
+      "balanced_d_intercept": "8344293177/200000000000",
+      "balanced_lambda_intercept": "389011707989/1000000000000"
+    },
+    {
+      "index": 31,
+      "reserve": "1642231464885900163738312360214611/6260433834967554657259718750000000",
+      "balanced_d_intercept": "597223949/12500000000",
+      "balanced_lambda_intercept": "27252426053/62500000000"
+    },
+    {
+      "index": 32,
+      "reserve": "5742934642909948835846313348079369/19783665773028932552028250000000000",
+      "balanced_d_intercept": "6666250017/125000000000",
+      "balanced_lambda_intercept": "238269352073/500000000000"
+    },
+    {
+      "index": 33,
+      "reserve": "481912692690285344560223481348639/1528679880327755714350187500000000",
+      "balanced_d_intercept": "29176272899/500000000000",
+      "balanced_lambda_intercept": "510685409383/1000000000000"
+    },
+    {
+      "index": 34,
+      "reserve": "653563633391489842441365600125469/1938037119964704659725730000000000",
+      "balanced_d_intercept": "15705897963/250000000000",
+      "balanced_lambda_intercept": "538673959253/1000000000000"
+    },
+    {
+      "index": 35,
+      "reserve": "5334216930366731907362559008820411/15019716631737919219717468750000000",
+      "balanced_d_intercept": "66490015129/1000000000000",
+      "balanced_lambda_intercept": "139717771301/250000000000"
+    },
+    {
+      "index": 36,
+      "reserve": "9843076676104984252741286099119671/26513967557718153222781750000000000",
+      "balanced_d_intercept": "34901057029/500000000000",
+      "balanced_lambda_intercept": "71901767283/125000000000"
+    },
+    {
+      "index": 37,
+      "reserve": "2849804515026508203638065021202383/7413098856851207435097437500000000",
+      "balanced_d_intercept": "36225801419/500000000000",
+      "balanced_lambda_intercept": "146428878411/250000000000"
+    },
+    {
+      "index": 38,
+      "reserve": "46592720439589789868349050947432419/118037201577795793132316750000000000",
+      "balanced_d_intercept": "37195980819/500000000000",
+      "balanced_lambda_intercept": "590473350449/1000000000000"
+    },
+    {
+      "index": 39,
+      "reserve": "459797447616036921826663398034583/1178594205443328533267028750000000",
+      "balanced_d_intercept": "73381276449/1000000000000",
+      "balanced_lambda_intercept": "572879828303/1000000000000"
+    },
+    {
+      "index": 40,
+      "reserve": "185531185067396433077706385173009751/469922735903761407283415750000000000",
+      "balanced_d_intercept": "37113535801/500000000000",
+      "balanced_lambda_intercept": "57125824627/100000000000"
+    },
+    {
+      "index": 41,
+      "reserve": "116638460000000000000000/313127615648204242019011",
+      "balanced_d_intercept": "17443231497/250000000000",
+      "balanced_lambda_intercept": "551973904179/1000000000000"
+    },
+    {
+      "index": 42,
+      "reserve": "21868777173720033111884478103510731/58438030214053918977338937500000000",
+      "balanced_d_intercept": "70197453023/1000000000000",
+      "balanced_lambda_intercept": "113673019347/200000000000"
+    },
+    {
+      "index": 43,
+      "reserve": "20476117703441926184123953903013951/58488610726375803620761750000000000",
+      "balanced_d_intercept": "1629464887/25000000000",
+      "balanced_lambda_intercept": "542648469809/1000000000000"
+    },
+    {
+      "index": 44,
+      "reserve": "20244378941611730336729238365985307/58319106491443424010761343750000000",
+      "balanced_d_intercept": "6461654361/100000000000",
+      "balanced_lambda_intercept": "550529253543/1000000000000"
+    },
+    {
+      "index": 45,
+      "reserve": "146870475612552506552674835222927/468351434839269291618310000000000",
+      "balanced_d_intercept": "11549707709/200000000000",
+      "balanced_lambda_intercept": "253152368853/500000000000"
+    },
+    {
+      "index": 46,
+      "reserve": "33050302609367224301208309351032467/117590928166492321001713687500000000",
+      "balanced_d_intercept": "6403185433/125000000000",
+      "balanced_lambda_intercept": "461789734547/1000000000000"
+    },
+    {
+      "index": 47,
+      "reserve": "4137623965467120290645164912760323/15704938947226368155272750000000000",
+      "balanced_d_intercept": "5970760101/125000000000",
+      "balanced_lambda_intercept": "88249973879/200000000000"
+    },
+    {
+      "index": 48,
+      "reserve": "771820511184600778230808055479439/3720912390200226301901843750000000",
+      "balanced_d_intercept": "3692986987/100000000000",
+      "balanced_lambda_intercept": "175968999481/500000000000"
+    },
+    {
+      "index": 49,
+      "reserve": "2496016571067015452109000119083001/15008386105858218883488250000000000",
+      "balanced_d_intercept": "7306300631/250000000000",
+      "balanced_lambda_intercept": "286341271251/1000000000000"
+    },
+    {
+      "index": 50,
+      "reserve": "517726340635251863192828169919/4867990262673841079630700000000",
+      "balanced_d_intercept": "18335993479/1000000000000",
+      "balanced_lambda_intercept": "92644826047/500000000000"
+    },
+    {
+      "index": 51,
+      "reserve": "8027333465753203870233343054255279/122889547043094722341721750000000000",
+      "balanced_d_intercept": "5559036101/500000000000",
+      "balanced_lambda_intercept": "115464979079/1000000000000"
+    },
+    {
+      "index": 52,
+      "reserve": "43292285307630928370337000004523/1941626549537397078608218750000000",
+      "balanced_d_intercept": "3744325553/1000000000000",
+      "balanced_lambda_intercept": "2497315061/62500000000"
+    }
+  ],
+  "joint_evidence_sha256": "2980009e801c9bc7bb1ab15edca2edd6782241e5151986ed269a961fefb8dcd4",
+  "old_central_resource_sha256": "5495b0335378211808a143d6c9d7387fcd48412bcd30165098e0aae912b04d2c",
+  "script_sha256": "7857f539b22a0c445b09c3bf96995f225d22a11adff217be2714b65e2587f896",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "optimization": 0
+}

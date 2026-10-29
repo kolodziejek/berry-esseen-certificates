@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "-I",
+    "-B",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v13/mathematics/simplification-v13/2026-10-28/crossing-check.py"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 0.4416914169999999,
+  "inputs_sha256": {
+    "mathematics/simplification-v13/2026-10-28/actual-discovery.py": "7a3e28b19476adc6a433992a29b287ac32f5b09991f3c6df7adb8da26a59ab9e",
+    "mathematics/simplification-v13/2026-10-28/crossing-check.py": "f6b687172f913741be699ffab4d984256d188e0944068e661883ebea403fdc46",
+    "mathematics/simplification-v13/2026-10-28/actual-accept.py": "2f16697992d86b813d38f5780bed69e6acee9d9e7d51a74c20c99f101ebeba91",
+    "mathematics/simplification-v13/2026-10-28/crossing.tex": "4db6c458ee2a73c7917839fcfa569274a81454c1f38559e46d57bd9ef6f0d40d",
+    "mathematics/simplification-v13/2026-10-28/run_one.py": "972c4bc6062311433e7a2c22381ecdf3a79c8b25d78e282c618c8a53e430eba4",
+    "mathematics/simplification-v13/2026-10-28/crossing-discovery.py": "7624047af83a9bd8f89996cbcd3b4102ee9f4a413d5821b8639da2d3e23d5e9c",
+    "mathematics/simplification-v13/2026-10-28/renewal-check.py": "3cdf3f5703539029d76f7d18f043448efdbb947a109788fee58b9422e61e36ad",
+    "mathematics/simplification-v13/2026-10-28/renewal.tex": "b1c87eaac68124b6793f6c82e44a57052125803e47d3e34137b53f0e70c6f226",
+    "mathematics/simplification-v10/2026-10-28/actual_law_checks.py": "351997e80de8895ac87b4e5dfeb33efc28e16c934bfef8f41ccf2af20ee59e07"
+  },
+  "inputs_unchanged": true,
+  "stdout_sha256": "7515a2e59ea4974c91c34d7aaab30cccad672607b35af8efd869f17bd75ab018",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "utc": "2026-10-28T19:31:38.980655+00:00",
+  "result_status": "PASS_EXACT_GENERAL_CROSSING_CONTROLS"
+}

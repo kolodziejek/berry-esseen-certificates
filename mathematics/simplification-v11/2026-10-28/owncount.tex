@@ -1,0 +1,268 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}[lemma]{Proposition}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\title{The own count with its conditional variance allocation retained}
+\author{}
+\date{28 October 2026}
+\begin{document}
+\maketitle
+
+The difficult negative phases should not be bounded independently of the
+incoming lower tail. Positive conditional noise is unfavorable for the
+own count, whereas negative conditional noise is unfavorable for that
+incoming tail. The elementary bound below retains this distinction. It
+is a local estimate, not a completed count comparison above noise $1/50$.
+
+Let $U_0,U_1$ be centered laws with
+\[
+ -A\le U_0\le a_0,\qquad -a_1\le U_1\le A,
+ \qquad A>0,\quad 0\le a_0,a_1\le A.
+\]
+Write $v_j=\E U_j^2$, $\mu_j=\E U_j^3$. For an integer $n\ge1$ and
+$0\le k\le n$, fix the legal counts
+$N_0=n-k$ and $N_1=k$, and let $W$ be the sum of $N_j$ independent
+variables of each type; all variables are independent. Set
+$T_j=N_jv_j$ and $t=T_0+T_1$.
+When marginal quantities are used, take $0<p<1$, $q=1-p$,
+$B\sim\operatorname{Bernoulli}(p)$, and give $U$ the conditional law
+$U_j$ given $B=j$. Then $s=\E U^2=qv_0+pv_1$ and $\lambda=ns$.
+
+\begin{lemma}[A conditional fourth/third-moment bound]
+\label{own:moment}
+For every real $\kappa$,
+\[
+ \E W^4-\kappa\E W^3
+ \le c_0(\kappa)T_0+c_1(\kappa)T_1+3t^2,
+\]
+where
+\[
+ c_0(\kappa)=\max\{A^2+\kappa A,a_0^2-\kappa a_0\},\qquad
+ c_1(\kappa)=\max\{A^2-\kappa A,a_1^2+\kappa a_1\}.
+\]
+The right side can be reduced by $3(N_0v_0^2+N_1v_1^2)$ if that
+correction is useful separately.
+\end{lemma}
+\begin{proof}
+The convex function $x^2-\kappa x$ attains its maximum on a closed
+interval at an endpoint. Multiplication by $x^2\ge0$ and integration
+give $\E U_j^4-\kappa\E U_j^3\le c_j(\kappa)v_j$.
+Centering and independence give
+\[
+ \E W^3=N_0\mu_0+N_1\mu_1,\qquad
+ \E W^4=\sum\E U_i^4+3t^2-3\sum(\E U_i^2)^2.
+\]
+Substitution proves both statements.
+\end{proof}
+
+This improves the separate bounds $\E W^4\le A^2t+3t^2$ and
+$|\E W^3|\le At$: each $c_j(\kappa)$ is at most
+$A^2+A|\kappa|$. For nondegenerate support intervals the conditional
+constants are asymptotically sharp.
+For example, a centered two-point law on $\{-\varepsilon,A\}$ has
+\[
+ \frac{\E Z^4-\kappa\E Z^3}{\E Z^2}
+ =A^2-A\varepsilon+\varepsilon^2-\kappa(A-\varepsilon)
+ \longrightarrow A^2-\kappa A.
+\]
+The other three endpoints are obtained by reflection or by putting the
+rare atom at an inner endpoint. This sharpness concerns the linear
+per-summand moment bound, not an extremal convolution theorem.
+
+\begin{proposition}[An own-count bound for any quartic minorant]
+\label{own:quartic}
+Suppose
+\[
+ h(x)=\frac{-x^4+b_3x^3+b_2x^2+b_1x+b_0}{M}
+       \le\mathbf1_{(0,\infty)}(x),\qquad M>0.
+\]
+For $r\ge0$ define
+\[
+ \kappa=b_3-4r,\quad L=b_2+3b_3r-6r^2,\quad K=Mh(r).
+\]
+Then
+\begin{equation}\label{own:lower}
+ \Pp(W>-r)\ge
+ \frac{Lt-3t^2-c_0(\kappa)T_0-c_1(\kappa)T_1+K}{M}.
+\end{equation}
+The bound includes atoms at the threshold: the event is strict.
+\end{proposition}
+\begin{proof}
+Since $\E W=0$, expansion gives
+$M\E h(W+r)=-\E W^4+\kappa\E W^3+Lt+K$.
+Apply Lemma~\ref{own:moment} and the pointwise minorant.
+\end{proof}
+
+For the earlier quartic
+\[
+ h_\alpha(x)=\frac{-x^4+3\alpha^2x^2+2\alpha^3x}{5\alpha^4},
+\]
+the numerator factors as $-x(x+\alpha)^2(x-2\alpha)$; it is
+nonpositive for $x\le0$ and its positive maximum is
+$(9+6\sqrt3)\alpha^4/4<5\alpha^4$. Hence it is a valid minorant.
+Here $\kappa=-4r$. If $a_0+a_1\le d\le A$ and
+$0\le r\le(A-d)/4$, then
+\[
+ c_0=A^2-4Ar,\qquad c_1=A^2+4Ar.
+\]
+Indeed the first comparison is equivalent to $4r\le A-a_0$;
+the second follows from $A^2+4Ar\ge a_1^2-4ra_1$.
+Consequently
+\begin{align}
+ \Pp(W>-r)\ge\frac1{5\alpha^4}\{&
+ (3\alpha^2-A^2-6r^2)t-3t^2
+ +4Ar(T_0-T_1)\notag\\
+ &-r^4+3\alpha^2r^2+2\alpha^3r\}.
+ \label{own:symmetric}
+\end{align}
+Compared with the separate fourth/third-moment estimate, the gain is
+exactly $8ArT_0/(5\alpha^4)$.
+
+\paragraph{A material change at an admissible point.}
+Take $A=3/5$, $\alpha=1/2$, $r=t=3/40$, and $T_1=0$.
+After adding the normal-increment lower bound $-(21/20)r$, the new
+lower bound is $55479/800000=.06934875$. The separate-moment bound
+is $-13641/800000=-.01705125$. The gain is $.0864$.
+These parameters are realized by an actual law: take $n=42$, $p=1/2$,
+$k=21$, $U_1=0$, and the centered law $U_0\in\{-3/5,1/168\}$.
+Then $ns=3/40$, $T_0=3/40$, $a_0+a_1=1/168<.072$ and the
+corresponding raw threshold lies in $[-1.84,1.84]$.
+
+\paragraph{Normal slope through phase $.1$.}
+Put $v=pq$, $\ell=(v+s)^{-1/2}$, $\pi_k=\binom nkp^kq^{n-k}$,
+and choose the phase by $np+H/\ell=k+u$. With $\delta=k-np$, the
+normal increment is
+\[
+ f(u)=\frac{\Phi((\delta+u)/\sqrt{n(v+s)})-
+                 \Phi(\delta/\sqrt{n(v+s)})}{\pi_k}.
+\]
+On $p\in[.4,.53]$, $n\ge42$, $ns\le.075$ and $|H|\le1.84$,
+one has $\sqrt{pq+s}<.502$. For $|u|\le.1$ this gives
+$|\delta|<1.84\cdot.502+.1=1.02368<21/20$.
+The finite Stirling/logarithmic derivative estimate established in the
+v10 comparison, with $D=21/20$ and $b=1/10$, gives
+\[
+ n|\log f'(z)|\le\tfrac83\lambda+
+ \frac{2Db+b^2}{2(6/25)}+\frac{5D}{8}+\frac38+\frac{D^3}{42}.
+\]
+The exact right side at $\lambda=3/40$, divided by $42$, is less
+than $1/21$. Thus $.95<f'(z)<1.05$ on the whole integration
+segment. In particular $f(-r)\ge-(21/20)r$ for $0\le r\le.1$.
+This invocation retains the finite Stirling proof and the fixed actual
+count; it is not a fixed-law asymptotic assertion.
+
+\section*{Combining the own count and incoming tails}
+For fixed $n,p,k,\lambda>0$, put $q=1-p$ and parametrize the allocation
+by $\eta=pv_1/s\in[0,1]$, where $s=\lambda/n$. Then
+\[
+ v_0=s(1-\eta)/q,\qquad v_1=s\eta/p,
+ \quad T_0=N_0s(1-\eta)/q,\quad T_1=N_1s\eta/p.
+\]
+Fix the support caps and the quartic parameters independently of $\eta$.
+The right side of \eqref{own:lower} is a concave function of $\eta$:
+all terms are affine except $-3t^2$. Endpoint tests may use the larger
+interval $[0,1]$ even if some endpoint allocations are infeasible for the
+particular caps. They are then tests of a relaxation, not assumed laws.
+
+For completeness, the needed incoming estimate can be proved without
+an additional probability theorem. For $h>0$, $b>0$, define
+\[
+ B_h(b)=\frac{e^{hb}-1-hb}{b^2}
+        =h^2\int_0^1(1-z)e^{hzb}\,dz.
+\]
+If $Z$ is centered and $Z\le b$, the same integral remainder gives
+$\E e^{hZ}\le1+B_h(b)\E Z^2\le e^{B_h(b)\E Z^2}$.
+Use $b=A$ for $-U_0$ and any fixed positive upper cap $b_1\ge a_1$
+for $-U_1$. For each legal incoming count $i\ge1$,
+\begin{equation}\label{own:chernoff}
+ \Pp(W_{k+i}\le u-i)\le
+ \exp\{h(u-i)+B_h(A)(N_0-i)v_0+B_h(b_1)(N_1+i)v_1\}.
+\end{equation}
+Every exponent is affine in $\eta$, so their sum is convex.
+An infinite geometric extension is allowed if
+\[
+                  h> (s/p)B_h(b_1).
+\]
+Indeed the ratio is
+$\exp\{-h-B_h(A)v_0+B_h(b_1)v_1\}<1$ uniformly on $[0,1]$.
+The added terms are positive even when their count is no longer legal.
+The infinite sum remains convex, being a pointwise limit of its convex
+partial sums.
+
+It follows that an own-count lower bound minus a fixed nonnegative
+multiple of this incoming bound is concave in $\eta$. Its minimum is
+at an allocation endpoint. This is an exact reduction to two scalar
+estimates for each set of the other parameters. It does not itself
+prove either endpoint estimate.
+
+The tilt and quartic may depend on the other parameters, but must be
+fixed while this allocation argument is applied. Taking a pointwise
+minimum over several incoming bounds need not preserve convexity.
+Likewise, retaining the favorable $3\sum v_i^2$ correction from
+Lemma~\ref{own:moment} can destroy concavity in the allocation; dropping
+it is deliberate here.
+
+\section*{Retaining the cubic repair in the same inequality}
+Suppose additionally $a_0<p$, $a_1<q$, and set
+\[
+ \ell=(pq+s)^{-1/2},\quad \rho=\E|\ell(B+U-p)|^3,
+ \quad \rho_B=(1-2pq)/\sqrt{pq}.
+\]
+The signs are fixed, giving the exact identity
+\[
+ \rho=\ell^3\{pq(1-2pq)+3pq(v_0+v_1)+p\mu_1-q\mu_0\}.
+\]
+Let $m>0$, $C\ge0$, and assume $N_0,N_1>0$. Define
+\[
+ \gamma=C\ell^3M/m,\quad
+ \kappa_0=\kappa-\gamma q/N_0,\quad
+ \kappa_1=\kappa+\gamma p/N_1.
+\]
+The same proof, now combining the third moments before bounding them,
+gives
+\begin{align*}
+ m\Pp(W>-r)+C(\rho-\rho_B)\ge{}&
+ \frac mM\{Lt-3t^2-c_0(\kappa_0)T_0-c_1(\kappa_1)T_1+K\}\\
+ &+C\bigl[\ell^3\{pq(1-2pq)+3pq(v_0+v_1)\}-\rho_B\bigr].
+\end{align*}
+For fixed $n,p,k,\lambda,m,C$ this is still concave in $\eta$.
+In the comparison, $m=\sqrt n\,\pi_k$ is independent of $\eta$.
+Outward replacements for $m$ must respect the sign of the complete
+expression; one cannot replace it separately inside $\kappa_j$ without
+checking that direction. This bound retains the same third moments in
+both the own-count and marginal-moment terms.
+
+\section*{An optional sharper bound at fixed summand variance}
+The linear coefficient bound has a useful refinement, though it is not
+needed for the endpoint reduction. If $Z\in[-b,A]$ is centered with
+variance $v$ and
+\[
+                   A-b-2v/A-\kappa\ge0,
+\]
+then
+\[
+ \E(Z^4-\kappa Z^3)
+ \le v\{A^2-v+v^2/A^2-\kappa(A-v/A)\}.
+\]
+To prove this, subtract
+$(x-A)(x+v/A)^2(x+A-2v/A-\kappa)$ from $x^4-\kappa x^3$.
+The resulting polynomial is quadratic and majorizes the original on
+$[-b,A]$. Its expectation depends only on the mean and variance; evaluate
+it on the centered law supported at $-v/A,A$. This law has the required
+variance, and $v/A\le b$ follows from $v\le Ab$. At both its atoms
+the subtraction vanishes. The case $v=0$ is immediate. Reflection
+gives the analogous negative-endpoint estimate. This refinement should
+not be inserted into the allocation argument without rechecking its
+curvature.
+
+\paragraph{Status.}
+The lemmas are complete local deductions. Exact rational checks cover
+the normal-slope constants, moment identities, support endpoints,
+actual conditional laws and illustrative improvement. No complete
+comparison on $.02<\lambda\le.075$ is claimed. The remaining work is
+to prove the two allocation-endpoint comparisons with one common
+phase-dependent choice of tilt and own-count bound.
+\end{document}

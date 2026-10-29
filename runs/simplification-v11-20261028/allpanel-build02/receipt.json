@@ -1,0 +1,28 @@
+{
+  "returncode": 0,
+  "command": [
+    "python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v11/mathematics/simplification-v11/2026-10-28/allpanel-proof/main.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v11/runs/simplification-v11-20261028/allpanel-build02",
+    "--json"
+  ],
+  "elapsed_seconds": 0.959574333,
+  "sources": {
+    "main.tex": "89cb42248fb411aa1537b6c9ce87f5e4962efaa99e6f8f86e2b46043478f0575",
+    "proof.tex": "bd9d32de7000391edbc6a94547316b7c88234cc9aaf6d2c4f4c2d2de183dbf15"
+  },
+  "visual_review": "All five final pages inspected; equations, table, source path and margins legible.",
+  "rendered_pages": {
+    "page-1.png": "2ebebe0939f2b6a17bec53cc894bae5f7f007c9f93f94eb7d8188f2952dcf4e9",
+    "page-2.png": "7888eebb7378e9ca55f06761a5eb5338249d647f23f5c5cd46b1209a80ee43b9",
+    "page-3.png": "376b7b7078e38e191c0ba083339b34d260c48be7d4e155971950fe2e76ba59fc",
+    "page-4.png": "5188a592137f551a25eab8381271a75b05809c9ddd0daa959e3abefbca365216",
+    "page-5.png": "f756b358547fafc8b3b1a7e6112521cee336e7787c242e480f9cd54c03834973"
+  },
+  "pdf_sha256": "a48fde0608a9b4e2e4d3a3c0129e76bdfb2fb9ebd7bd1d965802982d05abddd9",
+  "canonical_proof_matches_project_copy": true
+}

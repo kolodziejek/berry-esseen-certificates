@@ -1,0 +1,853 @@
+{
+  "status": "PASS_UNIFIED_GENERIC_SCALARS",
+  "mathematical_status": "Local analytic criterion with finite rational checks; acquisition and finite base not asserted",
+  "gate_count": 163,
+  "gates": {
+    "pi lower 25/8": {
+      "margin": "10180032097990749239711286875643252114199097436479614592627453944983524280713675507/613526464763470312723309949923151438734962872764877100302424664756107330322265625000",
+      "strict": true
+    },
+    "pi upper 22/7": {
+      "margin": "1061066680172848768886204587959264515394993227602201633601902833879001786041602/839126679498715326788897075291857743232243385703261908249626703560352325439453125",
+      "strict": true
+    },
+    "normal lower": {
+      "margin": "1889/437500",
+      "strict": true
+    },
+    "normal upper": {
+      "margin": "0",
+      "strict": false
+    },
+    "low bump quadratic": {
+      "margin": "6/49",
+      "strict": true
+    },
+    "low bump tangent": {
+      "margin": "4/21",
+      "strict": true
+    },
+    "mode variance ratio": {
+      "margin": "49/73960",
+      "strict": true
+    },
+    "mode linear loss": {
+      "margin": "0",
+      "strict": false
+    },
+    "mode quadratic loss": {
+      "margin": "0",
+      "strict": false
+    },
+    "mode coefficient": {
+      "margin": "4633357/1379170000",
+      "strict": true
+    },
+    "inverse square full tail": {
+      "margin": "11/3600",
+      "strict": true
+    },
+    "inverse cube full tail": {
+      "margin": "0",
+      "strict": false
+    },
+    "compact: N domain": {
+      "margin": "658",
+      "strict": false
+    },
+    "compact: p lower": {
+      "margin": "1/24",
+      "strict": false
+    },
+    "compact: p upper": {
+      "margin": "121/600",
+      "strict": false
+    },
+    "compact: d nonnegative": {
+      "margin": "1/250",
+      "strict": false
+    },
+    "compact: d at most A": {
+      "margin": "149/250",
+      "strict": false
+    },
+    "compact: c nonnegative": {
+      "margin": "79/200",
+      "strict": false
+    },
+    "compact: ordered p": {
+      "margin": "9/100",
+      "strict": true
+    },
+    "compact: positive L": {
+      "margin": "1/100",
+      "strict": true
+    },
+    "compact: ordered noise": {
+      "margin": "17/50",
+      "strict": true
+    },
+    "compact: d below r": {
+      "margin": "371/1000",
+      "strict": true
+    },
+    "compact: diameter": {
+      "margin": "99/250",
+      "strict": true
+    },
+    "compact: c below one": {
+      "margin": "121/200",
+      "strict": true
+    },
+    "compact: positive mass": {
+      "margin": "3/4",
+      "strict": true
+    },
+    "compact: positive V": {
+      "margin": "113/1000",
+      "strict": true
+    },
+    "compact: positive affine constant": {
+      "margin": "1/5",
+      "strict": true
+    },
+    "compact: positive affine slope": {
+      "margin": "5/2",
+      "strict": true
+    },
+    "compact: positive cosine": {
+      "margin": "3",
+      "strict": true
+    },
+    "compact: positive variance shift": {
+      "margin": "6",
+      "strict": true
+    },
+    "compact: high bump": {
+      "margin": "2958791/4624375",
+      "strict": true
+    },
+    "compact: sine seed": {
+      "margin": "11/400",
+      "strict": true
+    },
+    "compact: cosine chord": {
+      "margin": "201/800",
+      "strict": true
+    },
+    "compact: raw displacement": {
+      "margin": "65483/3125000",
+      "strict": true
+    },
+    "compact: displacement below one": {
+      "margin": "7/100",
+      "strict": true
+    },
+    "compact: boundary mesh": {
+      "margin": "25877/100",
+      "strict": true
+    },
+    "compact: frozen lower variance": {
+      "margin": "8/25",
+      "strict": false
+    },
+    "compact: positive alpha": {
+      "margin": "694",
+      "strict": true
+    },
+    "compact: left window interior": {
+      "margin": "25957/100",
+      "strict": true
+    },
+    "compact: right window interior": {
+      "margin": "37057/100",
+      "strict": true
+    },
+    "compact: window radius": {
+      "margin": "7/100",
+      "strict": true
+    },
+    "compact: window left variance": {
+      "margin": "5711/1960000",
+      "strict": true
+    },
+    "compact: window right variance": {
+      "margin": "37519/1960000",
+      "strict": true
+    },
+    "compact: positive zeta": {
+      "margin": "23/100",
+      "strict": true
+    },
+    "compact: five masses": {
+      "margin": "583/96600",
+      "strict": true
+    },
+    "compact: variance power": {
+      "margin": "432551/4096000000",
+      "strict": true
+    },
+    "compact: negative curvature offset": {
+      "margin": "0",
+      "strict": false
+    },
+    "compact: affine sqrt majorant": {
+      "margin": "14/107",
+      "strict": false
+    },
+    "compact: cubic correction": {
+      "margin": "3237/10000",
+      "strict": true
+    },
+    "compact: minus error coefficient 0": {
+      "margin": "293003/305100",
+      "strict": false
+    },
+    "compact: minus error coefficient 1": {
+      "margin": "36120549/6190592",
+      "strict": false
+    },
+    "compact: minus error coefficient 2": {
+      "margin": "717474375/82799168",
+      "strict": false
+    },
+    "compact: minus error convexity": {
+      "margin": "717474375/82799168",
+      "strict": true
+    },
+    "compact: plus error coefficient 0": {
+      "margin": "800/3051",
+      "strict": false
+    },
+    "compact: plus error coefficient 1": {
+      "margin": "729457/193456",
+      "strict": false
+    },
+    "compact: plus error coefficient 2": {
+      "margin": "17296875/2587474",
+      "strict": false
+    },
+    "compact: plus error convexity": {
+      "margin": "17296875/2587474",
+      "strict": true
+    },
+    "compact: minus L endpoint above displayed bound": {
+      "margin": "1717970721817531054861/8386908849900000000000000000",
+      "strict": true
+    },
+    "compact: minus U endpoint above displayed bound": {
+      "margin": "192739532920132189/273858248160000000000000",
+      "strict": true
+    },
+    "compact: plus L endpoint above displayed bound": {
+      "margin": "2682572034224562304861/8386908849900000000000000000",
+      "strict": true
+    },
+    "compact: plus U endpoint above displayed bound": {
+      "margin": "180875842978882189/273858248160000000000000",
+      "strict": true
+    },
+    "right: N domain": {
+      "margin": "158",
+      "strict": false
+    },
+    "right: p lower": {
+      "margin": "1/15",
+      "strict": false
+    },
+    "right: p upper": {
+      "margin": "41/300",
+      "strict": false
+    },
+    "right: d nonnegative": {
+      "margin": "9/125",
+      "strict": false
+    },
+    "right: d at most A": {
+      "margin": "66/125",
+      "strict": false
+    },
+    "right: c nonnegative": {
+      "margin": "23/50",
+      "strict": false
+    },
+    "right: ordered p": {
+      "margin": "13/100",
+      "strict": true
+    },
+    "right: positive L": {
+      "margin": "3/100",
+      "strict": true
+    },
+    "right: ordered noise": {
+      "margin": "33/100",
+      "strict": true
+    },
+    "right: d below r": {
+      "margin": "41/125",
+      "strict": true
+    },
+    "right: diameter": {
+      "margin": "41/125",
+      "strict": true
+    },
+    "right: c below one": {
+      "margin": "27/50",
+      "strict": true
+    },
+    "right: positive mass": {
+      "margin": "13/20",
+      "strict": true
+    },
+    "right: positive V": {
+      "margin": "117/1000",
+      "strict": true
+    },
+    "right: positive affine constant": {
+      "margin": "9/40",
+      "strict": true
+    },
+    "right: positive affine slope": {
+      "margin": "5/2",
+      "strict": true
+    },
+    "right: positive cosine": {
+      "margin": "3",
+      "strict": true
+    },
+    "right: positive variance shift": {
+      "margin": "5",
+      "strict": true
+    },
+    "right: high bump": {
+      "margin": "74831/367500",
+      "strict": true
+    },
+    "right: sine seed": {
+      "margin": "11/400",
+      "strict": true
+    },
+    "right: cosine chord": {
+      "margin": "201/800",
+      "strict": true
+    },
+    "right: tail sine positive": {
+      "margin": "8749/10500",
+      "strict": true
+    },
+    "right: cosine tail": {
+      "margin": "1864297/55125000",
+      "strict": true
+    },
+    "right: raw displacement": {
+      "margin": "2003/1562500",
+      "strict": true
+    },
+    "right: displacement below one": {
+      "margin": "19/250",
+      "strict": true
+    },
+    "right: boundary mesh": {
+      "margin": "16169/250",
+      "strict": true
+    },
+    "right: frozen lower variance": {
+      "margin": "19/250",
+      "strict": false
+    },
+    "right: positive alpha": {
+      "margin": "195",
+      "strict": true
+    },
+    "right: left window interior": {
+      "margin": "19269/250",
+      "strict": true
+    },
+    "right: right window interior": {
+      "margin": "22519/250",
+      "strict": true
+    },
+    "right: window radius": {
+      "margin": "19/250",
+      "strict": true
+    },
+    "right: window left variance": {
+      "margin": "7/1250",
+      "strict": true
+    },
+    "right: window right variance": {
+      "margin": "7/400",
+      "strict": true
+    },
+    "right: positive zeta": {
+      "margin": "23/100",
+      "strict": true
+    },
+    "right: five masses": {
+      "margin": "169/27600",
+      "strict": true
+    },
+    "right: variance power": {
+      "margin": "27/200000",
+      "strict": true
+    },
+    "right: negative curvature offset": {
+      "margin": "3/500",
+      "strict": false
+    },
+    "right: affine sqrt majorant": {
+      "margin": "23/188",
+      "strict": false
+    },
+    "right: cubic correction": {
+      "margin": "27723/80000",
+      "strict": true
+    },
+    "right: minus error coefficient 0": {
+      "margin": "638629/631800",
+      "strict": false
+    },
+    "right: minus error coefficient 1": {
+      "margin": "3063479/469248",
+      "strict": false
+    },
+    "right: minus error coefficient 2": {
+      "margin": "20679375/1837888",
+      "strict": false
+    },
+    "right: minus error convexity": {
+      "margin": "20679375/1837888",
+      "strict": true
+    },
+    "right: plus error coefficient 0": {
+      "margin": "800/3159",
+      "strict": false
+    },
+    "right: plus error coefficient 1": {
+      "margin": "3444821/879840",
+      "strict": false
+    },
+    "right: plus error coefficient 2": {
+      "margin": "1921875/229736",
+      "strict": false
+    },
+    "right: plus error convexity": {
+      "margin": "1921875/229736",
+      "strict": true
+    },
+    "right: minus L endpoint above displayed bound": {
+      "margin": "55071686905856599351/70027943731200000000000000",
+      "strict": true
+    },
+    "right: minus U endpoint above displayed bound": {
+      "margin": "114058065273815431/273546655200000000000000",
+      "strict": true
+    },
+    "right: plus L endpoint above displayed bound": {
+      "margin": "40281706912256599351/70027943731200000000000000",
+      "strict": true
+    },
+    "right: plus U endpoint above displayed bound": {
+      "margin": "4530691307601187/21042050400000000000000",
+      "strict": true
+    },
+    "left: N domain": {
+      "margin": "658",
+      "strict": false
+    },
+    "left: p lower": {
+      "margin": "0",
+      "strict": false
+    },
+    "left: p upper": {
+      "margin": "4/15",
+      "strict": false
+    },
+    "left: d nonnegative": {
+      "margin": "17/250",
+      "strict": false
+    },
+    "left: d at most A": {
+      "margin": "79/125",
+      "strict": false
+    },
+    "left: c nonnegative": {
+      "margin": "8/25",
+      "strict": false
+    },
+    "left: ordered p": {
+      "margin": "1/15",
+      "strict": true
+    },
+    "left: positive L": {
+      "margin": "1/100",
+      "strict": true
+    },
+    "left: ordered noise": {
+      "margin": "31/100",
+      "strict": true
+    },
+    "left: d below r": {
+      "margin": "199/750",
+      "strict": true
+    },
+    "left: diameter": {
+      "margin": "29/125",
+      "strict": true
+    },
+    "left: c below one": {
+      "margin": "17/25",
+      "strict": true
+    },
+    "left: positive mass": {
+      "margin": "3/4",
+      "strict": true
+    },
+    "left: positive V": {
+      "margin": "13/125",
+      "strict": true
+    },
+    "left: positive affine constant": {
+      "margin": "13/200",
+      "strict": true
+    },
+    "left: positive affine slope": {
+      "margin": "250/39",
+      "strict": true
+    },
+    "left: positive cosine": {
+      "margin": "7/5",
+      "strict": true
+    },
+    "left: positive variance shift": {
+      "margin": "6",
+      "strict": true
+    },
+    "left: high bump": {
+      "margin": "98237/2940000",
+      "strict": true
+    },
+    "left: sine seed": {
+      "margin": "1/100",
+      "strict": true
+    },
+    "left: cosine chord": {
+      "margin": "77/225",
+      "strict": true
+    },
+    "left: tail sine positive": {
+      "margin": "563/875",
+      "strict": true
+    },
+    "left: cosine tail": {
+      "margin": "8602/3828125",
+      "strict": true
+    },
+    "left: raw displacement": {
+      "margin": "88343/2734375",
+      "strict": true
+    },
+    "left: displacement below one": {
+      "margin": "2/25",
+      "strict": true
+    },
+    "left: boundary mesh": {
+      "margin": "13861/75",
+      "strict": true
+    },
+    "left: frozen lower variance": {
+      "margin": "2/25",
+      "strict": false
+    },
+    "left: positive alpha": {
+      "margin": "694",
+      "strict": true
+    },
+    "left: left window interior": {
+      "margin": "17281/75",
+      "strict": true
+    },
+    "left: right window interior": {
+      "margin": "10402/25",
+      "strict": true
+    },
+    "left: window radius": {
+      "margin": "2/25",
+      "strict": true
+    },
+    "left: window left variance": {
+      "margin": "157/551250",
+      "strict": true
+    },
+    "left: window right variance": {
+      "margin": "1293/61250",
+      "strict": true
+    },
+    "left: positive zeta": {
+      "margin": "11/50",
+      "strict": true
+    },
+    "left: five masses": {
+      "margin": "1949/462000",
+      "strict": true
+    },
+    "left: variance power": {
+      "margin": "1799/11390625",
+      "strict": true
+    },
+    "left: negative curvature offset": {
+      "margin": "0",
+      "strict": false
+    },
+    "left: affine sqrt majorant": {
+      "margin": "0",
+      "strict": false
+    },
+    "left: cubic correction": {
+      "margin": "2063/21000",
+      "strict": true
+    },
+    "left: minus error coefficient 0": {
+      "margin": "35504/43875",
+      "strict": false
+    },
+    "left: minus error coefficient 1": {
+      "margin": "108310643/10383360",
+      "strict": false
+    },
+    "left: minus error coefficient 2": {
+      "margin": "95325/13312",
+      "strict": false
+    },
+    "left: minus error convexity": {
+      "margin": "95325/13312",
+      "strict": true
+    },
+    "left: plus error coefficient 0": {
+      "margin": "100/351",
+      "strict": false
+    },
+    "left: plus error coefficient 1": {
+      "margin": "635429/159744",
+      "strict": false
+    },
+    "left: plus error coefficient 2": {
+      "margin": "76875/13312",
+      "strict": false
+    },
+    "left: plus error convexity": {
+      "margin": "76875/13312",
+      "strict": true
+    },
+    "left: minus L endpoint above displayed bound": {
+      "margin": "62210992242877948871/97819312500000000000000000",
+      "strict": true
+    },
+    "left: minus U endpoint above displayed bound": {
+      "margin": "1064758751523355589/1528426757812500000000000",
+      "strict": true
+    },
+    "left: plus L endpoint above displayed bound": {
+      "margin": "271579800684121067/7524562500000000000000000",
+      "strict": true
+    },
+    "left: plus U endpoint above displayed bound": {
+      "margin": "67135640704621103/117571289062500000000000",
+      "strict": true
+    }
+  },
+  "rows": {
+    "compact": {
+      "parameters": {
+        "N": "700",
+        "p0": "3/8",
+        "p1": "93/200",
+        "A": "3/5",
+        "d": "1/250",
+        "L": "1/100",
+        "U": "7/20",
+        "kappa": "3",
+        "xi": "93/100",
+        "cm": "6",
+        "zeta": "23/100",
+        "mass": "3/4",
+        "V": "113/1000",
+        "c": "79/200",
+        "j0": "1/5",
+        "j1": "5/2",
+        "theta": "2/3",
+        "sine": "17/20",
+        "sine2": "3/4"
+      },
+      "W": [
+        "0",
+        "54085531/137200000",
+        "-8066367/11200000",
+        "1128111921/1715000000",
+        "-1174364509761/2401000000000"
+      ],
+      "E_minus": [
+        "293003/305100",
+        "36120549/6190592",
+        "717474375/82799168"
+      ],
+      "E_plus": [
+        "800/3051",
+        "729457/193456",
+        "17296875/2587474"
+      ],
+      "P_minus": [
+        "-293003/213570000",
+        "9976510490511/26542163200000",
+        "-1516446576747/2069979200000",
+        "1128111921/1715000000",
+        "-1174364509761/2401000000000"
+      ],
+      "P_plus": [
+        "-8/21357",
+        "628423455071/1658885200000",
+        "-10574132443479/14489854400000",
+        "1128111921/1715000000",
+        "-1174364509761/2401000000000"
+      ],
+      "endpoint_values": [
+        "19409025049390417531054861/8386908849900000000000000000",
+        "16788798784733560132189/273858248160000000000000",
+        "28023345039550124562304861/8386908849900000000000000000",
+        "17439474118671778882189/273858248160000000000000"
+      ]
+    },
+    "right": {
+      "parameters": {
+        "N": "200",
+        "p0": "2/5",
+        "p1": "53/100",
+        "A": "3/5",
+        "d": "9/125",
+        "L": "3/100",
+        "U": "9/25",
+        "kappa": "3",
+        "xi": "231/250",
+        "cm": "5",
+        "zeta": "23/100",
+        "mass": "13/20",
+        "V": "117/1000",
+        "c": "23/50",
+        "j0": "9/40",
+        "j1": "5/2",
+        "theta": "2/3",
+        "sine": "17/20",
+        "sine2": "3/4"
+      },
+      "W": [
+        "0",
+        "48197201/196000000",
+        "-19402851/32000000",
+        "6940323/12800000",
+        "-812017791/2048000000"
+      ],
+      "E_minus": [
+        "638629/631800",
+        "3063479/469248",
+        "20679375/1837888"
+      ],
+      "E_plus": [
+        "800/3159",
+        "3444821/879840",
+        "1921875/229736"
+      ],
+      "P_minus": [
+        "-638629/126360000",
+        "584203271089/2874144000000",
+        "-608890109667/918944000000",
+        "6940323/12800000",
+        "-812017791/2048000000"
+      ],
+      "P_plus": [
+        "-4/3159",
+        "116579419837/538902000000",
+        "-595629172167/918944000000",
+        "6940323/12800000",
+        "-812017791/2048000000"
+      ],
+      "endpoint_values": [
+        "32337953746989056599351/70027943731200000000000000",
+        "242202847917273815431/273546655200000000000000",
+        "325950331831917056599351/70027943731200000000000000",
+        "236664471540107601187/21042050400000000000000"
+      ]
+    },
+    "left": {
+      "parameters": {
+        "N": "700",
+        "p0": "1/3",
+        "p1": "2/5",
+        "A": "7/10",
+        "d": "17/250",
+        "L": "1/100",
+        "U": "8/25",
+        "kappa": "7/5",
+        "xi": "23/25",
+        "cm": "6",
+        "zeta": "11/50",
+        "mass": "3/4",
+        "V": "13/125",
+        "c": "8/25",
+        "j0": "13/200",
+        "j1": "250/39",
+        "theta": "3/4",
+        "sine": "7/10",
+        "sine2": "1/2"
+      },
+      "W": [
+        "0",
+        "81318051/548800000",
+        "-394398993/1960000000",
+        "41781923/625000000",
+        "-14498327281/625000000000"
+      ],
+      "E_minus": [
+        "35504/43875",
+        "108310643/10383360",
+        "95325/13312"
+      ],
+      "E_plus": [
+        "100/351",
+        "635429/159744",
+        "76875/13312"
+      ],
+      "P_minus": [
+        "-1268/1096875",
+        "1097586209749/8903731200000",
+        "-43102729647/203840000000",
+        "41781923/625000000",
+        "-14498327281/625000000000"
+      ],
+      "P_plus": [
+        "-1/2457",
+        "90743901023/684902400000",
+        "-42699135897/203840000000",
+        "41781923/625000000",
+        "-14498327281/625000000000"
+      ],
+      "endpoint_values": [
+        "5442273179742877948871/97819312500000000000000000",
+        "28406876052696835855589/1528426757812500000000000",
+        "6749804142300684121067/7524562500000000000000000",
+        "2643892712789142121103/117571289062500000000000"
+      ]
+    }
+  },
+  "negative_controls": [
+    "kappa=3 is false on the retained left diameter",
+    "extending kappa=3 to diameter 1 is false at x=1",
+    "strict minorant inequality at either zero endpoint is rejected",
+    "centered replacement cannot be used for an uncentered perturbation",
+    "window mass 4/5 is false at actual n=200,p=1/2 mode",
+    "same right criterion at n=100 fails its own endpoint test",
+    "old affine square-root tangent cannot certify the new .03 join",
+    "frozen variance has n-1 summands: common-noise tau=(n-1)lambda/n"
+  ],
+  "proof_sha256": "2be0dc58973a281accb66cf3c8dffd7209592e68278ef4c0c46805708e374938",
+  "checker_sha256": "0f834fd4b7cf146e7eff1b0eb4fab35737f643fcf15251675b1b6f6dc25ee492"
+}

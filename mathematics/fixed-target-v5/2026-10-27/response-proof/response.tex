@@ -1,0 +1,292 @@
+\section{One response for the actual moment polynomial}
+
+We give a conditional, uniform improvement on a recorded central probability
+panel. It bounds all the moment terms of the fixed-target raw remainder
+together. The original gap integrals and the Fourier remainder remain
+explicit: the statement does not establish the acquisition of this panel
+for a fixed-target maximizer, or a complete local exclusion.
+
+Let $P$ have mean zero, variance one and bounded support, and put
+$p=P(X>0)$, $q=1-p$, $m=\E X_+=\E X_-$.
+Assume a central support gap $(-A,B)$, with $A,B>0$.
+Write $V=\E[X\mid\mathbf1_{X>0}]$, $W=X-V$,
+$a=m/q$, $b=m/p$, and $\theta=\E W^2$.
+Thus $V=-a$ or $b$, and $m^2=(1-\theta)pq$.
+Use the same actual gap quantities $J,J_1,J_2$ as in the conserved identity,
+and write $\sigma=\sqrt{10}$, $p_*=(4-\sigma)/2$ and
+$D=(3+\sigma)\rho-\gamma-3J$.
+For a law $Y$ in the original physical units, denote its moments by
+\[
+ (\rho_Y,\beta_Y,\gamma_Y,M_Y,E_Y,Z_Y)
+ =(\E|Y|^3,\E Y|Y|,\E Y^3,\E Y^4,\E|Y|^5,\E Y|Y|^3).
+\]
+The unsubscripted moments refer to $X$, and subscript $0$ refers to $V$.
+In particular, $V$ has variance $1-\theta$, not necessarily one.
+
+Fix $c=\CE=(3+\sqrt{10})/(6\sqrt{2\pi})$ and
+$\varphi=\phi(H/\sqrt n)$, where $\phi$ is the standard normal density
+and $H$ is the raw threshold.
+For any moment tuple $M$ define the polynomial
+\begin{align*}
+ T_c(M;J,J_1,J_2,H,\varphi)
+ ={}&c\left\{\frac32\beta J+3\rho J_1-3J_2
+ -\frac{E}{4}+\frac{\rho M_4}{2}+\frac32\beta\gamma-\frac\rho2\right\}\\
+ &+H\left\{c\left(Z-3\beta-\frac32\rho\gamma\right)
+                  +\varphi\left(J_1+\frac{M_4-3}{6}\right)\right\}
+ -H^2(c\rho+\varphi\gamma/2).
+\end{align*}
+Thus the actual raw remainder is $\mathcal R_c(H)=T_c(M(P);J(P),J_1(P),
+J_2(P),H,\varphi)+E_n(H)$.
+Every comparison below keeps the actual $J(P),J_1(P),J_2(P)$ on both sides.
+Evaluating this polynomial at $M(V)$ is not evaluating the remainder of
+a Bernoulli law.
+
+\subsection{Exact common-measure identity}
+On the two sign classes put
+\[
+ d\mu_+=W^2\mathbf1_{X>0}\,dP,\qquad
+ d\mu_-=W^2\mathbf1_{X<0}\,dP.
+\]
+For magnitude $x>0$ and conditional mean magnitude $v>0$, define
+\[
+ Q_3=x+2v,\quad Q_4=x^2+2vx+3v^2,\quad
+ Q_5=x^3+2vx^2+3v^2x+4v^3.
+\]
+The identity
+$x^j-v^j-jv^{j-1}(x-v)=(x-v)^2Q_j(v,x)$,
+together with conditional centering, gives the moment differences.
+For example, $\delta\rho=\sum_\pm\int Q_3\,d\mu_\pm$,
+$\delta\gamma=\int Q_3\,d\mu_+-\int Q_3\,d\mu_-$,
+and $\delta\beta=\mu_+(\R)-\mu_-(\R)$.
+
+For $\epsilon\in\{+1,-1\}$, with $v=b$ or $a$ respectively, put
+\begin{align*}
+ P_{0,\epsilon}(v,x)
+ ={}&-\frac{Q_5}{4}+\frac\rho2Q_4
+ +\left(\frac{M_0}{2}-\frac12+3J_1+\frac32\epsilon\beta\right)Q_3
+ +\frac32\epsilon(\gamma_0+J),\\
+ P_{1,\epsilon}(v,x)
+ ={}&\epsilon(Q_4-3)-\frac32(\epsilon\rho+\gamma_0)Q_3,\\
+ \mathscr P_\epsilon(v,x)
+ ={}&cP_{0,\epsilon}
+ +H\left(cP_{1,\epsilon}+\frac\varphi6Q_4\right)
+ -H^2(c+\epsilon\varphi/2)Q_3.
+\end{align*}
+Then the following identity is exact:
+\begin{equation}\label{response:exact}
+ T_c(M(P);J,J_1,J_2,H,\varphi)-T_c(M(V);J,J_1,J_2,H,\varphi)
+ =\sum_{\epsilon=\pm}\int\mathscr P_\epsilon\,d\mu_\epsilon.
+\end{equation}
+To check the products, use
+\[
+ \rho M_4-\rho_0M_0=\rho\delta M_4+M_0\delta\rho,
+ \quad\beta\gamma-\beta_0\gamma_0=\beta\delta\gamma+\gamma_0\delta\beta,
+ \quad\rho\gamma-\rho_0\gamma_0=\rho\delta\gamma+\gamma_0\delta\rho.
+\]
+The coefficients contain actual moments of the same law. No independent
+choice of incompatible moment maxima is asserted to be a law.
+
+\subsection{The cost of the common measures}
+Let $\Delta_A=a-A$, $\Delta_B=b-B$ and define
+\[
+ B_0=\frac{(6+2\sigma)(1-\theta)^{3/2}}{\sqrt{pq}}(p-p_*)^2,
+ \quad E_0=6m\{(A+B)(\Delta_A+\Delta_B)+\Delta_A\Delta_B\}.
+\]
+The weighted gap inequality gives, for $r=D-B_0-E_0$,
+\begin{equation}\label{response:budget}
+ 0\le\sum_\pm\int k_\pm\,d\mu_\pm\le r,
+ \quad
+ k_+(x)=(\sigma-1)(x+2b)+6B,
+ \quad k_-(x)=(\sigma+1)(x+2a)+6A.
+\end{equation}
+For completeness, the outer-gap estimate implies
+\[
+ D\ge(\sigma-1)\E X_+^3+(\sigma+1)\E X_-^3
+       -6mAB+6BR_++6AR_- ,\quad
+ R_+=\E X_+^2-mB,\ R_-=\E X_-^2-mA.
+\]
+Substitute
+$\E X_+^3=mb^2+\int(x+2b)\,d\mu_+$,
+$R_+=\mu_+(\R)+m\Delta_B$, and the reflected identities.
+The deterministic part is $B_0+E_0$, by
+$(\sigma+1)p^2+(\sigma-1)q^2-6pq=(6+2\sigma)(p-p_*)^2$.
+This proves \eqref{response:budget}. All costs and both measures are
+nonnegative. In particular a pointwise bound
+$\mathscr P_\pm\le Kk_\pm$, with $K\ge0$, spends this residual only once.
+
+\section{A uniform bound on the recorded central panel}
+
+The domain is taken from zero-based central row 19 of the retained
+confinement table. Its acquisition is a premise; historical success
+metadata is not a fresh verification. Assume simultaneously
+\begin{gather}
+ \frac{209}{500}\le p\le\frac{21}{50},\quad |X|\le\frac{46}{25},\quad
+ \theta\le\frac{12657}{10^6},\quad \rho\le\frac{214889}{200000},\label{response:domain}\\
+ \frac{72659}{500000}\le\beta\le\frac{174581}{10^6},\qquad
+ A\ge\frac{810731}{10^6},\quad B\ge\frac{284079}{250000}.
+ \nonumber
+\end{gather}
+These are closed-domain bounds for one actual law.
+
+\begin{theorem}\label{response:theorem}
+Under \eqref{response:domain}, for every integer $n\ge1$ and every real $H$,
+\begin{align}
+ \mathcal R_c(H)\le{}&T_c(M(V);J(P),J_1(P),J_2(P),H,\varphi)
+       +c\left(\frac{221}{200}+\frac9{50}|H|\right)r+E_n(H).
+ \label{response:main}
+\end{align}
+Here $c=\CE$, $\varphi=\phi(H/\sqrt n)$, and $r$ is the exact same-law
+residual in \eqref{response:budget}. The conclusion bounds the moment
+polynomial; it does not supply a Fourier bound for $E_n$ or replace the
+actual gaps by those of $V$.
+\end{theorem}
+
+\begin{proof}
+We first give rational consequences of the acquired domain:
+\begin{gather*}
+ a\in[21/25,213/250],\quad b\in[29/25,119/100],\quad m>49/100,\\
+ A>81/100,\ B>113/100,\quad 1\le\rho<43/40,\quad
+ 29/200<\beta<7/40,\\
+ 3/10<\gamma_0<1/3,\quad M_0<10/9,\quad
+ J<83/40,\quad \tfrac32(\gamma_0+J)>3,\quad J_1<1.
+\end{gather*}
+The conditional mean bounds follow by squaring
+$a^2=(1-\theta)p/q$ and $b^2=(1-\theta)q/p$.
+For $v=pq$, its interval is
+$[60819/250000,609/2500]$.
+The identities
+\[
+ \gamma_0=(1-\theta)^{3/2}(1-2p)/\sqrt v,
+ \qquad M_0=(1-\theta)^2(1/v-3)
+\]
+give the two skeleton bounds; squaring positive quantities suffices.
+Moreover $J\le\rho+2m\le\rho+1$, whereas $J\ge m(A+B)^2$.
+For the last bound, negative-threshold portions of $J_1$ are nonpositive.
+On positive outer gaps, $t-u\le t$; on the central positive portion
+$t-u=t+A$. Consequently
+\begin{align*}
+ J_1&\le\int_0^\infty t^2\tau(t)\,dt+\frac{AmB^2}{2}
+ =\frac{\E X_+^4}{3}+\frac{AmB^2}{2}\\
+ &<\frac{(46/25)(43/40)}3+\frac{(213/250)(119/100)^2}{4}
+ =\frac{28828879}{30000000}<1.
+\end{align*}
+The positive integrands justify summing countably many gaps. This uses the
+acquired support before the fourth moment is used.
+
+Since $\sigma>79/25$, define lower costs
+\[
+ d_+(x)=\frac{14739}{1250}+\frac{54}{25}x,\qquad
+ d_-(x)=\frac{14811}{1250}+\frac{104}{25}x.
+\]
+They are strictly positive and at most $k_+(x),k_-(x)$ respectively.
+The constant responses are bounded by
+\begin{align*}
+ P_{0,+}&\le p_+(x)=\frac{435879881}{36000000}
+              +\frac{320027}{90000}x-\frac{17}{400}x^2-\frac14x^3,\\
+ P_{0,-}&\le p_-(x)=\frac{895536247}{375000000}
+              +\frac{289067}{90000}x+\frac{47}{400}x^2-\frac14x^3.
+\end{align*}
+Indeed use $\rho/2\le43/80$ and
+$M_0/2-1/2+3J_1\le55/18$.
+On the positive class use $3\beta/2\le21/80$ and
+$3(\gamma_0+J)/2\le289/80$; on the negative class use
+$-3\beta/2\le-87/400$ and $-3(\gamma_0+J)/2\le-3$.
+For the resulting cubic, the $x^2$ and $x$ coefficients decrease with
+the mean magnitude, and the constant coefficient increases. Inserting
+the corresponding endpoints gives exactly these two polynomials.
+
+There is a finite, exact check of their ratio maxima. For a cubic $p$
+and affine $d=d_0+d_1x$, its derivative numerator is
+\[
+ G(x)=p_1d_0-p_0d_1+2p_2d_0x+(p_2d_1+3p_3d_0)x^2+2p_3d_1x^3.
+\]
+For each class, $G''<0$ and $G'$ is negative at the left endpoint;
+thus $G$ strictly decreases. Its signs at the two endpoints are opposite,
+so precisely one stationary maximum must be checked. Rational enclosing
+brackets and strict bounds are
+\[
+\begin{array}{c|c|c|c}
+ &x\text{ domain}&x\text{ at the stationary maximum}&p(x)/d(x)\text{ upper bound}\\\hline
+ +&[113/100,46/25]&[1194059,1194060]/10^6&221/200\\
+ -&[81/100,46/25]&[1662099,1662100]/10^6&3/8.
+\end{array}
+\]
+The endpoint values are smaller as well. These are rational inequalities:
+on a positive interval $[l,u]$, bound each monomial $p_jx^j$ using $u$
+when $p_j\ge0$ and $l$ otherwise, then divide by $d(l)>0$.
+The accompanying checker prints all exact coefficients, derivative signs,
+brackets and endpoint comparisons; no sampled positivity is used.
+
+For the linear term in $H$, use
+$0\le\varphi/c\le6/(3+\sqrt{10})<1$.
+After division by $c|H|$, the following four polynomials majorize its
+response, on the same respective magnitude domains:
+\[
+\begin{array}{c|c|c}
+\operatorname{sgn}H&\operatorname{sgn}X&\text{upper polynomial }s(x)\\\hline
+ +&+&-53693/20000+(62/75)x+(7/6)x^2\\
+ +&-&3189/1000-(19/80)x-(5/6)x^2\\
+ -&+&19321/5000-(83/400)x-x^2\\
+ -&-&-157893/62500+(88/125)x+x^2.
+\end{array}
+\]
+For example, the first is obtained from
+$(7/6)Q_4-3-(39/20)Q_3$, maximizing over $b\le119/100$.
+The others follow from
+$-(5/6)Q_4+3+(93/80)Q_3$,
+$-Q_4+3+(169/80)Q_3$, and $Q_4-3-Q_3$,
+respectively. The mean-endpoint directions follow by differentiating
+these displayed quadratics with respect to their mean magnitude.
+For each row, $(9/50)d-s>0$ throughout the closed interval: if its
+quadratic coefficient is negative, check both endpoints; otherwise
+its derivative is positive from the left endpoint, where its value
+is positive. All these endpoint tests are exact rational inequalities.
+
+Finally $\varphi<c$ implies $c>\varphi/2$, so the $H^2$ term of each
+$\mathscr P_\epsilon$ is nonpositive. We have proved pointwise
+\[
+ \mathscr P_\pm(v,x)\le c\left(221/200+(9/50)|H|\right)k_\pm(x).
+\]
+Integrate once against the two positive measures and use
+\eqref{response:exact}--\eqref{response:budget}.
+\end{proof}
+
+\section{What improves, and what remains}
+The gain is more than a new notation for the positive-measure lemma.
+At $H=0$, consider the explicit split-response bound that discards
+$-Q_5/4\le0$ before taking the positive-class supremum, and uses the same
+upper bounds for all remaining coefficients. Its required constant is
+at least its value at $x=46/25$, $b=119/100$:
+\[
+ K_{\rm split}\ge
+ \frac{(43/80)Q_4+(55/18+21/80)Q_3+289/80}{d_+(46/25)}
+ =\frac{173316497}{113512320}.
+\]
+In contrast, the combined constant is $221/200$, smaller by at least
+$239426917/567561600>0.4218$. For $r>0$ this gives a strict improvement
+of that uniform upper bound. This benchmark is an explicitly defined
+relaxation, not a claim that any law realizes its independent moment
+endpoints, or that this beats every previously implemented atlas bound.
+
+The domain has actual laws with positive noise. For example the masses
+\[
+ (29/100,29/100,21/100,21/100)\quad\text{at}\quad
+ (-533,-517,717,733)/617
+\]
+give mean zero, variance one, and conditional means $-525/617,725/617$.
+Their moments and support satisfy \eqref{response:domain}, with
+$0<\theta<12657/10^6$; exact checks are recorded. This law is only a
+non-vacuity and identity control, not a claimed maximizing witness.
+
+To turn \eqref{response:main} into a complete raw bound, one must still
+control the baseline polynomial with the original $J(P),J_1(P),J_2(P)$
+and the full signed Fourier term $E_n(H)$. Conditional mean replacement
+changes the gaps, and $V$ is not standardized when $\theta>0$.
+Consequently neither the Bernoulli theorem nor a putative identity
+$J(P)=J(V)$ supplies these missing steps. The independent conditional
+expectation response also does not remove the quadratic remainder in
+$f^n-g^n-ng^{n-1}(f-g)$ or provide high-frequency decay.
+Finally, the old table concerns its original attained-ratio acquisition;
+using its domain for a fixed-target maximizer requires the separately
+stated same-law acquisition/transfer hypotheses. No certificate or cell
+is removed by this result.

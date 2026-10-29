@@ -1,0 +1,49 @@
+{
+  "checks": {
+    "outer-check.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v12/mathematics/simplification-v12/2026-10-28/outer-check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.089197375,
+      "source_sha256": "2ab32c0bd1c07e4b6ac64ed7dceb8fd1ed999c0309fb580f28c3a4b79f8dcafb",
+      "stdout_sha256": "2bcceefc8063629d2e9c47487bcc512f9f547a0af302b9a0b79859abefe6bf28",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_FOUR_PHASE_INTERVALS_LAMBDA_LE_3_OVER_40"
+    },
+    "outer-actual.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v12/mathematics/simplification-v12/2026-10-28/outer-actual.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 2.935174958,
+      "source_sha256": "6bd960ed901a23fcaafee00a792f8d6b640da6af98004f27d704bbc8f1b00853",
+      "stdout_sha256": "faef4182df2186dfdae3c487dd3ef5bcbcd49623f3e99a4992ac69141b0ece9d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_EXACT_IID_OUTER_PHASE_EVENTS"
+    },
+    "negative-actual.py": {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/simplification-v12/mathematics/simplification-v12/2026-10-28/negative-actual.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.880885708,
+      "source_sha256": "a18f16ff095af63698c4b897391d86f300708307cd4db0bab2be9c6a67c6c1b6",
+      "stdout_sha256": "fb0d91a4736a89c0ad875de9067b2c9f9b4ab546647710ea97369cf885cd89d2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS_EXACT_IID_NEGATIVE_INNER_EVENTS"
+    }
+  },
+  "proof_sha256": "72ff7ae27bdbecfa0a535dd62e52417de9bab370b7004af8b86e9e99f491facc",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "utc": "2026-10-28T18:32:35.292349+00:00"
+}

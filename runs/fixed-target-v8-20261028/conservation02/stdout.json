@@ -1,0 +1,42 @@
+{
+  "status": "PASS_EXACT_OFF_CONTACT_CONSERVATION",
+  "finite_laws": 7,
+  "law_index_threshold_cases": 111,
+  "affine_coefficient_checks": 666,
+  "threshold_directions": [
+    "negative",
+    "positive",
+    "zero"
+  ],
+  "threshold_atom_cases": 66,
+  "upper_endpoint_mutations_detected": 52,
+  "nonzero_boundary_residual_checks": 658,
+  "nonzero_first_moment_residual_checks": 550,
+  "missing_H_squared_excess_detected": 582,
+  "endpoint_example": {
+    "law": "symmetric Bernoulli",
+    "n": 4,
+    "H": "-2",
+    "correct_L": "0",
+    "closed_upper_L": "1/8"
+  },
+  "bounded_rho_non_UI3_controls": [
+    {
+      "far_atom": "10",
+      "rho": "19/10",
+      "tail_third_moment": "1"
+    },
+    {
+      "far_atom": "100",
+      "rho": "199/100",
+      "tail_third_moment": "1"
+    },
+    {
+      "far_atom": "1000",
+      "rho": "1999/1000",
+      "tail_third_moment": "1"
+    }
+  ],
+  "continuous_support_negative_control_Kq_over_sqrt3": "3/40",
+  "scope": "Exact finite-law/convolution and affine algebra controls only; no tested law asserted maximizing, no inherited program imported."
+}

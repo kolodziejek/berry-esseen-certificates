@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/moment-coupling-v6/mathematics/fixed-target-v6/2026-10-27/signed_review_check.py", line 85, in <module>
+    if __name__=='__main__':main()
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/moment-coupling-v6/mathematics/fixed-target-v6/2026-10-27/signed_review_check.py", line 65, in main
+    for p,sha in PINS.items():need(sha256(blobs[p]).hexdigest()==sha,'review source hash '+p)
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/moment-coupling-v6/mathematics/fixed-target-v6/2026-10-27/signed_review_check.py", line 14, in need
+    if not x:raise ValueError(message)
+ValueError: review source hash mathematics/fixed-target-v6/2026-10-27/signed-check.py

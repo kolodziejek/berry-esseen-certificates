@@ -68,23 +68,17 @@ $\Theta<1$ an upper bound for $\theta$, and $[l,u]$ the probability panel. Write
  K&=\min\{3(s_l+1)B,\ 3(s_l+3)A\}>0,\qquad
  r=d_{\rm new}-b_* .
 \end{align*}
-Lemma~\ref{ms:simultaneous-gap} gives
-\[
- nD\ge Nb_*+6N(1-\Theta)(A+B)d_Y
-                 +\frac{K(1-\Theta)}{v_*}\lambda.
-\]
-If $r<0$, the panel contains no extremal law. If $r>0$, put
+Apply Theorem~\ref{ms:joint-resource} with $d_D=d_{\rm new}$,
+$b=b_*$ and $S_*=A+B$. Its premise follows from
+Lemma~\ref{ms:simultaneous-gap}; all coefficients above are rounded
+in the direction required there. For $r>0$ its intercepts are
 \[
  \Lambda_{\rm new}=\frac{Nv_*r}{K(1-\Theta)},\qquad
  d_{{\rm new,in}}=\frac{r}{6(1-\Theta)(A+B)}.
 \]
-Then the \emph{single} residual gives
-\[
- \frac{d_Y}{d_{{\rm new,in}}}
-       +\frac{\lambda}{\Lambda_{\rm new}}\le1.
-\]
-If $r=0$, Theorem~\ref{ms:joint-resource} gives $d_Y=\lambda=0$.
-For the coefficient bounds used below, none of the panels has $r=0$.
+They satisfy $d_Y/d_{{\rm new,in}}+\lambda/\Lambda_{\rm new}\le1$.
+For $r<0$ the panel is empty, and for $r=0$ both coordinates vanish.
+None of the panels used below has $r=0$.
 
 On the $47$ central panels $p\in[(190+i)/500,(191+i)/500]$,
 $0\le i\le46$, the coefficients are known only through outward roundings:

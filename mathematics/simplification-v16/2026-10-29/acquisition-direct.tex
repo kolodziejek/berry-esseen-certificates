@@ -1,0 +1,287 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\title{Two contact rays replace the probability panels at large indices}
+\author{}\date{29 October 2026}
+\begin{document}\maketitle
+
+The coarse acquisition need export only two numbers to the comparison at
+$n\ge700$: a bound for $nD$ and a bound for the raw threshold. Its later
+probability-panel calculations can be bypassed. The argument below acquires
+one probability interval and a common conditional amplitude $3/5$ using
+only scalar inequalities and two contact rays. It does not replace the
+Fourier calculation that produced the coarse bound.
+
+Put $\sigma=\sqrt{10}$, $p_*=(4-\sigma)/2$, and
+$B_*=32.20665378$. Every terminating decimal below is an exact rational.
+For a compactly supported centered variance-one law define
+\[
+ \rho=\E|X|^3,\quad\gamma=\E X^3,\quad\beta=\E[X|X|],\quad
+ \tau(t)=\E[X\mathbf1_{X\ge t}],
+\]
+\[
+ J=\sum_{(a,b)}\tau_{a,b}(b-a)^2,\qquad D=(3+\sigma)\rho-\gamma-3J.
+\]
+The sum ranges over bounded open support gaps. There are at most countably
+many; all nonnegative gap sums are obtained by monotone convergence from
+finite subcollections.
+
+\begin{theorem}[Scalar post-entry acquisition]\label{a:main}
+Suppose $n\ge700$ and $nD\le B_*$. Then zero is outside the closed support,
+and there is an actual central gap $(-A_-,A_+)$ with positive endpoints.
+For the actual sign $B=\mathbf1_{X>0}$ put
+\[
+ p=\Pp(B=1),\quad q=1-p,\quad v=pq,\quad m=\E X_+=\E X_-,\quad
+ \ell=m/v,\quad X=\ell(B+U-p).
+\]
+The conditional noises $U_j$ are centered. With
+\[
+ \theta=\E\{X-\E(X\mid B)\}^2,\quad
+ a_0=p-A_-/\ell,\quad a_1=q-A_+/\ell,\quad d=a_0+a_1,
+ \quad\lambda=n\E U^2=n\theta/\ell^2,
+\]
+one has
+\begin{gather}
+ 3/8<p<93/200,\qquad \theta<9/2500,\qquad d<1/250,
+ \qquad \ell>499/250,\label{a:small}\\
+ \rho<9/8,\qquad .066148<\beta<.2527,\qquad
+ \lambda<7/20.\label{a:out}
+\end{gather}
+If $p\le2/5$, then additionally $\lambda<8/25$.
+No contact, predecessor, exported probability interval or numerical support
+radius is a premise of these conclusions.
+\end{theorem}
+
+\section{The actual gap and a short scalar localization}
+Throughout this proof $D< D_0:=.047$, since $700D_0>B_*$.
+If zero belonged to the support, every gap would lie on one side of it and
+$(b-a)^2\le2\int_a^b|t|\,dt$. Tonelli gives $J\le\rho$, hence
+$D\ge\sigma\rho-\gamma\ge\sigma-1>D_0$, a contradiction.
+Centering and positive variance supply both signs and the stated gap.
+Conditional means give $a_0,a_1\ge0$ and $0\le d<1$.
+Write $w=1-\theta=v\ell^2$ and
+\[
+ Q(p)=(\sigma+1)p^2+(\sigma-1)q^2-6pq
+      =(6+2\sigma)(p-p_*)^2.
+\]
+For the residual-noise measures
+$\int f\,d\mu_\pm=\E[(X-\E(X\mid B))^2\mathbf1_{\{\pm X>0\}}f(|X|)]$,
+the elementary outer-gap integral bound gives
+\begin{equation}\label{a:budget}
+ D\ge\ell wQ+E_0+\int k_+d\mu_++\int k_-d\mu_-,
+\end{equation}
+where
+\[
+ E_0/\ell=6w\{d(1-d)+a_0a_1\},\quad
+ k_+(x)=(\sigma-1)(x+2\ell q)+6A_+,
+\]
+\[
+ k_-(x)=(\sigma+1)(x+2\ell p)+6A_-.
+\]
+Indeed $J_o^+\le2\int_{A_+}^{\infty}(t-A_+)\tau(t)dt
+=\E[X_+(X_+-A_+)^2]$, and similarly on the negative side. Add
+$m(A_-+A_+)^2$ and substitute the conditional means. This is the common
+cost identity, before discarding any positive term. It applies to endpoint
+atoms and countably many gaps.
+
+The weaker gap bound $J\le\rho+2mA_-A_+$ gives
+\[
+ A_-A_+\ge z:=\frac{3.162277660-1-D_0}{3}>0,\qquad w\ge A_-A_+\ge z.
+\]
+Here $\rho\ge1$, $\gamma\le\rho$, $m\le1/2$, and
+$A_-A_+\le(\ell p)(\ell q)=w$ were used. Since all terms in
+\eqref{a:budget} are nonnegative,
+\[
+             D\ge w^{3/2}Q/\sqrt v\ge2z^{3/2}Q.
+\]
+The positive-base squared tests $4z^3Q_-(.36)^2>D_0^2$ and
+$4z^3Q_-(.48)^2>D_0^2$, where $Q_-$ replaces $\sigma$ by its lower
+rational bound, exclude $p\le.36$ and $p\ge.48$. This uses the monotonicity
+of the squared distance to $p_*\in(.36,.48)$, not an initial probability
+panel.
+
+On $.36<p<.48$, $\ell\ge2\sqrt z>1.67$ and
+\[
+ \frac{k_+}{\ell}\ge q\{(\sigma+5)z/w+2(\sigma-1)\}>5.2,
+ \quad
+ \frac{k_-}{\ell}\ge p\{(\sigma+7)z/w+2(\sigma+1)\}>5.2.
+\]
+The first inequality uses $x\ge A_+$ and
+$A_+\ge z/(\ell p)$; the second is its signwise counterpart.
+Since $w\le1$, the asserted constants follow at $q=.52,p=.36$.
+The total mass of $\mu_++\mu_-$ is $\theta$, so
+$D>1.67(5.2)\theta$ unless $\theta=0$. Consequently
+$\theta<.006$, $w>.994$, and $\ell>1.99$.
+Also $A_-+A_+\ge2\sqrt z$ gives
+\[
+ d\le1-2\sqrt{zv/w}<.2,
+ \qquad v\ge .36(.64).
+\]
+
+Dropping $a_0a_1$ and using the lower endpoints in the kernels gives
+\begin{equation}\label{a:direct}
+ D\ge\ell\{wQ+6wd(1-d)+\theta\min(C_+-b_+d,C_--b_-d)\},
+\end{equation}
+where $C_+=3(\sigma+1)q$, $C_-=3(\sigma+3)p$,
+$b_+=\sigma+5$, and $b_-=\sigma+7$.
+On the current domain both noise coefficients are positive, and each
+branch increases in $d$, since
+$6(.994)(.6)-.006(3.162277661+7)>0$.
+The inward term alone excludes $d\ge.004$:
+\[
+        1.99(.994)6(.004)(.996)>.047.
+\]
+Here $d(1-d)$ increases up to $1/2$, so no larger root was selected.
+
+At $d=0$, the derivative with respect to $\theta$ of
+$\sqrt{(1-\theta)/v}\{(1-\theta)Q+\theta C\}$ has the sign of
+$(2-3\theta)C-3(1-\theta)Q$. It is positive because
+$\theta<.006$, $C>6.49$, and $Q<.05$ on $[.36,.48]$.
+Thus \eqref{a:direct} implies $D\ge Q/\sqrt v$.
+On $[.36,3/8]$ this ratio decreases, and the squared endpoint test
+$Q_-(3/8)^2>D_0^2(3/8)(5/8)$ excludes that interval.
+On $[93/200,.48]$, use $Q\ge Q(93/200)>D_0/2$ and $\sqrt v\le1/2$.
+This proves the probability interval in \eqref{a:small}; no incorrect
+monotonicity of $Q/\sqrt v$ below $1/2$ is needed on this right interval.
+
+Now $C\ge\min\{3(\sigma+1)(107/200),3(\sigma+3)(3/8)\}$.
+The bound $D\ge\ell\theta C$, with $\ell>1.99$, gives
+$\theta<.0036$ and therefore $\ell>1.996$.
+The exact identity
+\[
+ \rho=w^{3/2}\rho_B(p)+\int(x+2\ell q)d\mu_+
+                         +\int(x+2\ell p)d\mu_-,\quad
+ \rho_B(p)=\frac{1-2v}{\sqrt v},
+\]
+and $k_+\ge(\sigma-1)(x+2\ell q)$,
+$k_-\ge(\sigma-1)(x+2\ell p)$ show
+\[
+ \rho\le\rho_B(p)+D/(\sigma-1)
+ <1.1+.047/(54/25)<9/8.
+\]
+Here $v\ge15/64$ and $\rho_B<1.1$ follows by a rational square test.
+The exact signed-second-moment identity gives
+$1-2p-2q\theta\le\beta\le1-2p+2p\theta$.
+Its two endpoint evaluations give \eqref{a:out}.
+
+\section{Noise from the same marginal budget}
+The noise estimate uses the one-sided cubic inequality
+$\E Z^3\le at-(t^2/a)$ for a centered $Z\le a$, $t=\E Z^2$.
+It follows by expanding $\E[(a-Z)(Z+t/a)^2]\ge0$.
+When $a=0$, centering forces zero noise and its term is absent.
+For $\lambda_0=nq\E U_0^2$, $\lambda_1=np\E U_1^2$ and any
+$\bar d\ge d$, the common budget yields
+\begin{equation}\label{a:cubicbudget}
+ nD\ge\ell^3\{nvQ+\lambda_0Y_0(p)+\lambda_1Y_1(p)\},
+\end{equation}
+\begin{align*}
+ Y_0&=3(\sigma+3)p-(\sigma+7)\bar d
+               +2\sqrt{6(1-\bar d)(\sigma+1)p},\\
+ Y_1&=3(\sigma+1)q-(\sigma+5)\bar d
+               +2\sqrt{6(1-\bar d)(\sigma-1)q}.
+\end{align*}
+For clarity, before arithmetic--geometric mean the extra terms are
+$6nv\{d(1-d)+a_0a_1\}$ and
+$(\sigma+1)\lambda_0^2/(nqa_0)+(\sigma-1)\lambda_1^2/(npa_1)$.
+Use $d(1-d)+a_0a_1\ge(1-\bar d)(a_0+a_1)$ and pair each summand
+with its corresponding reciprocal term. This proves
+\eqref{a:cubicbudget} without an independent allocation of the conditional
+variances; it is the general v13 inequality, not its old numerical table.
+
+Take $\bar d=.004$. Both $Y_0$ and $Y_1$ increase in their respective
+arguments $p$ and $q$. Exact root comparisons at $p=3/8,q=107/200$ give
+$Y_0>12.8$ and $Y_1>11.8$: lower bounds $3$ and $2.6$ suffice for the two
+square roots. On $p\le.4$, use $q\ge.6$ and square-root lower bound
+$2.7$ to get $Y_1>12.8$. For $\lambda>0$, since $\lambda_0+\lambda_1=\lambda$,
+\[
+ B_*\ge nD>1.996^3(11.8)\lambda,
+ \qquad \lambda<.35;
+ \quad p\le.4\Longrightarrow B_*\ge nD>1.996^3(12.8)\lambda,
+ \quad \lambda<.32.
+\]
+At zero noise the conclusions are immediate. This finishes
+Theorem~\ref{a:main}.
+
+\section{One pair of contact rays}
+\begin{theorem}[A common conditional strip]\label{a:strip}
+Under Theorem~\ref{a:main}, suppose also that $(X,H)$ is an attained
+fixed-target pair at $C_E$ with nonnegative excess and true sharp predecessor
+$C_{n-1}\le C_E$, so that the retained closed-support contact/heat bounds
+below apply. Then
+\[
+                  -.6<U_0\le a_0,\qquad -a_1\le U_1<.6.
+\]
+No bound on $H$ is needed for this support conclusion.
+\end{theorem}
+Put $S=81/80$, $\eta=8/875$, and $c_0=819/2000<C_E$.
+For $F_v(x)=\Phi(x/\sqrt v)$ the retained contact function is
+\[
+ \frac{H_n(H,t)}{n^{3/2}}=F_{n-1}(H-t)-F_n(H)+tF_n'(H)
+                                -\frac{t^2-1}{2}F_n''(H).
+\]
+Closed-support contact gives
+$0\le H_n(H,\pm t)+C_EQ(t;r,b)$ after discarding the nonpositive
+excess term. The all-threshold heat lemma gives, for $t>\sqrt3$,
+\[
+ H_n(H,\pm t)\le h(t):=S^3\left\{\frac25\left(
+ \frac{t^3-3t}{6}+\frac{|t^4-6t^2+3|}{72}\right)
+ +\frac{t^5}{4100}+\frac{3t}{820}+\frac{17(3t^2-2)}{78720}\right\},
+\]
+\[
+ |\partial_tH_n(H,\pm t)|<g(t):=\frac25(t^2/2+1/2+\eta).
+\]
+At a support contact the upper expression is
+$H_n(H,\pm t)+C_EQ(t;r,b)$, where
+$Q(t;r,b)=-t^3+3rt^2/2+3bt+\eta r$.
+Here $r=9/8$, with $b=-.066148$ on the negative ray and $b=.2527$ on
+the positive ray. These upper replacements are sign-correct.
+
+Use just the two rational boundaries
+\[
+              t_-=1.996(3/8+.6),\qquad
+              t_+=1.996(107/200+.6).
+\]
+At each, the exact checker proves the eight strict inequalities
+\[
+ t^2>3,\quad h+c_0Q<0,\quad Q,Q',Q''<0,
+ \qquad L,L',L''<0,\quad L=g+c_0Q'.
+\]
+The boundary upper bounds are respectively less than $-.40$ and $-.13$.
+Since $Q'''=-6$ and $L''=2/5-6c_0<0$, all continuation signs persist
+along the entire ray. The derivative of the actual upper function is
+strictly below $L$, because $Q'<0$ and $C_E>c_0$. Thus both exterior
+rays, including boundary atoms, contain no support point. This differentiates
+the exact heat expression, not its absolute-value majorant.
+
+Finally $X>-t_-$ implies $U_0=X/\ell+p>-(3/8+.6)+p>-.6$.
+Similarly $X<t_+$ implies $U_1=X/\ell+p-1<107/200+.6+p-1<.6$.
+The inner endpoints and conditional centering are the actual ones already
+defined. This proves Theorem~\ref{a:strip}.
+
+\section*{The resulting short chain, and its limits}
+The selected coarse-entry theorem exports $nD\le B_*$ and
+$|H|\le1.83605680<1.84$. The two theorems above then supply, on one
+interval $(.375,.465)$, the support and noise premises for the v15 local
+unions: use the left union when $p\le.4$ and the right union otherwise.
+Their strict signed conclusions exclude an acquired nonnegative witness
+at every $n\ge700$.
+
+No v10 numerical localization, one-pass panel export, v11 left-strip test,
+v13 degree-eight noise table or low/high-probability exclusion is needed
+on this route. The underlying common-cost and one-sided-cubic lemmas remain
+and have been displayed here. The manuscript's two coarse passes, four
+signed passes and complete Fourier inputs remain ancestors of $B_*$ and
+the raw-threshold ceiling. Their internal panels and intermediate support
+gaps cannot be erased merely because these outputs are enough downstream.
+The strict predecessor, attainment, reflection, and finite base are still
+separate obligations. In particular this is not an unconditional cutoff at 700.
+
+The companion audit gives source locations and a dependency graph. Its
+arithmetic script uses exact rationals and exact $\mathbb Q(\sqrt{10})$
+actual-law checks. A rare conditional atom at $-.8$ satisfies the geometric
+budget and even the old radius $3.14$, but violates the $.6$ strip; it
+explicitly shows why contact cannot be dropped.
+\end{document}

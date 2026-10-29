@@ -1,0 +1,22 @@
+{
+  "status": "PASS_EXPECTED_REJECTIONS",
+  "source_sha256": "da583ea6712fa159345aa22d402faaa5cd60c518aec51c8aff033c09df636e11",
+  "checker_sha256": "3f19b5a048b88d7351d407d253286c2d5478e70a2f68a2d2c527f897bd4dd156",
+  "records": [
+    {
+      "label": "changed",
+      "returncode": 1,
+      "elapsed_seconds": 0.08582975
+    },
+    {
+      "label": "missing-option",
+      "returncode": 2,
+      "elapsed_seconds": 0.08863425
+    },
+    {
+      "label": "missing-file",
+      "returncode": 1,
+      "elapsed_seconds": 0.086110042
+    }
+  ]
+}

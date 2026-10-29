@@ -1,0 +1,40 @@
+{
+  "result": "PASS",
+  "source_sha256": "8eb6fc89d82eb458fef45fb9a2f9783c1cae2705c908dcb8bebba725a4a36461",
+  "checker_sha256": "b647fe55bbde358bf55ed7c59d94e0dd90b7c77df85e9869500d6dcfc594e5e7",
+  "exact_gates_and_controls": 2638,
+  "actual_curvature_cases": 72,
+  "negative_controls": [
+    "drop c sqrt(T)",
+    "extend favorable rho sign below one-third",
+    "extend first cutoff below one-third",
+    "drop near-mesh c ceiling"
+  ],
+  "lambda_bound": "1680/19273",
+  "negative_H_error": "2669950133/1797120000",
+  "positive_H_error": "49577387/71884800",
+  "reserve_less_target_margin": "87674999/8985600000",
+  "integer_cutoffs": [
+    [
+      "1/3",
+      125
+    ],
+    [
+      "7/20",
+      195
+    ],
+    [
+      "3/8",
+      490
+    ],
+    [
+      "39/100",
+      1140
+    ],
+    [
+      "2/5",
+      2681
+    ]
+  ],
+  "constructor_code_imported": false
+}

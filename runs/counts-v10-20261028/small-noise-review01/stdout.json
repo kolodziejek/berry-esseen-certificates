@@ -1,0 +1,36 @@
+{
+  "status": "PASS_INDEPENDENT_SMALL_NOISE_POLYNOMIAL_AND_MARGIN_REVIEW",
+  "scope": "Independent 40-coefficient tensor proof of the two quartic rectangles, exact final margins and switch gates; analytic normalization/tail review separately documented",
+  "constructor_imports": false,
+  "quartic_rectangles": [
+    {
+      "sigma": 1,
+      "b": "-21/20",
+      "target": "4/5",
+      "zmax": "2",
+      "coefficient_count": 20,
+      "minimum": "54845200937/1898794406250"
+    },
+    {
+      "sigma": -1,
+      "b": "19/20",
+      "target": "1",
+      "zmax": "3/2",
+      "coefficient_count": 20,
+      "minimum": "8089/45927"
+    }
+  ],
+  "inner_margin_above_1_over_100": "219609181/27367410000",
+  "outer_negative_margin_at_upper_noise": "39996724269/131600000000",
+  "outer_positive_margin_at_upper_noise": "4806449287359/5468750000000000",
+  "negative_controls": [
+    "The stronger own-count constant11/10 is false at the negative rectangle endpoint",
+    "The quartic denominator4 is not an indicator minorant at x/alpha=4/3"
+  ],
+  "reviewed_source_pins": {
+    "small-noise.tex": "3ff41e1f9be57b844915a07d02d699987ad696b7756e00b5c96d4a36441e6526",
+    "small_noise_check.py": "823c74206cfcf7c12610cecfda53c7b033ba272db54945f297970e557c78a8c4"
+  },
+  "reviewer_script_sha256": "a7bab910e350d9a30b37faf63165f0e75e3d4ee1409043cdfa1a708699f80253",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]"
+}

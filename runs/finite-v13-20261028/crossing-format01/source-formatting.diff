@@ -1,0 +1,87 @@
+--- reviewed-b0f2-source.tex
++++ final-0dda-source.tex
+@@ -1,6 +1,7 @@
+ \documentclass[11pt]{article}
+ \usepackage[a4paper,margin=25mm]{geometry}
+-\usepackage{amsmath,amssymb,amsthm,microtype,hyperref}
++\usepackage{amsmath,amssymb,amsthm,microtype}
++\usepackage[hidelinks]{hyperref}
+ \newtheorem{theorem}{Theorem}\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+ \title{Combining all conditional counts by one crossing identity}
+ \author{}\date{28 October 2026}
+@@ -50,22 +51,22 @@
+ 
+ Set $m=1-a_1$. If $x<m$, both terms involving $D$ in the definition
+ of $h$ vanish, so
+-\[
+-                         h(x)=\E(x-U_0)_+\ge0.             \tag{3}
+-\]
++\begin{equation}\label{eq:hlow}
++                         h(x)=\E(x-U_0)_+\ge0.
++\end{equation}
+ If $x\ge m>a_0$, then $\E(x-U_0)_+=x$. Since $\E D=1$,
+ put--call parity and the bound $D\le1+A_1$ give
+-\begin{align*}
+- h(x)&=\Pp(D>x)-\E(D-x)_+\\
+-     &\ge(1-A_1-a_1)\Pp(D>x)\ge b\Pp(D>x).                \tag{4}
+-\end{align*}
++\begin{align}\label{eq:hhigh}
++ h(x)&=\Pp(D>x)-\E(D-x)_+\notag\\
++     &\ge(1-A_1-a_1)\Pp(D>x)\ge b\Pp(D>x).
++\end{align}
+ This includes $x=m$ with its strict survival probability.
+ 
+ Let $L_j(t)=\E(t-T_j)_+$. The variables omitted from $R_i$ are
+ independent of it. Consequently the definition of $h$ gives
+-\[
+- \E h(R_i)=L_{i-1}(t)-L_i(t)-\Pp(T_i\le t).                \tag{5}
+-\]
++\begin{equation}\label{eq:telescoping}
++ \E h(R_i)=L_{i-1}(t)-L_i(t)-\Pp(T_i\le t).
++\end{equation}
+ Sum over $i$. The stop-loss expectations telescope, with
+ $L_0(t)=t-\E T_0=t$ and $L_n(t)=0$. Moreover
+ $\E K=\sum_{i=1}^n\Pp(T_i\le t)$. This proves
+@@ -73,11 +74,11 @@
+ 
+ For the stronger age bound, condition on $R_i=x$. Crossing at $i$
+ means $U_{0i}\le x<D_i$, and its age is $x-U_{0i}$.
+-If $x<m$, then $D_i>x$ surely, and (3) is at least the conditional
++If $x<m$, then $D_i>x$ surely, and \eqref{eq:hlow} is at least the conditional
+ expected value of $\min\{x-U_{0i},b\}$ on this event.
+ If $x\ge m$, then $U_{0i}\le a_0<x$ surely, the crossing probability
+ is $\Pp(D_i>x)$, and its age is at least $m-a_0\ge b$.
+-Now (4) applies. Summing over the unique crossing proves
++Now \eqref{eq:hhigh} applies. Summing over the unique crossing proves
+ \eqref{eq:gain}. All expectations are finite, and no stopping-time or
+ limiting argument has been used.
+ \end{proof}
+@@ -90,8 +91,8 @@
+             \Pp(Y_1+\cdots+Y_n\le t)=\E F_B(K).
+ \end{equation}
+ The coupling is auxiliary: it preserves each conditional law, hence
+-preserves the actual iid mixture. It does not impose independence between
+-$K$ and the binomial count or substitute an optimized relaxation.
++preserves the actual iid mixture. Only those conditional marginals are
++needed; no claim about the original joint law of its count and $K$ is made.
+ 
+ For the acquired right strip, $a_0+a_1\le.072$ and $A_1=.6$, one may
+ take $b=.328$ in \eqref{eq:gain}; for the left strip, inward sum at most
+@@ -111,13 +112,13 @@
+ \section*{The weighted identity isolates the remaining difficulty}
+ Write $\pi_j=\Pp(B_n=j)$, $L_j(t)=\E(t-T_j)_+$,
+ $B_j(t)=L_j(t)-(t-j)_+\ge0$ (by Jensen), and
+-$g_i(t)=\E h(R_i)\ge0$. Multiply (5) by $\pi_i$ and sum by parts.
++$g_i(t)=\E h(R_i)\ge0$. Multiply \eqref{eq:telescoping} by $\pi_i$ and sum by parts.
+ Because the count-zero CDF is one and $L_0=t$, $L_n=0$, this gives
+-\[
++\begin{equation}\label{eq:parts}
+  \Pp(Y_1+\cdots+Y_n\le t)
+  =\pi_0+\pi_1t+\sum_{j=1}^{n-1}(\pi_{j+1}-\pi_j)L_j(t)
+-                 -\sum_{i=1}^n\pi_i g_i(t).                \tag{7}
+-\]
++                 -\sum_{i=1}^n\pi_i g_i(t).
++\end{equation}
+ Let $k=\lfloor t\rfloor$ and $u=t-k\in[0,1)$. Replacing $L_j$ by
+ $(t-j)_+$ in the first three terms gives the linear interpolation
+ $F_B(k)+u\pi_{k+1}$. Hence the exact formula is

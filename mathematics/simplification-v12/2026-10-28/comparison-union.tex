@@ -1,0 +1,129 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\newtheorem{theorem}{Theorem}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\title{The enlarged direct comparison: what has been removed and what remains}
+\author{}\date{28 October 2026}
+\begin{document}\maketitle
+
+The count comparison now needs only an own-count moment estimate and an
+incoming-tail estimate. The same conditional third moments enter both the
+own-count loss and the marginal penalty; pricing them together avoids paying
+twice for incompatible worst cases. On the right, the first incoming count
+also retains the two different jump bounds. All later counts have one common
+variance bound, which gives a complete factorial tail. This is the selected
+route for further simplification.
+
+\begin{theorem}[Union of the reviewed component domains]\label{thm:union}
+Let $n\ge42$, $Y=B+U$ with $B$ Bernoulli of parameter $p$ and
+$\E(U\mid B)=0$. Put $v=p(1-p)$, $s=\E U^2>0$, $\lambda=ns$,
+$X=(Y-p)/\sqrt{v+s}$, $\rho=\E|X|^3$, and
+$\rho_B=(1-2v)/\sqrt v$. Assume $|H|\le46/25$.
+Let $S_n$ be the sum of independent copies of $X$ and $F_B$ the
+$\mathrm{Bin}(n,p)$ CDF. Each row below supplies an integer $k$ such that,
+with $\delta=k-np$,
+\begin{align*}
+ \Delta_C={}&\sqrt n\{\Pp(S_n\le H)-\Phi(H/\sqrt n)\}-C\rho\\
+ &-\sqrt n\{F_B(k)-\Phi(\delta/\sqrt{nv})\}+C\rho_B<0.
+\end{align*}
+The support convention in the table is
+$-A\le U_0\le a_0$, $-a_1\le U_1\le A$, with $a_j\ge0$.
+\[
+\begin{array}{c|c|c|c|c}
+ p&A&a_0+a_1\le&0<\lambda\le&C\\\hline
+ [1/4,2/5]&7/10&17/250&1/100&[819/2000,41/100]\\
+ {[2/5,53/100]}&3/5&9/125&3/40&[2/5,\infty)
+\end{array}
+\]
+The left row has the stronger conclusion $\Delta_C<-\lambda/100$.
+The right row asserts only strict negativity on its enlarged domain.
+The previously established right theorem with $\lambda\le.03$ retains
+its stronger margin, and the older $\lambda\le.02$ theorem for all
+$C\ge0$ is unchanged.
+\end{theorem}
+\begin{proof}
+In the left row choose the phase $u=np+H\sqrt{v+s}-k$ in
+$[-.218,.782]$ and apply LEFT-01 in \texttt{leftcount.tex}.
+In the right row choose $u\in[-.272,.728]$. Both intervals have
+width one, so such anchors exist. If $\lambda\le.03$, the existing
+theorem in \texttt{counts-v11.tex} applies. For $.03\le\lambda\le.075$,
+the negative inner phase $u\in[-.15,0]$ is covered by
+\texttt{compound-proof.tex}; the other phases are covered by
+\texttt{outer.tex}. Endpoints are included in both adjoining intervals,
+and no phase or noise gap remains. Each component uses the same actual
+conditional laws, and each retains strict outgoing and closed incoming
+events. No optimizer of a moment relaxation is substituted for an iid law.
+\end{proof}
+
+\section*{How this joins to the acquired witness}
+For an original standardized witness $Z$, let $B$ label its two conditional
+parts and $m_j=\E(Z\mid B=j)$, with separation $\ell=m_1-m_0>0$.
+Then $m_0=-p\ell$, $m_1=(1-p)\ell$. Put
+\[
+ U=(Z-m_B)/\ell,\qquad Y=B+U=(Z-m_0)/\ell.
+\]
+These are the actual marginal conditional variables. If
+$\theta=\E(Z-m_B)^2$, then
+\[
+ s=\theta/\ell^2,\qquad v+s=1/\ell^2,\qquad
+ (Y-p)/\sqrt{v+s}=Z,\qquad\lambda=n\theta/\ell^2.
+\]
+Thus the raw sum threshold $H$ and the original law are preserved.
+The v11 left support rays imply the left amplitude and inward assumptions;
+the v10/v11 right strips imply the right ones. Those acquisition results
+retain their contact, heat, actual-index and sharp-predecessor hypotheses.
+The direct comparison itself has none of those premises, but it cannot
+supply its own strip or threshold bounds.
+
+At the sharp Bernoulli constant
+$C_E=(3+\sqrt{10})/(6\sqrt{2\pi})$, both coefficient restrictions hold.
+The external strict finite-$n$ Bernoulli theorem bounds the bracket at
+every integer anchor. Hence a witness of nonnegative excess satisfying
+either row is excluded. At zero noise the law is itself Bernoulli and that
+external theorem applies directly. The negative signed discrepancy still
+requires reflection and the appropriate attained or one-sided CDF witness;
+this corollary does not bypass those steps.
+
+\section*{Exact dependency changes}
+Within the two rows, once their premises have been acquired, no additional
+half-amplitude confinement, harmonic or fractional-part gain, marked
+crossings, count-curvature estimate or inherited full-count grid is needed to close the
+count comparison. Each replacement is explicit:
+\begin{itemize}
+ \item On the left, the joint estimate in \texttt{leftcount.tex} supplies
+ an additional $7s/4$ reserve through guarded endpoint prices.
+ Separately discarding the unfavorable
+ left moment correction would be false.
+ \item The right negative inner count uses physical multipliers
+ $1-\delta/(nq)$ and $1+\delta/(np)$. Its first incoming probability
+ is bounded by a centered two-jump Poisson hinge. A finite complement
+ evaluates that hinge with its whole tail included. Its 291 closed
+ rational boxes cover noise, phase and variance allocation; sample size
+ is handled by concavity in $1/n$, not by a finite list of sample sizes.
+ \item The other right phases use the bound
+ $\operatorname{Var}W_j\le(5/2)\lambda$ for every count, followed by
+ a factorial continuation. Two polynomials on one rectangle and five
+ scalar endpoint comparisons complete those phases.
+\end{itemize}
+The left proof has 88 scalar checks. The right negative-inner acceptance
+has 23 normalization checks, 200 quartic cells and 91 Cantelli cells;
+each quartic cell has 256 endpoint choices and five Bernstein coefficients.
+The other right phases have 56 scalar checks and 144 coefficients.
+These are bounded executable inequalities, not a certificate-free proof.
+The external quadratic-hinge comparison remains an analytic dependency.
+
+\section*{What is still missing}
+The acquired left range above $\lambda=.01$ and right range above
+$\lambda=.075$ remain open up to their retained panel-specific budgets.
+The direct geometry's global bound $\lambda<.616$ is much larger than
+either closed range. There is no global propagation theorem here.
+An independent finite base through 41 remains missing, and the retained
+11,264-cell coarse Fourier entry has not been replaced. These prevent a
+claim of the full sharp conjecture.
+
+Original sources and the manuscript are preserved. The two false shortcuts
+are documented in \texttt{compound-review.tex}; neither is used here.
+Source-bound reviews and run receipts are supplied separately. Exact
+arithmetic does not replace acquisition, attainment or external theorems.
+\end{document}

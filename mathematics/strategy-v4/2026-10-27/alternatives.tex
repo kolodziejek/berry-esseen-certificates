@@ -1,0 +1,83 @@
+\section{Two tempting shortcuts, and what can replace them}
+
+\subsection{A law need not be dominated by its own sign skeleton}
+The same sign probability is a natural way to choose a Bernoulli comparator,
+but it does not give a universal ordering of Berry--Esseen scores.
+Here $R_n(P)=\sup_H|\sqrt n\{F_{n,P}(H)-\Phi(H/\sqrt n)\}|/\rho(P)$.
+For a fixed integer $n\ge1$, let $P_\epsilon$ put mass $\epsilon$ at
+each of $\pm(2\epsilon)^{-1/2}$ and mass $1-2\epsilon$ at zero.
+It is centered, has variance one, and has third absolute moment
+$(2\epsilon)^{-1/2}$. The sum is symmetric and its zero atom tends to
+one as $\epsilon\downarrow0$. Its Kolmogorov discrepancy consequently
+tends to $1/2$: symmetry bounds it above by $1/2$, while the closed
+edge at zero bounds it below by half the mass at zero.
+
+Its sign skeleton has Bernoulli parameter $p=\epsilon$.
+The first standardized binomial atom tends to zero from below and
+has mass $(1-\epsilon)^n\to1$. At and on either side of that atom,
+monotonicity of the Gaussian CDF shows that the skeleton discrepancy
+also tends to $1/2$. Its third absolute moment is asymptotic to
+$\epsilon^{-1/2}$. Therefore, for every fixed $n$,
+\[
+ \frac{R_n(P_\epsilon)}{R_n(\text{sign skeleton})}\longrightarrow\sqrt2>1.
+\]
+Both scores tend to zero. This is an obstruction to universal skeleton
+domination, not to the sharp Berry--Esseen bound. A local comparison
+restricted to competitive laws remains possible.
+
+There are small exact examples. At $n=2$, the raw law on $-1,0,1$ with
+weights $1/20,9/10,1/20$ has closed event probability $363/400$ at zero.
+After standardization its score there is $163/(400\sqrt5)>0.182239540166$.
+Every edge of the corresponding binomial law with $p=1/20$ has score
+less than $0.180402292891$. The accompanying rational checker encloses
+the Gaussian values and checks all edges. A version with no centered
+zero atom, and an already standardized rational example at $n=42$, are
+given in the audit. The local hypotheses therefore have real work to do.
+
+\subsection{A continuum contact test has only finitely many candidates}
+For a fixed finite law and fixed calibrated parameters, one can replace
+a grid search over the contamination point by an exact finite test.
+Between the jumps of $F_{n-1,P}(H-y)$ and the point zero, the contact
+function, after multiplication by its positive normalization, is
+\[
+ d+ay+by^2-c|y|^3,\qquad c>0,
+\]
+where $d$ is constant on that interval. Its derivative is
+$a+2by-3cy^2$ on the positive half-line and $a+2by+3cy^2$ on the
+negative half-line. There are at most four candidate stationary points.
+At a jump, the closed-event value is the larger left value, and both
+tails tend to minus infinity. Hence the supremum occurs among zero,
+the closed jump values and the admissible stationary points. For a
+Bernoulli law the deleted sum has $n$ atoms, giving at most $n+5$
+candidates in total.
+
+This is a genuine reduction of the contact calculation. It still requires
+exact event ordering and rigorous enclosures for the candidate parameters,
+roots and Gaussian values. Even a successful continuum check proves
+stationarity only. The convolution objective is nonlinear in the common
+marginal, so a global extremal theorem needs an additional argument.
+
+\subsection{Why a common index parameter is not enough}
+It is sound to formulate first failure at an arbitrary index floor.
+It does not follow that a numerical exclusion valid from 42 works from 25.
+For example, the proposed simplification of the deletion factors has
+the wrong direction:
+\[
+ \left(\frac N{N-1}\right)^3-\frac N{N-2}
+ =\frac{N(N^2-3N+1)}{(N-1)^3(N-2)}>0\quad(N\ge3).
+\]
+At $N=42$, the proposed substitute factor $103/100$ exceeds
+$\sqrt{42/40}$ but is smaller than $(42/41)^{3/2}$.
+Similarly, replacing a sharper finite-index Gaussian remainder $1/15$
+by the universal $1/2$ changes the retained fourth-index support endpoint
+from $-51557/9765625$ to $25081283/58593750>0$.
+Neither replacement preserves the proof. A unified statement must retain
+the stronger numerical condition or prove a new estimate.
+
+The public Lean developments offer useful models for organizing hypotheses.
+Their endpoints do not close the present finite base or LOCAL42 condition:
+one concerns eventual sharpness, one proves the larger constant $0.423$,
+and the Stein-method library supplies different, non-sharp bounds.
+The accompanying source audit records pinned revisions and the exact
+interfaces inspected. No Lean build or formal verification of the new
+results is claimed.

@@ -1,0 +1,149 @@
+{
+  "status": "PASS_INDEPENDENT_ALLPANEL_REVIEW_CHECKS",
+  "source_pins": {
+    "allpanel.tex": "bd9d32de7000391edbc6a94547316b7c88234cc9aaf6d2c4f4c2d2de183dbf15",
+    "allpanel_check.py": "75c8e09509354ecfad9d1172b4a4f41f7b06e62195ced817b240f5471ad3d844"
+  },
+  "constructor_imported_or_executed": false,
+  "bernstein": [
+    {
+      "sign": 1,
+      "coefficients": [
+        "107/162",
+        "4471/6804",
+        "1112/1701",
+        "1475/2268",
+        "8189/16200",
+        "113611/226800",
+        "7036/14175",
+        "111541/226800",
+        "2839/8100",
+        "469753/1360800",
+        "32378251/95256000",
+        "10624421/31752000",
+        "3167/16200",
+        "36923/194400",
+        "17560993/95256000",
+        "5676043/31752000",
+        "82/2025",
+        "59/1680",
+        "471691/15876000",
+        "10788447499/444528000000"
+      ],
+      "minimum": "10788447499/444528000000"
+    },
+    {
+      "sign": -1,
+      "coefficients": [
+        "179/1620",
+        "911/8505",
+        "3529/34020",
+        "569/5670",
+        "547/3240",
+        "3361/20412",
+        "32759/204120",
+        "2659/17010",
+        "92/405",
+        "226987/1020600",
+        "46647611/214326000",
+        "15209141/71442000",
+        "185/648",
+        "95377/340200",
+        "19661561/71442000",
+        "6431141/23814000",
+        "557/1620",
+        "172741/510300",
+        "11901361/35721000",
+        "245916770833/750141000000"
+      ],
+      "minimum": "569/5670"
+    }
+  ],
+  "normalization": [
+    {
+      "delta": "1",
+      "mass_lower": "31374409/45000000",
+      "derivative_lower": "45609/49000",
+      "derivative_upper": "49000/45609"
+    },
+    {
+      "delta": "171/100",
+      "mass_lower": "42416181841/75000000000",
+      "derivative_lower": "302433797/441000000",
+      "derivative_upper": "441000000/302433797"
+    }
+  ],
+  "final_margins": {
+    "inner": "17926467866165398367/1060536251855551002000",
+    "negative": "303207159039/1226220050000",
+    "positive": "1429750577643511489/102275398586900550000"
+  },
+  "actual_law_controls": [
+    {
+      "p": "13/50",
+      "phase": "-109/500",
+      "k": 11,
+      "own_atom_collision_mass": "0"
+    },
+    {
+      "p": "13/50",
+      "phase": "-1/20",
+      "k": 11,
+      "own_atom_collision_mass": "0"
+    },
+    {
+      "p": "13/50",
+      "phase": "0",
+      "k": 11,
+      "own_atom_collision_mass": "0"
+    },
+    {
+      "p": "13/50",
+      "phase": "1/20",
+      "k": 11,
+      "own_atom_collision_mass": "0"
+    },
+    {
+      "p": "13/50",
+      "phase": "391/500",
+      "k": 10,
+      "own_atom_collision_mass": "0"
+    },
+    {
+      "p": "1/3",
+      "phase": "-109/500",
+      "k": 14,
+      "own_atom_collision_mass": "0"
+    },
+    {
+      "p": "1/3",
+      "phase": "-1/20",
+      "k": 14,
+      "own_atom_collision_mass": "0"
+    },
+    {
+      "p": "1/3",
+      "phase": "0",
+      "k": 14,
+      "own_atom_collision_mass": "26179909455688000/1350851717672992089"
+    },
+    {
+      "p": "1/3",
+      "phase": "1/20",
+      "k": 14,
+      "own_atom_collision_mass": "0"
+    },
+    {
+      "p": "1/3",
+      "phase": "391/500",
+      "k": 14,
+      "own_atom_collision_mass": "0"
+    }
+  ],
+  "negative_controls": [
+    "factorial_hinge_fails_at_i1",
+    "second_outer_hinge_illegal",
+    "strict_outgoing_atom_cannot_be_closed"
+  ],
+  "scope": "Exact arithmetic and actual-law controls; full analytic derivation reviewed separately"
+}

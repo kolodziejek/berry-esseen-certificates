@@ -1,118 +1,58 @@
-# Third manuscript revision — 27 October 2026
+# Current research status — v16, 29 October 2026
 
-Starting manuscript6299d97, immutable reference6346fc1; root branch
-manuscript/editorial-v3-20261027 with separate Fourier, finite and independent
-review branches. Review target remains existing draft PR#3 in the user's
-fork. No merge, main push, force push or upstream modification is authorized.
-
-Deliverables: manuscript/arxiv-v1/main.pdf (158pages), editable TeX and
-source-arxiv-v1.zip. Main exposition pp3–33, six appendices. The decision
-index is research/revision3-decisions.md. Bounded proof substitutions retain
-all mathematical labels; only the software-inventory table label is removed.
+Review target: https://github.com/kolodziejek/berry-esseen-certificates/pull/5
+Keep draft for author review. No merge, main push, force-push, branch deletion
+or upstream change. Original reference:6346fc1b4432bc5982822aa696eb566ed9e1e1ee.
+This round starts at published fb9e918bef3b0a932fb44bf1dae8d3e4a589f932.
+Remote publication is verified separately; do not infer it from this file.
 
 | Result | Mathematical status | Execution status |
 |---|---|---|
-| Curvature derivative erratum | Independently rederived; three-candidate theorem unchanged | Exact polynomial test rejects old formula; corrected small proof compiled |
-| Local-exclusion rewrite and duplicate-proof references | Equivalence and hypotheses checked at stated scopes | Bounded source/rational checks pass |
-| Manuscript layout and portable sources | Editorial artifact | Clean158page TeX build; page review and isolated rebuild recorded |
-| BASE41, full LOCAL42 and whole Fourier/finite chain | Still open or not fully independently reviewed | No new complete certificate acceptance |
+| Scalar acquisition from compact standardized law,n>=700,nD<=32.20665378 | Locally derived and independently reviewed |63 constructor gates,24 exact laws/20 budget-eligible;61 independent gates,3 symbolic identities,7 actual-law identities PASS |
+| Common amplitude.6 from two contact rays | Conditional on retained fixed-target contact/heat and true predecessor |Both complete rays checked by two separate polynomial derivations PASS |
+| Elementary small noise on p[.375,.465],d<=.004,lambda<=.01 | All-law local theorem; independently reviewed |61 constructor gates;88 reviewer gates including40 tensor Bernstein coefficients;44 complete outward actual-law events PASS |
+| Unified five-count comparisons, Compact row lambda[.01,.35] | All-law local theorem; independently reviewed |163 constructor gates;83 independent gates,64 product/curvature controls,16 atom cases PASS |
+| Full common-strip comparison and acquired exclusion n>=700 | Complete local union; conditional acquired-witness consequence, independently reviewed |Exact normalization/noise/zero/reflection joins PASS |
+| Wider right strip n>=200,lambda[.03,.36] | Locally derived; independently included by generic proof |Four endpoints,30 gates,45 actual events and source mutations PASS |
+| C4,BASE41,unrestricted finite range,full conjecture | OPEN |No acceptance claimed |
 
-Corrected r''=2[3(b−1)+u+2c]/(c−u)^4 in the article and reduction2 note,
-TeX and PDF. The prior display is false but the needed convexity still holds.
-All original baseline objects, certificates and predicate targets remain.
-Evidence: runs/manuscript-v3-20261027, manuscript-{fourier,finite,review}-v3-20261027,
-and runs/reduction2-20261027/curvature-erratum01. No heavy native campaign.
+Common local law:Y=B+U,E(U|B)=0,v=p(1-p),s=EU²,lambda=ns,
+X=(Y-p)/sqrt(v+s),rho=E|X|³. At n>=700,p[3/8,93/200],
+-.6<=U0<=a0,-a1<=U1<=.6,a0+a1<=.004,raw|H|<=1.84,
+0<lambda<=.35, the full signed excess is less than -lambda/100.
+At zero noise use strict Bernoulli directly. Contact/predecessor are needed
+for acquisition, not intrinsic hypotheses of this local theorem.
 
-# Manuscript editorial revision — 27 October 2026
+Selected route:coarse budget/rawH -> scalar geometry -> two contact rays ->
+one common support strip -> elementary small noise or unified five-count
+comparison -> negative excess. The full tail is summed, not truncated.
+Removed from this route:post-entry probability panels, old numerical noise
+tables, left/right union, Pinelis/Poisson comparisons and291-cell compound
+certificate. All original sources and smaller-index results are preserved.
 
-The supplied Opus/Argon suggestions have been independently assessed and
-selectively integrated on `manuscript/editorial-v2-20261027`, preserving
-starting manuscript commit `ec370aa` and immutable baseline `6346fc1`.
-The existing draft PR #3 received the revision by a normal fast-forward
-push to the author review branch in the user fork. It remains open and draft;
-no duplicate PR, upstream/main mutation or merge was made.
+Still retained:11264-box coarse Fourier entry,2coarse/4signed passes and its
+internal100-panel acceptor contract; rawH; general gap-cost/cubic identities;
+heat/contact; attainment/reflection; true sharp predecessor; external
+structural/binomial theorems; genuine finite base. BASE41 plus least-failure
+acquisition only confines a first failure to42..699. It is not an unconditional
+cutoff700. A base through699 or independent closure of42..699 remains needed.
 
-Deliverables: `manuscript/arxiv-v1/main.pdf` (164 pages), editable sources
-and `source-arxiv-v1.zip`. Decision/review index:
-`manuscript/arxiv-v1/research/revision-decisions.md`.
-The guide/diagram, moment proof and full conserved-identity derivation now
-lead into conditional counts. Genuine duplicates were removed; unique
-Fourier/finite arguments and all original labels are retained.
+Read mathematics/simplification-v16/2026-10-29/README.md and composition.pdf.
+Complete new proof notes:acquisition-direct.pdf(4pages),small-common.pdf(5),
+unified-comparison.pdf(7);composition.pdf(2);wider-right counts-analytic.pdf(4).
+All compiled and all pages inspected. Independent component reviews and
+coordinator-review.md record derivations, corrections and final source pins.
+These page counts are not the length of a future complete manuscript.
 
-Mathematical status: the conserved identity, compensated inversion,
-positivity gates and oriented zero-defect law received an independent
-analytic review. Complete remainder bounds, BASE41, uniform LOCAL42 and
-full certificate composition remain conditional. Execution status: exact
-symbolic controls and document-preservation checks pass; clean TeX build,
-all-page render review and isolated source rebuild are recorded under
-`runs/manuscript-v2-20261027/`. No full native replay or heavy generation.
+Bounded final replay:
+python3 -I -B mathematics/simplification-v16/2026-10-29/run_checks.py NEWID
+Final receipt:runs/simplification-v16-20261029/integration01/receipt.json.
+All10bounded integration jobs passed with36source pins. The receipt, not
+constructor markers alone, records the final integration outcome. No expensive generation, full Fourier replay or Lean
+build occurred. Baseline2748entries and all85tracked manuscript files are
+preserved. The89-page manuscript is unchanged this round.
 
-# Manuscript checkpoint — 27 October 2026
-
-First arXiv-style research draft is complete on branch
-manuscript/arxiv-v1-20261027, based on8989ba054eda36f63e469832f1e00f7e6a7a9084.
-Authors: Bartosz Kołodziejek and Kacper Rodziewicz, no affiliations or contacts.
-Deliverables: manuscript/arxiv-v1/main.pdf (162pages), main.tex and
-source-arxiv-v1.zip. Full review index: research/manuscript-review.md there.
-Submitted as draft PR#3, stacked above the existing audit PR#2:
-https://github.com/kolodziejek/berry-esseen-certificates/pull/3;
-no component audit duplicate PR, main push, force push or merge.
-
-Mathematical status: new core/reductions have independent scoped reviews;
-the long retained Fourier/finite chain remains a supplied proof candidate.
-BASE41, complete LOCAL42 and the full new composition remain conditional.
-The actual-n5 support method is included; all six rational ray gates pass,
-but six pairs of whole-H endpoint conditions remain. The896-coefficient
-harmonic refinement is also an explicit unexecuted numerical condition.
-No theorem/certificate in the original source was weakened or removed.
-
-Execution status: fresh bounded core/finite/support diagnostics, source
-integrity, clean TeX Live build, desktop compiler success, rendered-page QA
-and isolated portable-bundle rebuild. No heavy native certificates, full
-third-party Lean builds or end-to-end replay. All2748baseline entries are
-unchanged. Logs: runs/manuscript-20261027/ and
-runs/manuscript-finite-support-20261027/.
-
-Recommendation: circulate for author/mathematical review; keep draft status.
-Not ready for an unconditional sharp-theorem claim or arXiv submission.
-No merge or submission without explicit user approval.
-
-# Research status — 27 October 2026
-
-Fork only: kolodziejek/berry-esseen-certificates. Baseline
-6346fc1b4432bc5982822aa696eb566ed9e1e1ee, tag audit-baseline-20261027.
-PR#1 was merged externally (agent did not merge); follow-up PR#2 remains
-open draft. No merge is authorized without explicit user approval.
-
-Current result index: mathematics/reduction2/2026-10-27/README.md.
-Earlier audit: mathematics/audit/2026-10-27/; first simplification:
-mathematics/simplification/2026-10-27/README.md. Original certificates and
-production programs are unchanged. No upstream changes or expensive runs.
-
-Mathematical status: locally derived conditional reductions. The new support
-proof covers all65 zero-loss calls for actual n>=42 using two fixed boundaries,
-one monotone polynomial on a continuous radius family, and18 common ray signs.
-It needs no Bernstein certificate or signed fifth-order tangent. Actual moment
-acquisition, attained contact and derivative/Fourier norm inputs remain.
-Exact LOW curvature supremum needs at most3 candidates instead of64; a proved
-zero clamp preserves the original strict target and all other gates.
-Retaining n(C-C_E)rho yields empty LEFT0/TINY, LEFT5/MID, LEFT8/LOW domains,
-truncates LEFT10/13 and CENTRAL28 noise, and saves4 signed profile evaluations.
-No acquisition/confinement ancestors are removed. The candidate upper module
-count becomes238->171->169 legacy tasks (19 native+150 LOW), before new joins.
-This is not whole-repository savings or a measured runtime estimate.
-
-Execution status: bounded constructor checks and independent support/curvature
-checks pass; resource review uses separate outward arithmetic. The one-pass
-prototype's synthetic fixture passes with152 vs304 evaluator calls and
-identical old bytes/summaries. Its native path was not executed. It pins the
-old152-row contract and is NOT composable with changed formulas/150 rows
-without a newly named complete acceptance contract. Full LOCAL42 remains
-unaccepted. No full native LOW or resource certificate was replayed.
-
-The nine-page proof source/PDF is in reduction2/2026-10-27/proof/; compiled
-with TeX Live and all pages visually inspected. Small exact evidence, versions,
-hashes and preserved failed/corrected diagnostics are in runs/reduction2-20261027/.
-Independent review outcome and final integration checks are indexed in
-reduction2/2026-10-27/reviews/REVIEW.md. Recommendation is limited to merging
-reviewed research/audit material after explicit approval, not production proof.
+Worktree:work/fork_audit_20261027/simplification-v16.
+Research branch:research/simplification-v16-20261029.
+Integration branch:manuscript/strategy-v4-20261027 in strategy-v4.
+Previous four state files are preserved in runs/simplification-v16-20261029/stateBefore01.

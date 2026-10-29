@@ -1,0 +1,137 @@
+{
+  "status": "PASS_INDEPENDENT_PHASE_EXPORT_AND_REGION_ARITHMETIC",
+  "source_proof_sha256": "61b7ad43e20046d7cbf7157e3feb61696331731e7be418f6a5fa535c2eee8bae",
+  "export_sha256": "b18599468c975032f4078e7a5f734fd6430b2b7da583789de58d9537d323f690",
+  "export_cells": 682,
+  "source_box_census": 2048,
+  "reconstructed_endpoint_quadratics": 1364,
+  "source_transform_exactly_reversible": true,
+  "saved_probe_exactly_reproduced": true,
+  "saved_nine_regions_exactly_reproduced": true,
+  "regions": [
+    {
+      "H": [
+        "5/4",
+        "5/4"
+      ],
+      "lambda_upper": "None",
+      "cells": 331,
+      "resource_upper_1e9": {
+        "plus": "1032820261/1000000000",
+        "minus": "633143511/500000000",
+        "absolute": "633143511/500000000"
+      }
+    },
+    {
+      "H": [
+        "5/4",
+        "5/4"
+      ],
+      "lambda_upper": "3/20",
+      "cells": 15,
+      "resource_upper_1e9": {
+        "plus": "-25605333/200000000",
+        "minus": "1649681/8000000",
+        "absolute": "1649681/8000000"
+      }
+    },
+    {
+      "H": [
+        "5/4",
+        "5/4"
+      ],
+      "lambda_upper": "4/25",
+      "cells": 24,
+      "resource_upper_1e9": {
+        "plus": "-16686091/1000000000",
+        "minus": "135295801/500000000",
+        "absolute": "135295801/500000000"
+      }
+    },
+    {
+      "H": [
+        "31/25",
+        "63/50"
+      ],
+      "lambda_upper": "None",
+      "cells": 340,
+      "resource_upper_1e9": {
+        "plus": "1051244407/1000000000",
+        "minus": "1282896971/1000000000",
+        "absolute": "1282896971/1000000000"
+      }
+    },
+    {
+      "H": [
+        "31/25",
+        "63/50"
+      ],
+      "lambda_upper": "3/20",
+      "cells": 18,
+      "resource_upper_1e9": {
+        "plus": "-94649077/1000000000",
+        "minus": "218329547/1000000000",
+        "absolute": "218329547/1000000000"
+      }
+    },
+    {
+      "H": [
+        "31/25",
+        "63/50"
+      ],
+      "lambda_upper": "4/25",
+      "cells": 27,
+      "resource_upper_1e9": {
+        "plus": "-542109/1000000000",
+        "minus": "283391699/1000000000",
+        "absolute": "283391699/1000000000"
+      }
+    },
+    {
+      "H": [
+        "6/5",
+        "13/10"
+      ],
+      "lambda_upper": "None",
+      "cells": 362,
+      "resource_upper_1e9": {
+        "plus": "561403163/500000000",
+        "minus": "1347294811/1000000000",
+        "absolute": "1347294811/1000000000"
+      }
+    },
+    {
+      "H": [
+        "6/5",
+        "13/10"
+      ],
+      "lambda_upper": "3/20",
+      "cells": 22,
+      "resource_upper_1e9": {
+        "plus": "-16643853/500000000",
+        "minus": "132691229/500000000",
+        "absolute": "132691229/500000000"
+      }
+    },
+    {
+      "H": [
+        "6/5",
+        "13/10"
+      ],
+      "lambda_upper": "4/25",
+      "cells": 35,
+      "resource_upper_1e9": {
+        "plus": "7805441/125000000",
+        "minus": "333096379/1000000000",
+        "absolute": "333096379/1000000000"
+      }
+    }
+  ],
+  "negative_controls": [
+    "omitted concave vertex",
+    "plus-Theta beta bound above one half",
+    "strict overlap endpoints"
+  ],
+  "inherited_code_imported_or_executed": false,
+  "full_confinement_claim": false
+}

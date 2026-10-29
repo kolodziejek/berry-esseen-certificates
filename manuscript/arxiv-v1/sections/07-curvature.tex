@@ -5,45 +5,45 @@ Section~\ref{ms:counts} over an interval. Despite the positive parts and
 the truncated denominator, it is attained at an endpoint or at one
 explicit interior point.
 
-For real $b$, $1/2<c\le1$ and $[l,h]\subseteq[-1/2,1/2]$, define
+For real $b$, $1/2<\zeta\le1$ and $[l,h]\subseteq[-1/2,1/2]$, define
 \[
- f(u)=\frac{\pos{b+u-1}}{(c-u)^2}
-       +\frac{\pos{b+u}}{[c+\min(u,c/3)]^2},\qquad u_*=c-2b.
+ f(u)=\frac{\pos{b+u-1}}{(\zeta-u)^2}
+       +\frac{\pos{b+u}}{[\zeta+\min(u,\zeta/3)]^2},\qquad u_*=\zeta-2b.
 \]
-All denominators are strictly positive. In the conditional-count comparison $c=1-d_L$, where $d_L$ is an upper bound for $d_Y$ on
+All denominators are strictly positive. In the conditional-count comparison $\zeta=1-d_L$, where $d_L$ is an upper bound for $d_Y$ on
 the current noise band, and
 $b=p_+-\min(H/\ell)$, where the minimum uses all four signed endpoint
 quotients.
 
 \begin{theorem}[Exact three-candidate supremum]\label{ms:curvature-thm}
 The supremum of $f$ over $[l,h]$ is the maximum of $f(l)$, $f(h)$, and
-the value $1/[4(c-b)]$ if
+the value $1/[4(\zeta-b)]$ if
 \[
- c>b,\qquad l\le u_*\le h,\qquad
- u_*\le c/3,\qquad u_*\le1-b.
+ \zeta>b,\qquad l\le u_*\le h,\qquad
+ u_*\le \zeta/3,\qquad u_*\le1-b.
 \]
 An ineligible third value is omitted. The formula includes singleton
-intervals, coincident kinks and $c=1$.
+intervals, coincident kinks and $\zeta=1$.
 \end{theorem}
 \begin{proof}
 Write $f=r+g$ for the two summands. On $b+u>1$,
 \[
- r''=\frac{2[3(b-1)+u+2c]}{(c-u)^4}>0,
+ r''=\frac{2[3(b-1)+u+2\zeta]}{(\zeta-u)^4}>0,
 \]
-since its bracket is $3(b+u-1)+2(c-u)>0$. Where $u<c/3$ and $b+u>0$,
+since its bracket is $3(b+u-1)+2(\zeta-u)>0$. Where $u<\zeta/3$ and $b+u>0$,
 \[
- g'=\frac{c-2b-u}{(c+u)^3},\qquad
- g''=\frac{2(3b+u-2c)}{(c+u)^4}.
+ g'=\frac{\zeta-2b-u}{(\zeta+u)^3},\qquad
+ g''=\frac{2(3b+u-2\zeta)}{(\zeta+u)^4}.
 \]
-If also $r>0$, then $3b+u-2c>3-2u-2c\ge0$, so $f$ is convex there.
-For $u>c/3$, $g$ is convex piecewise linear. At each of
-$-b$, $1-b$ and $c/3$, the derivative has a nonnegative jump; simultaneous jumps
+If also $r>0$, then $3b+u-2\zeta>3-2u-2\zeta\ge0$, so $f$ is convex there.
+For $u>\zeta/3$, $g$ is convex piecewise linear. At each of
+$-b$, $1-b$ and $\zeta/3$, the derivative has a nonnegative jump; simultaneous jumps
 add. Thus none is a strict interior maximum.
 
-Where $r=0$, either $g=0$, or below $c/3$ its derivative changes from
-positive to negative only at $u_*=c-2b$. Its positive numerator condition
-is $c>b$, and $r=0$ there is equivalent to $u_*\le1-b$.
-Its value is $1/[4(c-b)]$. Above $c/3$, $g$ is nondecreasing.
+Where $r=0$, either $g=0$, or below $\zeta/3$ its derivative changes from
+positive to negative only at $u_*=\zeta-2b$. Its positive numerator condition
+is $\zeta>b$, and $r=0$ there is equivalent to $u_*\le1-b$.
+Its value is $1/[4(\zeta-b)]$. Above $\zeta/3$, $g$ is nondecreasing.
 These cases locate a global maximum among the stated candidates.
 Continuity handles boundaries and collisions; constant segments contribute
 a value already attained at an endpoint or a listed maximizer.
@@ -52,12 +52,12 @@ a value already attained at an endpoint or a listed maximizer.
 For any subinterval $[a,d]\subseteq[l,h]$ and $u\in[a,d]$, monotonicity
 of the numerators and positivity of the denominators give
 \[
- f(u)\le \frac{\pos{b+d-1}}{(c-d)^2}
-       +\frac{\pos{b+d}}{[c+\min(a,c/3)]^2}.
+ f(u)\le \frac{\pos{b+d-1}}{(\zeta-d)^2}
+       +\frac{\pos{b+d}}{[\zeta+\min(a,\zeta/3)]^2}.
 \]
 The exact maximum is therefore no larger than the largest of these bounds
-over a subdivision of the interval. For fixed $b$ and $u$, $f$ is nonincreasing in $c$, so a bound computed
-with the smallest admissible $c$ remains valid for larger ones.
+over a subdivision of the interval. For fixed $b$ and $u$, $f$ is nonincreasing in $\zeta$, so a bound computed
+with the smallest admissible $\zeta$ remains valid for larger ones.
 
 \subsubsection{The inverse-index correction}
 With the exact curvature bound the inverse-index correction may be

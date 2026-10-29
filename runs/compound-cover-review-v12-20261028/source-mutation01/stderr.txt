@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/compound-cover-review-v12/runs/compound-cover-review-v12-20261028/source-mutation01/case/compound-accept.py", line 17, in <module>
+    assert hashlib.sha256(raw).hexdigest()==EVALUATOR_SHA
+AssertionError

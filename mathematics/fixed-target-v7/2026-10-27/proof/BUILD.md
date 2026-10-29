@@ -1,0 +1,1 @@
+Compile main.tex with pdflatex/latexmk. All document sources are included. This is a research continuation with explicit conditional premises, not a complete sharp-theorem manuscript. The exact computational proof and reviews are in the parent project directory.

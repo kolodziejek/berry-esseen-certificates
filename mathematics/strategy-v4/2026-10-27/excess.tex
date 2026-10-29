@@ -1,0 +1,560 @@
+% Inputtable proof fragment; standalone wrapper: excess-main.tex.
+\section*{Scope of this note}
+We independently derive the proposed replacement of the extremal ratio by
+an additive excess over a fixed target. Attainment and closed-support
+contact hold for every positive target at each fixed index. The conserved
+identity has the coefficient $(n+H^2)a$, with $H$ the raw sum threshold.
+This removes the actual score from the contact and remainder coefficients.
+It does not establish a new uniform local exclusion or automatically
+accept the old numerical contracts for a different maximizing law. All original source
+files and certificates are preserved.
+
+\section{Definitions and exact scope}
+Let $\mathcal P$ be the laws on $\R$ with $\E X=0$, $\E X^2=1$ and
+$\rho=\E|X|^3<\infty$. All sums below use independent copies of one
+marginal law. For $S_n=X_1+\cdots+X_n$, set
+\[
+ F_{n,P}(H)=\Pp(S_n\le H),\qquad z=H/\sqrt n,
+ \quad R_n(P,H)=\frac{\sqrt n}{\rho}\{F_{n,P}(H)-\Phi(z)\}.
+\]
+The global Berry--Esseen constant at this index is the supremum of the
+absolute standardized discrepancies, divided by $\rho/\sqrt n$; call it
+$C_n$. Reflection and approximation by closed thresholds show that it is
+also $\sup_{P,H}R_n(P,H)$. For a fixed number $c>0$ define
+\[
+ a(P,H;c)=\sqrt n\{F_{n,P}(H)-\Phi(z)\}-c\rho,
+ \qquad A_n(c)=\sup_{P,H}a(P,H;c).
+\]
+The excess $a$ has the units of $\rho$ times a score difference. It is
+\emph{not} the existing manuscript's $a_n=C_n-\CE$. At a maximizing pair
+of this new problem its actual positive score is
+\begin{equation}\label{v4excess:eq:actual}
+ C_{\rm act}=c+a/\rho.
+\end{equation}
+In general $C_{\rm act}$ need not equal $C_n$.
+
+For conservation and defect positivity we later specialize to
+$c=\CE=(3+\sqrt{10})\phi(0)/6$. Attainment and contact themselves require
+only $c>0$. No Fourier bound, numerical acceptance or uniform index limit
+is part of their proof.
+
+\section{Attainment and the equality boundary}
+\begin{theorem}\label{v4excess:thm:attain}
+For each fixed integer $n\ge1$ and $c>0$, the maximum $A_n(c)$ is
+attained by a pair $(P,H)$ with a positive closed-CDF discrepancy.
+Moreover,
+\[
+ A_n(c)>0\iff C_n>c,\qquad
+ A_n(c)=0\iff C_n=c,\qquad A_n(c)<0\iff C_n<c.
+\]
+\end{theorem}
+\begin{proof}
+Lyapunov gives $\rho\ge1$, hence $A_n(c)\le\sqrt n-c$. Symmetric
+Bernoulli, at $H=n$, gives the stronger lower bound
+\[
+ A_n(c)\ge\sqrt n\{1-\Phi(\sqrt n)\}-c>-c.
+\]
+Write $A=A_n(c)$, and choose $a_j=a(P_j,H_j;c)\to A$. For all sufficiently
+large $j$, $a_j\ge A-1$ and
+\[
+ c\rho_j\le\sqrt n-a_j\le\sqrt n-A+1,
+ \qquad \sqrt n\{F_{n,P_j}(H_j)-\Phi(H_j/\sqrt n)\}
+       =a_j+c\rho_j\ge a_j+c\ge\eta>0,
+\]
+where $\eta$ can be any fixed number smaller than $A+c>0$ once $j$ is
+large enough. Unit variance implies tightness. A bound $\rho_j\le M$
+gives
+\[
+ \int_{|x|>K}x^2\,dP_j\le M/K,
+ \qquad\int_{|x|>K}|x|\,dP_j\le M/K^2.
+\]
+Take subsequences $P_j\Rightarrow P$ and $\rho_j\to b$. Bounded continuous
+truncation and these tails preserve mean zero and variance one;
+lower semicontinuity gives $1\le\rho(P)\le b<\infty$.
+
+For $H_j<0$, Chebyshev gives $F_{n,P_j}(H_j)\le n/H_j^2$.
+For $H_j>0$, the positive discrepancy is at most
+$1-\Phi(H_j/\sqrt n)\le n/H_j^2$. Its lower bound $\eta/\sqrt n$ thus
+bounds $|H_j|$. Take $H_j\to H$. Fixed $n$ permits passage from marginal
+weak convergence to the sum law. For every $t>0$, eventually
+$H_j\le H+t$, so the closed-set inequality and then right continuity give
+\[
+ \limsup_j F_{n,P_j}(H_j)\le F_{n,P}(H+t)
+       \longrightarrow F_{n,P}(H).
+\]
+Consequently
+\[
+ a(P,H;c)\ge A+c\{b-\rho(P)\}\ge A.
+\]
+The definition of $A$ forces equality, and $c>0$ forces $\rho(P)=b$.
+Third-moment convergence is a \emph{conclusion of maximality}; bounded
+third moments were not used to assert uniform integrability of third
+powers. Also $A+c\rho\ge A+c>0$, proving positive discrepancy.
+
+Reflection changes a negative closed discrepancy into a positive open
+discrepancy of the reflected law. Closed thresholds increasing to that
+open threshold approximate it; the penalty is unchanged. This proves
+the stated supremum identity for $C_n$ without presuming continuity at an
+atom. If $C_n<c$, every excess is at most
+$\rho(C_n-c)\le C_n-c<0$. If $C_n>c$, a positive closed score above $c$
+gives positive excess. If $C_n=c$, choose scores $r_j\uparrow c$ with
+$r_j\ge c/2$. Their moments satisfy $\rho_j\le2\sqrt n/c$, and
+$\rho_j(r_j-c)\to0$. Thus $A_n(c)\ge0$, while all excesses are at most
+zero. These observations prove all three equivalences; no ratio-attainment
+lemma is needed for this last step.
+\end{proof}
+
+\section{Atom-safe fixed-target contact}
+Fix a maximizing pair of Theorem~\ref{v4excess:thm:attain}, with $n\ge2$. Set
+$F=F_{n,P}(H)$, $\varphi=\phi(z)$,
+$\beta=\E[X|X|]$ and $\gamma=\E X^3$.
+\begin{theorem}\label{v4excess:thm:contact}
+The following function is nonpositive for every $y\in\R$ and vanishes
+on the entire closed support of $P$:
+\begin{align}
+ I_c(y)={}&n^{3/2}\{F_{n-1,P}(H-y)-F\}+ny\varphi
+       +\tfrac12 H\varphi(y^2-1)\notag\\
+ &+\tfrac32c\rho(y^2-1)-c\{|y|^3-\rho-3y\beta\}.
+ \label{v4excess:eq:contact}
+\end{align}
+That support is compact. Equivalently, for $h(y)=F_{n-1,P}(H-y)$,
+$h\le Q_c$ everywhere and $h=Q_c$ on the closed support, where
+\begin{align}
+ nQ_c(y)={}&nF+\frac{H\varphi+c\rho}{2\sqrt n}
+  -\left(\sqrt n\varphi+\frac{3c\beta}{\sqrt n}\right)y\notag\\
+ &-\frac{H\varphi+3c\rho}{2\sqrt n}y^2
+  +\frac{c}{\sqrt n}|y|^3.\label{v4excess:eq:Q}
+\end{align}
+\end{theorem}
+\begin{proof}
+Contaminate the raw law by
+$P_\varepsilon=(1-\varepsilon)P+\varepsilon\delta_y$. Its mean and variance
+are $m_\varepsilon=\varepsilon y$ and
+$v_\varepsilon=1+\varepsilon(y^2-1)-\varepsilon^2y^2$.
+Let $r_\varepsilon=\E_{P_\varepsilon}|X-m_\varepsilon|^3$. The standardized
+law, evaluated at the standardized image of the \emph{fixed raw event},
+has excess
+\[
+ G_c(\varepsilon)=\sqrt n\left\{F_{n,P_\varepsilon}(H)
+ -\Phi\!\left(\frac{H-nm_\varepsilon}{\sqrt{nv_\varepsilon}}\right)\right\}
+ -c\frac{r_\varepsilon}{v_\varepsilon^{3/2}}.
+\]
+For small $\varepsilon\ge0$ this is admissible; maximality gives
+$G_c(\varepsilon)\le G_c(0)=a$. The raw CDF is a polynomial in
+$\varepsilon$ and has derivative $n(h(y)-F)$. Dominated differentiation
+of $|x-\varepsilon y|^3$, bounded by
+$3|y|(|x|+|y|)^2$, gives
+\[
+ r'_0=|y|^3-\rho-3y\beta,
+ \quad \left(\frac{H-nm_\varepsilon}{\sqrt{nv_\varepsilon}}\right)'_0
+ =-\sqrt n\,y-\frac{H}{2\sqrt n}(y^2-1).
+\]
+Differentiation now gives $G'_c(0+)=I_c(y)\le0$. There is no division by
+$\rho$ in this fixed-target derivative.
+
+Integrating \eqref{v4excess:eq:contact} against $P$ gives zero. All its terms are
+integrable under the third-moment assumption. The map $h$ is upper
+semicontinuous: at a jump the closed event chooses its larger value.
+Thus $I_c$ is upper semicontinuous. If it were strictly negative at a
+closed-support point, a neighborhood of that point would have positive
+$P$-mass and a strictly negative upper bound for $I_c$, contradicting its
+zero integral. Hence it vanishes at every such point, including atoms and
+accumulation points. Because $c>0$, a bound of the form
+$I_c(y)\le-c|y|^3+M_2y^2+M_1|y|+M_0$ excludes both sufficiently distant
+rays from the support. Rearrangement gives \eqref{v4excess:eq:Q}.
+\end{proof}
+
+Neither proof assumes $H\ge0$. Reflecting a positive closed discrepancy
+again does not in general preserve that event. The actual orientation
+must be retained after choosing the maximizing pair.
+
+\section{Predecessor support: the extra term has a favorable sign}
+\begin{theorem}\label{v4excess:thm:support}
+Suppose additionally $C_{n-1}\le c$. Put $v=n-1$,
+$s=\sqrt{n/v}$ and $e_n=n(s-1)-1/2$. For every support point $y$,
+\begin{equation}\label{v4excess:eq:support}
+ 0\le\mathcal H_n(H,y)
+       +c\{-|y|^3+\tfrac32\rho y^2+3\beta y+\rho e_n\}-na,
+\end{equation}
+where, with $F_v(x)=\Phi(x/\sqrt v)$,
+\[
+ \mathcal H_n(H,y)/n^{3/2}
+ =F_v(H-y)-F_{v+1}(H)+yF'_{v+1}(H)
+                    -\tfrac12(y^2-1)F''_{v+1}(H).
+\]
+\end{theorem}
+\begin{proof}
+For the same marginal,
+$F_{n-1,P}(H-y)\le F_v(H-y)+c\rho/\sqrt v$.
+Substitute this upper bound and
+$F=\Phi(H/\sqrt n)+(c\rho+a)/\sqrt n$ in the zero contact equality.
+The constant moment contribution is
+$c\rho\{n(s-1)-1/2\}$, and the new excess contributes exactly $-na$.
+The Gaussian derivatives give the displayed expression. This proves the
+claim for each sign of $y$ and every real $H$.
+\end{proof}
+
+If $a\ge0$, dropping $-na$ gives the old zero-loss support inequality
+with coefficient $c$. Therefore the elementary support bounds in current
+Section~4 apply after their hypotheses are restated as
+Theorem~\ref{v4excess:thm:contact}, $C_{n-1}\le c$, $a\ge0$, and the same moment
+caps. At $c=\CE$, the lower numerical multiplier $0.4095<c$ remains
+valid only after its cubic coefficient is negative, as in the existing
+proof. The all-$H$ fourth-order expansion, both ray signs, and frozen
+moment caps remain necessary. The structural moment bounds are universal
+bounds for each law's actual score, so \eqref{v4excess:eq:actual} with $a\ge0$
+supplies their lower-score premise. This transfer does not re-prove those
+external structural inequalities or acquire the later conditional moment
+caps automatically.
+
+\section{Independent conservation calculation}
+This section needs only the explicit contact relations in
+Theorem~\ref{v4excess:thm:contact}, not the identity of the actual score with the
+contact coefficient. Set $\nu=\mathcal L(H-S_{n-1})$ and
+$\tau(t)=\E[X\ind_{\{X\ge t\}}]$. Centering makes $\tau\ge0$, and
+signwise Fubini gives $\int\tau=1$ and
+\[
+ \int t\tau(t)\,dt=\gamma/2,\quad
+ \int t^2\tau(t)\,dt=M_4/3,\quad
+ \int |t|^3\tau(t)\,dt=M_5/4.
+\]
+Here $M_4=\E X^4$ and $M_5=\E|X|^5$.
+These moments are available because compact support has already been
+proved. For each bounded complementary gap $(u,v)$ of the closed support,
+$\tau$ is constant, say $\tau_{u,v}$. Define
+\begin{align*}
+ J&=\sum_{(u,v)}\tau_{u,v}(v-u)^2,\\
+ J_1&=\sum_{(u,v)}\tau_{u,v}\int_u^v(t-u)t\,dt,
+ &J_2&=\sum_{(u,v)}\tau_{u,v}\int_u^v(t-u)t|t|\,dt,\\
+ L&=\sum_{(u,v)}\tau_{u,v}\int_{[u,v)}(t-u)\,d\nu(t),
+ &D&=(3+\sqrt{10})\rho-\gamma-3J.
+\end{align*}
+For support in $[-R,R]$, $J\le2R$, $|J_1|\le RJ/2$,
+$|J_2|\le R^2J/2$ and $0\le L\le2R$. Thus the sums converge absolutely.
+The gap/defect theorem supplies $D\ge0$ when that sign is used below;
+the algebraic identity itself does not require that theorem.
+
+Put $\mathcal A=\int\tau(Q_c-h)$. Contact implies
+\[
+ h(u)-h(v)=\nu([u,v))=Q_c(u)-Q_c(v).
+\]
+Integrating $h(t)=h(v)+\nu([t,v))$ across the gap gives
+\[
+ \int_u^v(Q_c-h)
+ =\int_u^v(t-u)(-Q'_c(t))\,dt-\int_{[u,v)}(t-u)\,d\nu(t).
+\]
+The half-open upper endpoint is essential. The slack is zero on the
+support and $\tau=0$ outside its convex hull. Substituting $Q'_c$ and
+summing gives the first evaluation
+\begin{equation}\label{v4excess:eq:first}
+ \mathcal A=\frac{\varphi J}{2\sqrt n}+\frac{G_c}{n^{3/2}}-L,
+ \quad G_c=\tfrac32c\beta J+(H\varphi+3c\rho)J_1-3cJ_2.
+\end{equation}
+
+Let $X^*$ have density $\tau$, independently of $S_{n-1}$. Signwise
+Fubini gives $\E g'(X^*)=\E[Xg(X)]$. Conditional use of that identity
+and exchangeability show that $(S_{n-1}+X^*)/\sqrt n$ is the zero-bias
+law of $Z=S_n/\sqrt n$. Its CDF at $z$ equals
+\[
+ T=\E[(Z^2-zZ)\ind_{\{Z\le z\}}],
+ \qquad\int\tau(t)h(t)\,dt=T.
+\]
+The factor $Z^2-zZ$ makes endpoint atoms harmless. Integrating the four
+coefficients of \eqref{v4excess:eq:Q} gives
+\begin{equation}\label{v4excess:eq:second}
+ \mathcal A=F-\frac{\gamma\varphi}{2\sqrt n}
+ +\frac{H\varphi(3-M_4)/6+cK_q}{n^{3/2}}-T,
+ \quad K_q=\frac{M_5}4-\frac{\rho M_4}2-\frac{3\beta\gamma}2+\frac\rho2.
+\end{equation}
+Multiplying the support contact equality by $X$ and using exchangeability
+also gives, for $M=\E[Z\ind_{\{Z\le z\}}]$,
+\begin{equation}\label{v4excess:eq:firstmoment}
+ M+\varphi=-\frac{\gamma z\varphi}{2\sqrt n}+\frac{cK_1}{n},
+ \quad K_1=\E[X|X|^3]-3\beta-\tfrac32\rho\gamma.
+\end{equation}
+
+Define $q_z(x)=(x-z)|x-z|$, and let $Z_0$ be standard normal. Set
+\[
+ \varepsilon=\E q_z(Z)-\E q_z(Z_0)-\frac{2\gamma\varphi}{3\sqrt n}.
+\]
+The pointwise hinge identity gives
+\[
+ T-\Phi(z)=-\varepsilon/2-\frac{\gamma\varphi}{3\sqrt n}
+                     +z(M+\varphi)-z^2(F-\Phi(z)).
+\]
+Substitute \eqref{v4excess:eq:firstmoment} and
+$\sqrt n(F-\Phi)=c\rho+a$ in \eqref{v4excess:eq:second}. Direct collection gives
+\begin{align*}
+ \sqrt n\mathcal A&=c\rho+a-\gamma\varphi/6+P_0/n
+                                          +\sqrt n\varepsilon/2,\\
+ P_0&=H^2(c\rho+a+\gamma\varphi/2)
+       -H\{cK_1+\varphi(M_4-3)/6\}+cK_q.
+\end{align*}
+Equating with \eqref{v4excess:eq:first} proves the following identity.
+
+\begin{theorem}\label{v4excess:thm:identity}
+Let $U=J_1+(M_4-3)/6$ and define
+\begin{align*}
+ \mathcal R_c(H)={}&c\{3\beta J/2+3\rho J_1-3J_2-K_q\}
+    +H(cK_1+\varphi U)\\
+ &-H^2(c\rho+\gamma\varphi/2)+E_n,
+ \qquad E_n=-n^{3/2}\varepsilon/2.
+\end{align*}
+Then, for general $c>0$,
+\begin{equation}\label{v4excess:eq:general}
+ (n+H^2)a+nc\rho-\frac{n\varphi}{6}(\gamma+3J)+n^{3/2}L
+ =\mathcal R_c(H).
+\end{equation}
+In particular, at $c=\CE$ and $w=H^2/(2n)$,
+\begin{equation}\label{v4excess:eq:conserved}
+ \boxed{\begin{aligned}
+ (n+H^2)a&+nc\rho(1-e^{-w})\\
+ &+\frac{n\phi(0)e^{-w}}6D+n^{3/2}L=\mathcal R_c(H).
+ \end{aligned}}
+\end{equation}
+If $a\ge0$ and the physical defect inequality $D\ge0$ holds, all four
+terms on the left are nonnegative.
+\end{theorem}
+The $na$ term comes from the ordinary discrepancy, and $H^2a$ comes from
+the quadratic hinge. Replacing their sum by $na$ in the exact identity is
+false; dropping $H^2a$ gives a valid weaker inequality when $a\ge0$. The formula
+uses the raw $H$; in standardized units the coefficient is $n(1+z^2)$.
+
+\subsection{What the Fourier representation still requires}
+The unchanged compensated-inversion lemma is the exact retained input
+at manuscript Section 5b, lines 143--200. It applies to a finite signed
+measure of zero mass and first moment with finite absolute second moment,
+for every real raw threshold. Applied to the sum law minus the Gaussian
+and cubic signed comparator, it gives
+\[
+ E_n=\frac{2\sqrt n}{\pi}\int_0^\infty
+     \frac{\Im(e^{-itH}V_n(t))}{t^3}\,dt,
+ \qquad V_n(t)=f(t)^n-e^{-nt^2/2}(1-in\gamma t^3/6).
+\]
+The signed comparator has mass one and first moment zero. Compact support
+already gives all required moments. No occurrence of the contact
+coefficient or the extremal score is present in this inversion step, so
+the existing proof applies without modification.
+This identity does not bound the integral. Complete low- and
+high-frequency envelopes, signed phase uniformity, domain coverage,
+moment gates and the infinite tail remain obligations. No nonlattice
+decay is available merely from the fixed-target reformulation.
+
+\section{Gaussian weight and phase price}
+\begin{corollary}\label{v4excess:cor:weight}
+Suppose $c=\CE$, $a\ge0$, $D\ge0$, $n\ge N\ge2$, and an independently
+established raw upper bound gives $\mathcal R_c\le r_0<2N/5$. Then
+\[
+ (n+H^2)a+\frac{n\phi(0)}6D+n^{3/2}L\le\mathcal R_c.
+\]
+Any later upper bound $\mathcal R_c\le r$ consequently gives
+$e^{-w}\ge1-5r/(2n)$ and $nD\le15000r/997$, using the same directed
+constants as the manuscript. If also $nD\le Nd_D$ and
+$0.4095\rho-d_D/15>0$, set
+\[
+ q_{\rm extra}=\frac{1-5r/(2N)}2(0.4095\rho-d_D/15)>0
+ \quad\text{when } r<2N/5.
+\]
+A valid signed envelope
+$\mathcal R_c\le A(c,\rho)+F_{\operatorname{sgn}H}(c,\rho)|H|
+-Q(c,\rho)H^2$ implies, for $\kappa=997/15000$,
+\[
+ (n+H^2)a+\kappa nD+n^{3/2}L
+ \le A(c,\rho)+F_{\operatorname{sgn}H}(c,\rho)|H|
+                       -(Q+q_{\rm extra})H^2.
+\]
+\end{corollary}
+\begin{proof}
+Equation~\eqref{v4excess:eq:general} gives
+\[
+ \frac{\varphi}{6}(\gamma+3J)
+ =(1+H^2/n)a+c\rho+\sqrt nL-\mathcal R_c/n
+ >c\rho-2/5>0.
+\]
+Therefore $c\rho-\phi(0)D/6>0$. Regrouping
+\eqref{v4excess:eq:conserved} leaves the additional nonnegative term
+$n(1-e^{-w})(c\rho-\phi(0)D/6)$, which may be dropped. The density and
+defect bounds follow by retaining one nonnegative term at a time and
+using $c>2/5$, $\phi(0)>997/2500$. Finally
+$1-e^{-w}\ge we^{-w}$ and $D\le d_D$ price that same term by
+$q_{\rm extra}H^2$. It is subtracted once, not counted twice.
+\end{proof}
+
+\section{Transport of a zero-barrier scalar schedule}
+There is a useful distinction between the actual score $C_{\rm act}$,
+the contact multiplier, and the deleted-sum constants. They coincide or
+are compared in the old derivation, but their roles can be separated.
+In this note the contact multiplier is always $c$. The predecessors
+remain global bounds for actual deleted convolutions. The actual score
+is given by \eqref{v4excess:eq:actual}; it is not set equal to $c$.
+
+\begin{theorem}[Conditional scalar-schedule transport]\label{v4excess:thm:transport}
+Set $c=\CE$ and $N\ge3$. Consider a finite, ordered, zero-barrier acquisition
+and exclusion schedule at every actual $n\ge N$. Suppose its proof has the following
+properties.
+\begin{enumerate}
+\item Its primitive moment, geometry, Fourier, count and concentration
+inequalities hold for every actual law in their stated domains. Its raw
+remainder estimates are universal scalar inequalities for the displayed
+$\mathcal R_t$, with a positive formal multiplier $t$ in an explicitly
+covered interval containing $c$.
+\item Its support steps use the zero-loss contact bound; its resource
+steps use the conserved identity, licensed weight removal, phase price,
+and nonnegativity of the excess. All moment/support domains are acquired
+in their stated order for the same law. Every denominator, sign, strict
+gap and uniform-index gate is checked.
+\item A charged corner bound, if used, subtracts only a nonnegative
+charge $\chi(t)\rho$ with $\chi(c)=0$, and its proved scalar envelope
+contains the point $t=c$. No positive lower excess barrier is used unless
+it has separately been established for this new witness.
+\item The confinement proof uses the displayed derivative of the contact
+majorant with multiplier $t$ and separate valid deleted-sum bounds. Its
+strict budget remains a strict upper envelope for $\mathcal R_c$ after
+the phase price.
+\item Every positive-noise leaf strictly bounds the count right side
+with repair multiplier $t$ on its domain, and its bound at $t=c$ is
+negative. The complete cover and the zero-noise strict binomial case
+are independently valid. On every positive-noise count leaf a separately
+established binomial bound gives $C_B\le c$.
+\end{enumerate}
+Then the same scalar bounds and unchanged numerical targets, if proved
+on those domains, exclude a maximizer of $A_n(c)$ with $a\ge0$ under
+$C_{n-1},C_{n-2}\le c$. An upper bound on $C_{\rm act}$ or on $na/\rho$
+is not an entry requirement for this transported schedule.
+\end{theorem}
+\begin{proof}
+Initialize with Theorems~\ref{v4excess:thm:attain}--\ref{v4excess:thm:support} and the
+universal moment bounds. For a raw scalar inequality specialize its
+formal multiplier to $t=c$, without changing the actual marginal or any
+of its other parameters. Theorem~\ref{v4excess:thm:identity} and
+Corollary~\ref{v4excess:cor:weight} supply the required nonnegative resources;
+discarding $(n+H^2)a$ only weakens the resulting inequality. At a charged
+step the subtracted formal charge is zero. Thus the same endpoint
+enclosure dominates the specialized remainder. Support improves by the
+extra $-na$, which can be discarded. The explicit confinement derivative
+is the derivative of \eqref{v4excess:eq:Q}, with coefficient $c$, whereas the
+concentration estimates use $C_{n-1},C_{n-2}$ independently. A strict
+raw envelope remains strict after discarding any of these nonnegative
+terms. Induction over the finite ordered schedule establishes every
+successive enclosure for this law. Nothing is inferred from an unproved
+fixed point.
+
+For the final count step, let $Q$ be the difference from the binomial
+CDF and $f(u)$ its normal phase correction, as in the current count
+identity. Direct subtraction yields
+\begin{equation}\label{v4excess:eq:transport-master}
+ \begin{aligned}
+ a+\rho_B(c-C_B)={}&\sqrt n\pi_k\{Q/\pi_k-f(u)\}\\
+ &+\sqrt n\left\{\Phi\!\left(\frac{\delta}{\sqrt{nv}}\right)
+  -\Phi\!\left(\frac{\delta}{\sqrt{n(v+s)}}\right)\right\}
+ +c(\rho_B-\rho).
+ \end{aligned}
+\end{equation}
+The right side is exactly the old comparison right side with formal
+multiplier $t=c$. Its strict negative upper bound contradicts $a\ge0$
+and $C_B\le c$. The nearest-count mass sign and whole-count curvature
+proofs therefore transport unchanged once their right-side inequalities
+are proved. At zero noise, maximizing over $H$ for a fixed law still
+puts $H$ at a binomial atom, because the penalty is independent of $H$;
+the separately assumed strict binomial comparison gives $a<0$.
+\end{proof}
+
+\paragraph{Specific scalar bounds that meet the multiplier test.}
+The continuous-cell atlas bounds the constant, linear and quadratic
+coefficients of $\mathcal R_t$ before using conservation. Its separate
+convexity in $t$ and $\rho$ is purely algebraic. Thus its four-corner
+bound remains valid at $t=c$ whenever the scalar interval contains $c$;
+it does not require $C_{\rm act}$ to lie in that interval.
+The two-interval bound in current Section 6 likewise still bounds
+$G(c)$: with $C_0<c<\chi<C_1$,
+\[
+ G(c)\le\max\{G(C_0),G(\chi)\}
+ \le\max\{G(C_0),G(\chi),G(C_1)-N(C_1-\chi)\}.
+\]
+This uses only the old low interval and its convexity, not an upper
+bound for $C_{\rm act}$. The coherent six-corner bound also contains
+$c<0.40974$, where its charge $n(t-0.40974)_+$ is zero. The fixed-target
+calculation can eventually evaluate $G(c)$ directly, but the larger old
+bound remains sound if its primitive input bounds have been proved.
+
+The signed cubic repair uses only $0<c_*\le t\le c^*$ as a scalar
+multiplier condition. Setting $t=c\in(0.4,0.4226)$ keeps both signs of
+the cubic coefficient valid; the negative case still uses its upper
+multiplier. No actual-score cap is needed for that version of the repair.
+The confinement multiplier interval $(0.4,0.4253]$ also contains $c$;
+its two deleted-sum caps instead follow from the first-failure hypothesis.
+
+\paragraph{Limits of this transfer.}
+A scalar enclosure originally justified only at a ratio optimizer is
+not universal merely because it is stored as numbers. Its derivation
+must have the properties in Theorem~\ref{v4excess:thm:transport}. In particular,
+the complete low/high-frequency and floor-42 domains, the initial raw
+ceiling licensing weight removal, each strict budget, all acquired
+moment intervals, and the complete count cover are still inputs.
+Positive-barrier profiles with $K>0$ or coefficient intervals excluding
+$c$ are not covered. No assertion here accepts the old numerical
+predicates or all retained analytic candidates. This is a proved
+conditional transport, not an unconditional LOCAL42 theorem.
+
+\section{A replacement implication, not an established exclusion}
+\begin{corollary}\label{v4excess:cor:global}
+Fix $N\ge3$ and $c>0$. Assume $C_j\le c$ for $j<N$. Assume independently
+that at every $n\ge N$ with $C_{n-1}\le c$ (and $C_{n-2}\le c$ if an
+argument uses that deletion), no maximizer of $A_n(c)$ has $a\ge0$.
+Then $C_n<c$ for every $n\ge N$.
+\end{corollary}
+\begin{proof}
+Choose the first failure of the strict conclusion. All required
+predecessors are at most $c$. Theorem~\ref{v4excess:thm:attain} provides the
+forbidden excess maximizer with $a\ge0$.
+\end{proof}
+This new exclusion has no upper-score or upper-excess entry premise, so
+the one-step recurrence is unnecessary \emph{for this conditional
+implication}. The old LOCAL42 assumption explicitly has both such
+premises and concerns a ratio maximizer. It cannot be substituted for
+the new assumption. Exclusion only of $a>0$ yields a weak global bound,
+not the strict tail.
+
+For a binomial comparator of score $C_B$ and third moment $\rho_B$,
+direct subtraction gives
+$a=\rho_B(C_B-c)+\mathcal E_c$. The bound
+$\mathcal E_c\le\rho_B(c-C_B)$ yields only $a\le0$.
+Strict exclusion requires a strict comparison or a separately proved
+strict margin. This equality boundary must not disappear during the
+reformulation.
+
+\section{Adversarial checks and remaining scope}
+The separate exact checker uses sparse Laurent polynomials over rational
+numbers to derive the zero-bias moments of $Q_c$, the truncated first
+moment, both slack expansions and the hinge elimination. A mutation
+using $na$ leaves exactly $H^2a$. Finite-law checks use symmetric and
+skew Bernoulli, its reflection, a three-point law with a zero atom, a
+four-point law, and three symmetric tiny-far-atom laws. They check 108
+zero-bias/hinge instances and 324 raw-mixture derivatives, at negative,
+zero, positive and colliding thresholds. Ninety-eight collisions detect
+the incorrect closed upper endpoint in the gap measure.
+
+Two further controls identify analytic failure modes. For Bernoulli on
+$\{-1,1\}$, the open-event function
+$y\mapsto\Pp(X<-y)$ at $y=1$ has value zero and left limit $1/2$, so it
+is not upper semicontinuous. For integer $m>1$, put mass $1/(2m^3)$ at
+each of $\pm m$, mass $(1-1/m)/2$ at each of $\pm1$, and the remaining
+mass $1/m-1/m^3$ at zero. These standardized laws have
+$\rho_m=2-1/m$, while the weak limit has $\rho=1$; their third-moment
+tails at $m$ equal one. This refutes the unjustified UI3 shortcut, not
+the attainment proof above.
+
+\begin{center}
+\begin{tabular}{p{43mm}p{48mm}p{49mm}}
+\toprule
+Item & Mathematical status & Execution status\\
+\midrule
+Fixed-index attainment, contact and support & Proved above; support uses
+its stated moment inputs & Exact finite-law checks pass\\
+Conserved coefficient and sign gates & Exact identities and conditional
+consequences above & Independent rational algebra passes\\
+Complete Fourier bounds and new local exclusion & Not established by this
+note & No native run or certificate acceptance\\
+\bottomrule
+\end{tabular}
+\end{center}

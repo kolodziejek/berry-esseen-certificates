@@ -1,0 +1,95 @@
+{
+  "direct_pins": {
+    "signed_core.py": "1f40ccb90eb58a7f84dc61a0a5dd9bf6e6eb4e341aa6c9c6d049d08451f5211b",
+    "signed_support.py": "eecb06e65d8520d7cc06fc34217e06e1c0b1840dd8d687621e6828923769a4c4"
+  },
+  "limitations": "Pure validation tests plus saved-result accounting; no full acceptor, signed arithmetic or Fourier replay.",
+  "nonempty_probability_panels": 30,
+  "panel_ceilings": {
+    "D": "76682509/100000000",
+    "H": "2295071/1250000",
+    "beta": "50549963/100000000",
+    "raw": "10997587/5000000",
+    "rho": "18626823/12500000",
+    "theta": "28620759/100000000"
+  },
+  "panel_incidences": 7235,
+  "preload_pins": {
+    "mathematics/fixed-target-v5/2026-10-27/cell-input.json": "617f12d1dfa7521a6b06ca11c9ed195e4a576c069bdb21a81b6f383641c90ea2",
+    "mathematics/fixed-target-v5/2026-10-27/cell-sources/accept_initial42.py": "aa759c74fbd9ad39618264ef51b961f13c7833faa77a7f7b33309c27a7cee032",
+    "mathematics/fixed-target-v5/2026-10-27/cell-sources/high_window_core.py": "53e181be63852e21abc3f44191cce7237c46d9e9d7868d3b6b94fccb606c7232",
+    "mathematics/fixed-target-v5/2026-10-27/cell-sources/kernel.py": "d71f58b7527c3cf6d2146d816e5d124f6f331d1b153e5aaedee5182707647f12",
+    "mathematics/fixed-target-v5/2026-10-27/cell-sources/local_signed_core.py": "f0c2df790b794413e7fd08c4f3fc20f79c15c27a6456c8eae5013b96eb093c11",
+    "mathematics/fixed-target-v5/2026-10-27/cell_check.py": "6827a67e64cfea5b89d823ffd34821fa942b3c3add702ee9721c89d65f443aa5",
+    "mathematics/fixed-target-v6/2026-10-27/moment_check.py": "c44f789c35198eabb2d6d07a3843437c4fa29e9b85ebf79505a3bb696987513f",
+    "mathematics/fixed-target-v6/2026-10-27/signed-check.py": "c827917d18b241d7e6255b3c15184ca719044cc3b7ffb8c7474ea5482dd7a847",
+    "mathematics/fixed-target-v6/2026-10-27/signed-two-pass-check.py": "a2b9309998191c2d7e4477a969cd55ecb516440f56dfa3cf97df5ccddac1e76d"
+  },
+  "probability_panels": 100,
+  "rejected_controls": [
+    {
+      "name": "numeric excluded flag",
+      "reason": "persistent excluded cell"
+    },
+    {
+      "name": "floating excluded index",
+      "reason": "persistent excluded cell"
+    },
+    {
+      "name": "extra excluded field",
+      "reason": "exact fields"
+    },
+    {
+      "name": "missing stage",
+      "reason": "four fixed passes"
+    },
+    {
+      "name": "legacy theorem name",
+      "reason": "distinct fixed-target theorem"
+    },
+    {
+      "name": "bad source binding",
+      "reason": "fixed reviewed sources"
+    },
+    {
+      "name": "open probability seam",
+      "reason": "closed probability endpoints"
+    },
+    {
+      "name": "duplicate probability panel",
+      "reason": "closed probability endpoints"
+    },
+    {
+      "name": "boolean incidence",
+      "reason": "integer incidence count"
+    },
+    {
+      "name": "noncanonical zero",
+      "reason": "canonical rational"
+    },
+    {
+      "name": "arithmetically false raw ceiling",
+      "reason": "outward ordered scalar outputs"
+    },
+    {
+      "name": "arithmetically false phase ceiling",
+      "reason": "outward panel H"
+    },
+    {
+      "name": "false incidence count",
+      "reason": "all probability incidences"
+    },
+    {
+      "name": "duplicate JSON key",
+      "reason": "duplicate JSON key"
+    }
+  ],
+  "signed_cells": 11264,
+  "source_sha256": {
+    "mathematics/fixed-target-v7/2026-10-27/accept_entry.py": "fe8197d6943c4decb7421bd1c162d7ec24045fdb3ea1215356249b4be620d69d",
+    "mathematics/fixed-target-v7/2026-10-27/entry-proof.json": "61b7ad43e20046d7cbf7157e3feb61696331731e7be418f6a5fa535c2eee8bae",
+    "mathematics/fixed-target-v7/2026-10-27/export_entry.py": "203e1a4aa098997be8e3c7952d015b59b7818b6cd8c08691fa619233e67ae835",
+    "runs/fixed-target-v7-20261027/signed07/stdout.json": "aa21e4a83cb5008028e9c885a603feeb8c6ba3d8bb4c5cd4b70e87a6a6c7cb5a"
+  },
+  "status": "PASS_BOUNDED_SCHEMA_AND_POOL_REVIEW"
+}

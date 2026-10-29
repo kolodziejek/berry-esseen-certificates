@@ -1531,30 +1531,11 @@ This one rule accounts for the moment, signed Taylor, endpoint movement,
 outer-gap, and confinement-error estimates. In particular, no two costs
 may each spend the full residual and then be added.
 
-\paragraph{The simultaneous gap bound}
-Use the central-gap notation of Section~\ref{ms:geometry-counts}, with
-$\sigma=\sqrt{10}$, $p_*=(4-\sigma)/2$,
-$T_+=\E X_+^3-mB^2$, $T_-=\E X_-^3-mA^2$ and
-$J_o=J-m(A+B)^2$. Lemma~\ref{ms:physical-defect} gives
-\begin{equation}\label{ms:fourier:rescore:re-gapexact}
- D=m(\sqrt{\sigma+1}A-\sqrt{\sigma-1}B)^2
-   +(\sigma-1)T_++(\sigma+1)T_-+3(T_++T_--J_o).
-\end{equation}
-In particular $D\ge0$, and $D<(\sigma-1)\rho$ ensures an actual
-central gap. Its elementary consequences in Section~\ref{ms:geometry-counts}
-are $1/(2\rho)\le m\le1/2$, $AB\le1$, $J\le\rho+2m$,
-$T_++T_-\le D/2$, and $A+B\ge\sqrt{2-D}$ when $D<2$.
-For the conditional means and signed variances defined above,
-Lemma~\ref{ms:simultaneous-gap} gives the simultaneous inequality
-\begin{equation}\label{ms:fourier:rescore:re-joint}
-\begin{split}
- D\ge{}&\frac{(6+2\sigma)(1-\theta)^{3/2}}{\sqrt{pq}}(p-p_*)^2
- +6m\{(A+B)(\Delta_A+\Delta_B)+\Delta_A\Delta_B\}\\
- &+3(\sigma+1)B\theta_++3(\sigma+3)A\theta_-.
-\end{split}
-\end{equation}
-The same closed support, central endpoints, conditional means and
-signed variances occur here and in those lemmas.
+We use the central-gap notation and quantitative decomposition
+\eqref{ms:defect-decomposition} from Section~\ref{ms:geometry-counts}.
+In particular, $T_\pm$ measure the third-moment excess beyond the inner
+endpoints and $J_o$ sums the outer gaps. The simultaneous inequality
+\eqref{ms:simultaneous-gap-formula} supplies the common residual below.
 
 \paragraph{Simultaneous bounds and their refinement}
 For a closed probability interval $I=[l,u]$, suppose the following bounds hold:
@@ -1573,7 +1554,7 @@ Let $s_+=\max_Ip(1-p)$, $s_-=\min_Ip(1-p)$ and
  K_+=3(\sigma+1)B_l,\quad K_-=3(\sigma+3)A_l,
  \quad K=\min(K_+,K_-),\quad m_l=\sqrt{(1-\Theta)s_-}.
 \end{gather*}
-If $r_I<0$, exclude the entire closed cell. Otherwise \eqref{ms:fourier:rescore:re-joint}
+If $r_I<0$, exclude the entire closed cell. Otherwise \eqref{ms:simultaneous-gap-formula}
 gives, simultaneously,
 \begin{equation}\label{ms:fourier:rescore:re-residual}
  6m(A_l+B_l)(\Delta_A+\Delta_B)+K_+\theta_++K_-\theta_-\le r_I.
@@ -1612,40 +1593,15 @@ These exports are derived from the weighted resource; multiplying an
 unweighted variance ceiling by $N$ would not prove them.
 
 
-\begin{theorem}[Joint inward displacement and noise]\label{ms:fourier:rescore:joint-resource}
-Suppose $n\ge N>0$ and the same law satisfies $nD\le Nd_D$, $\theta\le\Theta<1$,
-$pq\le v_*$, $A+B\ge S_*>0$, and
-\[
- D\ge b+6mS_*(\Delta_A+\Delta_B)+K\theta,
- \qquad b\ge0,\quad K>0.
-\]
-Put $r=d_D-b$. If $r>0$, set
-\[
- d_* =\frac{r}{6(1-\Theta)S_*},\qquad
- \Lambda=\frac{Nv_*r}{K(1-\Theta)}.
-\]
-Then the Bernoulli coordinates of this law obey
-\[
-                         \frac{d_Y}{d_*}+\frac\lambda\Lambda\le1.
-\]
-If $r<0$ no such law exists. If $r=0$, then $d_Y=\lambda=0$.
-\end{theorem}
-\begin{proof}
-Apply Theorem~\ref{ms:joint-resource} with the displayed parameters.
-The present $d_Y$, $\theta$, $\lambda$ and $S_*$ are the same count
-coordinates and lower gap bound used there. In particular the input is
-$nD\le Nd_D$, with $n\ge N$, so the theorem applies also when $r\le0$.
-\end{proof}
-The required hypothesis follows from the simultaneous gap budget by taking
-$S_*=A_l+B_l$, $K=\min(K_+,K_-)$ and $b=b_I$, and dropping only the
-nonnegative product $6m\Delta_A\Delta_B$.
-On any closed band $L_0\le\lambda\le U_0\le\Lambda$ it follows that
-\[
-                         d_Y\le d_*(1-L_0/\Lambda).
-\]
-Either positive intercept may first be enlarged: each nonnegative summand
-then decreases. Thus independent outward rounding of the two intercepts is
-safe. An unweighted assertion $D\le d_D$ alone would not prove this theorem.
+For a joint bound on displacement and noise, apply
+Theorem~\ref{ms:joint-resource} with
+$d_D=d$, $v_*=s_+$, $S_*=A_l+B_l$, $K=\min(K_+,K_-)$ and $b=b_I$.
+The premise follows from \eqref{ms:simultaneous-gap-formula} by dropping
+$6m\Delta_A\Delta_B\ge0$; the required index-scaled input is $nD\le Nd_D$.
+On a closed band $L_0\le\lambda\le U_0\le\Lambda$ this gives
+$d_Y\le d_*(1-L_0/\Lambda)$.
+Either positive intercept may first be enlarged, since both summands
+are nonnegative. The theorem also handles zero and negative residuals.
 
 For $j=3,4,5$ set
 \[
@@ -1877,7 +1833,7 @@ The maximum of these three separately valid losses can be subtracted.
 Their sum cannot. A zero atom contributes zero to the weighted measure.
 
 \paragraph{An actual central gap without assuming $D<2$}
-The already proved gap decomposition \eqref{ms:fourier:rescore:re-gapexact} shows that
+The already proved gap decomposition \eqref{ms:defect-decomposition} shows that
 $D<(\sigma-1)\rho$ implies an actual central gap. Use its same
 nonnegative terms, writing $T=T_++T_-$ and
 $Q=(\sqrt{\sigma+1}A-\sqrt{\sigma-1}B)^2$.
@@ -2012,7 +1968,10 @@ $x<\rho$. Replacing $\rho$ by $r$ and the outer endpoint by $R$
 gives $\int_r^v(R-x)x(x-r)\,dx$. Dividing this integral by $v^2$
 gives exactly the displayed expression. Signwise Tonelli now charges
 $\Gamma\E X_-^3=\Gamma(\rho-\gamma)/2$.
-On positive gaps $(t-a)(\rho-t)\le\rho^2/4$, giving $\rho^2J/8$.
+On the positive portion of each gap, $t(\rho-t)\le\rho^2/4$.
+Multiply by $t-a\ge0$ and integrate; since
+$\int_a^b(t-a)\,dt=(b-a)^2/2$, the resulting contribution is
+at most $\rho^2J/8$. This includes a gap crossing zero.
 Partition the $v$-range into 64 closed intervals: on each, maximize the
 concave quadratic at its clipped vertex $2(R+r)/3$ and the positive
 reciprocal term at the left endpoint. This proves its interval bound.
@@ -2089,7 +2048,7 @@ alternative bounds retained in the initial, coarse moment cover:
 \end{align}
 The first two lines follow from the coarse gap identities proved above.
 For~\eqref{ms:fourier:rescore:mom-outer}, use $J_{1,o}\ge-3T_-$,
-$J_{1,o}\le3J_o\le3T$ and~\eqref{ms:fourier:rescore:re-gapexact}.
+$J_{1,o}\le3J_o\le3T$ and~\eqref{ms:defect-decomposition}.
 
 The central integrals are $J_{j,c}=mP_j(A,B)$, with
 \[
@@ -2296,7 +2255,7 @@ For independent copies, the actual event $E=\{XX'<0\}$ obeys
 \end{lemma}
 \begin{proof}
 The inequality $J\le\rho+1$ gives $D\ge(\sigma-1)\rho-3$.
-Equation \eqref{ms:fourier:rescore:re-gapexact} gives $w^2\le2\rho D\le37d/10$ for
+Equation \eqref{ms:defect-decomposition} gives $w^2\le2\rho D\le37d/10$ for
 $w=cA-eB$. Since $ce=3$,
 \[
  A+B=\frac{C_0}{6}\sqrt{w^2+12AB}-\frac{w}{3C_0},
@@ -2709,7 +2668,7 @@ by $6(1-l)$ and $6u$, respectively, whenever the numerator is positive.
 \end{lemma}
 \begin{proof}
 The gap identity and its signwise Tonelli estimate in
-\eqref{ms:fourier:rescore:re-gapexact} give
+\eqref{ms:defect-decomposition} give
 \[
  J\le m(A+B)^2+T_++T_-=\rho+2mAB,
  \qquad D\ge(\sqrt{10}-1)\rho-6mAB.
@@ -2746,7 +2705,7 @@ Here $D$ is the moment defect and $d$ is the inward displacement.
 Let $A_*,B_*>0$ be acquired lower gap bounds, $S=A_*+B_*$,
 $k_+=3(\sqrt{10}+1)B_*$ and
 $k_-=3(\sqrt{10}+3)A_*$.
-The separate-charge identity \eqref{ms:fourier:rescore:re-joint} gives
+The separate-charge identity \eqref{ms:simultaneous-gap-formula} gives
 \begin{equation}\label{ms:fourier:rescore:u-one-resource}
  D\ge b+6(1-\theta)S d+k_+\theta_++k_-\theta_-.
 \end{equation}
@@ -2757,7 +2716,7 @@ For example, a panelwise lower binary charge is
 \]
 rounded downward.  To check the change of coordinates in
 \eqref{ms:fourier:rescore:u-one-resource}, the two conditional-mean gaps in
-\eqref{ms:fourier:rescore:re-joint} sum to $\ell d$ and
+\eqref{ms:simultaneous-gap-formula} sum to $\ell d$ and
 $m\ell=1-\theta$; its additional product term is nonnegative.
 
 \begin{lemma}[Affine, moment, and variance consequences]\label{ms:fourier:rescore:u-three-uses}
@@ -3167,7 +3126,7 @@ The simultaneous moment inequality has the following usable form:
  d=(M_+/p+M_-/q)/\ell,\quad
  \epsilon\le2(M_++M_-)/\ell,\quad M_\pm\ge0.
 \end{equation}
-To derive it, the endpoint expansion of \eqref{ms:fourier:rescore:re-gapexact} gives
+To derive it, the endpoint expansion of \eqref{ms:defect-decomposition} gives
 $D\ge m(\sqrt{\sigma+1}A-\sqrt{\sigma-1}B)^2
 +2(\sigma+2)B^2M_++2(\sigma+4)A^2M_-
 +3(\sigma+1)B\theta_++3(\sigma+3)A\theta_-$.

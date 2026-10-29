@@ -1,0 +1,62 @@
+{
+  "status": "PASS_BOUNDED_ENTRY_RATIONAL_CHECKS",
+  "structural_bounds": {
+    "3031": "7361/4000",
+    "3322": "712569/386500"
+  },
+  "support": {
+    "A": "117456/15625",
+    "h4": "51546531/390625",
+    "Q": "-663317/78125",
+    "Q1": "-263781/12500",
+    "Q2": "-17517/1000",
+    "L": "-960520473/175000000",
+    "L1": "-11274423/2000000",
+    "L2": "-2057/1000",
+    "P": "-2214258283536204102723/10250000000000000000000"
+  },
+  "rejected_radius3_P": "356436456160833/41984000000000",
+  "illustrative_license_density": "7199/17199",
+  "laws": [
+    {
+      "name": "symmetric Bernoulli",
+      "rho": "1",
+      "beta": "0",
+      "gamma": "0",
+      "initial_moment_domain": true
+    },
+    {
+      "name": "skew Bernoulli 3/2",
+      "rho": "97/78",
+      "beta": "-5/13",
+      "gamma": "-5/6",
+      "initial_moment_domain": true
+    },
+    {
+      "name": "skew Bernoulli 2/3",
+      "rho": "97/78",
+      "beta": "5/13",
+      "gamma": "5/6",
+      "initial_moment_domain": true
+    },
+    {
+      "name": "three-point zero atom",
+      "rho": "2",
+      "beta": "0",
+      "gamma": "0",
+      "initial_moment_domain": false
+    },
+    {
+      "name": "tiny distant atoms (outside entry moment domain)",
+      "rho": "20",
+      "beta": "0",
+      "gamma": "0",
+      "initial_moment_domain": false
+    }
+  ],
+  "limitations": [
+    "No certificate/backend imports or native runs.",
+    "No claim of a raw numerical cover or local exclusion.",
+    "Exact arithmetic does not prove analytic premises."
+  ]
+}

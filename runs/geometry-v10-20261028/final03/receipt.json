@@ -1,0 +1,52 @@
+{
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "optimization": 0,
+  "driver_sha256": "71bbbf60af9679b040bffcc405c79e78dea9fd95fb8c81709f0032ca99efb47f",
+  "proof_sha256": "8efec34ffb6353c3dfeb9f9290276f331d47baea02b738d4d51b3586f67d7138",
+  "checks": [
+    {
+      "script": "geometry-check.py",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/geometry-v10/mathematics/simplification-v10/2026-10-28/geometry-check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.059541292,
+      "source_sha256": "b60f6b06dd7d9d318dcdeafcf2b4eb9adf051838702b2ed54f74494c3ddc82a2",
+      "stdout_sha256": "fb241e432917c3d286918afe425b1fe3a48783f880b9d56df4830a627760bb70",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "geometry-panels.py",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/geometry-v10/mathematics/simplification-v10/2026-10-28/geometry-panels.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.071216125,
+      "source_sha256": "67cbced3629e09d388f48927774ac04ea02427c44c0ca4e550b538b78a6b9908",
+      "stdout_sha256": "913ac5d9d8d6b3002078f064e07f1d0bda7a651f1589bd9dbdda9041c4933508",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "geometry-laws.py",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/geometry-v10/mathematics/simplification-v10/2026-10-28/geometry-laws.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.08553762500000003,
+      "source_sha256": "82bc67c53ed90c2640f225c1e7ca3ccf02903e3e3d9fa9db82d7713a50b9002f",
+      "stdout_sha256": "a1ff955c54723a145fb62eb1bf1d08ebe272e66394c7c78ef9f3cd12967e34c2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS_BOUNDED_DIRECT_GEOMETRY_CHECKS",
+  "mathematical_scope": "Proved direct geometry plus finite gates and one-pass panel/strip consequences; not global confinement/count/finite base."
+}

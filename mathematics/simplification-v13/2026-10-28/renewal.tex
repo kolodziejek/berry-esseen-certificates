@@ -1,0 +1,130 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,microtype,hyperref}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}{Lemma}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\title{A renewal identity for the one-sided conditional-noise case}
+\author{}\date{28 October 2026}
+\begin{document}\maketitle
+
+The count proof estimates several crossing probabilities separately. When
+the lower conditional law has no noise, those crossings are successive
+renewals of one positive random walk. Their sum has a simple sign, with no
+Poisson comparison and no parameter certificate. This does not yet control
+the finite binomial weights or cover two noisy conditional laws.
+
+\begin{theorem}\label{thm:renewal}
+Let $D_1,D_2,\ldots$ be iid, with $\E D_1=1$ and
+\[
+       0<m\le D_1\le M,\qquad b:=1-(M-m)\ge0.
+\]
+Set $T_0=0$, $T_j=D_1+\cdots+D_j$,
+$N(t)=\max\{j:T_j\le t\}$ for $t\ge0$, and let
+$A(t)=t-T_{N(t)}$ be the age of the last renewal. Then
+\[
+ g(t):=t-\E N(t)\ge \E\min\{A(t),b\}\ge0.                 \tag{1}
+\]
+Both endpoints in the support assumption are permitted. Atoms at the
+evaluation point count as renewals; the next crossing is strictly above it.
+\end{theorem}
+\begin{proof}
+Write $\overline F(x)=\Pp(D_1>x)$ and
+\[
+ h(x)=\overline F(x)-\E(D_1-x)_+,\qquad x\ge0.
+\]
+If $0\le x<m$, then $h(x)=x$ and $\overline F(x)=1$.
+If $x\ge m$, then
+$(D_1-x)_+\le(M-m)\mathbf1_{\{D_1>x\}}$, so
+\[
+ h(x)\ge b\overline F(x)\ge\min\{x,b\}\overline F(x).
+                                                               \tag{2}
+\]
+The latter lower bound also holds for $x<m$.
+
+The renewal equation for $q(t)=\E N(t)$ is
+$q(t)=\Pp(D_1\le t)+\E[q(t-D_1)\mathbf1_{\{D_1\le t\}}]$.
+Substitute $q(t)=t-g(t)$, use $\E D_1=1$, and obtain
+\[
+ g(t)=h(t)+\E[g(t-D_1)\mathbf1_{\{D_1\le t\}}].             \tag{3}
+\]
+Every increment is at least $m>0$, so iteration is a finite operation:
+\[
+ g(t)=\sum_{j=0}^{\lfloor t/m\rfloor}
+       \E[h(t-T_j)\mathbf1_{\{T_j\le t\}}].                 \tag{4}
+\]
+For each $j$, independence of the next increment identifies
+$\overline F(t-T_j)$ with the conditional probability of
+$T_j\le t<T_{j+1}$. These disjoint events partition the sample space.
+Combining (2) and (4) gives (1). This proves the claim without an optional
+stopping theorem, a limiting renewal theorem, or a non-lattice assumption.
+\end{proof}
+
+\section*{The exact iid application}
+Suppose $Y=B+U$, $\Pp(B=1)=p$, $\E(U\mid B)=0$, and $U_0=0$.
+Let $U_1\in[-a,A]$, where $a<1$ and $a+A\le1$.
+Use independent copies of $D=1+U_1$, so $m=1-a$, $M=1+A$ and
+$b=1-a-A$. If
+\[
+                         0\le t<n(1-a),                    \tag{5}
+\]
+then $N(t)\le n-1$. Conditional on $j$ successes, the raw sum of $n$
+copies of $Y$ has exactly the law of $T_j$. Therefore, with $F_B$ the
+$\mathrm{Bin}(n,p)$ CDF,
+\[
+             \Pp(Y_1+\cdots+Y_n\le t)=\E F_B(N(t)).        \tag{6}
+\]
+Indeed the indicators $\mathbf1_{\{T_j\le t\}}$ equal
+$\mathbf1_{\{j\le N(t)\}}$ on this one common probability space.
+This is an identity for an actual iid marginal, not a relaxation.
+
+The acquired right strip $a\le.072$, $A=.6$ satisfies $b\ge.328$;
+the left strip $a\le.068$, $A=.7$ satisfies $b\ge.232$.
+For $n\ge42$, $p\in[.25,.53]$, $\lambda=n\E U^2\le.616$ and
+$|H|\le1.84$, the raw threshold
+$t=np+H\sqrt{p(1-p)+\lambda/n}$ satisfies (5). For example
+$\sqrt{p(1-p)+\lambda/n}<.515$ gives
+$0<np-.948\le t\le.53n+.948<.928n$.
+Thus (6) and $\E N(t)\le t$ hold throughout this entire noise range
+in the stated one-sided case. No claim that $U_0=0$ follows from the
+acquisition hypotheses is made.
+
+\section*{What the identity does and does not remove}
+Put $v=p(1-p)$, $s=\E U^2$, $\rho=\E|Y-p|^3/(v+s)^{3/2}$,
+$\rho_B=(1-2v)/\sqrt v$, and $t=k+u$. Write $\pi_k=\Pp(B_n=k)$,
+$m_k=\sqrt n\,\pi_k$, and define the exact discrete remainder
+\[
+ R_k(j)=F_B(j)-F_B(k)-\pi_k(j-k).
+\]
+For the direct comparison used in the preceding research notes, (6) gives
+\begin{align*}
+ \Delta_C={}&-m_k g(t)+\sqrt n\,\E R_k(N(t))+m_k u\\
+ &-\sqrt n\left[
+ \Phi\!\left(\frac{t-np}{\sqrt{n(v+s)}}\right)
+ -\Phi\!\left(\frac{k-np}{\sqrt{nv}}\right)\right]
+ +C(\rho_B-\rho).                                           \tag{7}
+\end{align*}
+There is no sum of separately bounded incoming probabilities in (7).
+The leading unweighted contribution is nonpositive for every phase and
+every noise size satisfying the support assumptions. But (1) alone does
+\emph{not} dominate the binomial remainder, the normal correction, or the
+cubic correction in (7). A bound relative to arbitrarily small noise must
+retain their joint dependence. Consequently this note removes no dependency
+from the already accepted general comparison theorem. It provides a
+rigorous alternative formula and a useful test case for a future replacement.
+
+The width condition in Theorem~\ref{thm:renewal} cannot simply be dropped.
+Take $D=9/10$ with probability $19/21$ and $D=39/20$ with probability
+$2/21$. Its mean is one, but at $t=9/10$,
+$\E N(t)=19/21>9/10$, with excess $1/210$.
+The support width is $21/20$. Also, replacing $\E N(t)$ by $t$ would
+be wrong even for the deterministic increment $D=1$, when
+$g(t)=t-\lfloor t\rfloor$.
+
+\section*{Evidence and scope}
+The proof above is elementary and covers all distributions with the stated
+support and mean. The companion \texttt{renewal-check.py} uses exact finite
+convolutions to check (3)--(4), the age bound, atom collisions and the two
+false extensions. These tests are controls on the derivation, not a substitute
+for its distribution-free argument. No full Berry--Esseen comparison,
+finite-base bound, or global theorem is asserted here.
+\end{document}

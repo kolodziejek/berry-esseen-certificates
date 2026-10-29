@@ -1,0 +1,325 @@
+\section{One small-noise comparison for all acquired probabilities}
+
+The direct geometric localization leaves probabilities between $1/4$ and
+$53/100$. The left panels need a slightly wider conditional support strip
+than the right panels. This does not require a different count argument.
+The following theorem uses the common amplitude $7/10$. It retains the
+third-moment correction, which can have the unfavorable sign on the left.
+
+\begin{theorem}\label{ap:main}
+Let $n\ge42$, $1/4\le p\le53/100$, $q=1-p$, and $Y=B+U$, where
+$\Pp(B=1)=p$ and $\E(U\mid B)=0$. Suppose the two conditional laws obey
+\[
+ |U_j|\le A:=7/10,\qquad U_0\le a_0,\quad U_1\ge-a_1,
+ \qquad a_0,a_1\ge0,\quad a_0+a_1\le d_*:=17/250.
+\]
+Put $v=pq$, $s=\E U^2$, $\lambda=ns$, $\ell=(v+s)^{-1/2}$,
+$X=\ell(Y-p)$ and $\rho=\E|X|^3$. Let $S_n$ be the sum of $n$
+independent copies of $X$. Assume
+\[
+ 0<\lambda\le U_*:=1/500,\qquad |H|\le46/25.
+\]
+Choose an integer $k$ so that $np+H/\ell=k+u$ with
+\[
+             -109/500\le u\le391/500.
+\]
+Such an anchor always exists, and $1\le k\le n-1$.
+Write $\delta=k-np$, $\rho_B=(1-2v)/\sqrt v$ and let $F_B$ denote the
+distribution function of $\operatorname{Bin}(n,p)$. For every $0\le C\le41/100$,
+\begin{align*}
+ \Delta_C={}&\sqrt n\{\Pp(S_n\le H)-\Phi(H/\sqrt n)\}-C\rho\\
+ &-\sqrt n\{F_B(k)-\Phi(\delta/\sqrt{nv})\}+C\rho_B
+                                                    <-\lambda/100.
+\end{align*}
+\end{theorem}
+
+For $C=C_E=(3+\sqrt{10})/(6\sqrt{2\pi})<41/100$, the external strict
+Bernoulli theorem excludes a nonnegative fixed-target excess. At $\lambda=0$
+the law is Bernoulli and that theorem applies directly. The positive-noise
+statement has no contact or predecessor premise. Such premises remain in
+the separate acquisition of its strip and threshold bounds.
+
+\subsection{Exact conditioning and the finite normalization}
+Set $l=-109/500$, $h=391/500$, $b=1/20$, $v_*=3/16$ and $D=171/100$.
+The phase interval has width one and equals
+$[(A-1-2d_*)/2,(A+1-2d_*)/2]$. In particular choosing
+$k=\lfloor np+H/\ell-l\rfloor$ is always possible.
+Let $W_j$ be a sum of $j$ independent variables with law $U_1$ and
+$n-j$ with law $U_0$. Write $\pi_j=\binom njp^jq^{n-j}$, zero outside
+the legal counts, and define
+\[
+ \begin{gathered}
+ f(u)=\frac{\Phi((\delta+u)/\sqrt{n(v+s)})-
+                  \Phi(\delta/\sqrt{n(v+s)})}{\pi_k},\\
+ O=\Pp(W_k>u)+f(u),\qquad
+ T=\sum_{i=1}^{n-k}\Pp(W_{k+i}\le u-i).
+ \end{gathered}
+\]
+Conditioning on the actual Bernoulli count gives
+\begin{align*}
+ \Pp(S_n\le H)-F_B(k)
+ ={}&-\sum_{i=0}^k\pi_{k-i}\Pp(W_{k-i}>u+i)\\
+ &+\sum_{i=1}^{n-k}\pi_{k+i}\Pp(W_{k+i}\le u-i).
+\end{align*}
+The outgoing event is strict and the incoming event closed, including at
+atoms. If $\pi_{k+i}/\pi_k\le R$, discarding all but the own outgoing
+count gives
+\begin{equation}\label{ap:master}
+ \Delta_C\le-\sqrt n\pi_k(O-RT)+\mathcal R_C,
+\end{equation}
+where
+\[
+ \mathcal R_C=\sqrt n\{\Phi(\delta/\sqrt{nv})-
+                    \Phi(\delta/\sqrt{n(v+s)})\}+C(\rho_B-\rho).
+\]
+
+We have $v\ge v_*$ and $\sqrt{v+s}<501/1000$. Therefore
+$|\delta|<D$, and $|\delta|<1$ if $|u|\le b$. The segment from $p$
+to $k/n$ lies inside $(1/5,29/50)$; this also proves that the count is
+interior. On that segment $r(1-r)\ge4/25$ and $|1-2r|\le3/5$, so
+\[
+ |D'''(r\Vert p)|<24,\qquad
+ |(\log(r(1-r)))'|<4,\qquad
+ \frac1{12r(1-r)}<\frac{53}{100}.
+\]
+Finite Stirling and Taylor's theorem yield
+\begin{equation}\label{ap:mass}
+ \sqrt n\pi_k=\frac{\phi(0)}{\sqrt v}
+       e^{-\delta^2/(2nv)+e},\qquad
+ n|e|<Z(D_0):=2D_0+53/100+4D_0^3/42
+\end{equation}
+when $|\delta|\le D_0\le D$. The finite factorial formula is
+\[
+ \log(j!)=(j+1/2)\log j-j+\tfrac12\log(2\pi)+r_j,
+ \qquad 0<r_j<1/(12j).
+\]
+Its proof is retained in the manuscript's count appendix,
+\path{appendices/count-comparison.tex}, line~131. The three errors in
+\eqref{ap:mass} are at most $4D_0^3/n^2$, $2D_0/n$ and $53/(100n)$.
+Absolute derivatives are used; the segment may cross $1/2$.
+
+Holding the actual count fixed gives
+\[
+ \log f'(t)=-\tfrac12\log(1+s/v)+\frac{\delta^2}{2nv}
+            -\frac{(\delta+t)^2}{2n(v+s)}-e.
+\]
+Since $1/(2v_*)+D^2/(2\cdot42v_*^2)<4$, for $|t|\le b_0$ this implies
+\[
+ n|\log f'(t)|\le4\lambda+
+            \frac{2D_0b_0+b_0^2}{2v_*}+Z(D_0).
+\]
+Use $(D_0,b_0)=(1,b)$ or $(D,h)$, together with
+$e^{-x}\ge1-x$, $e^x\le(1-x)^{-1}$ for $x<1$, and
+$0.39886<\phi(0)<0.4$. The resulting uniform bounds are
+\[
+\begin{array}{c|cc}
+ &|u|\le1/20&l\le u\le h\\\hline
+ \sqrt n\pi_k\text{ lower bound}&69/100&14/25\\
+ f'\text{ lower bound}&9/10&2/3\\
+ f'\text{ upper bound}&27/25&3/2\\
+ \pi_{k+i}/\pi_k\text{ upper bound}&107/100&9/5\\
+ \mathcal R_C\text{ upper bound}&4\lambda/n&6\lambda/n
+\end{array}
+\]
+At a binomial mode the displacement is at most one, and
+\eqref{ap:mass} gives $\sqrt n\max_j\pi_j<1$. Dividing by $14/25$
+proves the global ratio bound. In the inner range the first exact ratio
+is at most $1+(53/100)/(42v_*)<107/100$; subsequent ratios are at most
+one since $(n+1)p-k<153/100<2$.
+
+\subsection{The third-moment correction on the left}
+We justify the repair row without assuming $\rho\ge\rho_B$.
+The inward bounds fix both signs because $a_0<p$ and $a_1<q$.
+The conditional cubic expansion gives
+\[
+ \E|Y-p|^3\ge v(1-2v)+(3\min(p,q)-d_*)s.
+\]
+Indeed $U_0^3\le a_0U_0^2$ and $U_1^3\ge-a_1U_1^2$.
+Using $(1+x)^{3/2}\le1+3x/2+3x^2/8$ for $x\ge0$, we obtain
+\[
+ (v+s)^{3/2}(\rho-\rho_B)
+ \ge s\{3\min(p,q)-\tfrac32(1-2v)-d_*
+                         -3(1-2v)s/(8v)\}\ge-B_*s,
+\]
+where
+\[
+ B_*=\tfrac32(1-2v_*)+d_*-\tfrac34
+              +\frac{3(1-2v_*)U_*}{8\cdot42v_*}.
+\]
+An exact square comparison proves
+$(41/100)B_*/v_*^{3/2}<4/3$. Consequently
+$C(\rho_B-\rho)\le(4/3)s$ for every $0\le C\le41/100$.
+The normal variance correction is at most $(5/2)\delta_+s$, since
+$0.2/v_*^{3/2}<5/2$. Hence
+\[
+ \mathcal R_C\le\{(5/2)\delta_++4/3\}\lambda/n,
+\]
+which gives both repair constants in the table.
+
+The sign issue is real. At $p=13/50$, take $U_1=0$ and
+$U_0=\pm1/1000$ with equal conditional probabilities. Then
+$s=q/10^6$ and
+$\E|Y-p|^3=v(1-2v)+3ps$. Direct rational squaring gives
+$\rho<\rho_B$. This law obeys the present support and noise restrictions;
+it refutes discarding the correction, not the theorem.
+
+\subsection{An own-count bound and a complete incoming tail}
+If $s_j=\E U_j^2$, then $|s_1-s_0|\le4s$ and
+$\E W_j^2=\lambda+(j-np)(s_1-s_0)$. Thus
+\[
+ \frac{19}{21}\lambda\le t:=\E W_k^2\le\frac{23}{21}\lambda
+      \quad(|u|\le b),\qquad t\le\frac76\lambda\quad\text{globally}.
+\]
+For incoming counts, $\E W_{k+i}^2\le iV\lambda$, with $V=6/5$
+in the inner range and $V=4/3$ globally.
+
+For a centered independent sum of variance $t$ and summands bounded in
+absolute value by $A$, independence gives
+$|\E W^3|\le At$ and $\E W^4\le A^2t+3t^2$.
+Set $\alpha=3/5$ and
+\[
+ h_\alpha(x)=\frac{-x^4+3\alpha^2x^2+2\alpha^3x}{5\alpha^4}
+                                  \le\mathbf1_{(0,\infty)}(x).
+\]
+The numerator factors as $-x(x+\alpha)^2(x-2\alpha)$; its positive
+maximum is $(9+6\sqrt3)\alpha^4/4<5\alpha^4$.
+After shifting by $\sigma r$, adding $br$, dividing by $t>0$ and
+setting $r=zt$, the resulting lower bound is
+\begin{align*}
+ F_{\sigma,b}(z,t)={}&\frac{3\alpha^2-A^2-3t}{5\alpha^4}
+ +\left(\frac{2\sigma}{5\alpha}+b-\frac{4At}{5\alpha^4}\right)z\\
+ &+\frac{3\alpha^2t-6t^2}{5\alpha^4}z^2
+       -\frac{t^3z^4}{5\alpha^4}.
+\end{align*}
+It is concave in $t\ge0$. On $0\le z\le z_0$, replace $z^4$ by
+$z_0^2z^2$. The resulting lower quadratic is checked at its endpoints
+and eligible vertex, for $t=0$ and $t=T_*:=23/10500$. This proves
+\[
+ F_{1,-27/25}>1/4\quad(0\le z\le3/2),\qquad
+ F_{-1,9/10}>4/5\quad(0\le z\le1).
+\]
+The exact margins are at least
+$10788447499/444528000000$ and $569/5670$.
+The edge $t=0$ belongs to the continuous divided polynomial; the actual
+variance is positive because $\lambda>0$.
+
+For negative phase $u=-r$, after $r=3t/2$ use Cantelli:
+\[
+ O\ge\frac{r^2}{t+r^2}-\frac{27}{25}r.
+\]
+At the switch its value exceeds $t/4$ and its derivative is positive.
+The derivative first increases and then decreases, so any later zero
+is a maximum. The other endpoint $r=b$ also exceeds $t/4$, as checked
+at $t=T_*$. Both switches lie below $b$. For positive phase after
+$r=t$, use $O\ge f(r)\ge(9/10)r>(4/5)t$. We conclude that
+\begin{equation}\label{ap:own}
+                   O>\frac14\frac{19}{21}\lambda
+                   \qquad (|u|\le b).
+\end{equation}
+
+For incoming counts use the quadratic-hinge Poisson comparison of
+Pinelis, \emph{On the Bennett--Hoeffding inequality},
+\href{https://arxiv.org/abs/0902.4058}{arXiv:0902.4058}, Proposition~2.8
+and Corollary~2.11. Independent centered summands bounded above by $A$
+and having total variance at most $V_0$ satisfy
+\[
+ \Pp(Z\ge x)\le\frac{\E(P_\mu-j)_+^2}{(x/A+\mu-j)^2},
+ \qquad \mu=V_0/A^2,\quad j<x/A+\mu.
+\]
+This follows by applying its moment comparison to the quadratic hinge
+at $A(j-\mu)$ and then Markov. The variance upper bound and closed
+event are part of this application. Apply it to $-W_{k+i}$.
+
+For $i=1$ and $u\le h_0<1-A$, choose $j=1$ to obtain
+\[
+ Q(\mu,h_0)=\frac{\mu^2(1/2+\mu/6)}{((1-h_0)/A-1+\mu)^2},
+ \qquad \mu=V\lambda/A^2.
+\]
+Here $\E(P_\mu-1)_+^2=\mu^2-\mu+1-e^{-\mu}
+\le\mu^2/2+\mu^3/6$ by Taylor's theorem.
+For integer $i\ge2$, the elementary inequality
+$(P-i)_+^2\le\binom P{i+1}$ gives numerator at most
+$(i\mu)^{i+1}/(i+1)!$ after variance inflation to $iV\lambda$.
+For $i=2$, the pointwise assertion reduces to
+$(r-1)(r-2)\ge0$ for integer $r=P-i\ge1$; increasing $i$ increases
+the binomial coefficient. The expectation follows from the Poisson series.
+
+For a starting count $m=2$ or $3$, put
+\[
+ b_m(h_0)=1/A-1-h_0/(mA),\qquad
+ J_2(\mu,h_0)=\frac{\mu^3}{3(b_2(h_0)+\mu)^2(1-3\mu)},
+\]
+\[
+ J_3(\mu,h_0)=\frac{3\mu^4}{8(b_3(h_0)+\mu)^2(1-3\mu)}.
+\]
+If $h_0\ge0$, $b_m(h_0)>0$ and $3\mu<1$, these bound the entire
+incoming sum from $i=m$ onwards. Indeed the hinge $j=i$ has denominator
+at least $i(b_m(h_0)+\mu)$, and the ratio of the coefficients
+$i^{i-1}/(i+1)!$ is $[i/(i+2)](1+1/i)^i<e<3$.
+This proves the displayed geometric sums without truncating the tail.
+At the largest phase $h$, $b_2(h)<0$, so we use $J_3$ there and bound
+the first two terms separately. In contrast $b_3(h)=59/1050>0$.
+
+\subsection{Three closed phase intervals}
+All constants below are evaluated at $U_*=1/500$. Set
+\[
+ \mu_I=(6/5)U_*/A^2,\qquad \mu_G=(4/3)U_*/A^2.
+\]
+For the inner phase, $Q(\mu,b)/\lambda$ and $J_2(\mu,b)/\lambda$
+increase with $\mu$ on the stated range. For $Q$ this follows from
+$\mu\le(1-b)/A-1$; for $J_2$ it follows by factoring it into
+$[\mu/(b_2+\mu)]^2/(1-3\mu)$ times a positive constant.
+Therefore, with $T_I=Q(\mu_I,b)+J_2(\mu_I,b)$, the comparison
+\eqref{ap:master} and \eqref{ap:own} give the per-$\lambda$ margin
+\[
+ \frac{69}{100}\left\{\frac14\frac{19}{21}
+          -\frac{107}{100}\frac{T_I}{U_*}\right\}
+   -\frac4{42}-\frac1{100}
+          =\frac{17926467866165398367}{1060536251855551002000}>0.
+\]
+This is uniform down to arbitrarily small positive noise.
+
+For $l\le u\le-b$, set $T_G=7U_*/6$ and
+\[
+ L_-:=\min_{r\in\{b,-l\}}
+              \left\{\frac{r^2}{T_G+r^2}-\frac32r\right\}.
+\]
+The expression is concave on the whole interval because $3b^2>T_G$.
+Thus $O\ge L_-$ by Cantelli, and $T\le Q(\mu_G,0)+J_2(\mu_G,0)$.
+The final margin at the upper noise endpoint is
+\[
+ \frac{14}{25}\{L_--\tfrac95[Q(\mu_G,0)+J_2(\mu_G,0)]\}
+       -\frac{6U_*}{42}-\frac{U_*}{100}
+                    =\frac{303207159039}{1226220050000}>0.
+\]
+
+For $b\le u\le h$, set $t_G=4U_*/3$ and define
+\[
+ L_+:=\min_{u\in\{b,h\}}
+  \left\{\frac23u-\frac95\left[
+    \frac{t_G}{t_G+(1-u)^2}+\frac{2t_G}{2t_G+(2-u)^2}\right]\right\}.
+\]
+The expression minimized is concave on the entire phase interval, since
+$3(1-h)^2>t_G$ and $3(2-h)^2>2t_G$. Use the lower normal increment,
+Cantelli for the first two incoming counts, and $J_3$ for the rest. The
+remaining margin is
+\[
+ \frac{14}{25}\{L_+-\tfrac95J_3(\mu_G,h)\}
+       -\frac{6U_*}{42}-\frac{U_*}{100}
+          =\frac{1429750577643511489}{102275398586900550000}>0.
+\]
+All three brackets are positive before the lower own-count mass is used.
+For the two outer intervals, replacing actual $\lambda$ by $U_*$ only
+decreases the chosen own-count bound and increases tails and repairs.
+The three closed intervals cover $[l,h]$ including their common endpoints.
+This proves Theorem~\ref{ap:main}.
+
+\paragraph{Scope of the reduction.}
+Combining the new left-panel $0.7$ strips with the previously acquired
+right-panel $0.6$ strips supplies the common amplitude used here. The
+same-law conversion is $U=(X-\E[X\mid\mathbf1_{X>0}])/\ell$,
+$s=\theta/\ell^2$ and $\lambda=ns$; the inward displacements sum to
+the geometric $d<.068$. The coarse raw-threshold bound is below $1.84$.
+This gives one small-noise exclusion on the entire acquired probability
+range. The larger-noise comparison and the independent finite base remain
+open. No older certificate or manuscript source is removed by this note.

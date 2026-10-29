@@ -1,0 +1,200 @@
+\section{A wider strip on the remaining probability panels}
+
+The incoming strip can be extended to the left probability range without
+a new Fourier computation. The change is small: retain the negative
+conditional amplitude $3/5$, and allow positive amplitude $7/10$.
+The following statement is conditional on the same entry and contact
+hypotheses as the previously proved strip.
+
+\begin{proposition}\label{left:strip}
+Let $n\ge42$ and let $(X,H)$ be an attained fixed-target witness with
+nonnegative excess at $C_{\rm E}$ and sharp predecessor
+$C_{n-1}\le C_{\rm E}$. Retain the selected v7 coarse entry, its actual
+central gap $(-A_-,A_+)$, and the direct one-pass geometry bounds of v10.
+For every retained closed probability panel
+$[i/100,(i+1)/100]$, $25\le i\le39$, put
+\[
+ p=\mathbb P(X>0),\quad q=1-p,\quad
+ \ell=\frac{\mathbb E X_+}{pq},\quad
+ Y=X/\ell+p=B+U,\qquad B=\mathbf1_{\{X>0\}}.
+\]
+Then the two conditional noises satisfy
+\[
+ -\frac35<U_0\le a_0,\qquad
+ -a_1\le U_1<\frac7{10},\qquad
+ a_0,a_1\ge0,\quad a_0+a_1=d<\frac{17}{250}.
+\]
+In particular $|U_j|<7/10$ on the full left interval $[1/4,2/5]$.
+The direct geometric exclusion already gives $p>1/4$ for actual witnesses;
+retaining the closed endpoint in the cover only enlarges the tested domain.
+\end{proposition}
+
+\begin{proof}
+Write $[l,u]$ for a panel and $e,r,b_-,b_+$ for its v10 lower bound on
+$\ell$, upper bound on $\rho$, and lower and upper bounds on
+$\beta=\mathbb E[X|X|]$. For the negative ray use $b=-b_-$, and for
+the positive ray use $b=b_+$. The retained all-threshold heat lemma gives,
+for $t>\sqrt3$,
+\[
+ H_n(H,\pm t)\le h(t),\qquad
+ |\partial_t H_n(H,\pm t)|<g(t),
+\]
+where, with $S=81/80$ and $\eta=8/875$,
+\[
+ \begin{aligned}
+ h(t)&=S^3\left\{\frac25\left(\frac{t^3-3t}{6}
+       +\frac{|t^4-6t^2+3|}{72}\right)
+       +\frac{t^5}{4100}+\frac{3t}{820}
+       +\frac{17(3t^2-2)}{78720}\right\},\\
+ g(t)&=\frac25\left(\frac{t^2}{2}+\frac12+\eta\right).
+ \end{aligned}
+\]
+The contact upper estimate is $H_n(H,\pm t)+C_{\rm E}Q(t)$, with
+\[
+ Q(t)=-t^3+\frac32rt^2+3bt+\eta r.
+\]
+These statements retain the actual index, nonnegative excess and sharp
+predecessor. In particular, they are not consequences of moment bounds
+alone. They hold for every raw threshold $H$.
+
+Let $c_0=819/2000<C_{\rm E}$ and $L=g+c_0Q'$. At each proposed
+boundary the finite acceptance requires the following eight positive
+quantities:
+\[
+ t^2-3,\quad -h(t)-c_0Q(t),\quad -Q(t),\quad -Q'(t),
+ \quad -Q''(t),\quad -L(t),\quad -L'(t),\quad -L''(t).
+\]
+Here $Q'''=-6$ and $L''=2/5-6c_0=-2057/1000$.
+Thus $Q,Q',Q''$ remain negative along the entire outward ray; so do
+$L,L'$. The actual contact upper function has derivative strictly less
+than $L<0$, because $Q'<0$ and $C_{\rm E}>c_0$. Its boundary value is
+negative because $Q<0$ and $h+c_0Q<0$. This excludes the entire ray,
+including its boundary. We differentiate the actual heat function using
+its derivative estimate, not the absolute-value expression in $h$.
+
+Take
+\[
+ t_-=e(l+3/5),\qquad t_+=e(1-u+7/10).
+\]
+The exact rational check passes all eight tests on both rays of all
+fifteen closed panels. The weakest negative boundary margin is greater
+than $3/10$, and the weakest positive boundary margin is greater than
+$27/100$. The input is precisely the source-bound v10 export; no update
+is fed back into that export. Shared panel endpoints occur in both
+neighbors, so the tests leave no uncovered seam.
+
+It follows that $-t_-<X<t_+$ on the support. Since $\ell\ge e$ and
+$l\le p\le u$, division by the actual positive $\ell$ gives
+\[
+ -3/5<Y<1+7/10.
+\]
+The actual inner gap gives
+\[
+ a_0=p-A_-/\ell,\qquad a_1=q-A_+/\ell,\qquad
+ a_0+a_1=1-(A_-+A_+)/\ell=d<17/250.
+\]
+On the negative sign $U_0=Y\le a_0$, while on the positive sign
+$U_1=Y-1\ge-a_1$. This proves the asymmetric bounds and hence the
+common amplitude claim. Conditional centering is unchanged.
+\end{proof}
+
+\paragraph{What the finite calculation does and does not say.}
+The bounded exploration considered $0.65,0.70,0.75,0.80,0.85$ and stopped
+after the first common success, $0.70$. It made only thirty positive-ray
+evaluations. At $0.65$ the boundary test fails on panels 29--33 while the
+continuation tests pass. The first failure, on $[.29,.30]$, has boundary
+upper estimate strictly between $.010460$ and $.010461$. This is failure
+of that sufficient estimate, not a counterexample to the narrower strip.
+The acceptance calculation independently reconstructs the expressions at
+the selected boundaries; its 31 ray evaluations include this negative
+control. No Fourier cells, moment contraction rounds or support-generation
+campaign are run.
+
+\section{The resulting count domain}
+
+For the common amplitude $A=7/10$ and displacement ceiling $d_0=17/250$,
+\[
+ A+2d_0=\frac{209}{250}<1,\qquad
+ l_0=\frac{A-1-2d_0}{2}=-\frac{109}{500},\qquad
+ h_0=l_0+1=\frac{391}{500}.
+\]
+The crossing separation is $\zeta=1-d_0=233/250$, and
+$-\zeta<l_0<h_0<\zeta$. Every $x=np+H/\ell$ has a shifted anchor
+$x=k+u$ with $u\in[l_0,h_0]$. The gap from the amplitude constraints
+in the shifted-anchor construction is $(1-A-2d_0)/2=41/500>0$.
+Thus the pathwise crossing and curvature lemmas apply on this longer
+phase interval.
+
+These anchors are legal. The retained raw-threshold bound is
+$|H|\le1.83605680$, and every left-panel scale bound exceeds $49/25$.
+Hence $|H/\ell|<1$. For $n\ge42$ and $p\in[1/4,2/5]$,
+\[
+ np-1-h_0\ge42/4-1-h_0>0,
+ \qquad n(1-p)-1+l_0\ge42(3/5)-1+l_0>0.
+\]
+Consequently $1\le k\le n-1$. This is an exact domain check, not a
+bound for the final count comparison. In particular, the variance and
+normalization constants proved earlier only for $p\ge.4$ cannot be
+reused without a new calculation.
+
+The noise has the same scaling throughout:
+\[
+ s=\mathbb E U^2=\theta/\ell^2,\qquad
+ \lambda=ns=n\theta/\ell^2,\qquad \ell=(pq+s)^{-1/2}.
+\]
+Together with the existing $3/5$ strips on panels 40--52, the result
+supplies a common $7/10$ conditional amplitude on every retained panel
+25--52. The signed rays are bounds for one physical law. This statement
+does not identify a law with its reflection or replace the original
+closed-event reflection and attainment argument.
+
+\subsection{A Bernoulli gap where the external theorem applies}
+Schulz's strict finite-$n$ Bernoulli theorem supplies $C_B<C_{\rm E}$
+for every $0<p<1$. Its sharper bound applies on $[1/3,2/3]$ and gives
+\[
+ \rho_B(C_{\rm E}-C_B)
+ >\frac{2C_{\rm E}(r-p_*)^2}{\sqrt{pq}},\qquad
+ r=\min(p,q),\quad p_*=(4-\sqrt{10})/2.
+\]
+On the left subinterval $p\in[1/3,2/5]$, both factors
+$(p_*-p)^2$ and $(p(1-p))^{-1/2}$ decrease. The minimum is therefore
+at $p=2/5$. Using $C_{\rm E}>819/2000$,
+$\sqrt{10}<3.162277661$ and $\sqrt{6/25}<49/100$, exact rational
+arithmetic gives the simple uniform reserve
+\[
+ \rho_B(C_{\rm E}-C_B)>\frac{59}{100000}.
+\]
+Below $p=1/3$ we retain only the global strict Bernoulli bound, with
+zero quantitative reserve. Panel 33 must be split at $1/3$ before using
+the sharper formula. Neither the sharper formula nor this positive
+uniform reserve is asserted below that endpoint.
+
+\subsection{A repair term that changes on the left}
+The favorable inequality $\rho\ge\rho_B$ used in the earlier small-noise
+argument does not hold on this entire new domain. For an exact example,
+take $p=13/50$, $q=37/50$, $U_1=0$ and let $U_0$ take
+$\pm\varepsilon$ with equal conditional probabilities, where
+$\varepsilon=1/1000$. Put $v=pq$ and $s=q\varepsilon^2$. The centered
+raw law has nodes and masses
+\[
+ (-p-\varepsilon,q/2),\qquad(-p+\varepsilon,q/2),\qquad(q,p),
+\]
+variance $V=v+s$ and third absolute moment
+$M_3=v(1-2v)+3ps$. Exact rational comparison gives
+\[
+ \frac{M_3^2}{V^3}<\frac{(1-2v)^2}{v},
+\]
+so the standardized law satisfies $\rho<\rho_B$. Its inward displacement
+is only $\varepsilon$, and at $n=42$ its noise is
+$\lambda=42s=.00003108<1/500$. The law satisfies the new amplitude and
+inward bounds. No contact premise is claimed for this example.
+It refutes discarding the adverse moment repair for arbitrary laws in
+the enlarged count domain; it does not refute a count comparison.
+
+\paragraph{Remaining obligations.}
+The wider strip removes the missing support premise on the left panels.
+It does not prove their count inequality. A new argument must control
+the own count, incoming counts, normal and moment repairs on the wider
+probability and phase ranges. The selected coarse entry, contact and
+sharp predecessor remain ancestors of this strip. A finite base is
+still needed for the first-failure argument; no result here proves it.

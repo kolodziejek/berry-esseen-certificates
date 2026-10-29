@@ -1,0 +1,71 @@
+{
+  "started_utc": "2026-10-27T20:26:54.366239+00:00",
+  "interpreter": "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "python": "3.12.14",
+  "driver_sha256": "af1579db2620f85d5b6572396971bc41504c6b46d39777a8bab10aaf0cef23c2",
+  "compiler": "pdfTeX 3.141592653-2.6-1.40.27 (TeX Live 2025)",
+  "documents": [
+    {
+      "name": "companion",
+      "archive": "mathematics/fixed-target-v6/2026-10-27/source-fixed-target-v6.zip",
+      "archive_sha256": "937400490b34954e3c483b6b96838e984c7952ea5a1b3e30d4c58c7b521d9b4b",
+      "member_sha256": {
+        "main.tex": "08b534e101a8d51c1eab91a427b51f4c05be93a81ba3d4d34dd0f44c96a87971",
+        "signed-proof/signed.tex": "43dc933883f313b26a6b4a0a99b57369f98a3ec2093707818e63dda5a1f9ef56",
+        "moment-core.tex": "c6974fa0afe945c202d4af3f026441ebd80f187fa1f98003063809916f0c14a8",
+        "simple-route.tex": "3fa86148d1a40de99ad10518ca12dce5c0659e037383c87cad50ac9b525078fe",
+        "central-gap.tex": "7b24cd5dda6f51b00f6e856788bf5369cad14cd8a49760ab8aa71a38dfee8412",
+        "integration.tex": "d8be85e7a29ed1f4bbaa4184466864cd23272188c24959d9d227ac255559d643",
+        "shortening.tex": "8ece91b324c16ab2e4eeaf3e4333aeacf5cbaf0d8c789b2541e0e05520826525",
+        "phase.tex": "82db7c78b07b4a20a257390d0dfae82a0bcf4bc7e0500856336da5e073205b5e",
+        "README.md": "278d2db100b64617803a1c455d6d01460382c5f7f56cbca84c4e0b24a608840d"
+      },
+      "passes": [
+        {
+          "command": [
+            "/Library/TeX/texbin/pdflatex",
+            "-no-shell-escape",
+            "-interaction=nonstopmode",
+            "-halt-on-error",
+            "main.tex"
+          ],
+          "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/runs/fixed-target-v6-20261027/export01/companion-source",
+          "returncode": 0
+        },
+        {
+          "command": [
+            "/Library/TeX/texbin/pdflatex",
+            "-no-shell-escape",
+            "-interaction=nonstopmode",
+            "-halt-on-error",
+            "main.tex"
+          ],
+          "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/runs/fixed-target-v6-20261027/export01/companion-source",
+          "returncode": 0
+        },
+        {
+          "command": [
+            "/Library/TeX/texbin/pdflatex",
+            "-no-shell-escape",
+            "-interaction=nonstopmode",
+            "-halt-on-error",
+            "main.tex"
+          ],
+          "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/fork_audit_20261027/strategy-v4/runs/fixed-target-v6-20261027/export01/companion-source",
+          "returncode": 0
+        }
+      ],
+      "pages": 13,
+      "page_text_identical": true,
+      "delivered_pdf_sha256": "b6675d1814607c09788b48c2f476e236805d1c2e93ba5a7e2dc53db46c78319a",
+      "rebuilt_pdf_sha256": "e33b7e4359a4a79ab845c1598008bdb045e09d7463e12d2b0e1a7b976ef52445",
+      "underfull_notices": 0,
+      "warning_lines": [
+        "Package epstopdf Warning: Shell escape feature is not enabled."
+      ]
+    }
+  ],
+  "scope": "Portable TeX reproduction and page-text comparison, not proof validation.",
+  "status": "PASS_PORTABLE_DOCUMENT_REBUILDS",
+  "completed_utc": "2026-10-27T20:26:55.946953+00:00"
+}

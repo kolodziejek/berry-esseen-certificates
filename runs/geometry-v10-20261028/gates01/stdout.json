@@ -1,0 +1,106 @@
+{
+  "status": "PASS_DIRECT_GLOBAL_GEOMETRY_GATES",
+  "hypotheses": {
+    "p": [
+      "6/25",
+      "27/50"
+    ],
+    "n_min": 42,
+    "nD_max": "1610332689/50000000",
+    "support_radius_for_rho_only": "157/50",
+    "common_actual_gap_budget": true
+  },
+  "conclusions": {
+    "theta_strict_upper": "7/125",
+    "d_strict_upper": "17/250",
+    "lambda_strict_upper": "77/125",
+    "rho_strict_upper": "713/500",
+    "p_strict_lower": "1/4"
+  },
+  "gates": {
+    "sqrt10 enclosure": true,
+    "weighted gives D0": true,
+    "z positive and <1/2": "139545257/300000000",
+    "Q upper .4": true,
+    "all C lower 4.4": true,
+    "coarse physical K>=3.13": "195773212188502931/62500000000000000",
+    "theta>=.2 contradicts D0": true,
+    "endpoint g lower .59": true,
+    "endpoint g upper .77": true,
+    "endpoint d(1-d)>.17": true,
+    "endpoint K positive": true,
+    "endpoint ell>1.7": true,
+    "endpoint inward cost > D0": true,
+    "d0 noise monotonicity": true,
+    "theta_plus second derivative": "181316487261009752336993/9765625000000000000000",
+    "theta_plus tangent lower": "24246252838737281357369130898745197354528604831/14019506422364904880523681640625000000000000000000",
+    "theta_minus second derivative": "187639955163588152336993/9765625000000000000000",
+    "theta_minus tangent lower": "2479749917719380537965750551184918131921427778643031/219054787849451638758182525634765625000000000000000000",
+    "global d<.42": true,
+    "direct branches increasing in d": true,
+    "d=.068 increases with theta": true,
+    "displacement second derivative": true,
+    "displacement tangent lower": "1087852937351373086890705747704351629861511/897248411031353912353515625000000000000000000",
+    "weighted constant 17.558": true,
+    "lambda plus increasing before 1/3": true,
+    "lambda plus second <= -13": true,
+    "lambda plus < .615289": "623452733900249505023211301/1013486486157701922600000000",
+    "lambda minus second <= -12": true,
+    "lambda minus < .565358": "707362345469206790916867889/1251573463002010548339843750",
+    "ell>1.94": true,
+    "barB<1.8": true,
+    "positive coefficient >= 2.5": true,
+    "negative coefficient >= 2.5": true,
+    "rho bracket nonnegative": true,
+    "rho quartic second >= .4": true,
+    "rho quartic tangent lower": "7211751067996310764161286745880840766343511/47683715820312500000000000000000000000000000000",
+    "p<=1/4 impossible": true
+  },
+  "quartic_coefficients": {
+    "theta_plus": [
+      "17308390538480027860971/2441406250000000000000",
+      "-1067060815724226315432893/19531250000000000000000",
+      "3198930163107309323035781/19531250000000000000000",
+      "-70021350266511851320113/305175781250000000000",
+      "19497483852450317229131/152587890625000000000"
+    ],
+    "theta_minus": [
+      "2400595381787517229131/610351562500000000000",
+      "-133432177930452019698409/3906250000000000000000",
+      "2286294921630091901546693/19531250000000000000000",
+      "-11678825757261917302587/61035156250000000000",
+      "19497483852450317229131/152587890625000000000"
+    ],
+    "displacement": [
+      "16161193530582489/2500000000000000",
+      "-106178159139835301/2000000000000000",
+      "1698556567656579529/10000000000000000",
+      "-79528470747337689/312500000000000",
+      "94934164897337689/625000000000000"
+    ],
+    "rho": [
+      "-285140947337689/15625000000000000",
+      "8466680525387621/12500000000000000",
+      "-312333402584341129/62500000000000000",
+      "24374999997337689/1953125000000000",
+      "-33530694147337689/3906250000000000"
+    ]
+  },
+  "cubic_upper_coefficients": {
+    "positive": [
+      "0",
+      "-3662883086/624341649",
+      "7227188724/208113883",
+      "-8627188724/208113883"
+    ],
+    "negative": [
+      "-3662883086/924341649",
+      "25344449258/924341649",
+      "-2264911064/44016269",
+      "28"
+    ]
+  },
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "script_sha256": "b288ecc3debff8e8f50420fa8fc11c1f183fd0136c98b464e5835da8e5959343",
+  "scope": "Exact scalar implications of the proved budget and stated inputs; not global Berry--Esseen or complete confinement/count acceptance."
+}

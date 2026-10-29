@@ -1,0 +1,119 @@
+{
+  "status": "PASS_EXACT_GENERAL_CROSSING_CONTROLS",
+  "scope": "Finite identity, sign and age reserve; not the full weighted Berry--Esseen comparison",
+  "conditional_law_pairs": 7,
+  "identity_controls": 109,
+  "age_controls": 109,
+  "independent_iid_controls": 109,
+  "zero_gains": 8,
+  "selected_noise_bias": "1/100",
+  "false_width_free_excess": "1/210",
+  "cases": [
+    {
+      "case": 0,
+      "n": 2,
+      "thresholds": 5
+    },
+    {
+      "case": 0,
+      "n": 4,
+      "thresholds": 6
+    },
+    {
+      "case": 0,
+      "n": 7,
+      "thresholds": 4
+    },
+    {
+      "case": 1,
+      "n": 2,
+      "thresholds": 4
+    },
+    {
+      "case": 1,
+      "n": 4,
+      "thresholds": 4
+    },
+    {
+      "case": 1,
+      "n": 7,
+      "thresholds": 6
+    },
+    {
+      "case": 2,
+      "n": 2,
+      "thresholds": 6
+    },
+    {
+      "case": 2,
+      "n": 4,
+      "thresholds": 6
+    },
+    {
+      "case": 2,
+      "n": 7,
+      "thresholds": 4
+    },
+    {
+      "case": 3,
+      "n": 2,
+      "thresholds": 5
+    },
+    {
+      "case": 3,
+      "n": 4,
+      "thresholds": 5
+    },
+    {
+      "case": 3,
+      "n": 7,
+      "thresholds": 4
+    },
+    {
+      "case": 4,
+      "n": 2,
+      "thresholds": 6
+    },
+    {
+      "case": 4,
+      "n": 4,
+      "thresholds": 8
+    },
+    {
+      "case": 4,
+      "n": 7,
+      "thresholds": 4
+    },
+    {
+      "case": 5,
+      "n": 2,
+      "thresholds": 4
+    },
+    {
+      "case": 5,
+      "n": 4,
+      "thresholds": 4
+    },
+    {
+      "case": 5,
+      "n": 7,
+      "thresholds": 4
+    },
+    {
+      "case": 6,
+      "n": 2,
+      "thresholds": 7
+    },
+    {
+      "case": 6,
+      "n": 4,
+      "thresholds": 7
+    },
+    {
+      "case": 6,
+      "n": 7,
+      "thresholds": 6
+    }
+  ],
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]"
+}

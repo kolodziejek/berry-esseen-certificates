@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-28T18:32:39.821452Z",
+  "execution_status": "fresh compile PASS",
+  "compiler": "pdfTeX 3.141592653-2.6-1.40.27, TeX Live 2025; latexmk 4.86a",
+  "command": [
+    "python3",
+    "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+    "mathematics/simplification-v12/2026-10-28/compound-proof.tex",
+    "--compiler",
+    "texlive",
+    "--output-directory",
+    "runs/compound-v12-20261028/build01/texlive",
+    "--json"
+  ],
+  "returncode": 0,
+  "pages": 7,
+  "layout_warnings": [],
+  "visual_review": "All seven 1100-pixel page renders inspected; displayed equations and text fit without clipping or overlaps.",
+  "sha256": {
+    "mathematics/simplification-v12/2026-10-28/compound-proof.tex": "5b9d8428b6aa10bc3fff44114cd26c482b88692f76dd624b841c79d5b4a753fa",
+    "runs/compound-v12-20261028/build01/texlive/compound-proof.pdf": "38ad6ab30c1295beaa10da3448600ccdd055e606de017995355f7724e17bc7a7",
+    "runs/compound-v12-20261028/build01/texlive/compound-proof.log": "0296f5443748be2a2f28a1339f77489aebf9e18fe899bfaffcb7cdd752e3a89e",
+    "runs/compound-v12-20261028/build01/page-1.png": "8afa211daa8da64ca323ec893352891189ab56298fc16c145fe54932e32a3431",
+    "runs/compound-v12-20261028/build01/page-2.png": "f7dea8bc8d2e1cf376e6a4eba423133a32af1b70c215833d3d3bc2dc1df41a7b",
+    "runs/compound-v12-20261028/build01/page-3.png": "6b9acd5c37e9dc29a32ae2dc3fc09b153e395341b8039346f83c85e380c975f7",
+    "runs/compound-v12-20261028/build01/page-4.png": "10f511915ec841611864aa3385997544b877616f312044309e8336a066f450cf",
+    "runs/compound-v12-20261028/build01/page-5.png": "9d52d541326a160889fff29805f23da744338895ce959dbbc39f9ca04e484862",
+    "runs/compound-v12-20261028/build01/page-6.png": "12c2f844a5081925775f64fda654bf9f8d824fc5b93bdb0a5683ed86cb116b18",
+    "runs/compound-v12-20261028/build01/page-7.png": "f13506a858d1ff97b2d89447f10b293043c14c7033b820dcca1c2d3a4f64a939"
+  }
+}
