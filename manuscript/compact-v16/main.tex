@@ -1,6 +1,5 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
 \usepackage{lmodern,microtype}
 \usepackage[margin=28mm]{geometry}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
@@ -15,6 +14,8 @@
 \hypersetup{pdftitle={A fixed-target approach to the sharp iid Berry--Esseen inequality},
  pdfauthor={Bartosz Kołodziejek and Kacper Rodziewicz}}
 \setlength{\emergencystretch}{2em}
+\linespread{1.06}
+\setlength{\parskip}{2pt plus 1pt minus .5pt}
 \setcounter{tocdepth}{1}
 \makeatletter
 \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
@@ -50,27 +51,18 @@ assistance from AI systems; see the end of Section~\ref{ms:discussion}.}}
 \begin{document}
 \maketitle
 \begin{abstract}
-We study the conjectured sharp iid Berry--Esseen constant
-$\CE=(3+\sqrt{10})/(6\sqrt{2\pi})$ by maximizing excess over this fixed
-target. Attainment, contact and a conservation identity reduce a possible
-counterexample to one actual marginal with a common moment-defect budget.
-An explicitly stated Fourier certificate supplies the coarse entry.
-For $n\ge700$, elementary moment inequalities and two contact rays then
-acquire one probability and support strip. A single-count fourth-moment
-argument handles small conditional noise; five counts and two concave
-quartics handle the remaining noise. Both retain the actual marginal,
-all threshold phases and atoms, and the complete incoming tails.
-The resulting acquired-witness exclusion uses the true sharp predecessor.
-The global implication is conditional on a genuine finite base through
-$699$ and the complete entry predicates. Neither that base nor the full
-conjecture is proved here. This manuscript integrates the one-strip
-reductions and their analytical proofs in a single route.
+We study the conjectured sharp iid Berry--Esseen constant by maximizing
+excess over its fixed target. Attainment and contact give a common
+moment-defect budget; a specified Fourier certificate supplies coarse
+entry. For $n\ge700$, direct geometry and two contact rays acquire one
+support strip. A single-count fourth-moment bound handles small noise,
+and a five-count identity handles the rest. Both comparisons preserve
+the actual marginal, threshold atoms and complete tails. The resulting
+global implication remains conditional on the stated entry predicates
+and a genuine finite base through $699$, which is not proved here.
 \end{abstract}
-\begingroup\small\tableofcontents\endgroup
 \input{sections/01-introduction}
-\input{sections/01b-guide}
 \input{sections/02-fixed-target}
-\input{sections/02b-moment-domain}
 \input{sections/05-geometry-counts}
 \input{sections/04-fixed-entry}
 \input{sections/07-direct-acquisition}

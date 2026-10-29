@@ -1,71 +1,34 @@
 \section{Composition and the finite boundary}\label{short:composition}
 \begin{theorem}[Acquired-witness exclusion]\label{short:acquired-exclusion}
-Let $n\ge700$ and let $(P,H)$ attain the fixed-target maximum at $\CE$
-with $a(P,H)\ge0$. Suppose $C_{n-1}\le\CE$, the structural
-inequality~\eqref{v9:entry:structural}, and the complete entry
+Let $n\ge700$ and let $(P,H)$ attain the fixed-target maximum with
+$a\ge0$. Assume $C_{n-1}\le\CE$, the structural inequality
+\eqref{v9:entry:structural}, and complete entry
 Conditions~\ref{v9:entry:two-pass-condition} and
-\ref{v9:entry:signed-condition} hold. Then such a pair cannot exist.
+\ref{v9:entry:signed-condition}. Then such a pair cannot exist.
 \end{theorem}
 \begin{proof}
-Theorem~\ref{v9:entry:theorem} gives $nD\le32.20665378$ and
-$|H|\le1.83605680$ for this same oriented, compactly supported law.
-Section~\ref{short:acq:section} gives its central gap,
-$p\in(3/8,93/200)$, $a_0+a_1<1/250$, amplitude $3/5$ and
-$\lambda<7/20$. To check the normalization, put $B=\ind_{\{X>0\}}$,
-$m_j=\E(X\mid B=j)$ and $\ell=m_1-m_0>0$. Then
-\[
- m_0=-p\ell,\quad m_1=q\ell,\quad 1=pq\ell^2+\theta,
- \qquad U=(X-m_B)/\ell,
-\]
-\[
- s=\theta/\ell^2,\qquad pq+s=\ell^{-2},\qquad
- (B+U-p)/\sqrt{pq+s}=X.
-\]
-The marginal in Section~\ref{short:count:section} is exactly $P$,
-and its threshold is the original raw $H$, with $|H|<46/25$.
-Positive noise gives $a(P,H)<-\lambda/100$; zero noise is Bernoulli
-and gives strictly negative excess by Schulz. Both contradict $a\ge0$.
+Entry gives $nD\le32.20665378$ and $|H|\le1.83605680$ for the selected
+oriented law. Section~\ref{short:acq:section} gives
+$3/8<p<93/200$, inward sum below $1/250$, amplitude $3/5$ and
+$\lambda<7/20$. By \eqref{short:acq:normalization}, the standardized
+Bernoulli-plus-noise marginal is exactly $P$, with the same raw $H$.
+Theorem~\ref{short:count:local} makes $a$ strictly negative, both at
+positive noise and at zero, contradicting $a\ge0$.
 \end{proof}
 
-\begin{theorem}[Conditional sharp inequality]\label{short:global}
-Assume a genuine finite base $C_j\le\CE$ for $1\le j\le699$,
-the external structural and strict finite-binomial theorems used above,
-and the complete entry predicates at every least failure at $n\ge700$.
-Then
-\[
- C_n<\CE\ (n\ge700),\qquad C_n\le\CE\ (n\ge1),
- \qquad \sup_{n\ge1}C_n=\CE.
-\]
+\begin{theorem}[Conditional global conclusion]\label{short:global}
+Assume $C_j\le\CE$ for $1\le j\le699$, the stated external structural
+and binomial theorems, and the complete entry predicates at every least
+failure above this base. Then $C_n<\CE$ for $n\ge700$ and
+$\sup_{n\ge1}C_n=\CE$.
 \end{theorem}
 \begin{proof}
-If $C_n<\CE$ fails above the base, choose the least failing index.
-Proposition~\ref{v9:core:attainment} and the reflection argument in
-Section~\ref{v9:core:reflection} supply an attained positive closed-event
-pair with $a\ge0$. The finite base and minimality give the true
-predecessor $C_{n-1}\le\CE$. The preceding theorem excludes the pair.
-The independent Bernoulli limit~\eqref{ms:bernoulli-limit} gives equality
-for the global supremum.
+A least failure of the strict bound has a true sharp predecessor by the
+base and minimality. Attainment and the closed-event reflection argument
+supply its maximizing pair with $a\ge0$; the preceding theorem excludes
+it. The independent limit~\eqref{ms:bernoulli-limit} proves sharpness.
 \end{proof}
-
-With a base only through $41$, the same argument locates any first failure
-in $42,\ldots,699$. An unresolved earlier failure prevents the predecessor
-argument at later indices. Reflection also includes the exact atom rule:
-\[
- \Pp(-S_n\le-H)-\Phi(-H/\sqrt n)
- =\Phi(H/\sqrt n)-\Pp(S_n<H)
- \ge\Phi(H/\sqrt n)-\Pp(S_n\le H).
-\]
-The difference is the atom at $H$. The selected orientation acquires its
-own signed $D$ budget; that budget is not copied under reflection.
-
-\paragraph{Finite checks.}
-The entry predicates retain both quadratic passes, all four signed
-passes, $11264$ nominal signed boxes and every incidence in the
-acceptor's internal $100$-panel contract. The one-strip argument removes
-only downstream probability panels, noise tables and older local
-comparison branches. Rational scalar gates and actual-law controls
-accompany the continuous proofs; they do not replace them or the finite
-base. The v16 records report ten bounded checks passing, separately from
-full Fourier reproduction. The checking programs and interpreter remain
-part of the trusted numerical boundary; no full Lean formalization is
-claimed.
+A base only through $41$ instead locates any first failure in
+$42,\ldots,699$. An unresolved earlier failure prevents the predecessor
+argument at later indices. Thus no unconditional cutoff at $700$ or
+complete finite-base proof is asserted.
