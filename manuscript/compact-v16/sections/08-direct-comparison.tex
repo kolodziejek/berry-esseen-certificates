@@ -1,0 +1,543 @@
+\section{The direct comparison with a binomial law}
+\label{short:count:section}
+
+The acquired strip admits a single comparison on its whole probability
+interval. Very small noise is controlled by the loss at one count and
+fourth moments. For the rest, five adjacent counts give a uniform crossing
+loss. Both arguments concern the actual conditional laws of one marginal.
+
+\begin{theorem}[The common-strip comparison]\label{short:count:local}
+Let $n\ge700$ be an integer, $B\sim\operatorname{Bernoulli}(p)$, and
+$\E(U\mid B)=0$, where $p\in[3/8,93/200]$. Write $U_j$ for the conditional
+noise given $B=j$, and suppose
+\[
+ -3/5\le U_0\le a_0,\qquad -a_1\le U_1\le3/5,
+ \qquad a_0,a_1\ge0,\quad a_0+a_1\le1/250.
+\]
+Put $q=1-p$, $v=pq$, $s=\E U^2$, $\lambda=ns$,
+$X=(B+U-p)/\sqrt{v+s}$ and $\rho=\E|X|^3$. For independent copies and
+every raw threshold $|H|\le46/25$,
+\begin{equation}\label{short:count:exclusion}
+ \sqrt n\left\{\Pp\left(\sum_{i=1}^nX_i\le H\right)
+                  -\Phi(H/\sqrt n)\right\}-\CE\rho
+ < -\lambda/100\qquad(0<\lambda\le7/20).
+\end{equation}
+At $\lambda=0$ the same excess is strictly negative.
+\end{theorem}
+
+The proof below uses only the displayed hypotheses. Contact and the sharp
+predecessor are needed earlier to acquire this strip, not for its local
+comparison. The small- and larger-noise intervals meet at $\lambda=1/100$.
+
+\subsection{Three elementary ingredients}
+\label{short:count:prelim}
+
+Write $\pi_j=\binom njp^jq^{n-j}$, $F_B(j)=\sum_{i\le j}\pi_i$, and
+$\rho_B=(1-2v)/\sqrt v$. We use Schulz's strict finite-binomial theorem
+\cite[Theorem~1]{Schulz2016} in the form
+\begin{equation}\label{short:count:binomial}
+ \sqrt n\{F_B(j)-\Phi((j-np)/\sqrt{nv})\}<\CE\rho_B
+ \quad(0<p<1, n<\infty).
+\end{equation}
+Its strictness concerns every finite binomial law; it is not inferred
+from the limiting lower approximation for the universal constant.
+
+The factorial estimates used throughout are finite Stirling bounds:
+\[
+ \log(j!)=(j+\tfrac12)\log j-j+\tfrac12\log(2\pi)+r_j,
+ \qquad 0<r_j<1/(12j).
+\]
+For completeness, with $x=1/(2j+1)$,
+$r_j-r_{j+1}=\operatorname{arctanh}(x)/x-1
+=\sum_{l\ge1}x^{2l}/(2l+1)$ lies strictly between $0$ and
+$1/(12j(j+1))$. Wallis's product fixes the limiting constant, so
+$r_j\to0$; summing these differences proves the bounds.
+One useful consequence is
+\begin{equation}\label{short:count:mode}
+ \max_j\Pp\{\operatorname{Bin}(M,p)=j\}
+ <\frac{41}{100\sqrt{Mv}}\quad
+ (M\ge43, p\in[1/3,2/3]).
+\end{equation}
+Indeed a mode has $z=j/M=p+\delta/M$, $|\delta|\le2/3$.
+Since $v\ge2/9$ and $|1-2p|\le1/3$,
+$z(1-z)\ge v(1-1/M-2/M^2)>39v/40$.
+Stirling, the nonnegative relative entropy, and
+$e^{1/516}<516/515$ bound the mass by
+$(2/5)\sqrt{40/39}(516/515)/\sqrt{Mv}$, which is smaller than
+the right side of \eqref{short:count:mode} by a rational square comparison.
+
+Finally the cubic correction has the favorable sign on the full strip.
+Let $s_j=\E U_j^2$, so $s=qs_0+ps_1$, and set
+$r=3/8$, $d=1/250$, $v_*=15/64$.
+The conditional supports have fixed signs relative to $p$, since $d<r$.
+Expansion of the raw third absolute moment gives
+\[
+ \E|B+U-p|^3
+ =v(1-2v)+3v(s_0+s_1)-q\E U_0^3+p\E U_1^3.
+\]
+The inward bounds imply
+$\E U_0^3\le a_0s_0$, $\E U_1^3\ge-a_1s_1$.
+Together with $(1+x)^{3/2}\le1+3x/2+3x^2/8$ for $x\ge0$, this yields
+\begin{align}
+ (v+s)^{3/2}(\rho-\rho_B)
+ &\ge s\left\{3r-d-\frac32(1-2v)
+                         -\frac{3(1-2v)s}{8v}\right\}\notag\\
+ &\ge s\left\{\frac{2593}{8000}-\frac{17}{20}s\right\}>0,
+ \qquad 0<s\le\frac1{2000}.
+ \label{short:count:cubic}
+\end{align}
+Here $s\le(7/20)/700=1/2000$, and the displayed coefficient is
+$3r-d-\tfrac32(1-2v_*)$. Thus every nonnegative coefficient of
+$\rho_B-\rho$ can be discarded in an upper comparison.
+
+\subsection{Small noise: one count and the whole incoming tail}
+\label{short:count:small}
+
+Assume $0<\lambda\le L=1/100$. Choose an integer $k$ with
+\[
+ t=np+H\sqrt{v+s}=k+u,\qquad -3/10\le u\le7/10,
+ \qquad\delta=k-np.
+\]
+The phase interval has length one. It need not use the same anchor as
+the larger-noise proof. Let $W_j$ have the law of the sum of $j$
+independent $U_1$ variables and $n-j$ independent $U_0$ variables. For
+$C\ge0$, subtract the signed binomial excess at $k$ from the actual excess:
+\begin{align*}
+ \Delta_C={}&\sqrt n\left\{\Pp\left(\sum X_i\le H\right)
+                                  -\Phi(H/\sqrt n)\right\}-C\rho\\
+ &-\sqrt n\{F_B(k)-\Phi(\delta/\sqrt{nv})\}+C\rho_B.
+\end{align*}
+Exact conditioning gives
+\begin{align*}
+ \Pp\left(\sum X_i\le H\right)-F_B(k)
+ ={}&-\sum_{i=0}^{k}\pi_{k-i}\Pp(W_{k-i}>u+i)\\
+    &+\sum_{i=1}^{n-k}\pi_{k+i}\Pp(W_{k+i}\le u-i).
+\end{align*}
+Outgoing events are strict and incoming events closed; this convention
+includes all threshold atoms. Define
+\[
+ f(u)=\frac{\Phi((\delta+u)/\sqrt{n(v+s)})
+                   -\Phi(\delta/\sqrt{n(v+s)})}{\pi_k},\qquad
+ O=\Pp(W_k>u)+f(u),
+\]
+\[
+ T_{\rm in}=\sum_{i=1}^{n-k}\Pp(W_{k+i}\le u-i),\qquad
+ \mathcal R=\sqrt n\{\Phi(\delta/\sqrt{nv})
+                -\Phi(\delta/\sqrt{n(v+s)})\}+C(\rho_B-\rho).
+\]
+Keeping the own-count loss and discarding the other nonpositive outgoing
+terms gives
+\begin{equation}\label{short:count:small-master}
+ \Delta_C\le-m_k(O-RT_{\rm in})+\mathcal R,
+ \qquad m_k=\sqrt n\pi_k,
+\end{equation}
+whenever $\pi_{k+i}/\pi_k\le R$ for all legal incoming counts.
+
+\paragraph{Uniform normalization.}
+Set $D_*=5/3$, $b_*=1/20$, $T_*=101/10000$ and $c_*=2/525$.
+Because $v\ge v_*$ and $v+s<1/4$, $|t-np|<23/25$.
+Consequently $|\delta|<D_*$ globally and $|\delta|<1$ when $|u|\le b_*$.
+Write $\mathcal K(z,p)=z\log(z/p)+(1-z)\log((1-z)/q)$ for binomial
+relative entropy; this is distinct from the physical gap defect $D$.
+The segment between $p$ and $k/n$ lies inside $[.37,.47]$;
+in particular $1\le k\le n-1$. On this segment
+\[
+ z(1-z)>23/100,\quad |\partial_z^3\mathcal K(z,p)|<5,\quad
+ |(\log(z(1-z)))'|<6/5,\quad(12z(1-z))^{-1}<3/8.
+\]
+Stirling and entropy Taylor expansion therefore give
+\begin{equation}\label{short:count:small-mass}
+ m_k=\frac{\phi(0)}{\sqrt v}
+      e^{-\delta^2/(2nv)+e},\qquad
+ n|e|<Z(D_0):=3D_0/5+3/8+D_0^3/840
+\end{equation}
+for $|\delta|\le D_0\le D_*$. The three terms respectively bound the
+logarithmic prefactor, factorial remainder and entropy remainder.
+Also
+\[
+ \log f'(z)=-\tfrac12\log(1+s/v)+\frac{\delta^2}{2nv}
+                         -\frac{(\delta+z)^2}{2n(v+s)}-e,
+\]
+so, on an integration interval $|z|\le b_0$,
+\[
+ n|\log f'(z)|\le\frac{11}{5}\lambda
+                  +\frac{2D_0b_0+b_0^2}{2v_*}+Z(D_0).
+\]
+The coefficient $11/5$ exceeds
+$1/(2v_*)+D_*^2/(1400v_*^2)$.
+Using $e^{-x}\ge1-x$, $e^x\le(1-x)^{-1}$ and
+$\phi(0)>199/500$ now gives
+\begin{equation}\label{short:count:small-constants}
+\begin{array}{c|cc}
+ &|u|\le1/20&-3/10\le u\le7/10\\\hline
+ m_k\text{ lower bound}&3/4&3/4\\
+ f'\text{ lower bound}&99/100&49/50\\
+ f'\text{ upper bound}&101/100&51/50\\
+ R\text{ upper bound}&51/50&6/5
+\end{array}
+\end{equation}
+The derivative estimates hold on the whole segment from $0$ to $u$.
+For the global ratio, \eqref{short:count:mode} gives
+$\sqrt n\max_j\pi_j<17/20$, hence $R<(17/20)/(3/4)<6/5$.
+In the inner interval the first ratio is
+\[
+ \frac{\pi_{k+1}}{\pi_k}
+ =1+\frac{p-\delta-1}{nv+q(\delta+1)}
+ <1+\frac{93/200}{700v_*}<51/50;
+\]
+every later ratio is at most one, since $p-\delta<2$.
+By \eqref{short:count:cubic} the moment correction is nonpositive.
+Differentiating the normal CDF and using
+$\phi(0)/(2v_*^{3/2})<2$ therefore gives
+\begin{equation}\label{short:count:small-repair}
+ \mathcal R<2\lambda/n\quad(|u|\le b_*),\qquad
+ \mathcal R<4\lambda/n\quad\text{on the full phase interval}.
+\end{equation}
+Indeed the positive displacement is bounded by $1$ or $D_*<2$.
+
+\paragraph{No truncation of the incoming tail.}
+Since $|s_1-s_0|\le(8/3)s$, the actual own-count variance
+$t_0=\E W_k^2$ satisfies
+$.99\lambda<t_0<1.01\lambda\le T_*$.
+For each incoming count,
+\[
+ t_i=\E W_{k+i}^2\le\lambda\{1+c_*(D_0+i)\},\qquad
+ \E W_{k+i}^4\le A^2t_i+3t_i^2,\quad A=3/5,
+\]
+where $D_0=1$ in the inner interval and $D_0=D_*$ otherwise.
+The moment bound follows from independence and $|U_j|\le A$.
+For $a=1+c_*D_0$ put
+\[
+ K(a)=A^2\left(\frac{13a}{12}+\frac{5c_*}{4}\right)
+ +3L\left(\frac{13a^2}{12}+\frac{5ac_*}{2}+\frac{5c_*^2}{3}\right).
+\]
+Fourth-moment Markov at distance $i-u$, and extension of the nonnegative
+sum to all positive integers, give
+\begin{equation}\label{short:count:small-tail}
+\begin{aligned}
+ T_{\rm in}&<\frac{K(1+c_*)}{(1-b_*)^4}\lambda<.53\lambda
+                                      &&(|u|\le b_*),\\
+ T_{\rm in}&<\frac{.43\lambda}{(1-u)^4}&&(0\le u\le.7),\\
+ T_{\rm in}&<.43\lambda&&(u\le0).
+\end{aligned}
+\end{equation}
+Here $K(1+c_*D_*)<.43$, and
+$\sum i^{-4}<13/12$, $\sum i^{-3}<5/4$, $\sum i^{-2}<5/3$.
+These series bounds follow by retaining respectively five, three and five
+terms and estimating the remaining sum by an integral. For $u\ge0$ use
+$i-u\ge(1-u)i$; for $u\le0$ use $i-u\ge i$.
+
+\paragraph{The own-count loss at the central phases.}
+With $\alpha=13/25$ and $M=5\alpha^4$, the quartic
+\[
+ h_\alpha(x)=\frac{-x^4+3\alpha^2x^2+2\alpha^3x}{M}
+                         \le\mathbf1_{(0,\infty)}(x)
+\]
+is a strict-event minorant: its numerator factors as
+$-x(x+\alpha)^2(x-2\alpha)$, and its positive maximum divided by $M$
+is $(9+6\sqrt3)/20<1$. Let $r=zt_0$ and set
+\begin{align*}
+ F_{\varepsilon,b}(z,t)={}&\frac{3\alpha^2-A^2-3t}{M}
+ +\left(\frac{2\varepsilon}{5\alpha}+b-\frac{4At}{M}\right)z\\
+ &+\frac{3\alpha^2t-6t^2}{M}z^2-\frac{t^3z^4}{M}.
+\end{align*}
+Expanding $h_\alpha(W_k+r)$ for $u=-r$, or
+$h_\alpha(W_k-r)$ for $u=r$, and using
+$|\E W_k^3|\le At_0$, $\E W_k^4\le A^2t_0+3t_0^2$, yields
+\[
+ O/t_0\ge F_{1,-101/100}(z,t_0)\quad(u=-r),\qquad
+ O/t_0\ge F_{-1,99/100}(z,t_0)\quad(u=r).
+\]
+Both functions exceed $3/5$ on $0\le z\le3/2$, $0\le t\le T_*$.
+To check the whole rectangle, use concavity in $t$ and check only
+$t=0,T_*$. At those endpoints replace $z^4$ by $(9/4)z^2$ in its
+negative term. The negative-phase quadratic decreases on $[0,3/2]$,
+and the positive-phase quadratic increases; their minima are respectively
+at $z=3/2$ and $z=0$. All four rational endpoint values exceed $3/5$.
+
+For negative phases $3t_0/2\le r\le b_*$, Cantelli gives
+\[
+ O\ge\frac{r^2}{t_0+r^2}-\frac{101}{100}r>\frac35t_0.
+\]
+Its derivative at $r=3t_0/2$ is positive and first increases, then
+decreases. The minimum is therefore at an endpoint. At the first use
+$t_0\le T_*$ after division by $t_0$; at the other use
+$b_*^2/(T_*+b_*^2)-(101/100)b_*>(3/5)T_*$.
+For positive phases beyond this switch,
+$O\ge(99/100)r\ge(297/200)t_0>(3/5)t_0$.
+The switch lies below $b_*$ because $3T_*/2<b_*$. Thus
+\begin{equation}\label{short:count:small-own}
+ O>\frac35t_0>.59\lambda\qquad(|u|\le b_*).
+\end{equation}
+The value $u=0$ is included, with $h_\alpha(0)=0$.
+
+\paragraph{The outer phases and the final margin.}
+For $u=-r$, $b_*\le r\le3/10$, Cantelli gives
+\[
+ O\ge\frac{r^2}{T_*+r^2}-\frac{51}{50}r>7/50\ge14\lambda.
+\]
+The derivative is positive at $b_*$ and has at most one downward zero;
+both endpoint values exceed $7/50$. For $b_*\le u\le7/10$,
+\[
+ O-RT_{\rm in}\ge\frac{49}{50}u
+          -\frac{(6/5)(43/100)L}{(1-u)^4}>1/25\ge4\lambda.
+\]
+This function is concave and both endpoints exceed $1/25$.
+In the inner interval, \eqref{short:count:small-tail} and
+\eqref{short:count:small-own} give
+$O-RT_{\rm in}>(.59-(51/50).53)\lambda$.
+Substitute these three margins and \eqref{short:count:small-repair} into
+\eqref{short:count:small-master}, using $m_k>3/4$.
+The smallest final margin is the inner one, and
+\[
+ \frac34\left(\frac{59}{100}-\frac{51}{50}\frac{53}{100}\right)
+                 -\frac2{700}>\frac1{100}.
+\]
+Hence $\Delta_C<-\lambda/100$. Taking $C=\CE$ and applying
+\eqref{short:count:binomial} proves \eqref{short:count:exclusion} for
+$0<\lambda\le1/100$.
+
+\subsection{Larger noise: five counts and four endpoint checks}
+\label{short:count:large}
+
+Now assume $1/100\le\lambda\le7/20$ and choose
+$k=\lfloor t\rfloor$, $u=t-k\in[0,1)$, $w=t-np$.
+The following constants will be used only in this subsection:
+\[
+\begin{gathered}
+ N=700,\quad p_-=3/8,\quad p_+=93/200,\\
+ r=3/8,\quad q_*=107/200,\\
+ v_-=15/64,\quad v_+=9951/40000,\quad A=3/5,\quad d=1/250,\\
+ \eta=2/5,\quad \beta_0=41/100,\quad\pi_+=22/7,\quad
+ \phi_-=199/500,\quad\phi_+=2/5,\\
+ \kappa=3,\quad\xi=93/100,\quad c_-=6,\quad\zeta=23/100,
+ \quad m_*=3/4,\quad V_*=113/1000,\\
+ \bar c=79/200,\quad j_0=1/5,\quad j_1=5/2.
+\end{gathered}
+\]
+In particular $|w|<\xi<1$, since
+$(46/25)^2(v_++(7/20)/N)<\xi^2$.
+Also $N(r-d)>\xi$, so $na_0\le t<n(1-a_1)$.
+
+\paragraph{An exact weighted crossing identity.}
+On an auxiliary space take independent copies of the conditional laws and
+write
+\[
+ T_j=j+\sum_{l\le j}U_{1l}+\sum_{l>j}U_{0l},\qquad
+ L_j(t)=\E(t-T_j)_+,\qquad
+ V_i=\sum_{l<i}U_{1l}+\sum_{l>i}U_{0l}.
+\]
+The mesh is increasing because $T_j-T_{j-1}\ge1-a_0-a_1>0$.
+Each $T_j$ has the conditional convolution given $j$ successes.
+Set
+\[
+ h(x)=\E(x-U_0)_+-\E(x-1-U_1)_+-\Pp(1+U_1\le x),
+ \qquad g_i=\E h(t-i+1-V_i).
+\]
+Independence of the omitted coordinate gives
+$g_i=L_{i-1}(t)-L_i(t)-\Pp(T_i\le t)$.
+Here $L_0=t$, $L_n=0$ and $\Pp(T_0\le t)=1$. Multiplication by
+$\pi_i$ and finite summation by parts yield
+\begin{align}
+ \Pp\left(\sum X_i\le H\right)
+ ={}&(1-u)F_B(k)+uF_B(k+1)\notag\\
+ &+\sum_{j=1}^{n-1}(\pi_{j+1}-\pi_j)B_j-\sum_{i=1}^n\pi_i g_i,
+ \quad B_j=L_j(t)-(t-j)_+\ge0.
+ \label{short:count:crossing}
+\end{align}
+Indeed replacing $L_j$ by $(t-j)_+$ in
+$\pi_0+\pi_1t+\sum(\pi_{j+1}-\pi_j)L_j$ telescopes to the stated
+interpolation. All CDF events are closed, including atoms.
+
+\paragraph{Five kernels with four centered replacements.}
+Let $f(x)=\sin^2(\pi x)$ on $[0,1]$ and zero outside.
+It is continuously differentiable with derivative Lipschitz constant
+$2\pi^2$. We claim
+\begin{equation}\label{short:count:kernel}
+ h(x)\ge\eta f(x)\ge0.
+\end{equation}
+For $x<1-a_1$, $h(x)=\E(x-U_0)_+\ge0$, and Jensen gives $h(x)\ge x$
+when $x\ge0$. On $[0,1]$, $f(x)\le(5/2)x$: use $\pi^2<10$ up to
+$1/4$, the concave tangent $1/2+\pi(x-1/4)$ on $[1/4,2/5]$, and
+$f\le1$ thereafter. For $x\ge1-a_1>a_0$, put $D_1=1+U_1$ and
+$L_1=\E(D_1-x)_+$. Put--call parity gives
+$h(x)=\Pp(D_1>x)-L_1\ge0$, since $D_1\le1+A$ and $x>A$.
+When $1-a_1\le x\le1$, $L_1\ge1-x$ and
+\[
+ h(x)\ge\frac{x-A}{1+A-x}L_1
+ \ge\frac{1-A-d}{A+d}(1-x)
+ \ge\eta\pi^2(1-x)^2\ge\eta f(x).
+\]
+The penultimate inequality uses
+$\eta\pi_+^2d\le(1-A-d)/(A+d)$.
+At $x=0,1$ both comparisons are weak, as required for atoms.
+
+Freeze $V=V_{k+1}$ and let $V^{(j)}$ have the law of $V_{k+1+j}$.
+For $j>0$ it replaces $j$ copies of $U_0$ by $U_1$. With
+$f_j(x)=f(u-j-x)$, regroup the two positive changes as
+\begin{align*}
+ &\E f_1(V^{(1)})+\E f_2(V^{(2)})-\E f_1(V)-\E f_2(V)\\
+ &\quad=\E(f_1+f_2)(V^{(1)})-\E(f_1+f_2)(V)
+                       +\E f_2(V^{(2)})-\E f_2(V^{(1)}).
+\end{align*}
+There is an identical grouping for the negative changes.
+Adjacent bumps have disjoint open supports and zero derivatives at the
+joins, so the derivative Lipschitz constant remains $2\pi^2$.
+For a centered $Z$,
+$|\E F(a+Z)-F(a)|\le\tfrac12\operatorname{Lip}(F')\E Z^2$.
+Conditioning on all unchanged summands, and applying this twice to each
+replacement, bounds the total cost by $4\pi^2(s_0+s_1)$. Hence
+\[
+ \sum_{i=k-1}^{k+3}g_i
+ \ge\eta\left\{\sum_{j=-2}^2\E f(u-j-V)-4\pi^2(s_0+s_1)\right\}.
+\]
+These five indices are interior, because $|i-np|<\xi+3<4$.
+No independence between different count sums is asserted.
+
+The infinite translates of $f$ sum to $\sin^2(\pi(u-V))$.
+An omitted nonzero translate requires $|V|>2$, including endpoint
+collisions because the bump vanishes there. Thus the omitted part is at
+most $\E V^4/16$. With $\delta=k-np\in(-1-\xi,\xi)$, the frozen variance is
+\[
+ \tau=(nq-\delta-1)s_0+(np+\delta)s_1,
+ \qquad(1-6/n)\lambda\le\tau\le(1+3/n)\lambda.
+\]
+The lower estimate uses $c_-r\ge1+\xi$; the upper uses $r\ge1/3$.
+Also $s_0+s_1\le\lambda/(nr)$ and $\E V^4\le A^2\tau+3\tau^2$.
+For either conditional noise $Z$, an independent copy satisfies
+$|Z-Z'|\le A+d<2/3$. Concavity of sine and
+$\sin(2\pi/3)=\sqrt3/2>17/20$ give
+$\sin(\pi x)\ge(51/40)x$ on $[0,A+d]$; hence
+$1-\cos(2\pi x)\ge3x^2$ on $|x|\le A+d$.
+Therefore
+\[
+ 1-|\E e^{2\pi iZ}|^2
+ =\E\{1-\cos(2\pi(Z-Z'))\}\ge2\kappa\Var Z,
+\]
+and $|\E e^{2\pi iZ}|\le e^{-\kappa\Var Z}$.
+Multiplying over the independent frozen summands shows
+$\E\sin^2(\pi(u-V))\ge(1-e^{-\kappa\tau})/2$.
+Altogether,
+\begin{equation}\label{short:count:reserve}
+ \sum_{i=k-1}^{k+3}g_i\ge\eta\left\{
+ \frac{1-e^{-\kappa(1-6/n)\lambda}}2
+ -\frac{A^2(1+3/n)\lambda+3(1+3/n)^2\lambda^2}{16}
+ -\frac{4\pi^2\lambda}{nr}\right\}.
+\end{equation}
+
+\paragraph{The weights and the complete curvature tail.}
+For $k-1\le i\le k+3$, the segment between $i/n$ and $p$ has variance
+product greater than $\zeta$; indeed
+$\zeta<\min_{z=p_- -4/N,\,p_++4/N}z(1-z)$.
+Relative entropy is bounded by $(i-np)^2/(2n\zeta)<8/(n\zeta)$,
+and the factorial remainder is greater than $-1/(12n\zeta)$.
+Stirling therefore gives
+\[
+ \sqrt n\pi_i>2\phi_-\left(1-\frac{8+1/12}{N\zeta}\right)>m_*.
+\]
+Every other $g_i$ is nonnegative. The reserve in
+\eqref{short:count:reserve} increases with $n$. Replace $n$ by $N$ first,
+then use $1-e^{-x}\ge x-x^2/2+x^3/6-x^4/24$ for $x\ge0$.
+Writing $\alpha=1-6/N$, $b=1+3/N$ and $z=\kappa\alpha$, we obtain
+\begin{equation}\label{short:count:W}
+ \sqrt n\sum_i\pi_i g_i\ge W(\lambda):=
+ \eta m_*\left\{
+ \frac{z\lambda-z^2\lambda^2/2+z^3\lambda^3/6-z^4\lambda^4/24}{2}
+ -\frac{A^2b\lambda+3b^2\lambda^2}{16}
+ -\frac{4\pi_+^2\lambda}{Nr}\right\}.
+\end{equation}
+
+Put $c=(np-q-t)_+$. For $a=t-j$ and $W_j=T_j-j$, centering gives
+\[
+ B_j=(\E|a-W_j|-|a|)/2\ge0,\qquad
+ B_j\le\sqrt T/2,\qquad a_+B_j\le T/4,
+\]
+whenever $T\ge\E W_j^2$. The factorization
+$27x^4-256x+256=(3x-4)^2(3x^2+8x+16)$ gives
+$B_j\le27M/(256|a|^3)$ for $a\ne0$, if $M\ge\E W_j^4$.
+The exact adjacent-mass formula is
+\[
+ \pi_{j+1}-\pi_j
+ =\frac{np-q-j}{(n+1)v}\,
+       \Pp\{\operatorname{Bin}(n+1,p)=j+1\}.
+\]
+Discard its nonpositive terms and bound the positive numerator by
+$(a+c)_+$. Since $c\le\bar c<1$, at most one mesh point lies in each
+of $(-c,0)$ and $[0,1)$; together they cost $c\sqrt T+T/4$.
+The rest is bounded by the complete series
+$\sum i^{-2}<5/3$, $\sum i^{-3}<5/4$. Using
+\eqref{short:count:mode} and $\sqrt n/(n+1)^{3/2}\le1/n$ yields
+\begin{equation}\label{short:count:curvature}
+ \sqrt n\sum_j(\pi_{j+1}-\pi_j)B_j
+ \le\frac{\beta_0}{nv^{3/2}}
+ \left\{\frac T4+c\sqrt T+
+       \frac{27M}{256}\left(\frac53+\frac{5c}4\right)\right\}.
+\end{equation}
+A positive adjacent mass requires $j<np$, where its actual variance
+is at most $\lambda/q\le T=\lambda/q_*$ and
+$\E W_j^4\le M=A^2T+3T^2$.
+Moreover $J(\lambda)=j_1\lambda+j_0\ge\sqrt T$, since
+$4j_0j_1\ge1/q_*$.
+
+\paragraph{Both signs of the normal correction.}
+Apply \eqref{short:count:binomial} at $k,k+1$ and interpolate.
+For $G(x)=\Phi((x-np)/\sqrt{nv})$,
+$G''(x)\le\phi(0)(np-x)_+/(nv)^{3/2}$. The interpolation remainder is
+\[
+ \sqrt n\{(1-u)G(k)+uG(k+1)-G(t)\}
+ \le\frac{\phi(0)}{2nv^{3/2}}u(1-u)(u-w)_+.
+\]
+If $H\le0$, changing normal variance from $v$ to $v+s$ is favorable.
+Using $u(1-u)\le1/4$ and $u^2(1-u)\le4/27$, the total normal cost is
+at most $\phi_+(\xi/8+2/27)/(nv^{3/2})$, and
+$c=(-q-w)_+\le\bar c$.
+If $H\ge0$, $c=0$, interpolation costs at most
+$\phi_+(2/27)/(nv^{3/2})$, and the variance change costs at most
+$\phi(0)ws/(2v^{3/2})$ by
+$1-(1+x)^{-1/2}\le x/2$.
+The cubic correction is favorable by \eqref{short:count:cubic}.
+
+Define the nonnegative quadratics
+\[
+ S_c=\frac T4+cJ(\lambda)
+              +\frac{27M}{256}\left(\frac53+\frac{5c}4\right),
+\qquad
+ E_-=\frac{\beta_0S_{\bar c}+\phi_+(\xi/8+2/27)}{V_*},
+\]
+\[
+ E_+=\frac{\beta_0S_0+\phi_+(2/27+\xi\lambda/2)}{V_*}.
+\]
+Because $V_*^2<v_-^3$, combining
+\eqref{short:count:crossing}--\eqref{short:count:curvature} with these
+normal bounds makes the full excess strictly less than
+$-W(\lambda)+E_\pm(\lambda)/n$.
+It remains to compare these explicit polynomials.
+
+\paragraph{Four rational endpoints finish the interval.}
+Set $P_\pm(\lambda)=W(\lambda)-E_\pm(\lambda)/N-\lambda/100$.
+Each $E_\pm$ is a convex quadratic, whereas direct differentiation gives
+\[
+ W''(\lambda)=-\eta m_*\left\{
+ \frac{z^2}{4}\big[(z\lambda-1)^2+1\big]+\frac{3b^2}{8}\right\}<0.
+\]
+Thus $P_\pm$ is strictly concave. Substitution of the rational constants
+above gives the following exact rational lower bounds:
+\[
+\begin{array}{c|cc}
+ &\lambda=1/100&\lambda=7/20\\\hline
+ P_-&.002314&.061304\\
+ P_+&.003341&.063680
+\end{array}
+\]
+All four are positive, proving $P_\pm>0$ on the whole closed interval.
+Since $n\ge N$ and $E_\pm\ge0$, this proves
+\eqref{short:count:exclusion} for $1/100\le\lambda\le7/20$.
+The scalar checks used here involve only rational inequalities and
+$199/500<\phi(0)<2/5$, $25/8<\pi<22/7$; no parameter grid or tail
+truncation is involved.
+
+The two positive-noise proofs have identical support and probability
+hypotheses, include their shared endpoint, and cover every phase.
+At $\lambda=0$, conditional centering and $\E U^2=0$ give $U=0$
+almost surely, so \eqref{short:count:binomial} applies directly.
+This completes the proof of Theorem~\ref{short:count:local}.

@@ -1,0 +1,292 @@
+\section{One acquired strip}\label{short:acq:section}
+
+The entry calculation will be used only through its weighted defect and
+raw-threshold bounds. The former already forces the sign split close to
+Esseen's two-point law. Two applications of contact then bound the entire
+conditional support, without a further partition of the sign probability.
+Throughout this section set
+\[
+ \sigma=\sqrt{10},\qquad p_*=(4-\sigma)/2,\qquad
+ B_*=32.20665378.
+\]
+The law, support gaps and sign split are those of
+Section~\ref{ms:geometry-counts}; in particular $D$ is the actual gap
+defect, not a moment surrogate. Write the central gap, once acquired, as
+$(-A_-,A_+)$, so that its endpoints are not confused with the sign indicator
+$B_0=\ind_{\{X>0\}}$.
+
+\begin{proposition}[Direct geometry]\label{short:acq:geometry}
+Let $X$ be compactly supported, centered and of variance one. If
+$n\ge700$ and $nD\le B_*$, its closed support has a gap
+$(-A_-,A_+)$ across zero, with $A_-,A_+>0$. In the actual decomposition
+$X=\ell(B_0+U-p)$, put
+\[
+ \begin{gathered}
+a_0=p-A_-/\ell,\quad a_1=q-A_+/\ell,\quad d=a_0+a_1,\\
+\theta=\E\{X-\E(X\mid B_0)\}^2,\qquad
+\lambda=n\E U^2=n\theta/\ell^2.
+\end{gathered}
+\]
+Then $a_0,a_1\ge0$, $\E(U\mid B_0)=0$, $U_0\le a_0$,
+$U_1\ge-a_1$, and
+\begin{gather}
+ \frac38<p<\frac{93}{200},\qquad
+ \theta<.0036,\qquad d<.004,\qquad\ell>1.996,
+ \label{short:acq:domain}\\
+ \rho<\frac98,\qquad .066148<\beta<.2527,
+ \qquad\lambda<\frac7{20}.\label{short:acq:outputs}
+\end{gather}
+These conclusions require no contact or predecessor hypothesis.
+\end{proposition}
+
+\begin{proof}
+We have $D<D_0:=.047$, because $700D_0>B_*$. If zero were in the
+closed support, Lemma~\ref{ms:physical-defect} would give
+$D\ge(\sigma-1)\rho\ge\sigma-1>D_0$. Thus the central gap exists;
+centering supplies both signs. Conditional means imply $a_j\ge0$ and
+$0\le d<1$. Put $v=pq$ and $w=1-\theta=v\ell^2$, and define
+\[
+ Q(p)=(\sigma+1)p^2+(\sigma-1)q^2-6pq
+       =(6+2\sigma)(p-p_*)^2.
+\]
+We first retain all the costs of the actual conditional noises. Let
+\[
+ \int f\,d\mu_\pm
+ =\E\bigl[(X-\E(X\mid B_0))^2\ind_{\{\pm X>0\}}f(|X|)\bigr].
+\]
+Their masses sum to $\theta$. The outer-gap estimate gives the common budget
+\begin{equation}\label{short:acq:budget}
+ D\ge\ell wQ+E_0+\int k_+\,d\mu_++\int k_-\,d\mu_-,
+\end{equation}
+where
+\begin{gather*}
+ E_0=6\ell w\{d(1-d)+a_0a_1\},\\
+ k_+(x)=(\sigma-1)(x+2\ell q)+6A_+,\qquad
+ k_-(x)=(\sigma+1)(x+2\ell p)+6A_-.
+\end{gather*}
+Indeed
+\[
+ J_o^+\le2\int_{A_+}^{\infty}(t-A_+)\tau(t)\,dt
+       =\E[X_+(X_+-A_+)^2],
+\]
+and the negative outer gaps have the same expression in magnitudes.
+Add the central contribution $m(A_-+A_+)^2$ and use
+\[
+ \E X_+^3=m(\ell q)^2+\int(x+2\ell q)\,d\mu_+,
+ \qquad R_+=\mu_+(\R)+m(\ell q-A_+),
+\]
+with the negative counterparts. Expansion yields
+\eqref{short:acq:budget}. This also proves the budget for countably many
+gaps by monotone convergence; endpoint atoms do not alter the integrals.
+
+Hereafter use $3.162277660<\sigma<3.162277661$. The weaker gap estimate
+$J\le\rho+2mA_-A_+$, together with $\rho\ge1$, $\gamma\le\rho$ and
+$m\le1/2$, gives
+\[
+ A_-A_+\ge z:=\frac{3.162277660-1-D_0}{3}>0,
+ \qquad w\ge A_-A_+\ge z.
+\]
+The second inequality follows from $A_-\le\ell p$, $A_+\le\ell q$.
+All costs in \eqref{short:acq:budget} are nonnegative, so
+\[
+ D\ge\frac{w^{3/2}Q}{\sqrt v}\ge2z^{3/2}Q.
+\]
+Let $Q_-$ replace $\sigma$ in its polynomial expression by the lower
+rational bound. The two exact tests
+\[
+ 4z^3Q_-(.36)^2>D_0^2,\qquad
+ 4z^3Q_-(.48)^2>D_0^2
+\]
+exclude $p\le.36$ and $p\ge.48$, respectively: the squared distance
+to $p_*\in(.36,.48)$ is monotone outside that interval.
+
+On $.36<p<.48$, $\ell\ge2\sqrt z>1.67$, and the noise prices satisfy
+\begin{align*}
+ k_+(x)/\ell&\ge q\{(\sigma+5)z/w+2(\sigma-1)\}>5.2,\\
+ k_-(x)/\ell&\ge p\{(\sigma+7)z/w+2(\sigma+1)\}>5.2.
+\end{align*}
+For the first use $x\ge A_+$ and $A_+\ge z/(\ell p)$; for the second
+use their negative counterparts. Since $w\le1$, the constants follow
+by taking $q=.52$ and $p=.36$. Therefore
+$D\ge1.67(5.2)\theta$, whence $\theta<.006$, $w>.994$ and
+$\ell>1.99$. Also $A_-+A_+\ge2\sqrt z$ gives
+\[
+ d\le1-2\sqrt{zv/w}<.2,\qquad v\ge.36(.64).
+\]
+Evaluating the kernels at their lower support endpoints in
+\eqref{short:acq:budget} now yields
+\begin{equation}\label{short:acq:direct}
+ D\ge\ell\{wQ+6wd(1-d)
+            +\theta\min(C_+-b_+d,C_--b_-d)\},
+\end{equation}
+where
+\[
+ C_+=3(\sigma+1)q,\quad C_-=3(\sigma+3)p,\quad
+ b_+=\sigma+5,\quad b_-=\sigma+7.
+\]
+Each branch increases in $d$ on the current domain, since
+$6(.994)(.6)-.006(3.162277661+7)>0$; both noise prices are positive.
+The inward cost alone excludes $d\ge.004$, because
+\[
+ 1.99(.994)6(.004)(.996)>.047.
+\]
+
+After replacing $d$ by zero, the derivative in $\theta$ of either branch
+$\sqrt{(1-\theta)/v}\{(1-\theta)Q+\theta C\}$ has the sign of
+$(2-3\theta)C-3(1-\theta)Q$. It is positive: $C>6.49$, $Q<.05$
+and $\theta<.006$. Hence $D\ge Q/\sqrt v$.
+This ratio decreases on $[.36,3/8]$, and
+\[
+ Q_-(3/8)^2>D_0^2(3/8)(5/8)
+\]
+excludes that interval. On $[93/200,.48]$ instead use
+$Q\ge Q(93/200)>D_0/2$ and $\sqrt v\le1/2$.
+Thus $3/8<p<93/200$.
+Since
+\[
+ C\ge\min\{3(\sigma+1)(107/200),\;3(\sigma+3)(3/8)\},
+\]
+the bound $D\ge\ell\theta C$, with $\ell>1.99$, improves
+$\theta<.0036$ and consequently $\ell>1.996$.
+
+The exact conditional cubic expansion gives
+\[
+ \rho=w^{3/2}\rho_B(p)+\int(x+2\ell q)\,d\mu_+
+                          +\int(x+2\ell p)\,d\mu_-,
+ \qquad\rho_B(p)=\frac{1-2v}{\sqrt v}.
+\]
+Because the two integrands are priced by at least $\sigma-1$ in
+\eqref{short:acq:budget},
+\[
+ \rho\le\rho_B(p)+D/(\sigma-1)
+       <1.1+.047/(54/25)<9/8.
+\]
+Here $v\ge15/64$ implies $\rho_B<1.1$ by squaring positive quantities.
+The signed-second-moment identity gives
+\[
+ 1-2p-2q\theta\le\beta\le1-2p+2p\theta;
+\]
+its endpoints imply $.066148<\beta<.2527$.
+
+To bound the scaled noise $\lambda$, retain the cubic cost rather than
+only its sign. If $Z$ is centered, $Z\le a$, $a>0$, and $t=\E Z^2$, then
+\[
+ 0\le\E[(a-Z)(Z+t/a)^2]=at-\E Z^3-t^2/a.
+\]
+Apply this to $U_0$ and $-U_1$. A zero endpoint forces the corresponding
+noise to vanish, so no division by zero is needed. For
+$\lambda_0=nq\E U_0^2$, $\lambda_1=np\E U_1^2$,
+the same gap-budget expansion, before bounding these two cubics, reads
+\begin{align*}
+ nD/\ell^3\ge{}&nvQ+6nv\{d(1-d)+a_0a_1\}\\
+ &+\{3(\sigma+3)p-(\sigma+7)a_0\}\lambda_0
+  +\{3(\sigma+1)q-(\sigma+5)a_1\}\lambda_1\\
+ &+\frac{(\sigma+1)\lambda_0^2}{nqa_0}
+  +\frac{(\sigma-1)\lambda_1^2}{npa_1}.
+\end{align*}
+Terms with $a_j=0$ are absent. Set $\bar d=.004$ and use
+$d(1-d)+a_0a_1\ge(1-\bar d)(a_0+a_1)$.
+Pair each displacement cost with its reciprocal cubic cost by AM--GM;
+for example
+\[
+ 6nv(1-\bar d)a_0+
+ \frac{(\sigma+1)\lambda_0^2}{nqa_0}
+ \ge2\lambda_0\sqrt{6(1-\bar d)(\sigma+1)p}.
+\]
+Thus
+\begin{equation}\label{short:acq:cubic-budget}
+ nD\ge\ell^3\{nvQ+\lambda_0Y_0(p)+\lambda_1Y_1(p)\},
+\end{equation}
+where
+\begin{align*}
+ Y_0&=3(\sigma+3)p-(\sigma+7)\bar d
+                   +2\sqrt{6(1-\bar d)(\sigma+1)p},\\
+ Y_1&=3(\sigma+1)q-(\sigma+5)\bar d
+                   +2\sqrt{6(1-\bar d)(\sigma-1)q}.
+\end{align*}
+Each increases in its respective argument $p$ or $q$. At $p=3/8$ and
+$q=107/200$, lower bounds $3$ and $2.6$ for the roots give
+$Y_0>12.8$, $Y_1>11.8$. Since $\lambda_0+\lambda_1=\lambda$,
+\[
+ B_*\ge nD>1.996^3(11.8)\lambda
+ \quad(\lambda>0),\qquad
+ 1.996^3(11.8)(.35)>B_*.
+\]
+This proves $\lambda<.35$; at zero noise it is immediate.
+\end{proof}
+
+\begin{proposition}[Two contact rays]\label{short:acq:strip}
+Under Proposition~\ref{short:acq:geometry}, suppose $(P,H)$ is an attained
+fixed-target pair at $\CE$ with nonnegative excess and true predecessor
+$C_{n-1}\le\CE$. Then
+\[
+                -.6<U_0\le a_0,\qquad -a_1\le U_1<.6.
+\]
+The support conclusion is uniform in the raw threshold $H$.
+\end{proposition}
+
+\begin{proof}
+Use the contact upper expression \eqref{v9:entry:contact}. The
+all-threshold Gaussian heat estimate and its radial derivative bound
+from the proof of Theorem~\ref{v9:entry:initial} give, for $t>\sqrt3$,
+\begin{align*}
+ H_n(H,\pm t)&\le h(t):=S^3\left\{\frac25\left(
+ \frac{t^3-3t}{6}+\frac{|t^4-6t^2+3|}{72}\right)
+ +\frac{t^5}{4100}+\frac{3t}{820}
+ +\frac{17(3t^2-2)}{78720}\right\},\\
+ |\partial_t H_n(H,\pm t)|&<g(t):=\frac25(t^2/2+1/2+\eta),
+ \qquad S=81/80,\quad\eta=8/875.
+\end{align*}
+The first bound follows directly from \eqref{v9:entry:heat}:
+$\|\phi'''\|_\infty<2\phi(0)$, $n-1\ge41$, and
+$\sqrt{n-1}>6$. No derivative of the absolute-value majorant is taken.
+
+At a support point of magnitude $t$, contact requires a nonnegative upper
+expression $H_n(H,\pm t)+\CE Q_b(t)$, where
+\[
+ Q_b(t)=-t^3+\tfrac32rt^2+3bt+\eta r,
+ \quad r=9/8,
+ \quad b=\begin{cases}-.066148&\text{negative ray},\\
+                         .2527&\text{positive ray}.
+          \end{cases}
+\]
+These replacements follow with their signs from
+\eqref{short:acq:outputs}; the discarded excess term is nonpositive.
+Take $c_0=819/2000<\CE$ and the two fixed boundaries
+\[
+ t_-=1.996(3/8+.6)=1.9461,
+ \qquad t_+=1.996(107/200+.6)=2.26546.
+\]
+For the respective $b$, direct rational substitution at each boundary gives
+\[
+ t^2>3,\qquad h(t)+c_0Q_b(t)<0,\qquad
+ Q_b,Q_b',Q_b''<0,\qquad L,L',L''<0,
+ \quad L=g+c_0Q_b'.
+\]
+The two boundary upper bounds are less than $-.40$ and $-.13$,
+respectively. These are just polynomial comparisons at two rational
+points. Since $Q_b'''=-6$ and $L''=2/5-6c_0<0$, the required signs
+persist along both outward rays. The derivative of the actual upper
+expression is below $L$, as $Q_b'<0$ and $\CE>c_0$.
+It therefore stays strictly negative beyond either boundary. Contact
+excludes every support point there, including boundary atoms.
+
+On the negative class, $X>-t_-$ and $\ell>1.996$ give
+$U_0=X/\ell+p>-(3/8+.6)+p>-.6$. On the positive class,
+$X<t_+$ gives
+$U_1=X/\ell+p-1<107/200+.6+p-1<.6$.
+The inward endpoints and conditional centering are the actual ones from
+Proposition~\ref{short:acq:geometry}.
+\end{proof}
+
+The pointwise normalization is worth recording once:
+\begin{equation}\label{short:acq:normalization}
+ 1=v\ell^2+\theta,\qquad s=\E U^2=\theta/\ell^2,
+ \qquad v+s=\ell^{-2},\qquad
+ X=\frac{B_0+U-p}{\sqrt{v+s}}.
+\end{equation}
+Thus the law to be compared in the next section is exactly the original
+law, and its threshold remains the raw $H$. Reflection, when required,
+selects the oriented positive witness before acquisition; neither its
+signed defect budget nor its probability interval is transported from
+the opposite orientation.
