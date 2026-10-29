@@ -1,0 +1,373 @@
+\section{A uniform Fourier enclosure with explicit input hypotheses}
+\label{v9:fourier:section}
+
+We prove the compensated Fourier formula and the complete low- and
+high-frequency estimates used in Section~\ref{v9:entry:section}.
+Every assertion concerns an actual marginal with the displayed moment
+and event bounds. Attainment and acquisition of those bounds are not
+premises of the Fourier proof itself; their use is ordered in that section.
+
+For each integer $n\ge N\ge42$, let $X=X_n$ be a real random variable with
+$\E X=0$, $\E X^2=1$. Neither the law nor the real raw threshold $H=H_n$
+must be fixed as $n$ varies. Write
+\[
+ f(t)=\E e^{itX},\quad \gamma=\E X^3,\quad
+ e_n(t)=e^{-nt^2/2}(1-in\gamma t^3/6),\quad V_n=f^n-e_n.
+\]
+The two complete integrals are
+\[
+ I_0(H)=\int_0^{1/2}\frac{|\Im(e^{-itH}V_n(t))|}{t^3}\,dt,
+ \qquad I_\infty=\int_{1/2}^\infty\frac{|V_n(t)|}{t^3}\,dt.
+\]
+
+\subsection{The inversion edge, including atoms and moving thresholds}
+
+\begin{lemma}\label{v9:fourier:inversion}
+If a finite signed measure $\mu$ has mass and first moment zero and
+$\int x^2\,d|\mu|(x)<\infty$, then, for every $H\in\mathbb R$,
+\[
+ \int(x-H)|x-H|\,d\mu(x)
+ =-\frac4\pi\int_0^\infty
+ \frac{\Im(e^{-itH}\widehat\mu(t))}{t^3}\,dt.
+\]
+The integral on the right is absolutely convergent.
+\end{lemma}
+\begin{proof}
+For real $y$, substitution and integration by parts give
+\[
+ \int_0^\infty\frac{ty-\sin(ty)}{t^3}\,dt=\frac\pi4 y|y|.
+\]
+The boundary terms vanish: near zero the numerator is $O(t^3)$, and
+at infinity it is $O(t)$. The integrand has the sign of $y$, since
+$v-\sin v\ge0$ for $v\ge0$. To calculate the constant, nonnegative
+Tonelli and elementary Laplace integration give
+\[
+ \int_0^\infty\frac{1-\cos t}{t^2}\,dt
+ =\int_0^\infty s\left(\frac1s-\frac{s}{s^2+1}\right)ds
+ =\frac\pi2.
+\]
+The absolute double integral of the compensated expression against
+$d|\mu|(x)$ equals
+\[
+ \frac\pi4\int(x-H)^2d|\mu|(x)<\infty.
+\]
+Absolute Fubini is therefore valid. The linear compensation disappears
+because $\int(x-H)d\mu=0$, proving both assertions. No continuity of a
+CDF at $H$ is involved.
+\end{proof}
+
+Apply this to the sum law minus the scale-$\sqrt n$ pushforward of
+the signed density
+\[
+ \phi(x)\{1+\gamma(x^3-3x)/(6\sqrt n)\}.
+\]
+This signed density has mass one, first moment zero and finite absolute
+second moment. Its transform after scaling is $e_n$. Gaussian integration
+by parts, using $q_z(x)=(x-z)|x-z|$ and $q_z'''=4\delta_z$, yields
+\[
+ \varepsilon_n:=\E q_{H/\sqrt n}(S_n/\sqrt n)
+ -\E q_{H/\sqrt n}(Z)-\frac{2\gamma\phi(H/\sqrt n)}{3\sqrt n}
+ =-\frac4{\pi n}\int_0^\infty
+ \frac{\Im(e^{-itH}V_n(t))}{t^3}\,dt.
+\]
+Consequently the error $E_n=-n^{3/2}\varepsilon_n/2$ satisfies
+\begin{equation}\label{v9:fourier:ledger}
+ |E_n|\le\frac{2\sqrt n}{\pi}\{I_0(H)+I_\infty\}.
+\end{equation}
+This is an identity and bound for each $n,H$; it exchanges no limit in
+$n$ with an integral or a varying law.
+
+\subsection{Sixth-order LOW with its actual coefficient bounds}
+
+Assume common bounds
+\[
+ \mu_4:=\E X^4\le M\le111/10,\quad |\gamma|\le g\le37/20,
+ \quad\mu_6\le M_6,
+\]
+and put
+\[
+ a=(3-\mu_4)/24,\quad z=(10\gamma-\E X^5)/120,
+ \quad |a|\le A,\quad |z|\le Z.
+\]
+Here $A,Z,M_6$ are nonnegative common ceilings, not quantities inferred
+from bounded third moments. Define
+\[
+ E=M_6/720+g^2/72+(1/2+g^2/144)^3/5,\qquad
+ B=A+Z/2+E/4,
+\]
+\[
+ a_0=\frac{N-1}{2N},\quad b_0=\frac{45-M}{96}(1-2/N)>0,
+ \quad\lambda_N=\sqrt{\pi/2}\left(\frac N{N-1}\right)^{3/2}.
+\]
+\begin{proposition}\label{v9:fourier:low}
+For all the laws and thresholds above,
+\[
+ I_0(H)\le\frac{L_0+L_H|H|}{\sqrt n}+\frac{L_2}{n},
+\]
+where, for any $c_0\ge\lambda_N$ and $c_1\ge\lambda_N/2$,
+\begin{align*}
+ L_0&=c_0Z+c_1Ag+251g^3/17280,\\
+ L_H&=c_0A+251g^2/4800,\\
+ L_2&=E/(2a_0^2)+B^2/(2b_0^3).
+\end{align*}
+\end{proposition}
+\begin{proof}
+Let $h(t)=\exp(-t^2/2-i\gamma t^3/6)$. Taylor's integral remainder
+for $e^{itX}$, followed by expectation, gives its expansion through
+degree five with error at most $\mu_6t^6/720$. For
+$w=-t^2/2-i\gamma t^3/6$ and $0\le t\le1/2$,
+\[
+ |w|\le t^2(1/2+g^2/144)<1/6,
+ \quad |e^w-1-w-w^2/2|\le |w|^3e^{|w|}/6\le |w|^3/5.
+\]
+The first bound follows from $\sqrt{1/4+y}\le1/2+y$; for the last
+use $e^{1/6}\le(1-1/6)^{-1}=6/5$. Comparing the two polynomials gives
+\begin{equation}\label{v9:fourier:taylor}
+ f-h=-at^4-izt^5+r_6(t),\qquad |r_6(t)|\le Et^6,
+ \qquad |f-h|\le Bt^4.
+\end{equation}
+The degree-six term in $w^2/2$ costs $g^2t^6/72$; it has not been
+discarded.
+
+Four integrations of $1-\cos u\ge0$ show
+$\cos u\le1-u^2/2+u^4/24$ for every real $u$. Independence gives
+$\E(X-X')^4=2\mu_4+6$, and hence
+\[
+ |f(t)|^2\le1-t^2+(M+3)t^4/12
+ \le1-(45-M)t^2/48.
+\]
+Thus $|f|,|h|\le e^{-(45-M)t^2/96}$ throughout the low interval.
+Every point on their complex joining segment obeys the same bound.
+Taylor's integral formula for the polynomial $v\mapsto v^n$ proves
+\[
+ f^n-h^n=n(f-h)h^{n-1}+R_2,\quad
+ |R_2|\le\tfrac12n(n-1)B^2t^8e^{-(n-2)(45-M)t^2/96}.
+\]
+The leading remainder in \eqref{v9:fourier:taylor} and this power
+remainder cost at most $L_2/n$ after division by $t^3$ and integration:
+use $n-1\ge2a_0n$, $(n-2)(45-M)/96\ge b_0n$, $n(n-1)\le n^2$,
+and $\int_0^\infty t^3e^{-At^2}dt=1/(2A^2)$,
+$\int_0^\infty t^5e^{-At^2}dt=A^{-3}$.
+
+For the remaining leading terms let $b=n-1$ and
+$v=b\gamma t^3/6$. Their imaginary part after rotation by $Ht$ is
+bounded by
+\[
+ ne^{-bt^2/2}\{(Z+A|H|)t^5+bAg t^7/6\}.
+\]
+The Gaussian moments of orders two and four, after dividing by $t^3$,
+give $n\sqrt{\pi/2}b^{-3/2}(Z+A|H|+Ag/2)$.
+This is at most $\lambda_N(Z+A|H|+Ag/2)/\sqrt n$.
+Finally put $u=n\gamma t^3/6$. Direct sine and cosine remainders give
+\[
+ |\Im[e^{-itH}(h^n-e_n)]|
+ \le e^{-nt^2/2}(|u|^3/6+|H|t u^2/2).
+\]
+The Gaussian moments of orders six and four respectively give
+$\sqrt{\pi/2}g^3/(432\sqrt n)$ times $5$, and
+$\sqrt{\pi/2}g^2|H|/(24\sqrt n)$.
+Using $\sqrt{\pi/2}<251/200$ gives precisely the two displayed
+rational coefficients. Every extended integrand was nonnegative.
+The only index comparisons were the displayed rational inequalities;
+in particular the law and $H$ can vary arbitrarily with $n$.
+\end{proof}
+
+In the selected enclosure one has actual support $|X|\le R$
+with $1\le R\le6$ and $\E|X|^5\le E_5$. Then $M_6=RE_5$ and
+$A=\max(2,M-3)/24$ are valid. Its sharper $Z$ is also licensed:
+for $Q=X^2-\gamma X-1$ direct multiplication gives
+\[
+ \E Q^2=\mu_4-1-\gamma^2,\quad
+ \E X^5=\gamma^3+2\gamma+\E[Q^2(X+2\gamma)].
+\]
+Reflect this auxiliary calculation if necessary so that
+$t=|\gamma|\ge0$. For any $r\ge\max(R,2g)$ the two signs of
+$\E X^5-10\gamma$ are at most
+\[
+ P_r(t)=r(M-1)+(10-2M)t-rt^2+t^3,
+ \quad Q_r(t)=r(M-1)+(2M-10)t-rt^2-t^3.
+\]
+The coefficients of $\mu_4$ before replacing it by $M$ are
+$r-2t,r+2t\ge0$. If $M\le5$, $P_r\ge Q_r$ and
+$P_r\le r(M-1)+(10-2M)t-(r-g)t^2$, whose maximum on $[0,g]$
+is at the clipped vertex used in the code. If $M>5$,
+$P_r\le r(M-1)$ and
+$Q_r\le r(M-1)+(2M-10)t-rt^2$, again with the stated clipped vertex.
+For $r=6$, $P_6''=-12+6t<0$ on $[0,g]$. If $M\le5$ and
+$P'_6(g)\ge0$, its maximum is exactly $P_6(g)$; otherwise the
+preceding quadratic gives $6(M-1)+(10-2M)^2/[4(6-g)]$.
+For $M>5$ the unrestrained vertex bound is
+$6(M-1)+(2M-10)^2/24$. Taking the minimum of these proved ceilings
+and $E_5+10g$, then dividing by $120$, gives a valid coefficient ceiling $Z$.
+The radius is an actual support input, not a free tuning parameter.
+
+\subsection{All six HIGH pieces and their index gates}
+
+For independent copies of the same marginal suppose an actual event
+$\mathcal E$ satisfies
+\[
+ \Pp(\mathcal E)\ge\alpha>0,\quad |X-X'|\ge d>0\text{ on }\mathcal E,
+ \quad\E[(X-X')^2\mid\mathcal E]\le M_E.
+\]
+Fix $b=9/10$, $0<r\le1/4$, and
+\[
+ h=333/106-(22/7)^3r^2/6>0,\quad
+ \kappa=\alpha(23/48)^2d^2,\quad L(x)=\frac{x+2}{x^2+4x+2},
+\]
+\[
+ S_3=\sum_{j=1}^{20}j^{-3}+1/800,\quad
+ S_5=\sum_{j=1}^{20}(j-r)^{-5}+\frac1{4(20-r)^4}.
+\]
+Let $c(u)=u/2-(M+3)u^2/24$ and set
+\[
+ c_* =\min\{c(1/4),c(81/100)\},\quad
+ c_q=1/8-(M+3)/384,\quad s=[1-(M+3)53/600]/2.
+\]
+\begin{proposition}\label{v9:fourier:high}
+Suppose $c_*>0$. For every $n\ge N$, $\sqrt n I_\infty$ is at most
+the sum of the following six terms:
+\begin{align*}
+ T_1(n)&=2\sqrt n e^{-nc_*},\\
+ T_2(n)&=\frac{M_E}{4\pi^{3/2}h\sqrt\alpha}
+       \{S_3+3S_5/(n\alpha h^2)\},\\
+ T_3(n)&=\frac{M_E\sqrt n}{2\pi^2}e^{-n\alpha h^2r^2},\\
+ T_4(n)&=\frac{e^{-n\kappa b^2}}{2b^4\kappa\sqrt n},\\
+ T_5(n)&=\frac{\sqrt n}{2b^2}e^{-n\alpha(23/48)^2},\\
+ T_6(n)&=\sqrt n e^{-n/8}\{2L(n/8)+\sqrt{M-1}/3\}.
+\end{align*}
+If $s>0$, $T_1$ may be replaced by its minimum with
+$2\sqrt n e^{-nc_q}L(ns/4)$. The fourth term may be replaced by
+its minimum with $\sqrt n e^{-n\kappa b^2}L(n\kappa b^2)/(2b^2)$.
+The common-floor sum at $N$ is valid if
+\[
+ 2Nc'>1\quad\text{for }c'\in\{c_*,\alpha h^2r^2,
+                      \alpha(23/48)^2,1/8\}.
+\]
+For the optional first term also require $2Nc_q>1$; for the optional
+fourth term require $N\kappa b^2\ge1/4$. If an optional gate fails,
+the simpler term remains available.
+\end{proposition}
+\begin{proof}
+The triangle inequality separates $|f^n|$ and the entire comparator.
+On $[1/2,b]$, symmetrization gives $|f|^n\le e^{-nc(t^2)}$.
+The function $c$ is concave, so $c(t^2)\ge c_*$ and the integral
+of $t^{-3}$ is less than two. This gives $T_1$.
+Also
+\[
+ c(u)-c_q-s(u-1/4)=(M+3)(u-1/4)(81/100-u)/24\ge0.
+\]
+When $s>0$ this chord may be integrated to infinity.
+
+For completeness, the tail calculation used here is, for $x=na b^2>0$,
+\begin{equation}\label{v9:fourier:tail}
+ \sqrt n\int_b^\infty e^{-na t^2}t^{-3}dt
+ \le\frac{\sqrt n e^{-x}}{2b^2}L(x).
+\end{equation}
+Substitution and positive Fubini reduce the integral, without its
+prefactor, to $\int_0^\infty u(x+u)^{-1}e^{-u}du$. Put
+$P(u)=u^2-4u+2$, $D=x^2+4x+2=P(-x)$. Exact polynomial division gives
+\[
+ \frac1{x+u}-\frac{-u^3+(x+8)u^2-(x^2+8x+20)u+x^3+8x^2+20x+16}{D^2}
+ =\frac{P(u)^2}{(x+u)D^2}\ge0.
+\]
+Integrate using the factorial moments of $e^{-u}$; the numerator's
+integral is $(x+3)D$. Subtracting the resulting lower bound times $x$
+from one gives $L(x)$. Applying \eqref{v9:fourier:tail} at endpoint
+$1/2$ and rate $s$ proves the optional first term.
+
+For $t\ge b$, symmetrization, the actual-event probability bound,
+and convex Jensen give
+\[
+ |f(t)|^n\le e^{-n\E\sin^2(t(X-X')/2)}
+ \le\E[e^{-n\alpha\sin^2(tD/2)}\mid\mathcal E],
+ \quad D=|X-X'|.
+\]
+Positive Tonelli allows a separate partition for every $D>0$.
+With $\ell=2\pi/D$, use the zero cell $[0,\ell/2]$ and nonzero
+cells $\ell[j-1/2,j+1/2]$, $j\ge1$. In a nonzero cell write
+$t=\ell(j+v)$. On its core $|v|\le r$,
+$|\sin\pi v|\ge h|v|$; on its wings $r\le|v|\le1/2$ it is
+at least $hr$. These follow from $\sin x\ge x-x^3/6$ and
+monotonicity of $\sin$ on $[0,\pi/2]$, with directed bounds on $\pi$.
+For $|v|\le r$ Taylor's integral remainder gives
+\[
+ \{(j-v)^{-3}+(j+v)^{-3}\}/2
+ \le j^{-3}+6(j-r)^{-5}v^2.
+\]
+Extend the nonnegative Gaussian majorant over the whole real line.
+Its zeroth and second moments, the Jacobian
+$t^{-3}dt=D^2(4\pi^2)^{-1}(j+v)^{-3}dv$, and
+$\E[D^2\mid\mathcal E]\le M_E$ give $T_2$.
+The two series tails are bounded by their decreasing integrals after
+20. The total wing weight is at most
+$\int_{\ell/2}^\infty t^{-3}dt=D^2/(2\pi^2)$, giving $T_3$.
+Extending these sets below $b$ only increases their nonnegative bounds.
+
+In the zero cell put $u=tD/2\le\pi/2$. Where $u\le1/2$,
+$\sin u\ge23u/24$, and $D\ge d$ yields rate $\kappa$.
+Extending the set to $[b,\infty)$ gives $T_4$ from
+$t^{-3}\le t/b^4$; \eqref{v9:fourier:tail} gives its optional improvement.
+Where $u\ge1/2$, monotonicity gives $\sin u\ge23/48$ and the total
+weight is at most $1/(2b^2)$, proving $T_5$. Endpoints have zero
+Lebesgue measure even if the conditional distance distribution has atoms.
+
+Finally $|e_n(t)|\le e^{-nt^2/2}(1+n|\gamma|t^3/6)$.
+The first part on the entire $[1/2,\infty)$ uses
+\eqref{v9:fourier:tail}; the second uses
+$\int_{1/2}^\infty e^{-nt^2/2}dt\le2e^{-n/8}/n$.
+Pearson's identity $\mu_4-1-\gamma^2=\E(X^2-\gamma X-1)^2\ge0$
+gives $T_6$. No comparator tail is dropped.
+
+For floor evaluation, $\sqrt n e^{-nc'}$ decreases for $2nc'>1$,
+whereas $n^{-1}$ and $n^{-1/2}e^{-nc'}$ decrease for every $c'>0$.
+Also $L'(x)=-(x^2+4x+6)/(x^2+4x+2)^2<0$.
+Thus the optional first term decreases under its own gate, and the
+comparator decreases for $n\ge5$. The sign of the derivative of
+$\sqrt{x}e^{-x}L(x)$ is the sign of
+\[
+ 4-10x-22x^2-13x^3-2x^4,
+\]
+which is negative at $1/4$ and strictly decreasing on $(0,\infty)$.
+This proves the optional zero-cell gate. Every comparison is of a common
+scalar majorant, not of characteristic functions for different laws.
+\end{proof}
+
+\subsection{The precise closed Fourier conclusion}
+
+Under the preceding moment, actual-event and scalar gates, let $K_H$ be
+any complete HIGH sum evaluated at $N$, including its permitted optional
+improvements. Then
+\begin{equation}\label{v9:fourier:conclusion}
+ |E_n|\le\frac2\pi\{L_0+K_H+L_2/\sqrt N+L_H|H|\}
+ \le\frac{16}{25}\{L_0+K_H+L_2/\sqrt N+L_H|H|\}.
+\end{equation}
+The second inequality uses $\pi>25/8$ and nonnegative coefficients.
+This is the constant Fourier budget and raw-threshold slope used in
+Section~\ref{v9:entry:section}. Complete HIGH bounds for several valid windows may be minimized.
+The LOW coefficients must remain one complete valid triple.
+
+For rational acceptance, positive denominator roots are
+rounded downward, numerator roots upward, and $\pi>333/106$,
+$\sqrt\pi>4431/2500$, $\pi<22/7$ are directed correctly.
+These constants require no numerical transcendental oracle: polynomial
+division gives
+\[
+ 22/7-\pi=\int_0^1\frac{x^4(1-x)^4}{1+x^2}\,dx>0,
+\]
+and the tangent addition formula with its first-quadrant branch gives
+\[
+ \pi=16\arctan(1/5)-4\arctan(1/239).
+\]
+Four alternating terms for the first arctangent and the upper bound
+$\arctan(1/239)<1/239$ give $\pi>333/106>25/8$ by rational comparison.
+Squaring then verifies the two Gaussian constant enclosures used above.
+Its exponential helper replaces $x\ge0$ by a downward rational
+$y\le\min(x,64)$ and returns an upward rounding of
+$1/\sum_{j=0}^{64}y^j/j!$. This is at least $e^{-x}$.
+The floor argument applies to the underlying analytic bounds, not to a
+claim that this rounded helper itself preserves strict monotonicity.
+
+The estimates are uniform over all laws and thresholds satisfying
+the stated inequalities at the actual index. They require no monotonicity
+of extremal Berry--Esseen constants, no fixed-law asymptotic limit, and
+no unproved disappearance of a lattice tail.

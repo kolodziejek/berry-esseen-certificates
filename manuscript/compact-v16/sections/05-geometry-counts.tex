@@ -1,0 +1,234 @@
+\section{The two-point skeleton and its moment defect}
+\label{ms:geometry-counts}
+
+Every centered law can be separated into its positive and nonpositive
+parts. Replacing each part by its conditional mean gives a two-point law;
+the remaining conditional fluctuations measure its departure from that
+law. We first make this decomposition exact, then identify a moment
+defect that vanishes at Esseen's extremal distribution.
+
+\subsection{The sign split and its units}
+
+Fix $P\in\mathcal P$ and put
+\[
+ p=\Pp(X>0),\quad q=1-p,\quad v=pq,\quad
+ m=\E X_+=\E X_->0,\quad B_0=\mathbf1_{\{X>0\}}.
+\]
+Both $p,q$ are positive; a possible atom at zero is assigned to the
+nonpositive class. Define $V=\E[X\mid B_0]$ and $W=X-V$, so that
+\[
+ V=-m/q\quad(B_0=0),\qquad V=m/p\quad(B_0=1),\qquad
+ \theta=\E W^2=1-m^2/v<1.
+\]
+Write $\theta_-=\E[W^2;B_0=0]$ and $\theta_+=\E[W^2;B_0=1]$.
+The distance between the two conditional means is
+\[
+ \ell=m/v=\sqrt{(1-\theta)/v}>0.
+\]
+Set $U=W/\ell$ and $Y=B_0+U$. Then
+\begin{equation}
+ X=\ell(Y-p),\qquad \E[U\mid B_0]=0.
+\label{ms:bernoulli-coordinates}
+\end{equation}
+Let $U_0,U_1$ have the two conditional laws, and put
+\[
+ w_i=\E U_i^2,\quad \mu_i=\E U_i^3,\quad
+ s=qw_0+pw_1=\frac{v\theta}{1-\theta},\quad
+ \lambda=ns,\quad \ell=(v+s)^{-1/2}.
+\]
+The moments $\mu_i$ are finite because $\rho<\infty$. Higher moments are
+used only for extremal laws, which have compact support by
+Proposition~\ref{v9:core:attainment}.
+
+If $s=0$, both nonnegative conditional variances vanish, so $U_0=U_1=0$
+almost surely. This is exactly the standardized Bernoulli law. If $s>0$,
+the parameter $\alpha=pw_1/s$ lies in $[0,1]$ and gives
+$w_0=s(1-\alpha)/q$, $w_1=s\alpha/p$.
+
+The signs of $X$ are still those defining the two classes, so expansion
+of the actual conditional moments gives
+\begin{align}
+ \rho/\ell^3&=v(1-2v)+3v(w_0+w_1)-q\mu_0+p\mu_1,\notag\\
+ \gamma/\ell^3&=v(q-p)+3v(w_1-w_0)+q\mu_0+p\mu_1,\notag\\
+ \beta/\ell^2&=v(q-p)+pw_1-qw_0.
+\label{ms:conditional-moments}
+\end{align}
+For example, on the nonpositive class $|X|^3=\ell^3(p-U_0)^3$;
+on the positive class it is $\ell^3(q+U_1)^3$. Conditional centering removes
+the linear terms and gives the first identity; the other two follow in
+the same way. The three identities share the same pair $(\mu_0,\mu_1)$.
+
+\subsection{A nonnegative moment defect}
+
+The constant $3+\sqrt{10}$ has a simple geometric explanation. The
+signed third moment and the first absolute moment satisfy a circle
+inequality; the lengths of the support gaps are controlled by the same
+first absolute moment. Neither fact requires bounded support.
+
+Define
+\[
+ \tau(t)=\E[X\mathbf1_{\{X\ge t\}}],\qquad \sigma=\sqrt{10}.
+\]
+For $t<0$, centering gives $\tau(t)=-\E[X\mathbf1_{\{X<t\}}]\ge0$;
+for $t\ge0$ nonnegativity is immediate. Signwise Tonelli integration gives
+\begin{equation}
+ \int_\R\tau(t)\,dt=1,
+ \qquad 2\int_\R|t|\tau(t)\,dt=\rho.
+\label{ms:tau-moments}
+\end{equation}
+On each bounded complementary interval $(a,b)$ of the closed support,
+$\tau$ is constant in the interior, with value $\tau_{a,b}$. Put
+\begin{equation}
+ J=\sum_{(a,b)}\tau_{a,b}(b-a)^2,
+ \qquad D=(3+\sigma)\rho-\gamma-3J.
+\label{ms:physical-defect-definition}
+\end{equation}
+There are at most countably many gaps; the next proof shows that the
+nonnegative sum is finite. Endpoint atoms do not affect its integrals.
+
+\begin{lemma}[A moment circle and the gap inequality]
+\label{ms:physical-defect}
+\label{ms:fourier:afcore:lem:physical-defect}
+For every $P\in\mathcal P$,
+\begin{equation}
+ \gamma^2+(2m)^2\le\rho^2,\qquad J\le\rho+2m,
+ \qquad \gamma+tJ\le\bigl(t+\sqrt{1+t^2}\bigr)\rho\quad(t>0).
+ \label{ms:gap-family}
+\end{equation}
+The last constant is sharp. Equality holds exactly at the standardized
+Bernoulli law with positive mass $p_t=(1+t-\sqrt{1+t^2})/2$.
+In particular, $D\ge0$. If zero belongs to the support, then
+$D\ge(\sigma-1)\rho$; hence $D<(\sigma-1)\rho$ implies a central
+support gap $(-A,B)$ with $A,B>0$.
+\end{lemma}
+\begin{proof}
+Write $a_\pm=\E X_\pm^2$ and $b_\pm=\E X_\pm^3$, so
+$a_++a_-=1$, $b_++b_-=\rho$ and $b_+-b_-=\gamma$.
+Cauchy--Schwarz on each sign class gives
+$a_\pm^2\le mb_\pm$. It also gives
+$m^2\le pa_+$ and $m^2\le qa_-$, where an atom at zero is included
+in $q$. Thus
+$m^2(1/a_++1/a_-)\le1$, or $m^2\le a_+a_-$.
+Consequently $b_+b_-\ge(a_+a_-)^2/m^2\ge m^2$, proving the
+circle inequality since $\rho^2-\gamma^2=4b_+b_-$.
+
+Every gap on one side of zero satisfies
+$(b-a)^2\le2\int_a^b|x|\,dx$.
+If a central gap $(-A,B)$ exists, its weight is $m$ and its excess
+over this integral is $2mAB$. Moreover
+$0\le\E[(X+A)(X-B)]=1-AB$.
+Summing the gap bounds by Tonelli proves $J\le\rho+2m$.
+If zero is in the support there is no central gap, so $J\le\rho$.
+Finally Cauchy--Schwarz in $\mathbb R^2$ gives
+$\gamma+2tm\le\sqrt{1+t^2}\rho$, proving the family and the
+assertions about $D$.
+
+Equality in the circle forces equality in the two signwise Cauchy
+bounds: the positive and negative parts are each concentrated at one
+nonzero value. Equality in $m^2\le a_+a_-$ excludes mass at zero.
+For such a law, with positive mass $p$ and $q=1-p$, one has
+$J=\rho+2m$. Equality in the last Cauchy bound requires
+$\gamma=2m/t$, equivalently $t(1-2p)=2p(1-p)$.
+Its unique solution in $(0,1)$ is the stated $p_t$.
+\end{proof}
+
+\begin{corollary}[The zero-defect law]\label{ms:zero-defect}
+For $P\in\mathcal P$, $D=0$ if and only if
+\[
+ X=(B_0-p_*)/\sqrt{p_*q_*},\qquad
+ p_*=(4-\sqrt{10})/2,\quad q_*=1-p_*,
+ \quad B_0\sim\operatorname{Bernoulli}(p_*).
+\]
+\end{corollary}
+\begin{proof}
+Apply the equality case of Lemma~\ref{ms:physical-defect} with $t=3$.
+\end{proof}
+
+In particular the defect separates two losses:
+\[
+ D=\underbrace{\sigma\rho-\gamma-6m}_{\text{moment loss}}
+       +3\underbrace{(\rho+2m-J)}_{\text{gap loss}},
+\]
+each nonnegative. For quantitative estimates we need more information
+than their signs. Suppose a central gap $(-A,B)$ has been established,
+and write
+\[
+ T_+=\E X_+^3-mB^2,\quad T_-=\E X_-^3-mA^2,\qquad
+ R_+=\E X_+^2-mB,\quad R_-=\E X_-^2-mA.
+\]
+These four quantities are nonnegative. For the outer gaps put
+$J_o=J-m(A+B)^2$. A positive outer gap satisfies
+$(b-a)^2\le2\int_a^b(t-B)\,dt$, so Tonelli gives
+\[
+ J_o^+\le2\int_B^\infty(t-B)\tau(t)\,dt
+       =\E[X_+(X_+-B)^2]=T_+-2BR_+\le T_+.
+\]
+Similarly $J_o^-\le T_--2AR_-\le T_-$.
+Expanding $D$, using $\sqrt{\sigma+1}\sqrt{\sigma-1}=3$, gives
+\begin{align}
+ D={}&m\{\sqrt{\sigma+1}A-\sqrt{\sigma-1}B\}^2
+       +(\sigma-1)T_++(\sigma+1)T_-\notag\\
+    &+3(T_++T_--J_o).\label{ms:defect-decomposition}
+\end{align}
+Every term is nonnegative. Cauchy--Schwarz also gives
+$1/(2\rho)\le m\le1/2$: indeed $1\le\rho\E|X|=2m\rho$ and
+$\E|X|\le1$. Since $\sigma-1>2$, the decomposition yields
+$T_++T_-\le D/2$. If $D<2$, then
+\[
+ m(A^2+B^2)=\rho-T_+-T_-\ge1-D/2,
+ \qquad A+B\ge\sqrt{2-D}.
+\]
+
+\subsection{One joint budget for endpoint motion and noise}
+
+Let $\bar A=m/q$, $\bar B=m/p$ be the conditional mean magnitudes, and
+let $\Delta_A=\bar A-A$, $\Delta_B=\bar B-B$. They are nonnegative.
+
+\begin{lemma}[Simultaneous gap inequality]
+\label{ms:simultaneous-gap}
+For this central gap,
+\begin{align}
+ D\ge{}&\frac{(6+2\sigma)(1-\theta)^{3/2}}{\sqrt{pq}}(p-p_*)^2
+ +6m\{(A+B)(\Delta_A+\Delta_B)+\Delta_A\Delta_B\}\notag\\
+ &+3(\sigma+1)B\theta_++3(\sigma+3)A\theta_-.
+\label{ms:simultaneous-gap-formula}
+\end{align}
+\end{lemma}
+\begin{proof}
+The stronger outer-gap bound in the preceding proof gives
+\[
+ D\ge(\sigma-1)\E X_+^3+(\sigma+1)\E X_-^3
+                      -6mAB+6BR_++6AR_-.
+\]
+Conditional cubic expansion gives
+\[
+ \E X_+^3=m\bar B^2+
+       \E[(X+2\bar B)(X-\bar B)^2;X>0]
+       \ge m\bar B^2+3B\theta_+,
+\]
+and similarly $\E X_-^3\ge m\bar A^2+3A\theta_-$.
+Moreover $R_+=\theta_++m\Delta_B$ and
+$R_-=\theta_-+m\Delta_A$. Substitution produces the last two terms of
+\eqref{ms:simultaneous-gap-formula} and the deterministic expression
+\[
+ m\{(\sigma-1)\bar B^2+(\sigma+1)\bar A^2-6\bar A\bar B\}
+ +6m\{\bar A\bar B-AB+B\Delta_B+A\Delta_A\}.
+\]
+The second brace equals
+$(A+B)(\Delta_A+\Delta_B)+\Delta_A\Delta_B$.
+For the first, use $m^2=(1-\theta)pq$ and the exact identity
+\[
+ (\sigma+1)p^2+(\sigma-1)q^2-6pq=(6+2\sigma)(p-p_*)^2.
+\]
+This proves the displayed inequality.
+\end{proof}
+
+In count coordinates the inward displacements are
+\[
+ a_0=p-A/\ell=\Delta_A/\ell,\quad
+ a_1=q-B/\ell=\Delta_B/\ell,
+ \quad d_Y=a_0+a_1=(\Delta_A+\Delta_B)/\ell.
+\]
+Thus $U_0\le a_0$ and $U_1\ge-a_1$. The physical displacement
+$\Delta_A+\Delta_B$ and the count displacement $d_Y$ differ by $\ell$.
+

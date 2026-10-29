@@ -1,0 +1,58 @@
+{
+  "status": "PASS_COMPACT_DOCUMENT_AND_PRESERVATION",
+  "utc": "2026-10-29T14:16:02.738438+00:00",
+  "source_pin": "1aa1dd015e3d73fbeecc1a7acbfa395cbb560b5f",
+  "tracked_original_blobs_unchanged": 6558,
+  "old_manuscript_files_unchanged": 85,
+  "tex_files": 13,
+  "unique_labels": 119,
+  "unresolved_labels": [],
+  "duplicate_labels": [],
+  "pages": 45,
+  "body_type_pt": 11,
+  "margin_mm": 28,
+  "overfull_boxes": 0,
+  "underfull_boxes": 0,
+  "pdf_sha256": "c5d4a86b5420fb30fdd89d90a25f4a5218f7954a6e13288305b346c0cfcfdc5f",
+  "final_tex_sha256": {
+    "main.tex": "360e74f20f604e949475c9e4b527db90249d4ae689f238422667fa957db4e32d",
+    "sections\\01-introduction.tex": "8fbc324bacd074770cf6cdeb6c83775411a17e43e76bd293b0010add12e169f9",
+    "sections\\01b-guide.tex": "03257086e7ae59e0f14faf8d27dd23f46c8fe071771c5bac10661f6ff5f2f23e",
+    "sections\\02-fixed-target.tex": "5a00687b76390fcaa4c57f9f893d070b23bf3119eda8aa4b82d66c3b4c0b509b",
+    "sections\\02b-moment-domain.tex": "13e4e29cc68b87ed2e07be15953b1c027eece2d0bb5ca5711419e4f0af95225e",
+    "sections\\05-geometry-counts.tex": "da259995624d0d831cde1b4e0e98c3050e48ea6c69ee27829ada585e010d0daa",
+    "sections\\04-fixed-entry.tex": "74c991e094c37b31112d82187dcb2ee1f89b4bfff80607b6a7b8d45344091aaa",
+    "sections\\07-direct-acquisition.tex": "9ef019655aa8a84b573d8382026391c5b711ffccfbe8cb98cd2358b0bfa402ce",
+    "sections\\08-direct-comparison.tex": "f01348986a4ae8aa086935011d6668a6f67a011367c1e7caec55fa352177bd9b",
+    "sections\\09-composition.tex": "f78b8050d9c3bd0aca1e5db3d85f98b60c1742bf1cbbbba6c6cf6755a86469f2",
+    "sections\\10-discussion.tex": "568bfba1bbe7020fe8ef0efe6e6a8394f693b975c6ac01461c7b4076820a6d44",
+    "appendices\\fixed-fourier.tex": "f13b162a5a6d69934dd8f0c0b1b19274d5ec942dd87a855b94490f9e60c79478",
+    "appendices\\normalization.tex": "e0330778c10a14c92862a5491e5485ee8054e0e758067493c6f3efe94ca78387"
+  },
+  "bibliography_sha256": {
+    "references-added.bib": "e1de5cfc75f4314c8741993ff2faa7bc6e3681c90f6ce25eacddb42fac91e92c",
+    "references-classical.bib": "d572142ac859fb2ff3a2e4679e33869cb54aa41320df60f23139b149a0a94084",
+    "references-modern-a.bib": "6375a56e09258d12e6ff5b79eb240d720335f9e9030fe9ba4306a5b210bf304a",
+    "references-modern-b.bib": "9b49eba5de769bad53a61b0e0d8b46faf2ed20a7588860f86d542a0c51fb5060"
+  },
+  "scope": "Document/source preservation and integration checks, not proof of retained external inputs or missing finite base.",
+  "visual_review": "All45pages reviewed in4contact sheets; finalpages25,30,33,35,37 inspected at105dpi. No clipping, overlap or layout defect observed.",
+  "independent_scope_reviews": [
+    "shortening_scope_review: fullnew07/08/09 versuspinnedv16; no scope-changing omission found; exact four endpoint margins reconstructed.",
+    "short_acquisition_author: cross-review count/acquisition normalization, atom andphase joins; no compression-induced gap found."
+  ],
+  "bounded_math_receipt": "checks-summary.json",
+  "serialization_first_attempt": "Firstattempt passed8of9checks; ninth stopped only when formatting a checked exact fraction exceeding4300decimaldigits. Final invocation-Xint_max_str_digits=0passed9of9. Original mathematical sources/assertions unchanged; rawcaptures retained locally.",
+  "portable_rebuild": {
+    "status": "PASS",
+    "pages": 45,
+    "all_page_text_identical": true,
+    "compiler": "officialTectonic0.17.0-x86_64-pc-windows-msvc",
+    "untrusted_mode": true,
+    "rebuilt_pdf_sha256": "fa260afaf9dd0859e1da6eadd2d24480954b9a2eff4f0ea58249d7598c35af8c",
+    "tex_warnings": 0,
+    "bibtex_warnings": 0
+  },
+  "original_pdf_pages": 89,
+  "publication_note": "Derived public document/validation summary. Unredacted raw execution captures and first-attempt failure remain in local handoff; not included in this PR."
+}

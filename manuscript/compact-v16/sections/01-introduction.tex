@@ -1,0 +1,78 @@
+\section{The problem and the selected route}\label{ms:introduction}
+Let $\mathcal P$ be the laws on $\R$ with mean zero, variance one and
+finite third absolute moment $\rho(P)=\E|X|^3$. For independent copies
+$X_1,\ldots,X_n$ of $P$, put $S_n=\sum_iX_i$ and
+\[
+ \Delta_n(P)=\sup_{H\in\R}|\Pp_P(S_n\le H)-\Phi(H/\sqrt n)|,
+ \qquad C_n=\sup_{P\in\mathcal P}\frac{\sqrt n\,\Delta_n(P)}{\rho(P)}.
+\]
+Here $\Phi$ and $\phi$ are the standard normal distribution function
+and density. The sharp-constant conjecture is
+\begin{equation}\label{ms:conjecture}
+ \sup_{n\ge1}C_n=\CE,
+ \qquad \CE=\frac{3+\sqrt{10}}{6\sqrt{2\pi}}=0.409732\ldots.
+\end{equation}
+Throughout, $H$ is a raw sum threshold; terminating decimals in inequalities
+are exact rationals. Affine standardization gives the equivalent result
+for any mean and positive variance, with third absolute central moment
+divided by the cube of the standard deviation.
+
+Berry and Esseen established the classical order $n^{-1/2}$
+\cite{Berry1941,Esseen1942,Esseen1945}. Esseen's lower bound
+\cite{Esseen1956} explains the proposed constant. If
+$p_*=(4-\sqrt{10})/2$, $q_*=1-p_*$ and
+$X=(B-p_*)/\sqrt{p_*q_*}$ for $B\sim\operatorname{Bernoulli}(p_*)$,
+the fixed-law lattice limit gives
+\begin{equation}\label{ms:bernoulli-limit}
+ \lim_{n\to\infty}\frac{\sqrt n\Delta_n(P)}{\rho(P)}
+ =\frac{3+q_*-p_*}{6\sqrt{2\pi}(p_*^2+q_*^2)}=\CE.
+\end{equation}
+Indeed $p_*^2+q_*^2=10-3\sqrt{10}$ and
+$(3+q_*-p_*)/(p_*^2+q_*^2)=3+\sqrt{10}$.
+Every constant below $\CE$ therefore fails for a sufficiently large sum
+of this one law. The upper conjecture is associated with Zolotarev
+\cite{Zolotarev1966,Zolotarev1967}; Schulz proves the strict finite-index
+bound for every nondegenerate Bernoulli law \cite{Schulz2016}.
+
+\paragraph{Context.}
+Fourier and structural moment inequalities progressively improved the
+universal upper bound \cite{vanBeek1972,Prawitz1972,Tyurin2010,
+Shevtsova2011,Shevtsova2013}. We use Shevtsova's structural inequality
+explicitly at entry. Recent manuscripts report smaller upper constants
+\cite{xiao2026berryesseen,lin2026berryesseen}, and He and Cheng report
+eventual sharpness beyond a uniform, very large threshold
+\cite{hecheng2026eventually}. Work on independent arrays and extremizers
+addresses the related non-iid problem \cite{BellIndependent2026,
+BellExtremizers2026}. Tao's registry and the available formalization
+projects distinguish numerical certificates, analytical inputs and
+formalized implications \cite{tao2026berryesseenregistry,
+Yan2026ProbabilityApproximation,BerryEsseenLean2026}. None of these
+recent reported bounds is a premise below. An earlier AI-assisted working
+draft is on Hexagon \cite{rodziewiczkolodziejek2026momentdefects}.
+
+\paragraph{Fix the target rather than an unknown ratio.}
+At a fixed $n$, maximize
+\begin{equation}\label{v9:intro:excess}
+ a(P,H)=\sqrt n\{\Pp_P(S_n\le H)-\Phi(H/\sqrt n)\}-\CE\rho(P).
+\end{equation}
+The moment penalty yields attainment and compact-support contact without
+assuming uniformly integrable third moments. Integrating contact against
+the zero-bias density gives a common budget for excess, support-gap defect
+and leakage. The transform originates in \cite{GoldsteinReinert1997}.
+A complete coarse Fourier entry supplies $nD\le32.20665378$ for the same
+law, under its true sharp predecessor.
+
+For $n\ge700$, direct inequalities give $3/8<p<93/200$, inward
+displacement below $1/250$ and conditional noise below $7/20$.
+Two contact rays acquire one support strip. A single-count estimate for
+noise at most $1/100$ and a five-count estimate above it then give strict
+negative excess. The shared endpoint and zero noise are included.
+
+\paragraph{The finite boundary.}\label{ms:scope}
+This is a conditional acquired-witness exclusion, not an unconditional
+cutoff at $700$. A least failure supplies the required predecessor only
+if all earlier indices have been controlled. A genuine base through
+$699$, together with the complete entry predicates, implies the sharp
+conjecture; Section~\ref{short:composition} proves this implication.
+A base only through $41$ locates a first failure in $42,\ldots,699$
+but does not rule it out. Those finite bounds remain open in this work.
