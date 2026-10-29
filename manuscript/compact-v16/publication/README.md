@@ -6,10 +6,11 @@ this manuscript directory. Historical `validation.json`, `checks-summary.json`
 and `revision-validation.json` describe their respective earlier versions;
 they are not the source manifest of this release.
 
-The current manifest is `validation.json` in this directory. The source snapshot
-is committed before adding its immutable citation to the PDF. A subsequent
-commit adds only the source citation, release metadata and rebuilt PDF; the PR
-body identifies that exact final commit as well. No circular self-hash is claimed.
+The current manifest is `validation.json` in this directory. The immutable source snapshot is
+[`b974df4ff28bf4876d98ca4a69ab31fb4e39d4e9`](https://github.com/kolodziejek/berry-esseen-certificates/tree/b974df4ff28bf4876d98ca4a69ab31fb4e39d4e9/manuscript/compact-v16).
+The final release adds its source citation, release metadata and rebuilt PDF;
+the mathematical arguments and checkers are unchanged. The PR body identifies
+the exact final head commit too. No circular self-hash is claimed.
 
 ## Actual execution evidence
 
@@ -21,7 +22,8 @@ body identifies that exact final commit as well. No circular self-hash is claime
 - `scalar/`: all three new scalar checkers, current checker hashes and diagnostics.
 - `followup-audit/`: independent signed-quotient diagnostics, CLI check and PDF
   command extraction. Those diagnostics supplement the four-endpoint proof.
-- `build/`: successful compiler captures and exact source/PDF hashes.
+- `build/`: final compiler captures and exact source/PDF hashes; `build-snapshot/` preserves the preceding source snapshot build.
+- `final-layout-and-commands.json`: final rendered-page correspondence and unchanged copied command text.
 
 Original captures can contain absolute paths recording the execution environment;
 reproduce using the commands in the manuscript or parent README from your own

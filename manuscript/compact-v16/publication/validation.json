@@ -1,9 +1,9 @@
 {
-  "stage": "Source snapshot before adding its own immutable citation",
+  "stage": "Final publication PDF and source; immutable source snapshot citation added",
   "baseline": "cd10654222f4b63d50f9d8f108597b140d263ec5",
   "mathematical_status": "Focused corrections derived and independently reviewed; unchanged local/conditional global scope. No finite-base proof.",
   "execution_status": "PASS: three commands copied from compiled PDF; entry, nine historical checks, three new scalar checks.",
-  "pdf_sha256": "5100635852b846d780401c1f5278e4690e2587f70d6d9fb969773fdd3a86fc8b",
+  "pdf_sha256": "9753ca7c7d7b5a99594414ca2b2d7f1dc526c3a23b26ac55b616de738f01ee54",
   "pages": 53,
   "source_sha256": {
     "appendices/entry-details.tex": "a93f5a0473f3266b17cbbc0edc7160ba770165e8617b6f0f169abb6a8dc1b73f",
@@ -27,7 +27,7 @@
     "sections/07-direct-acquisition.tex": "59d56935e230a6ffac5b287599317c4da6a6293aaa7487d20d91f6e840be9f20",
     "sections/08-direct-comparison.tex": "c37477087ddbd51327072d99e59e5e7da663734be28e365a2984e696d695674a",
     "sections/09-composition.tex": "70d1783a8ecf983c520bd7c370d436488036ac49e5ddebf2d5cfb4a05d2e1557",
-    "sections/10-discussion.tex": "f2f463d19463267ee61308229c3d19754933b3a507a107ef2e485520c546a854",
+    "sections/10-discussion.tex": "a2414331bd6142cb7b91f238b1488394e2f2f7e1dda491b89c986d9d604bdb52",
     "tools/check_revision_constants.py": "36216e619d37b719095dcbf4bf83158b496a9613e584585c70d0319877324f1f",
     "tools/check_revision_count_constants.py": "eb55bfd92bd3975dd904f1440d8a0a06ac286fd7d6e333388cf7c4f318bd9454",
     "tools/check_revision_foundation_constants.py": "440edecaef41563100353b308fa22414708b8f29547ad149c01d0e915803c7be",
@@ -40,5 +40,7 @@
   "build_receipt": "build/receipt.json",
   "copied_commands": "commands-copied-from-pdf.sh",
   "execution_receipt": "copied-command-replay.json",
-  "visual_review": "All53 pages of build01 inspected. Final c_- positivity change and source citation checked separately in publication visual receipt."
+  "visual_review": "All53 pages covered: pages13 and28 inspected individually after final edits; other51 renders byte-identical to independently reviewed build01.",
+  "source_snapshot_commit": "b974df4ff28bf4876d98ca4a69ab31fb4e39d4e9",
+  "final_layout_and_commands_receipt": "final-layout-and-commands.json"
 }
