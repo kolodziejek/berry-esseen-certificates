@@ -1,0 +1,299 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\title{Small noise on one probability interval: fourth moments suffice}
+\author{}\date{29 October 2026}
+\begin{document}\maketitle
+
+Once acquisition has confined the sign probability and the inward endpoints,
+the small-noise comparison needs only fourth moments. The entire incoming
+tail is summable because its count-dependent variance grows at most linearly
+with the count displacement. This removes the Poisson comparison and treats
+the two probability ranges together.
+
+\begin{theorem}\label{th:small}
+Let $n\ge700$ be an integer, $3/8\le p\le93/200$, $q=1-p$, and
+$Y=B+U$, where $B$ is Bernoulli of parameter $p$ and $\E(U\mid B)=0$.
+Write $U_j$ for the conditional noise given $B=j$. Suppose
+\[
+ -3/5\le U_0\le a_0,\quad -a_1\le U_1\le3/5,
+ \quad a_0,a_1\ge0,\quad a_0+a_1\le1/250.
+\]
+Put $v=pq$, $s=\E U^2$, $\lambda=ns$, $X=(Y-p)/\sqrt{v+s}$,
+$\rho=\E|X|^3$, and $\rho_B=(1-2v)/\sqrt v$.
+Assume $0<\lambda\le1/100$ and $|H|\le46/25$. Choose the integer $k$
+so that
+\[
+ t=np+H\sqrt{v+s}=k+u,\qquad -3/10\le u\le7/10,
+ \qquad\delta=k-np.
+\]
+Such an anchor exists and is interior. If $F_B$ is the binomial CDF and
+$X_1,\ldots,X_n$ are independent copies, then for every $C\ge0$,
+\begin{align*}
+\Delta_C={}&\sqrt n\{\Pp(\textstyle\sum X_i\le H)-\Phi(H/\sqrt n)\}
+             -C\rho\\
+ &-\sqrt n\{F_B(k)-\Phi(\delta/\sqrt{nv})\}+C\rho_B
+ <-\lambda/100.
+\end{align*}
+\end{theorem}
+
+This is a local theorem for actual iid laws. Acquisition of the compact
+probability interval, support strip and raw threshold is separate. At the
+sharp positive coefficient, Schulz's strict binomial theorem turns the
+comparison into a negative signed excess. Zero noise is directly Bernoulli;
+there is no limiting argument in the strict estimate above.
+
+\section{An exact conditioning identity}
+Let $W_j$ be a sum of $j$ independent $U_1$ variables and $n-j$ independent
+$U_0$ variables, and let $\pi_j=\Pp(\operatorname{Bin}(n,p)=j)$.
+Define
+\[
+ f(u)=\frac{\Phi((\delta+u)/\sqrt{n(v+s)})-
+                 \Phi(\delta/\sqrt{n(v+s)})}{\pi_k},\qquad
+ O=\Pp(W_k>u)+f(u),
+\]
+\[
+ T_{\rm in}=\sum_{i=1}^{n-k}\Pp(W_{k+i}\le u-i).
+\]
+Conditioning on the actual Bernoulli count gives exactly
+\begin{align*}
+\Pp(\textstyle\sum X_i\le H)-F_B(k)
+={}&-\sum_{i=0}^{k}\pi_{k-i}\Pp(W_{k-i}>u+i)\\
+ &+\sum_{i=1}^{n-k}\pi_{k+i}\Pp(W_{k+i}\le u-i).
+\end{align*}
+Outgoing events are strict and incoming events closed; all threshold atoms
+are retained. Discarding only nonpositive outgoing terms, we obtain
+\begin{equation}\label{eq:master}
+ \Delta_C\le-m\{O-RT_{\rm in}\}+\mathcal R,
+ \qquad m=\sqrt n\pi_k,
+\end{equation}
+whenever $\pi_{k+i}/\pi_k\le R$ on the legal incoming counts. Here
+\[
+\mathcal R=\sqrt n\{\Phi(\delta/\sqrt{nv})-
+                \Phi(\delta/\sqrt{n(v+s)})\}+C(\rho_B-\rho).
+\]
+
+\section{Finite normalization on the common interval}
+Set
+\[
+ v_*=15/64,\quad L=1/100,\quad D=5/3,\quad b=1/20,
+ \quad T=101/10000,\quad \eta_*=2/525.
+\]
+We have $v\ge v_*$ and $v+s<1/4$, hence $|t-np|<23/25$.
+Thus $|\delta|<D$ globally and $|\delta|<1$ when $|u|\le b$.
+The segment between $p$ and $k/n$ is inside $[.37,.47]$, proving
+also that $1\le k\le n-1$. On this segment
+\[
+ z(1-z)>23/100,\quad |D'''(z\Vert p)|<5,\quad
+ |\{\log(z(1-z))\}'|<6/5,\quad 1/(12z(1-z))<3/8.
+\]
+Finite Stirling with $0<r_j<1/(12j)$ and entropy Taylor expansion give
+\begin{equation}\label{eq:mass}
+ m=\frac{\phi(0)}{\sqrt v}
+       \exp\{-\delta^2/(2nv)+e\},\qquad
+ n|e|<Z(D_0):=3D_0/5+3/8+D_0^3/840
+\end{equation}
+whenever $|\delta|\le D_0\le D$. The terms are respectively the
+logarithmic prefactor, factorial remainder and entropy remainder; the last
+uses $n\ge700$. The elementary finite Stirling formula has its retained
+proof in the manuscript's count-comparison appendix.
+
+At a fixed count,
+\[
+\log f'(z)=-\tfrac12\log(1+s/v)+\frac{\delta^2}{2nv}
+                  -\frac{(\delta+z)^2}{2n(v+s)}-e.
+\]
+Therefore, over an integration interval with $|z|\le b_0$,
+\[
+n|\log f'(z)|\le\frac{11}{5}\lambda+
+             \frac{2D_0b_0+b_0^2}{2v_*}+Z(D_0).
+\]
+The coefficient $11/5$ is larger than
+$1/(2v_*)+D^2/(1400v_*^2)$. Applying $e^{-x}\ge1-x$ and
+$e^x\le(1-x)^{-1}$, with $(D_0,b_0)=(1,b)$ or $(D,7/10)$,
+gives
+\[
+\begin{array}{c|cc}
+ &|u|\le1/20&-3/10\le u\le7/10\\\hline
+ m\text{ lower bound}&3/4&3/4\\
+ f'\text{ lower bound}&99/100&49/50\\
+ f'\text{ upper bound}&101/100&51/50\\
+ R\text{ upper bound}&51/50&6/5.
+\end{array}
+\]
+These bounds hold on the whole interval from $0$ to $u$. For the mass lower
+bound use \eqref{eq:mass}, $\phi(0)>199/500$ and $\sqrt v\le1/2$.
+For the maximum mass, finite Stirling at a mode gives
+$\sqrt n\max_j\pi_j< (41/100)/\sqrt{v_*}<17/20$.
+One justification of the coefficient $41/100$ is the common mode bound on
+$p\in[1/3,2/3]$: at $N=n+1\ge43$, its variance product exceeds $39v/40$,
+so the mass is at most
+$(2/5)\sqrt{40/39}(516/515)/\sqrt{Nv}<(41/100)/\sqrt{Nv}$.
+The same bound with $N=n$ suffices here. Hence globally
+$R<(17/20)/(3/4)<6/5$.
+In the inner interval the first exact ratio is
+\[
+ \frac{\pi_{k+1}}{\pi_k}
+ =1+\frac{p-\delta-1}{nv+q(\delta+1)}
+ <1+\frac{93/200}{700v_*}<51/50.
+\]
+Every subsequent ratio is at most one, because $p-\delta<2$.
+
+The cubic correction is favorable. The conditional supports have fixed signs
+relative to $p$, and expansion using their inward cubic bounds gives
+\[
+ (v+s)^{3/2}(\rho-\rho_B)
+ \ge s\{9/8-1/250-51/64-(17/20)s\}>0.
+\]
+Here $(1+x)^{3/2}\le1+3x/2+3x^2/8$ controls normalization.
+Differentiating the normal CDF then proves
+\begin{equation}\label{eq:repair}
+ \mathcal R<2\lambda/n\quad(|u|\le b),\qquad
+ \mathcal R<4\lambda/n\quad\hbox{globally}.
+\end{equation}
+Indeed $\phi(0)/(2v_*^{3/2})<2$, and $\delta_+<1$ or $D<2$.
+No positive coefficient lower bound on $C$ is needed.
+
+\section{The entire incoming tail from fourth moments}
+Write $s_j=\E U_j^2$. Since $|s_1-s_0|\le(8/3)s$, the own-count
+variance $t_0=\E W_k^2$ satisfies
+\[
+ .99\lambda<t_0<1.01\lambda\le T.
+\]
+For every legal incoming count,
+\[
+ t_i=\E W_{k+i}^2\le\lambda\{1+\eta_*(D_0+i)\},
+ \quad D_0=1\text{ in the inner interval, }D\text{ globally}.
+\]
+These are actual count variances of the same conditional laws.
+Independence and $|U_j|\le A=3/5$ give
+\[
+ \E W_{k+i}^4\le A^2t_i+3t_i^2.
+\]
+Put $a=1+\eta_*D_0$ and $c=\eta_*$. The elementary series bounds
+\[
+ \sum_{i\ge1}i^{-4}<13/12,\qquad
+ \sum_{i\ge1}i^{-3}<5/4,\qquad
+ \sum_{i\ge1}i^{-2}<5/3
+\]
+follow by summing respectively the first five, three and five terms and
+bounding the remainder by an integral. Define
+\[
+ K(a)=A^2\left(\frac{13a}{12}+\frac{5c}{4}\right)
+ +3L\left(\frac{13a^2}{12}+\frac{5ac}{2}+\frac{5c^2}{3}\right).
+\]
+Fourth-moment Markov at the positive distance $i-u$, followed by extension
+of a nonnegative sum to all positive integers, now gives
+\begin{align}
+ T_{\rm in}&<\frac{K(1+c)}{(1-b)^4}\lambda<\frac{53}{100}\lambda
+                         &&(|u|\le b),\label{eq:inner-tail}\\
+ T_{\rm in}&<\frac{43\lambda}{100(1-u)^4}
+                         &&(0\le u\le7/10),\notag\\
+ T_{\rm in}&<\frac{43}{100}\lambda
+                         &&(u\le0).
+ \label{eq:outer-tail}
+\end{align}
+For the last two bounds use $K(1+cD)<43/100$. If $u\ge0$, then
+$i-u\ge(1-u)i$; if $u\le0$, then $i-u\ge i$.
+There is no truncation and no unproved moment allocation in these bounds.
+
+\section{One quartic minorant controls the inner phases}
+Let $\alpha=13/25$ and $M=5\alpha^4$. The polynomial
+\[
+ h_\alpha(x)=\frac{-x^4+3\alpha^2x^2+2\alpha^3x}{M}
+                      \le\mathbf1_{(0,\infty)}(x)
+\]
+is a strict-event minorant. Its numerator factors as
+$-x(x+\alpha)^2(x-2\alpha)$, and its positive maximum divided by $M$
+is $(9+6\sqrt3)/20<1$.
+For $r=zt_0$, the moment bounds $|\E W_k^3|\le At_0$ and
+$\E W_k^4\le A^2t_0+3t_0^2$, combined with the normal term, give
+\[
+ O/t_0\ge F_{\sigma,b_0}(z,t_0),
+\]
+\begin{align*}
+F_{\sigma,b_0}(z,t)={}&\frac{3\alpha^2-A^2-3t}{M}
+ +\left(\frac{2\sigma}{5\alpha}+b_0-\frac{4At}{M}\right)z\\
+ &+\frac{3\alpha^2t-6t^2}{M}z^2-\frac{t^3z^4}{M}.
+\end{align*}
+For $u=-r$ take $(\sigma,b_0)=(1,-101/100)$; for $u=r$ take
+$(-1,99/100)$. Both functions exceed $3/5$ on
+$0\le z\le3/2$, $0\le t\le T$.
+Here is a finite verification that explains the whole rectangle.
+The functions are concave in $t$, so it suffices to check $t=0,T$.
+At either endpoint replace $z^4$ by $(9/4)z^2$ in its negative term.
+The resulting negative-phase quadratic decreases on $[0,3/2]$, while
+the positive-phase quadratic increases there. Their minima occur at
+$z=3/2$ and $z=0$, respectively; all four rational values exceed $3/5$.
+
+For negative phases $3t_0/2\le r\le b$, Cantelli gives
+\[
+ O\ge\frac{r^2}{t_0+r^2}-\frac{101}{100}r>\frac35t_0.
+\]
+To check the strict inequality, its derivative at $r=3t_0/2$ is positive;
+the derivative first increases and then decreases. Thus the minimum is at
+an endpoint. At the first endpoint divide by $t_0$ and use $t_0\le T$;
+at the other use $b^2/(T+b^2)-(101/100)b>(3/5)T$.
+For positive phases beyond that switch, simply
+$O\ge(99/100)r\ge(297/200)t_0>(3/5)t_0$.
+The switch lies below $b$ since $3T/2<b$. Consequently
+\begin{equation}\label{eq:own}
+                  O>\frac35t_0>\frac{59}{100}\lambda
+                     \qquad(|u|\le b).
+\end{equation}
+These arguments include $u=0$; the minorant at zero is zero and preserves
+the strict outgoing event.
+
+\section{Two outer intervals and the final comparison}
+On the negative outer interval, write $u=-r$, $b\le r\le3/10$.
+Cantelli and the global derivative bound give
+\[
+ O\ge\frac{r^2}{T+r^2}-\frac{51}{50}r>\frac7{50}\ge14\lambda.
+\]
+The same derivative argument reduces this to the two endpoints: the
+derivative at $b$ is positive and then has at most one downward zero.
+Both rational endpoint values exceed $7/50$.
+Together with \eqref{eq:outer-tail} and $R\le6/5$, this gives
+$O-RT_{\rm in}>(14-(6/5)(43/100))\lambda$.
+
+On the positive outer interval $b\le u\le7/10$,
+\[
+ O-RT_{\rm in}\ge\frac{49}{50}u-
+                  \frac{(6/5)(43/100)L}{(1-u)^4}>\frac1{25}\ge4\lambda.
+\]
+The displayed function is concave in $u$; both endpoint values exceed $1/25$.
+Finally, in the inner interval \eqref{eq:inner-tail} and \eqref{eq:own} give
+\[
+ O-RT_{\rm in}>
+   \left\{\frac{59}{100}-\frac{51}{50}\frac{53}{100}\right\}\lambda.
+\]
+Use $m>3/4$ and \eqref{eq:repair} in \eqref{eq:master}.
+The smallest of the three resulting lower margins is greater than $1/100$;
+in the inner case this is the single rational inequality
+\[
+ \frac34\left(\frac{59}{100}-\frac{51}{50}\frac{53}{100}\right)
+                     -\frac2{700}>\frac1{100}.
+\]
+This proves Theorem~\ref{th:small} on the full noise and phase domains.
+
+\section*{Dependencies and evidence}
+The proof uses exact iid conditioning, finite Stirling, elementary Gaussian
+derivatives, independent-sum moment expansions, a polynomial minorant,
+Cantelli and complete reciprocal-power sums. It uses no Pinelis inequality,
+Poisson comparison or parameter certificate. The companion checker verifies
+the finite rational inequalities and the polynomial reductions, with
+separate actual-law controls. Those controls are not the reason for coverage
+of the continuous domains.
+
+Acquisition of the stated strip and probability interval, raw threshold,
+reflection/attainment and the global finite base remain separate. Joining
+this theorem to the new compact-interval five-count comparison uses the
+external all-$p$ binomial theorem of Schulz (2016), Theorem1, printed page1,
+\href{https://d-nb.info/1197702695/34}{original thesis}. Existing wider-domain
+small-noise theorems are preserved; this is a new replacement for the
+acquired $n\ge700$ route, not a claim about all their original domains.
+\end{document}
+
