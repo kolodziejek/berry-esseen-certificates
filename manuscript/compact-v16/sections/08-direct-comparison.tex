@@ -1,10 +1,13 @@
 \section{The direct comparison with a binomial law}
 \label{short:count:section}
 
-The acquired strip admits a single comparison on its whole probability
-interval. Very small noise is controlled by the loss at one count and
-fourth moments. For the rest, five adjacent counts give a uniform crossing
-loss. Both arguments concern the actual conditional laws of one marginal.
+In count coordinates, conditioning on the number of positive summands
+expresses the sum as an integer count plus centered noise. We compare its CDF with the corresponding
+binomial CDF. Noise can move mass out of the count just below the threshold
+and bring mass in from counts above it. The proof shows that the outgoing
+loss, together with the normal and third-moment corrections, exceeds all
+incoming contributions. The quantity $\lambda=n\E U^2$ measures the total
+noise variance in count units.
 
 \begin{theorem}[The common-strip comparison]\label{short:count:local}
 Let $n\ge700$ be an integer, $B\sim\operatorname{Bernoulli}(p)$, and
@@ -28,6 +31,11 @@ At $\lambda=0$ the same excess is strictly negative.
 The proof below uses only the displayed hypotheses. Contact and the sharp
 predecessor are needed earlier to acquire this strip, not for its local
 comparison. The small- and larger-noise intervals meet at $\lambda=1/100$.
+For small noise, we keep every error proportional to $\lambda$ and use
+the loss from one count. For larger noise, five neighboring counts give a
+uniform crossing loss. That second estimate has an error of order $1/n$
+which does not vanish at $\lambda=0$, so it cannot cover arbitrarily small
+positive noise. At zero noise the law is exactly Bernoulli.
 
 \subsection{Three elementary ingredients}
 \label{short:count:prelim}
@@ -98,8 +106,9 @@ Assume $0<\lambda\le L=1/100$. Choose an integer $k$ with
  t=np+H\sqrt{v+s}=k+u,\qquad -3/10\le u\le7/10,
  \qquad\delta=k-np.
 \]
-The phase interval has length one. It need not use the same anchor as
-the larger-noise proof. Let $W_j$ have the law of the sum of $j$
+The phase interval has length one, so such an integer always exists.
+It need not be the floor anchor used in the larger-noise proof.
+Let $W_j$ have the law of the sum of $j$
 independent $U_1$ variables and $n-j$ independent $U_0$ variables. For
 $C\ge0$, subtract the signed binomial excess at $k$ from the actual excess:
 \begin{align*}
@@ -228,18 +237,24 @@ terms and estimating the remaining sum by an integral. For $u\ge0$ use
 $i-u\ge(1-u)i$; for $u\le0$ use $i-u\ge i$.
 
 \paragraph{The own-count loss at the central phases.}
-With $\alpha=13/25$ and $M=5\alpha^4$, the quartic
-\[
- h_\alpha(x)=\frac{-x^4+3\alpha^2x^2+2\alpha^3x}{M}
-                         \le\mathbf1_{(0,\infty)}(x)
-\]
-is a strict-event minorant: its numerator factors as
-$-x(x+\alpha)^2(x-2\alpha)$, and its positive maximum divided by $M$
-is $(9+6\sqrt3)/20<1$. Let $r=zt_0$ and set
+Set $\alpha=1/2$ and $m_h=5\alpha^4=5/16$. The factored quartic
+\begin{equation}\label{short:count:minorant}
+ h_\alpha(x)=\frac{-16x^4+12x^2+4x}{5}
+ =\frac45x(1-x)(2x+1)^2
+ \le\mathbf1_{(0,\infty)}(x)
+\end{equation}
+is a global minorant for the strict event. Its factorization makes it
+nonpositive for $x\le0$ and $x\ge1$. On $(0,1)$ the maximum occurs at
+$x=(1+\sqrt3)/4$ and equals $(9+6\sqrt3)/20<1$; the last comparison
+follows from $6\sqrt3<11$.
+Thus it may be integrated against the conditional sum $W_k$, which need
+not be bounded by $3/5$. Only its individual summands have that bound.
+The expectation of the quartic uses moments through order four, supplied
+by independence and the bounded summands. Let $r=zt_0$ and set
 \begin{align*}
- F_{\varepsilon,b}(z,t)={}&\frac{3\alpha^2-A^2-3t}{M}
- +\left(\frac{2\varepsilon}{5\alpha}+b-\frac{4At}{M}\right)z\\
- &+\frac{3\alpha^2t-6t^2}{M}z^2-\frac{t^3z^4}{M}.
+ F_{\varepsilon,b}(z,t)={}&\frac{3\alpha^2-A^2-3t}{m_h}
+ +\left(\frac{2\varepsilon}{5\alpha}+b-\frac{4At}{m_h}\right)z\\
+ &+\frac{3\alpha^2t-6t^2}{m_h}z^2-\frac{t^3z^4}{m_h}.
 \end{align*}
 Expanding $h_\alpha(W_k+r)$ for $u=-r$, or
 $h_\alpha(W_k-r)$ for $u=r$, and using
@@ -249,11 +264,29 @@ $|\E W_k^3|\le At_0$, $\E W_k^4\le A^2t_0+3t_0^2$, yields
  O/t_0\ge F_{-1,99/100}(z,t_0)\quad(u=r).
 \]
 Both functions exceed $3/5$ on $0\le z\le3/2$, $0\le t\le T_*$.
-To check the whole rectangle, use concavity in $t$ and check only
-$t=0,T_*$. At those endpoints replace $z^4$ by $(9/4)z^2$ in its
-negative term. The negative-phase quadratic decreases on $[0,3/2]$,
-and the positive-phase quadratic increases; their minima are respectively
-at $z=3/2$ and $z=0$. All four rational endpoint values exceed $3/5$.
+Indeed $\partial_t^2F=-(12z^2+6tz^4)/m_h\le0$, so it suffices to
+bound the two edges $t=0,T_*$. Replacing $z^4$ by $(9/4)z^2$ in its
+negative term gives a lower quadratic whose coefficient of $z^2$ is
+\[
+ q_{\rm quad}(t)=\frac{3\alpha^2t-6t^2-(9/4)t^3}{m_h},\qquad
+ q_{\rm quad}(0)=0,\quad
+ q_{\rm quad}(T_*)=\frac{27842487291}{1250000000000}>0.
+\]
+For the negative phase, its derivative at the right endpoint is
+$-21/100$ when $t=0$, and is less than $-1/5$ when $t=T_*$.
+The quadratic therefore decreases throughout the interval.
+For the positive phase, its derivative at zero is $19/100$ or
+$7027/62500$, so it increases. The resulting endpoint minima satisfy
+\[
+\begin{array}{c|cc}
+ &t=0&t=T_*\\\hline
+ F_{1,-101/100}\text{ lower bound at }z=3/2
+     &933/1000&>769/1000\\
+ F_{-1,99/100}\text{ lower bound at }z=0
+     &156/125&3597/3125
+\end{array}
+\]
+All four exceed $3/5$. Concavity in $t$ then covers the entire rectangle.
 
 For negative phases $3t_0/2\le r\le b_*$, Cantelli gives
 \[
@@ -297,7 +330,7 @@ Hence $\Delta_C<-\lambda/100$. Taking $C=\CE$ and applying
 \eqref{short:count:binomial} proves \eqref{short:count:exclusion} for
 $0<\lambda\le1/100$.
 
-\subsection{Larger noise: five counts and four endpoint checks}
+\subsection{Larger noise: five counts and two endpoint checks}
 \label{short:count:large}
 
 Now assume $1/100\le\lambda\le7/20$ and choose
@@ -306,9 +339,9 @@ The following constants will be used only in this subsection:
 \[
 \begin{gathered}
  N=700,\quad p_-=3/8,\quad p_+=93/200,\\
- r=3/8,\quad q_*=107/200,\\
+ r=3/8,\quad q_{\min}=107/200,\\
  v_-=15/64,\quad v_+=9951/40000,\quad A=3/5,\quad d=1/250,\\
- \eta=2/5,\quad \beta_0=41/100,\quad\pi_+=22/7,\quad
+ \eta=2/5,\quad c_{\rm mass}=41/100,\quad\pi_+=22/7,\quad
  \phi_-=199/500,\quad\phi_+=2/5,\\
  \kappa=3,\quad\xi=93/100,\quad c_-=6,\quad\zeta=23/100,
  \quad m_*=3/4,\quad V_*=113/1000,\\
@@ -334,22 +367,39 @@ Set
  h(x)=\E(x-U_0)_+-\E(x-1-U_1)_+-\Pp(1+U_1\le x),
  \qquad g_i=\E h(t-i+1-V_i).
 \]
-Independence of the omitted coordinate gives
-$g_i=L_{i-1}(t)-L_i(t)-\Pp(T_i\le t)$.
-Here $L_0=t$, $L_n=0$ and $\Pp(T_0\le t)=1$. Multiplication by
-$\pi_i$ and finite summation by parts yield
+\begin{lemma}[Count interpolation and crossing loss]
+\label{short:count:crossing-lemma}
+With the preceding definitions, $B_j=L_j(t)-(t-j)_+\ge0$ and
 \begin{align}
  \Pp\left(\sum X_i\le H\right)
  ={}&(1-u)F_B(k)+uF_B(k+1)\notag\\
- &+\sum_{j=1}^{n-1}(\pi_{j+1}-\pi_j)B_j-\sum_{i=1}^n\pi_i g_i,
- \quad B_j=L_j(t)-(t-j)_+\ge0.
+ &+\sum_{j=1}^{n-1}(\pi_{j+1}-\pi_j)B_j-\sum_{i=1}^n\pi_i g_i.
  \label{short:count:crossing}
 \end{align}
-Indeed replacing $L_j$ by $(t-j)_+$ in
+\end{lemma}
+\begin{proof}
+Jensen's inequality for the convex positive-part function and
+$\E T_j=j$ give $B_j\ge0$. Independence of the omitted coordinate gives
+$g_i=L_{i-1}(t)-L_i(t)-\Pp(T_i\le t)$.
+Here $L_0=t$, $L_n=0$ and $\Pp(T_0\le t)=1$: the support bounds give
+$T_0\le na_0\le t<T_n$. Multiplication by $\pi_i$ and finite summation
+by parts now gives the identity, since replacing $L_j$ by $(t-j)_+$ in
 $\pi_0+\pi_1t+\sum(\pi_{j+1}-\pi_j)L_j$ telescopes to the stated
 interpolation. All CDF events are closed, including atoms.
+\end{proof}
+The three terms in \eqref{short:count:crossing} are the interpolated
+binomial probability, an error from variation in the binomial masses,
+and the crossing loss. The next argument proves $g_i\ge0$ using the
+separated conditional supports and conditional centering; this does not
+follow merely from $B_j\ge0$.
 
 \paragraph{Five kernels with four centered replacements.}
+The sine bump below serves three purposes. Its translates recover a
+single periodic function, its Lipschitz derivative makes centered
+replacement errors proportional to variance, and the identity for
+$\sin^2$ turns independence into a product of characteristic functions.
+Five translates will supply the main loss; the omitted translates are
+bounded using a fourth moment.
 Let $f(x)=\sin^2(\pi x)$ on $[0,1]$ and zero outside.
 It is continuously differentiable with derivative Lipschitz constant
 $2\pi^2$. We claim
@@ -454,7 +504,7 @@ Put $c=(np-q-t)_+$. For $a=t-j$ and $W_j=T_j-j$, centering gives
 \]
 whenever $T\ge\E W_j^2$. The factorization
 $27x^4-256x+256=(3x-4)^2(3x^2+8x+16)$ gives
-$B_j\le27M/(256|a|^3)$ for $a\ne0$, if $M\ge\E W_j^4$.
+$B_j\le27M_4/(256|a|^3)$ for $a\ne0$, if $M_4\ge\E W_j^4$.
 The exact adjacent-mass formula is
 \[
  \pi_{j+1}-\pi_j
@@ -469,15 +519,15 @@ $\sum i^{-2}<5/3$, $\sum i^{-3}<5/4$. Using
 \eqref{short:count:mode} and $\sqrt n/(n+1)^{3/2}\le1/n$ yields
 \begin{equation}\label{short:count:curvature}
  \sqrt n\sum_j(\pi_{j+1}-\pi_j)B_j
- \le\frac{\beta_0}{nv^{3/2}}
+ \le\frac{c_{\rm mass}}{nv^{3/2}}
  \left\{\frac T4+c\sqrt T+
-       \frac{27M}{256}\left(\frac53+\frac{5c}4\right)\right\}.
+       \frac{27M_4}{256}\left(\frac53+\frac{5c}4\right)\right\}.
 \end{equation}
 A positive adjacent mass requires $j<np$, where its actual variance
-is at most $\lambda/q\le T=\lambda/q_*$ and
-$\E W_j^4\le M=A^2T+3T^2$.
-Moreover $J(\lambda)=j_1\lambda+j_0\ge\sqrt T$, since
-$4j_0j_1\ge1/q_*$.
+is at most $\lambda/q\le T=\lambda/q_{\min}$ and
+$\E W_j^4\le M_4=A^2T+3T^2$.
+Moreover $L_{\rm var}(\lambda)=j_1\lambda+j_0\ge\sqrt T$, since
+$4j_0j_1\ge1/q_{\min}$.
 
 \paragraph{Both signs of the normal correction.}
 Apply \eqref{short:count:binomial} at $k,k+1$ and interpolate.
@@ -499,38 +549,46 @@ The cubic correction is favorable by \eqref{short:count:cubic}.
 
 Define the nonnegative quadratics
 \[
- S_c=\frac T4+cJ(\lambda)
-              +\frac{27M}{256}\left(\frac53+\frac{5c}4\right),
+ S_c=\frac T4+cL_{\rm var}(\lambda)
+              +\frac{27M_4}{256}\left(\frac53+\frac{5c}4\right),
 \qquad
- E_-=\frac{\beta_0S_{\bar c}+\phi_+(\xi/8+2/27)}{V_*},
+ E_-=\frac{c_{\rm mass}S_{\bar c}+\phi_+(\xi/8+2/27)}{V_*},
 \]
 \[
- E_+=\frac{\beta_0S_0+\phi_+(2/27+\xi\lambda/2)}{V_*}.
+ E_+=\frac{c_{\rm mass}S_0+\phi_+(2/27+\xi\lambda/2)}{V_*}.
 \]
 Because $V_*^2<v_-^3$, combining
 \eqref{short:count:crossing}--\eqref{short:count:curvature} with these
 normal bounds makes the full excess strictly less than
-$-W(\lambda)+E_\pm(\lambda)/n$.
-It remains to compare these explicit polynomials.
+$-W(\lambda)+E_\pm(\lambda)/n$, with the sign chosen according to $H$.
+A single envelope suffices for both signs, because
+\begin{align*}
+ V_*(E_--E_+)
+ &=c_{\rm mass}\bar c L_{\rm var}(\lambda)
+   +c_{\rm mass}\frac{27M_4}{256}\frac{5\bar c}{4}
+   +\phi_+\xi\left(\frac18-\frac\lambda2\right)\\
+ &=\frac{7889}{100000}+\frac{1751}{8000}\lambda
+   +c_{\rm mass}\frac{27M_4}{256}\frac{5\bar c}{4}>0
+   \qquad(\lambda\ge0).
+\end{align*}
+Set $E=E_-$. The full excess is strictly less than
+$-W(\lambda)+E(\lambda)/n$ for either sign of $H$.
 
-\paragraph{Four rational endpoints finish the interval.}
-Set $P_\pm(\lambda)=W(\lambda)-E_\pm(\lambda)/N-\lambda/100$.
-Each $E_\pm$ is a convex quadratic, whereas direct differentiation gives
+\paragraph{Concavity reduces the interval to two endpoints.}
+Set $P(\lambda)=W(\lambda)-E(\lambda)/N-\lambda/100$.
+The nonnegative polynomial $E$ is a convex quadratic, whereas direct
+differentiation gives
 \[
  W''(\lambda)=-\eta m_*\left\{
  \frac{z^2}{4}\big[(z\lambda-1)^2+1\big]+\frac{3b^2}{8}\right\}<0.
 \]
-Thus $P_\pm$ is strictly concave. Substitution of the rational constants
-above gives the following exact rational lower bounds:
+Thus $P$ is strictly concave. Substitution of the rational constants
+above gives the exact rational lower bounds
 \[
-\begin{array}{c|cc}
- &\lambda=1/100&\lambda=7/20\\\hline
- P_-&.002314&.061304\\
- P_+&.003341&.063680
-\end{array}
+ P(1/100)>.002314,\qquad P(7/20)>.061304.
 \]
-All four are positive, proving $P_\pm>0$ on the whole closed interval.
-Since $n\ge N$ and $E_\pm\ge0$, this proves
+Both are positive, proving $P>0$ on the whole closed interval.
+Since $n\ge N$ and $E\ge0$, this proves
 \eqref{short:count:exclusion} for $1/100\le\lambda\le7/20$.
 The scalar checks used here involve only rational inequalities and
 $199/500<\phi(0)<2/5$, $25/8<\pi<22/7$; no parameter grid or tail

@@ -1,0 +1,149 @@
+\section{Certificates and independent reproduction}
+\label{revision:reproducibility}
+The analytical hypotheses, the finite numerical verification, and the
+missing finite base are separate obligations. This appendix identifies
+the computation used by Theorem~\ref{v9:entry:theorem}; it does not
+supply the base assumed in Theorem~\ref{short:global}.
+
+\subsection{What is stored and what is recomputed}
+The retained format and target are, respectively,
+\begin{quote}\small
+\path{FIXED_C_COARSE_ENTRY_V7}\\
+\path{INITIAL42_FIXED_TARGET_COARSE_V7}.
+\end{quote}
+The JSON object stores
+four lists of $24$ moment-cell records and all $100$ probability-panel
+records. A live cell records its support radius, remainder and defect
+ceilings, and active/excluded descendant counts; a previously excluded
+cell is marked accordingly. It does not store $11264$ individual leaves.
+The checker reconstructs the subdivisions, exclusions, bounds, and
+panel incidences. The soundness argument is
+Proposition~\ref{revision:entry-soundness}.
+
+For example, the first signed pass records a checkpoint for cell index $0$.
+The checker reconstructs its moment interval as
+$[1+3361i/96000,1+3361(i+1)/96000]$ at index $i$; the JSON stores
+$i$, not these two endpoints. Its descendants and their enclosures
+must still be recomputed.
+\begin{center}\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+Quantity for $\rho$-cell 0 & Value and provenance \\
+\midrule
+Moment interval (reconstructed) & $[1,99361/96000]$ \\
+Support radius (stored) & $5/2$ \\
+Remainder ceiling & $27071971/50000000=0.54143942$ \\
+Defect ceiling $d$ & $18233099/100000000=0.18233099$ \\
+Active / excluded descendants & $128$ / $0$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+The last numerical bound means $nD\le42d=7.65790158$ for every
+actual $n\ge42$ in the cell, rather than only for a law at index $42$.
+
+All paths below are relative to the repository root. The retained
+source and data can be read at the immutable baseline commit linked in
+Section~\ref{ms:discussion}; they are unchanged by this revision.
+\begin{description}[style=nextline,leftmargin=1em]
+\item[Certificate]
+\path{mathematics/fixed-target-v7/2026-10-27/entry-proof.json}
+\item[Checker]
+\path{mathematics/fixed-target-v7/2026-10-27/accept_entry.py}
+\item[Source-isolated replay]
+\path{mathematics/fixed-target-v8/2026-10-28/isolated_entry_replay.py}
+\item[Selected exporter and exploratory producer]
+\path{mathematics/fixed-target-v7/2026-10-27/export_entry.py},
+\path{mathematics/fixed-target-v7/2026-10-27/signed_probe.py}
+\item[Two-pass ancestor]
+\path{mathematics/fixed-target-v6/2026-10-27/signed-two-pass-check.py}
+and its pinned dependencies.
+\end{description}
+The exploratory producer considers candidate subdivisions, support
+radii, and passes. The exporter selects the first four stages of a
+six-stage discovery trace and rounds ceilings outward. Acceptance
+reconstructs the two coarse and four signed passes; it does not rely
+on a discovery success label. The selected path uses integer and
+rational arithmetic. Generation and checking share mathematical
+kernels, so this is not a claim of independent implementations.
+
+\subsection{Exact arithmetic and its limits}
+Rationals are represented by integer numerators and denominators.
+Outward rounding deliberately weakens a bound. Square-root endpoints
+are checked by rational square comparisons. For a nonnegative numerator,
+an upper numerator bound divided by a positive lower denominator bound
+gives an upper quotient bound. Signed quotients require the endpoint
+extrema: if $a\in[a_-,a_+]$ and $0<b_-\le b\le b_+$, then
+\[
+ \frac ab\in
+ \left[\min_{i,j\in\{-,+\}}\frac{a_i}{b_j},
+       \max_{i,j\in\{-,+\}}\frac{a_i}{b_j}\right].
+\]
+A denominator interval containing zero requires a separate argument;
+this rule does not permit division by it. The exponential
+helper uses, for rational $0\le y\le\min(x,64)$,
+\[
+ e^{-x}\le e^{-y}\le
+ \left(\sum_{j=0}^{64}\frac{y^j}{j!}\right)^{-1},
+\]
+followed by upward rounding. The positive exponential series proves
+this enclosure. The Gaussian constants, including the narrow interval
+for $\CE$, are proved in Appendix~\ref{ms:normalization}.
+
+Numerical precision determines whether an enclosure is sharp enough to
+prove a strict inequality; extra digits alone do not prove it.
+Uniformity in $n$ comes from the analytical majorants in the Fourier
+appendix, not from sampling indices or assuming monotonicity of $C_n$.
+The checker semantics, their correspondence with the displayed formulas,
+and the integer/rational implementation remain part of the computational
+trust boundary. Hashes identify bytes, not mathematical truth.
+Subdivision certificates have established methodological precedents
+\cite{SolovyevHales2013}; that precedent does not validate this custom
+format or transfer a proof assistant's guarantee to Python.
+
+\subsection{Three separate checks}
+Use a fresh output path for each replay. From the repository root, the
+retained entry is reproduced by
+\begin{Verbatim}[fontsize=\small]
+python3 -I -B \
+  mathematics/fixed-target-v8/2026-10-28/isolated_entry_replay.py \
+  --output-dir runs/compact-v16-entry-review
+\end{Verbatim}
+The wrapper copies a fixed $13$-file source/data set into an isolated
+source environment. The wrapper status is
+\path{PASS_ISOLATED_REPRODUCTION_FIXED_ENTRY_V7}; its numerical
+output is \path{PASS_INITIAL42_FIXED_TARGET_COARSE_V7}.
+It reconstructs $11264$ nominal signed boxes, $100$ panels, $30$
+nonempty panels and $14$ surviving moment cells. Nineteen checker
+rejection controls and five wrapper controls test malformed or altered
+inputs. They supplement rather than replace the coverage proof.
+
+The bounded historical checks and the current document's reference
+structure are reproduced separately by
+\begin{Verbatim}[fontsize=\small]
+python3 -I -B \
+  manuscript/compact-v16/tools/recheck.py \
+  compact-v16-bounded-review
+\end{Verbatim}
+Here the output path is relative to \path{manuscript/compact-v16/}; an
+absolute fresh path with an existing parent can instead be supplied.
+This runs nine unchanged
+v16 mathematical programs. They retain their original parameters,
+including the former small-noise minorant. They are regression evidence
+for the retained inputs, not verification of the revised scalar choices
+and not a replay of the coarse entry.
+
+The changed scalar claims have their own exact checks:
+\begin{Verbatim}[fontsize=\small]
+python3 -I -B \
+  manuscript/compact-v16/tools/check_revision_constants.py \
+  --output-dir runs/compact-v16-scalar-review
+\end{Verbatim}
+This runs the geometry, count, and foundation checks. They reconstruct
+the rational comparisons from their definitions: the endpoint
+probability exclusion, six ray bounds, the new minorant's full rectangle
+argument, the common error envelope and its two quartic endpoints, the
+Fourier quadratic identity, and the narrow $\CE$ enclosure. The
+continuous proofs of sign, concavity, monotonicity, and coverage remain
+in the text. Selected atomic-law examples are diagnostics, not an
+all-law proof. The revision record reports these executions separately
+from the inherited entry replay and from document compilation.

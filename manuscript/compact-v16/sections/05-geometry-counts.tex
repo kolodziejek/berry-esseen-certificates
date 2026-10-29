@@ -36,9 +36,10 @@ Let $U_0,U_1$ have the two conditional laws, and put
  s=qw_0+pw_1=\frac{v\theta}{1-\theta},\quad
  \lambda=ns,\quad \ell=(v+s)^{-1/2}.
 \]
-The moments $\mu_i$ are finite because $\rho<\infty$. Higher moments are
-used only for extremal laws, which have compact support by
-Proposition~\ref{v9:core:attainment}.
+The moments $\mu_i$ are finite because $\rho<\infty$. Higher moments
+will be used only after bounded support is known: for extremizers this
+follows from Proposition~\ref{v9:core:attainment}, and for the local
+comparison it is an explicit hypothesis.
 
 If $s=0$, both nonnegative conditional variances vanish, so $U_0=U_1=0$
 almost surely. This is exactly the standardized Bernoulli law. If $s>0$,
@@ -149,8 +150,25 @@ In particular the defect separates two losses:
  D=\underbrace{\sigma\rho-\gamma-6m}_{\text{moment loss}}
        +3\underbrace{(\rho+2m-J)}_{\text{gap loss}},
 \]
-each nonnegative. For quantitative estimates we need more information
-than their signs. Suppose a central gap $(-A,B)$ has been established,
+each nonnegative. The point $(\gamma/\rho,2m/\rho)$ lies in the upper
+unit disk. The line $x+3y=\sqrt{10}$ supports that disk at
+$(1/\sqrt{10},3/\sqrt{10})$, explaining the coefficient in the moment
+loss. For a standardized Bernoulli law with positive mass $p$, direct
+calculation gives
+\begin{align}
+ J&=\frac1{\sqrt{pq}},&
+ \rho_B(p)&=\frac{1-2pq}{\sqrt{pq}},\notag\\
+ \gamma_B(p)&=\frac{q-p}{\sqrt{pq}},&
+ D_B(p)&=\frac{(6+2\sigma)(p-p_*)^2}{\sqrt{pq}}.
+ \label{ms:bernoulli-defect}
+\end{align}
+Indeed its zero-bias density is $\sqrt{pq}$ on the interval between its
+two support points. The probability displacement therefore has a
+quadratic cost. The equality proof above is what rules out other laws
+with zero defect.
+
+For quantitative estimates we need more information than their signs.
+Suppose a central gap $(-A,B)$ has been established,
 and write
 \[
  T_+=\E X_+^3-mB^2,\quad T_-=\E X_-^3-mA^2,\qquad
@@ -181,10 +199,65 @@ $T_++T_-\le D/2$. If $D<2$, then
 
 \subsection{One joint budget for endpoint motion and noise}
 
-Let $\bar A=m/q$, $\bar B=m/p$ be the conditional mean magnitudes, and
-let $\Delta_A=\bar A-A$, $\Delta_B=\bar B-B$. They are nonnegative.
+Let $\bar A=m/q=\ell p$, $\bar B=m/p=\ell q$ be the conditional mean
+magnitudes. For a central support gap $(-A,B)$ define
+\[
+ \Delta_A=\bar A-A,\quad \Delta_B=\bar B-B,\qquad
+ a_0=\Delta_A/\ell,\quad a_1=\Delta_B/\ell,\quad d=a_0+a_1.
+\]
+These quantities are nonnegative, $d<1$, and
+$U_0\le a_0$, $U_1\ge-a_1$. The physical displacement
+$\Delta_A+\Delta_B$ is $\ell d$; the displacement $d$ is in count units.
+Put $w=1-\theta=pq\ell^2$ and
+\[
+ \mathcal Q(p)=(\sigma+1)p^2+(\sigma-1)q^2-6pq
+       =(6+2\sigma)(p-p_*)^2.
+\]
 
-\begin{lemma}[Simultaneous gap inequality]
+\begin{lemma}[Joint defect budget]\label{ms:joint-defect}
+For every $P\in\mathcal P$ whose closed support has a central gap
+$(-A,B)$ with $A,B>0$,
+\begin{align}
+ D\ge{}&\ell w\mathcal Q(p)+6\ell w\{d(1-d)+a_0a_1\}\notag\\
+ &+\E[\{(\sigma-1)(X+2\bar B)+6B\}W^2;X>0]\notag\\
+ &+\E[\{(\sigma+1)(-X+2\bar A)+6A\}W^2;X<0].
+ \label{ms:joint-defect-budget}
+\end{align}
+All terms on the right are nonnegative. They measure, respectively,
+probability displacement, inward motion of the two gap endpoints, and
+conditional variance at its actual support locations.
+\end{lemma}
+\begin{proof}
+Write $M_{j,\pm}=\E X_\pm^j$. The outer-gap bounds proved above give
+\[
+ J_o^+\le M_{3,+}-2BM_{2,+}+B^2m,\qquad
+ J_o^-\le M_{3,-}-2AM_{2,-}+A^2m.
+\]
+Adding the central term $m(A+B)^2$ and substituting in $D$ yields
+\begin{align*}
+ D\ge{}&(\sigma-1)M_{3,+}+(\sigma+1)M_{3,-}
+       +6BM_{2,+}+6AM_{2,-}\\
+       &-6m(A^2+AB+B^2).
+\end{align*}
+Conditional centering gives the exact identities
+\[
+ M_{2,+}=m\bar B+\E[W^2;X>0],\qquad
+ M_{3,+}=m\bar B^2+\E[(X+2\bar B)W^2;X>0],
+\]
+and the analogous identities with $-X,\bar A$ on the negative class.
+After substituting $A=\ell(p-a_0)$ and $B=\ell(q-a_1)$, the
+deterministic terms are
+\[
+ \ell w\{\mathcal Q(p)+6[d(1-d)+a_0a_1]\};
+\]
+the remaining terms are exactly the two expectations in
+\eqref{ms:joint-defect-budget}. The gap sums are nonnegative, so
+monotone convergence justifies summing countably many gaps. Each
+expectation is integrable under the finite third-moment assumption;
+endpoint atoms do not affect the Lebesgue integrals.
+\end{proof}
+
+\begin{corollary}[Simultaneous gap inequality]
 \label{ms:simultaneous-gap}
 For this central gap,
 \begin{align}
@@ -193,42 +266,12 @@ For this central gap,
  &+3(\sigma+1)B\theta_++3(\sigma+3)A\theta_-.
 \label{ms:simultaneous-gap-formula}
 \end{align}
-\end{lemma}
+\end{corollary}
 \begin{proof}
-The stronger outer-gap bound in the preceding proof gives
-\[
- D\ge(\sigma-1)\E X_+^3+(\sigma+1)\E X_-^3
-                      -6mAB+6BR_++6AR_-.
-\]
-Conditional cubic expansion gives
-\[
- \E X_+^3=m\bar B^2+
-       \E[(X+2\bar B)(X-\bar B)^2;X>0]
-       \ge m\bar B^2+3B\theta_+,
-\]
-and similarly $\E X_-^3\ge m\bar A^2+3A\theta_-$.
-Moreover $R_+=\theta_++m\Delta_B$ and
-$R_-=\theta_-+m\Delta_A$. Substitution produces the last two terms of
-\eqref{ms:simultaneous-gap-formula} and the deterministic expression
-\[
- m\{(\sigma-1)\bar B^2+(\sigma+1)\bar A^2-6\bar A\bar B\}
- +6m\{\bar A\bar B-AB+B\Delta_B+A\Delta_A\}.
-\]
-The second brace equals
-$(A+B)(\Delta_A+\Delta_B)+\Delta_A\Delta_B$.
-For the first, use $m^2=(1-\theta)pq$ and the exact identity
-\[
- (\sigma+1)p^2+(\sigma-1)q^2-6pq=(6+2\sigma)(p-p_*)^2.
-\]
-This proves the displayed inequality.
+On the positive support $X\ge B$ and $\bar B\ge B$, so the positive
+kernel in \eqref{ms:joint-defect-budget} is at least $3(\sigma+1)B$.
+On the negative support $-X\ge A$ and $\bar A\ge A$, the corresponding
+kernel is at least $3(\sigma+3)A$. Finally $m=pq\ell$ and
+$A+B=\ell(1-d)$ identify the two deterministic terms with those in
+\eqref{ms:simultaneous-gap-formula}.
 \end{proof}
-
-In count coordinates the inward displacements are
-\[
- a_0=p-A/\ell=\Delta_A/\ell,\quad
- a_1=q-B/\ell=\Delta_B/\ell,
- \quad d_Y=a_0+a_1=(\Delta_A+\Delta_B)/\ell.
-\]
-Thus $U_0\le a_0$ and $U_1\ge-a_1$. The physical displacement
-$\Delta_A+\Delta_B$ and the count displacement $d_Y$ differ by $\ell$.
-

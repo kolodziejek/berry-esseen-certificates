@@ -76,3 +76,37 @@ The same upper endpoint for $\pi$ is smaller than $22/7$.
 Since $(0.39886)^2<7/44$, we also obtain
 $\phi(0)>0.39886>0.3988$.
 \end{proof}
+
+\begin{lemma}[The narrow entry enclosure]\label{ms:narrow-constant}
+The target constant satisfies
+\[
+ c_-:=\frac{4097321837023}{10^{13}}<\CE
+ <\frac{4097321837025}{10^{13}}=:c_+.
+\]
+\end{lemma}
+\begin{proof}
+Use the same finite sums $s_k$ and Machin identity proved above, now with
+\[
+ \pi_L=16s_{10}(1/5)-4s_5(1/239),\qquad
+ \pi_U=16s_9(1/5)-4s_4(1/239).
+\]
+An even number of terms bounds each arctangent from below and an odd
+number bounds it from above. The negative coefficient of the second
+arctangent reverses its choice of endpoint, so
+$0<\pi_L<\pi<\pi_U$. Put
+\[
+ r_L=\frac{3162277660168379}{10^{15}},\qquad
+ r_U=\frac{3162277660168380}{10^{15}}.
+\]
+Integer squaring gives $r_L^2<10<r_U^2$. Direct rational comparisons give
+\[
+ c_-^2<\frac{19+6r_L}{72\pi_U}
+ <\CE^2
+ <\frac{19+6r_U}{72\pi_L}<c_+^2.
+\]
+The finite sums specify every rational in this display; each outer
+inequality can be checked by cross-multiplying positive integers.
+All terms are positive, so taking square roots gives the assertion.
+This directed enclosure, rather than the coarser bounds in the preceding
+lemma, supplies the precision used by the entry calculation.
+\end{proof}

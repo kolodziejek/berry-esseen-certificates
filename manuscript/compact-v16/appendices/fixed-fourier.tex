@@ -8,7 +8,8 @@ and event bounds. Attainment and acquisition of those bounds are not
 premises of the Fourier proof itself; their use is ordered in that section.
 
 For each integer $n\ge N\ge42$, let $X=X_n$ be a real random variable with
-$\E X=0$, $\E X^2=1$. Neither the law nor the real raw threshold $H=H_n$
+$\E X=0$, $\E X^2=1$, and $\E|X|^3<\infty$.
+Neither the law nor the real raw threshold $H=H_n$
 must be fixed as $n$ varies. Write
 \[
  f(t)=\E e^{itX},\quad \gamma=\E X^3,\quad
@@ -21,6 +22,12 @@ The two complete integrals are
 \]
 
 \subsection{The inversion edge, including atoms and moving thresholds}
+
+The sum law and its signed Gaussian approximation have the same mass
+and first moment. Subtracting these two terms before integration makes
+the Fourier expression absolutely integrable. The following elementary
+identity also explains why no continuity assumption at the threshold is
+needed.
 
 \begin{lemma}\label{v9:fourier:inversion}
 If a finite signed measure $\mu$ has mass and first moment zero and
@@ -77,7 +84,14 @@ Consequently the error $E_n=-n^{3/2}\varepsilon_n/2$ satisfies
 This is an identity and bound for each $n,H$; it exchanges no limit in
 $n$ with an integral or a varying law.
 
-\subsection{Sixth-order LOW with its actual coefficient bounds}
+\subsection{Low frequencies: Taylor cancellation and moment bounds}
+
+Near zero, the Gaussian approximation cancels the first terms of the
+characteristic function. The fourth- and fifth-order coefficients must
+still be bounded, and the sixth moment controls the remaining Taylor
+error. These higher moments are explicit hypotheses of the estimate;
+in its application they become available only after support has been
+bounded.
 
 Assume common bounds
 \[
@@ -201,7 +215,16 @@ $6(M-1)+(2M-10)^2/24$. Taking the minimum of these proved ceilings
 and $E_5+10g$, then dividing by $120$, gives a valid coefficient ceiling $Z$.
 The radius is an actual support input, not a free tuning parameter.
 
-\subsection{All six HIGH pieces and their index gates}
+\subsection{High frequencies: six contributions and uniform index bounds}
+
+A nearly lattice law can retain characteristic-function peaks away from
+zero. The high-frequency argument therefore uses an event involving the
+actual difference $X-X'$ and partitions the oscillations around their
+zeros. The six contributions below cover intermediate frequencies,
+nonzero-cell cores, nonzero-cell wings, the small-angle part of the zero
+cell, the rest of the zero cell, and the signed Gaussian comparator.
+Each optional improvement has its own stated positivity and monotonicity
+conditions.
 
 For independent copies of the same marginal suppose an actual event
 $\mathcal E$ satisfies
@@ -263,16 +286,35 @@ For completeness, the tail calculation used here is, for $x=na b^2>0$,
  \sqrt n\int_b^\infty e^{-na t^2}t^{-3}dt
  \le\frac{\sqrt n e^{-x}}{2b^2}L(x).
 \end{equation}
-Substitution and positive Fubini reduce the integral, without its
-prefactor, to $\int_0^\infty u(x+u)^{-1}e^{-u}du$. Put
-$P(u)=u^2-4u+2$, $D=x^2+4x+2=P(-x)$. Exact polynomial division gives
+To see where the rational function $L$ comes from, let $U$ have density
+$e^{-u}$ on $u\ge0$. Substitution followed by positive Fubini gives
 \[
- \frac1{x+u}-\frac{-u^3+(x+8)u^2-(x^2+8x+20)u+x^3+8x^2+20x+16}{D^2}
- =\frac{P(u)^2}{(x+u)D^2}\ge0.
+ \sqrt n\int_b^\infty e^{-na t^2}t^{-3}dt
+ =\frac{\sqrt n e^{-x}}{2b^2}\E\frac{U}{x+U}.
 \]
-Integrate using the factorial moments of $e^{-u}$; the numerator's
-integral is $(x+3)D$. Subtracting the resulting lower bound times $x$
-from one gives $L(x)$. Applying \eqref{v9:fourier:tail} at endpoint
+For example, after putting $v=na(t^2-b^2)$ the remaining factor is
+$\int_0^\infty xe^{-v}(x+v)^{-2}dv$; integration by parts makes it
+$\E[U/(x+U)]$. For $x>0$ put
+\[
+ J_x=\E\frac1{x+U},\qquad v_0=\begin{pmatrix}1\\1\end{pmatrix},\qquad
+ G=\E\left[(x+U)\begin{pmatrix}1&U\\U&U^2\end{pmatrix}\right]
+ =\begin{pmatrix}x+1&x+2\\x+2&2x+6\end{pmatrix}.
+\]
+The entries use $\E U=1$, $\E U^2=2$, and $\E U^3=6$.
+For $q(U)=c_1+c_2U$, weighted Cauchy--Schwarz in its squared-residual
+form gives
+\[
+ 0\le\E\frac{[1-(x+U)q(U)]^2}{x+U}
+ =J_x-2v_0^Tc+c^TGc.
+\]
+The matrix $G$ is positive definite: its leading entry is positive and
+$\det G=x^2+4x+2>0$. Choosing $c=G^{-1}v_0$ yields
+\[
+ J_x\ge v_0^TG^{-1}v_0=\frac{x+3}{x^2+4x+2},\qquad
+ \E\frac{U}{x+U}=1-xJ_x\le\frac{x+2}{x^2+4x+2}=L(x).
+\]
+This proves \eqref{v9:fourier:tail} for every $a,b,n>0$ with the same
+function $L$. Applying it at endpoint
 $1/2$ and rate $s$ proves the optional first term.
 
 For $t\ge b$, symmetrization, the actual-event probability bound,

@@ -1,27 +1,46 @@
 \subsection{Reading the argument}\label{ms:guide}\label{ms:notation}
-The proof follows one chain: fixed-target maximum, contact and budget,
-coarse entry, one support strip, and count comparison. The first step
-selects one actual marginal; no later relaxation changes that marginal.
-Reflection selects positive closed-event orientation before entry, so
-its signed defect is acquired in the orientation where it is used.
-The complete Fourier predicates enter only at coarse entry. The later
-estimates are analytical, with finite rational inequalities specified
-in the proof.
+The proof selects an extremizer, identifies the zero-defect law, bounds
+the remainder in a conservation identity, and compares the resulting
+near-Bernoulli law with a binomial sum. Reflection selects the positive
+closed-event orientation before localization; its signed defect is
+estimated in that orientation. The finite Fourier calculation is used
+only to obtain the coarse bounds. The subsequent support and count
+arguments are analytical, with explicit rational comparisons.
 
-For $B=\ind_{\{X>0\}}$, put $p=\Pp(B=1)$, $q=1-p$, $v=pq$ and
-$m=\E X_+=\E X_->0$. If $W=X-\E(X\mid B)$ and $\ell=m/v$, then
-\[
- X=\ell(B+U-p),\quad U=W/\ell,\quad \theta=\E W^2,
- \quad s=\E U^2,\quad \lambda=ns=\frac{n\theta}{\ell^2}.
-\]
-Thus $\theta$ and $\lambda$ use different units; $v+s=\ell^{-2}$.
-The inward displacements $a_0,a_1$ are also in count coordinates, and
-$d=a_0+a_1$. The physical defect is the distinct symbol
-$D=(3+\sqrt{10})\rho-\gamma-3J$, where
-$\gamma=\E X^3$, $\beta=\E[X|X|]$ and $J$ is the weighted support-gap
-sum. Reconstructing $X$ from $B+U$ leaves the raw threshold $H$ unchanged.
+The following table distinguishes the three scales used in the proof.
+Gap-specific parameters are introduced after the existence of a central
+gap has been established.
+\begin{center}\small
+\begin{tabular}{@{}P{.27\linewidth}P{.66\linewidth}@{}}
+\toprule
+Symbol & Meaning and scale \\
+\midrule
+$H$, $H/\sqrt n$ & Threshold for the original sum; its normal-standardized value. \\
+$B_0=\ind_{\{X>0\}}$, $p,q$ & Sign class and its probabilities for the original marginal. \\
+$m$, $\ell=m/(pq)$ & $m=\E X_+=\E X_-$; distance between conditional means. \\
+$W$, $\theta=\E W^2$ & $W=X-\E(X\mid B_0)$; conditional noise in original units. \\
+$U=W/\ell$, $s=\E U^2$, $\lambda=ns$ & Noise in count units; marginal and total noise variances. \\
+$t=np+H\sqrt{pq+s}=k+u$ & Count threshold, integer anchor, and phase. \\
+$a_0,a_1$, $d=a_0+a_1$ & Inward support displacements in count units. \\
+$J$, $D$ & Weighted support-gap sum and defect of the original law. \\
+\bottomrule
+\end{tabular}
+\end{center}
+The sign decomposition is the exact identity
+\begin{equation}\label{revision:canonical-decomposition}
+ X=\ell(B_0+U-p)=\frac{B_0+U-p}{\sqrt{pq+s}},\qquad
+ pq+s=\ell^{-2},\qquad \E(U\mid B_0)=0.
+\end{equation}
+Indeed the conditional means are $-p\ell$ and $q\ell$, and the variance
+decomposition gives $1=pq\ell^2+\theta$.
+Thus the normalized count-coordinate variable is exactly $X$, and $H$
+remains its original raw threshold. The small-noise proof chooses an
+anchor with $u\in[-3/10,7/10]$; the interpolation proof chooses the floor
+anchor, with $u\in[0,1)$. These are separate choices for separate estimates.
+The signed moments are $\gamma=\E X^3$ and $\beta=\E[X|X|]$.
 
-The main text gives the variational, geometric, entry and comparison
-arguments. The appendices contain the Fourier enclosure used at entry
-and elementary Gaussian constants. Alternative smaller-index and local
-routes remain in the repository, outside this selected compilation.
+The main text retains the variational, geometric, localization, and
+comparison arguments. The appendices give the full Fourier bound,
+constant enclosures, the identity without contact, and reproducibility
+instructions. The complete localization theorem is stated before its
+technical derivation; all its stronger auxiliary conclusions are retained.

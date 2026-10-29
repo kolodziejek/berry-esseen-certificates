@@ -1,9 +1,10 @@
-\section{One acquired strip}\label{short:acq:section}
+\section{From small defect to a common support region}\label{short:acq:section}
 
-The entry calculation will be used only through its weighted defect and
-raw-threshold bounds. The former already forces the sign split close to
-Esseen's two-point law. Two applications of contact then bound the entire
-conditional support, without a further partition of the sign probability.
+The entry calculation supplies the weighted defect and raw-threshold
+bounds. The defect bound first locates the sign probability and controls
+the inward endpoints and conditional variance. Two applications of
+contact then bound the entire conditional support. This last step uses
+the sharp predecessor bound; the preceding geometric estimates do not.
 Throughout this section set
 \[
  \sigma=\sqrt{10},\qquad p_*=(4-\sigma)/2,\qquad
@@ -39,6 +40,28 @@ $U_1\ge-a_1$, and
 These conclusions require no contact or predecessor hypothesis.
 \end{proposition}
 
+The estimates are obtained in the following order. Each preliminary
+bound supplies a hypothesis for a sharper one later in the proof.
+\begin{center}\small
+\begin{tabular}{@{}p{.27\linewidth}p{.65\linewidth}@{}}
+\toprule
+Input & Purpose of the output \\
+\midrule
+$D<.047$ and the zero-in-support bound & Establish a central gap and
+nonnegative inward displacements. \\
+The joint defect budget & Obtain $.36<p<.48$, $\theta<.006$ and
+$\ell>1.99$ before taking derivatives of the refined bounds. \\
+The inward-motion term & Give $d<.004$. \\
+Monotonicity in $d$ and $\theta$ & Give the final probability interval,
+$\theta<.0036$ and $\ell>1.996$. \\
+The conditional cubic costs & Control the total count variance
+$\lambda$, rather than only the variance of $X$. \\
+Contact and the predecessor bound & Exclude the two outer support rays
+in Proposition~\ref{short:acq:strip}. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
 \begin{proof}
 We have $D<D_0:=.047$, because $700D_0>B_*$. If zero were in the
 closed support, Lemma~\ref{ms:physical-defect} would give
@@ -46,7 +69,7 @@ $D\ge(\sigma-1)\rho\ge\sigma-1>D_0$. Thus the central gap exists;
 centering supplies both signs. Conditional means imply $a_j\ge0$ and
 $0\le d<1$. Put $v=pq$ and $w=1-\theta=v\ell^2$, and define
 \[
- Q(p)=(\sigma+1)p^2+(\sigma-1)q^2-6pq
+ \mathcal Q(p)=(\sigma+1)p^2+(\sigma-1)q^2-6pq
        =(6+2\sigma)(p-p_*)^2.
 \]
 We first retain all the costs of the actual conditional noises. Let
@@ -56,7 +79,7 @@ We first retain all the costs of the actual conditional noises. Let
 \]
 Their masses sum to $\theta$. The outer-gap estimate gives the common budget
 \begin{equation}\label{short:acq:budget}
- D\ge\ell wQ+E_0+\int k_+\,d\mu_++\int k_-\,d\mu_-,
+ D\ge\ell w\mathcal Q+E_0+\int k_+\,d\mu_++\int k_-\,d\mu_-,
 \end{equation}
 where
 \begin{gather*}
@@ -64,20 +87,9 @@ where
  k_+(x)=(\sigma-1)(x+2\ell q)+6A_+,\qquad
  k_-(x)=(\sigma+1)(x+2\ell p)+6A_-.
 \end{gather*}
-Indeed
-\[
- J_o^+\le2\int_{A_+}^{\infty}(t-A_+)\tau(t)\,dt
-       =\E[X_+(X_+-A_+)^2],
-\]
-and the negative outer gaps have the same expression in magnitudes.
-Add the central contribution $m(A_-+A_+)^2$ and use
-\[
- \E X_+^3=m(\ell q)^2+\int(x+2\ell q)\,d\mu_+,
- \qquad R_+=\mu_+(\R)+m(\ell q-A_+),
-\]
-with the negative counterparts. Expansion yields
-\eqref{short:acq:budget}. This also proves the budget for countably many
-gaps by monotone convergence; endpoint atoms do not alter the integrals.
+This is Lemma~\ref{ms:joint-defect} with $A=A_-$ and $B=A_+$.
+The measures $\mu_\pm$ are only notation for the displayed
+variance-weighted expectations; no new law is introduced.
 
 Hereafter use $3.162277660<\sigma<3.162277661$. The weaker gap estimate
 $J\le\rho+2mA_-A_+$, together with $\rho\ge1$, $\gamma\le\rho$ and
@@ -89,13 +101,13 @@ $m\le1/2$, gives
 The second inequality follows from $A_-\le\ell p$, $A_+\le\ell q$.
 All costs in \eqref{short:acq:budget} are nonnegative, so
 \[
- D\ge\frac{w^{3/2}Q}{\sqrt v}\ge2z^{3/2}Q.
+ D\ge\frac{w^{3/2}\mathcal Q}{\sqrt v}\ge2z^{3/2}\mathcal Q.
 \]
-Let $Q_-$ replace $\sigma$ in its polynomial expression by the lower
+Let $\mathcal Q_-$ replace $\sigma$ in its polynomial expression by the lower
 rational bound. The two exact tests
 \[
- 4z^3Q_-(.36)^2>D_0^2,\qquad
- 4z^3Q_-(.48)^2>D_0^2
+ 4z^3\mathcal Q_-(.36)^2>D_0^2,\qquad
+ 4z^3\mathcal Q_-(.48)^2>D_0^2
 \]
 exclude $p\le.36$ and $p\ge.48$, respectively: the squared distance
 to $p_*\in(.36,.48)$ is monotone outside that interval.
@@ -116,7 +128,7 @@ $\ell>1.99$. Also $A_-+A_+\ge2\sqrt z$ gives
 Evaluating the kernels at their lower support endpoints in
 \eqref{short:acq:budget} now yields
 \begin{equation}\label{short:acq:direct}
- D\ge\ell\{wQ+6wd(1-d)
+ D\ge\ell\{w\mathcal Q+6wd(1-d)
             +\theta\min(C_+-b_+d,C_--b_-d)\},
 \end{equation}
 where
@@ -132,15 +144,22 @@ The inward cost alone excludes $d\ge.004$, because
 \]
 
 After replacing $d$ by zero, the derivative in $\theta$ of either branch
-$\sqrt{(1-\theta)/v}\{(1-\theta)Q+\theta C\}$ has the sign of
-$(2-3\theta)C-3(1-\theta)Q$. It is positive: $C>6.49$, $Q<.05$
-and $\theta<.006$. Hence $D\ge Q/\sqrt v$.
-This ratio decreases on $[.36,3/8]$, and
+$\sqrt{(1-\theta)/v}\{(1-\theta)\mathcal Q+\theta C\}$ has the sign of
+$(2-3\theta)C-3(1-\theta)\mathcal Q$. It is positive: $C>6.49$, $\mathcal Q<.05$
+and $\theta<.006$. Hence $D\ge\mathcal Q/\sqrt v$.
+Since $\sqrt v\le1/2$, it follows that $D\ge2\mathcal Q(p)$.
+Moreover
 \[
- Q_-(3/8)^2>D_0^2(3/8)(5/8)
+ \frac38<p_*<\frac{21}{50}
+      =\frac12\left(\frac38+\frac{93}{200}\right).
 \]
-excludes that interval. On $[93/200,.48]$ instead use
-$Q\ge Q(93/200)>D_0/2$ and $\sqrt v\le1/2$.
+Every $p$ outside $(3/8,93/200)$ is therefore at least as far from
+$p_*$ as $3/8$, so $\mathcal Q(p)\ge \mathcal Q(3/8)$. The single rational comparison
+\[
+ \mathcal Q_-(3/8)=\frac{37936011}{1600000000}
+       >\frac{47}{2000}=\frac{D_0}{2}
+\]
+contradicts $D<D_0$ on both outside rays, including the endpoints.
 Thus $3/8<p<93/200$.
 Since
 \[
@@ -178,7 +197,7 @@ noise to vanish, so no division by zero is needed. For
 $\lambda_0=nq\E U_0^2$, $\lambda_1=np\E U_1^2$,
 the same gap-budget expansion, before bounding these two cubics, reads
 \begin{align*}
- nD/\ell^3\ge{}&nvQ+6nv\{d(1-d)+a_0a_1\}\\
+ nD/\ell^3\ge{}&nv\mathcal Q+6nv\{d(1-d)+a_0a_1\}\\
  &+\{3(\sigma+3)p-(\sigma+7)a_0\}\lambda_0
   +\{3(\sigma+1)q-(\sigma+5)a_1\}\lambda_1\\
  &+\frac{(\sigma+1)\lambda_0^2}{nqa_0}
@@ -186,8 +205,9 @@ the same gap-budget expansion, before bounding these two cubics, reads
 \end{align*}
 Terms with $a_j=0$ are absent. Set $\bar d=.004$ and use
 $d(1-d)+a_0a_1\ge(1-\bar d)(a_0+a_1)$.
-Pair each displacement cost with its reciprocal cubic cost by AM--GM;
-for example
+The reciprocal term is essential: pairing its variance-squared cost
+with the inward-displacement cost gives a linear cost in $\lambda$.
+Specifically, AM--GM gives
 \[
  6nv(1-\bar d)a_0+
  \frac{(\sigma+1)\lambda_0^2}{nqa_0}
@@ -195,7 +215,7 @@ for example
 \]
 Thus
 \begin{equation}\label{short:acq:cubic-budget}
- nD\ge\ell^3\{nvQ+\lambda_0Y_0(p)+\lambda_1Y_1(p)\},
+ nD\ge\ell^3\{nv\mathcal Q+\lambda_0Y_0(p)+\lambda_1Y_1(p)\},
 \end{equation}
 where
 \begin{align*}
@@ -257,19 +277,40 @@ Take $c_0=819/2000<\CE$ and the two fixed boundaries
  t_-=1.996(3/8+.6)=1.9461,
  \qquad t_+=1.996(107/200+.6)=2.26546.
 \]
-For the respective $b$, direct rational substitution at each boundary gives
+For a fixed raw threshold $H$, abbreviate the appropriate radial
+function $H_n(H,\pm t)$ by $H_n(t)$, with derivative taken in the
+positive magnitude $t$. Set
 \[
- t^2>3,\qquad h(t)+c_0Q_b(t)<0,\qquad
- Q_b,Q_b',Q_b''<0,\qquad L,L',L''<0,
- \quad L=g+c_0Q_b'.
+ L(t)=g(t)+c_0Q_b'(t).
 \]
-The two boundary upper bounds are less than $-.40$ and $-.13$,
-respectively. These are just polynomial comparisons at two rational
-points. Since $Q_b'''=-6$ and $L''=2/5-6c_0<0$, the required signs
-persist along both outward rays. The derivative of the actual upper
-expression is below $L$, as $Q_b'<0$ and $\CE>c_0$.
-It therefore stays strictly negative beyond either boundary. Contact
-excludes every support point there, including boundary atoms.
+Exact rational substitution gives the following conservative bounds:
+\begin{center}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Boundary quantity & $t_-$, negative ray & $t_+$, positive ray \\
+\midrule
+$h(t)+c_0Q_b(t)$ & $<-2/5$ & $<-13/100$ \\
+$L(t)$ & $<-1$ & $<-8/5$ \\
+$L'(t)$ & $<-13/5$ & $<-16/5$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+Both boundaries satisfy $t^2>3$. The constant second derivative is
+\[
+ L''=\frac25-6c_0=-\frac{2057}{1000}<0.
+\]
+Consequently $L'$ and then $L$ remain negative on each outward ray.
+Because $g>0$, the identity $Q_b'=(L-g)/c_0$ gives $Q_b'<0$ there.
+At the boundary $h\ge0$, so the first table entry gives $Q_b<0$;
+this sign also persists outward. Since $\CE>c_0$, we obtain
+\[
+ H_n(t_\pm)+\CE Q_b(t_\pm)<0,\qquad
+ H_n'(t)+\CE Q_b'(t)\le g(t)+c_0Q_b'(t)=L(t)<0.
+\]
+The contact upper expression therefore cannot be nonnegative anywhere
+on either ray. This excludes every support point there, including
+boundary atoms. Only the actual radial function is differentiated;
+the absolute-value majorant $h$ is used solely at the boundary.
 
 On the negative class, $X>-t_-$ and $\ell>1.996$ give
 $U_0=X/\ell+p>-(3/8+.6)+p>-.6$. On the positive class,

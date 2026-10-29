@@ -1,15 +1,25 @@
-\section{Discussion and reproducibility}\label{ms:discussion}
-The fixed target aligns the coefficient in extremality, contact and the
-predecessor estimate. Conservation prices departures from two points
-against one physical budget. After coarse entry, direct inequalities
-acquire one strip and two relative-noise estimates finish the comparison.
-Their bounds stay relative to $\lambda$ down to zero; zero noise itself
-uses the strict binomial theorem.
+\section{Discussion}\label{ms:discussion}
+Fixing the target aligns the coefficient in the extremal problem,
+contact, and the predecessor estimate. Conservation bounds the defect
+of a possible extremizer; the equality case explains why the resulting
+law is close to the extremal Bernoulli distribution. After coarse
+localization, elementary inequalities place that law in one support
+region and count conditioning gives the strict comparison.
 
-The unresolved issue is finite: a genuine base through $699$, or another
-argument closing the gap from a smaller base, is still needed. This work
-provides neither an independent four-summand proof nor a complete base
-through $41$.
+The small-noise estimate keeps its errors proportional to $\lambda$,
+which is essential near zero. The five-count estimate handles
+$1/100\le\lambda\le7/20$, where its uniform error is smaller than the
+crossing loss. At zero noise the law is Bernoulli and the strict
+finite-binomial theorem applies directly.
+
+The argument excludes every attained nonnegative-excess pair at
+$n\ge700$ when the sharp predecessor bound and the entry hypotheses
+hold. Consequently a proof of $C_j\le\CE$ for all $1\le j\le699$
+would complete the global sharp inequality. Those finite bounds are
+not supplied here. This work provides neither an independent
+four-summand proof nor a complete base through $41$. The retained
+computational entry can be replayed separately from the analytical
+comparison and its short scalar checks; none proves the missing base.
 
 \paragraph{AI assistance.}
 AI systems were used extensively for mathematical exploration, exact
@@ -19,16 +29,13 @@ their agreement is not a substitute for mathematical proof or external
 human review. Failed arguments remain diagnostics, not premises. The
 authors are responsible for the content and presentation.
 
-\paragraph{Sources and reproduction.}
-\begingroup\raggedright
-Sources and evidence are at
-\url{https://github.com/kolodziejek/berry-esseen-certificates}.
-This text integrates the selected v16 route from PR~5 at commit
-\texttt{1aa1dd015e3d73fbeecc1a7acbfa395cbb560b5f}.
-The original manuscript, numerical witnesses and reference baseline
-are preserved. A supplementary source map records each retained,
-replaced or omitted argument. Bounded reproduction uses
-\path{mathematics/simplification-v16/2026-10-29/run_checks.py};
-isolated coarse-entry reproduction is a separate computation. Neither
-a document build nor the small checks establish the missing finite base.
-\par\endgroup
+\paragraph{Sources.}
+The source manuscript, earlier arguments, and numerical witnesses are
+preserved in the repository. The present revision starts from
+\href{https://github.com/kolodziejek/berry-esseen-certificates/tree/cd10654222f4b63d50f9d8f108597b140d263ec5/manuscript/compact-v16}{the immutable compact-v16 baseline}
+in \url{https://github.com/kolodziejek/berry-esseen-certificates}.
+The source map records retained and replaced arguments; the revision
+record distinguishes mathematical review from fresh execution.
+Appendix~\ref{revision:reproducibility} identifies the retained
+certificate, its exact arithmetic, and the commands for checking this
+revision. A document build checks presentation, not theorem validity.

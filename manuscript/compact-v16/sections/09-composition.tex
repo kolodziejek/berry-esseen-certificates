@@ -9,20 +9,26 @@ Conditions~\ref{v9:entry:two-pass-condition} and
 \begin{proof}
 Theorem~\ref{v9:entry:theorem} gives $nD\le32.20665378$ and
 $|H|\le1.83605680$ for this same oriented, compactly supported law.
-Section~\ref{short:acq:section} gives its central gap,
-$p\in(3/8,93/200)$, $a_0+a_1<1/250$, amplitude $3/5$ and
-$\lambda<7/20$. To check the normalization, put $B=\ind_{\{X>0\}}$,
-$m_j=\E(X\mid B=j)$ and $\ell=m_1-m_0>0$. Then
-\[
- m_0=-p\ell,\quad m_1=q\ell,\quad 1=pq\ell^2+\theta,
- \qquad U=(X-m_B)/\ell,
-\]
-\[
- s=\theta/\ell^2,\qquad pq+s=\ell^{-2},\qquad
- (B+U-p)/\sqrt{pq+s}=X.
-\]
-The marginal in Section~\ref{short:count:section} is exactly $P$,
-and its threshold is the original raw $H$, with $|H|<46/25$.
+Propositions~\ref{short:acq:geometry} and \ref{short:acq:strip} give
+the central gap and the following bounds. In
+\eqref{revision:canonical-decomposition}, identify the local theorem's
+$B$ with $B_0=\ind_{\{X>0\}}$. The variable
+$(B+U-p)/\sqrt{pq+s}$ is exactly the original $X$, so the threshold
+remains the original raw $H$. The hypotheses match as follows.
+\begin{center}\small
+\begin{tabular}{@{}P{.49\linewidth}P{.44\linewidth}@{}}
+\toprule
+Bound just obtained & Hypothesis of Theorem~\ref{short:count:local} \\
+\midrule
+$3/8<p<93/200$ & $p\in[3/8,93/200]$ \\
+$a_0,a_1\ge0$, $a_0+a_1<1/250$ & Nonnegative inward endpoints, sum at most $1/250$ \\
+$-3/5<U_0\le a_0$, $-a_1\le U_1<3/5$ & The stated closed conditional-support bounds \\
+$0\le\lambda<7/20$ & Positive-noise interval or separate zero-noise case \\
+$|H|\le1.83605680<46/25$ & The full threshold interval \\
+Independent copies of $X$ & The iid sum in the local comparison \\
+\bottomrule
+\end{tabular}
+\end{center}
 Positive noise gives $a(P,H)<-\lambda/100$; zero noise is Bernoulli
 and gives strictly negative excess by Schulz. Both contradict $a\ge0$.
 \end{proof}
@@ -58,14 +64,9 @@ argument at later indices. Reflection also includes the exact atom rule:
 The difference is the atom at $H$. The selected orientation acquires its
 own signed $D$ budget; that budget is not copied under reflection.
 
-\paragraph{Finite checks.}
-The entry predicates retain both quadratic passes, all four signed
-passes, $11264$ nominal signed boxes and every incidence in the
-acceptor's internal $100$-panel contract. The one-strip argument removes
-only downstream probability panels, noise tables and older local
-comparison branches. Rational scalar gates and actual-law controls
-accompany the continuous proofs; they do not replace them or the finite
-base. The v16 records report ten bounded checks passing, separately from
-full Fourier reproduction. The checking programs and interpreter remain
-part of the trusted numerical boundary; no full Lean formalization is
-claimed.
+\paragraph{Role of finite verification.}
+The entry conditions retain both coarse passes, all four signed passes,
+and every incidence in the internal $100$-panel contract. The local
+comparison uses the resulting common support region. Its scalar checks
+are separate from entry verification and from the finite-base assumption;
+Appendix~\ref{revision:reproducibility} gives their commands and scope.

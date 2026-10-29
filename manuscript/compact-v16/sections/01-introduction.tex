@@ -1,4 +1,4 @@
-\section{The problem and the selected route}\label{ms:introduction}
+\section{The problem, results, and proof strategy}\label{ms:introduction}
 Let $\mathcal P$ be the laws on $\R$ with mean zero, variance one and
 finite third absolute moment $\rho(P)=\E|X|^3$. For independent copies
 $X_1,\ldots,X_n$ of $P$, put $S_n=\sum_iX_i$ and
@@ -34,6 +34,82 @@ of this one law. The upper conjecture is associated with Zolotarev
 \cite{Zolotarev1966,Zolotarev1967}; Schulz proves the strict finite-index
 bound for every nondegenerate Bernoulli law \cite{Schulz2016}.
 
+\paragraph{Fix the target rather than an unknown ratio.}
+At a fixed $n$, maximize
+\begin{equation}\label{v9:intro:excess}
+ a(P,H)=\sqrt n\{\Pp_P(S_n\le H)-\Phi(H/\sqrt n)\}-\CE\rho(P).
+\end{equation}
+The strategy is a rigidity argument followed by a comparison with a
+Bernoulli sum. The moment penalty gives an attaining law; first variation
+produces a majorant that touches the conditional distribution function
+on its whole closed support. Integrating this contact relation against
+the zero-bias density \cite{GoldsteinReinert1997} gives an identity with
+nonnegative terms measuring the excess, displacement of the threshold,
+and the defect
+\[
+ D=(3+\sqrt{10})\rho-\gamma-3J,\qquad \gamma=\E X^3.
+\]
+Here $J$ is the weighted sum of squared support-gap lengths, defined in
+\eqref{ms:physical-defect-definition}. The defect vanishes exactly at the
+oriented Bernoulli law in \eqref{ms:bernoulli-limit}. An upper bound on
+the remainder in the identity therefore forces a hypothetical
+nonnegative-excess maximizer close to that law.
+
+For $n\ge700$, direct inequalities give $3/8<p<93/200$, inward
+support displacement below $1/250$, and total conditional noise variance
+below $7/20$ in count coordinates. Two contact inequalities bound the
+outward ends of both conditional supports. A single-count estimate for
+noise at most $1/100$ and a five-count estimate above it then give
+strictly negative excess. The shared endpoint and zero noise are included.
+The comparison theorem itself, Theorem~\ref{short:count:local}, assumes
+only its explicit local law domain; it does not assume extremality,
+contact, or a predecessor bound.
+
+\paragraph{The finite verification.}
+The computational part establishes a coarse localization estimate.
+The analysis places an attained nonnegative-excess maximizer, subject
+to the sharp bound at the preceding index, in an explicitly bounded
+moment region. A certificate records rational bounds for a finite
+subdivision of that region. The checking program reconstructs the
+subdivision and verifies that each part either contradicts a necessary
+condition or satisfies the claimed bounds. The parts cover the whole
+region, including their boundaries. Together with the analytical
+estimates, this proves in particular
+\[
+ nD\le32.20665378,\qquad |H|\le1.83605680
+\]
+for every such maximizer and every actual $n\ge42$.
+
+Finding and checking the certificate serve different purposes. The
+exploratory calculation chooses subdivisions and candidate bounds;
+verification reconstructs the prescribed inequalities and checks their
+enclosures. The retained calculation uses rational arithmetic, with
+proved rational bounds for roots, exponential terms, and Gaussian
+constants. It controls whole parameter intervals, rather than inferring
+an all-law inequality from sampled examples. The analytical reduction
+and the coverage argument are parts of the proof; the data file alone
+does not replace them.
+
+Subdivision and finite enclosures are established methods of rigorous
+numerical analysis; related methods have been formalized in proof
+assistants \cite{SolovyevHales2013}. Computational bounding also has
+precedents in Berry--Esseen estimates \cite[Section~2]{Shevtsova2011}.
+Our certificate format is specific to this calculation. Its Python
+verification is not a formalization of the entire argument, and its
+generation and checking share mathematical kernels. The later support
+and count comparisons have analytical proofs with short rational
+checks. Appendix~\ref{revision:reproducibility} identifies the data,
+programs, arithmetic conventions, and separate reproduction commands.
+
+\paragraph{The finite boundary.}\label{ms:scope}
+The exclusion of an attained extremizer at $n\ge700$ requires the sharp
+predecessor bound. A least failure supplies that bound only if all
+earlier indices have been controlled. A base through $699$, together
+with the complete entry conditions, implies the sharp conjecture;
+Section~\ref{short:composition} proves this implication. A base only
+through $41$ locates a first failure in $42,\ldots,699$ but does not
+rule it out. Those finite bounds remain open in this work.
+
 \paragraph{Context.}
 Fourier and structural moment inequalities progressively improved the
 universal upper bound \cite{vanBeek1972,Prawitz1972,Tyurin2010,
@@ -49,30 +125,3 @@ formalized implications \cite{tao2026berryesseenregistry,
 Yan2026ProbabilityApproximation,BerryEsseenLean2026}. None of these
 recent reported bounds is a premise below. An earlier AI-assisted working
 draft is on Hexagon \cite{rodziewiczkolodziejek2026momentdefects}.
-
-\paragraph{Fix the target rather than an unknown ratio.}
-At a fixed $n$, maximize
-\begin{equation}\label{v9:intro:excess}
- a(P,H)=\sqrt n\{\Pp_P(S_n\le H)-\Phi(H/\sqrt n)\}-\CE\rho(P).
-\end{equation}
-The moment penalty yields attainment and compact-support contact without
-assuming uniformly integrable third moments. Integrating contact against
-the zero-bias density gives a common budget for excess, support-gap defect
-and leakage. The transform originates in \cite{GoldsteinReinert1997}.
-A complete coarse Fourier entry supplies $nD\le32.20665378$ for the same
-law, under its true sharp predecessor.
-
-For $n\ge700$, direct inequalities give $3/8<p<93/200$, inward
-displacement below $1/250$ and conditional noise below $7/20$.
-Two contact rays acquire one support strip. A single-count estimate for
-noise at most $1/100$ and a five-count estimate above it then give strict
-negative excess. The shared endpoint and zero noise are included.
-
-\paragraph{The finite boundary.}\label{ms:scope}
-This is a conditional acquired-witness exclusion, not an unconditional
-cutoff at $700$. A least failure supplies the required predecessor only
-if all earlier indices have been controlled. A genuine base through
-$699$, together with the complete entry predicates, implies the sharp
-conjecture; Section~\ref{short:composition} proves this implication.
-A base only through $41$ locates a first failure in $42,\ldots,699$
-but does not rule it out. Those finite bounds remain open in this work.
