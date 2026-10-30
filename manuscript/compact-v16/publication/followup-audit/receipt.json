@@ -1,0 +1,32 @@
+{
+  "utc": "2026-10-29T19:37:58.579774+00:00",
+  "python": "3.9.6",
+  "command": [
+    "python3",
+    "-I",
+    "-B",
+    "mathematics/fixed-target-v8/2026-10-28/isolated_entry_replay.py",
+    "--help"
+  ],
+  "returncode": 0,
+  "execution_scope": "CLI help only; exact rational quotient diagnostics and index reconstruction. No numerical certificate replay or theorem acceptance.",
+  "quotient_diagnostic_points": 605,
+  "signed_counterexample": {
+    "numerator": "-1",
+    "denominator_interval": [
+      "1",
+      "2"
+    ],
+    "lower_denominator_quotient": "-1",
+    "true_upper_quotient": "-1/2"
+  },
+  "input_sha256": {
+    "mathematics/fixed-target-v8/2026-10-28/isolated_entry_replay.py": "89542dba373ed9b4c8805ef9452591e8ac30dfa39e14fa52ef24964a280bce23",
+    "mathematics/fixed-target-v7/2026-10-27/accept_entry.py": "fe8197d6943c4decb7421bd1c162d7ec24045fdb3ea1215356249b4be620d69d",
+    "mathematics/fixed-target-v7/2026-10-27/entry-proof.json": "61b7ad43e20046d7cbf7157e3feb61696331731e7be418f6a5fa535c2eee8bae",
+    "manuscript/compact-v16/tools/recheck.py": "62b84b0e853f3623f73c9d7481ebad9a8df4165af04b2fbf68d8a94b170e79c0",
+    "manuscript/compact-v16/tools/check_revision_constants.py": "36216e619d37b719095dcbf4bf83158b496a9613e584585c70d0319877324f1f"
+  },
+  "stdout_sha256": "0ee10da67a4ad0efe16dfe2ed17c87dfd8334e7d96cc691a1f9b6f44ea7371ca",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

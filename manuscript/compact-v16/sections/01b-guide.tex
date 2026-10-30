@@ -1,0 +1,33 @@
+\subsection{Organization and notation}\label{ms:guide}\label{ms:notation}
+Section~\ref{v9:core:section} gives attainment, contact and reflection.
+The next two sections develop the defect and the conservation identity;
+Sections~\ref{v9:entry:section} and~\ref{short:acq:section} bound and
+localize a possible maximizer. Section~\ref{short:count:section} proves
+the independent local comparison, and Section~\ref{short:composition}
+combines these results. The appendices contain the Fourier bounds,
+rational constants, off-contact identity, full localization calculation,
+and reproduction instructions.
+
+The following table distinguishes the three scales used in the proof.
+Gap-specific parameters are introduced after the existence of a central
+gap has been established.
+\begin{center}\small
+\begin{tabular}{@{}P{.27\linewidth}P{.66\linewidth}@{}}
+\toprule
+Symbol & Meaning and scale \\
+\midrule
+$H$, $H/\sqrt n$ & Threshold for the original sum; its normal-standardized value. \\
+$B_0=\ind_{\{X>0\}}$, $p,q$ & Sign class and its probabilities for the original marginal. \\
+$m$, $\ell=m/(pq)$ & $m=\E X_+=\E X_-$; distance between conditional means. \\
+$W$, $\theta=\E W^2$ & $W=X-\E(X\mid B_0)$; conditional noise in original units. \\
+$U=W/\ell$, $s=\E U^2$, $\lambda=ns$ & Noise in count units; marginal and total noise variances. \\
+$t=np+H\sqrt{pq+s}=k+u$ & Count threshold, integer anchor, and phase. \\
+$a_0,a_1$, $d=a_0+a_1$ & Inward support displacements in count units. \\
+$J$, $D$ & Weighted support-gap sum and defect of the original law. \\
+\bottomrule
+\end{tabular}
+\end{center}
+The exact normalization is proved in \eqref{ms:bernoulli-coordinates}.
+It identifies the count-coordinate law with the original $X$ and leaves
+$H$ as its raw sum threshold. The signed moments are
+$\gamma=\E X^3$ and $\beta=\E[X|X|]$.

@@ -1,0 +1,116 @@
+{
+  "status": "PASS_REVISION_GEOMETRY_CONSTANTS",
+  "mathematical_scope": "Finite rational comparisons for revised probability and ray arguments; diagnostic finite-law evaluations of the joint budget. The manuscript supplies the analytic proof.",
+  "rational_checks": {
+    "sqrt10_lower": "2662311/2500000000000000",
+    "sqrt10_upper": "5259630921/1000000000000000000",
+    "pstar_above_left": "87722339/2000000000",
+    "midpoint_above_pstar": "113883/100000000",
+    "single_probability_endpoint_surplus": "336011/1600000000",
+    "negative_radius_squared_gt_3": "78730521/100000000",
+    "negative_boundary_surplus": "7131773117789097684941299/5120000000000000000000000000",
+    "negative_L_surplus": "116504153329/1400000000000",
+    "negative_Lprime_surplus": "52663/2500000",
+    "positive_radius_squared_gt_3": "5330772529/2500000000",
+    "positive_boundary_surplus": "5127171035344656196151979948487/656000000000000000000000000000000",
+    "positive_L_surplus": "1171569501321/35000000000000",
+    "positive_Lprime_surplus": "974859/12500000",
+    "negative_constant_second_derivative": "2057/1000"
+  },
+  "rays": [
+    {
+      "ray": "negative",
+      "boundary": "19461/10000",
+      "h_plus_c0_Q": "-2055131773117789097684941299/5120000000000000000000000000",
+      "L": "-1516504153329/1400000000000",
+      "Lprime": "-6552663/2500000"
+    },
+    {
+      "ray": "positive",
+      "boundary": "113273/50000",
+      "h_plus_c0_Q": "-90407171035344656196151979948487/656000000000000000000000000000000",
+      "L": "-57171569501321/35000000000000",
+      "Lprime": "-40974859/12500000"
+    }
+  ],
+  "finite_law_diagnostics": [
+    {
+      "name": "symmetric",
+      "atoms_after_merging": 2,
+      "variance": "1/4",
+      "homogeneous_cubic_slack": "0"
+    },
+    {
+      "name": "skew",
+      "atoms_after_merging": 2,
+      "variance": "4/25",
+      "homogeneous_cubic_slack": "0"
+    },
+    {
+      "name": "near_extremal",
+      "atoms_after_merging": 2,
+      "variance": "2434164902662311/10000000000000000",
+      "homogeneous_cubic_slack": "0"
+    },
+    {
+      "name": "left_probability_boundary",
+      "atoms_after_merging": 2,
+      "variance": "15/64",
+      "homogeneous_cubic_slack": "0"
+    },
+    {
+      "name": "right_probability_boundary",
+      "atoms_after_merging": 2,
+      "variance": "9951/40000",
+      "homogeneous_cubic_slack": "0"
+    },
+    {
+      "name": "three_point",
+      "atoms_after_merging": 3,
+      "variance": "51/16",
+      "homogeneous_cubic_slack": "0"
+    },
+    {
+      "name": "four_point",
+      "atoms_after_merging": 4,
+      "variance": "5",
+      "homogeneous_cubic_slack": "0"
+    },
+    {
+      "name": "several_outer_gaps",
+      "atoms_after_merging": 6,
+      "variance": "14/3",
+      "homogeneous_cubic_slack": "6"
+    },
+    {
+      "name": "tiny_remote_atom",
+      "atoms_after_merging": 3,
+      "variance": "100000099989999990199/100000000000000000000",
+      "homogeneous_cubic_slack": "0"
+    },
+    {
+      "name": "exact_collision",
+      "atoms_after_merging": 2,
+      "variance": "1",
+      "homogeneous_cubic_slack": "0"
+    },
+    {
+      "name": "nearby_four_point",
+      "atoms_after_merging": 4,
+      "variance": "4000000000000000001/4000000000000000000",
+      "homogeneous_cubic_slack": "0"
+    }
+  ],
+  "negative_controls": [
+    "wrong_probability_target",
+    "reversed_ray_curvature",
+    "inflated_gap_sum",
+    "missing_probability_mass",
+    "zero_atom_outside_central_gap_domain"
+  ],
+  "source_sha256": {
+    "sections/05-geometry-counts.tex": "b1138e9d7938d2692cb16a57bbfeb8788c4eaeb49b3a07eb77d1ecf423a109a5",
+    "sections/07-direct-acquisition.tex": "59d56935e230a6ffac5b287599317c4da6a6293aaa7487d20d91f6e840be9f20",
+    "tools/check_revision_geometry_constants.py": "dda816e32fc47afa6f6bea49888a91b434ef990e982390e66f4de31ab594b67f"
+  }
+}

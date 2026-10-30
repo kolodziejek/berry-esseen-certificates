@@ -1,0 +1,69 @@
+\section{Composition and the finite boundary}\label{short:composition}
+\begin{theorem}[Exclusion of a nonnegative-excess maximizer]\label{short:acquired-exclusion}
+Let $n\ge700$ and let $(P,H)$ attain the fixed-target maximum at $\CE$
+with $a(P,H)\ge0$. Suppose $C_{n-1}\le\CE$ and the structural
+inequality~\eqref{v9:entry:structural} holds. Then such a pair cannot exist.
+\end{theorem}
+\begin{proof}
+Theorem~\ref{v9:entry:theorem} gives $nD\le32.20665378$ and
+$|H|\le1.83605680$ for this same compactly supported law.
+Propositions~\ref{short:acq:geometry} and \ref{short:acq:strip} give
+the central gap and the following bounds. In
+\eqref{revision:canonical-decomposition}, identify the local theorem's
+$B$ with $B_0=\ind_{\{X>0\}}$. The variable
+$(B+U-p)/\sqrt{pq+s}$ is exactly the original $X$, so the threshold
+remains the original raw $H$. The hypotheses match as follows.
+\begin{center}\small
+\begin{tabular}{@{}P{.49\linewidth}P{.44\linewidth}@{}}
+\toprule
+Bound just obtained & Hypothesis of Theorem~\ref{short:count:local} \\
+\midrule
+$3/8<p<93/200$ & $p\in[3/8,93/200]$ \\
+$a_0,a_1\ge0$, $a_0+a_1<1/250$ & Nonnegative inward endpoints, sum at most $1/250$ \\
+$-3/5<U_0\le a_0$, $-a_1\le U_1<3/5$ & The stated closed conditional-support bounds \\
+$0\le\lambda<7/20$ & Positive-noise interval or separate zero-noise case \\
+$|H|\le1.83605680<46/25$ & The full threshold interval \\
+Independent copies of $X$ & The iid sum in the local comparison \\
+\bottomrule
+\end{tabular}
+\end{center}
+Positive noise gives $a(P,H)<-\lambda/100$; zero noise is Bernoulli
+and gives strictly negative excess by Schulz. Both contradict $a\ge0$.
+\end{proof}
+
+\begin{theorem}[Finite-base implication]\label{short:global}
+Assume a genuine finite base $C_j\le\CE$ for $1\le j\le699$,
+and use the external structural and strict finite-binomial theorems
+cited above.
+Then
+\[
+ C_n<\CE\ (n\ge700),\qquad C_n\le\CE\ (n\ge1),
+ \qquad \sup_{n\ge1}C_n=\CE.
+\]
+\end{theorem}
+\begin{proof}
+If $C_n<\CE$ fails above the base, choose the least failing index.
+Proposition~\ref{v9:core:attainment} and the reflection argument in
+Section~\ref{v9:core:reflection} supply an attained positive closed-event
+pair with $a\ge0$. The finite base and minimality give the
+predecessor $C_{n-1}\le\CE$. The preceding theorem excludes the pair.
+The independent Bernoulli limit~\eqref{ms:bernoulli-limit} gives equality
+for the global supremum.
+\end{proof}
+
+If only a base through $41$ were known, the same argument would locate
+a first failure in $42,\ldots,699$. The coarse theorem would still
+localize that maximizer, but the support and count comparisons at
+$n\ge700$ would not apply to it. The reflection inequality, including
+its endpoint-atom convention, is proved in
+Section~\ref{v9:core:reflection}.
+
+\paragraph{Role of finite verification.}
+The computational part of the proof consists of
+Propositions~\ref{v9:entry:two-pass-condition} and
+\ref{v9:entry:signed-condition}, used through
+Theorem~\ref{v9:entry:theorem}. The scalar comparisons in
+Sections~\ref{short:acq:section}--\ref{short:count:section} are
+separate analytical inequalities with short exact checks.
+Appendix~\ref{revision:reproducibility} gives the corresponding
+reproduction commands. Neither computation supplies the finite base.

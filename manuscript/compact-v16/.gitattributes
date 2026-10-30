@@ -1,0 +1,5 @@
+# Preserve captured stdout/stderr byte-for-byte, including compiler whitespace.
+publication/**/*.txt -whitespace linguist-generated=true
+publication/*.txt -whitespace linguist-generated=true
+publication/bounded/*.stdout.json linguist-generated=true
+publication/build/*.stdout.txt linguist-generated=true

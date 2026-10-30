@@ -1,0 +1,47 @@
+\section{Discussion}\label{ms:discussion}
+The fixed target determines both the third-moment penalty in the
+extremal problem and the coefficient in the conservation identity.
+The gap inequality explains their common factor $3+\sqrt{10}$.
+A bound on the remainder then restricts the defect of a maximizer,
+and count conditioning turns that geometric restriction into a strict
+comparison with a binomial law.
+
+The number $700$ is a common sufficient floor for two parts of the
+proof. The coarse bound satisfies $32.20665378/700<0.047$, as required
+by the geometric estimates. The local comparison also uses $n\ge700$
+in its binomial-mass and error bounds. Reducing the threshold therefore
+requires checking both parts: a sharper localization constant alone
+does not establish the comparison at smaller sample sizes. A different
+certified localization calculation or a comparison valid on a larger
+law region could reduce the remaining finite range, but either would
+need its own proof and verification.
+
+The small-noise estimate keeps its errors proportional to $\lambda$.
+The five-count estimate has an additive error of order $1/n$, so it is
+used on $1/100\le\lambda\le7/20$. At zero noise, the law is Bernoulli
+and the strict finite-binomial theorem applies. These three cases give
+the exclusion at $n\ge700$ under the hypotheses stated above.
+The base cases through $699$ are not treated here; they remain the
+additional requirement for the global sharp conclusion.
+
+\paragraph{AI assistance.}
+AI systems were used extensively for mathematical exploration, exact
+checking programs, source and bibliography comparisons, and drafting
+and revision. Separate AI review roles examined component arguments;
+their agreement is not a substitute for mathematical proof or external
+human review. Failed arguments remain diagnostics, not premises. The
+authors are responsible for the content and presentation.
+
+\paragraph{Sources.}
+The \href{https://github.com/kolodziejek/berry-esseen-certificates/tree/manuscript/revision-v16-20261029/manuscript/compact-v16}{revision source}
+contains the proof, scalar checkers and dated execution records
+in \path{manuscript/compact-v16/}. The certificate-discharge record is
+\path{publication/certificate-audit-20261030/}; its manifest identifies
+the exact sources and PDF by hash. The preceding editorial revision
+is preserved at the
+\href{https://github.com/kolodziejek/berry-esseen-certificates/tree/77d7b4b2510a6ce5b2d8e162bd2a78ecbecec1b5/manuscript/compact-v16}{immutable pre-audit snapshot}.
+The retained entry certificate is also available at
+\href{https://github.com/kolodziejek/berry-esseen-certificates/tree/cd10654222f4b63d50f9d8f108597b140d263ec5}{the original immutable baseline}.
+Appendix~\ref{revision:reproducibility} identifies the certificate, its
+exact arithmetic, and the commands for checking this revision.
+A document build checks presentation, not theorem validity.

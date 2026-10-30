@@ -1,0 +1,153 @@
+{
+  "status": "PASS_REVISION_FOUNDATION_CONSTANTS",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "scope": "Exact scalar/polynomial checks; analytical implications separately proved in text and review. No entry replay or finite-base theorem.",
+  "checks": [
+    "positive ordered pi endpoints",
+    "sqrt10 directed squares",
+    "narrow CE lower bound",
+    "narrow CE upper bound",
+    "positive Fourier determinant coefficients",
+    "Fourier adjugate numerator",
+    "Fourier L numerator from 1-xJ",
+    "minorant global factorization",
+    "minorant derivative factorization",
+    "minorant maximum below one via sqrt3<11/6",
+    "minorant vanishes at threshold",
+    "negative 0: nonnegative quadratic coefficient",
+    "negative 0: decreasing quadratic",
+    "negative 0: minimum greater than 3/5",
+    "negative 101/10000: nonnegative quadratic coefficient",
+    "negative 101/10000: decreasing quadratic",
+    "negative 101/10000: minimum greater than 3/5",
+    "positive 0: nonnegative quadratic coefficient",
+    "positive 0: increasing quadratic",
+    "positive 0: minimum greater than 3/5",
+    "positive 101/10000: nonnegative quadratic coefficient",
+    "positive 101/10000: increasing quadratic",
+    "positive 101/10000: minimum greater than 3/5",
+    "exact error-envelope difference identity",
+    "error-envelope difference positive on nonnegative ray",
+    "Eminus nonnegative and convex",
+    "W second derivative negative square identity",
+    "P(1/100) strict lower bound",
+    "P(7/20) strict lower bound",
+    "negative: t squared exceeds 3",
+    "negative: h nonnegative",
+    "negative: boundary upper bound",
+    "negative: L upper bound",
+    "negative: L prime upper bound",
+    "negative: L second derivative constant negative",
+    "positive: t squared exceeds 3",
+    "positive: h nonnegative",
+    "positive: boundary upper bound",
+    "positive: L upper bound",
+    "positive: L prime upper bound",
+    "positive: L second derivative constant negative",
+    "probability endpoint bound",
+    "pstar between 3/8 and 21/50 by directed squares",
+    "symmetric Bernoulli: mass one",
+    "symmetric Bernoulli: no zero atom and both signs",
+    "symmetric Bernoulli: inward displacements",
+    "symmetric Bernoulli: exact radical cancellation",
+    "symmetric Bernoulli: nonnegative budget surplus",
+    "skew Bernoulli: mass one",
+    "skew Bernoulli: no zero atom and both signs",
+    "skew Bernoulli: inward displacements",
+    "skew Bernoulli: exact radical cancellation",
+    "skew Bernoulli: nonnegative budget surplus",
+    "nearby three atoms: mass one",
+    "nearby three atoms: no zero atom and both signs",
+    "nearby three atoms: inward displacements",
+    "nearby three atoms: exact radical cancellation",
+    "nearby three atoms: nonnegative budget surplus",
+    "nearby four atoms: mass one",
+    "nearby four atoms: no zero atom and both signs",
+    "nearby four atoms: inward displacements",
+    "nearby four atoms: exact radical cancellation",
+    "nearby four atoms: nonnegative budget surplus",
+    "tiny far atom: mass one",
+    "tiny far atom: no zero atom and both signs",
+    "tiny far atom: inward displacements",
+    "tiny far atom: exact radical cancellation",
+    "tiny far atom: nonnegative budget surplus",
+    "exact support collision: mass one",
+    "exact support collision: no zero atom and both signs",
+    "exact support collision: inward displacements",
+    "exact support collision: exact radical cancellation",
+    "exact support collision: nonnegative budget surplus",
+    "five atoms with noncentral outer gap: mass one",
+    "five atoms with noncentral outer gap: no zero atom and both signs",
+    "five atoms with noncentral outer gap: inward displacements",
+    "five atoms with noncentral outer gap: exact radical cancellation",
+    "five atoms with noncentral outer gap: nonnegative budget surplus",
+    "noncentral outer gap has positive surplus"
+  ],
+  "negative_controls_rejected": [
+    "lower CE endpoint raised beyond upper bound",
+    "upper CE endpoint lowered beyond lower bound",
+    "altered Fourier numerator identity",
+    "overstated 4/5 small-noise minimum",
+    "overstated lower-noise quartic margin",
+    "incorrect common probability endpoint margin"
+  ],
+  "small_noise_minima": {
+    "negative;t=0": "933/1000",
+    "negative;t=101/10000": "3849022385619/5000000000000",
+    "positive;t=0": "156/125",
+    "positive;t=101/10000": "3597/3125"
+  },
+  "quartic_values": {
+    "1/100": "19409025049390417531054861/8386908849900000000000000000",
+    "7/20": "16788798784733560132189/273858248160000000000000"
+  },
+  "radial_values": {
+    "negative": {
+      "boundary": "-2055131773117789097684941299/5120000000000000000000000000",
+      "L": "-1516504153329/1400000000000",
+      "Lprime": "-6552663/2500000"
+    },
+    "positive": {
+      "boundary": "-90407171035344656196151979948487/656000000000000000000000000000000",
+      "L": "-57171569501321/35000000000000",
+      "Lprime": "-40974859/12500000"
+    }
+  },
+  "actual_law_diagnostics": [
+    {
+      "name": "symmetric Bernoulli",
+      "atoms_after_collision_merge": 2,
+      "budget_surplus": "0"
+    },
+    {
+      "name": "skew Bernoulli",
+      "atoms_after_collision_merge": 2,
+      "budget_surplus": "0"
+    },
+    {
+      "name": "nearby three atoms",
+      "atoms_after_collision_merge": 3,
+      "budget_surplus": "0"
+    },
+    {
+      "name": "nearby four atoms",
+      "atoms_after_collision_merge": 4,
+      "budget_surplus": "0"
+    },
+    {
+      "name": "tiny far atom",
+      "atoms_after_collision_merge": 3,
+      "budget_surplus": "0"
+    },
+    {
+      "name": "exact support collision",
+      "atoms_after_collision_merge": 2,
+      "budget_surplus": "0"
+    },
+    {
+      "name": "five atoms with noncentral outer gap",
+      "atoms_after_collision_merge": 5,
+      "budget_surplus": "72/25"
+    }
+  ]
+}

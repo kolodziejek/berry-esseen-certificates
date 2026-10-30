@@ -1,0 +1,101 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem,fancyvrb}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hyphens]{url}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark,placeins}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\hypersetup{pdftitle={A fixed-target approach to the sharp iid Berry--Esseen inequality},
+ pdfauthor={Bartosz Kołodziejek and Kacper Rodziewicz}}
+\setlength{\emergencystretch}{2em}
+\setcounter{tocdepth}{1}
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+  {2.5ex \@plus1ex \@minus.2ex}{0.8ex \@plus.2ex}%
+  {\normalfont\normalsize\bfseries}}
+\makeatother
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{condition}[theorem]{Certificate condition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\CE}{C_{\mathrm E}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\pos}[1]{(#1)_+}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\iid}{\mathrm{iid}}
+\title{A fixed-target approach to the sharp iid\\
+Berry--Esseen inequality\thanks{This paper was written with substantial
+assistance from AI systems; see the end of Section~\ref{ms:discussion}.}}
+\author{Bartosz Ko{\l}odziejek \and Kacper Rodziewicz}
+\date{30 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The conjectured sharp iid Berry--Esseen constant is
+$\CE=(3+\sqrt{10})/(6\sqrt{2\pi})$. Using the cited structural and
+finite-binomial bounds, we prove that the sharp inequality for every
+sample size through $699$ implies the sharp inequality for all sample
+sizes, strictly above $699$. The localization step is computer-assisted,
+with exact rational verification. The finite base is not proved here.
+
+The argument studies a law and threshold maximizing the excess above
+the target $\CE$ at a fixed sample size. The first-order optimality
+condition and zero-bias integration give an exact identity involving
+a nonnegative support-gap defect. Its lattice specialization is a
+moment--span inequality, and its zero case selects Esseen's extremal
+two-point law. Exact rational localization, using the sharp bound at
+the preceding index, bounds this defect and the threshold. For
+$n\ge700$, the resulting law lies in an explicit region around that
+two-point law. A direct comparison with a binomial sum then gives
+strictly negative excess for every law in this region. This local
+comparison is a separate result with explicit support and noise bounds;
+it does not require extremality or the predecessor inequality.
+\end{abstract}
+\begingroup\small
+\makeatletter
+\renewcommand{\l@section}{\@dottedtocline{1}{0em}{1.5em}}
+\makeatother
+\tableofcontents
+\endgroup
+\clearpage
+\input{sections/01-introduction}
+\input{sections/01b-guide}
+\input{sections/02-fixed-target}
+\input{sections/02b-moment-domain}
+\input{sections/05-geometry-counts}
+\input{sections/03-conservation}
+\input{sections/04-fixed-entry}
+\input{sections/07-direct-acquisition}
+\input{sections/08-direct-comparison}
+\input{sections/09-composition}
+\input{sections/10-discussion}
+\appendix
+\input{appendices/fixed-fourier}
+\input{appendices/normalization}
+\input{appendices/off-contact}
+\input{appendices/entry-details}
+\input{appendices/reproducibility}
+\begingroup\small\raggedright\urlstyle{same}
+\bibliographystyle{plainnat}
+\bibliography{references-classical,references-modern-a,references-modern-b,references-added}
+\endgroup
+\end{document}

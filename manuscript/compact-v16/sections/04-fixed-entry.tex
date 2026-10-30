@@ -1,0 +1,133 @@
+\section{Quantitative localization}\label{v9:entry:section}
+The zero-defect law is now known. We need a quantitative statement
+strong enough to control a possible extremizer. Conservation reduces
+this to an upper bound for its remainder. Contact bounds the support,
+which permits higher-moment and Fourier estimates. Iterating these
+estimates gives the following theorem; its two principal outputs for
+the next section are $nD\le32.20665378$ and $|H|\le1.83605680$.
+
+\begin{theorem}[Fixed-target coarse localization]\label{v9:entry:theorem}
+Let $n\ge42$ be an actual index and let an attained fixed-target pair
+at $\CE$ have $a\ge0$. Assume $C_{n-1}\le\CE$ and the external structural
+inequality~\eqref{v9:entry:structural}. Then the complete probability cover
+specified in Appendix~\ref{revision:entry-details} applies to that pair,
+and simultaneously
+\begin{gather*}
+ \mathcal R_c\le2.1995174,\qquad nD\le32.20665378,
+ \qquad D\le0.76682509,\\
+ \rho\le71527/48000,\qquad |\beta|\le0.50549963,
+ \qquad |H|\le1.83605680,\\
+ \supp P\subset(-157/50,157/50).
+\end{gather*}
+\end{theorem}
+The analytical proof and the computer-assisted
+Propositions~\ref{v9:entry:two-pass-condition} and
+\ref{v9:entry:signed-condition} are in
+Appendix~\ref{revision:entry-details}. The Fourier bounds in
+Appendix~\ref{v9:fourier:section} apply uniformly to every actual
+$n\ge42$, even when the law and threshold vary with $n$.
+Evaluating their scalar majorants at the floor $N=42$ is therefore
+sufficient; it does not set the actual sample size equal to $42$.
+
+\subsection{How the predecessor bound controls support}
+\begin{lemma}[Contact bound from the predecessor inequality]
+\label{opus:predecessor-support}
+Let $(P,H)$ maximize the excess at $c=\CE$, with $n\ge42$,
+$a\ge0$ and $C_{n-1}\le c$. Put
+$F_v^{\rm G}(x)=\Phi(x/\sqrt v)$ and
+$\eta_n=n(\sqrt{n/(n-1)}-1)-1/2$. Define
+\[
+ \frac{H_n(H,t)}{n^{3/2}}
+ =F_{n-1}^{\rm G}(H-t)-F_n^{\rm G}(H)
+ +t(F_n^{\rm G})'(H)-\frac{t^2-1}{2}(F_n^{\rm G})''(H).
+\]
+Every support point satisfies
+\[
+ 0\le H_n(H,t)+c\{-|t|^3+\tfrac32\rho t^2+3\beta t+\rho\eta_n\}-na.
+\]
+\end{lemma}
+\begin{proof}
+At a support point the contact expression
+\eqref{v9:core:contact} equals zero. Substitute
+\[
+ \Pp(S_{n-1}\le H-t)\le F_{n-1}^{\rm G}(H-t)
+                           +c\rho/\sqrt{n-1}
+\]
+and $F=F_n^{\rm G}(H)+(c\rho+a)/\sqrt n$ into that equality.
+Collecting the Gaussian terms gives the displayed $H_n$;
+the remaining terms give the asserted inequality. The estimate uses
+the closed distribution function at the same threshold $H-t$.
+\end{proof}
+A support point is impossible when the right side is negative.
+The Gaussian expansion and radial derivative estimates in the proof of
+Theorem~\ref{v9:entry:initial} make this exclusion effective on entire
+exterior rays. This is how the predecessor assumption enters both
+coarse localization and Proposition~\ref{short:acq:strip}.
+
+\subsection{How the bounds improve}
+The steps have distinct purposes:
+\begin{enumerate}[leftmargin=*]
+\item The structural inequality bounds $\rho$. Contact and the sharp
+predecessor then bound the entire support, uniformly in $H$.
+\item Bounded support supplies higher-moment bounds and an event for
+$X-X'$ under two independent copies of the original law. This event
+controls the nonzero-frequency peaks in the Fourier integral.
+\item Two coarse passes bound the remainder and then the defect,
+proving that zero is outside the support. Thus the original law has
+an actual central gap.
+\item Four signed-moment passes retain the gap geometry and the signs
+of the moment terms. They improve the same-law bounds and give the
+outputs of the theorem.
+\end{enumerate}
+Choose rational constants $0<c_-<\CE<c_+$ and $0<\phi_l<\phi(0)$;
+their explicit values and proofs are given in
+Appendices~\ref{revision:entry-details} and~\ref{ms:normalization}.
+For example, suppose the coefficient bounds on a cell with $\rho\ge l$
+give, for $v=c_-,c_+$,
+\[
+ \mathcal R_c\le\max_v\{B_v+F_v|H|-Q_vH^2\},\qquad Q_v>0.
+\]
+Completing the square bounds this by
+$\max_v(B_v+F_v^2/(4Q_v))$. An outward rational upper bound $T$ with
+$T<Nc_-l$ first establishes the positivity needed in
+Corollary~\ref{v9:core:phase-price}. Only then do the larger curvatures
+$Q_v+(c_-l-T/N)/2$ give a bound $U$ for $\mathcal U$, and hence
+$nD\le6U/\phi_l$. This explains both the update and its order:
+$U$ bounds a nonnegative expression, not the original remainder.
+
+\subsection{Why the finite verification covers all witnesses}
+\begin{proposition}[Soundness of the finite localization]
+\label{revision:entry-soundness}
+Suppose the enclosure and exclusion rules proved in
+Appendices~\ref{v9:fourier:section} and \ref{revision:entry-details}
+are evaluated in the stated directions, every required inequality
+passes, and every closed-cover incidence is checked. Then the resulting
+bounds hold simultaneously for every attained nonnegative-excess pair
+in the initial domain at every actual $n\ge42$ with the sharp predecessor.
+\end{proposition}
+\begin{proof}
+The initial $24$ closed $\rho$-cells cover the moment range supplied
+by Theorem~\ref{v9:entry:initial}. Fix one possible witness in one of
+these cells. Every subdivision covers its parent. Intersecting necessary
+moment inequalities keeps this witness; the original $\beta$-interval
+is restored separately for each $\gamma$-slice. A child is discarded
+only by an incompatible necessary inequality. In particular, a positive
+numerator with zero denominator is treated using the original moment
+matrix, and a zero-over-zero correction is dropped.
+
+For each surviving child, a support bound is proved before higher
+moments are used. The actual-event and Fourier estimates then bound
+the remainder, and the ordered update bounds the nonnegative expression
+in conservation. Taking maxima of upper bounds and minima of lower
+bounds can enlarge the possible set but cannot remove the fixed witness.
+A parent disappears only if all descendants have been excluded. Induction
+over the two coarse and four signed passes preserves this invariant.
+
+The final closed probability panels cover the surviving probability
+intervals. At a shared endpoint the cell contributes to every incident
+panel. Pooling the simultaneous bounds therefore retains the conclusions
+for the same law. Finally, the analytical all-index comparisons in the
+Fourier appendix justify each floor evaluation at every actual $n\ge42$.
+The numbers of processed boxes are accounting checks, not substitutes
+for this coverage argument.
+\end{proof}

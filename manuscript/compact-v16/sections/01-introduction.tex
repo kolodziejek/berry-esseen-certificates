@@ -1,0 +1,206 @@
+\section{The problem, results, and proof strategy}\label{ms:introduction}
+\subsection{The problem and the candidate constant}
+Let $\mathcal P$ be the laws on $\R$ with mean zero, variance one and
+finite third absolute moment $\rho(P)=\E|X|^3$. For independent copies
+$X_1,\ldots,X_n$ of $P$, put $S_n=\sum_iX_i$ and
+\[
+ \Delta_n(P)=\sup_{H\in\R}|\Pp_P(S_n\le H)-\Phi(H/\sqrt n)|,
+ \qquad C_n=\sup_{P\in\mathcal P}\frac{\sqrt n\,\Delta_n(P)}{\rho(P)}.
+\]
+Here $\Phi$ and $\phi$ are the standard normal distribution function
+and density. The sharp-constant conjecture is
+\begin{equation}\label{ms:conjecture}
+ \sup_{n\ge1}C_n=\CE,
+ \qquad \CE=\frac{3+\sqrt{10}}{6\sqrt{2\pi}}=0.409732\ldots.
+\end{equation}
+Throughout, $H$ is a threshold for the unnormalized sum $S_n$, and
+a terminating decimal in an inequality denotes the corresponding exact
+rational number. Affine standardization gives the equivalent result
+for any mean and positive variance, with third absolute central moment
+divided by the cube of the standard deviation.
+
+Berry and Esseen established the classical order $n^{-1/2}$
+\cite{Berry1941,Esseen1942,Esseen1945}. Esseen's lower bound
+\cite{Esseen1956} explains the proposed constant. If
+$p_*=(4-\sqrt{10})/2$, $q_*=1-p_*$ and
+$X=(B-p_*)/\sqrt{p_*q_*}$ for $B\sim\operatorname{Bernoulli}(p_*)$,
+the fixed-law lattice limit gives
+\begin{equation}\label{ms:bernoulli-limit}
+ \lim_{n\to\infty}\frac{\sqrt n\Delta_n(P)}{\rho(P)}
+ =\frac{3+q_*-p_*}{6\sqrt{2\pi}(p_*^2+q_*^2)}=\CE.
+\end{equation}
+Indeed $p_*^2+q_*^2=10-3\sqrt{10}$ and
+$(3+q_*-p_*)/(p_*^2+q_*^2)=3+\sqrt{10}$.
+Every constant below $\CE$ therefore fails for a sufficiently large sum
+of this one law. The upper conjecture is associated with Zolotarev
+\cite{Zolotarev1966,Zolotarev1967}; Schulz proves the strict finite-index
+bound for every nondegenerate Bernoulli law \cite{Schulz2016}.
+
+
+\subsection{Results and their hypotheses}\label{ms:scope}
+The results have three distinct roles. We state their interfaces here;
+the cited theorems give their complete hypotheses and proofs.
+\begin{center}\small
+\begin{tabular}{@{}P{.25\linewidth}P{.68\linewidth}@{}}
+\toprule
+Result & Conclusion and required inputs \\
+\midrule
+Local comparison, Theorem~\ref{short:count:local} &
+For $n\ge700$, every law in its specified conditional-support region,
+with $p\in[3/8,93/200]$, $0<\lambda\le7/20$ and $|H|\le46/25$,
+has excess below $-\lambda/100$. The zero-noise excess is strictly
+negative. This statement uses only its explicit law hypotheses. \\
+Localization, Theorem~\ref{v9:entry:theorem} &
+A maximizer with nonnegative excess at $n\ge42$ satisfies
+$nD\le32.20665378$ and $|H|\le1.83605680$, under
+$C_{n-1}\le\CE$ and the structural inequality. Its proof includes
+two exact computational propositions. \\
+Global implication, Theorem~\ref{short:global} &
+Using the cited structural and binomial theorems,
+a base $C_j\le\CE$ for every $j\le699$ implies $C_n<\CE$ for
+$n\ge700$ and $\sup_n C_n=\CE$. The finite base remains open here. \\
+\bottomrule
+\end{tabular}
+\end{center}
+The structural input is displayed in \eqref{v9:entry:structural}; the
+finite-binomial input is \eqref{short:count:binomial}.
+Propositions~\ref{v9:entry:two-pass-condition} and
+\ref{v9:entry:signed-condition} establish the finite localization
+bounds. Their exact replay is recorded in Appendix~\ref{revision:reproducibility}.
+The analytical reduction, the whole-domain coverage, and the
+correspondence of the checking code with those inequalities are the
+components of this computational proof. The certificate checks have
+been discharged; the finite base through $699$ remains a hypothesis
+of the global implication.
+
+\subsection{Why the defect controls a maximizer}
+At a fixed $n$, maximize the difference between the two sides of the
+candidate inequality:
+\begin{equation}\label{v9:intro:excess}
+ a(P,H)=\sqrt n\{\Pp_P(S_n\le H)-\Phi(H/\sqrt n)\}-\CE\rho(P).
+\end{equation}
+Proposition~\ref{v9:core:attainment} proves attainment. Its first-order
+condition bounds $y\mapsto\Pp(S_{n-1}\le H-y)$ by an explicit
+piecewise cubic function that agrees with it on the closed support.
+This contact condition allows us to use the geometry of that support.
+
+Let $\tau(t)=\E[X\ind_{\{X\ge t\}}]$ be the zero-bias density and
+$J=\sum_g\tau_g|g|^2$, where $g$ runs over bounded support gaps and
+$\tau_g$ is the constant value of $\tau$ there. A lattice law of span
+$h$ has $J\ge h$; if every successive gap has length $h$, then $J=h$.
+Thus $J$ measures gap size with zero-bias weights. The inequality
+\[
+ \gamma+3J\le(3+\sqrt{10})\rho,\qquad \gamma=\E X^3,
+\]
+proved in Lemma~\ref{ms:physical-defect}, extends the moment--span
+bound from lattice laws to arbitrary standardized laws. Its slack
+\[
+ D=(3+\sqrt{10})\rho-\gamma-3J
+\]
+is nonnegative and vanishes exactly at the positive-skew Bernoulli
+law in \eqref{ms:bernoulli-limit}. The lattice consequence and its
+reflection are proved in Corollary~\ref{opus:lattice-gap}.
+
+Integrating the contact relation against $\tau$ in two ways gives the
+conservation identity of Theorem~\ref{revision:contact-conservation}.
+Since $\CE=(3+\sqrt{10})\phi(0)/6$, its two leading moment terms
+combine into a multiple of $D$. Solving for the excess gives
+\[
+ a=\frac{\mathcal R_c-n\CE\rho(1-e)
+             -n\phi(0)eD/6-n^{3/2}L}{n+H^2},
+ \qquad e=\exp(-H^2/(2n)).
+\]
+Here $L\ge0$ is a weighted contribution from the law of $H-S_{n-1}$
+inside the support gaps, and $\mathcal R_c$ is an explicitly defined
+remainder. The three subtracted terms are nonnegative. A nonnegative
+excess therefore requires $n\phi(0)eD/6\le\mathcal R_c$.
+Once localization bounds both $\mathcal R_c$ and $|H|$, this bounds
+$nD$. The uniform bounds come from Theorem~\ref{v9:entry:theorem},
+not from a fixed-law asymptotic expansion.
+
+The predecessor hypothesis supplies an upper bound for
+$\Pp(S_{n-1}\le H-t)$ in the contact condition, which excludes remote
+support points; see \eqref{v9:entry:contact}. This support argument is
+used both in coarse localization and in the final two-ray estimate.
+With $nD\le32.20665378$, the geometry at $n\ge700$ gives
+$3/8<p<93/200$, inward support displacement below $1/250$ and
+$\lambda<7/20$. Count conditioning then compares the law with a
+binomial sum. One threshold count controls noise up to $1/100$;
+five neighboring counts control the remaining interval. Both
+comparisons keep all probabilities entering from other counts.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[node distance=4mm,>=Latex,
+ box/.style={draw,rounded corners,align=center,text width=.86\linewidth,
+ inner sep=5pt,font=\small}]
+\node[box] (contact) {Attainment and contact; nonnegative gap defect $D$};
+\node[box,below=of contact] (identity) {Zero-bias conservation: an upper bound for the remainder controls $nD$};
+\node[box,fill=gray!10,below=of identity] (entry) {Structural inequality + predecessor support bound + finite verification\\
+Coarse localization: $nD\le32.20665378$, $|H|\le1.83605680$};
+\node[box,below=of entry] (local) {For $n\ge700$: geometry and support bounds place the maximizer\\
+in the region of the local binomial comparison; the excess is negative};
+\node[box,line width=.8pt,below=of local] (global) {Finite base through $699$ (unproved here) + least-failure argument\\
+Global sharp inequality, conditional on the finite base};
+\draw[->] (contact)--(identity);
+\draw[->] (identity)--(entry);
+\draw[->] (entry)--(local);
+\draw[->] (local)--(global);
+\end{tikzpicture}
+\caption{The proof's dependencies. The shaded step uses the specified
+finite verification; the final step also requires the unproved finite base.
+The local comparison is a theorem for its explicit law region, independently
+of the preceding localization.}
+\label{opus:proof-flow}
+\end{figure}
+
+\FloatBarrier
+\subsection{The computer-assisted localization}
+Analysis restricts a possible maximizer to a bounded moment region.
+It also bounds the remainder by functions of moment and support
+parameters. The computation encloses these functions on finitely many
+closed boxes. Each box is either excluded by a necessary inequality,
+or assigned bounds valid throughout that box. The boxes cover their
+parent regions, including shared boundaries, so every possible
+maximizer retains a valid bound.
+
+The certificate is a compact record of this process. It stores
+checkpoints for $24$ third-moment cells over four signed-moment passes,
+including support radii, bounds and descendant counts; the individual
+$11264$ nominal boxes are reconstructed. Two preliminary coarse passes
+are reconstructed as well. The exporter chooses a successful sequence
+of passes and rounds its reported bounds outward. The acceptor
+recomputes the prescribed subdivisions and verifies their inequalities
+and output bounds.
+
+All numerical acceptance uses integers and exact rational numbers,
+with directed rational enclosures for roots, exponentials and Gaussian
+constants. The exploratory program and the checker share the routine
+\texttt{signed\_core.stage}; acceptance is an exact replay of that
+calculation. We checked the correspondence of these routines with the
+mathematical inequalities, including divisions, signed products and
+closed endpoints. Separate exact calculations check the coarse updates,
+Fourier formulas and reported theorem constants. This is an ordinary
+computer-assisted proof: it relies on the audited programs and Python's
+integer arithmetic, without a proof-assistant formalization.
+Appendix~\ref{revision:reproducibility} gives the correspondence records,
+reproduction commands and the recorded execution environment.
+
+Subdivision and rigorous enclosure have established precedents in
+computer-assisted proofs \cite{SolovyevHales2013}. Numerical optimization
+also appears in Berry--Esseen estimates \cite[Section~2]{Shevtsova2011}.
+The custom JSON format organizes this calculation; the rigor comes from
+the valid enclosures, coverage and correct implementation of the rules.
+
+\subsection{Related work}
+Fourier and structural moment inequalities progressively improved the
+universal upper bound \cite{vanBeek1972,Prawitz1972,Tyurin2010,
+Shevtsova2011,Shevtsova2013}. We use Shevtsova's structural inequality
+explicitly in localization. Recent manuscripts report smaller upper
+constants \cite{xiao2026berryesseen,lin2026berryesseen}, and He and Cheng
+report eventual sharpness beyond a uniform, very large threshold
+\cite{hecheng2026eventually}. Work on independent arrays and extremizers
+addresses the related non-iid problem \cite{BellIndependent2026,
+BellExtremizers2026}. These recent reported results are not used in
+our proof. An earlier AI-assisted working draft is on Hexagon
+\cite{rodziewiczkolodziejek2026momentdefects}.

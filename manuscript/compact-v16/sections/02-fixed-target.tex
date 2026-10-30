@@ -1,0 +1,136 @@
+\section{Fixed-target extremizers and contact}
+\label{v9:core:section}
+
+We maximize the difference between the two sides of the desired
+inequality. Its sign detects failure of the target bound, while the
+coefficient of the third absolute moment is fixed in advance.
+Throughout, sums have
+independent identically distributed summands with mean zero, variance one
+and finite third absolute moment $\rho$. Fix $n\ge2$, $c>0$, and a real
+raw sum threshold $H$. Set
+\begin{gather*}
+ z=H/\sqrt n,\quad F=\Pp(S_n\le H),\quad
+ a=\sqrt n\{F-\Phi(z)\}-c\rho,\\
+ \phi_z=\phi(z),\quad\beta=\E[X|X|],\quad\gamma=\E X^3.
+\end{gather*}
+In particular $a$ is not divided by $\rho$.
+
+\subsection{Attainment, contamination and the entire closed support}
+
+\begin{proposition}\label{v9:core:attainment}
+For each fixed $n$ and $c>0$, the supremum of $a$ over these laws and
+thresholds is attained, and the closed-CDF discrepancy at every attaining
+pair is positive.
+At every maximizing pair,
+\begin{align}
+ I(y)={}&n^{3/2}\{h(y)-F\}+ny\phi_z
+       +\tfrac12H\phi_z(y^2-1)\notag\\
+ &+\tfrac32c\rho(y^2-1)-c\{|y|^3-\rho-3y\beta\}\le0,
+ \qquad h(y)=\Pp(S_{n-1}\le H-y),\label{v9:core:contact}
+\end{align}
+with equality on the whole closed support. That support is compact.
+Neither statement assumes $a\ge0$ or $H\ge0$.
+\end{proposition}
+Equivalently, $\Delta=Q-h\ge0$ everywhere and $\Delta=0$ on the closed
+support, where
+\begin{equation}\label{v9:core:Q}
+ Q(y)=F+\frac{H\phi_z+c\rho}{2n^{3/2}}
+ -\frac{n\phi_z+3c\beta}{n^{3/2}}y
+ -\frac{H\phi_z+3c\rho}{2n^{3/2}}y^2
+ +\frac c{n^{3/2}}|y|^3.
+\end{equation}
+
+The contact condition is a first-order optimality condition: replacing one
+summand by a fixed value $y$ gives the conditional probability $h(y)$.
+After recentering and rescaling the perturbed law, the directional
+change of the excess is nonpositive. Its average against $P$ is zero,
+which forces equality on the closed support. The function $Q$ is
+piecewise cubic because it contains $|y|^3$.
+
+\begin{proof}
+Write $a^*$ for the supremum. Since $\rho\ge1$ and the discrepancy is
+at most one, $a^*\le\sqrt n-c$. Symmetric Bernoulli evaluated at $H=n$
+gives $a^*\ge\sqrt n(1-\Phi(\sqrt n))-c>-c$.
+For a maximizing sequence, $a_j\to a^*$ and
+$c\rho_j\le\sqrt n-a_j$ give a common third-moment ceiling.
+The discrepancies satisfy $\sqrt n(F_j-\Phi(H_j/\sqrt n))
+=a_j+c\rho_j\ge a_j+c>\eta$ eventually for some $\eta>0$.
+Chebyshev bounds the negative threshold tail by $n/H_j^2$;
+the positive discrepancy is at most the normal tail, also at most
+$n/H_j^2$. Thus $H_j$ is bounded.
+
+Tightness gives a subsequence $P_j\Rightarrow P$, $H_j\to H$ and
+$\rho_j\to b$. The common third-moment ceiling $M$ gives tail
+bounds $\int_{|x|>K}x^2dP_j\le M/K$ and
+$\int_{|x|>K}|x|dP_j\le M/K^2$. Bounded continuous truncations
+therefore preserve mean and variance. Lower semicontinuity gives
+$1\le\rho(P)\le b$. For fixed $n$, the sum laws converge weakly.
+Applying the closed-set inequality first at $H+t$ and then letting
+$t\downarrow0$ gives
+$\limsup F_j(H_j)\le F_P(H)$, including an atom at $H$.
+Consequently
+\[
+ a(P,H)\ge a^*+c\{b-\rho(P)\}\ge a^*.
+\]
+Maximality forces equality and $\rho(P)=b$. Thus third moments converge along this maximizing sequence. The discrepancy remains positive since $a^*+c\rho\ge a^*+c>0$.
+
+The contact inequality is a first-variation condition. To obtain it,
+contaminate the raw marginal by
+$(1-\epsilon)P+\epsilon\delta_y$. Its mean is $\epsilon y$,
+variance $v_\epsilon=1+\epsilon(y^2-1)-\epsilon^2y^2$, and centered
+third absolute moment has derivative $|y|^3-\rho-3y\beta$ at zero.
+The last assertion follows by dominated differentiation of
+$|x-\epsilon y|^3$, with bound $3|y|(|x|+|y|)^2$.
+Evaluate the standardized law at the standardized image of the fixed
+raw event $S_n\le H$. The raw event probability is a polynomial in
+$\epsilon$, with derivative $n(h(y)-F)$ even at an atom collision.
+The normal argument is
+$(H-n\epsilon y)/\sqrt{nv_\epsilon}$, whose derivative is
+$-\sqrt n y-H(y^2-1)/(2\sqrt n)$.
+The one-sided derivative of the excess is exactly \eqref{v9:core:contact};
+maximality makes it nonpositive.
+
+Its integral against $P$ is zero. All terms are integrable.
+The closed-event map $h$ is upper semicontinuous; at an atom it takes
+the larger one-sided value. Thus $I$ is upper semicontinuous. Strict
+negativity at a closed-support point would hold with a uniform negative
+margin on a neighborhood of positive $P$-mass, contradicting its zero
+integral. Finally $I(y)\le-c|y|^3+C_2y^2+C_1|y|+C_0$ for constants
+depending on this pair. It is strictly negative on both sufficiently
+distant rays, proving compact support.
+\end{proof}
+
+\subsection{Reflection, equality, and the first unresolved index}
+\label{v9:core:reflection}
+The sign of the attained maximum detects failure of the strict bound $C_n<c$,
+including equality. If $C_n$ denotes the supremum of the normalized
+absolute discrepancy, reflection gives, including an atom at $H$,
+\[
+ \Pp(-S_n\le-H)-\Phi(-z)
+ =\Phi(z)-\Pp(S_n<H)\ge\Phi(z)-F.
+\]
+Thus each negative closed-CDF error is bounded by a positive closed-CDF
+error of the reflected law; equality at an atom is not assumed.
+Consequently $C_n$ is also the supremum of positive
+closed scores $r$. Since $a=\rho(r-c)$, $C_n<c$ gives
+$a^*\le C_n-c<0$, and $C_n>c$ gives $a^*>0$. If $C_n=c$, choose
+$r_j\uparrow c$ with $r_j\ge c/2$. Then
+$\rho_j\le2\sqrt n/c$, so $\rho_j(r_j-c)\to0$ and $a^*=0$.
+Hence $C_n\ge c$ supplies an attained pair with $a\ge0$.
+
+\begin{corollary}[First failure of a strict bound]\label{v9:core:first-failure}
+Assume a genuine finite base $C_j\le c$ for $1\le j<N$. If a strict
+bound $C_n<c$ fails at any index $n\ge N$, there is a least such index,
+an attained fixed-target pair with $a\ge0$, and predecessor bounds
+$C_j\le c$ for every $j<n$. The bounds are strict for $N\le j<n$.
+\end{corollary}
+\begin{proof}
+The nonempty set of failing indices at least $N$ has a least member.
+The preceding equivalence supplies its maximizing pair. Indices below
+$N$ use the finite base; the other earlier indices use minimality.
+\end{proof}
+Thus an argument excluding every such pair for $n\ge N$ would give
+strict bounds above the finite base, including exclusion of equality.
+The subsequent entry argument uses only $C_{n-1}\le c$; it does not
+use an upper bound for the actual score $c+a/\rho$. The finite base
+and the eventual exclusion remain separate obligations.

@@ -1,0 +1,75 @@
+{
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "checks": [
+    {
+      "name": "notes",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/manuscript_opus_20261030/geometry/check_notes.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.049411125,
+      "stdout_sha256": "db9fc84ea4b6cb1765710e3b65a7c79d3499ccff24e0b3afb651c9f6e7d023c3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "retained-geometry",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/compact-v16/tools/check_revision_geometry_constants.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.058210250000000005,
+      "stdout_sha256": "eb67fe65d688b2e40eda42e90702f159f94a411480a950e6dedde6685bccc26e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "compile1",
+      "command": [
+        "/Library/TeX/texbin/pdflatex",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "main.tex"
+      ],
+      "returncode": 0,
+      "seconds": 0.740173917
+    },
+    {
+      "name": "compile2",
+      "command": [
+        "/Library/TeX/texbin/pdflatex",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "main.tex"
+      ],
+      "returncode": 0,
+      "seconds": 0.709197791
+    },
+    {
+      "name": "compile3",
+      "command": [
+        "/Library/TeX/texbin/pdflatex",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "main.tex"
+      ],
+      "returncode": 0,
+      "seconds": 0.7478578330000003
+    }
+  ],
+  "owned_sources_sha256": {
+    "sections/05-geometry-counts.tex": "4341f9c7407eed180e9da8f14a06e3d94a43ec135d50ac62ffd40619ced4ad0e",
+    "sections/03-conservation.tex": "cb7d23c1af3310cb5e776f6b51876d717aa9cbec5617ab8ec6df218a5dc57e2e",
+    "sections/07-direct-acquisition.tex": "a11ce05c1158f77ded70d0333614ac5204ef0c6948943b9a08cb51058c1ed283"
+  },
+  "diagnostic_source_sha256": "a24080169bf0d7403cc7741e3c375f0791bbd993f86e0b2ad0a11fe0c681f336",
+  "compile_warnings": [],
+  "scope": "Owned three-file compilation over HEAD baseline, guide duplicate label removed in scratch only; final integrated build and visual review belong to coordinator."
+}

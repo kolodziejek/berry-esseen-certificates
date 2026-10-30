@@ -1,0 +1,73 @@
+{
+  "status": "PASS_FOURIER_RUNTIME_FORMULA_MAPPING",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "optimized": 0,
+  "elapsed_seconds": 110.168432375,
+  "source_root": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029",
+  "input_sha256": {
+    "mathematics/fixed-target-v7/2026-10-27/accept_entry.py": "fe8197d6943c4decb7421bd1c162d7ec24045fdb3ea1215356249b4be620d69d",
+    "mathematics/fixed-target-v7/2026-10-27/entry-proof.json": "61b7ad43e20046d7cbf7157e3feb61696331731e7be418f6a5fa535c2eee8bae",
+    "mathematics/fixed-target-v7/2026-10-27/signed_core.py": "1f40ccb90eb58a7f84dc61a0a5dd9bf6e6eb4e341aa6c9c6d049d08451f5211b",
+    "mathematics/fixed-target-v7/2026-10-27/signed_support.py": "eecb06e65d8520d7cc06fc34217e06e1c0b1840dd8d687621e6828923769a4c4",
+    "mathematics/fixed-target-v5/2026-10-27/cell_check.py": "6827a67e64cfea5b89d823ffd34821fa942b3c3add702ee9721c89d65f443aa5",
+    "mathematics/fixed-target-v5/2026-10-27/cell-sources/kernel.py": "d71f58b7527c3cf6d2146d816e5d124f6f331d1b153e5aaedee5182707647f12",
+    "mathematics/fixed-target-v5/2026-10-27/cell-sources/high_window_core.py": "53e181be63852e21abc3f44191cce7237c46d9e9d7868d3b6b94fccb606c7232",
+    "manuscript/compact-v16/appendices/fixed-fourier.tex": "b91f5c9bf6047c79ca049ef218872174f1813ba7db85cb82f7e199f8f4dcf488"
+  },
+  "counts": {
+    "LOW_calls": 5316,
+    "HIGH_complete_calls": 144,
+    "HIGH_minimum_calls": 10512
+  },
+  "unique_LOW_inputs": 2455,
+  "unique_HIGH_inputs": 29934,
+  "radii": [
+    "5/2",
+    "129/50",
+    "267/100",
+    "11/4",
+    "283/100",
+    "291/100",
+    "299/100",
+    "153/50",
+    "157/50",
+    "321/100",
+    "82/25",
+    "67/20",
+    "171/50",
+    "349/100",
+    "89/25",
+    "363/100",
+    "37/10",
+    "377/100",
+    "96/25"
+  ],
+  "minimum_exact_gate_margins": {
+    "h": "614771/218148",
+    "first_positive": "142730533/1388800000",
+    "first_monotonic": "378591599/49600000",
+    "wings_positive": "1858462714276184795/80586962514617481216",
+    "wings_monotonic": "899094112911690971/959368601364493824",
+    "zero_far_positive": "964835165/26671219488",
+    "zero_far_monotonic": "4531244531/2222601624",
+    "comparator_positive": "1/8",
+    "comparator_monotonic": "19/2",
+    "chord_monotonic": "378591599/49600000"
+  },
+  "acceptance_status": "PASS_INITIAL42_FIXED_TARGET_COARSE_V7",
+  "acceptance_summary": {
+    "raw": "10997587/5000000",
+    "D": "76682509/100000000",
+    "weighted_nD": "1610332689/50000000",
+    "rho": "71527/48000",
+    "beta": "50549963/100000000",
+    "H": "2295071/1250000",
+    "theta": "28620759/100000000",
+    "signed_cells": 11264,
+    "remaining_rho_cells": 14,
+    "probability_panels": 100,
+    "nonempty_probability_panels": 30
+  },
+  "scope": "Runtime correspondence with the separately derived scalar formulas, not an independent proof of the acquisition hypotheses."
+}

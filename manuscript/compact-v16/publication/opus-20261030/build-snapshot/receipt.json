@@ -1,0 +1,80 @@
+{
+  "utc": "2026-10-30T07:09:26.734918+00:00",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "tex_version": "pdfTeX 3.141592653-2.6-1.40.27 (TeX Live 2025)\nkpathsea version 6.4.1\nCopyright 2025 Han The Thanh (pdfTeX) et al.\nThere is NO warranty.  Redistribution of this software is\ncovered by the terms of both the pdfTeX copyright and\nthe Lesser GNU General Public License.\nFor more information about these matters, see the file\nnamed COPYING and the pdfTeX source.\nPrimary author of pdfTeX: Han The Thanh (pdfTeX) et al.\nCompiled with libpng 1.6.46; using libpng 1.6.46\nCompiled with zlib 1.3.1; using zlib 1.3.1\nCompiled with xpdf version 4.04\n",
+  "source_sha256": {
+    "main.tex": "a6726945a71dc27bc6f1d4b6c16d6a46a43126036060c7eade7a76334653fe72",
+    "references-added.bib": "d4e0f8593eb6cc129a437c7b95f278aea30f82dc3a6869743f40720f3174f893",
+    "references-classical.bib": "d572142ac859fb2ff3a2e4679e33869cb54aa41320df60f23139b149a0a94084",
+    "references-modern-a.bib": "6375a56e09258d12e6ff5b79eb240d720335f9e9030fe9ba4306a5b210bf304a",
+    "references-modern-b.bib": "9b49eba5de769bad53a61b0e0d8b46faf2ed20a7588860f86d542a0c51fb5060",
+    "sections/01b-guide.tex": "80590c688c3591eceee04164c7afbad57d98cfeef49b03f305548dbc7ab4da8b",
+    "sections/01-introduction.tex": "784c5a3280b25f5dfb53239f7a7c9e16cd8751a0be017a8639df5a5b57b6b3f9",
+    "sections/07-direct-acquisition.tex": "616d01dbaf07549375673175523d71b76a703d63c416441c331d4e0832b06cfa",
+    "sections/03-conservation.tex": "c619b2a81f7034a5f5947772657ec305410b3ea3d22f4089b116c162f1d6deae",
+    "sections/09-composition.tex": "45d5cbb0ba7378bad22a5079f46c612a74a9e70b8b8343a2087ed674a81568ef",
+    "sections/05-geometry-counts.tex": "4341f9c7407eed180e9da8f14a06e3d94a43ec135d50ac62ffd40619ced4ad0e",
+    "sections/08-direct-comparison.tex": "98b29d290330716e2a640ed6ccfea371ced4ce8241b73dc76b0f36e8650bbd69",
+    "sections/02b-moment-domain.tex": "7fc5d5a5e8039e3910434a6b9ac903aaba3a7a4ec77e1a09ec8b6a8558646a32",
+    "sections/10-discussion.tex": "a19b9f15d41198a51e53c17325f132013a278d0cf549b91717375da38cc61124",
+    "sections/02-fixed-target.tex": "0d6726034ad01c09452280cda6a90870ab97c9c8b940ffbcc8d7dc8a64f07b53",
+    "sections/04-fixed-entry.tex": "073a3179ab7513e1c905f9ca39cbe545fb3b482543bb19301ade654c62d55379",
+    "appendices/entry-details.tex": "40abbfc50f52664bb26f687e47a88c3c798ad7901d95b1d9105481b425c67e6c",
+    "appendices/reproducibility.tex": "4d4cee7ece1f28b57eee3af5194d0440babb1114499d7ff1b567256eaf6c39ff",
+    "appendices/fixed-fourier.tex": "b91f5c9bf6047c79ca049ef218872174f1813ba7db85cb82f7e199f8f4dcf488",
+    "appendices/off-contact.tex": "957cb81c6710fba827b30eef09b5295a612cc41c1d7152bba6512bc03a27cd83",
+    "appendices/normalization.tex": "1a14afaad6b7d62a06fda7f64872d37ee9d1d2aa037539c3069b37b211421aca"
+  },
+  "passes": [
+    {
+      "command": [
+        "/Library/TeX/texbin/pdflatex",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "main.tex"
+      ],
+      "returncode": 0,
+      "seconds": 0.908787291,
+      "stdout_sha256": "39010815be52f7fde06f0f83cd65c4c9d1b0b9af64382bb9294bcaa22a40d9bb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Library/TeX/texbin/bibtex",
+        "main"
+      ],
+      "returncode": 0,
+      "seconds": 0.07139883300000005,
+      "stdout_sha256": "8b589ff25f6b789a46041e4f1f80a4df8ebc115c591f5747827bdac74f3bf450",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Library/TeX/texbin/pdflatex",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "main.tex"
+      ],
+      "returncode": 0,
+      "seconds": 0.7771111669999999,
+      "stdout_sha256": "1d72025731d5a7a4f1c43d5eaa3275790bda4cc3bdb47b524c27770d1b272f76",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Library/TeX/texbin/pdflatex",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "main.tex"
+      ],
+      "returncode": 0,
+      "seconds": 0.7763429159999999,
+      "stdout_sha256": "f0e7ee69e97246dc7cdf336f139c364090588b28a0ec27240b8efac2ed04866b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "pdf_sha256": "ade74cb50d66bc3c2ce5d9abdd4e48236649b2b7eb6de6ce29570b75f03c2f86"
+}
