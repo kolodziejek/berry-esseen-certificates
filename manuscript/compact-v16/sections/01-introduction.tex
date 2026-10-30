@@ -53,10 +53,10 @@ negative. This statement uses only its explicit law hypotheses. \\
 Localization, Theorem~\ref{v9:entry:theorem} &
 A maximizer with nonnegative excess at $n\ge42$ satisfies
 $nD\le32.20665378$ and $|H|\le1.83605680$, under
-$C_{n-1}\le\CE$, the structural inequality and the two stated
-finite-verification conditions. \\
+$C_{n-1}\le\CE$ and the structural inequality. Its proof includes
+two exact computational propositions. \\
 Global implication, Theorem~\ref{short:global} &
-With the retained structural, binomial and finite-verification inputs,
+Using the cited structural and binomial theorems,
 a base $C_j\le\CE$ for every $j\le699$ implies $C_n<\CE$ for
 $n\ge700$ and $\sup_n C_n=\CE$. The finite base remains open here. \\
 \bottomrule
@@ -64,13 +64,14 @@ $n\ge700$ and $\sup_n C_n=\CE$. The finite base remains open here. \\
 \end{center}
 The structural input is displayed in \eqref{v9:entry:structural}; the
 finite-binomial input is \eqref{short:count:binomial}.
-Conditions~\ref{v9:entry:two-pass-condition} and
-\ref{v9:entry:signed-condition} specify the finite localization
-checks. Their exact replay is recorded in Appendix~\ref{revision:reproducibility}.
+Propositions~\ref{v9:entry:two-pass-condition} and
+\ref{v9:entry:signed-condition} establish the finite localization
+bounds. Their exact replay is recorded in Appendix~\ref{revision:reproducibility}.
 The analytical reduction, the whole-domain coverage, and the
 correspondence of the checking code with those inequalities are the
-components of this computational proof. We retain these premises
-explicitly in the theorem statements.
+components of this computational proof. The certificate checks have
+been discharged; the finite base through $699$ remains a hypothesis
+of the global implication.
 
 \subsection{Why the defect controls a maximizer}
 At a fixed $n$, maximize the difference between the two sides of the
@@ -140,7 +141,7 @@ Coarse localization: $nD\le32.20665378$, $|H|\le1.83605680$};
 \node[box,below=of entry] (local) {For $n\ge700$: geometry and support bounds place the maximizer\\
 in the region of the local binomial comparison; the excess is negative};
 \node[box,line width=.8pt,below=of local] (global) {Finite base through $699$ (unproved here) + least-failure argument\\
-Conditional global sharp inequality};
+Global sharp inequality, conditional on the finite base};
 \draw[->] (contact)--(identity);
 \draw[->] (identity)--(entry);
 \draw[->] (entry)--(local);
@@ -176,9 +177,13 @@ All numerical acceptance uses integers and exact rational numbers,
 with directed rational enclosures for roots, exponentials and Gaussian
 constants. The exploratory program and the checker share the routine
 \texttt{signed\_core.stage}; acceptance is an exact replay of that
-calculation. Independent checking requires auditing these routines
-against the mathematical rules or implementing those rules separately.
-Appendix~\ref{revision:reproducibility} gives a code-reading guide,
+calculation. We checked the correspondence of these routines with the
+mathematical inequalities, including divisions, signed products and
+closed endpoints. Separate exact calculations check the coarse updates,
+Fourier formulas and reported theorem constants. This is an ordinary
+computer-assisted proof: it relies on the audited programs and Python's
+integer arithmetic, without a proof-assistant formalization.
+Appendix~\ref{revision:reproducibility} gives the correspondence records,
 reproduction commands and the recorded execution environment.
 
 Subdivision and rigorous enclosure have established precedents in

@@ -1,0 +1,67 @@
+{
+  "status": "PASS_INDEPENDENT_SIGNED_DIAGNOSTICS",
+  "proof_targets": {
+    "input_sha256": "61b7ad43e20046d7cbf7157e3feb61696331731e7be418f6a5fa535c2eee8bae",
+    "stages": [
+      {
+        "processed": 24,
+        "live": 24
+      },
+      {
+        "processed": 24,
+        "live": 24
+      },
+      {
+        "processed": 24,
+        "live": 16
+      },
+      {
+        "processed": 16,
+        "live": 14
+      }
+    ],
+    "nominal_boxes": 11264,
+    "nonempty_panels": 30,
+    "panel_incidence": 7235,
+    "final_row_maxima": {
+      "raw": "10997587/5000000",
+      "D": "76682509/100000000",
+      "weighted_nD": "1610332689/50000000",
+      "rho": "71527/48000",
+      "radius": "157/50"
+    },
+    "panel_maxima": {
+      "raw": "10997587/5000000",
+      "D": "76682509/100000000",
+      "rho": "18626823/12500000",
+      "beta": "50549963/100000000",
+      "H": "2295071/1250000",
+      "theta": "28620759/100000000"
+    }
+  },
+  "delicate_semantics": {
+    "rational_product_points": 2916,
+    "negative_P1": "-169/1296",
+    "closed_boundary_panels": [
+      49,
+      50
+    ],
+    "strict_boundary_panels": [],
+    "negative_controls": [
+      "incorrect negative-product multiplier",
+      "strict shared-endpoint intersection",
+      "zero PSD denominator with nonzero numerator"
+    ]
+  },
+  "actual_laws": {
+    "actual_laws": [
+      "symmetric_binary",
+      "skew_binary",
+      "binary_negative_P1",
+      "zero_atom",
+      "small_zero_atom"
+    ],
+    "zero_localizing_denominators": 6,
+    "scope": "Exact finite diagnostic laws; continuous implications are proved in signed-audit.md."
+  }
+}

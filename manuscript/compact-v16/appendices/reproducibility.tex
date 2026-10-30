@@ -1,9 +1,10 @@
 \section{Certificates and independent reproduction}
 \label{revision:reproducibility}
-The analytical hypotheses, the finite numerical verification, and the
-missing finite base are separate obligations. This appendix identifies
-the computation used by Theorem~\ref{v9:entry:theorem}; it does not
-supply the base assumed in Theorem~\ref{short:global}.
+The analytical estimates and finite numerical verification together
+prove the localization theorem. This appendix identifies its fixed
+proof object, checked implementation and fresh execution records.
+The finite base assumed in Theorem~\ref{short:global} remains separate
+and is not supplied by this computation.
 
 \subsection{What is stored and what is recomputed}
 The retained format and target are, respectively,
@@ -120,10 +121,17 @@ exponential enclosures. The replacement high-frequency window routine is
 \texttt{install} in \path{v5/cell-sources/high_window_core.py}; it compares
 complete six-term bounds from Proposition~\ref{v9:fourier:high}.
 \end{description}
-This map is not a separate verification of those programs. An independent
-checker must establish the same implications for every covered box,
-including signs, denominator domains and endpoints; copying a success
-message or using the same kernel twice does not do so.
+The dated correspondence reports in
+\path{publication/certificate-audit-20261030/} derive the coarse
+coefficients, signed moment and gap bounds, and complete Fourier
+enclosures from the formulas in this paper. They check the implementation's
+signs, denominator cases, all-index gates and closed coverage.
+Separate rational evaluators reconstruct all 48 coarse updates and
+every Fourier parameter tuple encountered in the full replay.
+An import-free calculation checks the initial and cellwise support gates;
+another checks the sharper output constants and delicate endpoint cases.
+These calculations supplement the continuous proofs. They are not
+independent implementations of the entire argument.
 
 \subsection{Exact arithmetic and its limits}
 Rationals are represented by integer numerators and denominators.
@@ -152,9 +160,10 @@ Numerical precision determines whether an enclosure is sharp enough to
 prove a strict inequality; extra digits alone do not prove it.
 Uniformity in $n$ comes from the analytical majorants in the Fourier
 appendix, not from sampling indices or assuming monotonicity of $C_n$.
-The checker semantics, their correspondence with the displayed formulas,
-and the integer/rational implementation remain part of the computational
-trust boundary. Hashes identify bytes, not mathematical truth.
+The audited checker semantics and the integer/rational implementation
+form the computational trust boundary. This is a computer-assisted
+proof using Python, not a formal proof checked by a proof assistant.
+Hashes identify bytes, not mathematical truth.
 Subdivision certificates have established methodological precedents
 \cite{SolovyevHales2013}; that precedent does not validate this custom
 format or transfer a proof assistant's guarantee to Python.
@@ -175,11 +184,35 @@ It reconstructs $11264$ nominal signed boxes, $100$ panels, $30$
 nonempty panels and $14$ surviving moment cells. Nineteen checker
 rejection controls and five wrapper controls test malformed or altered
 inputs. They supplement rather than replace the coverage proof.
-A recorded replay on 29 October 2026, using Python 3.9.6 without
-optimization, took $67.7$ seconds. This is one observed run, not a
-performance guarantee; its command, source hashes, return code and output
-are preserved in \path{publication/entry/receipt.json} and the neighboring
-captures. The Python standard library suffices for these commands.
+A fresh replay on 30 October 2026, using Python 3.12.14 without
+optimization, returned zero in $26.94$ seconds. Its command, input hashes,
+return code, stdout and stderr are preserved under
+\path{publication/certificate-audit-20261030/entry/}.
+The earlier Python 3.9.6 replay is preserved separately. These are
+observed runtimes, not performance guarantees.
+
+The acceptor's generic numerical limits are weaker than the maxima in
+Proposition~\ref{v9:entry:signed-condition}. Check the latter directly
+against the fixed accepted object with
+\begin{Verbatim}[fontsize=\small]
+python3 -I -B \
+  manuscript/compact-v16/tools/check_entry_claims.py \
+  mathematics/fixed-target-v7/2026-10-27/entry-proof.json
+\end{Verbatim}
+This verifies the tighter raw, weighted defect, beta, phase and support
+bounds, and obtains the exact rho endpoint from the surviving original
+rows. It supplements the full replay; by itself it only reads a claimed
+object. The proof object's SHA-256 is
+\begin{quote}\small
+\path{61b7ad43e20046d7cbf7157e3feb61696331731e7be418f6a5fa535c2eee8bae}.
+\end{quote}
+The frozen wrapper still describes its output as conditional on analytic
+inputs: that is its modular scope. Here those inputs are supplied by
+Appendices~\ref{v9:fourier:section} and \ref{revision:entry-details},
+with the correspondence and coverage checks just described. The
+resulting Propositions~\ref{v9:entry:two-pass-condition} and
+\ref{v9:entry:signed-condition} are therefore proved statements.
+The Python standard library suffices for all commands in this appendix.
 
 The bounded historical checks and the current document's reference
 structure are reproduced separately by

@@ -1,0 +1,36 @@
+{
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "optimized": 0,
+  "commands": [
+    {
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff",
+      "argv": [
+        "python3",
+        "work/certificate_discharge_20261030/fourier_runtime_audit.py"
+      ],
+      "return_code": 0,
+      "stdout": "runtime-audit.stdout.json",
+      "stderr": "runtime-audit.stderr.txt"
+    },
+    {
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029",
+      "argv": [
+        "python3",
+        "mathematics/fixed-target-v7/2026-10-27/fourier-check.py"
+      ],
+      "return_code": 0,
+      "stdout": "identity-check.stdout.json",
+      "stderr": "identity-check.stderr.txt"
+    }
+  ],
+  "sha256": {
+    "work/certificate_discharge_20261030/fourier_runtime_audit.py": "73ef6a4731d22ac31b570c47f0840100e8f25aed73849efdc81742991118910a",
+    "work/manuscript_revision_20261029/mathematics/fixed-target-v7/2026-10-27/fourier-check.py": "a2f21cc289980331df747574f9534c29504fd64371ba1474cfeb8f1e9a8b0763",
+    "runs/certificate_discharge_20261030/fourier/runtime-audit.stdout.json": "048852e8d77a103b86ed9c748ad6064d7ce9d84b34be3cf7394982c6009c51e3",
+    "runs/certificate_discharge_20261030/fourier/runtime-audit.stderr.txt": "4ec9703b46571cd3e865592381ab693cd752067c890fb28540333bb9d5dd13a3",
+    "runs/certificate_discharge_20261030/fourier/identity-check.stdout.json": "4e86e02a070b115e9fed4a50049411f0cb97e2dac643530a60e7e53b008535ca",
+    "runs/certificate_discharge_20261030/fourier/identity-check.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "source_repository_status_after_runs": "git status --short and git diff --stat were empty",
+  "note": "Exit codes are the observed exec session completion statuses; runtime is measured in the runtime audit. No timing was measured for the identity check."
+}

@@ -1,7 +1,7 @@
 \section{Details of the coarse localization}\label{revision:entry-details}
 
-This appendix proves the analytical estimates and specifies the finite
-conditions used by Theorem~\ref{v9:entry:theorem}. The calculation has
+This appendix proves the analytical estimates and the finite
+computational propositions used by Theorem~\ref{v9:entry:theorem}. The calculation has
 two coarse quadratic passes followed by four signed-moment passes.
 Each improvement is used only after its hypotheses have been established.
 The cover starts with $24$ closed intervals for $\rho$. A signed pass
@@ -498,7 +498,7 @@ new raw bound, intersect the resource with $U_1$, and finally retain
 $d_2\le d_1$. A resource bound is never substituted for a raw bound
 in the density or phase license.
 
-\begin{condition}[The two coarse passes]\label{v9:entry:two-pass-condition}
+\begin{proposition}[The two coarse passes, computer-assisted]\label{v9:entry:two-pass-condition}
 The preceding coefficient domains, Fourier gates, endpoint enclosures
 and strict raw gates hold on every one of the 24 closed cells. Outward
 evaluation gives the following ceilings, and in every second-pass cell
@@ -514,13 +514,28 @@ The last column counts the cells satisfying $d_j<(\sigma_l-1)l$,
 which excludes zero from the support by the argument below.
 The minimum second-pass gap margin is at least
 $526024602543/1600000000000>0$.
-\end{condition}
-The stated condition is a finite exact arithmetic obligation. The named
-two-pass proof object records and rechecks these inequalities; it is
-kept distinct from the analytic implications just proved. Although its
-implementation retains additional previously valid minima, the fresh
-quadratic ceilings attain all the displayed minima in this cover, so
-no earlier resource-refinement schedule is a mathematical premise here.
+\end{proposition}
+\begin{proof}
+Evaluate the displayed formulas with rational arithmetic on the 24
+endpoint pairs $[r_i,r_{i+1}]$, using the directed Fourier enclosures in
+Appendix~\ref{v9:fourier:section}. The selected routine is
+\texttt{one\_pass} in
+\path{mathematics/fixed-target-v6/2026-10-27/signed-two-pass-check.py}.
+It checks the coefficient and Fourier domains, $q>0$, and
+$0\le T<Nc_-l$ before each resource update. Taking the maxima of its
+24 outputs gives each row of the table. The minimum of
+$(\sigma_l-1)r_i-d_2$ is the positive rational margin displayed above.
+
+The exact replay and a separate reconstruction of all 48 quadratic
+updates are recorded in Appendix~\ref{revision:reproducibility}.
+The reconstruction also checks that the implementation's retained
+older minima never improve the fresh ceilings in this cover. Thus no
+earlier resource-refinement schedule is needed for these bounds.
+The preceding analytical estimates justify every coefficient;
+Proposition~\ref{revision:entry-soundness} supplies the closed-cover
+implication. This establishes the assertions for every witness in
+the initial domain, rather than only for the cell endpoints.
+\end{proof}
 
 If zero belonged to the closed support, every gap would be on one side
 of zero and $J\le\rho$. Hence $D\ge(\sigma-1)\rho$, contradicting the
@@ -872,8 +887,8 @@ endpoint and the maximum of $p(1-p)$ on the intersection, including
 $1/4$ if it crosses $1/2$. Pool this simultaneously with the raw,
 weighted defect, rho, beta, and phase bounds of the same cells.
 
-\begin{condition}[The four signed passes]\label{v9:entry:signed-condition}
-Starting with Condition~\ref{v9:entry:two-pass-condition}, all support,
+\begin{proposition}[The four signed passes, computer-assisted]\label{v9:entry:signed-condition}
+Starting with Proposition~\ref{v9:entry:two-pass-condition}, all support,
 moment, actual-event, Fourier, denominator, signed-curvature and ordered
 raw-license gates hold on the complete four-pass cover just described.
 Its exact rational evaluation contains 11264 nominal signed boxes in
@@ -891,12 +906,33 @@ thus the export also supplies
 \begin{equation}\label{v9:entry:exported-support}
  \supp P\subset(-157/50,157/50).
 \end{equation}
-\end{condition}
-This is the named fixed-target coarse proof object, with its own targets
-and complete incidence requirements. Its reproduction is specified in Appendix~\ref{revision:reproducibility}; numerical acceptance remains distinct from the analytic proof
-that its leaves enclose all possible witnesses. The preceding statements
-supply that reduction and explicitly identify the finite predicates
-used. They do not change an older certificate's hypotheses or its target.
+\end{proposition}
+\begin{proof}
+The acceptor specified in Appendix~\ref{revision:reproducibility}
+reconstructs the four signed passes and their complete panel incidences
+from the fixed proof object. Its rational bounds implement the moment,
+gap, event and Fourier inequalities above, followed by
+Lemma~\ref{v9:entry:signed-step}. At each stage the recomputed upper
+bounds are no larger than the stored ceilings. Every exclusion uses
+a necessary inequality, with the zero-denominator cases treated before
+division. The exact replay verifies these comparisons on the complete
+cover; Proposition~\ref{revision:entry-soundness} proves their universal
+meaning.
+
+For the displayed constants, read the maxima of the accepted final
+rows and panels, rather than merely the acceptor's generic target
+limits. The row defect maximum is $0.76682509$, so the weighted
+bound is $42\cdot0.76682509=32.20665378$. The largest surviving
+row index is $13$, giving the exact endpoint
+$r_{14}=71527/48000$, and the largest stored radius is $157/50$.
+The exported panel value for $\rho$ is rounded upward to $1.49014584$;
+the sharper rational bound stated here comes from the original row
+endpoint. The raw, $|\beta|$ and $|H|$ maxima are respectively
+$2.1995174$, $0.50549963$ and $1.83605680$. The separate exact
+output check in Appendix~\ref{revision:reproducibility} verifies these
+values against the fixed object. The strict support gates exclude
+boundary atoms, giving the open support interval as stated.
+\end{proof}
 
 
 \begin{proof}[Proof of Theorem~\ref{v9:entry:theorem}]

@@ -1,10 +1,8 @@
 \section{Composition and the finite boundary}\label{short:composition}
 \begin{theorem}[Exclusion of a nonnegative-excess maximizer]\label{short:acquired-exclusion}
 Let $n\ge700$ and let $(P,H)$ attain the fixed-target maximum at $\CE$
-with $a(P,H)\ge0$. Suppose $C_{n-1}\le\CE$, the structural
-inequality~\eqref{v9:entry:structural}, and the complete entry
-Conditions~\ref{v9:entry:two-pass-condition} and
-\ref{v9:entry:signed-condition} hold. Then such a pair cannot exist.
+with $a(P,H)\ge0$. Suppose $C_{n-1}\le\CE$ and the structural
+inequality~\eqref{v9:entry:structural} holds. Then such a pair cannot exist.
 \end{theorem}
 \begin{proof}
 Theorem~\ref{v9:entry:theorem} gives $nD\le32.20665378$ and
@@ -33,10 +31,10 @@ Positive noise gives $a(P,H)<-\lambda/100$; zero noise is Bernoulli
 and gives strictly negative excess by Schulz. Both contradict $a\ge0$.
 \end{proof}
 
-\begin{theorem}[Conditional sharp inequality]\label{short:global}
+\begin{theorem}[Finite-base implication]\label{short:global}
 Assume a genuine finite base $C_j\le\CE$ for $1\le j\le699$,
-the external structural and strict finite-binomial theorems used above,
-and the complete entry predicates at every least failure at $n\ge700$.
+and use the external structural and strict finite-binomial theorems
+cited above.
 Then
 \[
  C_n<\CE\ (n\ge700),\qquad C_n\le\CE\ (n\ge1),
@@ -61,8 +59,8 @@ its endpoint-atom convention, is proved in
 Section~\ref{v9:core:reflection}.
 
 \paragraph{Role of finite verification.}
-The computational input consists of
-Conditions~\ref{v9:entry:two-pass-condition} and
+The computational part of the proof consists of
+Propositions~\ref{v9:entry:two-pass-condition} and
 \ref{v9:entry:signed-condition}, used through
 Theorem~\ref{v9:entry:theorem}. The scalar comparisons in
 Sections~\ref{short:acq:section}--\ref{short:count:section} are
