@@ -1,11 +1,12 @@
-\subsection{Reading the argument}\label{ms:guide}\label{ms:notation}
-The proof selects an extremizer, identifies the zero-defect law, bounds
-the remainder in a conservation identity, and compares the resulting
-near-Bernoulli law with a binomial sum. Reflection selects the positive
-closed-event orientation before localization; its signed defect is
-estimated in that orientation. The finite Fourier calculation is used
-only to obtain the coarse bounds. The subsequent support and count
-arguments are analytical, with explicit rational comparisons.
+\subsection{Organization and notation}\label{ms:guide}\label{ms:notation}
+Section~\ref{v9:core:section} gives attainment, contact and reflection.
+The next two sections develop the defect and the conservation identity;
+Sections~\ref{v9:entry:section} and~\ref{short:acq:section} bound and
+localize a possible maximizer. Section~\ref{short:count:section} proves
+the independent local comparison, and Section~\ref{short:composition}
+combines these results. The appendices contain the Fourier bounds,
+rational constants, off-contact identity, full localization calculation,
+and reproduction instructions.
 
 The following table distinguishes the three scales used in the proof.
 Gap-specific parameters are introduced after the existence of a central
@@ -26,21 +27,7 @@ $J$, $D$ & Weighted support-gap sum and defect of the original law. \\
 \bottomrule
 \end{tabular}
 \end{center}
-The sign decomposition is the exact identity
-\begin{equation}\label{revision:canonical-decomposition}
- X=\ell(B_0+U-p)=\frac{B_0+U-p}{\sqrt{pq+s}},\qquad
- pq+s=\ell^{-2},\qquad \E(U\mid B_0)=0.
-\end{equation}
-Indeed the conditional means are $-p\ell$ and $q\ell$, and the variance
-decomposition gives $1=pq\ell^2+\theta$.
-Thus the normalized count-coordinate variable is exactly $X$, and $H$
-remains its original raw threshold. The small-noise proof chooses an
-anchor with $u\in[-3/10,7/10]$; the interpolation proof chooses the floor
-anchor, with $u\in[0,1)$. These are separate choices for separate estimates.
-The signed moments are $\gamma=\E X^3$ and $\beta=\E[X|X|]$.
-
-The main text retains the variational, geometric, localization, and
-comparison arguments. The appendices give the full Fourier bound,
-constant enclosures, the identity without contact, and reproducibility
-instructions. The complete localization theorem is stated before its
-technical derivation; all its stronger auxiliary conclusions are retained.
+The exact normalization is proved in \eqref{ms:bernoulli-coordinates}.
+It identifies the count-coordinate law with the original $X$ and leaves
+$H$ as its raw sum threshold. The signed moments are
+$\gamma=\E X^3$ and $\beta=\E[X|X|]$.

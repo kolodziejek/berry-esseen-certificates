@@ -66,6 +66,65 @@ on a discovery success label. The selected path uses integer and
 rational arithmetic. Generation and checking share mathematical
 kernels, so this is not a claim of independent implementations.
 
+\subsection{The acceptance procedure}
+The acceptance program carries out the following steps in a fixed order.
+\begin{enumerate}[leftmargin=*,itemsep=.35em]
+\item Check the format and target names, exact record fields, canonical
+rational strings, four ordered lists of $24$ cells, and all $100$ ordered
+closed panels, including their numerical target domains. Check source hashes
+before importing the numerical kernels.
+\item Recompute the two coarse passes. Their $24$ endpoint pairs must
+agree with $[1+3361i/96000,1+3361(i+1)/96000]$.
+\item For each live cell in each signed pass, recompute the support
+radius and the $1\times8\times8\times2$ subdivision in
+$(\rho,\beta,\gamma,m)$. Evaluate the exclusions and complete upper
+bounds on these descendants using the previous pass's ceilings.
+\item Require the active and excluded counts to agree with the stored
+counts and to sum to $128$. For a surviving cell, require each stored
+ceiling to enclose the recomputed value and to be no larger than the
+previous ceiling. A cell excluded in an earlier pass remains excluded.
+\item Reconstruct every final probability-panel incidence, including
+shared endpoints. Check the stored incidence counts and require every
+stored panel ceiling to enclose the corresponding recomputed maximum.
+\item Report the resulting maxima and run the rejection controls.
+\end{enumerate}
+Individual descendant boxes are not archived in the object. Thus the
+comparison is between deterministic recomputation and stored counts and
+ceilings, not between two stored lists of discarded boxes. The mathematical
+reason every possible witness is covered is given in
+Appendix~\ref{revision:entry-details} and
+Proposition~\ref{revision:entry-soundness}.
+
+\paragraph{A guide to the numerical sources.}
+The following is a reading map for the retained implementation. Relative
+paths beginning with \path{v5/}, \path{v6/}, and \path{v7/} below abbreviate
+\path{mathematics/fixed-target-v5/2026-10-27/},
+\path{mathematics/fixed-target-v6/2026-10-27/}, and
+\path{mathematics/fixed-target-v7/2026-10-27/}, respectively.
+\begin{description}[style=nextline,leftmargin=1em,itemsep=.35em]
+\item[\path{v7/accept_entry.py}: \texttt{shape}, \texttt{verify}]
+Record validation, source pins, ordered replay and output comparisons.
+\item[\path{v6/signed-two-pass-check.py}: \texttt{one\_pass}, \texttt{run}]
+The two coarse quadratic passes and the first central-gap test in
+Section~\ref{v9:entry:raw-cover}.
+\item[\path{v7/signed_support.py}: \texttt{support}, \texttt{cell\_radius}]
+Support-radius gates from the contact and Gaussian heat estimates in
+Theorem~\ref{v9:entry:initial}.
+\item[\path{v7/signed_core.py}: \texttt{stage}]
+Signed subdivisions, moment constraints, gap and remainder charges,
+ordered resource updates, and final panel incidences.
+\item[\path{v5/cell-sources/kernel.py}: \texttt{sixth},
+\texttt{universal\_high}, \texttt{exphi}]
+Low-frequency constants, the universal actual-event bound and directed
+exponential enclosures. The replacement high-frequency window routine is
+\texttt{install} in \path{v5/cell-sources/high_window_core.py}; it compares
+complete six-term bounds from Proposition~\ref{v9:fourier:high}.
+\end{description}
+This map is not a separate verification of those programs. An independent
+checker must establish the same implications for every covered box,
+including signs, denominator domains and endpoints; copying a success
+message or using the same kernel twice does not do so.
+
 \subsection{Exact arithmetic and its limits}
 Rationals are represented by integer numerators and denominators.
 Outward rounding deliberately weakens a bound. Square-root endpoints
@@ -116,6 +175,11 @@ It reconstructs $11264$ nominal signed boxes, $100$ panels, $30$
 nonempty panels and $14$ surviving moment cells. Nineteen checker
 rejection controls and five wrapper controls test malformed or altered
 inputs. They supplement rather than replace the coverage proof.
+A recorded replay on 29 October 2026, using Python 3.9.6 without
+optimization, took $67.7$ seconds. This is one observed run, not a
+performance guarantee; its command, source hashes, return code and output
+are preserved in \path{publication/entry/receipt.json} and the neighboring
+captures. The Python standard library suffices for these commands.
 
 The bounded historical checks and the current document's reference
 structure are reproduced separately by

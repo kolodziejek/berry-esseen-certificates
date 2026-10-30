@@ -4,8 +4,8 @@
 We prove the compensated Fourier formula and the complete low- and
 high-frequency estimates used in Section~\ref{v9:entry:section}.
 Every assertion concerns an actual marginal with the displayed moment
-and event bounds. Attainment and acquisition of those bounds are not
-premises of the Fourier proof itself; their use is ordered in that section.
+and event bounds. Appendix~\ref{revision:entry-details} establishes these inputs for the
+maximizers to which the bound is applied, under its stated entry conditions.
 
 For each integer $n\ge N\ge42$, let $X=X_n$ be a real random variable with
 $\E X=0$, $\E X^2=1$, and $\E|X|^3<\infty$.
@@ -81,8 +81,7 @@ Consequently the error $E_n=-n^{3/2}\varepsilon_n/2$ satisfies
 \begin{equation}\label{v9:fourier:ledger}
  |E_n|\le\frac{2\sqrt n}{\pi}\{I_0(H)+I_\infty\}.
 \end{equation}
-This is an identity and bound for each $n,H$; it exchanges no limit in
-$n$ with an integral or a varying law.
+The identity and bound hold for each $n$ and $H$ separately.
 
 \subsection{Low frequencies: Taylor cancellation and moment bounds}
 
@@ -213,7 +212,7 @@ preceding quadratic gives $6(M-1)+(10-2M)^2/[4(6-g)]$.
 For $M>5$ the unrestrained vertex bound is
 $6(M-1)+(2M-10)^2/24$. Taking the minimum of these proved ceilings
 and $E_5+10g$, then dividing by $120$, gives a valid coefficient ceiling $Z$.
-The radius is an actual support input, not a free tuning parameter.
+The coefficient ceiling therefore uses the known support radius $R$.
 
 \subsection{High frequencies: six contributions and uniform index bounds}
 
@@ -388,28 +387,12 @@ This is the constant Fourier budget and raw-threshold slope used in
 Section~\ref{v9:entry:section}. Complete HIGH bounds for several valid windows may be minimized.
 The LOW coefficients must remain one complete valid triple.
 
-For rational acceptance, positive denominator roots are
-rounded downward, numerator roots upward, and $\pi>333/106$,
-$\sqrt\pi>4431/2500$, $\pi<22/7$ are directed correctly.
-These constants require no numerical transcendental oracle: polynomial
-division gives
-\[
- 22/7-\pi=\int_0^1\frac{x^4(1-x)^4}{1+x^2}\,dx>0,
-\]
-and the tangent addition formula with its first-quadrant branch gives
-\[
- \pi=16\arctan(1/5)-4\arctan(1/239).
-\]
-Four alternating terms for the first arctangent and the upper bound
-$\arctan(1/239)<1/239$ give $\pi>333/106>25/8$ by rational comparison.
-Squaring then verifies the two Gaussian constant enclosures used above.
-Its exponential helper replaces $x\ge0$ by a downward rational
-$y\le\min(x,64)$ and returns an upward rounding of
-$1/\sum_{j=0}^{64}y^j/j!$. This is at least $e^{-x}$.
-The floor argument applies to the underlying analytic bounds, not to a
-claim that this rounded helper itself preserves strict monotonicity.
-
-The estimates are uniform over all laws and thresholds satisfying
-the stated inequalities at the actual index. They require no monotonicity
-of extremal Berry--Esseen constants, no fixed-law asymptotic limit, and
-no unproved disappearance of a lattice tail.
+The rational enclosures
+$\pi>333/106$, $\sqrt\pi>4431/2500$, $\pi<22/7$ and
+$\sqrt{\pi/2}<251/200$ are proved together in
+Appendix~\ref{ms:normalization}. The arithmetic routines and their
+rounding directions are described in Appendix~\ref{revision:reproducibility}.
+The floor comparisons concern the analytical majorants under their
+stated positivity and monotonicity conditions; the rounded routines
+need not themselves be monotone. The resulting bounds hold for each
+law and threshold satisfying the hypotheses, even when they vary with $n$.

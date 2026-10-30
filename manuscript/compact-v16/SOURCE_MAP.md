@@ -1,7 +1,7 @@
 # Revised proof route and source correspondence
 
 Baseline: `cd10654222f4b63d50f9d8f108597b140d263ec5`,
-`manuscript/compact-v16`. This map describes the revised 53-page compilation.
+`manuscript/compact-v16`. This map describes the revised 57-page compilation.
 Paths below are relative to this directory. All original 119 LaTeX labels
 remain available; automatic theorem/equation numbers have changed.
 
@@ -38,12 +38,12 @@ remain available; automatic theorem/equation numbers have changed.
 | Source | Role and changes |
 |---|---|
 | `main.tex` | Conditional abstract, reading order, unchanged type size and margins. |
-| `sections/01-introduction.tex`, `01b-guide.tex` | Mechanism, scope, certificate explanation, notation and exact Bernoulli/noise decomposition. |
+| `sections/01-introduction.tex`, `01b-guide.tex` | Mechanism, scope, certificate explanation, notation and dependency figure. |
 | `sections/02-fixed-target.tex` | Retained attainment, first variation, compact support, reflection and least failure. |
 | `sections/02b-moment-domain.tex` | Unchanged sharp third-moment and signed-second-moment proofs. |
-| `sections/05-geometry-counts.tex` | Defect and equality case before conservation; shared joint budget. Original simultaneous-gap claim remains as a corollary. |
+| `sections/05-geometry-counts.tex` | Defect and equality case before conservation; shared joint budget, canonical Bernoulli/noise decomposition and lattice corollary. Original simultaneous-gap claim remains as a corollary. |
 | `sections/03-conservation.tex` | Contact identity, both evaluations of the zero-bias integral, ordered remainder/resource implication. |
-| `sections/04-fixed-entry.tex` | Full original entry theorem and all outputs; explanatory square completion and conditional soundness argument. |
+| `sections/04-fixed-entry.tex` | Full original entry theorem and all outputs; predecessor-support lemma, explanatory square completion and conditional soundness argument. |
 | `sections/07-direct-acquisition.tex` | Same-law localization using the shared budget; simpler probability and two-ray comparisons. |
 | `sections/08-direct-comparison.tex` | Exact finite crossing identity, alpha=1/2 global minorant, complete tails, common large-noise envelope and two endpoints. |
 | `sections/09-composition.tex` | Hypothesis-matching table and unchanged conditional global result. |
@@ -73,8 +73,10 @@ Exact arithmetic requires correct semantics and complete domain coverage.
 The soundness argument explicitly tracks a realizable witness through every
 closed subdivision and retains the all-index analytical enclosure.
 
-Current execution and source integrity are recorded in `publication/validation.json`;
+Current execution and source integrity are recorded in `publication/opus-20261030/validation.json`;
 `revision-validation.json` preserves the earlier pre-publication stage.
-Mathematical hypotheses are reconciled in `reviews/final-scope-review.md`.
+Mathematical hypotheses are reconciled in `reviews/final-scope-review.md` and
+the current `reviews/opus-*-review.md` reports; selective decisions are in
+`OPUS_REVISION_NOTES.md`.
 No new finite base, unconditional cutoff, full formalization or global
 conjecture acceptance is asserted by this revision.

@@ -1,3 +1,11 @@
+# Current publication record
+
+The 30 October revision is recorded in [opus-20261030/](opus-20261030/README.md).
+The following text and existing files describe the 29 October release; its
+validation manifest and captures remain unchanged.
+
+---
+
 # Publication follow-up: source and execution record
 
 This directory records the focused corrections made after review of the first

@@ -1,4 +1,4 @@
-\begin{thebibliography}{24}
+\begin{thebibliography}{20}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -30,16 +30,6 @@ Andrew~C. Berry.
   (1):\penalty0 122--136, 1941.
 \newblock \doi{10.1090/S0002-9947-1941-0003498-3}.
 
-\bibitem[BerryEsseenLean()]{BerryEsseenLean2026}
-BerryEsseenLean.
-\newblock {BerryEsseenLean}: {Berry--Esseen} eventual sharpness in {Lean}.
-\newblock Lean 4 formalization accompanying the manuscript of Hengzhi He and
-  Guang Cheng, 2026.
-\newblock URL
-  \url{https://github.com/UCLA-Trustworthy-AI-Lab/BerryEsseenLean/tree/2b97fa7400dd85fc98b829224c89b0f986789395}.
-\newblock Commit 2b97fa7400dd85fc98b829224c89b0f986789395; designated endpoints
-  retain explicit external mathematical inputs; Lean v4.28.0.
-
 \bibitem[Esseen(1942)]{Esseen1942}
 Carl-Gustav Esseen.
 \newblock On the {Liapunoff} limit of error in the theory of probability.
@@ -59,14 +49,6 @@ Carl-Gustav Esseen.
 \newblock \emph{Scandinavian Actuarial Journal}, 1956\penalty0 (2):\penalty0
   160--170, 1956.
 \newblock \doi{10.1080/03461238.1956.10414946}.
-
-\bibitem[Goldstein and Reinert(1997)]{GoldsteinReinert1997}
-Larry Goldstein and Gesine Reinert.
-\newblock {Stein}'s method and the zero bias transformation with application to
-  simple random sampling.
-\newblock \emph{The Annals of Applied Probability}, 7\penalty0 (4):\penalty0
-  935--952, 1997.
-\newblock \doi{10.1214/aoap/1043862419}.
 
 \bibitem[He and Cheng(2026)]{hecheng2026eventually}
 Hengzhi He and Guang Cheng.
@@ -138,15 +120,6 @@ Alexey Solovyev and Thomas~C. Hales.
   Computer Science}, pages 383--397, 2013.
 \newblock \doi{10.1007/978-3-642-38088-4_26}.
 
-\bibitem[Tao and {contributors}(2026)]{tao2026berryesseenregistry}
-Terence Tao and {contributors}.
-\newblock The {Berry--Esseen} constant.
-\newblock Optimization Constants in Mathematics, Problem 19a, 2026.
-\newblock URL
-  \url{https://github.com/teorth/optimizationproblems/blob/e95af44bc6ae938f545a0fc62cd1b6c1f6088a56/constants/19a.md}.
-\newblock Repository snapshot e95af44bc6ae938f545a0fc62cd1b6c1f6088a56;
-  accessed 27 October 2026.
-
 \bibitem[Tyurin(2010)]{Tyurin2010}
 I.~S. Tyurin.
 \newblock Refinement of the upper bounds of the constants in {Lyapunov}'s
@@ -170,16 +143,6 @@ Haonan Xiao and Chunlin Li.
 \newblock URL \url{https://github.com/haonan-xiao/iid-berry-esseen}.
 \newblock Accompanying paper: paper/berry-esseen-04395.pdf. Commit
   f00d781c8c42908bf4aef2739129442a0919fa38; accessed 27 October 2026.
-
-\bibitem[Yan(2026)]{Yan2026ProbabilityApproximation}
-Asher Yan.
-\newblock {ProbabilityApproximation}: {Berry--Esseen} bounds for independent
-  sums.
-\newblock Lean 4 software, release v0.9.6, 2026.
-\newblock URL
-  \url{https://github.com/Polarnova/ProbabilityApproximation/releases/tag/v0.9.6}.
-\newblock Commit c89fba908a33ba741836407f43c67609e2d05279; Lean and Mathlib
-  v4.32.0. Cite the original mathematical sources for theorems used.
 
 \bibitem[Zolotarev(1966)]{Zolotarev1966}
 Vladimir~M. Zolotarev.

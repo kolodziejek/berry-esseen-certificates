@@ -1,25 +1,28 @@
 \section{Discussion}\label{ms:discussion}
-Fixing the target aligns the coefficient in the extremal problem,
-contact, and the predecessor estimate. Conservation bounds the defect
-of a possible extremizer; the equality case explains why the resulting
-law is close to the extremal Bernoulli distribution. After coarse
-localization, elementary inequalities place that law in one support
-region and count conditioning gives the strict comparison.
+The fixed target determines both the third-moment penalty in the
+extremal problem and the coefficient in the conservation identity.
+The gap inequality explains their common factor $3+\sqrt{10}$.
+A bound on the remainder then restricts the defect of a maximizer,
+and count conditioning turns that geometric restriction into a strict
+comparison with a binomial law.
 
-The small-noise estimate keeps its errors proportional to $\lambda$,
-which is essential near zero. The five-count estimate handles
-$1/100\le\lambda\le7/20$, where its uniform error is smaller than the
-crossing loss. At zero noise the law is Bernoulli and the strict
-finite-binomial theorem applies directly.
+The number $700$ is a common sufficient floor for two parts of the
+proof. The coarse bound satisfies $32.20665378/700<0.047$, as required
+by the geometric estimates. The local comparison also uses $n\ge700$
+in its binomial-mass and error bounds. Reducing the threshold therefore
+requires checking both parts: a sharper localization constant alone
+does not establish the comparison at smaller sample sizes. A different
+certified localization calculation or a comparison valid on a larger
+law region could reduce the remaining finite range, but either would
+need its own proof and verification.
 
-The argument excludes every attained nonnegative-excess pair at
-$n\ge700$ when the sharp predecessor bound and the entry hypotheses
-hold. Consequently a proof of $C_j\le\CE$ for all $1\le j\le699$
-would complete the global sharp inequality. Those finite bounds are
-not supplied here. This work provides neither an independent
-four-summand proof nor a complete base through $41$. The retained
-computational entry can be replayed separately from the analytical
-comparison and its short scalar checks; none proves the missing base.
+The small-noise estimate keeps its errors proportional to $\lambda$.
+The five-count estimate has an additive error of order $1/n$, so it is
+used on $1/100\le\lambda\le7/20$. At zero noise, the law is Bernoulli
+and the strict finite-binomial theorem applies. These three cases give
+the exclusion at $n\ge700$ under the hypotheses stated above.
+The base cases through $699$ are not treated here; they remain the
+additional requirement for the global sharp conclusion.
 
 \paragraph{AI assistance.}
 AI systems were used extensively for mathematical exploration, exact
@@ -30,11 +33,10 @@ human review. Failed arguments remain diagnostics, not premises. The
 authors are responsible for the content and presentation.
 
 \paragraph{Sources.}
-The \href{https://github.com/kolodziejek/berry-esseen-certificates/tree/b974df4ff28bf4876d98ca4a69ab31fb4e39d4e9/manuscript/compact-v16}{immutable revision snapshot}
-contains the revised proof, scalar checkers, and public execution records
-under \path{manuscript/compact-v16/publication/}. This snapshot precedes
-only the source-citation and release-metadata update and the corresponding
-rebuild; the mathematical arguments and checkers are unchanged.
+The source for this revision, its scalar checkers and dated execution
+records accompany \href{https://github.com/kolodziejek/berry-esseen-certificates/pull/7}{the manuscript revision} under
+\path{manuscript/compact-v16/}. Earlier publication records are retained
+alongside the current record in \path{publication/opus-20261030/}.
 The retained entry certificate is also available at
 \href{https://github.com/kolodziejek/berry-esseen-certificates/tree/cd10654222f4b63d50f9d8f108597b140d263ec5}{the original immutable baseline}.
 Appendix~\ref{revision:reproducibility} identifies the certificate, its

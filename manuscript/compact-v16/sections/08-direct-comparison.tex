@@ -3,7 +3,7 @@
 
 In count coordinates, conditioning on the number of positive summands
 expresses the sum as an integer count plus centered noise. We compare its CDF with the corresponding
-binomial CDF. Noise can move mass out of the count just below the threshold
+binomial CDF. Noise can move mass out of a count near the threshold
 and bring mass in from counts above it. The proof shows that the outgoing
 loss, together with the normal and third-moment corrections, exceeds all
 incoming contributions. The quantity $\lambda=n\E U^2$ measures the total
@@ -28,19 +28,37 @@ every raw threshold $|H|\le46/25$,
 At $\lambda=0$ the same excess is strictly negative.
 \end{theorem}
 
-The proof below uses only the displayed hypotheses. Contact and the sharp
-predecessor are needed earlier to acquire this strip, not for its local
-comparison. The small- and larger-noise intervals meet at $\lambda=1/100$.
-For small noise, we keep every error proportional to $\lambda$ and use
-the loss from one count. For larger noise, five neighboring counts give a
-uniform crossing loss. That second estimate has an error of order $1/n$
-which does not vanish at $\lambda=0$, so it cannot cover arbitrarily small
-positive noise. At zero noise the law is exactly Bernoulli.
+To prove the theorem, condition on $K=\sum_{i=1}^nB_i$, which has law
+$\operatorname{Bin}(n,p)$. Given $K=j$, the count-unit noise $W_j$ is the
+sum of $j$ independent copies of $U_1$ and $n-j$ independent copies of
+$U_0$. The threshold in these units is
+\[
+ t=np+H\sqrt{v+s},\qquad
+ \left\{\sum X_i\le H\right\}=\{K+W_K\le t\}.
+\]
+We compare this probability with the binomial CDF and then account for
+the changes in the normal term and the third absolute moment.
+A count below $t$ can leave the event, while a count above $t$ can enter.
+The aim is to show that the loss and the favorable corrections exceed
+the total gain from all counts above the threshold.
+
+For $0<\lambda\le1/100$, the argument keeps both the loss and every
+error proportional to $\lambda$. It uses one nearby count
+and a fourth-moment bound for all entering counts. For
+$1/100\le\lambda\le7/20$, a finite summation identity separates the
+crossing loss from errors in interpolating the binomial CDF. A periodic
+sine function then gives a loss from five counts that is uniform in the
+phase $t-\lfloor t\rfloor$. Its interpolation error has an upper bound
+of order $1/n$ that does not vanish with $\lambda$, which explains the
+separate small-noise argument. The two ranges share their endpoint.
+At $\lambda=0$ the law is exactly Bernoulli. These comparisons use the
+explicit hypotheses of this theorem; the preceding sections obtain
+those hypotheses for a maximizer.
 
 \subsection{Three elementary ingredients}
 \label{short:count:prelim}
 
-Write $\pi_j=\binom njp^jq^{n-j}$, $F_B(j)=\sum_{i\le j}\pi_i$, and
+Write $b_j=\binom njp^jq^{n-j}$, $F_B(j)=\sum_{i\le j}b_i$, and
 $\rho_B=(1-2v)/\sqrt v$. We use Schulz's strict finite-binomial theorem
 \cite[Theorem~1]{Schulz2016} in the form
 \begin{equation}\label{short:count:binomial}
@@ -101,7 +119,7 @@ $\rho_B-\rho$ can be discarded in an upper comparison.
 \subsection{Small noise: one count and the whole incoming tail}
 \label{short:count:small}
 
-Assume $0<\lambda\le L=1/100$. Choose an integer $k$ with
+Assume $0<\lambda\le\lambda_s=1/100$. Choose an integer $k$ with
 \[
  t=np+H\sqrt{v+s}=k+u,\qquad -3/10\le u\le7/10,
  \qquad\delta=k-np.
@@ -119,15 +137,16 @@ $C\ge0$, subtract the signed binomial excess at $k$ from the actual excess:
 Exact conditioning gives
 \begin{align*}
  \Pp\left(\sum X_i\le H\right)-F_B(k)
- ={}&-\sum_{i=0}^{k}\pi_{k-i}\Pp(W_{k-i}>u+i)\\
-    &+\sum_{i=1}^{n-k}\pi_{k+i}\Pp(W_{k+i}\le u-i).
+ ={}&-\sum_{i=0}^{k}b_{k-i}\Pp(W_{k-i}>u+i)\\
+    &+\sum_{i=1}^{n-k}b_{k+i}\Pp(W_{k+i}\le u-i).
 \end{align*}
-Outgoing events are strict and incoming events closed; this convention
-includes all threshold atoms. Define
+The event is closed: count $k-i$ is lost when $W_{k-i}>u+i$,
+whereas count $k+i$ enters when $W_{k+i}\le u-i$. Thus an atom at the
+threshold remains in the event in both sums. Define
 \[
- f(u)=\frac{\Phi((\delta+u)/\sqrt{n(v+s)})
-                   -\Phi(\delta/\sqrt{n(v+s)})}{\pi_k},\qquad
- O=\Pp(W_k>u)+f(u),
+ g_k(u)=\frac{\Phi((\delta+u)/\sqrt{n(v+s)})
+                   -\Phi(\delta/\sqrt{n(v+s)})}{b_k},\qquad
+ O=\Pp(W_k>u)+g_k(u),
 \]
 \[
  T_{\rm in}=\sum_{i=1}^{n-k}\Pp(W_{k+i}\le u-i),\qquad
@@ -137,10 +156,10 @@ includes all threshold atoms. Define
 Keeping the own-count loss and discarding the other nonpositive outgoing
 terms gives
 \begin{equation}\label{short:count:small-master}
- \Delta_C\le-m_k(O-RT_{\rm in})+\mathcal R,
- \qquad m_k=\sqrt n\pi_k,
+ \Delta_C\le-m_k(O-r_{\max}T_{\rm in})+\mathcal R,
+ \qquad m_k=\sqrt n\,b_k,
 \end{equation}
-whenever $\pi_{k+i}/\pi_k\le R$ for all legal incoming counts.
+whenever $b_{k+i}/b_k\le r_{\max}$ for all legal incoming counts.
 
 \paragraph{Uniform normalization.}
 Set $D_*=5/3$, $b_*=1/20$, $T_*=101/10000$ and $c_*=2/525$.
@@ -164,12 +183,12 @@ for $|\delta|\le D_0\le D_*$. The three terms respectively bound the
 logarithmic prefactor, factorial remainder and entropy remainder.
 Also
 \[
- \log f'(z)=-\tfrac12\log(1+s/v)+\frac{\delta^2}{2nv}
+ \log g_k'(z)=-\tfrac12\log(1+s/v)+\frac{\delta^2}{2nv}
                          -\frac{(\delta+z)^2}{2n(v+s)}-e,
 \]
 so, on an integration interval $|z|\le b_0$,
 \[
- n|\log f'(z)|\le\frac{11}{5}\lambda
+ n|\log g_k'(z)|\le\frac{11}{5}\lambda
                   +\frac{2D_0b_0+b_0^2}{2v_*}+Z(D_0).
 \]
 The coefficient $11/5$ exceeds
@@ -180,17 +199,17 @@ $\phi(0)>199/500$ now gives
 \begin{array}{c|cc}
  &|u|\le1/20&-3/10\le u\le7/10\\\hline
  m_k\text{ lower bound}&3/4&3/4\\
- f'\text{ lower bound}&99/100&49/50\\
- f'\text{ upper bound}&101/100&51/50\\
- R\text{ upper bound}&51/50&6/5
+ g_k'\text{ lower bound}&99/100&49/50\\
+ g_k'\text{ upper bound}&101/100&51/50\\
+ r_{\max}\text{ upper bound}&51/50&6/5
 \end{array}
 \end{equation}
 The derivative estimates hold on the whole segment from $0$ to $u$.
 For the global ratio, \eqref{short:count:mode} gives
-$\sqrt n\max_j\pi_j<17/20$, hence $R<(17/20)/(3/4)<6/5$.
+$\sqrt n\max_j b_j<17/20$, hence $r_{\max}<(17/20)/(3/4)<6/5$.
 In the inner interval the first ratio is
 \[
- \frac{\pi_{k+1}}{\pi_k}
+ \frac{b_{k+1}}{b_k}
  =1+\frac{p-\delta-1}{nv+q(\delta+1)}
  <1+\frac{93/200}{700v_*}<51/50;
 \]
@@ -218,7 +237,7 @@ The moment bound follows from independence and $|U_j|\le A$.
 For $a=1+c_*D_0$ put
 \[
  K(a)=A^2\left(\frac{13a}{12}+\frac{5c_*}{4}\right)
- +3L\left(\frac{13a^2}{12}+\frac{5ac_*}{2}+\frac{5c_*^2}{3}\right).
+ +3\lambda_s\left(\frac{13a^2}{12}+\frac{5ac_*}{2}+\frac{5c_*^2}{3}\right).
 \]
 Fourth-moment Markov at distance $i-u$, and extension of the nonnegative
 sum to all positive integers, give
@@ -236,8 +255,32 @@ These series bounds follow by retaining respectively five, three and five
 terms and estimating the remaining sum by an integral. For $u\ge0$ use
 $i-u\ge(1-u)i$; for $u\le0$ use $i-u\ge i$.
 
-\paragraph{The own-count loss at the central phases.}
-Set $\alpha=1/2$ and $m_h=5\alpha^4=5/16$. The factored quartic
+\paragraph{The loss at the threshold count.}
+The variance of the count-unit noise already predicts the scale of this
+loss. Cauchy--Schwarz and H\"older applied to the centered sum $W_k$ give
+\[
+ \Pp(W_k>0)\ge\frac{(\E|W_k|)^2}{4t_0}
+             \ge\frac{t_0^2}{4\E W_k^4}.
+\]
+Indeed $\E(W_k)_+=\E|W_k|/2$ and
+$t_0\le(\E|W_k|)^{2/3}(\E W_k^4)^{1/3}$.
+The fourth-moment bound $\E W_k^4\le A^2t_0+3t_0^2$ makes this at least
+$t_0/[4(A^2+3t_0)]> (16/25)t_0$ on $t_0\le T_*$.
+This zero-threshold estimate explains why a loss proportional to the
+variance is possible. We use a quartic minorant to obtain a bound that
+also pays for moving the threshold and for the normal increment.
+
+\begin{lemma}[Loss at a nearby count threshold]
+\label{short:count:central-loss-lemma}
+Under the small-noise hypotheses and for $|u|\le b_*$,
+\begin{equation}\label{short:count:small-own}
+ O>\frac35t_0>.59\lambda.
+\end{equation}
+\end{lemma}
+\begin{proof}
+We first use a moment minorant when $|u|\le3t_0/2$, then a one-sided
+variance bound for the remaining phases. Set $\alpha=1/2$ and $m_h=5\alpha^4=5/16$.
+The factored quartic
 \begin{equation}\label{short:count:minorant}
  h_\alpha(x)=\frac{-16x^4+12x^2+4x}{5}
  =\frac45x(1-x)(2x+1)^2
@@ -247,8 +290,9 @@ is a global minorant for the strict event. Its factorization makes it
 nonpositive for $x\le0$ and $x\ge1$. On $(0,1)$ the maximum occurs at
 $x=(1+\sqrt3)/4$ and equals $(9+6\sqrt3)/20<1$; the last comparison
 follows from $6\sqrt3<11$.
-Thus it may be integrated against the conditional sum $W_k$, which need
-not be bounded by $3/5$. Only its individual summands have that bound.
+Thus it may be integrated against the conditional sum $W_k$. Each
+summand is bounded by $3/5$, whereas the sum can exceed that bound;
+the minorant is valid on the entire real line.
 The expectation of the quartic uses moments through order four, supplied
 by independence and the bounded summands. Let $r=zt_0$ and set
 \begin{align*}
@@ -298,11 +342,9 @@ $t_0\le T_*$ after division by $t_0$; at the other use
 $b_*^2/(T_*+b_*^2)-(101/100)b_*>(3/5)T_*$.
 For positive phases beyond this switch,
 $O\ge(99/100)r\ge(297/200)t_0>(3/5)t_0$.
-The switch lies below $b_*$ because $3T_*/2<b_*$. Thus
-\begin{equation}\label{short:count:small-own}
- O>\frac35t_0>.59\lambda\qquad(|u|\le b_*).
-\end{equation}
+The switch lies below $b_*$ because $3T_*/2<b_*$.
 The value $u=0$ is included, with $h_\alpha(0)=0$.
+\end{proof}
 
 \paragraph{The outer phases and the final margin.}
 For $u=-r$, $b_*\le r\le3/10$, Cantelli gives
@@ -312,19 +354,19 @@ For $u=-r$, $b_*\le r\le3/10$, Cantelli gives
 The derivative is positive at $b_*$ and has at most one downward zero;
 both endpoint values exceed $7/50$. For $b_*\le u\le7/10$,
 \[
- O-RT_{\rm in}\ge\frac{49}{50}u
-          -\frac{(6/5)(43/100)L}{(1-u)^4}>1/25\ge4\lambda.
+ O-r_{\max}T_{\rm in}\ge\frac{49}{50}u
+          -\frac{(6/5)(43/100)\lambda_s}{(1-u)^4}>1/25\ge4\lambda.
 \]
 This function is concave and both endpoints exceed $1/25$.
 In the inner interval, \eqref{short:count:small-tail} and
 \eqref{short:count:small-own} give
-$O-RT_{\rm in}>(.59-(51/50).53)\lambda$.
+$O-r_{\max}T_{\rm in}>(.59-(51/50).53)\lambda$.
 Substitute these three margins and \eqref{short:count:small-repair} into
 \eqref{short:count:small-master}, using $m_k>3/4$.
 The smallest final margin is the inner one, and
 \[
  \frac34\left(\frac{59}{100}-\frac{51}{50}\frac{53}{100}\right)
-                 -\frac2{700}>\frac1{100}.
+                 -\frac2{700}=\frac{4787}{140000}>\frac1{100}.
 \]
 Hence $\Delta_C<-\lambda/100$. Taking $C=\CE$ and applying
 \eqref{short:count:binomial} proves \eqref{short:count:exclusion} for
@@ -338,60 +380,63 @@ $k=\lfloor t\rfloor$, $u=t-k\in[0,1)$, $w=t-np$.
 The following constants will be used only in this subsection:
 \[
 \begin{gathered}
- N=700,\quad p_-=3/8,\quad p_+=93/200,\\
+ n_0=700,\quad p_-=3/8,\quad p_+=93/200,\\
  r=3/8,\quad q_{\min}=107/200,\\
  v_-=15/64,\quad v_+=9951/40000,\quad A=3/5,\quad d=1/250,\\
  \eta=2/5,\quad c_{\rm mass}=41/100,\quad\pi_+=22/7,\quad
  \phi_-=199/500,\quad\phi_+=2/5,\\
- \kappa=3,\quad\xi=93/100,\quad c_-=6,\quad\zeta=23/100,
+ \kappa=3,\quad\xi=93/100,\quad c_{\rm var}=6,\quad\zeta=23/100,
  \quad m_*=3/4,\quad V_*=113/1000,\\
  \bar c=79/200,\quad j_0=1/5,\quad j_1=5/2.
 \end{gathered}
 \]
 In particular $|w|<\xi<1$, since
-$(46/25)^2(v_++(7/20)/N)<\xi^2$.
-Also $N(r-d)>\xi$, so $na_0\le t<n(1-a_1)$.
+$(46/25)^2(v_++(7/20)/n_0)<\xi^2$.
+Also $n_0(r-d)>\xi$, so $na_0\le t<n(1-a_1)$.
 
 \paragraph{An exact weighted crossing identity.}
 On an auxiliary space take independent copies of the conditional laws and
 write
 \[
  T_j=j+\sum_{l\le j}U_{1l}+\sum_{l>j}U_{0l},\qquad
- L_j(t)=\E(t-T_j)_+,\qquad
+ \mathcal L_j(t)=\E(t-T_j)_+,\qquad
  V_i=\sum_{l<i}U_{1l}+\sum_{l>i}U_{0l}.
 \]
 The mesh is increasing because $T_j-T_{j-1}\ge1-a_0-a_1>0$.
 Each $T_j$ has the conditional convolution given $j$ successes.
 Set
 \[
- h(x)=\E(x-U_0)_+-\E(x-1-U_1)_+-\Pp(1+U_1\le x),
- \qquad g_i=\E h(t-i+1-V_i).
+ \chi(x)=\E(x-U_0)_+-\E(x-1-U_1)_+-\Pp(1+U_1\le x),
+ \qquad \chi_i=\E \chi(t-i+1-V_i).
 \]
 \begin{lemma}[Count interpolation and crossing loss]
 \label{short:count:crossing-lemma}
-With the preceding definitions, $B_j=L_j(t)-(t-j)_+\ge0$ and
+With the preceding definitions, $\mathcal B_j=\mathcal L_j(t)-(t-j)_+\ge0$ and
 \begin{align}
  \Pp\left(\sum X_i\le H\right)
  ={}&(1-u)F_B(k)+uF_B(k+1)\notag\\
- &+\sum_{j=1}^{n-1}(\pi_{j+1}-\pi_j)B_j-\sum_{i=1}^n\pi_i g_i.
+ &+\sum_{j=1}^{n-1}(b_{j+1}-b_j)\mathcal B_j-\sum_{i=1}^n b_i \chi_i.
  \label{short:count:crossing}
 \end{align}
 \end{lemma}
 \begin{proof}
 Jensen's inequality for the convex positive-part function and
-$\E T_j=j$ give $B_j\ge0$. Independence of the omitted coordinate gives
-$g_i=L_{i-1}(t)-L_i(t)-\Pp(T_i\le t)$.
-Here $L_0=t$, $L_n=0$ and $\Pp(T_0\le t)=1$: the support bounds give
-$T_0\le na_0\le t<T_n$. Multiplication by $\pi_i$ and finite summation
-by parts now gives the identity, since replacing $L_j$ by $(t-j)_+$ in
-$\pi_0+\pi_1t+\sum(\pi_{j+1}-\pi_j)L_j$ telescopes to the stated
+$\E T_j=j$ give $\mathcal B_j\ge0$. Independence of the omitted coordinate gives
+$\chi_i=\mathcal L_{i-1}(t)-\mathcal L_i(t)-\Pp(T_i\le t)$.
+Here $\mathcal L_0=t$, $\mathcal L_n=0$ and $\Pp(T_0\le t)=1$: the support bounds give
+$T_0\le na_0\le t<T_n$. Multiplication by $b_i$ and finite summation
+by parts now gives the identity, since replacing $\mathcal L_j$ by $(t-j)_+$ in
+$b_0+b_1t+\sum(b_{j+1}-b_j)\mathcal L_j$ telescopes to the stated
 interpolation. All CDF events are closed, including atoms.
 \end{proof}
-The three terms in \eqref{short:count:crossing} are the interpolated
-binomial probability, an error from variation in the binomial masses,
-and the crossing loss. The next argument proves $g_i\ge0$ using the
+The functions $\mathcal L_j(t)$ are expectations of the convex
+positive-part function; their Jensen gaps $\mathcal B_j$ measure how
+noise changes those expectations. Thus the three terms in
+\eqref{short:count:crossing} are the interpolated binomial probability,
+an error from variation in the binomial masses, and the crossing loss.
+The next argument proves $\chi_i\ge0$ using the
 separated conditional supports and conditional centering; this does not
-follow merely from $B_j\ge0$.
+follow merely from $\mathcal B_j\ge0$.
 
 \paragraph{Five kernels with four centered replacements.}
 The sine bump below serves three purposes. Its translates recover a
@@ -400,35 +445,63 @@ replacement errors proportional to variance, and the identity for
 $\sin^2$ turns independence into a product of characteristic functions.
 Five translates will supply the main loss; the omitted translates are
 bounded using a fourth moment.
-Let $f(x)=\sin^2(\pi x)$ on $[0,1]$ and zero outside.
+Let $\psi(x)=\sin^2(\pi x)$ on $[0,1]$ and zero outside.
 It is continuously differentiable with derivative Lipschitz constant
-$2\pi^2$. We claim
+$2\pi^2$.
+\begin{lemma}[A nonnegative crossing kernel]
+\label{short:count:kernel-lemma}
+For every real $x$,
 \begin{equation}\label{short:count:kernel}
- h(x)\ge\eta f(x)\ge0.
+ \chi(x)\ge\eta\psi(x)\ge0.
 \end{equation}
-For $x<1-a_1$, $h(x)=\E(x-U_0)_+\ge0$, and Jensen gives $h(x)\ge x$
-when $x\ge0$. On $[0,1]$, $f(x)\le(5/2)x$: use $\pi^2<10$ up to
+\end{lemma}
+\begin{proof}
+For $x<1-a_1$, $\chi(x)=\E(x-U_0)_+\ge0$, and Jensen gives $\chi(x)\ge x$
+when $x\ge0$. On $[0,1]$, $\psi(x)\le(5/2)x$: use $\pi^2<10$ up to
 $1/4$, the concave tangent $1/2+\pi(x-1/4)$ on $[1/4,2/5]$, and
-$f\le1$ thereafter. For $x\ge1-a_1>a_0$, put $D_1=1+U_1$ and
+$\psi\le1$ thereafter. For $x\ge1-a_1>a_0$, put $D_1=1+U_1$ and
 $L_1=\E(D_1-x)_+$. Put--call parity gives
-$h(x)=\Pp(D_1>x)-L_1\ge0$, since $D_1\le1+A$ and $x>A$.
+$\chi(x)=\Pp(D_1>x)-L_1\ge0$, since $D_1\le1+A$ and $x>A$.
 When $1-a_1\le x\le1$, $L_1\ge1-x$ and
 \[
- h(x)\ge\frac{x-A}{1+A-x}L_1
+ \chi(x)\ge\frac{x-A}{1+A-x}L_1
  \ge\frac{1-A-d}{A+d}(1-x)
- \ge\eta\pi^2(1-x)^2\ge\eta f(x).
+ \ge\eta\pi^2(1-x)^2\ge\eta \psi(x).
 \]
 The penultimate inequality uses
 $\eta\pi_+^2d\le(1-A-d)/(A+d)$.
 At $x=0,1$ both comparisons are weak, as required for atoms.
+\end{proof}
 
-Freeze $V=V_{k+1}$ and let $V^{(j)}$ have the law of $V_{k+1+j}$.
+The useful feature of the sine bump is its phase-uniform average: for any
+real random variable $V$,
+\[
+ \E\sin^2(\pi(u-V))
+ =\frac{1-\Re\{e^{2\pi i u}\E e^{-2\pi iV}\}}2
+ \ge\frac{1-|\E e^{2\pi iV}|}{2}.
+\]
+The characteristic function factorizes for a sum of independent noises.
+To use this observation, we compare five neighboring count sums with
+one fixed sum, paying for four centered replacements.
+
+\begin{lemma}[Five-count crossing loss]
+\label{short:count:five-loss-lemma}
+Under the larger-noise hypotheses,
+\begin{equation}\label{short:count:reserve}
+ \sum_{i=k-1}^{k+3}\chi_i\ge\eta\left\{
+ \frac{1-e^{-\kappa(1-6/n)\lambda}}2
+ -\frac{A^2(1+3/n)\lambda+3(1+3/n)^2\lambda^2}{16}
+ -\frac{4\pi^2\lambda}{nr}\right\}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Fix $V=V_{k+1}$ and let $V^{(j)}$ have the law of $V_{k+1+j}$.
 For $j>0$ it replaces $j$ copies of $U_0$ by $U_1$. With
-$f_j(x)=f(u-j-x)$, regroup the two positive changes as
+$\psi_j(x)=\psi(u-j-x)$, regroup the two positive changes as
 \begin{align*}
- &\E f_1(V^{(1)})+\E f_2(V^{(2)})-\E f_1(V)-\E f_2(V)\\
- &\quad=\E(f_1+f_2)(V^{(1)})-\E(f_1+f_2)(V)
-                       +\E f_2(V^{(2)})-\E f_2(V^{(1)}).
+ &\E \psi_1(V^{(1)})+\E \psi_2(V^{(2)})-\E \psi_1(V)-\E \psi_2(V)\\
+ &\quad=\E(\psi_1+\psi_2)(V^{(1)})-\E(\psi_1+\psi_2)(V)
+                       +\E \psi_2(V^{(2)})-\E \psi_2(V^{(1)}).
 \end{align*}
 There is an identical grouping for the negative changes.
 Adjacent bumps have disjoint open supports and zero derivatives at the
@@ -438,22 +511,23 @@ $|\E F(a+Z)-F(a)|\le\tfrac12\operatorname{Lip}(F')\E Z^2$.
 Conditioning on all unchanged summands, and applying this twice to each
 replacement, bounds the total cost by $4\pi^2(s_0+s_1)$. Hence
 \[
- \sum_{i=k-1}^{k+3}g_i
- \ge\eta\left\{\sum_{j=-2}^2\E f(u-j-V)-4\pi^2(s_0+s_1)\right\}.
+ \sum_{i=k-1}^{k+3}\chi_i
+ \ge\eta\left\{\sum_{j=-2}^2\E \psi(u-j-V)-4\pi^2(s_0+s_1)\right\}.
 \]
 These five indices are interior, because $|i-np|<\xi+3<4$.
-No independence between different count sums is asserted.
+The summands within each sum are independent; neighboring count sums
+share the unchanged summands in the replacement argument.
 
-The infinite translates of $f$ sum to $\sin^2(\pi(u-V))$.
+The infinite translates of $\psi$ sum to $\sin^2(\pi(u-V))$.
 An omitted nonzero translate requires $|V|>2$, including endpoint
 collisions because the bump vanishes there. Thus the omitted part is at
-most $\E V^4/16$. With $\delta=k-np\in(-1-\xi,\xi)$, the frozen variance is
+most $\E V^4/16$. With $\delta=k-np\in(-1-\xi,\xi)$, the variance of the fixed sum is
 \[
- \tau=(nq-\delta-1)s_0+(np+\delta)s_1,
- \qquad(1-6/n)\lambda\le\tau\le(1+3/n)\lambda.
+ \sigma_V^2=(nq-\delta-1)s_0+(np+\delta)s_1,
+ \qquad(1-6/n)\lambda\le\sigma_V^2\le(1+3/n)\lambda.
 \]
-The lower estimate uses $c_-r\ge1+\xi$; the upper uses $r\ge1/3$.
-Also $s_0+s_1\le\lambda/(nr)$ and $\E V^4\le A^2\tau+3\tau^2$.
+The lower estimate uses $c_{\rm var} r\ge1+\xi$; the upper uses $r\ge1/3$.
+Also $s_0+s_1\le\lambda/(nr)$ and $\E V^4\le A^2\sigma_V^2+3\sigma_V^4$.
 For either conditional noise $Z$, an independent copy satisfies
 $|Z-Z'|\le A+d<2/3$. Concavity of sine and
 $\sin(2\pi/3)=\sqrt3/2>17/20$ give
@@ -465,49 +539,59 @@ Therefore
  =\E\{1-\cos(2\pi(Z-Z'))\}\ge2\kappa\Var Z,
 \]
 and $|\E e^{2\pi iZ}|\le e^{-\kappa\Var Z}$.
-Multiplying over the independent frozen summands shows
-$\E\sin^2(\pi(u-V))\ge(1-e^{-\kappa\tau})/2$.
-Altogether,
-\begin{equation}\label{short:count:reserve}
- \sum_{i=k-1}^{k+3}g_i\ge\eta\left\{
- \frac{1-e^{-\kappa(1-6/n)\lambda}}2
- -\frac{A^2(1+3/n)\lambda+3(1+3/n)^2\lambda^2}{16}
- -\frac{4\pi^2\lambda}{nr}\right\}.
-\end{equation}
+Multiplying over the independent summands of $V$ shows
+$\E\sin^2(\pi(u-V))\ge(1-e^{-\kappa\sigma_V^2})/2$.
+Combining the replacement cost, the omitted translates, and the
+characteristic-function bound proves the displayed inequality.
+\end{proof}
 
 \paragraph{The weights and the complete curvature tail.}
 For $k-1\le i\le k+3$, the segment between $i/n$ and $p$ has variance
 product greater than $\zeta$; indeed
-$\zeta<\min_{z=p_- -4/N,\,p_++4/N}z(1-z)$.
+$\zeta<\min_{z=p_- -4/n_0,\,p_++4/n_0}z(1-z)$.
 Relative entropy is bounded by $(i-np)^2/(2n\zeta)<8/(n\zeta)$,
 and the factorial remainder is greater than $-1/(12n\zeta)$.
 Stirling therefore gives
 \[
- \sqrt n\pi_i>2\phi_-\left(1-\frac{8+1/12}{N\zeta}\right)>m_*.
+ \sqrt n\,b_i>2\phi_-\left(1-\frac{8+1/12}{n_0\zeta}\right)>m_*.
 \]
-Every other $g_i$ is nonnegative. The reserve in
-\eqref{short:count:reserve} increases with $n$. Replace $n$ by $N$ first,
+Every other $\chi_i$ is nonnegative. The right-hand side of
+\eqref{short:count:reserve} increases with $n$. Replace $n$ by $n_0$ first,
 then use $1-e^{-x}\ge x-x^2/2+x^3/6-x^4/24$ for $x\ge0$.
-Writing $\alpha=1-6/N$, $b=1+3/N$ and $z=\kappa\alpha$, we obtain
+Writing $b=1+3/n_0$ and $\kappa_0=\kappa(1-6/n_0)$, we obtain
 \begin{equation}\label{short:count:W}
- \sqrt n\sum_i\pi_i g_i\ge W(\lambda):=
- \eta m_*\left\{
- \frac{z\lambda-z^2\lambda^2/2+z^3\lambda^3/6-z^4\lambda^4/24}{2}
+\begin{gathered}
+ \sqrt n\sum_i b_i\chi_i\ge\mathcal W(\lambda),\\
+ \mathcal W(\lambda):=\eta m_*\left\{
+ \frac{\kappa_0\lambda-\kappa_0^2\lambda^2/2+\kappa_0^3\lambda^3/6-\kappa_0^4\lambda^4/24}{2}
  -\frac{A^2b\lambda+3b^2\lambda^2}{16}
- -\frac{4\pi_+^2\lambda}{Nr}\right\}.
+ -\frac{4\pi_+^2\lambda}{n_0r}\right\}.
+\end{gathered}
 \end{equation}
 
-Put $c=(np-q-t)_+$. For $a=t-j$ and $W_j=T_j-j$, centering gives
+\begin{lemma}[Variation of the binomial weights]
+\label{short:count:variation-lemma}
+Put $c=(np-q-t)_+\le\bar c$. If $T$ and $M_4$ bound respectively
+the second and fourth moments of $W_j$ whenever $b_{j+1}>b_j$, then
+\begin{equation}\label{short:count:curvature}
+ \sqrt n\sum_j(b_{j+1}-b_j)\mathcal B_j
+ \le\frac{c_{\rm mass}}{nv^{3/2}}
+ \left\{\frac T4+c\sqrt T+
+       \frac{27M_4}{256}\left(\frac53+\frac{5c}4\right)\right\}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For $a=t-j$ and $W_j=T_j-j$, centering gives
 \[
- B_j=(\E|a-W_j|-|a|)/2\ge0,\qquad
- B_j\le\sqrt T/2,\qquad a_+B_j\le T/4,
+ \mathcal B_j=(\E|a-W_j|-|a|)/2\ge0,\qquad
+ \mathcal B_j\le\sqrt T/2,\qquad a_+\mathcal B_j\le T/4,
 \]
 whenever $T\ge\E W_j^2$. The factorization
 $27x^4-256x+256=(3x-4)^2(3x^2+8x+16)$ gives
-$B_j\le27M_4/(256|a|^3)$ for $a\ne0$, if $M_4\ge\E W_j^4$.
+$\mathcal B_j\le27M_4/(256|a|^3)$ for $a\ne0$, if $M_4\ge\E W_j^4$.
 The exact adjacent-mass formula is
 \[
- \pi_{j+1}-\pi_j
+ b_{j+1}-b_j
  =\frac{np-q-j}{(n+1)v}\,
        \Pp\{\operatorname{Bin}(n+1,p)=j+1\}.
 \]
@@ -516,13 +600,8 @@ $(a+c)_+$. Since $c\le\bar c<1$, at most one mesh point lies in each
 of $(-c,0)$ and $[0,1)$; together they cost $c\sqrt T+T/4$.
 The rest is bounded by the complete series
 $\sum i^{-2}<5/3$, $\sum i^{-3}<5/4$. Using
-\eqref{short:count:mode} and $\sqrt n/(n+1)^{3/2}\le1/n$ yields
-\begin{equation}\label{short:count:curvature}
- \sqrt n\sum_j(\pi_{j+1}-\pi_j)B_j
- \le\frac{c_{\rm mass}}{nv^{3/2}}
- \left\{\frac T4+c\sqrt T+
-       \frac{27M_4}{256}\left(\frac53+\frac{5c}4\right)\right\}.
-\end{equation}
+\eqref{short:count:mode} and $\sqrt n/(n+1)^{3/2}\le1/n$ proves the asserted bound.
+\end{proof}
 A positive adjacent mass requires $j<np$, where its actual variance
 is at most $\lambda/q\le T=\lambda/q_{\min}$ and
 $\E W_j^4\le M_4=A^2T+3T^2$.
@@ -560,7 +639,7 @@ Define the nonnegative quadratics
 Because $V_*^2<v_-^3$, combining
 \eqref{short:count:crossing}--\eqref{short:count:curvature} with these
 normal bounds makes the full excess strictly less than
-$-W(\lambda)+E_\pm(\lambda)/n$, with the sign chosen according to $H$.
+$-\mathcal W(\lambda)+E_\pm(\lambda)/n$, with the sign chosen according to $H$.
 A single envelope suffices for both signs, because
 \begin{align*}
  V_*(E_--E_+)
@@ -572,27 +651,29 @@ A single envelope suffices for both signs, because
    \qquad(\lambda\ge0).
 \end{align*}
 Set $E=E_-$. The full excess is strictly less than
-$-W(\lambda)+E(\lambda)/n$ for either sign of $H$.
+$-\mathcal W(\lambda)+E(\lambda)/n$ for either sign of $H$.
 
 \paragraph{Concavity reduces the interval to two endpoints.}
-Set $P(\lambda)=W(\lambda)-E(\lambda)/N-\lambda/100$.
+Set $\Pi(\lambda)=\mathcal W(\lambda)-E(\lambda)/n_0-\lambda/100$.
 The nonnegative polynomial $E$ is a convex quadratic, whereas direct
 differentiation gives
 \[
- W''(\lambda)=-\eta m_*\left\{
- \frac{z^2}{4}\big[(z\lambda-1)^2+1\big]+\frac{3b^2}{8}\right\}<0.
+ \mathcal W''(\lambda)=-\eta m_*\left\{
+ \frac{\kappa_0^2}{4}\big[(\kappa_0\lambda-1)^2+1\big]+\frac{3b^2}{8}\right\}<0.
 \]
-Thus $P$ is strictly concave. Substitution of the rational constants
+Thus $\Pi$ is strictly concave. Substitution of the rational constants
 above gives the exact rational lower bounds
 \[
- P(1/100)>.002314,\qquad P(7/20)>.061304.
+ \Pi(1/100)>.002314,\qquad \Pi(7/20)>.061304.
 \]
-Both are positive, proving $P>0$ on the whole closed interval.
-Since $n\ge N$ and $E\ge0$, this proves
+Both are positive, proving $\Pi>0$ on the whole closed interval.
+Since $n\ge n_0$ and $E\ge0$, this proves
 \eqref{short:count:exclusion} for $1/100\le\lambda\le7/20$.
-The scalar checks used here involve only rational inequalities and
-$199/500<\phi(0)<2/5$, $25/8<\pi<22/7$; no parameter grid or tail
-truncation is involved.
+The endpoint calculations are rational after using
+$199/500<\phi(0)<2/5$ and $25/8<\pi<22/7$.
+Concavity supplies the bounds between the endpoints, while
+\eqref{short:count:small-tail} and \eqref{short:count:curvature} retain
+all entering counts.
 
 The two positive-noise proofs have identical support and probability
 hypotheses, include their shared endpoint, and cover every phase.

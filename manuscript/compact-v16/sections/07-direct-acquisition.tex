@@ -1,10 +1,16 @@
 \section{From small defect to a common support region}\label{short:acq:section}
 
-The entry calculation supplies the weighted defect and raw-threshold
-bounds. The defect bound first locates the sign probability and controls
-the inward endpoints and conditional variance. Two applications of
-contact then bound the entire conditional support. This last step uses
-the sharp predecessor bound; the preceding geometric estimates do not.
+The localization theorem bounds $nD$ and $|H|$.
+Lemma~\ref{ms:joint-defect}
+bounds $D$ below by nonnegative costs, so a small defect makes each
+cost small: the sign probability must be close to $p_*$, the support
+gap must nearly reach the conditional means, and the spread within each
+sign class must be small. Proposition~\ref{short:acq:geometry} makes
+these conclusions quantitative using the defect alone.
+Proposition~\ref{short:acq:strip} then uses contact and the sharp
+predecessor bound to control the entire conditional support. Together
+with the threshold bound, these conclusions give the domain needed by
+Theorem~\ref{short:count:local}.
 Throughout this section set
 \[
  \sigma=\sqrt{10},\qquad p_*=(4-\sigma)/2,\qquad
@@ -13,8 +19,10 @@ Throughout this section set
 The law, support gaps and sign split are those of
 Section~\ref{ms:geometry-counts}; in particular $D$ is the actual gap
 defect, not a moment surrogate. Write the central gap, once acquired, as
-$(-A_-,A_+)$, so that its endpoints are not confused with the sign indicator
-$B_0=\ind_{\{X>0\}}$.
+$(-A_-,A_+)$, using the notation of
+Section~\ref{ms:geometry-counts}. The first use of $n\ge700$ is the
+inequality $B_*/700<.047$ below; the count comparison also uses this
+sample-size bound in its error estimates.
 
 \begin{proposition}[Direct geometry]\label{short:acq:geometry}
 Let $X$ be compactly supported, centered and of variance one. If
@@ -63,21 +71,21 @@ in Proposition~\ref{short:acq:strip}. \\
 \end{center}
 
 \begin{proof}
+\emph{1. A central gap and preliminary bounds.}
 We have $D<D_0:=.047$, because $700D_0>B_*$. If zero were in the
 closed support, Lemma~\ref{ms:physical-defect} would give
 $D\ge(\sigma-1)\rho\ge\sigma-1>D_0$. Thus the central gap exists;
 centering supplies both signs. Conditional means imply $a_j\ge0$ and
-$0\le d<1$. Put $v=pq$ and $w=1-\theta=v\ell^2$, and define
-\[
- \mathcal Q(p)=(\sigma+1)p^2+(\sigma-1)q^2-6pq
-       =(6+2\sigma)(p-p_*)^2.
-\]
+$0\le d<1$. Put $v=pq$ and $w=1-\theta=v\ell^2$, and use the
+probability polynomial $\mathcal Q$ from
+Section~\ref{ms:geometry-counts}.
 We first retain all the costs of the actual conditional noises. Let
 \[
  \int f\,d\mu_\pm
  =\E\bigl[(X-\E(X\mid B_0))^2\ind_{\{\pm X>0\}}f(|X|)\bigr].
 \]
-Their masses sum to $\theta$. The outer-gap estimate gives the common budget
+Their masses sum to $\theta$. In this notation the joint budget
+\eqref{ms:joint-defect-budget} reads
 \begin{equation}\label{short:acq:budget}
  D\ge\ell w\mathcal Q+E_0+\int k_+\,d\mu_++\int k_-\,d\mu_-,
 \end{equation}
@@ -87,9 +95,8 @@ where
  k_+(x)=(\sigma-1)(x+2\ell q)+6A_+,\qquad
  k_-(x)=(\sigma+1)(x+2\ell p)+6A_-.
 \end{gather*}
-This is Lemma~\ref{ms:joint-defect} with $A=A_-$ and $B=A_+$.
-The measures $\mu_\pm$ are only notation for the displayed
-variance-weighted expectations; no new law is introduced.
+The measures $\mu_\pm$ abbreviate the displayed variance-weighted
+expectations under the same marginal $P$.
 
 Hereafter use $3.162277660<\sigma<3.162277661$. The weaker gap estimate
 $J\le\rho+2mA_-A_+$, together with $\rho\ge1$, $\gamma\le\rho$ and
@@ -112,7 +119,8 @@ rational bound. The two exact tests
 exclude $p\le.36$ and $p\ge.48$, respectively: the squared distance
 to $p_*\in(.36,.48)$ is monotone outside that interval.
 
-On $.36<p<.48$, $\ell\ge2\sqrt z>1.67$, and the noise prices satisfy
+\emph{2. Preliminary noise and inward-displacement bounds.}
+On $.36<p<.48$, $\ell\ge2\sqrt z>1.67$, and the noise coefficients satisfy
 \begin{align*}
  k_+(x)/\ell&\ge q\{(\sigma+5)z/w+2(\sigma-1)\}>5.2,\\
  k_-(x)/\ell&\ge p\{(\sigma+7)z/w+2(\sigma+1)\}>5.2.
@@ -143,6 +151,7 @@ The inward cost alone excludes $d\ge.004$, because
  1.99(.994)6(.004)(.996)>.047.
 \]
 
+\emph{3. The final probability and variance bounds.}
 After replacing $d$ by zero, the derivative in $\theta$ of either branch
 $\sqrt{(1-\theta)/v}\{(1-\theta)\mathcal Q+\theta C\}$ has the sign of
 $(2-3\theta)C-3(1-\theta)\mathcal Q$. It is positive: $C>6.49$, $\mathcal Q<.05$
@@ -167,8 +176,10 @@ Since
 \]
 the bound $D\ge\ell\theta C$, with $\ell>1.99$, improves
 $\theta<.0036$ and consequently $\ell>1.996$.
+Here the $d$-dependent terms may be dropped together, since
+$6w(1-d)-\theta b_\pm>0$ on the current domain. This keeps the displacement cost together with its signed noise correction.
 
-The exact conditional cubic expansion gives
+\emph{4. The remaining moment bounds.} The exact conditional cubic expansion gives
 \[
  \rho=w^{3/2}\rho_B(p)+\int(x+2\ell q)\,d\mu_+
                           +\int(x+2\ell p)\,d\mu_-,
@@ -187,15 +198,20 @@ The signed-second-moment identity gives
 \]
 its endpoints imply $.066148<\beta<.2527$.
 
-To bound the scaled noise $\lambda$, retain the cubic cost rather than
-only its sign. If $Z$ is centered, $Z\le a$, $a>0$, and $t=\E Z^2$, then
+\emph{5. From conditional spread to total count variance.}
+A bound on $\theta$ alone would not control $\lambda=n\theta/\ell^2$
+uniformly in $n$. We therefore retain more of the cubic cost. A
+one-sided moment inequality supplies a variance-squared term divided by
+the inward displacement; pairing it with the displacement cost by
+AM--GM will give a larger linear coefficient of $\lambda$.
+If $Z$ is centered, $Z\le a$, $a>0$, and $t=\E Z^2$, then
 \[
  0\le\E[(a-Z)(Z+t/a)^2]=at-\E Z^3-t^2/a.
 \]
 Apply this to $U_0$ and $-U_1$. A zero endpoint forces the corresponding
 noise to vanish, so no division by zero is needed. For
 $\lambda_0=nq\E U_0^2$, $\lambda_1=np\E U_1^2$,
-the same gap-budget expansion, before bounding these two cubics, reads
+the same gap-budget expansion, with these two cubic bounds inserted, gives
 \begin{align*}
  nD/\ell^3\ge{}&nv\mathcal Q+6nv\{d(1-d)+a_0a_1\}\\
  &+\{3(\sigma+3)p-(\sigma+7)a_0\}\lambda_0
@@ -236,9 +252,9 @@ This proves $\lambda<.35$; at zero noise it is immediate.
 \end{proof}
 
 \begin{proposition}[Two contact rays]\label{short:acq:strip}
-Under Proposition~\ref{short:acq:geometry}, suppose $(P,H)$ is an attained
-fixed-target pair at $\CE$ with nonnegative excess and true predecessor
-$C_{n-1}\le\CE$. Then
+Under the hypotheses of Proposition~\ref{short:acq:geometry}, suppose
+in addition that $C_{n-1}\le\CE$ and that $(P,H)$ maximizes the excess
+at $\CE$, with nonnegative maximum. Then
 \[
                 -.6<U_0\le a_0,\qquad -a_1\le U_1<.6.
 \]
@@ -246,15 +262,16 @@ The support conclusion is uniform in the raw threshold $H$.
 \end{proposition}
 
 \begin{proof}
-Use the contact upper expression \eqref{v9:entry:contact}. The
+A support point too far from its conditional mean would make the
+contact upper expression \eqref{v9:entry:contact} negative. The
 all-threshold Gaussian heat estimate and its radial derivative bound
 from the proof of Theorem~\ref{v9:entry:initial} give, for $t>\sqrt3$,
 \begin{align*}
- H_n(H,\pm t)&\le h(t):=S^3\left\{\frac25\left(
+ H_n(H,\pm t)&\le \overline H(t):=S^3\left\{\frac25\left(
  \frac{t^3-3t}{6}+\frac{|t^4-6t^2+3|}{72}\right)
  +\frac{t^5}{4100}+\frac{3t}{820}
  +\frac{17(3t^2-2)}{78720}\right\},\\
- |\partial_t H_n(H,\pm t)|&<g(t):=\frac25(t^2/2+1/2+\eta),
+ |\partial_t H_n(H,\pm t)|&<g_{\rm rad}(t):=\frac25(t^2/2+1/2+\eta),
  \qquad S=81/80,\quad\eta=8/875.
 \end{align*}
 The first bound follows directly from \eqref{v9:entry:heat}:
@@ -281,7 +298,7 @@ For a fixed raw threshold $H$, abbreviate the appropriate radial
 function $H_n(H,\pm t)$ by $H_n(t)$, with derivative taken in the
 positive magnitude $t$. Set
 \[
- L(t)=g(t)+c_0Q_b'(t).
+ \Xi(t)=g_{\rm rad}(t)+c_0Q_b'(t).
 \]
 Exact rational substitution gives the following conservative bounds:
 \begin{center}
@@ -289,28 +306,28 @@ Exact rational substitution gives the following conservative bounds:
 \toprule
 Boundary quantity & $t_-$, negative ray & $t_+$, positive ray \\
 \midrule
-$h(t)+c_0Q_b(t)$ & $<-2/5$ & $<-13/100$ \\
-$L(t)$ & $<-1$ & $<-8/5$ \\
-$L'(t)$ & $<-13/5$ & $<-16/5$ \\
+$\overline H(t)+c_0Q_b(t)$ & $<-2/5$ & $<-13/100$ \\
+$\Xi(t)$ & $<-1$ & $<-8/5$ \\
+$\Xi'(t)$ & $<-13/5$ & $<-16/5$ \\
 \bottomrule
 \end{tabular}
 \end{center}
 Both boundaries satisfy $t^2>3$. The constant second derivative is
 \[
- L''=\frac25-6c_0=-\frac{2057}{1000}<0.
+ \Xi''=\frac25-6c_0=-\frac{2057}{1000}<0.
 \]
-Consequently $L'$ and then $L$ remain negative on each outward ray.
-Because $g>0$, the identity $Q_b'=(L-g)/c_0$ gives $Q_b'<0$ there.
-At the boundary $h\ge0$, so the first table entry gives $Q_b<0$;
+Consequently $\Xi'$ and then $\Xi$ remain negative on each outward ray.
+Because $g_{\rm rad}>0$, the identity $Q_b'=(\Xi-g_{\rm rad})/c_0$ gives $Q_b'<0$ there.
+At the boundary $\overline H\ge0$, so the first table entry gives $Q_b<0$;
 this sign also persists outward. Since $\CE>c_0$, we obtain
 \[
  H_n(t_\pm)+\CE Q_b(t_\pm)<0,\qquad
- H_n'(t)+\CE Q_b'(t)\le g(t)+c_0Q_b'(t)=L(t)<0.
+ H_n'(t)+\CE Q_b'(t)\le g_{\rm rad}(t)+c_0Q_b'(t)=\Xi(t)<0.
 \]
 The contact upper expression therefore cannot be nonnegative anywhere
 on either ray. This excludes every support point there, including
-boundary atoms. Only the actual radial function is differentiated;
-the absolute-value majorant $h$ is used solely at the boundary.
+boundary atoms. We differentiate $H_n$ itself; the absolute-value
+majorant $\overline H$ is used only at the two boundary points.
 
 On the negative class, $X>-t_-$ and $\ell>1.996$ give
 $U_0=X/\ell+p>-(3/8+.6)+p>-.6$. On the positive class,
@@ -320,14 +337,7 @@ The inward endpoints and conditional centering are the actual ones from
 Proposition~\ref{short:acq:geometry}.
 \end{proof}
 
-The pointwise normalization is worth recording once:
-\begin{equation}\label{short:acq:normalization}
- 1=v\ell^2+\theta,\qquad s=\E U^2=\theta/\ell^2,
- \qquad v+s=\ell^{-2},\qquad
- X=\frac{B_0+U-p}{\sqrt{v+s}}.
-\end{equation}
-Thus the law to be compared in the next section is exactly the original
-law, and its threshold remains the raw $H$. Reflection, when required,
-selects the oriented positive witness before acquisition; neither its
-signed defect budget nor its probability interval is transported from
-the opposite orientation.
+By \eqref{ms:bernoulli-coordinates}, the law compared in the next
+section is exactly the original law $X$, with the same threshold $H$.
+The sign probability and the signed moments refer throughout to this
+chosen law.

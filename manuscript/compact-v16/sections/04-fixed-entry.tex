@@ -29,6 +29,41 @@ $n\ge42$, even when the law and threshold vary with $n$.
 Evaluating their scalar majorants at the floor $N=42$ is therefore
 sufficient; it does not set the actual sample size equal to $42$.
 
+\subsection{How the predecessor bound controls support}
+\begin{lemma}[Contact bound from the predecessor inequality]
+\label{opus:predecessor-support}
+Let $(P,H)$ maximize the excess at $c=\CE$, with $n\ge42$,
+$a\ge0$ and $C_{n-1}\le c$. Put
+$F_v^{\rm G}(x)=\Phi(x/\sqrt v)$ and
+$\eta_n=n(\sqrt{n/(n-1)}-1)-1/2$. Define
+\[
+ \frac{H_n(H,t)}{n^{3/2}}
+ =F_{n-1}^{\rm G}(H-t)-F_n^{\rm G}(H)
+ +t(F_n^{\rm G})'(H)-\frac{t^2-1}{2}(F_n^{\rm G})''(H).
+\]
+Every support point satisfies
+\[
+ 0\le H_n(H,t)+c\{-|t|^3+\tfrac32\rho t^2+3\beta t+\rho\eta_n\}-na.
+\]
+\end{lemma}
+\begin{proof}
+At a support point the contact expression
+\eqref{v9:core:contact} equals zero. Substitute
+\[
+ \Pp(S_{n-1}\le H-t)\le F_{n-1}^{\rm G}(H-t)
+                           +c\rho/\sqrt{n-1}
+\]
+and $F=F_n^{\rm G}(H)+(c\rho+a)/\sqrt n$ into that equality.
+Collecting the Gaussian terms gives the displayed $H_n$;
+the remaining terms give the asserted inequality. The estimate uses
+the closed distribution function at the same threshold $H-t$.
+\end{proof}
+A support point is impossible when the right side is negative.
+The Gaussian expansion and radial derivative estimates in the proof of
+Theorem~\ref{v9:entry:initial} make this exclusion effective on entire
+exterior rays. This is how the predecessor assumption enters both
+coarse localization and Proposition~\ref{short:acq:strip}.
+
 \subsection{How the bounds improve}
 The steps have distinct purposes:
 \begin{enumerate}[leftmargin=*]

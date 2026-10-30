@@ -1,9 +1,8 @@
 \subsection{Two elementary moment domains}\label{ms:moment-domain}
 
-The moment inequalities below are used before any finite-dimensional
-relaxation. They hold for the actual marginal, without a bounded-support
-assumption. In particular, they are unaffected by adding a very small
-atom far from the origin.
+These two inequalities restrict the signed moments in terms of $\rho$.
+They hold for every standardized law with finite third moment, including
+laws of unbounded support.
 
 \begin{theorem}[Signed and absolute third moments]\label{ms:sharp-third}
 If $\E X=0$, $\E X^2=1$, $\rho=\E|X|^3<\infty$, and
@@ -14,14 +13,13 @@ $\gamma=\E X^3$, then
 \end{theorem}
 This is the sharp moment relation of Shevtsova
 \cite{shevtsova2014complex}; in the cited arXiv version its equivalent
-form is Theorem~2. We include a factorization proof to specify the
-domain used by the finite certificates.
+form is Theorem~2. The following factorization gives a self-contained proof.
 \begin{proof}
 Set $s=\sqrt{\gamma^2+4}$, $a=(s-\gamma)/2$, $b=(s+\gamma)/2$ and
-$c=\gamma(\gamma^2+6)/s^3$. Then $a,b>0$, $ab=1$ and $a+b=s$.
+$c_\gamma=\gamma(\gamma^2+6)/s^3$. Then $a,b>0$, $ab=1$ and $a+b=s$.
 Define
 \[
- w(y)=|y|^3-cy^3-\frac{12y^2}{s^3}
+ w(y)=|y|^3-c_\gamma y^3-\frac{12y^2}{s^3}
                           +\frac{6\gamma y}{s^3}+\frac4{s^3}.
 \]
 For $y,t\ge0$, direct multiplication gives
@@ -32,7 +30,7 @@ For $y,t\ge0$, direct multiplication gives
 Thus $w\ge0$ on the whole real line. Taking expectations and using the
 first three signed moments gives
 \[
- 0\le\E w(X)=\rho-c\gamma-8/s^3
+ 0\le\E w(X)=\rho-c_\gamma\gamma-8/s^3
             =\rho-(\gamma^2+2)/s.
 \]
 All terms are integrable under the stated third-moment hypothesis.

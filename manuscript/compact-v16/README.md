@@ -1,17 +1,19 @@
 # A fixed-target approach to the sharp iid Berry–Esseen inequality
 
-**Bartosz Kołodziejek and Kacper Rodziewicz — revised review draft, 29 October 2026.**
+**Bartosz Kołodziejek and Kacper Rodziewicz — revised review draft, 30 October 2026.**
 
 [PDF](main.pdf) · [TeX](main.tex) · [Revision notes](REVISION_NOTES.md) ·
-[Dependency/source map](SOURCE_MAP.md) · [Current validation](publication/validation.json)
+[Dependency/source map](SOURCE_MAP.md) · [Current validation](publication/opus-20261030/validation.json)
 
 This revision implements independently checked changes suggested by an external
 review of commit `cd10654222f4b63d50f9d8f108597b140d263ec5`. It explains the
 proof as rigidity followed by a comparison with a Bernoulli law, gives a concrete
 account of the certificates, and replaces several calculations by simpler
 arguments. It retains all 119 original labels and the original theorem scopes.
-The PDF has **53 A4 pages**, including appendices and references, at 11-point
-size with 28 mm margins. The additional explanation is intentional.
+The PDF has **57 A4 pages**, including appendices and references, at 11-point
+size with 28 mm margins. The additional explanation is intentional. The [Opus decision record](OPUS_REVISION_NOTES.md)
+explains the new lattice corollary, proof interfaces, notation changes and the
+suggestions rejected because they would change the theorem scope.
 
 ## Mathematical scope
 
@@ -39,7 +41,7 @@ pdflatex -no-shell-escape -interaction=nonstopmode -halt-on-error main.tex
 ```
 
 The supplied `main.bbl` also permits three pdfLaTeX passes without BibTeX.
-The delivered PDF was built with TeX Live 2025. All 53 pages were visually
+The delivered PDF was built with TeX Live 2025. All 57 pages were visually
 reviewed; the final log has no unresolved references, missing citations or
 overfull boxes. The notice about disabled shell escape for `epstopdf` is benign:
 this document requires no external conversion.
@@ -81,13 +83,13 @@ the certificate format, generation, verification and trust boundary in detail.
 | New quartic minorant, common error envelope, shared budget, ray comparisons and constant bounds | Locally derived and independently reviewed | Three new scalar checkers PASS, including negative controls |
 | Historical v16 scalar and actual-law checks | Retained at their original scope | All nine unchanged checks PASS; 36 source pins preserved |
 | Coarse-entry checkpoint | Conditional on the analytical enclosure and coverage arguments | Isolated 13-file replay PASS: 11,264 boxes, 100 panels, 30 nonempty panels, 14 cells; 19 checker and five wrapper controls |
-| Revised source graph and original result preservation | Read/diff reviewed | 17 included TeX files, 132 unique labels, all 119 old labels retained, 24 cited works; no unresolved references/citations |
+| Revised source graph and original result preservation | Read/diff reviewed | 17 included TeX files, 140 unique labels, all 119 old labels retained, 20 cited works; no unresolved references/citations |
 | Finite base through 699; full sharp conjecture | Open | No acceptance claimed |
 
 Current publication receipts and complete fresh stdout/stderr are under
-[`publication/`](publication/README.md); derivations and independent reviews are
+[`publication/opus-20261030/`](publication/opus-20261030/README.md); derivations and independent reviews are
 under `reviews/`. `checks-summary.json`, `validation.json` and
 `revision-validation.json` are preserved records of earlier compilation stages,
 not the final publication manifest. The current source and PDF hashes are in
-`publication/validation.json`. Successful execution does not establish
+`publication/opus-20261030/validation.json`. Successful execution does not establish
 the analytic reduction, the missing finite base, or a full formalization.

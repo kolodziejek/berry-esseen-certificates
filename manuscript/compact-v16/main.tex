@@ -9,7 +9,7 @@
 \usepackage[hyphens]{url}
 \usepackage{xurl}
 \usepackage[hidelinks]{hyperref}
-\usepackage{bookmark}
+\usepackage{bookmark,placeins}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning}
 \hypersetup{pdftitle={A fixed-target approach to the sharp iid Berry--Esseen inequality},
@@ -46,27 +46,29 @@
 Berry--Esseen inequality\thanks{This paper was written with substantial
 assistance from AI systems; see the end of Section~\ref{ms:discussion}.}}
 \author{Bartosz Ko{\l}odziejek \and Kacper Rodziewicz}
-\date{29 October 2026}
+\date{30 October 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
-We give a conditional reduction of the conjectured sharp iid
-Berry--Esseen inequality and prove a strict comparison theorem for an
-explicit family of laws close to Bernoulli laws. At a fixed index, the
-excess above $\CE=(3+\sqrt{10})/(6\sqrt{2\pi})$ attains its maximum.
-First variation and integration against the zero-bias density give a
-conservation identity containing a nonnegative defect that vanishes
-exactly at the extremal Bernoulli law. Under the sharp bound at the
-preceding index and the stated finite-verification conditions, this
-identity yields quantitative localization bounds. For $n\ge700$, these
-bounds place every hypothetical extremizer in a common probability and
-support region. Conditioning on the number of positive summands then
-gives strictly negative excess: one count controls small conditional
-noise, while five neighboring counts and one concave quartic control
-the remaining range. The comparisons include threshold atoms and all
-incoming tails. The global sharp inequality follows if the sharp bound
-is established for every index through $699$. That finite base is not
-proved here.
+The conjectured sharp iid Berry--Esseen constant is
+$\CE=(3+\sqrt{10})/(6\sqrt{2\pi})$. Under the structural input and
+finite-verification conditions stated in this paper, we show that the
+sharp inequality for every sample size through $699$ implies the sharp
+inequality for all sample sizes, strictly above $699$. The finite base
+is not proved here.
+
+The argument studies a law and threshold maximizing the excess above
+the target $\CE$ at a fixed sample size. The first-order optimality
+condition and zero-bias integration give an exact identity involving
+a nonnegative support-gap defect. Its lattice specialization is a
+moment--span inequality, and its zero case selects Esseen's extremal
+two-point law. Exact rational localization, using the sharp bound at
+the preceding index, bounds this defect and the threshold. For
+$n\ge700$, the resulting law lies in an explicit region around that
+two-point law. A direct comparison with a binomial sum then gives
+strictly negative excess for every law in this region. This local
+comparison is a separate result with explicit support and noise bounds;
+it does not require extremality or the predecessor inequality.
 \end{abstract}
 \begingroup\small
 \makeatletter

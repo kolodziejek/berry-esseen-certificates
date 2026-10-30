@@ -1,6 +1,7 @@
 \section{The identity without contact}\label{revision:offcontact}
-This extension applies to every compactly supported standardized law,
-not just to an extremizer. Retain the definitions of $a,Q,h,\Delta$,
+The main proof uses the contact identity. This stronger extension
+applies to every compactly supported standardized law and also provides
+an identity for checking numerical implementations on nonextremal laws. Retain the definitions of $a,Q,h,\Delta$,
 $J,J_1,J_2,L$, and $\mathcal R_c$ from the main text, for arbitrary
 $H\in\R$ and $c>0$. Introduce the contact residuals
 \begin{equation}\label{v9:core:residuals}
@@ -15,7 +16,7 @@ and $\sum\tau_{u,v}(v-u)\le1$, the series is absolutely convergent.
 \begin{theorem}[Conservation with contact residuals]\label{v9:core:general}
 For every such law, threshold, and positive coefficient,
 \begin{equation}\label{v9:core:offcontact}
- (n+H^2)a+nc\rho-\frac{n\varphi}{6}(\gamma+3J)+n^{3/2}L
+ (n+H^2)a+nc\rho-\frac{n\phi_z}{6}(\gamma+3J)+n^{3/2}L
  =\mathcal R_c+n^{3/2}(R_{\rm supp}-H\xi).
 \end{equation}
 At a fixed-target maximizing pair, both residuals vanish.
@@ -29,11 +30,11 @@ The zero-bias evaluation \eqref{v9:core:second} is unchanged. In the
 first-moment calculation, $\E[Xh(X)]=\E[XQ(X)]-\xi$, so
 \eqref{v9:core:firstmoment} becomes
 \[
- M+\varphi=-\frac{\gamma H\varphi}{2n}+\frac{cK_1}{n}-\sqrt n\xi.
+ M+\phi_z=-\frac{\gamma H\phi_z}{2n}+\frac{cK_1}{n}-\sqrt n\xi.
 \]
 The same pointwise identity for $q_z$ therefore gives
 \[
- \sqrt n\mathcal A=c\rho+a-\gamma\varphi/6+P_0/n
+ \sqrt n\mathcal A=c\rho+a-\gamma\phi_z/6+P_0/n
                     +\sqrt n\varepsilon/2+H\sqrt n\xi,
 \]
 with exactly the $P_0$ defined in the main proof. Equating the two

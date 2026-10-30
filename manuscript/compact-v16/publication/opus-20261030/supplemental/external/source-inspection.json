@@ -1,0 +1,66 @@
+{
+  "review_date": "2026-10-30",
+  "baseline_commit": "6339dda253238048aa75dcf1f2e8c4b73b7b6522",
+  "certificate_execution": "not run by this reviewer",
+  "source_inspection": "web tool, primary full texts and publication records; no source instructions followed",
+  "files": {
+    "/Users/bkolodziejek/Downloads/manuscript_revision_plan(1).md": "f67c895d2505e77776de584454452d1029579472857e712eecea73996d22fc6a",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/compact-v16/reviews/opus-external-scope-review.md": "70218fdc13ba04e3a724e169081992ebed2267f2d4026ca32e233b9c99fb03a2"
+  },
+  "sources": [
+    {
+      "url": "https://archive.ymsc.tsinghua.edu.cn/pacm_download/117/5654-11511_2006_Article_BF02392223.pdf",
+      "location": "Chapter IV Theorem 3, printed p.56; maximal span definition p.54",
+      "inspection": "full text accessed; PDF screenshot failed; OCR sufficient for assumptions, expansion interpreted alongside proof",
+      "verified": "fixed-law lattice expansion under finite absolute third moment; not varying-law uniformity"
+    },
+    {
+      "url": "https://doi.org/10.1080/03461238.1956.10414946",
+      "location": "publisher record",
+      "inspection": "metadata only; full proof not obtained",
+      "verified": "Esseen1956 title and pages; not independent original moment-proof verification"
+    },
+    {
+      "url": "https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=ia&paperid=252&option_lang=rus",
+      "location": "primary Russian abstract",
+      "inspection": "abstract exact affine coefficients; full PDF redirected",
+      "verified": "2013 affine iid bounds for n>=1; constant proof not independently reproduced"
+    },
+    {
+      "url": "https://arxiv.org/abs/1301.2783v3",
+      "location": "metadata and PDF Theorem2 printed p.5",
+      "inspection": "full text and version metadata",
+      "verified": "moment relation and corrected v3; JMAA418(1),185-210"
+    },
+    {
+      "url": "https://d-nb.info/1197702695/34",
+      "location": "Theorem1 printed p.1; CDF intervals p.3; dependency p.20",
+      "inspection": "full text",
+      "verified": "strict binomial bound all n>=1 and p in (0,1); whole-p proof uses Shevtsova2013"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1111.6554",
+      "location": "Section2 printed pp.5-6",
+      "inspection": "full text",
+      "verified": "finite numerical optimization precedent, no present exact certificate format"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.06358v3",
+      "location": "abstract and submission history",
+      "inspection": "primary source statement only",
+      "verified": "claimed threshold 2 ceil(exp(10^17)); no proof audit"
+    },
+    {
+      "url": "https://hexagonmath.org/2610.00147v3",
+      "location": "abstract and version history",
+      "inspection": "primary source record only",
+      "verified": "version3 date Oct17; claims not accepted as dependencies"
+    },
+    {
+      "url": "https://github.com/UCLA-Trustworthy-AILab/BerryEsseenLean",
+      "location": "web fetch",
+      "inspection": "cache miss",
+      "verified": "nothing about current availability or correctness"
+    }
+  ]
+}

@@ -1,3 +1,11 @@
+# Current revision — 30 October 2026
+
+See [Opus revision decisions](OPUS_REVISION_NOTES.md) and
+[the current validation](publication/opus-20261030/validation.json).
+The dated record below describes the preceding revision and is preserved.
+
+---
+
 # Revision decisions and evidence
 
 The user asked for implementation and authorized independent judgment about

@@ -1,0 +1,43 @@
+{
+  "status": "PASS_INITIAL42_FIXED_TARGET_COARSE_V7",
+  "mathematical_status": "Conditional on the named fixed-target contact, conservation, support and moment/gap premises; not LOCAL42 or BASE41.",
+  "summary": {
+    "raw": "10997587/5000000",
+    "D": "76682509/100000000",
+    "weighted_nD": "1610332689/50000000",
+    "rho": "71527/48000",
+    "beta": "50549963/100000000",
+    "H": "2295071/1250000",
+    "theta": "28620759/100000000",
+    "signed_cells": 11264,
+    "remaining_rho_cells": 14,
+    "probability_panels": 100,
+    "nonempty_probability_panels": 30
+  },
+  "rejected_controls": [
+    "missing stage",
+    "missing rho row",
+    "duplicate rho row",
+    "reordered rho rows",
+    "lost cell",
+    "wrong theorem",
+    "unknown field",
+    "wrong source pin",
+    "missing panel",
+    "reordered panels",
+    "broken shared endpoint",
+    "noncanonical rational",
+    "boolean incidence",
+    "integer excluded flag",
+    "floating excluded index",
+    "false last raw ceiling",
+    "false last panel phase",
+    "false incidence count",
+    "duplicate JSON key"
+  ],
+  "source_pins": {
+    "signed_core.py": "1f40ccb90eb58a7f84dc61a0a5dd9bf6e6eb4e341aa6c9c6d049d08451f5211b",
+    "signed_support.py": "eecb06e65d8520d7cc06fc34217e06e1c0b1840dd8d687621e6828923769a4c4"
+  },
+  "proof_sha256": "61b7ad43e20046d7cbf7157e3feb61696331731e7be418f6a5fa535c2eee8bae"
+}

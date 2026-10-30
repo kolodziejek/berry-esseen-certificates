@@ -1,5 +1,5 @@
 \section{Composition and the finite boundary}\label{short:composition}
-\begin{theorem}[Acquired-witness exclusion]\label{short:acquired-exclusion}
+\begin{theorem}[Exclusion of a nonnegative-excess maximizer]\label{short:acquired-exclusion}
 Let $n\ge700$ and let $(P,H)$ attain the fixed-target maximum at $\CE$
 with $a(P,H)\ge0$. Suppose $C_{n-1}\le\CE$, the structural
 inequality~\eqref{v9:entry:structural}, and the complete entry
@@ -8,7 +8,7 @@ Conditions~\ref{v9:entry:two-pass-condition} and
 \end{theorem}
 \begin{proof}
 Theorem~\ref{v9:entry:theorem} gives $nD\le32.20665378$ and
-$|H|\le1.83605680$ for this same oriented, compactly supported law.
+$|H|\le1.83605680$ for this same compactly supported law.
 Propositions~\ref{short:acq:geometry} and \ref{short:acq:strip} give
 the central gap and the following bounds. In
 \eqref{revision:canonical-decomposition}, identify the local theorem's
@@ -47,26 +47,25 @@ Then
 If $C_n<\CE$ fails above the base, choose the least failing index.
 Proposition~\ref{v9:core:attainment} and the reflection argument in
 Section~\ref{v9:core:reflection} supply an attained positive closed-event
-pair with $a\ge0$. The finite base and minimality give the true
+pair with $a\ge0$. The finite base and minimality give the
 predecessor $C_{n-1}\le\CE$. The preceding theorem excludes the pair.
 The independent Bernoulli limit~\eqref{ms:bernoulli-limit} gives equality
 for the global supremum.
 \end{proof}
 
-With a base only through $41$, the same argument locates any first failure
-in $42,\ldots,699$. An unresolved earlier failure prevents the predecessor
-argument at later indices. Reflection also includes the exact atom rule:
-\[
- \Pp(-S_n\le-H)-\Phi(-H/\sqrt n)
- =\Phi(H/\sqrt n)-\Pp(S_n<H)
- \ge\Phi(H/\sqrt n)-\Pp(S_n\le H).
-\]
-The difference is the atom at $H$. The selected orientation acquires its
-own signed $D$ budget; that budget is not copied under reflection.
+If only a base through $41$ were known, the same argument would locate
+a first failure in $42,\ldots,699$. The coarse theorem would still
+localize that maximizer, but the support and count comparisons at
+$n\ge700$ would not apply to it. The reflection inequality, including
+its endpoint-atom convention, is proved in
+Section~\ref{v9:core:reflection}.
 
 \paragraph{Role of finite verification.}
-The entry conditions retain both coarse passes, all four signed passes,
-and every incidence in the internal $100$-panel contract. The local
-comparison uses the resulting common support region. Its scalar checks
-are separate from entry verification and from the finite-base assumption;
-Appendix~\ref{revision:reproducibility} gives their commands and scope.
+The computational input consists of
+Conditions~\ref{v9:entry:two-pass-condition} and
+\ref{v9:entry:signed-condition}, used through
+Theorem~\ref{v9:entry:theorem}. The scalar comparisons in
+Sections~\ref{short:acq:section}--\ref{short:count:section} are
+separate analytical inequalities with short exact checks.
+Appendix~\ref{revision:reproducibility} gives the corresponding
+reproduction commands. Neither computation supplies the finite base.

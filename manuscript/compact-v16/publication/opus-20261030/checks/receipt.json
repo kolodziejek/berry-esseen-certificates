@@ -1,0 +1,53 @@
+{
+  "utc": "2026-10-30T06:23:41.974353+00:00",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "records": [
+    {
+      "name": "bounded",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/compact-v16/tools/recheck.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/manuscript_opus_20261030/root01/checks/bounded"
+      ],
+      "returncode": 0,
+      "seconds": 54.244369458,
+      "source_sha256": "62b84b0e853f3623f73c9d7481ebad9a8df4165af04b2fbf68d8a94b170e79c0",
+      "stdout_sha256": "06a1893ffeb3250c144405e46a948cc322d2e274f83c53ef9ec22f88fe822f56",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "scalar",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/compact-v16/tools/check_revision_constants.py",
+        "--output-dir",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/manuscript_opus_20261030/root01/checks/scalar"
+      ],
+      "returncode": 0,
+      "seconds": 0.360971,
+      "source_sha256": "36216e619d37b719095dcbf4bf83158b496a9613e584585c70d0319877324f1f",
+      "stdout_sha256": "4ef41eef37e96544d4292ef4a7022e663c7908e7b83eb48377a4fb82bd76e898",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "entry",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/mathematics/fixed-target-v8/2026-10-28/isolated_entry_replay.py",
+        "--output-dir",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/manuscript_opus_20261030/root01/checks/entry"
+      ],
+      "returncode": 0,
+      "seconds": 69.10330412500001,
+      "source_sha256": "89542dba373ed9b4c8805ef9452591e8ac30dfa39e14fa52ef24964a280bce23",
+      "stdout_sha256": "da85dad258009fd3cda7f9986a2a847896facb023aaadf322cc3b058018188b4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

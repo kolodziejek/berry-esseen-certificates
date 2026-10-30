@@ -4,6 +4,13 @@ This appendix proves the analytical estimates and specifies the finite
 conditions used by Theorem~\ref{v9:entry:theorem}. The calculation has
 two coarse quadratic passes followed by four signed-moment passes.
 Each improvement is used only after its hypotheses have been established.
+The cover starts with $24$ closed intervals for $\rho$. A signed pass
+splits each surviving interval into $8$ intervals for $\beta$, $8$ for
+$\gamma$ and $2$ for $m$. Four such passes process $11264$ nominal boxes;
+the number is smaller than $4\cdot24\cdot128$ because excluded moment
+cells need no later pass. Closed shared endpoints belong to both
+neighboring intervals. Appendix~\ref{revision:reproducibility} describes
+what the certificate stores and how this cover is reconstructed.
 Let $P$ be a centered,
 unit-variance law, $S_j$ a sum of $j$ independent copies, and set
 \[
@@ -63,11 +70,11 @@ This function increases with $|\beta|$. For $r=1841/1000$, $b=321/500$,
 which proves the second assertion without assuming bounded support.
 
 Write $v=n-1$, $s=\sqrt{n/v}$, $F_v(x)=\Phi(x/\sqrt v)$ and
-$e_n=n(s-1)-1/2$. Closed-support contact, the upper predecessor
+$\eta_n=n(s-1)-1/2$. Closed-support contact, the upper predecessor
 bound $F_{n-1,P}(H-t)\le F_v(H-t)+c\rho/\sqrt v$, and
 $\sqrt n(F_{n,P}(H)-\Phi(H/\sqrt n))=c\rho+a$ give
 \begin{equation}\label{v9:entry:contact}
- 0\le H_n(H,t)+c\{-|t|^3+\tfrac32\rho t^2+3\beta t+\rho e_n\}-na
+ 0\le H_n(H,t)+c\{-|t|^3+\tfrac32\rho t^2+3\beta t+\rho \eta_n\}-na
  \quad(t\in\operatorname{supp}P),
 \end{equation}
 where exactly
@@ -83,12 +90,12 @@ function at $H-t$ is inserted.
 
 Rationalization gives
 \[
- ne_n=\frac{s^2(2s+1)}{2(s+1)^2},\qquad
+ n\eta_n=\frac{s^2(2s+1)}{2(s+1)^2},\qquad
  s<81/80=:S,\qquad
- ne_n<\frac{793881}{2073680}<\frac{48}{125}.
+ n\eta_n<\frac{793881}{2073680}<\frac{48}{125}.
 \]
 The first expression increases for $s\ge1$, as its logarithmic derivative
-is $2/s+2/(2s+1)-2/(s+1)>0$. Thus $e_n<8/875$.
+is $2/s+2/(2s+1)-2/(s+1)>0$. Thus $\eta_n<8/875$.
 
 For completeness we rederive the Gaussian estimate used at the radius.
 The heat identity $\partial_vF_v=F_v''/2$ permits spatial expansion of
@@ -141,7 +148,7 @@ strictly below $P(R)$, and exact arithmetic gives
 To cover each entire exterior ray, differentiation of the exact Gaussian
 expression gives
 \[
- |\partial_tH_n(H,t)|<\tfrac25(t^2/2+1/2+e_n).
+ |\partial_tH_n(H,t)|<\tfrac25(t^2/2+1/2+\eta_n).
 \]
 For verification put $y=(H-t)/\sqrt n$, $z=H/\sqrt n$; the derivative is
 $n\phi(z)+Ht\phi(z)-ns\phi(sy)$. The second-order Taylor error between
@@ -369,7 +376,7 @@ For the third use the signwise fourth-moment bounds
 $0\le\E X_\pm^4\le R(\rho\pm\gamma)/2$.
 Finally \eqref{v9:entry:gap-free} gives
 \[
- |\varphi\Omega|\le v_H:=\frac25\max\{1/2,2M/3-1/2\},
+ |\phi_z\Omega|\le v_H:=\frac25\max\{1/2,2M/3-1/2\},
  \qquad\Omega=J_1+(M_4-3)/6.
 \]
 
@@ -498,11 +505,13 @@ evaluation gives the following ceilings, and in every second-pass cell
 $d_2<(\sigma_l-1)l$:
 \[
 \begin{array}{c|r|r|r|c}
- \text{pass}&\max T&\max U&\max d&\text{strict gap gates}\\\hline
+ \text{pass}&\max T&\max U&\max d&\text{central gap proved}\\\hline
  1&13.2818901598&10.9330610254&3.9164138937&23\\
  2&11.5164967977&9.9790315907&3.5746638454&24.
 \end{array}
 \]
+The last column counts the cells satisfying $d_j<(\sigma_l-1)l$,
+which excludes zero from the support by the argument below.
 The minimum second-pass gap margin is at least
 $526024602543/1600000000000>0$.
 \end{condition}
@@ -697,8 +706,8 @@ endpoint. For example, the binary endpoints $A=3/2$, $B=2/3$ make this
 maximum negative; the sign switch is necessary even when $D<2$.
 The fourth-moment sign intervals also sharpen
 $K_1=\E[X|X|^3]-3\beta-3\rho\gamma/2$.
-The complete $K_1,\Omega,\varphi$ rectangles are used in the signed expression
-$|cK_1+\varphi\Omega|$, without replacing it by two separate absolute values.
+The complete $K_1,\Omega,\phi_z$ rectangles are used in the signed expression
+$|cK_1+\phi_z\Omega|$, without replacing it by two separate absolute values.
 
 
 
@@ -780,7 +789,7 @@ by one common law.
 Require the incoming raw gate $0\le T<Nc_-l$. By
 Corollary~\ref{v9:core:phase-price},
 \[
- \varphi=\phi(H/\sqrt n)\in[\phi_-,2/5],\qquad
+ \phi_z=\phi(H/\sqrt n)\in[\phi_-,2/5],\qquad
  \phi_- =\phi_l(1-T/(Nc_-l))>0.
 \]
 For a formal coefficient $v\in[c_-,c_+]$ set

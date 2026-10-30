@@ -1,0 +1,45 @@
+{
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "status": "fresh PASS",
+  "scope": "only displayed exact scalar comparisons; not certificate or proof-reduction validation",
+  "checks": {
+    "pi_minus > 333/106": {
+      "positive_margin_numerator": 71255393653,
+      "positive_margin_denominator": 857249121093750
+    },
+    "333/106 > (4431/2500)^2": {
+      "positive_margin_numerator": 35667,
+      "positive_margin_denominator": 331250000
+    },
+    "pi_plus < 22/7": {
+      "positive_margin_numerator": 303439072246,
+      "positive_margin_denominator": 239975138671875
+    },
+    "22/7 < 2(251/200)^2": {
+      "positive_margin_numerator": 1007,
+      "positive_margin_denominator": 140000
+    },
+    "(0.39886)^2 < 7/44": {
+      "positive_margin_numerator": 44261,
+      "positive_margin_denominator": 27500000000
+    },
+    "32.20665378/700 < 0.047": {
+      "positive_margin_numerator": 4952473,
+      "positive_margin_denominator": 5000000000
+    },
+    "1.83605680 < 46/25": {
+      "positive_margin_numerator": 4929,
+      "positive_margin_denominator": 1250000
+    },
+    "71527/48000 < 3/2": {
+      "positive_margin_numerator": 473,
+      "positive_margin_denominator": 48000
+    }
+  },
+  "input_hashes": {
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/compact-v16/appendices/normalization.tex": "1a14afaad6b7d62a06fda7f64872d37ee9d1d2aa037539c3069b37b211421aca",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/compact-v16/sections/04-fixed-entry.tex": "073a3179ab7513e1c905f9ca39cbe545fb3b482543bb19301ade654c62d55379",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/compact-v16/sections/01-introduction.tex": "c032f07e72b9b3c77140ef95205019afaed393525d6bc3fcdfa43b66088a35e1",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/compact-v16/sections/02-fixed-target.tex": "8da7bf425602ffac98a5008cc65bc05ff8e762c11f4194a23090fa823e5003d7"
+  }
+}

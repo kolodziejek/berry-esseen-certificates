@@ -1,0 +1,18 @@
+{
+  "stage": "mathematical source snapshot",
+  "pdf_sha256": "ade74cb50d66bc3c2ce5d9abdd4e48236649b2b7eb6de6ce29570b75f03c2f86",
+  "pages": 57,
+  "visual_review": [
+    "build01 pages1-29 independently rendered/reviewed; pages30-57 coordinator rendered/reviewed",
+    "build03 pages1-29 independently rechecked after float barrier; pages30-50 coordinator rechecked; pages51-57 byte-identical renders to build01",
+    "build04 differs in rendered page21 only; coordinator inspected corrected nearby-count prose and theorem layout"
+  ],
+  "build04_changed_render_pages": [
+    21
+  ],
+  "commands_identical_to_previously_extracted_and_executed_blocks": true,
+  "command_comparison": "All three exact blocks equal publication/commands-copied-from-pdf.sh; fresh execution of those CLI forms with unique output paths is in checks/receipt.json.",
+  "no_unresolved_references_or_citations": true,
+  "no_overfull_boxes": true,
+  "front_visual_report": "../../reviews/opus-visual-front.md"
+}

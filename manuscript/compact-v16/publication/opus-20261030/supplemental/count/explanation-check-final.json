@@ -1,0 +1,44 @@
+{
+  "status": "PASS_OPUS_COUNT_EXPOSITION_SCALARS",
+  "mathematical_status": "New explanatory moment inequality derived by Cauchy\u2013Schwarz/H\u00f6lder; theorem and all old numerical comparisons retained.",
+  "execution_status": "Exact rational checks and five diagnostic laws passed; diagnostic laws are not the proof.",
+  "old_labels": 22,
+  "current_labels": 26,
+  "theorem_statement_byte_identical": true,
+  "inner_margin": "4787/140000",
+  "zero_threshold_coefficient": "2500/3903",
+  "diagnostics": [
+    {
+      "variance": "1",
+      "fourth_moment": "1",
+      "probability": "1/2",
+      "lower_bound": "1/4"
+    },
+    {
+      "variance": "2",
+      "fourth_moment": "6",
+      "probability": "1/3",
+      "lower_bound": "1/6"
+    },
+    {
+      "variance": "1/1000000000000",
+      "fourth_moment": "1/1000000000000000000000000",
+      "probability": "1/2",
+      "lower_bound": "1/4"
+    },
+    {
+      "variance": "1/1000",
+      "fourth_moment": "999001/1000000000",
+      "probability": "1/1001",
+      "lower_bound": "250/999001"
+    },
+    {
+      "variance": "1/2",
+      "fourth_moment": "1/2",
+      "probability": "1/4",
+      "lower_bound": "1/8"
+    }
+  ],
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "source_sha256": "4599414d6435247cc435904d44d5cc96ec0ab91105da0d0344b9013a94972dfa"
+}
