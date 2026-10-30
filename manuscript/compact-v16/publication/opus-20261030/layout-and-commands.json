@@ -1,6 +1,6 @@
 {
-  "stage": "mathematical source snapshot",
-  "pdf_sha256": "ade74cb50d66bc3c2ce5d9abdd4e48236649b2b7eb6de6ce29570b75f03c2f86",
+  "stage": "final source-citation build",
+  "pdf_sha256": "f7761d4fe64bc8383dd5a3ab9609039e21dc18a0dc60ce0df3d9b38078652d53",
   "pages": 57,
   "visual_review": [
     "build01 pages1-29 independently rendered/reviewed; pages30-57 coordinator rendered/reviewed",
@@ -14,5 +14,10 @@
   "command_comparison": "All three exact blocks equal publication/commands-copied-from-pdf.sh; fresh execution of those CLI forms with unique output paths is in checks/receipt.json.",
   "no_unresolved_references_or_citations": true,
   "no_overfull_boxes": true,
-  "front_visual_report": "../../reviews/opus-visual-front.md"
+  "front_visual_report": "../../reviews/opus-visual-front.md",
+  "source_snapshot_commit": "df2dd2e4386a4e57f6b5194d0368fcae8b62f89b",
+  "final_changed_render_pages": [
+    32
+  ],
+  "final_visual_review": "Final build05 differs from fully reviewed build04 only in rendered page32; coordinator inspected that source-citation page. All other56 renders are byte-identical."
 }

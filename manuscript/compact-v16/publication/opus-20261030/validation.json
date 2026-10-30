@@ -1,12 +1,12 @@
 {
-  "stage": "build-snapshot",
+  "stage": "build",
   "date": "2026-10-30",
   "starting_revision": "6339dda253238048aa75dcf1f2e8c4b73b7b6522",
   "external_advice_sha256": "f67c895d2505e77776de584454452d1029579472857e712eecea73996d22fc6a",
   "mathematical_status": "Selective explanatory and mathematical corollary changes locally derived and independently reviewed; original local and conditional global scopes retained. BASE699 remains open.",
   "execution_status": "Fresh PASS: isolated entry, nine historical checks, three scalar checks; independent supplemental diagnostics.",
   "pages": 57,
-  "pdf_sha256": "ade74cb50d66bc3c2ce5d9abdd4e48236649b2b7eb6de6ce29570b75f03c2f86",
+  "pdf_sha256": "f7761d4fe64bc8383dd5a3ab9609039e21dc18a0dc60ce0df3d9b38078652d53",
   "source_sha256": {
     "main.tex": "a6726945a71dc27bc6f1d4b6c16d6a46a43126036060c7eade7a76334653fe72",
     "main.bbl": "fa4405e423ccb84db4b49185bbcba37f70c37e10f0091eaf30809331099f64b4",
@@ -20,7 +20,7 @@
     "sections/07-direct-acquisition.tex": "616d01dbaf07549375673175523d71b76a703d63c416441c331d4e0832b06cfa",
     "sections/08-direct-comparison.tex": "98b29d290330716e2a640ed6ccfea371ced4ce8241b73dc76b0f36e8650bbd69",
     "sections/09-composition.tex": "45d5cbb0ba7378bad22a5079f46c612a74a9e70b8b8343a2087ed674a81568ef",
-    "sections/10-discussion.tex": "a19b9f15d41198a51e53c17325f132013a278d0cf549b91717375da38cc61124",
+    "sections/10-discussion.tex": "6c2adb3e6c9ec38a56608d29d38ec0d72501012e3b67b23667c548f935a90dac",
     "appendices/entry-details.tex": "40abbfc50f52664bb26f687e47a88c3c798ad7901d95b1d9105481b425c67e6c",
     "appendices/fixed-fourier.tex": "b91f5c9bf6047c79ca049ef218872174f1813ba7db85cb82f7e199f8f4dcf488",
     "appendices/normalization.tex": "1a14afaad6b7d62a06fda7f64872d37ee9d1d2aa037539c3069b37b211421aca",
@@ -41,9 +41,10 @@
   "preceding_labels_preserved": 132,
   "source_pin_count": 36,
   "entry_source_count": 13,
-  "build_receipt": "build-snapshot/receipt.json",
+  "build_receipt": "build/receipt.json",
   "check_receipt": "checks/receipt.json",
   "visual_review": "See layout-and-commands.json and reviews/opus-visual-front.md; all pages covered.",
   "pdf_command_blocks_match_previous_executed_blocks": true,
-  "scope_note": "Check receipts preserve their actual run-time source hashes; later changes are prose, float placement and source citation. Final delivered source hashes are listed here."
+  "scope_note": "Check receipts preserve their actual run-time source hashes; later changes are prose, float placement and source citation. Final delivered source hashes are listed here.",
+  "source_snapshot_commit": "df2dd2e4386a4e57f6b5194d0368fcae8b62f89b"
 }

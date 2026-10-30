@@ -20,3 +20,6 @@ Exact execution does not establish an unperformed analytical or checker-semantic
 proof. The entry conditions and structural premises remain explicit; the finite
 base through 699 remains unproved. Every program ran without Python optimization;
 LaTeX shell escape was disabled.
+
+The mathematical source snapshot is [`df2dd2e4386a4e57f6b5194d0368fcae8b62f89b`](https://github.com/kolodziejek/berry-esseen-certificates/tree/df2dd2e4386a4e57f6b5194d0368fcae8b62f89b/manuscript/compact-v16). The final commit adds its citation and release metadata;
+the PR body links the exact final commit. No self-referential commit hash is used.
