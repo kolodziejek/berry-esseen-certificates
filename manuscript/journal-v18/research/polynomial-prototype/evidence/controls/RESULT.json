@@ -1,0 +1,145 @@
+{
+  "controls": [
+    {
+      "name": "missing_case",
+      "reason": "all five cases required",
+      "rejected": true,
+      "sha256": "eeac37475140d18b765909c5afdf6ab1ba6b848310b5642e9cbc7f8ce7703118"
+    },
+    {
+      "name": "duplicate_case",
+      "reason": "exact ordered five-case cover",
+      "rejected": true,
+      "sha256": "04f3a914f4a44843d28f070a1d569c1152eac8b508bc867820242f6afad66896"
+    },
+    {
+      "name": "reordered_cases",
+      "reason": "exact ordered five-case cover",
+      "rejected": true,
+      "sha256": "c01747066e126a45c5c9fa121f25d56088e4973fc9782c54e08c9a219382159e"
+    },
+    {
+      "name": "unknown_case",
+      "reason": "exact ordered five-case cover",
+      "rejected": true,
+      "sha256": "09fbe6a081a8f05e6f0694f3e062cd215329a0498c89b6cdfc1b068263d39217"
+    },
+    {
+      "name": "scope_change",
+      "reason": "fixed scope",
+      "rejected": true,
+      "sha256": "417276e78ab38a716b5d65f9282253f5453d30fbdc7177e65a4571a9b964c473"
+    },
+    {
+      "name": "extra_field",
+      "reason": "exact object fields",
+      "rejected": true,
+      "sha256": "15d5037d72b4560ee4c2d7affa4148f34a3b96a944dcefba284fb034ead044f8"
+    },
+    {
+      "name": "wrong_variables",
+      "reason": "fixed variables",
+      "rejected": true,
+      "sha256": "871d898e87e19dd41e4343c55756f96c8741a97ec1369d8fe1225a4cbdab9e6c"
+    },
+    {
+      "name": "empty_polynomial",
+      "reason": "finite nonempty polynomial",
+      "rejected": true,
+      "sha256": "35fb338a9065dcbbe528de3d6a3c449046a92ff441f8c41b7c386971b87edff9"
+    },
+    {
+      "name": "duplicate_monomial",
+      "reason": "ordered unique monomials",
+      "rejected": true,
+      "sha256": "d131cdc27312971a756e63622f93342939381d1a11c3817fc8bed9e4cfeba3e0"
+    },
+    {
+      "name": "noncanonical_rational",
+      "reason": "canonical nonzero rational",
+      "rejected": true,
+      "sha256": "1f7007aa1055dab6f905c9aead99afaec3de6ec0bfce377655146f7906fc192c"
+    },
+    {
+      "name": "float_coefficient",
+      "reason": "rational string",
+      "rejected": true,
+      "sha256": "fcc842566a512874ba8729f514af10e9d65c1059fd8771952b470cf980028948"
+    },
+    {
+      "name": "negative_exponent",
+      "reason": "nonnegative bounded integer exponents",
+      "rejected": true,
+      "sha256": "a463ecb3d94036c4dd11973bd423fb2261f5cefbd4c2d96ab1d171bb98181738"
+    },
+    {
+      "name": "boolean_exponent",
+      "reason": "nonnegative bounded integer exponents",
+      "rejected": true,
+      "sha256": "273b081f7cd28c2ca71e162b9840c009b67b036a62c0fbbabb62fd68d07989d5"
+    },
+    {
+      "name": "corrupt_conditional3",
+      "reason": "conditional coefficient identity",
+      "rejected": true,
+      "sha256": "413d800ca8109dc7f0ba8e77e49238ebb02913fbede7ffd6a71f097498d9946c"
+    },
+    {
+      "name": "corrupt_conditional4",
+      "reason": "conditional coefficient identity",
+      "rejected": true,
+      "sha256": "ae8ba3cfbb62856e7930279c43d28bd7af71a7462657ff04c7d0643ba41089b4"
+    },
+    {
+      "name": "corrupt_conditional5",
+      "reason": "conditional coefficient identity",
+      "rejected": true,
+      "sha256": "00cc80f8b92c192eaa2255d69604e5f00aa485c9e2caaf40761c285b1d9b932c"
+    },
+    {
+      "name": "corrupt_radial4_numerator",
+      "reason": "fixed radial numerator",
+      "rejected": true,
+      "sha256": "7e525efd70b626a0b07f0fb57d2cd8a14e84420871d82b2c26c1dc234797fa78"
+    },
+    {
+      "name": "corrupt_radial4_derivative_numerator",
+      "reason": "radial derivative coefficient identity",
+      "rejected": true,
+      "sha256": "ee865007f6d8b8e77d9477727fe85643d5b02cfc22368f5359e2cfb7dacef3d1"
+    },
+    {
+      "name": "corrupt_radial4_moment_difference",
+      "reason": "radial factor identity",
+      "rejected": true,
+      "sha256": "233a2e1cb4df75325754f855020cc9b8f3c7ccc5cfef9e10071c41ef84c9d75d"
+    },
+    {
+      "name": "corrupt_radial5_numerator",
+      "reason": "fixed radial numerator",
+      "rejected": true,
+      "sha256": "a46b049c2d2638ac1e045ed3d3eb97fa74ea2032c7b329951979f4c738a3248c"
+    },
+    {
+      "name": "corrupt_radial5_derivative_numerator",
+      "reason": "radial derivative coefficient identity",
+      "rejected": true,
+      "sha256": "6ca17401bfa293b652036ad67b0fe4c4bcd8bf7882e25ff7ffe55067b3b68336"
+    },
+    {
+      "name": "corrupt_radial5_moment_difference",
+      "reason": "radial factor identity",
+      "rejected": true,
+      "sha256": "c6d30a51621232f638e255e3fa41467274649ce6599a7732603bc4a65fd1edd2"
+    },
+    {
+      "name": "duplicate_json_key",
+      "reason": "JSON parse: duplicate JSON key",
+      "rejected": true,
+      "sha256": "bea884b2ee883ef7fcfdb33dbf69efc84c68f459ea8298dec0a68ef78ae51cad"
+    }
+  ],
+  "count": 23,
+  "current_manuscript_ancestor": false,
+  "status": "PASS_NEGATIVE_CONTROLS"
+}
