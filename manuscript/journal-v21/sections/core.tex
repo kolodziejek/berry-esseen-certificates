@@ -1,0 +1,388 @@
+\section{Extremizers, two-point geometry and conservation}\label{j:core:section}
+Throughout, $X,X_1,X_2,\ldots$ are iid, $\E X=0$, $\E X^2=1$,
+$\rho=\E|X|^3<\infty$, and $S_n=\sum_{i=1}^nX_i$. Write
+$\beta=\E[X|X|]$, $\gamma=\E X^3$, and $\phi=\Phi'$.
+A threshold $H$ always refers to the raw sum; $z=H/\sqrt n$ is its
+standardized value. Define the ratio and an auxiliary excess by
+\[
+ r(P,H)=\frac{\sqrt n}{\rho}\{\Pp(S_n\le H)-\Phi(z)\},\qquad
+ a_c(P,H)=\sqrt n\{\Pp(S_n\le H)-\Phi(z)\}-c\rho.
+\]
+We maximize the ratio. The auxiliary quantity $a_c$ is used only to
+state an identity for arbitrary coefficients and off-contact laws.
+
+\subsection{Ratio attainment and contact, including atoms}
+\begin{theorem}\label{j:core:attainment}
+For every $n\ge2$, $C_n$ is attained as a positive closed-CDF ratio by
+a compactly supported standardized law and a real raw threshold $H$.
+At such a pair put $c=C_n$, $F=\Pp(S_n\le H)$,
+$h(y)=\Pp(S_{n-1}\le H-y)$ and $\phi_z=\phi(z)$. Then
+\begin{align}
+ I_c(y)={}&n^{3/2}(h(y)-F)+ny\phi_z
+ +\frac{H\phi_z+3c\rho}{2}(y^2-1)
+ -c(|y|^3-\rho-3y\beta)\le0,\label{j:core:contact}\\
+ Q(y)={}&F+\frac{H\phi_z+c\rho}{2n^{3/2}}
+ -\frac{n\phi_z+3c\beta}{n^{3/2}}y
+ -\frac{H\phi_z+3c\rho}{2n^{3/2}}y^2
+ +\frac{c}{n^{3/2}}|y|^3.\label{j:core:Q}
+\end{align}
+Thus $\Delta=Q-h\ge0$ everywhere and $\Delta=0$ on the entire closed
+support. No sign assumption on $H$ is needed.
+\end{theorem}
+\begin{proof}
+Reflection takes a negative error to a positive closed error because
+\[
+ \Pp(-S_n\le-H)-\Phi(-z)
+ =\Phi(z)-\Pp(S_n<H)\ge\Phi(z)-\Pp(S_n\le H).
+\]
+Hence $C_n=\sup r(P,H)$. Since $\rho\ge1$, $C_n\le\sqrt n$;
+symmetric Bernoulli at $H=n$ shows $C_n>0$.
+Choose $r_j\uparrow C_n$ with $r_j\ge C_n/2$. Then
+$\rho_j\le2\sqrt n/C_n$, and the positive discrepancies are bounded
+away from zero. Chebyshev on the negative tail and the normal upper
+tail on the positive side bound $H_j$. Pass to $P_j\Rightarrow P$,
+$H_j\to H$, $\rho_j\to b$. A common third-moment ceiling $M$ bounds
+the first- and second-moment tails by $M/K^2$ and $M/K$, so the limit
+retains mean zero and variance one. Lower semicontinuity gives
+$\rho(P)\le b$. For the sum laws, the closed-set inequality, first at
+$H+t$ and then as $t\downarrow0$, gives
+\[
+ \Pp(S_n\le H)-\Phi(H/\sqrt n)
+ \ge\limsup_j\{\Pp(S_{n,j}\le H_j)-\Phi(H_j/\sqrt n)\}
+ =C_n b/\sqrt n.
+\]
+Thus $r(P,H)\ge C_n b/\rho(P)\ge C_n$, proving attainment and
+$\rho(P)=b$. This does not assume uniform integrability of third moments.
+
+Contaminate the raw law by $(1-\epsilon)P+\epsilon\delta_y$, then
+recenter and rescale. Its mean is $\epsilon y$, variance
+$v_\epsilon=1+\epsilon(y^2-1)-\epsilon^2y^2$, and centered third
+absolute moment has derivative $|y|^3-\rho-3y\beta$.
+Dominated differentiation uses $3|y|(|x|+|y|)^2$.
+Evaluate the standardized law at the image of the \emph{fixed raw event}
+$S_n\le H$. Its probability is a polynomial in $\epsilon$, with
+derivative $n(h(y)-F)$ even at an atom collision. The normal argument
+$(H-n\epsilon y)/\sqrt{nv_\epsilon}$ has derivative
+$-\sqrt n y-H(y^2-1)/(2\sqrt n)$. The ratio derivative is
+$I_c(y)/\rho$, and maximality makes it nonpositive.
+Furthermore $\int I_c\,dP=0$. Since the closed-event function $h$ is
+upper semicontinuous, strict negativity at a support point would hold
+on a neighborhood of positive mass. Thus $I_c=0$ on the closed support.
+Finally $I_c(y)\le-c|y|^3+O(y^2+|y|+1)$, with constants depending on
+this pair, excludes both sufficiently distant rays.
+\end{proof}
+
+At a ratio maximizer, put $D_0=F-\Phi(z)$ and $\lambda=D_0/\rho=C_n/\sqrt n$.
+The majorant used in the finite calculations is simply
+\begin{equation}\label{j:core:scaled-Q}
+ nQ(y)=\lambda|y|^3-\frac{z\phi_z+3D_0}{2}y^2
+ -(\sqrt n\phi_z+3\lambda\beta)y+nF+\frac{z\phi_z+D_0}{2}.
+\end{equation}
+Thus its equality on support is $n h=nQ$; it is not a majorant for a
+different marginal. If $A\ge C_{n-1}$, this equality implies, at every
+support point $t$,
+\begin{equation}\label{j:core:predecessor}
+ 0\le\mathcal H_n(H,t)+C_n\{-|t|^3+\tfrac32\rho t^2+3\beta t+\rho e_n\}
+       +\rho s_n n(A-C_n),
+\end{equation}
+where
+\[
+ s_n=\sqrt{n/(n-1)},\quad e_n=n(s_n-1)-\tfrac12,
+\]
+\[
+ \mathcal H_n(H,t)=n^{3/2}\!\left\{\Phi\!\left(\frac{H-t}{\sqrt{n-1}}\right)
+ -\Phi\!\left(\frac H{\sqrt n}\right)\right\}
+ +nt\phi_z+\tfrac H2(t^2-1)\phi_z.
+\]
+Indeed substitute $h(t)\le\Phi((H-t)/\sqrt{n-1})+A\rho/\sqrt{n-1}$
+in \eqref{j:core:contact} and use $\sqrt n(F-\Phi(z))=C_n\rho$.
+The signed difference $A-C_n$ may be negative; replacing it by a
+nonnegative upper bound gives a weaker permitted inequality.
+
+For later induction, if $C_j\le c$ for $j<N$ and some $n\ge N$ has
+$C_n\ge c$, the least such $n$ has an attained ratio pair with
+$C_n\ge c$ and $C_j\le c$ for every $j<n$. This includes equality at the
+selected index; it requires no supremum over varying sample sizes.
+
+\subsection{One sign normalization and its moment constraints}
+Put $p=\Pp(X>0)$, $q=1-p$, $v=pq$, and
+$m=\E X_+=\E X_->0$. Assign a zero atom to the nonpositive class.
+For $B=\ind_{\{X>0\}}$, let $V=\E[X\mid B]$, $W=X-V$, and
+$\theta=\E W^2$. Then $V=-m/q$ or $m/p$, and
+\begin{equation}\label{j:core:normalization}
+ \ell=\frac m{pq}=\sqrt{\frac{1-\theta}{pq}},\quad
+ U=W/\ell,\quad X=\ell(B+U-p)=\frac{B+U-p}{\sqrt{pq+s}},\quad
+ s=\E U^2=\frac{pq\theta}{1-\theta}.
+\end{equation}
+Here $0<p,q<1$, $0\le\theta<1$ and $\E[U\mid B]=0$.
+Write $U_i$ for the conditional laws, $w_i=\E U_i^2$,
+$\mu_i=\E U_i^3$, and $\lambda=ns$. Thus $s=qw_0+pw_1$; if $s>0$,
+$\alpha=pw_1/s\in[0,1]$ gives $w_0=s(1-\alpha)/q$, $w_1=s\alpha/p$.
+If $s=0$, both conditional laws are zero and $X$ is standardized Bernoulli.
+The exact common-marginal identities are
+\begin{align}
+ \rho/\ell^3&=v(1-2v)+3v(w_0+w_1)-q\mu_0+p\mu_1,\notag\\
+ \gamma/\ell^3&=v(q-p)+3v(w_1-w_0)+q\mu_0+p\mu_1,\label{j:core:conditional-moments}\\
+ \beta/\ell^2&=v(q-p)+pw_1-qw_0.\notag
+\end{align}
+They follow by expanding $\ell^3(p-U_0)^3$ and
+$\ell^3(q+U_1)^3$ on the two sign classes and using conditional centering.
+In particular the two cubic moments in the first two lines cannot be
+selected independently. Higher moments require an established support
+bound or another explicit integrability hypothesis.
+
+\begin{lemma}\label{j:core:moments}
+Every standardized law with finite third moment satisfies
+\[
+ \rho\ge\frac{\gamma^2+2}{\sqrt{\gamma^2+4}},\qquad
+ |\beta|<1,\qquad \rho\ge\frac{1+\beta^2}{\sqrt{1-\beta^2}}.
+\]
+\end{lemma}
+\begin{proof}
+For the first inequality set $s_0=\sqrt{\gamma^2+4}$,
+$a_0=(s_0-\gamma)/2$, $b_0=(s_0+\gamma)/2$ and
+$c_0=\gamma(\gamma^2+6)/s_0^3$. The polynomial on each half-line
+\[
+ w(y)=|y|^3-c_0y^3-12y^2/s_0^3+6\gamma y/s_0^3+4/s_0^3
+\]
+has the factorizations, for $y,t\ge0$,
+\[
+ w(y)=\frac{2a_0^2}{s_0^3}(y-b_0)^2[2+(a_0+3b_0)y],\quad
+ w(-t)=\frac{2b_0^2}{s_0^3}(t-a_0)^2[2+(3a_0+b_0)t].
+\]
+Taking expectations gives $0\le\E w=\rho-(\gamma^2+2)/s_0$.
+For the second inequality let $a_\pm=\E X_\pm^2=(1\pm\beta)/2>0$.
+Cauchy gives $m^2/a_++m^2/a_-\le1$, hence
+$2m\le\sqrt{1-\beta^2}$, and
+$m\rho\ge a_+^2+a_-^2=(1+\beta^2)/2$. These imply the result;
+a zero atom only strengthens the first inequality.
+\end{proof}
+
+\subsection{A defect measuring departure from two points}
+Let $K=\supp P$ and $\tau(t)=\E[X\ind_{\{X\ge t\}}]$.
+Centering and signwise Tonelli give
+\[
+ \tau\ge0,\qquad \int\tau=1,\qquad 2\int|t|\tau(t)\,dt=\rho.
+\]
+On every bounded gap $(u,v)$ of $K$, $\tau$ has a constant interior value
+$\tau_{u,v}$. Set
+\begin{equation}\label{j:core:defect-definition}
+ J=\sum_{(u,v)}\tau_{u,v}(v-u)^2,\qquad
+ \sigma=\sqrt{10},\qquad D=(3+\sigma)\rho-\gamma-3J.
+\end{equation}
+The gaps are countable; the next bounds justify their sum even for
+unbounded support.
+\begin{theorem}\label{j:core:defect}
+For every such law,
+\[
+ \gamma^2+4m^2\le\rho^2,\qquad J\le\rho+2m,\qquad
+ D=(\sigma\rho-\gamma-6m)+3(\rho+2m-J)\ge0.
+\]
+Equality $D=0$ occurs exactly for
+$X=(B-p_*)/\sqrt{p_*q_*}$, where
+$p_*=(4-\sqrt{10})/2$ and $q_*=1-p_*$.
+If $0\in K$, then $D\ge(\sigma-1)\rho$. Otherwise write the central
+gap as $(-A_-,A_+)$ and define
+\[
+ T_\pm=\E X_\pm^3-mA_\pm^2,\quad
+ R_\pm=\E X_\pm^2-mA_\pm,\quad J_o=J-m(A_-+A_+)^2.
+\]
+The quantities $T_\pm,R_\pm,J_o$ are nonnegative, and
+\begin{align}
+ J_o^\pm&\le T_\pm-2A_\pm R_\pm,\label{j:core:outer-gaps}\\
+ D&=m\{\sqrt{\sigma+1}A_--\sqrt{\sigma-1}A_+\}^2
+ +(\sigma-1)T_++(\sigma+1)T_-+3(T_++T_--J_o).\label{j:core:gap-defect}
+\end{align}
+All four terms in the last expression are nonnegative.
+Moreover $1/(2\rho)\le m\le1/2$; if $D<2$, then
+$T_++T_-\le D/2$ and $A_-+A_+\ge\sqrt{2-D}$.
+\end{theorem}
+\begin{proof}
+Put $a_\pm=\E X_\pm^2$, $b_\pm=\E X_\pm^3$.
+The signwise Cauchy inequalities give $a_\pm^2\le mb_\pm$ and
+$m^2\le a_+a_-$. Thus $b_+b_-\ge m^2$, proving the circle inequality.
+A gap lying on one side of zero satisfies
+$(v-u)^2\le2\int_u^v|t|\,dt$. A central gap has weight $m$ and excess
+$2mA_-A_+$ over this integral; since
+$0\le\E[(X+A_-)(X-A_+)]=1-A_-A_+$, summation gives $J\le\rho+2m$.
+Without a central gap it gives $J\le\rho$. Cauchy in $\R^2$ now gives
+$\gamma+6m\le\sigma\rho$. Equality requires equality in both signwise
+Cauchy bounds and in $m^2\le a_+a_-$: each sign is a single nonzero
+atom and there is no zero atom. Writing its positive probability as $p$,
+the remaining equality is $3(1-2p)=2p(1-p)$, whose unique solution
+in $(0,1)$ is $p_*$. Conversely this two-point law gives equality.
+
+For a positive outer gap,
+$(v-u)^2\le2\int_u^v(t-A_+)\,dt$; summing yields
+$J_o^+\le\E[X_+(X_+-A_+)^2]=T_+-2A_+R_+$.
+The negative side is identical after reflection. Expansion using
+$\sqrt{\sigma+1}\sqrt{\sigma-1}=3$ proves \eqref{j:core:gap-defect}.
+Finally Cauchy gives $1\le2m\rho$ and $2m\le1$.
+Since $\sigma-1>2$, $T_++T_-\le D/2$; hence
+$m(A_-^2+A_+^2)=\rho-T_+-T_-\ge1-D/2$, which gives the last claim.
+All gap summations use nonnegative Tonelli; endpoint atoms change no
+Lebesgue integral.
+\end{proof}
+For the standardized Bernoulli law itself,
+\[
+ J=1/\sqrt{pq},\quad \rho_B=(1-2pq)/\sqrt{pq},\quad
+ \gamma_B=(q-p)/\sqrt{pq},\quad
+ D_B=(6+2\sigma)(p-p_*)^2/\sqrt{pq}.
+\]
+Thus the defect charges a quadratic displacement of $p$ as well as
+conditional noise. The following bound charges them simultaneously.
+
+\begin{lemma}[Joint defect budget]\label{j:core:joint-defect}
+In a central gap put $\bar A_-=\ell p$, $\bar A_+=\ell q$,
+$\Delta_\pm=\bar A_\pm-A_\pm\ge0$,
+$a_0=\Delta_-/\ell$, $a_1=\Delta_+/\ell$, $d=a_0+a_1<1$, and
+$w=1-\theta=pq\ell^2$. Then $U_0\le a_0$, $U_1\ge-a_1$, and
+\begin{align}
+ D\ge{}&\ell w(6+2\sigma)(p-p_*)^2
+ +6\ell w\{d(1-d)+a_0a_1\}\notag\\
+ &+\E[\{(\sigma-1)(X+2\bar A_+)+6A_+\}W^2;X>0]\notag\\
+ &+\E[\{(\sigma+1)(-X+2\bar A_-)+6A_-\}W^2;X<0].\label{j:core:joint}
+\end{align}
+In particular, with $\theta_\pm=\E[W^2;\pm X>0]$,
+\begin{align}
+ D\ge{}&\frac{(6+2\sigma)(1-\theta)^{3/2}}{\sqrt{pq}}(p-p_*)^2
+ +6m\{(A_-+A_+)(\Delta_-+\Delta_+)+\Delta_-\Delta_+\}\notag\\
+ &+3(\sigma+1)A_+\theta_++3(\sigma+3)A_-\theta_-.\label{j:core:simultaneous}
+\end{align}
+\end{lemma}
+\begin{proof}
+Insert \eqref{j:core:outer-gaps} in the definition of $D$. The result is
+\[
+ D\ge(\sigma-1)M_{3,+}+(\sigma+1)M_{3,-}
+ +6A_+M_{2,+}+6A_-M_{2,-}-6m(A_-^2+A_-A_++A_+^2),
+\]
+where $M_{j,\pm}=\E X_\pm^j$. Conditional centering gives
+$M_{2,+}=m\bar A_++\E[W^2;X>0]$ and
+$M_{3,+}=m\bar A_+^2+\E[(X+2\bar A_+)W^2;X>0]$,
+and the reflected identities. Substitute $A_-=\ell(p-a_0)$,
+$A_+=\ell(q-a_1)$; the deterministic part is precisely the first line
+of \eqref{j:core:joint}. All kernels are nonnegative. Bounding them
+below by $3(\sigma+1)A_+$ and $3(\sigma+3)A_-$ proves
+\eqref{j:core:simultaneous}. Finite third moments suffice throughout.
+\end{proof}
+
+\subsection{Conservation: one identity, with and without contact}
+For a compactly supported law retain $a=a_c$, $Q,h,\Delta$ from above,
+and put $\nu=\mathcal L(H-S_{n-1})$. Over its bounded support gaps define
+\[
+ J_1=\sum\tau_{u,v}\!\int_u^v(t-u)t\,dt,\quad
+ J_2=\sum\tau_{u,v}\!\int_u^v(t-u)t|t|\,dt,\quad
+ L=\sum\tau_{u,v}\!\int_{[u,v)}(t-u)\,d\nu(t)\ge0.
+\]
+The half-open interval is essential: an atom at $v$ belongs to $h(v)$,
+whereas an atom at $u$ receives zero weight. If $K\subset[-R,R]$, then
+$J\le2R$, $|J_1|\le RJ/2$, $|J_2|\le R^2J/2$ and $L\le2R$.
+Let $M_4=\E X^4$, $M_5=\E|X|^5$, and set
+\[
+ K_q=M_5/4-\rho M_4/2-3\beta\gamma/2+\rho/2,\quad
+ K_1=\E[X|X|^3]-3\beta-3\rho\gamma/2,\quad
+ \Omega=J_1+(M_4-3)/6.
+\]
+For $Z=S_n/\sqrt n$, a standard normal $Z_0$, and $q_z(x)=(x-z)|x-z|$, put
+\[
+ \varepsilon=\E q_z(Z)-\E q_z(Z_0)-2\gamma\phi_z/(3\sqrt n),\qquad
+ E_n=-n^{3/2}\varepsilon/2,
+\]
+\begin{equation}\label{j:core:remainder}
+ \mathcal R_c=c(3\beta J/2+3\rho J_1-3J_2-K_q)
+ +H(cK_1+\phi_z\Omega)-H^2(c\rho+\gamma\phi_z/2)+E_n.
+\end{equation}
+Define the residuals
+\[
+ \xi=\E[X\Delta(X)],\qquad
+ R_K=\int_K\tau(t)\Delta(t)\,dt
+       +\sum_{(u,v)}\tau_{u,v}(v-u)\Delta(v).
+\]
+The integral on $K$ is a Lebesgue integral, not a $P$-integral. All terms
+converge absolutely since $\Delta$ is bounded on the convex hull and
+$\sum\tau_{u,v}(v-u)\le1$.
+
+\begin{theorem}\label{j:core:conservation}
+For every compactly supported standardized law and every $c>0$, $H\in\R$,
+\begin{equation}\label{j:core:general-identity}
+ (n+H^2)a+nc\rho-\frac{n\phi_z}{6}(\gamma+3J)+n^{3/2}L
+ =\mathcal R_c+n^{3/2}(R_K-H\xi).
+\end{equation}
+At a ratio maximizer set $c=C_n$, so $a=0$. With
+$e=C_n-\CE$ and $w=H^2/(2n)$, the residuals vanish and
+\begin{equation}\label{j:core:positive-identity}
+ \mathcal R_{C_n}=ne\rho+n\CE\rho(1-e^{-w})
+       +n\phi(0)e^{-w}D/6+n^{3/2}L.
+\end{equation}
+All four terms are nonnegative when $C_n\ge\CE$, including equality.
+\end{theorem}
+\begin{proof}
+Write $\mathcal A=\int\tau(Q-h)$. On a gap, $h(t)=h(v)+\nu([t,v))$.
+Fubini and integration of $Q'$ therefore give
+\begin{equation}\label{j:core:gap-integral}
+ \mathcal A=R_K+\frac{\phi_zJ}{2\sqrt n}
+ +\frac{3c\beta J/2+(H\phi_z+3c\rho)J_1-3cJ_2}{n^{3/2}}-L.
+\end{equation}
+For absolutely continuous $g$, signwise Fubini gives
+$\int\tau g'=\E[Xg(X)]$. Thus
+$\int t\tau=\gamma/2$, $\int t^2\tau=M_4/3$,
+$\int|t|^3\tau=M_5/4$. Applying the same identity conditionally to
+$g_s(x)=\min(s+x,H)$ and using exchangeability gives
+\[
+ \int\tau h=\frac1n\E[S_n\min(S_n,H)]
+ =T,\qquad T=\E[(Z^2-zZ)\ind_{\{Z\le z\}}].
+\]
+The integrand at the threshold atom is zero. Consequently
+\[
+ \mathcal A=F-\frac{\gamma\phi_z}{2\sqrt n}
+ +\frac{H\phi_z(3-M_4)/6+cK_q}{n^{3/2}}-T.
+\]
+If $M=\E[Z\ind_{\{Z\le z\}}]$, integrating $X(Q-h)$ against $P$ gives
+\[
+ M+\phi_z=-\gamma H\phi_z/(2n)+cK_1/n-\sqrt n\xi.
+\]
+Finally $q_z(x)=(x-z)^2-2(x-z)^2\ind_{\{x\le z\}}$, for both $Z$ and
+$Z_0$, implies
+\[
+ T-\Phi(z)=-\varepsilon/2-\gamma\phi_z/(3\sqrt n)
+               +z(M+\phi_z)-z^2(F-\Phi(z)).
+\]
+Substitute these two identities, use $\sqrt n(F-\Phi(z))=c\rho+a$,
+and equate with \eqref{j:core:gap-integral}; collecting terms yields
+\eqref{j:core:general-identity}. At contact $\Delta=0$ on the entire
+support, so $R_K=\xi=0$. Substituting $a=0$, $c=C_n$ and
+$\CE=(3+\sqrt{10})\phi(0)/6$ gives \eqref{j:core:positive-identity}.
+\end{proof}
+The off-contact identity permits checks on arbitrary bounded laws; it
+is not a positivity statement there. In particular the support integral
+in $R_K$ cannot be dropped for a continuous law. The proof uses contact
+only when setting the two residuals to zero. Section~\ref{j:fourier:section}
+proves uniform bounds for this exact $E_n$, including changing laws and
+thresholds.
+
+\begin{corollary}[The sign license]\label{j:core:license}
+At a ratio maximizer with $C=C_n\ge\CE$, suppose a first pass proves
+$\mathcal R_C\le T<nC\rho$. Then $\gamma+3J>0$ and
+\begin{equation}\label{j:core:phase-price}
+ n(C-\CE)\rho+n\phi(0)D/6+n^{3/2}L\le\mathcal R_C.
+\end{equation}
+\end{corollary}
+\begin{proof}
+The contact identity before splitting the defect gives
+$\phi_z(\gamma+3J)/6=C\rho+\sqrt nL-\mathcal R_C/n>0$.
+Thus $M=\CE\rho-\phi(0)D/6>0$. Regrouping
+\eqref{j:core:positive-identity} writes its right side as the left side
+of \eqref{j:core:phase-price} plus $n(1-e^{-w})M\ge0$.
+\end{proof}
+The initial bound is on the raw remainder. Only after it licenses the
+positive phase term may that term improve a later resource bound.
+No $D<2$ assumption or positive lower bound on $C_n-\CE$ was used.
+
+For context, on a lattice with maximal span $h>0$, its gaps have lengths
+$k_gh$, $k_g\ge1$. Since $\tau$ vanishes outside the convex hull and the
+support has Lebesgue measure zero,
+$\sum_g\tau_g k_gh=1$ and $J=\sum_g\tau_g k_g^2h^2\ge h$.
+Reflection preserves $J,\rho,h$ and reverses $\gamma$, whence
+$|\gamma|+3h\le(3+\sqrt{10})\rho$. Equality is precisely the zero-defect
+Bernoulli law or its reflection. Thus the gap functional extends the
+lattice span to arbitrary supports; no lattice hypothesis enters the proof.

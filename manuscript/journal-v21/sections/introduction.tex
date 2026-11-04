@@ -1,0 +1,177 @@
+\section{The problem and the proof strategy}
+\label{j:introduction}
+
+Let $\mathcal P$ be the probability laws on $\R$ with mean zero,
+variance one and finite third absolute moment $\rho(P)=\E_P|X|^3$.
+For independent copies with this same law, write $S_n=X_1+\cdots+X_n$
+and define
+\[
+ \Delta_n(P)=\sup_{H\in\R}|\Pp_P(S_n\le H)-\Phi(H/\sqrt n)|,
+ \qquad C_n=\sup_{P\in\mathcal P}\frac{\sqrt n\Delta_n(P)}{\rho(P)}.
+\]
+The threshold $H$ is in the units of the raw sum; $H/\sqrt n$ is its
+normal-standardized value. The Berry--Esseen inequality
+\cite{Berry1941,Esseen1942,Esseen1945} asserts a universal finite upper
+bound on the $C_n$. The sharp-constant problem asks whether this bound
+can be taken to be
+\[
+ \CE=\frac{3+\sqrt{10}}{6\sqrt{2\pi}}=0.409732\ldots.
+\]
+The lower bound comes from one fixed skew Bernoulli law, rather than
+from a sequence of progressively more complicated distributions.
+The difficulty is to bound every possible marginal, uniformly in the
+sample size.
+
+\begin{theorem}[Sharp iid Berry--Esseen bound]\label{j:main}
+For every $P\in\mathcal P$ and every integer $n\ge1$,
+\[
+ \Delta_n(P)\le\frac{\CE\rho(P)}{\sqrt n}.
+\]
+The constant is optimal: $\sup_{n\ge1}C_n=\CE$.
+Moreover $C_n<\CE$ for every $n\ge47$.
+\end{theorem}
+The proof combines the analytic arguments below with the finite
+inequalities specified by their certificates. Section~\ref{j:composition}
+assembles these results and proves strictness using the equality case
+of the uniform local exclusion.
+
+\subsection{The three parts of the upper-bound argument}
+
+The proof first establishes $C_j\le\CE$ for $1\le j\le42$.
+Suppose a later failure exists and let $n$ be its least index. Then both
+deleted predecessors satisfy $C_{n-1},C_{n-2}\le\CE$. A Gaussian
+one-step estimate, proved in Section~\ref{j:smoothing:section}, gives
+\[
+ 0<n(C_n-\CE)<\frac{3003}{10250}<0.3,\qquad
+ C_n<\frac{73}{175},\qquad n(C_{n-1}-C_n)_+=0.
+\]
+Two local comparisons exclude precisely such an extremizer:
+Proposition~\ref{j:local:finite4346} covers $43\le n\le46$,
+and Proposition~\ref{j:local:uniform} is uniform for $n\ge47$.
+Thus the finite base and these two comparisons prove the upper bound
+at every index. The role of the recurrence is to supply the hypotheses
+of the local comparisons, rather than to propagate the sharp constant
+by itself.
+
+The mathematical object shared by the comparisons is a nonnegative
+support-gap defect. At a fixed index, the optimal ratio is attained.
+Its first variation gives a piecewise cubic function which bounds the
+conditional probability $y\mapsto\Pp(S_{n-1}\le H-y)$ and agrees
+with it on the support. Integrating this contact relation against the
+zero-bias density gives a conservation identity. Its nonnegative terms
+measure the score above $\CE$, the departure from the extremal
+two-point geometry, and the probability entering support gaps. Its
+remainder is bounded by Fourier estimates.
+
+Small remainder therefore forces the same extremizing law near two
+clusters. Conditioning on the cluster labels gives an exact binomial
+count plus centered conditional noise. Couple the conditional sums for
+all counts using the same two noise distributions. Replacing one
+label-zero summand by a label-one summand increases the total by a
+proved positive amount. This orders the threshold crossings and bounds
+the entire change in probability by one staircase function of the noise
+at a nearest count.
+
+A polynomial of degree four majorizes that staircase on the whole real
+line. Its expectation depends only on the first four noise moments;
+independence and the acquired support bound those moments explicitly.
+The same conditional moments also determine the correction to the third
+absolute moment in the Berry--Esseen ratio. Keeping these two calculations
+together is the central comparison step.
+
+At the finitely many retained indices, exact binomial gaps and rational
+quartic certificates prove the score bound throughout the acquired
+parameter regions. For the central large-index range, one explicit
+quartic family suffices; four scalar polynomial inequalities give a loss
+proportional to every positive noise level, however small. Noise zero is
+the actual Bernoulli law and is covered by the binomial bound. Thus the
+finite comparison and the uniform tail have different quantitative
+reserves, while using the same count coupling and moment argument.
+
+The smallest indices require different quantitative estimates, but
+use the same logic: first acquire a valid support and moment domain,
+then majorize a probability on that domain. No step assumes that an
+unrestricted extremizer has two atoms, or replaces the iid marginal by
+an optimizer of a moment relaxation.
+
+\subsection{Where the computer enters}
+
+The reductions leave explicit inequalities on bounded parameter
+regions. These include polynomial majorants, enclosures of Fourier
+integrals, and inequalities in the probability, noise and phase of a
+binomial count. A certificate supplies finite data allowing these
+inequalities to be checked on the whole region. Typical data are
+rational polynomial coefficients and a finite tree of closed boxes.
+The checker proves a valid inequality or an exclusion on each leaf
+and verifies that no part of the root domain was lost.
+
+Two mathematical questions precede this computation: why every
+possible witness belongs to the specified domain, and why the checked
+inequality gives the desired probability bound. Both are proved in
+the text. The certificates supply the remaining finite arithmetic.
+They are not samples from a class of probability laws. Nor does
+numerical precision alone make them rigorous: rational arithmetic and
+proved outward enclosures control every rounding error.
+
+Finding a certificate and verifying it are different tasks. For some
+majorants, floating-point linear programming proposes coefficients;
+for enclosure and count bounds, adaptive subdivision proposes a
+finite proof tree. These procedures may fail and need not be trusted.
+The acceptance program reconstructs the precise inequality, checks
+all of its cells using exact arithmetic, and rejects unresolved cases.
+Section~\ref{j:cert:section} explains these constructions and the
+common soundness argument. The reproduction package contains the
+large coefficient arrays and complete checking programs. Their size
+does not enlarge the mathematical assumptions of the proof.
+
+\subsection{Published inputs and sharpness}
+
+For clarity, the external probability estimates used below are stated
+here with their full law class.
+\begin{proposition}[Affine Berry--Esseen estimates]\label{j:external:affine}
+For every $P\in\mathcal P$ and integer $n\ge1$,
+\[
+ \sqrt n\Delta_n(P)\le
+ \min\left\{0.4690\rho,\ 0.3322(\rho+0.429),\
+                         0.3031(\rho+0.646)\right\}.
+\]
+\end{proposition}
+These are the iid estimates of \citet{Shevtsova2013}. Standardizing
+the summands converts the total-variance normalization there into the
+displayed one. Only a finite third absolute moment is assumed. A
+putative large normalized score consequently has an explicit upper
+bound on $\rho$, which starts several support arguments. All
+terminating decimals in this paper denote the corresponding rational
+numbers.
+
+\begin{proposition}[Finite binomial comparison and the lower limit]
+\label{j:external:binomial}\label{j:external:limit}
+For $0<p<1$, let $X=(B-p)/\sqrt{p(1-p)}$ with
+$B\sim\operatorname{Bernoulli}(p)$. At every finite $n\ge1$ its
+normalized discrepancy is strictly smaller than $\CE$.
+For $p_*=(4-\sqrt{10})/2$ and this fixed marginal,
+\[
+ \lim_{n\to\infty}\frac{\sqrt n\Delta_n(P_*)}{\rho(P_*)}=\CE.
+\]
+\end{proposition}
+The finite assertion is the binomial result of
+\citet[Theorem~1]{Schulz2016}; its fixed-law limit is Esseen's lattice
+asymptotic \cite{Esseen1956}, in the normalization recorded in
+\citet[Remarks~4.1--4.2]{Schulz2016}. Indeed, with $q_*=1-p_*$,
+\[
+ \rho(P_*)=\frac{p_*^2+q_*^2}{\sqrt{p_*q_*}},\qquad
+ \frac{3+q_*-p_*}{6\sqrt{2\pi}(p_*^2+q_*^2)}=\CE.
+\]
+Thus every coefficient smaller than $\CE$ fails for a sufficiently
+large sum of this one law. No interchange of a supremum over laws
+with a limit is needed. Together with the upper bound, this proves
+that the universal constant is sharp.
+
+The present argument reorganizes the earlier certificate proof
+\cite{kolodziejekrodziewicz2026exact}. Its purpose is to give each
+analytic reduction once and to expose the precise interfaces between
+those reductions and the finite checks. The classical zero-bias
+transform \cite{GoldsteinReinert1997} explains the conservation
+identity; explicit contact and same-law domain control are needed to
+apply it here. The final result concerns the optimal iid constant,
+not eventual exact two-point optimality.
