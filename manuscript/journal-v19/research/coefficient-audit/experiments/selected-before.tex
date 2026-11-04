@@ -1,0 +1,194 @@
+\paragraph{Signed moments with a common first moment.}\label{j:local:atlas}\label{j:local:moments}
+Put $a_\pm=(1\pm\beta)/2$, $b_\pm=(\rho\pm\gamma)/2$.
+Cauchy gives $m^2\le a_+a_-$ and $b_\pm m\ge a_\pm^2$.
+Consequently
+\[
+ \frac{(1+\beta)^{3/2}}{\sqrt{1-\beta}}-\rho
+ \le\gamma\le
+ \rho-\frac{(1-\beta)^{3/2}}{\sqrt{1+\beta}},\qquad
+ m\ge\max\left\{\frac{1+\beta^2}{2\rho},
+                  \frac{a_+^2}{b_+},\frac{a_-^2}{b_-}\right\}.
+\]
+These statements also hold with a zero atom. Projection of $X|X|$ onto
+the span of $X$ and $|X|$ gives
+\[
+ \mu_4\ge\rho^2+\frac{(\gamma-\rho\beta)^2}{1-\beta^2}.
+\]
+For completeness, this follows by minimizing the nonnegative expectation
+$E(X|X|-uX-v|X|)^2$ over $u,v$; its Gram matrix has diagonal entries
+one and off-diagonal entry $\beta$, and is positive definite.
+
+The signwise moment matrices below, valid also for different radii,
+provide the bounded-support fourth- and fifth-moment contractions.
+A second useful upper bound for $m$ follows by integrating
+$(x-a)^2(R-x)\ge0$ for $x=|X|\in[0,R]$. For every fixed $a>0$,
+\[
+ 2m\le\frac{R-\rho+2a+Ra^2}{a(2R+a)}.
+\]
+The cover uses only the eleven rational choices $a=2/10,\ldots,12/10$.
+
+Write $\delta=\gamma-\rho\beta$. Cauchy and a square completion on
+each sign give the signed constant bound
+\begin{align*}
+ \frac\rho2\mu_4-\frac14\eta_5
+ &\le\frac{\rho^3}{4}
+ -\frac{(\rho+\gamma)(\delta_+)^2}{8(1+\beta)^2}
+ -\frac{(\rho-\gamma)((-\delta)_+)^2}{8(1-\beta)^2}.
+\end{align*}
+Indeed on either sign, write $a=\E X_s^2$, $b=\E X_s^3$,
+$c=\E X_s^4$, $f=\E X_s^5$. Cauchy gives $c\ge b^2/a$,
+$f\ge c^2/b$, and
+$\rho c/2-f/4\le\rho^2b/4-(c-\rho b)^2/(4b)$.
+Distance to the half-line $c\ge b^2/a$ proves the stated penalty
+on summing both signs. Independently,
+$\mu_4^2\le\rho\eta_5$ and the projection bound above give
+\[
+ \frac\rho2\mu_4-\frac14\eta_5
+ \le\frac{\rho^3}{4}
+ -\frac{(\gamma-\rho\beta)^4}{4\rho(1-\beta^2)^2}.
+\]
+The larger of the two nonnegative deductions is retained.
+
+
+\paragraph{Preserving central and outer integral costs.}
+Let
+\[
+ P_1(A,B)=B^3/3+AB^2/2-A^3/6,\quad
+ P_2(A,B)=B^4/4+AB^3/3-A^4/12,\quad G=\rho P_1-P_2.
+\]
+Then $J_{1,c}=mP_1$, $J_{2,c}=mP_2$. Since
+$\partial_BG=B(A+B)(\rho-B)$,
+\[
+ G(A,B;\rho)\le G(A,\rho;\rho)
+ =\rho^4/12+\rho^3A/6-\rho A^3/6+A^4/12.
+\]
+The last expression increases with $A$ because its derivative is
+$(\rho-A)^2(\rho+2A)/6$, and is convex in $\rho$ because its second
+$\rho$ derivative is $\rho^2+\rho A$. Its closed-rectangle maximum is
+therefore bounded using the upper $A$ endpoint and both $\rho$ endpoints.
+
+Positive outer gaps satisfy
+$(t-a)(\rho-t)\le(\rho-B)_+^2/4$. On negative outer gaps the positive
+part is bounded by $(R-\rho)^2/4$ after extracting $|t|$.
+Integration gives
+\[
+ 3(\rho J_1-J_2)_o
+ \le\frac38\{(\rho-B)_+^2T_++(R-\rho)^2T_-\}.
+\]
+The available weighted outer budget is $D-mQ$, not the entire $D$.
+The cover intersects this budget with the individual bounds
+$T_+\le b_{+,u}-m_lB_l^2$ and $T_-\le b_{-,u}-m_lA_l^2$.
+
+For the signed phase term $U=J_1+(\mu_4-3)/6$, retain
+\[
+ -RT_-/2\le J_{1,o}\le RT_+/2.
+\]
+The central minimum of $P_1$ occurs at $B_l$ and an $A$ endpoint;
+its maximum occurs at $B_u$ and $A$ clipped to the interval at $A=B_u$.
+A nonnegative polynomial bound is multiplied by $m_u$ for an upper
+bound and $m_l$ for a lower bound; a negative one uses the opposite
+endpoint. For example, the binary endpoints $A=3/2$, $B=2/3$ make this
+maximum negative; the sign switch is necessary even when $D<2$.
+The fourth-moment sign intervals also sharpen
+$K_1=E[X|X|^3]-3\beta-3\rho\gamma/2$.
+The complete $K_1,U,\phi$ rectangles are used in the signed expression
+$|CK_1+\phi U|$, without replacing it by two separate absolute values.
+
+
+
+\paragraph{Signed conditional Taylor cancellation.}
+
+Let $K_1=\E[X|X|^3]-3\beta-\tfrac32\rho\gamma$.
+On a sign class put $x=|X|$, $a=|V|$, $W=X-V$ and
+$\varepsilon=1$ on the positive class, $-1$ on the negative class.
+In the actual central-gap domain there is no atom at zero.
+With $w_3=x+2a$, $w_4=x^2+2ax+3a^2$ and
+$\gamma_V=\E V^3$, exact conditional expansion gives
+\begin{equation}\label{j:local:entry201:Kexact}
+ K_1(X)-K_1(V)
+ =\E\!\left[W^2
+ \left\{\varepsilon(w_4-3-\tfrac32\rho w_3)
+                   -\tfrac32\gamma_Vw_3\right\}\right].
+\end{equation}
+Apply~\eqref{j:local:re:conditional} to $j=2,3,4$, with $h=1$
+or $h=\varepsilon$, and use
+$\rho\gamma-\rho_V\gamma_V
+=\rho(\gamma-\gamma_V)+\gamma_V(\rho-\rho_V)$.
+
+The positive coefficient in \eqref{j:local:entry201:Kexact} is
+$F(x,a;t)=x^2+2ax+3a^2-3-\tfrac32t(x+2a)$
+with $t=\rho+\gamma_V$; the negative coefficient is $-F$
+with $t=\rho-\gamma_V$. Their ranges are bounded on complete
+rectangles of actual conditional means and support magnitudes.
+The positive-support magnitude is at most $R$.
+The same formula permits separate actual bounds on the two signed support magnitudes.
+On the late domain $p<1/2$, bounds for $\gamma_V$ are
+\[
+ \sqrt{(1-\Theta)^3(1-2u)^2/[u(1-u)]}
+ \le\gamma_V\le(1-2l)/\sqrt{l(1-l)}.
+\]
+The positive mean lies in
+$[\sqrt{(1-\Theta)(1-u)/u},\sqrt{(1-l)/l}]$, and the negative
+magnitude mean lies in
+$[\sqrt{(1-\Theta)l/(1-l)},\sqrt{u/(1-u)}]$.
+Use the lower bound $\rho\ge\rho_B(u)$ only after checking
+$3\min(A_l,B_l)\ge(3/2)\sup_I\rho_B$. Indeed conditional expansion
+and $(1-\theta)^{3/2}\ge1-3\theta/2$ then imply
+$\rho\ge(1-\theta)^{3/2}\rho_B(p)+3\min(A,B)\theta\ge\rho_B(p)$.
+Otherwise retain the universal lower bound one.
+
+Since $x+2a>0$, $F$ decreases with $t$.
+For fixed $t$ its Hessian is
+$\left(\begin{smallmatrix}2&2\\2&6\end{smallmatrix}\right)>0$.
+Its rectangle maximum is at a corner. Its minimum is among the four
+corners, the minimizer on each edge, and the stationary point
+$(x,a)=(3t/8,3t/8)$ if that lies in the rectangle.
+On fixed-$x$ edges use $a=t/2-x/3$, clipped to the edge; on
+fixed-$a$ edges use $x=3t/4-a$, also clipped.
+This is a complete finite extremum list.
+Multiplication by $0\le\theta\le\Theta$ uses
+$\Theta\min(0,L)$ and $\Theta\max(0,U)$ for the lower and upper
+coefficient bounds. It intersects this new interval with the retained
+absolute-error interval; neither need be discarded.
+
+\paragraph{The complete central rectangle.}
+The central part of $\rho J_1-J_2$ is exactly
+$mG(A,B;\rho)$, where $G=\rho P_1-P_2$.
+Let a proved probability cell give
+$A\in[A_l,A_u]$, $B\in[B_l,B_u]$, $m\in[m_l,m_u]$.
+Here
+\[
+ A_u=\sqrt{u/(1-u)},\quad B_u=\sqrt{(1-l)/l},\quad
+ m_l=\sqrt{(1-\Theta)s_0},\quad
+ m_u=\sqrt{\max_{p\in[l,u]}pq}.
+\]
+
+\begin{lemma}[Complete central rectangle]\label{j:local:entry201:central}
+Write $G(A_l+(A_u-A_l)x,B_l+(B_u-B_l)y;\rho)
+=\sum t_{kh}x^ky^h$. Define the 25 rational coefficients
+\[
+ b_{ij}(\rho)=\sum_{\substack{k\le i\\h\le j}}
+ t_{kh}\frac{\binom{i}{k}}{\binom4k}
+          \frac{\binom{j}{h}}{\binom4h},\qquad 0\le i,j\le4,
+\]
+and
+\[
+ \mathcal G(\rho)=\max_{i,j}
+       \{m_l b_{ij}(\rho),\,m_u b_{ij}(\rho)\}.
+\]
+Then $\rho J_{1,c}-J_{2,c}\le\mathcal G(\rho)$.
+Moreover $\mathcal G$ is convex in $\rho$.
+\end{lemma}
+\begin{proof}
+Apply Lemma~\ref{j:cert:bernstein} separately to the
+two coordinates after the affine substitution. The Bernstein basis is nonnegative and sums to one on the closed square,
+so $G$ is a convex combination of its 25 coefficients.
+For each coefficient retain both $m$ endpoints, or equivalently use
+$m_u$ when it is nonnegative and $m_l$ otherwise. This gives a uniform
+bound on the entire three-dimensional rectangle, including boundaries.
+Each endpoint-multiplied coefficient is affine in $\rho$; their maximum
+is convex. No interior stationary point is omitted.
+\end{proof}
+
+
+

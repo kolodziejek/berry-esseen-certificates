@@ -1,0 +1,56 @@
+\paragraph{The remaining endpoint recipes.}
+For the conditional coefficient, use the mean and binary-cubic bounds
+from $V=-m/q,m/p$ and $m^2=(1-\theta)pq$. Explicitly, if
+$p\in[l,u]\subset(0,1/2)$ and $\theta\le\Theta$, the positive mean
+lies between $\sqrt{(1-\Theta)(1-u)/u}$ and $\sqrt{(1-l)/l}$,
+the negative magnitude mean between $\sqrt{(1-\Theta)l/(1-l)}$ and
+$\sqrt{u/(1-u)}$, and
+\[
+ \sqrt{(1-\Theta)^3(1-2u)^2/[u(1-u)]}
+ \le\gamma_V\le(1-2l)/\sqrt{l(1-l)}.
+\]
+In $F$, the edge stationary points are
+$a=t/2-x/3$ and $x=3t/4-a$, clipped to their edges; the interior
+point is $x=a=3t/8$. Retain the actual common $\rho$ interval.
+Its lower bound may be raised to $\rho_B(u)$ only if
+$3\min(A_l,B_l)\ge(3/2)\sup_I\rho_B$; the conditional cubic identity
+and $(1-\theta)^{3/2}\ge1-3\theta/2$ then prove that license.
+Intersect the signed $K_1$ interval with its previously proved error interval.
+
+For the central constant, the cheaper alternative to the complete Bernstein
+rectangle follows from
+\[
+ G_B=B(A+B)(\rho-B),\quad
+ G(A,\rho;\rho)=\rho^4/12+\rho^3A/6-\rho A^3/6+A^4/12.
+\]
+The latter has derivatives $(\rho-A)^2(\rho+2A)/6$ in $A$ and
+$\rho^2+\rho A$ twice in $\rho$, so use the upper $A$ endpoint and
+both $\rho$ endpoints. Intersect the weighted outer budget with
+$T_+\le b_{+,u}-m_lB_l^2$ and $T_-\le b_{-,u}-m_lA_l^2$.
+For $U=J_1+(\mu_4-3)/6$, add the signed central and outer intervals
+and the fourth-moment interval. Use the complete $K_1,U,\phi$ rectangle
+in $|CK_1+\phi U|$; do not separate the two absolute values.
+
+\begin{lemma}[Complete central rectangle]\label{j:local:entry201:central}
+For $G=\rho P_1-P_2$, let $b_{ij}(\rho)$ be its degree-four tensor
+Bernstein coefficients after mapping the proved $(A,B)$ rectangle to
+$[0,1]^2$. Here one may take
+\[
+ A_u=\sqrt{u/(1-u)},\quad B_u=\sqrt{(1-l)/l},\quad
+ m_l=\sqrt{(1-\Theta)\min_{p=l,u}pq},\quad
+ m_u=\sqrt{\max_{p\in[l,u]}pq}.
+\]
+Then
+\[
+ \rho J_{1,c}-J_{2,c}\le
+ \max_{0\le i,j\le4}\{m_l b_{ij}(\rho),m_u b_{ij}(\rho)\}.
+\]
+This upper bound is convex in $\rho$.
+\end{lemma}
+The preceding positive-basis argument proves the lemma, including closed
+faces and degenerate rectangles. The fixed algebraic objects record the
+seven moment matrices, the displayed derivative and square identities,
+and all25 inverse basis identities. Exact coefficient comparison checks
+these finite identities; the integral and common-budget arguments above
+supply their mathematical meaning. No acquisition or Fourier target
+follows from coefficient acceptance alone.

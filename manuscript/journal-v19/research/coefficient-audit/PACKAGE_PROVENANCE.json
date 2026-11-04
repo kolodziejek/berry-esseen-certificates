@@ -1,0 +1,81 @@
+{
+  "code_copies": [
+    {
+      "packaged_sha256": "1ccf489fdba501860668712a8102dfa85631b2665e5ab3ba0a8af0ee7ee8d6a4",
+      "path": "poly.py",
+      "routing_only_change": false,
+      "source_sha256": "1ccf489fdba501860668712a8102dfa85631b2665e5ab3ba0a8af0ee7ee8d6a4"
+    },
+    {
+      "packaged_sha256": "c842de8d9544282324c7be951bc276401351495a00ddf3dfdcb6e8956e2b2636",
+      "path": "fixed_targets.py",
+      "routing_only_change": false,
+      "source_sha256": "c842de8d9544282324c7be951bc276401351495a00ddf3dfdcb6e8956e2b2636"
+    },
+    {
+      "packaged_sha256": "a3f31eb73d027592f1f15075ce03e0aabcd932756e3b0152ee9db1b803da5bca",
+      "path": "accept_objects.py",
+      "routing_only_change": false,
+      "source_sha256": "a3f31eb73d027592f1f15075ce03e0aabcd932756e3b0152ee9db1b803da5bca"
+    },
+    {
+      "packaged_sha256": "ef4221e26fbf0402acd192b92d919acb5917947674f0084f3358d8a7cc47f294",
+      "path": "coefficient_map.py",
+      "routing_only_change": false,
+      "source_sha256": "ef4221e26fbf0402acd192b92d919acb5917947674f0084f3358d8a7cc47f294"
+    },
+    {
+      "packaged_sha256": "6b50a3b8e86d2bf02f7cbd97db2d203dd5b49e33a576f3ec193890636bf1cc87",
+      "path": "controls.py",
+      "routing_only_change": false,
+      "source_sha256": "6b50a3b8e86d2bf02f7cbd97db2d203dd5b49e33a576f3ec193890636bf1cc87"
+    },
+    {
+      "packaged_sha256": "1740277e3e18a3a440b963ae77cc2d4753abf0699052df81d39180b7043926a2",
+      "path": "compare_actual.py",
+      "routing_only_change": true,
+      "source_sha256": "4efe004339d2cef22085d3ff6f1a2bc54a31328b051d03d70c38ed8a686ee1d8"
+    },
+    {
+      "packaged_sha256": "b224e95b22011289706315de3f79f97d7360eeca360872801c729685d90d9c6a",
+      "path": "capture_validation.py",
+      "routing_only_change": false,
+      "source_sha256": "b224e95b22011289706315de3f79f97d7360eeca360872801c729685d90d9c6a"
+    },
+    {
+      "packaged_sha256": "0efd921331588aee65e3dc23e9da348655c6d87702b08f84797d74892840ed01",
+      "path": "propose_objects.py",
+      "routing_only_change": false,
+      "source_sha256": "0efd921331588aee65e3dc23e9da348655c6d87702b08f84797d74892840ed01"
+    },
+    {
+      "packaged_sha256": "cea4ba8dfd7abb6cb592ffb48192691e65d002c5dda958676a0a3fd7a2d42b17",
+      "path": "proof_objects.json",
+      "routing_only_change": false,
+      "source_sha256": "cea4ba8dfd7abb6cb592ffb48192691e65d002c5dda958676a0a3fd7a2d42b17"
+    },
+    {
+      "packaged_sha256": "7a13d975e5fd5fcd451fc9a75af4c3e49555fd28afb20902d22ce11cf18bd0c1",
+      "path": "README.md",
+      "routing_only_change": false,
+      "source_sha256": "7a13d975e5fd5fcd451fc9a75af4c3e49555fd28afb20902d22ce11cf18bd0c1"
+    },
+    {
+      "packaged_sha256": "ca982788fadda9dd9ca0f89c9b1ce9c7f854f6f236bcc0ffd1d082f58dcca029",
+      "path": "SCOPE.md",
+      "routing_only_change": false,
+      "source_sha256": "ca982788fadda9dd9ca0f89c9b1ce9c7f854f6f236bcc0ffd1d082f58dcca029"
+    },
+    {
+      "packaged_sha256": "0b72db27c3357b169767a19c918d0228671bda43ac889dd0126e7a4b6883be29",
+      "path": "RECOMMENDATION.md",
+      "routing_only_change": false,
+      "source_sha256": "0b72db27c3357b169767a19c918d0228671bda43ac889dd0126e7a4b6883be29"
+    }
+  ],
+  "native_prefix_owned_by_coordinator": true,
+  "native_sources_byte_identical": true,
+  "original_analytic_license_sha256": "d3587a4bb19d62668193b8d58c5a313994f753f70ac417ec2e33c7a9ed743afe",
+  "scope": "optional audit outside proof DAG",
+  "soundness_adaptation": "Standalone definitions and common-budget premise added; conditional means barred to avoid collision with signwise moment names; original analytic license retained in experiments."
+}

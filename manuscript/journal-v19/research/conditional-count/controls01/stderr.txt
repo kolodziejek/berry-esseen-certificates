@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/certificate_consolidation_20261104/paired/structural/check_structural_controls.py", line 98, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/certificate_consolidation_20261104/paired/structural/check_structural_controls.py", line 74, in main
+    assert missing_cubic is not None and invalid_chi is not None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,20 @@
+{
+  "execution_status": "fresh compiler success; both rendered pages visually inspected",
+  "main_manuscript_proof_dependency": false,
+  "mathematical_status": "analytic derivation under explicit same-law and acquired-budget premises; optional audit",
+  "observations": "No clipped or overlapping equations, unresolved references, or bad spacing observed on either page.",
+  "pages_visually_inspected": [
+    1,
+    2
+  ],
+  "pdf_sha256": "d343006363b3003b00027a548181588f58b77c89f83f221f9a2cc9d6d72795e5",
+  "render_command": [
+    "pdftoppm",
+    "-png",
+    "-r",
+    "125",
+    "build/soundness.pdf",
+    "render/page"
+  ],
+  "tex_sha256": "b315b0921420080ea0fd3aa5339979ff31efed29b35d71478ea589dfce0d61f4"
+}

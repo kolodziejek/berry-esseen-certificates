@@ -1,0 +1,54 @@
+{
+  "status": "PASS_FINAL_ARTIFACT_BINDINGS",
+  "pdf_pages": 98,
+  "pdf_sha256": "e32666fc91712d1bde1c251764b52e41ba96439ea4aa19e2341ea2c0b345ba6f",
+  "used_tex_bibliography_sources": {
+    "main.tex": "02510350e1035c00f2f6ec28ec567c57f11733b881331a3ff73660df30024951",
+    "references-added.bib": "3eb6aeba6a6e9844762c9a92794e513b02bb04d9701f1a4629d959b1b1cc3bb0",
+    "references-classical.bib": "d572142ac859fb2ff3a2e4679e33869cb54aa41320df60f23139b149a0a94084",
+    "references-modern-a.bib": "6375a56e09258d12e6ff5b79eb240d720335f9e9030fe9ba4306a5b210bf304a",
+    "references-modern-b.bib": "9b49eba5de769bad53a61b0e0d8b46faf2ed20a7588860f86d542a0c51fb5060",
+    "sections/certificates.tex": "b31f2650dab827546294b120a7798b6503c0991cd01efabb14947fdc70e11758",
+    "sections/composition.tex": "d46c593fd2774024e1bc663d42cd9e18850589d3dae88e0a348d33123e28495f",
+    "sections/core.tex": "094bb27217caaf2a97c2569cf881e74ad3880860372bea2816993335d491a511",
+    "sections/finite.tex": "e1c7b8d7b339e370ef057ab972d3dcb49649105d7335d13618a2e860f6ebcd4c",
+    "sections/fourier.tex": "196ef45ea1346bc8d08409020dae6ecbbe462b8b4563d9e9f0de424646a42fc0",
+    "sections/introduction.tex": "ed5e04b469d84e85e48023623b6671ebbe341422fe92c3a48d497427bfe267d7",
+    "sections/local.tex": "18db0483796d17855833f4b1df85566d13727ae8899e935ba76003cb986c5e7e",
+    "sections/smoothing.tex": "c31217b1c5d87ba9a82c1c0321c2e99eda65eefe24c69c057bad9c7bff7bfbb2"
+  },
+  "compiled_bibliography_sha256": "63d38ca56c0f227b735c83ec1dca8c8564a2246a002e539a100ffaed63dbd920",
+  "used_sources_match_layout06": true,
+  "overfull_boxes": 0,
+  "unresolved_references": 0,
+  "underfull_paragraphs": 1,
+  "checked_component_manifests": [
+    {
+      "manifest": "research/coefficient-audit/PACKAGE_FILES.json",
+      "sha256": "dd5c86757c22b66d738140093d55642943b7c2d416972224be136a3ca67a76f9",
+      "entries": 224
+    },
+    {
+      "manifest": "research/coefficient-audit/native-prefix/CAPTURE_MANIFEST.json",
+      "sha256": "2451f9d003693466e2952b84637d02086498aeb9525ca5b07d6f8ebede89b597",
+      "entries": 15
+    },
+    {
+      "manifest": "research/conditional-count/PACKAGE_MANIFEST.json",
+      "sha256": "36873f0eccc8a74927d5124e273809bc51cddcc90b80243bf2e87b5f3c70867d",
+      "entries": 37
+    },
+    {
+      "manifest": "research/conditional-count/MANIFEST.json",
+      "sha256": "3ea4c98524e0bcbe12f3d6206871870879c0318cd3d3e414853dbea362fe0436",
+      "entries": 35
+    },
+    {
+      "manifest": "review/analytic/MANIFEST.json",
+      "sha256": "b7d4858db6a517fb046552e5eac5b00a389f1360ca8e0d009dc99b899e8f503d",
+      "entries": 27
+    }
+  ],
+  "note": "Optional unreferenced research TeX files are not analytic inputs to main.pdf. Their own inventories/receipts bind them separately.",
+  "mathematical_acceptance_claimed": false
+}

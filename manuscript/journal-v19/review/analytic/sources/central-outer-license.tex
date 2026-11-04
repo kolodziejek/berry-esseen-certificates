@@ -1,0 +1,92 @@
+% Independent analytic license for the algebraic coefficient family.
+% The surrounding text supplies the coefficient contract and existing notation.
+\paragraph{Why the coefficient formulas bound one marginal.}
+There are three underlying calculations. They use the same signwise
+moments, conditional variances and gap budget throughout; the exact
+coefficient object records their polynomial expansions.
+
+First, on either sign let $Y=|X|\in[0,r]$ and write
+$s_j=\E[Y^j;\text{that sign}]$. Both signs have $s_1=m$.
+For $H_j=\left(\begin{smallmatrix}s_j&s_{j+1}\\s_{j+1}&s_{j+2}\end{smallmatrix}\right)$,
+\[
+ H_j\succeq0\quad(0\le j\le3),\qquad
+ rH_j-H_{j+1}\succeq0\quad(0\le j\le2).
+\]
+Their quadratic forms integrate, respectively,
+$Y^j(a+bY)^2$ and $Y^j(r-Y)(a+bY)^2$. These identities prove the
+whole moment and support-contraction family, separately at the two
+support radii. A quotient deduction from
+$\left(\begin{smallmatrix}A&B\\B&C\end{smallmatrix}\right)\succeq0$
+uses $C\ge B^2/A$ only when $A>0$. At $A=0$ it uses $B=0$, $C\ge0$;
+an interval meeting zero may simply discard the nonnegative correction.
+It may not divide by zero or square an unlicensed signed endpoint.
+
+Second, the conditional Taylor identity
+\eqref{j:local:re:conditional} integrates its polynomial remainder
+against the nonnegative measures
+$d\nu_\pm=(X-V)^2\ind_\pm dP$, of masses $\theta_\pm$.
+With $a_\pm=|\E[X\mid\pm]|$, $\gamma_V=\E V^3$, it gives
+\begin{gather*}
+ K_1(X)-K_1(V)=
+ \int F(x,a_+;\rho+\gamma_V)\,d\nu_+
+ -\int F(x,a_-;\rho-\gamma_V)\,d\nu_-,\\
+ F(x,a;t)=x^2+2ax+3a^2-3-\tfrac32t(x+2a).
+\end{gather*}
+Indeed expand the product as
+$\rho\gamma-\rho_V\gamma_V=\rho(\gamma-\gamma_V)
++\gamma_V(\rho-\rho_V)$ and use the conditional identities at orders
+two, three and four. The factored derivatives certify $F_t\le0$ and
+the positive Hessian $2(dx+da)^2+4(da)^2$.
+Thus a rectangle maximum is at a corner; a minimum is among its corners,
+its clipped edge stationary points and its interior stationary point.
+All are included in the exact coefficient map. If the two signed
+integrands lie in $[L,U]$, their sum lies in
+$[\Theta\min(0,L),\Theta\max(0,U)]$ when
+$\theta_++\theta_-\le\Theta$. This includes zero noise without division.
+
+Third, direct integration over the central gap $(-A,B)$ gives
+\begin{gather*}
+ J_{1,c}=mP_1(A,B),\quad J_{2,c}=mP_2(A,B),\\
+ P_1=B^3/3+AB^2/2-A^3/6,\qquad
+ P_2=B^4/4+AB^3/3-A^4/12.
+\end{gather*}
+Both polynomials increase in $B$ and their $A$ derivatives change sign
+only at $A=B$. Their extrema therefore use the indicated endpoints and
+the clipped point $A=B$. For $G=\rho P_1-P_2$, the complete central
+bound uses the degree-four tensor Bernstein coefficients on the closed
+$(A,B)$ rectangle. The basis is nonnegative and sums to one, so retain
+both $m_l$ and $m_u$ times every coefficient. This handles negative
+coefficients and zero-width rectangles. The result is a maximum of
+affine functions of $\rho$, hence convex. The checked inverse basis
+identities prove coverage of the entire rectangle, not only a grid.
+
+For a positive outer gap $(a,b)$, $a\ge B$, the square inequality
+$(t-a)(\rho-t)\le(\rho-B)_+^2/4$ and signwise Tonelli give
+\[
+ 3(\rho J_1-J_2)_o\le\tfrac38
+ \{(\rho-B)_+^2T_++(R_--\rho)_+^2T_-\},\qquad
+ -R_-T_-/2\le J_{1,o}\le R_+T_+/2.
+\]
+For the first bound on a negative gap write $x=-t$: its integrand is
+$(v-x)x(x-\rho)$, whose positive part is at most
+$x(R_--\rho)_+^2/4$. Enlarge each union of gaps to its complete
+outer ray; the integrand is nonnegative, and Tonelli gives
+$\int_B^\infty t\tau(t)\,dt=T_+/2$ and its negative counterpart.
+This proves the factor $3/8$ even if the support has positive Lebesgue
+measure. For the second bound use
+$|t|\le R_\pm$ and $J_o^\pm\le T_\pm$.
+Endpoint atoms do not change these Lebesgue integrals.
+
+These costs share the one budget
+$(\sigma-1)T_++(\sigma+1)T_-\le D-mQ$ from
+\eqref{j:core:gap-defect}. Intersect it with any proved individual
+caps before pricing a linear cost. Without caps, use
+\[
+ b_+T_++b_-T_-\le(D-mQ)
+ \max\{0,b_+/(\sigma-1),b_-/(\sigma+1)\}.
+\]
+The zero option is necessary for signed costs. Sum costs before this
+single pricing step; intersect alternative upper bounds afterwards.
+Every coefficient interval is a necessary condition on this one law.
+The analytic formation of the central gap and the prior support bounds
+remain prerequisites; coefficient acceptance does not establish them.

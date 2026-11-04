@@ -1,0 +1,201 @@
+{
+  "status": "COMPLETE_ALGEBRA_PREFIX_CAPTURE_ONLY",
+  "states": 14,
+  "rows": 87963,
+  "grid_cells": 258048,
+  "stages": [
+    {
+      "prefix_active": 17440,
+      "prefix_excluded": 992,
+      "reasons": {
+        "sign probabilities exceed one": 992
+      },
+      "total": 18432,
+      "stage": 0,
+      "raw": null,
+      "defect": null
+    },
+    {
+      "prefix_active": 14929,
+      "prefix_excluded": 3503,
+      "reasons": {
+        "sign probabilities exceed one": 1128,
+        "compulsory gap defect": 883,
+        "empty signed third interval": 1216,
+        "common first moment interval": 276
+      },
+      "total": 18432,
+      "stage": 1,
+      "raw": "896243/100000",
+      "defect": "286897/100000"
+    },
+    {
+      "prefix_active": 8369,
+      "prefix_excluded": 10063,
+      "reasons": {
+        "empty signed third interval": 7808,
+        "compulsory gap defect": 1623,
+        "sign probabilities exceed one": 176,
+        "common first moment interval": 456
+      },
+      "total": 18432,
+      "stage": 2,
+      "raw": "26439/6250",
+      "defect": "65523/50000"
+    },
+    {
+      "prefix_active": 6272,
+      "prefix_excluded": 12160,
+      "reasons": {
+        "compulsory gap defect": 1364,
+        "empty signed third interval": 10432,
+        "sign probabilities exceed one": 72,
+        "common first moment interval": 292
+      },
+      "total": 18432,
+      "stage": 3,
+      "raw": "154859/50000",
+      "defect": "48499/50000"
+    },
+    {
+      "prefix_active": 5098,
+      "prefix_excluded": 13334,
+      "reasons": {
+        "compulsory gap defect": 1106,
+        "empty signed third interval": 12000,
+        "sign probabilities exceed one": 12,
+        "common first moment interval": 216
+      },
+      "total": 18432,
+      "stage": 4,
+      "raw": "249699/100000",
+      "defect": "78183/100000"
+    },
+    {
+      "prefix_active": 4474,
+      "prefix_excluded": 13958,
+      "reasons": {
+        "empty signed third interval": 12736,
+        "compulsory gap defect": 1034,
+        "sign probabilities exceed one": 4,
+        "common first moment interval": 184
+      },
+      "total": 18432,
+      "stage": 5,
+      "raw": "218613/100000",
+      "defect": "17103/25000"
+    },
+    {
+      "prefix_active": 4161,
+      "prefix_excluded": 14271,
+      "reasons": {
+        "empty signed third interval": 13088,
+        "compulsory gap defect": 987,
+        "common first moment interval": 196
+      },
+      "total": 18432,
+      "stage": 6,
+      "raw": "2541/1250",
+      "defect": "15897/25000"
+    },
+    {
+      "prefix_active": 3928,
+      "prefix_excluded": 14504,
+      "reasons": {
+        "empty signed third interval": 13376,
+        "compulsory gap defect": 940,
+        "sign probabilities exceed one": 8,
+        "common first moment interval": 180
+      },
+      "total": 18432,
+      "stage": 7,
+      "raw": "192113/100000",
+      "defect": "11999/20000"
+    },
+    {
+      "prefix_active": 3897,
+      "prefix_excluded": 14535,
+      "reasons": {
+        "empty signed third interval": 13408,
+        "compulsory gap defect": 923,
+        "sign probabilities exceed one": 32,
+        "common first moment interval": 172
+      },
+      "total": 18432,
+      "stage": 8,
+      "raw": "94651/50000",
+      "defect": "29591/50000"
+    },
+    {
+      "prefix_active": 3883,
+      "prefix_excluded": 14549,
+      "reasons": {
+        "empty signed third interval": 13504,
+        "compulsory gap defect": 925,
+        "common first moment interval": 120
+      },
+      "total": 18432,
+      "stage": 9,
+      "raw": "47163/25000",
+      "defect": "3687/6250"
+    },
+    {
+      "prefix_active": 3878,
+      "prefix_excluded": 14554,
+      "reasons": {
+        "empty signed third interval": 13504,
+        "compulsory gap defect": 926,
+        "common first moment interval": 124
+      },
+      "total": 18432,
+      "stage": 10,
+      "raw": "94251/50000",
+      "defect": "58947/100000"
+    },
+    {
+      "prefix_active": 3878,
+      "prefix_excluded": 14554,
+      "reasons": {
+        "empty signed third interval": 13504,
+        "compulsory gap defect": 926,
+        "common first moment interval": 124
+      },
+      "total": 18432,
+      "stage": 11,
+      "raw": "188467/100000",
+      "defect": "29469/50000"
+    },
+    {
+      "prefix_active": 3878,
+      "prefix_excluded": 14554,
+      "reasons": {
+        "empty signed third interval": 13504,
+        "compulsory gap defect": 926,
+        "common first moment interval": 124
+      },
+      "total": 18432,
+      "stage": 12,
+      "raw": "9423/5000",
+      "defect": "7367/12500"
+    },
+    {
+      "prefix_active": 3878,
+      "prefix_excluded": 14554,
+      "reasons": {
+        "empty signed third interval": 13504,
+        "compulsory gap defect": 926,
+        "common first moment interval": 124
+      },
+      "total": 18432,
+      "stage": 13,
+      "raw": "94229/50000",
+      "defect": "7367/12500"
+    }
+  ],
+  "seconds": 9.931707707990427,
+  "cells_sha256": "6b66b6b53dc928a42e783ea2005fed04b38aab8b4a377c5cc41dc9f51d04b134",
+  "source_hashes_unchanged": true,
+  "fourier_evaluations": 0,
+  "certificate_acceptance_claimed": false,
+  "feedback_states_reaccepted": false
+}

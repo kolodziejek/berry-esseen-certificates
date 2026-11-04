@@ -1,0 +1,28 @@
+{
+  "schema": "STRUCTURAL_BOUNDED_CONTROLS_V1",
+  "status": "PASS",
+  "independent_small_convolution_tail_checks": 400,
+  "binomial_degree_elevation_difference_identity_checks": 1872,
+  "nearest_pointwise_majorant_checks": 50000,
+  "whole_pointwise_majorant_checks": 36885,
+  "rejected_false_variants": {
+    "omit_cubic_term": {
+      "n": 2,
+      "p": "1/5",
+      "k": 1,
+      "r": -5
+    },
+    "omit_chi_lt_2_gate": {
+      "n": 21,
+      "p": "9/25",
+      "k": 5,
+      "r": 3,
+      "chi": "73/25"
+    },
+    "close_strict_outgoing_event": true,
+    "use_wrong_endpoint_for_negative_coefficient": true
+  },
+  "full_pilot_result_reproduced_exactly": true,
+  "scope": "Finite exact controls; not a replacement for the symbolic proof or any native certificate campaign.",
+  "pilot_source_sha256": "73590767cb7c513c53b0dd5706291624e115b0a6a6a7392f9bcf8c8b37b8227e"
+}

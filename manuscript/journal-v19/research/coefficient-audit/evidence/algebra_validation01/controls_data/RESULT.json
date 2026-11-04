@@ -1,0 +1,420 @@
+{
+  "domain_rejection_means": "not applicable; never an automatic law exclusion",
+  "invalid_domain_rejections": [
+    "negative_outer_budget",
+    "zero_price",
+    "reversed_rectangle",
+    "negative_mass",
+    "theta_one"
+  ],
+  "native_numeric_exports_accepted": false,
+  "object_rejections": 75,
+  "positive_boundary_cases": [
+    {
+      "case": "two_point_a=1",
+      "passed": true
+    },
+    {
+      "case": "two_point_a=1/2",
+      "passed": true
+    },
+    {
+      "case": "two_point_a=3/2",
+      "passed": true
+    },
+    {
+      "case": "PSD_zero_row",
+      "passed": true
+    },
+    {
+      "case": "one_outer_budget",
+      "passed": true
+    },
+    {
+      "case": "negative_m_endpoint",
+      "passed": true
+    },
+    {
+      "case": "zero_conditional_variance",
+      "passed": true
+    }
+  ],
+  "rejected": [
+    {
+      "name": "missing_polynomials",
+      "reason": "complete ordered polynomial family",
+      "sha256": "2404f09957df9821fa36acafd07e53602e1c1a9f944fda0a1fbed5f412cd402a"
+    },
+    {
+      "name": "duplicate_polynomials",
+      "reason": "complete ordered polynomial family",
+      "sha256": "2599324088d6bb5d0b9f0c232874313451f8b47ada0ac4cc8ddcf1e2ff1a7bf4"
+    },
+    {
+      "name": "reorder_polynomials",
+      "reason": "complete ordered polynomial family",
+      "sha256": "52cf40dc9b8f9559a38c8360971d5a9816e00d53f2a878fc4ce0a0a95b966147"
+    },
+    {
+      "name": "missing_moment_matrices",
+      "reason": "complete weighted moment-matrix family",
+      "sha256": "3fabc640b8079a361cbf0eb4342b8edeab9ef9e05063d8643c1ef3732e526fef"
+    },
+    {
+      "name": "duplicate_moment_matrices",
+      "reason": "complete weighted moment-matrix family",
+      "sha256": "5b880260fe05b18d3562043fcff3314993a95828edbcdef405c786f68ca3271f"
+    },
+    {
+      "name": "reorder_moment_matrices",
+      "reason": "complete weighted moment-matrix family",
+      "sha256": "c6fe53f8c6236a6764e74fe4755618272d90a0a486c26c032283bcc246986833"
+    },
+    {
+      "name": "missing_central_transform",
+      "reason": "all25 Bernstein rows",
+      "sha256": "f520c2b2aed7787c6df0f4e60ffb0e4b502ac2943c930abc8f149f8468756dd9"
+    },
+    {
+      "name": "duplicate_central_transform",
+      "reason": "ordered closed-square basis indices",
+      "sha256": "9ba4a34b4100b1e79fca1cba36e94012be519fe493a844dbe5b861c2e65aadb2"
+    },
+    {
+      "name": "reorder_central_transform",
+      "reason": "ordered closed-square basis indices",
+      "sha256": "ce55fc6c257149a34a2e003923bda2d867656e492aa36978faefaa8b7c2d11c8"
+    },
+    {
+      "name": "missing_factorizations",
+      "reason": "complete derivative factorizations",
+      "sha256": "512039822b8ad10e528f0b135776550633632d88edf635c545629b48c48353e6"
+    },
+    {
+      "name": "duplicate_factorizations",
+      "reason": "complete derivative factorizations",
+      "sha256": "365d9f674ffc1c6e71ea754849b5934b55eb73f162d391089a69f6589e9f4df4"
+    },
+    {
+      "name": "reorder_factorizations",
+      "reason": "complete derivative factorizations",
+      "sha256": "fd6ddc8ebbe70d1dadfb2e780976029611f8b1d562ae806789a4363670d92747"
+    },
+    {
+      "name": "missing_square_witnesses",
+      "reason": "complete square witnesses",
+      "sha256": "0b7a56ccc19b15c0a64712533040c30d1847528a793bdd91e816144da52af2ae"
+    },
+    {
+      "name": "duplicate_square_witnesses",
+      "reason": "complete square witnesses",
+      "sha256": "e9ad53f523147e1f580bf33c112aba54d044e47f91de13cf228540206cbb306a"
+    },
+    {
+      "name": "reorder_square_witnesses",
+      "reason": "complete square witnesses",
+      "sha256": "08e6189c8d75063705f0485cd9fc7d76a7bf02bf57881a512652c81763e385ee"
+    },
+    {
+      "name": "false_P1",
+      "reason": "coefficient identity P1",
+      "sha256": "4565829f7213176ab89095493bdfc0395eba7ae99624f87c04bc36c16e0e32b2"
+    },
+    {
+      "name": "false_P2",
+      "reason": "coefficient identity P2",
+      "sha256": "a9841aaabe67972dce05e67edc5f0f883b85462d47023eb08b5b20a60d065362"
+    },
+    {
+      "name": "false_G",
+      "reason": "coefficient identity G",
+      "sha256": "bd114f8964927bb4f5dd75f80dd60333d927d8d0cb1c25be20746216c83d6a01"
+    },
+    {
+      "name": "false_P1_A",
+      "reason": "coefficient identity P1_A",
+      "sha256": "21f84c25e8bfb1ca0117fc2841c53d378db15be0d2f616851fa17578cfdc81b5"
+    },
+    {
+      "name": "false_P1_B",
+      "reason": "coefficient identity P1_B",
+      "sha256": "6155c7ce53a5f1591479a2207ad35a6b388d6b2416bb382ea737a33e5f726966"
+    },
+    {
+      "name": "false_P2_A",
+      "reason": "coefficient identity P2_A",
+      "sha256": "364b60285bbe070666507794e83795a86c1af6439176328d992fdf9153fa7622"
+    },
+    {
+      "name": "false_P2_B",
+      "reason": "coefficient identity P2_B",
+      "sha256": "9e136d46f98796c74f7b39acd0183ec0ed13d051971a6609e153127742b52fef"
+    },
+    {
+      "name": "false_G_B",
+      "reason": "coefficient identity G_B",
+      "sha256": "d72def9a3a6370d07c1bbea9cfc7153204c2b43aaca3c685e351a275273b3b38"
+    },
+    {
+      "name": "false_G_at_B_rho",
+      "reason": "coefficient identity G_at_B_rho",
+      "sha256": "aac6dc83b7689c0e0a53c4a36c2a03de7b82c5e6bfd2688c74fe4f20a70f17cf"
+    },
+    {
+      "name": "false_G_at_B_rho_A",
+      "reason": "coefficient identity G_at_B_rho_A",
+      "sha256": "681b628bb4708f28a176c352f85fe8be0fa0b2de04a3db084eba0acd1700e530"
+    },
+    {
+      "name": "false_G_at_B_rho_rhorho",
+      "reason": "coefficient identity G_at_B_rho_rhorho",
+      "sha256": "6b065a7b8348023413e00d0b3c710859387143152c7f68d885147f18d7a3180c"
+    },
+    {
+      "name": "false_F",
+      "reason": "coefficient identity F",
+      "sha256": "0f1f779ae420a1ff473102f70132463f3dd9868cb012177d2b075f9c296edcb0"
+    },
+    {
+      "name": "false_F_x",
+      "reason": "coefficient identity F_x",
+      "sha256": "9704e4441302c0273affff09fcaf711592ebc2f5bf326901002b4228870232c6"
+    },
+    {
+      "name": "false_F_a",
+      "reason": "coefficient identity F_a",
+      "sha256": "428e5b5d4ce76b1a958a572346f3c0a2a697fa19ea059888d38a714399bdeef8"
+    },
+    {
+      "name": "false_F_t",
+      "reason": "coefficient identity F_t",
+      "sha256": "827c9be788ea8ad9d3f5d8c6b51b6f78c25230aa484bda7f8663b0c53c615113"
+    },
+    {
+      "name": "false_F_xx",
+      "reason": "coefficient identity F_xx",
+      "sha256": "1f614b62517e5ef5cc1b197ae2fbe7144703ed0fbb9ffa3be42441bc23fb3a43"
+    },
+    {
+      "name": "false_F_xa",
+      "reason": "coefficient identity F_xa",
+      "sha256": "26032095942ed7053163143f7080bbe2cad8a0719e50abc19e0c9fc5036ea081"
+    },
+    {
+      "name": "false_F_aa",
+      "reason": "coefficient identity F_aa",
+      "sha256": "1389341763e4f1145ff884c6d7885a0a4307c8f0917ac27a1579a9161e47b9b8"
+    },
+    {
+      "name": "false_F_stationary",
+      "reason": "coefficient identity F_stationary",
+      "sha256": "ca599bd5fe595952d0f19c36d1c8c26257c5252c8390507eae11b0b2ec911427"
+    },
+    {
+      "name": "false_F_hessian_form",
+      "reason": "coefficient identity F_hessian_form",
+      "sha256": "34977fbe435dd62fc5b956d4c15234b082a8fba141f8d935b914c2d4a4e91ece"
+    },
+    {
+      "name": "false_outer_positive_square",
+      "reason": "coefficient identity outer_positive_square",
+      "sha256": "a91785abccd649a7615ce62abeb91022882a57b4909d7a82b38ad4d27be3c324"
+    },
+    {
+      "name": "false_outer_negative_square",
+      "reason": "coefficient identity outer_negative_square",
+      "sha256": "76a1f161ffd2786a35538f8bfe67b4aec5c967a4bca87b66a272b1e0e1b780f0"
+    },
+    {
+      "name": "false_projection_determinant",
+      "reason": "coefficient identity projection_determinant",
+      "sha256": "716c5fc44274a9ac1f30d2df8942b4ba15a328beffc29e6e70349937bb3f04a0"
+    },
+    {
+      "name": "false_projection_square_form",
+      "reason": "coefficient identity projection_square_form",
+      "sha256": "2584a4f36ab97430019b1688174f552091b2d2dd22dd364a32428d42606478d4"
+    },
+    {
+      "name": "false_conditional2",
+      "reason": "coefficient identity conditional2",
+      "sha256": "5d861e8c5ef9e50a3795b2c610b336e5079241ea5752c3eaf3419d2015b8b333"
+    },
+    {
+      "name": "false_conditional3",
+      "reason": "coefficient identity conditional3",
+      "sha256": "bf2d0b84b429725ac0aec71b2c8c9dcefa0ced344870ad7deb6484157bf16e60"
+    },
+    {
+      "name": "false_conditional4",
+      "reason": "coefficient identity conditional4",
+      "sha256": "334ba470a14589c5845038e056fadde944f6fa5ccadce7c3a2bd354aa3bdc56a"
+    },
+    {
+      "name": "false_conditional5",
+      "reason": "coefficient identity conditional5",
+      "sha256": "bb3b228a2a51acc3144f47261b2d00083ce8c7aad3490d4262daa1fe8169782d"
+    },
+    {
+      "name": "false_weight_H0",
+      "reason": "fixed positive weight",
+      "sha256": "d830a6a4b2c52d1fae5789c4a0c9d42d2ae40081816be6a5a7285c50dabbddc8"
+    },
+    {
+      "name": "false_entry_H0",
+      "reason": "Gram entry identity",
+      "sha256": "52cd349c19cce9220ea75447858e503143095dc109f4d21d72014e5a8ffbc2ca"
+    },
+    {
+      "name": "false_weight_H1",
+      "reason": "fixed positive weight",
+      "sha256": "5cd5f9e138a995c3736db27c91aab9e8516ccf96a9a2780ac6d14a8491989e80"
+    },
+    {
+      "name": "false_entry_H1",
+      "reason": "Gram entry identity",
+      "sha256": "ce09d6140f2b909338e88758fb39122a7d126c8b17467ae932c6954e09863a66"
+    },
+    {
+      "name": "false_weight_H2",
+      "reason": "fixed positive weight",
+      "sha256": "c45e222a1cd398a628b8c5ced91aa506c86ff755518bbdfba8437474c01df227"
+    },
+    {
+      "name": "false_entry_H2",
+      "reason": "Gram entry identity",
+      "sha256": "a31b900325eea82687ed5ea65836f5dca16ce85439ae7426ec94a15cebc9899c"
+    },
+    {
+      "name": "false_weight_H3",
+      "reason": "fixed positive weight",
+      "sha256": "bfa4b23aef6a00fe263b71e39e3e309fef9b139c6b4c5c757f64b546201b3247"
+    },
+    {
+      "name": "false_entry_H3",
+      "reason": "Gram entry identity",
+      "sha256": "e913eb72de5d4b1dd60222b6fc6c652f110c125cbb3bf87a562d11939577917d"
+    },
+    {
+      "name": "false_weight_L0",
+      "reason": "fixed positive weight",
+      "sha256": "92ebf5d7e84a0d5e0785c679006bf12cd0e36e9cf9305e1d8f2af66c49ca4ff1"
+    },
+    {
+      "name": "false_entry_L0",
+      "reason": "Gram entry identity",
+      "sha256": "3d49694d7d3dcf50b76148072812c01cdd10da5049fef56b70053f70179bb564"
+    },
+    {
+      "name": "false_weight_L1",
+      "reason": "fixed positive weight",
+      "sha256": "02565ca90a4fb3e63ccb034fcabe5ecd803de17fda5802d31e8ba159cd0e5fd0"
+    },
+    {
+      "name": "false_entry_L1",
+      "reason": "Gram entry identity",
+      "sha256": "f873fdfd3e40e9e6ec70c2ebecf67ed9ace05f75c23b0dbcda88318cc422bf51"
+    },
+    {
+      "name": "false_weight_L2",
+      "reason": "fixed positive weight",
+      "sha256": "c685f5516b4e142d0760e25fe79fc6ebccbfd85497c573e812dfefba2bb872f3"
+    },
+    {
+      "name": "false_entry_L2",
+      "reason": "Gram entry identity",
+      "sha256": "e5af4e9ab3fb9ef94fa08baa202defc3eaba0d8f1181af14aece503fc9002479"
+    },
+    {
+      "name": "false_factor_P1_A",
+      "reason": "fixed factor signs and order",
+      "sha256": "35e91e9d29a0132b38c34032580befa44df9628865c7425249b0de52b23b0256"
+    },
+    {
+      "name": "false_factor_P1_B",
+      "reason": "fixed factor signs and order",
+      "sha256": "6fa58eb22e49c6a9ab89ee7974d0a9c3711d27d9928876817f3bef408164c3eb"
+    },
+    {
+      "name": "false_factor_P2_A",
+      "reason": "fixed factor signs and order",
+      "sha256": "9656c6edbfb57f72cb6b2544ea5c070f1c37118d415bb587bb739cbc369f9faf"
+    },
+    {
+      "name": "false_factor_P2_B",
+      "reason": "fixed factor signs and order",
+      "sha256": "881040cfe1bfdafbbead6629327e78cab3b25e692682cc8285ec09aefc7c2a40"
+    },
+    {
+      "name": "false_factor_G_B",
+      "reason": "fixed factor signs and order",
+      "sha256": "1f343be7d71ab3eb604baa08e6f99aa0432f8311413ffa0d7ed974436304da22"
+    },
+    {
+      "name": "false_factor_G_at_B_rho_A",
+      "reason": "fixed factor signs and order",
+      "sha256": "bbcbdb6919df5dcc1c81c752aa2db4210a322fc78b87947b65760a3181298f4b"
+    },
+    {
+      "name": "false_factor_G_at_B_rho_rhorho",
+      "reason": "fixed factor signs and order",
+      "sha256": "107f4d24cd2d8fa7dc2fd2ba649ec54179f64c877f87199db837ff3671933735"
+    },
+    {
+      "name": "false_factor_F_t",
+      "reason": "fixed factor signs and order",
+      "sha256": "5e14ff8267a872f1478572635adde96dbac2bbb29740162fc2463663bb0eaf61"
+    },
+    {
+      "name": "false_bernstein",
+      "reason": "complete Bernstein inverse identity",
+      "sha256": "00ae77154d2c2793e799c3165afa1bacb1bc44c3763aae23a6cff39e98672072"
+    },
+    {
+      "name": "boolean_basis_index",
+      "reason": "ordered closed-square basis indices",
+      "sha256": "e7b86ce35e9cac2cb1224f67e86761c06513a84b350635ebaa4ea7a278a2a0dd"
+    },
+    {
+      "name": "negative_square_weight",
+      "reason": "positive square weight",
+      "sha256": "44c31c05cf546610bce2ece73c0345ee732b4f5eb236a8008fa69e9f2aa2a33b"
+    },
+    {
+      "name": "false_square_linear",
+      "reason": "positive square reconstruction",
+      "sha256": "65aea4435502884a0917bcbb75387064aed0800bec5a0aacc2655daab82dd5af"
+    },
+    {
+      "name": "extra_claim",
+      "reason": "exact fields",
+      "sha256": "8fd3f572cba69e14abb68dc9ab9b4114d46900376c03ff14f23186f68d047c72"
+    },
+    {
+      "name": "wrong_scope",
+      "reason": "fixed scope",
+      "sha256": "7029c1a25833df8190f8647c75b95158b680b0a349194ab49132a6812bff43df"
+    },
+    {
+      "name": "noncanonical_fraction",
+      "reason": "canonical nonzero rational",
+      "sha256": "bb2eef44e032e5e685da72738848e755eea5d9a0fa9a84a681bb33dfe59419c6"
+    },
+    {
+      "name": "float_coefficient",
+      "reason": "rational string",
+      "sha256": "4b7173f1ea9d3168da9ab34677d12c580bfe92d9ff7c1b2672ea6db4c272fb80"
+    },
+    {
+      "name": "negative_exponent",
+      "reason": "fixed nonnegative exponents",
+      "sha256": "255e65e92a8106321520e26042e558cc3c7fe8fe7231daedcddddf7735769985"
+    },
+    {
+      "name": "duplicate_JSON_key",
+      "reason": "duplicate JSON key",
+      "sha256": "4affed688bd3380f14ba9c41b0b5f34a758b13c40cd0372ed7cac93cbfc5ffe4"
+    }
+  ],
+  "status": "PASS_FIXED_FAMILY_CONTROLS"
+}

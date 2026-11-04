@@ -1,0 +1,38 @@
+{
+  "results": [
+    {
+      "name": "baseline",
+      "command": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/certificate_consolidation_20261104/analytic_finite_layout01/baseline/main.tex",
+        "--compiler",
+        "texlive",
+        "--output-directory",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/certificate_consolidation_20261104/analytic_finite_layout01/baseline/build",
+        "--json"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 1.0854781660018489,
+      "source_sha256": "4ff601c0608b3f39f399adab2b96baf0954e5682a7077290d9f8c97e78c2f670"
+    },
+    {
+      "name": "candidate",
+      "command": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/Users/bkolodziejek/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/certificate_consolidation_20261104/analytic_finite_layout01/candidate/main.tex",
+        "--compiler",
+        "texlive",
+        "--output-directory",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/certificate_consolidation_20261104/analytic_finite_layout01/candidate/build",
+        "--json"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 1.0763972090207972,
+      "source_sha256": "277362f3246a593f5b16a605b77fb7088f3c84c342724de4979d4fbd920108b7"
+    }
+  ],
+  "v18_source_sha256": "114672b0fcdea6c1cd1f773dc885e54ebe87143145158c8b8dd940959110db2b",
+  "replacement_sha256": "f002152e47f4e29ca49ce22fb1229ee7206ca4226ce95cd5dd783748a9634c3d"
+}
