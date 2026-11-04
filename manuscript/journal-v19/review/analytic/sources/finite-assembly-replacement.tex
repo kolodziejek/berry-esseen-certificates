@@ -1,0 +1,259 @@
+\subsection{The numerical regions and the induction}
+\label{j:finite:assembly}
+The preceding lemmas reduce each finite index to a closed cover of
+moment and probability parameters. Table~\ref{j:finite:region-table}
+shows how the methods meet. All displayed intervals are closed; adjoining
+rows overlap at their endpoints. The target of each Fourier region is
+$T=4097/10000<\CE$. The affine bound closes the indicated upper tail;
+at $\rho=7361/4000$ it is already at most $819/2000<T$.
+\begin{table}[htbp]
+\centering\small
+\caption{The complete third-moment cover for indices five through thirty-nine.
+The count column includes necessary-condition exclusions and, where specified,
+the signed corner or finite-sine comparison.}
+\label{j:finite:region-table}
+\begin{tabular}{@{}cP{31mm}P{66mm}c@{}}
+\toprule
+$n$&Count region&Fourier complement and required support&Affine tail\\\midrule
+5&$[1,6/5]$, with the positive corner below
+ &$[6/5,7361/4000]$; the six support rows of
+ Proposition~\ref{j:finite:supportrows}&$\rho\ge7361/4000$\\
+6--9&$[1,237/200]$
+ &$[237/200,6/5]$, radius $13/5$; then the five support rows
+ through $7361/4000$&$\rho\ge7361/4000$\\
+10--14&$[1,23/20]$
+ &$[23/20,71/50]$, radius $3$; $[71/50,15/8]$, unrestricted
+ &$\rho\ge7361/4000$\\
+15--19&$[1,23/20]$
+ &$[23/20,33/25]$, radius $3$; $[33/25,19/10]$, unrestricted
+ &$\rho\ge19/10$\\
+20--24&$[1,9/8]$
+ &$[9/8,6/5]$, radius $3$; $[6/5,19/10]$, unrestricted
+ &$\rho\ge19/10$\\
+25--34&$[1,6/5]$
+ &$[6/5,19/10]$, unrestricted&$\rho\ge19/10$\\
+35--39&$[1,6/5]$
+ &$[6/5,19/10]$, unrestricted&$\rho\ge19/10$\\\bottomrule
+\end{tabular}
+\end{table}
+
+The count regions split at $11/10$; at indices five through nine they
+also split at $23/20$. At five the exact signed cover is as follows.
+Put $b_2=84729828287999/(250000000000000)$ and
+$b_3=35139006743001/10^{14}$. The signed-moment inequality gives
+$|\beta|\le b_2$ up to $\rho=237/200$ and $|\beta|\le b_3$ up to
+$\rho=6/5$: at each endpoint the rational test is
+$(1+b_i^2)^2\ge\rho_i^2(1-b_i^2)$, with the difference increasing
+in $b_i\ge0$. The count cover contains every feasible signed moment
+for $1\le\rho\le477/400$, and every such moment with
+$\beta\le17/50$ for $477/400\le\rho\le6/5$.
+The remaining closed rectangle is exactly
+Proposition~\ref{j:finite:gapfree5-result}; its positive sign is retained.
+The splits at $237/200$, $467/400$, $477/400$, $1/5$ and $3/10$
+are refinements of this union, not additional assumptions.
+
+\paragraph{What the numerical assertion checks.}
+The finite acquisition theorem~\ref{j:local:acquisition} transports
+one actual marginal through every update. Support is proved before
+higher moments are used, and an initial raw remainder before defect
+feedback. Its simultaneous state includes the score, support, moments,
+defect and signed threshold. A failed analytic gate gives no exclusion.
+Each state must instead reach a necessary-condition contradiction, a
+complete Fourier bound, or a complete count forest.
+
+Write $P_j=[j/100,(j+1)/100]$, $0\le j<100$.
+Every probability panel is closed. When several moment cells export
+to it, upper bounds are maximized and lower bounds minimized over
+\emph{all} those cells. Thus seams retain the source law. A count
+forest covers every original root $k=0,\ldots,n$, including all signed
+phase intervals. Missing panels are justified exclusions; refinements
+must cover their entire parent. The exact partitions, score/HIGH caps,
+refinement schedules and forest counts are certificate data. Their
+logical content is the complete-domain assertion below, not the number
+of successful files.
+
+The following application-specific prerequisites are retained.
+At five the first own-score bound is support-free; later Fourier inputs
+use Proposition~\ref{j:finite:supportrows}, including every narrower
+signed profile. For six through nine, the wider Fourier domain
+$[23/20,6/5]$ uses radius $13/5$, while its low-band resource uses
+radius $5/2$. At fifteen through nineteen, support radius three on
+$\rho\le33/25$ precedes the own-score and HIGH bounds; at twenty,
+radius three on $\rho\le6/5$ precedes them. At twenty-one through
+twenty-four the own-score bounds are unrestricted. The twenty through
+twenty-four initializers require no earlier numerical seed, and each
+reused coarse count contract at twenty is admitted only after full
+simultaneous containment has been established. A cellwise Fourier
+bound evaluates the complete compensated expression, not a presumed
+scalar HIGH ceiling. Each unrestricted region includes the complete
+auxiliary-moment domain.
+
+At $26$--$30$ and $32$--$34$, respectively, the acquired floors are
+$N=25$ and $N=31$. Transfer retains $nD\le Nd$ as well as the raw
+remainder bound. All binomial probabilities, normal arguments and
+support tests still use the actual integer $n$. Local refinements of
+a parent replace only the part they cover. At $26$--$30$ the surviving
+second-band panels $P_{32},\ldots,P_{42}$ are closed by the finite-sine
+inequality; the unrestricted Fourier complement makes a third count
+band at twenty-five unnecessary. All omitted count panels, including
+the two sign-mass exclusions at twenty and the weighted-budget
+exclusions at $26$--$30$, have their own necessary-condition checks.
+
+Here the five weighted exclusions have a direct explanation.
+For $(n,j)=(30,52)$ and for $27\le n\le30$, $j=53$, the acquired
+pairs $(d,\Theta)$ in $D\le25d/n$, $\theta\le\Theta$ are respectively
+$(3/10,1/500)$ and $(5/16,1/2500)$. Put
+$s=316227766/10^8<\sqrt{10}$ and $l=j/100$. Since
+$p\ge l>p_*$, $\sqrt{p(1-p)}\le1/2$ and
+$(1-\theta)^{3/2}\ge(1-\Theta)^2$, the joint budget gives
+\[
+ D\ge(12+4s)(1-\Theta)^2(l-(4-s)/2)^2
+ >\begin{cases}251/1000,&j=52,\\38/125,&j=53.\end{cases}
+\]
+These contradict $D\le1/4$ at $(30,52)$ and
+$D\le125/432<38/125$ at $j=53$, $n\ge27$.
+The separate exclusions of $P_{36}$ and $P_{34}$ at twenty use
+the sign-mass inequality on the respective bands, including endpoints.
+
+\paragraph{The prerequisite at thirty-nine.}
+Sharpness through 38 and the recurrence give
+\[
+ 39(C_{39}-\CE)<55887/190000<3/10,\qquad C_{39}<.4226,
+\]
+with both deleted scores below $.4253$. Before the sharp-39 acquisition,
+apply the separate comparison with actual $n=39$, $K=741/4000$,
+predecessor allowance $.33$ and excess allowance $1/2$.
+Under $C_{39}\ge\CE+K/39$, its support input is
+$(N,L,K,q,R)=(39,39,741/4000,.33,3.84)$, and the positive charge
+$K\rho_l$ remains in the resource. Its full acquisition excludes the
+probability complement of $[.302,.458]$.
+Nearest count covers all phases for $0<\lambda\le.08$; on
+$[.08,.10]$ use nearest count for $|u|\ge.19$ and whole count for
+$|u|\le.19$; on $[.10,.12]$ use nearest count for $|u|\ge.27$
+and whole count for $|u|\le.27$;
+above $.12$ whole count covers every phase. Each band is clipped to its
+own noise ceiling and includes its seams. Zero noise is Bernoulli.
+The signed allowance tests of Section~\ref{j:local:allowance} exclude
+the hypothesized score. Hence $C_{39}<.41449$, since
+$\CE<.40974$ and $K/39=.00475$.
+
+At 35--38, the entry bound
+$C_n<41/100+4177/(13824n)$ supplies the own-score caps; at 39 use
+the bound just proved. The initial support radii are $39/10$ at 35
+and $19/5$ at 36--39. The independent support bound $96/25<39/10$
+licenses the first, and all five initial and resource calculations
+use the actual index. Any local support refinement is proved on its
+whole source interval before export. Thus sharpness at 39 is never
+used to establish its own entry cap.
+
+\begin{proposition}[Complete numerical finite base through thirty-nine]
+\label{j:finite:numerical539}
+The support, Fourier, initialization, resource and count inequalities
+in the preceding closed cover hold on their complete domains, including
+the separate positive-39 prerequisite. Every exported row implies its
+entire original count contract. The necessary exclusions and retained
+forests cover every original moment and probability panel.
+\end{proposition}
+This assertion combines acquisition for one marginal, directed
+containment of every scalar and signed-phase condition, count acceptance
+at the actual integer, and the complete closed union. In particular,
+if $q_i(H)$ are the acquired phase polynomials and
+$\widetilde q_j(H)$ the contract polynomials, the join proves, for each
+$i$, some $j$ with $q_i\le\widetilde q_j$ throughout that signed interval.
+Endpoints and the possible interior minimum of the quadratic difference
+suffice. Hence $\max_iq_i\le\max_j\widetilde q_j$. Selecting one row
+retains the whole contract's actual index and moment domain.
+
+\begin{proof}[Derivation of $C_n\le\CE$ for $5\le n\le39$]
+Choose the least failing index and an attained positive closed maximizer.
+Its predecessor is sharp, so contact loss is zero and every larger
+retained allowance is valid. The table covers every $\rho\ge1$.
+Fourier and signed-corner regions have score below $T<\CE$.
+Otherwise acquisition retains the same law in an exported panel.
+It cannot satisfy a necessary-condition exclusion; the directed join
+therefore puts it in a complete count root, whose bound is below $\CE$.
+At 39 the positive comparison is applied first. Every case contradicts
+the assumed failure.
+\end{proof}
+
+\subsection{The actual indices forty, forty-one and forty-two}
+\label{j:finite:4042}
+A first failure here has sharp predecessors through two deletions.
+The recurrence gives
+\[
+ 0<n(C_n-\CE)<1433/4875<3/10,\qquad C_n<167/400<.4226.
+\]
+Thus the deleted bounds are below $.4253$, and the weaker allowances
+$n(C_n-\CE)\le.54$ and contact loss $.19$ are valid.
+The floor-40 argument preserves $\mathcal R_n\le r$ and $nD\le40d$;
+its support test uses both endpoints 40 and 42 and proves radius $96/25$
+before higher moments are used. Complete acquisition leaves left rows
+covering $[.282,.38]$ and central rows covering $[.38,.476]$; their
+complements are excluded. Confinement starts with widths
+$.55,.575,.6$ on the left and $.55$ centrally, and cubic constants
+30 and 24, with every width and positive-slope gate checked.
+
+The central phase cover uses nearest count for $0<\lambda\le.08$,
+then nearest count for $|u|\ge.19$ and whole count for $|u|\le.19$
+on $[.08,.10]$, and nearest count for $|u|\ge.27$ and whole
+count for $|u|\le.27$ on $[.10,.12]$;
+whole count applies above $.12$.
+The left cover uses nearest count through $.0925$, then nearest
+count for $|u|\ge.16$ and whole count for $|u|\le.16$ on
+$[.0925,.10]$, and nearest count for $|u|\ge.25$ and whole count
+for $|u|\le.25$ on $[.10,.12]$; then nearest count for $u\le-.27$
+and whole count for $u\ge-.27$ on $[.12,.135]$; above $.135$
+use whole count. Each closed band is clipped to its acquired noise
+ceiling. Zero noise is Bernoulli.
+
+These three indices admit a positive finite-binomial reserve. For
+$[a,b]\subset(0,1/2)$ put
+$F_j(p)=\Pr(\operatorname{Bin}(n,p)\le j)$ and
+$z_j(p)=(j-np)/\sqrt{np(1-p)}$. Both decrease with $p$, while
+$\sqrt{np(1-p)}/(1-2p(1-p))$ increases. Therefore both sides of
+every jump are bounded by
+\begin{equation}\label{j:finite:binomialslack}
+ \frac{\sqrt{nb(1-b)}}{1-2b(1-b)}
+ \max\{F_j(a)-\Phi(z_j(b)),\Phi(z_j(a))-F_{j-1}(b),0\},
+ \qquad F_{-1}=0.
+\end{equation}
+Between jumps the CDF is constant, so $j=0,\ldots,n$ suffices.
+Exact endpoint probabilities and outward Gaussian bounds on a complete
+closed subdivision of $[.28,.48]$ give a positive uniform lower bound
+$\epsilon_p$ for $\CE-C^{\rm bin}_{n,p}$ on each parent, at the actual
+$n=40,41,42$.
+
+Retain both signs in the finite corrections:
+$I/n\le\max(I/40,I/42)$ and
+$\sqrt n\pi_kJ\le\max(b_0J,J)$ when $b_0\le\sqrt n\pi_k\le1$.
+If $S$ bounds $\rho_B(C-C_B)/\lambda$ on a positive-noise band
+$[a,b]$, it suffices that $S<\rho_{B,l}\epsilon_p/b$.
+For $S<0$ this is immediate; otherwise use $\lambda\le b$ and
+$\rho_B\ge\rho_{B,l}$. The scalar bounds are convex in positive
+noise, being affine terms plus nonnegative reciprocals of positive
+affine terms; their two endpoint tests cover the band. No assertion
+for all $n\ge40$ follows from this finite calculation.
+
+\begin{proposition}[Numerical floor-40 assertion]\label{j:finite:numerical4042}
+The preceding acquisition, two-endpoint support, actual-index binomial
+reserve and complete signed local covers satisfy their strict tests
+at $n=40,41,42$. Each local row consumes its acquired simultaneous
+profile. Consequently $C_{40},C_{41},C_{42}\le\CE$.
+\end{proposition}
+\begin{proof}
+The base through 39 and a least failure supply all entry premises.
+Acquisition and confinement preserve its witness. The local comparison
+with the signed finite corrections excludes every positive-noise case;
+the Bernoulli theorem excludes zero noise.
+\end{proof}
+
+\begin{theorem}[The finite base]\label{j:finite:base}
+For every integer $1\le n\le42$ and every standardized iid marginal
+with finite third absolute moment, $\sqrt n\,\Delta_n(P)\le\CE\rho(P)$.
+\end{theorem}
+\begin{proof}
+The starting bounds and the four-summand comparison establish indices
+one through four. Proposition~\ref{j:finite:numerical539} and its
+same-law induction establish five through thirty-nine;
+Proposition~\ref{j:finite:numerical4042} supplies the last three indices.
+\end{proof}

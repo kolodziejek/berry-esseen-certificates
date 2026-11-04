@@ -1,0 +1,207 @@
+\section{What a certificate proves}
+\label{j:cert:section}
+
+A certificate in this proof is finite data from which a small collection
+of exact inequalities can be checked. It may specify coefficients of a
+polynomial majorant, a tree of parameter boxes, or a schedule of bounds
+which successively restricts an extremizer. The numerical statements are
+about whole regions, not sampled distributions. The mathematical
+reduction must first show that every still possible extremizer maps into
+one of those regions.
+
+Here is a typical example. Suppose a preceding argument has confined the
+support of the same marginal to $K$ and its moment vector to $M$.
+For a threshold interval $[a,b]$, a certificate specifies a function $T$
+such that
+\[
+ T(x_1,\ldots,x_n)\ge\ind_{\{\sum_i x_i\le b\}}
+ \quad(x_1,\ldots,x_n\in K),\qquad
+ \E T(X_1,\ldots,X_n)\le L_a+\frac{c\rho}{\sqrt n},
+\]
+where the second inequality holds for every moment vector in $M$ and
+$L_a\le\Phi(a/\sqrt n)$. For every $H\in[a,b]$, monotonicity gives
+\[
+ \Pp(S_n\le H)-\Phi(H/\sqrt n)
+ \le\E T-L_a\le c\rho/\sqrt n.
+\]
+Thus verification proves a probability inequality, including threshold
+atoms. Choosing $a$ for the normal lower bound and $b$ for the closed
+event is essential. This is how the small-summand certificates work;
+the count comparisons apply the same principle after conditioning on
+the signs of the summands.
+
+\subsection{A common acceptance argument}
+
+\begin{lemma}[Expectation under one iid marginal]\label{j:cert:tensor}
+Let $f_0=1,f_1,\ldots,f_d$ be absolutely integrable under $P$, and put
+$m_j=\E f_j(X)$. For a finite tensor sum
+\[
+ T(x_1,\ldots,x_n)=\sum_\alpha t_\alpha
+                         \prod_{i=1}^n f_{\alpha_i}(x_i),
+ \qquad M_T(m)=\sum_\alpha t_\alpha\prod_i m_{\alpha_i},
+\]
+one has $\E T(X_1,\ldots,X_n)=M_T(m)$. If $T$ majorizes the
+closed sum event on the support product, a uniform upper bound on
+$M_T$ gives the corresponding upper bound on its probability.
+\end{lemma}
+\begin{proof}
+Independence factors the absolute expectation of each product into a
+product of finite absolute moments. Fubini and linearity therefore
+evaluate every term. Integrating the pointwise majorant proves the
+last assertion.
+\end{proof}
+The same $m$ occurs in every factor. In particular, a factor with zero
+mean makes its tensor term have zero expectation. Such terms can improve
+the pointwise inequality without changing its expected value. Features
+of degree above three are used only after support has been bounded, so
+their integrability does not strengthen the theorem's moment assumption.
+
+\begin{lemma}[Exact positivity on a box]\label{j:cert:bernstein}
+Let $p(t)=\sum_\alpha a_\alpha t^\alpha$ have coordinate degrees
+at most $d_i$. Its tensor Bernstein coefficients on $[0,1]^r$ are
+\[
+ b_\nu=\sum_{\alpha\le\nu}a_\alpha
+       \prod_{i=1}^r\frac{\binom{\nu_i}{\alpha_i}}{\binom{d_i}{\alpha_i}}.
+\]
+If all $b_\nu\ge0$, then $p\ge0$ on the entire closed box.
+\end{lemma}
+\begin{proof}
+The binomial theorem gives
+\[
+ t^k=\sum_{j=k}^d\frac{\binom jk}{\binom dk}
+                       \binom dj t^j(1-t)^{d-j}.
+\]
+Apply this in each coordinate. The resulting basis functions are
+nonnegative and sum to one, so $p(t)$ is a convex combination of
+the $b_\nu$.
+\end{proof}
+An affine rational substitution treats any rational box. On a simplex,
+the analogous multinomial basis in barycentric coordinates is
+nonnegative and sums to one, giving the same criterion after an exact
+change of basis. Subdivision can improve an inconclusive coefficient
+test. It never turns that test into sampling.
+
+\begin{proposition}[Coverage and exclusion]\label{j:cert:cover}
+Suppose an analytic argument maps every law and threshold under
+consideration into a finite union of closed root cells. At each root,
+let a finite tree subdivide a parent into closed children whose union
+contains the parent. On each leaf suppose either a proved necessary
+condition excludes every actual mapped point, or a valid inequality
+establishes the desired score bound. Then the bound holds for every
+mapped law and threshold. If all leaves exclude a putative violating
+extremizer, no such extremizer exists.
+\end{proposition}
+\begin{proof}
+A point in a root belongs to a child at each subdivision, including on
+a shared face. Finiteness leads to a leaf, where its conclusion
+applies. The root cover includes every actual point.
+\end{proof}
+
+There are three distinct obligations in this proposition: the map from
+laws to parameters, validity of the leaf inequalities, and coverage.
+A relaxed moment domain may contain unrealizable points; this only
+makes verification harder. Missing an actual point invalidates the
+argument. In particular, we split sign orthants and event planes
+explicitly: on $\sum x_i=b$ the required inequality is $T-1\ge0$,
+not just $T\ge0$. Non-strict inequalities in the domain retain endpoint
+atoms. Resource limits, unresolved leaves and failed divisions cannot
+be interpreted as acceptance.
+
+\subsection{Exact evaluation and rigorous enclosures}
+\label{j:cert:arithmetic}
+The acceptance programs evaluate rational numbers by integer arithmetic.
+Irrational constants are enclosed between rationals with proved error
+bounds. For example, alternating arctangent series in Machin's identity
+\[
+ \frac\pi4=4\arctan(1/5)-\arctan(1/239)
+\]
+bound $\pi$; integer square roots then bound its required square roots.
+Integrating the Taylor expansion of $e^{-t^2/2}$ gives rational bounds
+for the Gaussian CDF at rational endpoints. Taylor's remainder, rather
+than a printed decimal approximation, supplies the error sign and size.
+The same principle bounds exponential, trigonometric and binomial
+expressions used below. Each application states its finite interval or
+separate tail estimate. Products and quotients use outward bounds, with
+denominator positivity established on the whole cell. Multiplying a
+negative expression by a lower bound requires the corresponding reversal
+of inequality; the signed comparisons retain this distinction.
+
+These statements are proved inequalities in ordinary analysis. Their
+finite arithmetic evaluation is performed by the programs. Exact
+arithmetic removes round-off uncertainty, but does not by itself prove
+coverage, correctness of the formulas, or their applicability to a
+particular marginal. The preceding lemmas and the applications below
+supply those mathematical obligations. This separation is also used in
+other computer-assisted inequality proofs; formal interval verification
+provides a stronger implementation assurance when available
+\cite{SolovyevHales2013}. The certificate format here is specific to this
+argument, and is not a standard proof-assistant format.
+
+\subsection{How the certificates are found and checked}
+\label{j:cert:discovery}
+For the two-summand majorants, the unknown tensor coefficients enter
+linearly. The construction program solves floating-point linear
+programs imposing the proposed majorant and expectation inequalities
+on an initial finite set of points. It searches for violated constraints,
+adds them, and solves again. Coefficients are converted to rational
+numbers and passed to the exact checker. The three-summand construction
+uses the same linear-programming and separation approach, with extra
+zero-expectation tensor features. Success of the sampled optimization
+is only a way of proposing a polynomial; the whole-domain check is the
+proof. If rationalization loses a margin, the candidate must be improved
+or rejected.
+
+The resource and count certificates are obtained by adaptive subdivision.
+Starting with the analytically licensed root domains, construction
+applies valid bounds, discards infeasible cells, and splits cells whose
+inequality is still undecided. A successful finite forest records a
+complete cover and enough information to re-evaluate every leaf. Some
+modules recompute their entire enclosure schedule during acceptance
+rather than trusting recorded outputs. The schedules may have been
+chosen by experimentation; their acceptance depends only on the stated
+inequalities and coverage. The method does not require a theorem that
+this search always terminates. The particular finite accepted objects
+suffice.
+
+The distributed candidates are treated as untrusted data. Acceptance
+reconstructs the defined polynomials or bound expressions, checks their
+identities and complete domains, and evaluates the exact inequalities.
+It does not accept a stored success flag or an optimizer's declaration
+of infeasibility. The public count candidates were verified in this
+way; their historical search was not rerun. This has no bearing on the
+logical validity of a verified certificate, just as finding a factor
+and checking its product are different tasks.
+
+\subsection{Proof data and reproduction}
+\label{j:cert:reproduction}
+The companion reproduction package identifies each certificate family,
+its mathematical conclusion, checking source and complete execution.
+The fixed reference is commit
+\texttt{c31d0cbe2af867d26871fbae37a3a7f4066f4a55} of the
+\href{https://github.com/kolodziejek/berry-esseen-certificates/tree/c31d0cbe2af867d26871fbae37a3a7f4066f4a55/manuscript/extended-v17/reproduction}
+{public certificate repository}, in
+\texttt{manuscript/extended-v17/reproduction}.
+Its \texttt{REPRODUCE.md} gives the restoration and acceptance commands;
+\texttt{COMPLETION\_LEDGER.json} identifies the proof objects and
+completed result records. The mathematical interfaces used in this
+revision are stated in the numerical propositions below.
+It preserves the exact accepted candidates and their domain interfaces.
+A reader can inspect the analytic arguments independently of running
+the programs, and can verify the finite arithmetic independently of
+repeating the search. Both parts are necessary for the whole proof.
+The completed executions use Python with assertions enabled, with integer and rational
+arithmetic; the three-summand kernel uses C++17 and
+Boost.Multiprecision integers. The compiler, language runtimes and
+faithful execution are part of the trusted computational environment.
+The implementation is not a proof-assistant formalization.
+
+The full execution history, command lines and machine identities belong
+to that package rather than the mathematical argument. They distinguish
+complete native calculations from later checks of their input
+interfaces, and preserve failed or interrupted attempts. All selected
+numerical obligations in the reference proof have completed; the
+separate 114-command recipe has not been rerun as one relocated
+campaign. This revision changes the exposition, not those certificate
+bytes or acceptance targets. Any new mathematical extension of a
+certificate's scope must be justified explicitly and cannot follow from
+its previous success alone.

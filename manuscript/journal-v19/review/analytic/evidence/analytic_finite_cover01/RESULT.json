@@ -1,0 +1,59 @@
+{
+  "status": "PASS_EXACT_EDITORIAL_ARITHMETIC_AND_COVER_CHECK",
+  "source_sha256": "062cad493db352602eb4176d15e411942ac21c7e110df806bf9813e2732fff04",
+  "retained_labels": [
+    "j:finite:4042",
+    "j:finite:assembly",
+    "j:finite:base",
+    "j:finite:binomialslack",
+    "j:finite:numerical4042",
+    "j:finite:numerical539"
+  ],
+  "new_label": "j:finite:region-table",
+  "weighted_exclusions": [
+    {
+      "n": 30,
+      "panel": 52,
+      "lower": "251/1000",
+      "upper": "1/4",
+      "lower_reserve": "4055104100519682136399387/31250000000000000000000000000"
+    },
+    {
+      "n": 27,
+      "panel": 53,
+      "lower": "38/125",
+      "upper": "125/432",
+      "lower_reserve": "170576954588124881690851387/781250000000000000000000000000"
+    },
+    {
+      "n": 28,
+      "panel": 53,
+      "lower": "38/125",
+      "upper": "125/448",
+      "lower_reserve": "170576954588124881690851387/781250000000000000000000000000"
+    },
+    {
+      "n": 29,
+      "panel": 53,
+      "lower": "38/125",
+      "upper": "125/464",
+      "lower_reserve": "170576954588124881690851387/781250000000000000000000000000"
+    },
+    {
+      "n": 30,
+      "panel": 53,
+      "lower": "38/125",
+      "upper": "25/96",
+      "lower_reserve": "170576954588124881690851387/781250000000000000000000000000"
+    }
+  ],
+  "third_moment_unions": [
+    "5",
+    "6-9",
+    "10-14",
+    "15-19",
+    "20-24",
+    "25-39"
+  ],
+  "native_acceptance_claimed": false
+}

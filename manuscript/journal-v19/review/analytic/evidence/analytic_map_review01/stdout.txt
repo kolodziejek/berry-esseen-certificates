@@ -1,0 +1,53 @@
+{
+  "status": "PASS_INDEPENDENT_EXACT_MAP_EXAMPLES",
+  "continuous_domain_acceptance_claimed": false,
+  "algebra_acceptance": {
+    "status": "PASS_SIGNED_COEFFICIENT_ALGEBRA",
+    "polynomial_cases": 28,
+    "weighted_matrices": 7,
+    "bernstein_basis": 25,
+    "inverse_identities": 25,
+    "closed_domains": true,
+    "native_numeric_exports_accepted": false
+  },
+  "laws": {
+    "symmetric": {
+      "atoms": 2,
+      "theta": "0",
+      "central_J1_sign": 1
+    },
+    "skew_positive": {
+      "atoms": 2,
+      "theta": "0",
+      "central_J1_sign": 1
+    },
+    "skew_negative_central": {
+      "atoms": 2,
+      "theta": "0",
+      "central_J1_sign": -1
+    },
+    "four_points": {
+      "atoms": 4,
+      "theta": "1599/250600",
+      "central_J1_sign": 1
+    },
+    "tiny_noise": {
+      "atoms": 4,
+      "theta": "1878355699999999999981216443/751573520035560000000002890500444499999999999983991999",
+      "central_J1_sign": 1
+    },
+    "asymmetric_far_support": {
+      "atoms": 4,
+      "theta": "29856062230769230769230739374707/21306035715976331360946733729290207100591715976321897751",
+      "central_J1_sign": 1
+    }
+  },
+  "negative_controls": {
+    "zero_denominator_nonzero_cross": true,
+    "negative_sign_radius": true,
+    "theta_one": true,
+    "changed_polynomial": true,
+    "missing_matrix": true,
+    "reordered_bernstein_rows": true
+  }
+}

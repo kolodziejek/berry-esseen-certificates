@@ -1,0 +1,78 @@
+{
+  "schema": "PAIRED_NATIVE_EXPRESSION_MAP_V1",
+  "scope": "Read-only representative exact native formula sources; not a new native numerical run or a full source-copy census.",
+  "files": [
+    {
+      "path": "work/extension_20261030/bridge/original_tail/BE_cutoff49_20260930/baseline/certificates/work/below50_20260929/entry/kernel.py",
+      "sha256": "d71f58b7527c3cf6d2146d816e5d124f6f331d1b153e5aaedee5182707647f12",
+      "functions": [
+        {
+          "name": "sixth",
+          "line": 63,
+          "last_line": 83,
+          "ast_sha256": "8db8655aa0b49034324895a3e41a9f97bcc130babe0af54af233540ef8d0f2a1"
+        },
+        {
+          "name": "paired",
+          "line": 275,
+          "last_line": 306,
+          "ast_sha256": "b1317174dbe1d28716e93e9e51f2aabd1a6e219073ff5dc1d8f47d932d1cbac3"
+        },
+        {
+          "name": "J",
+          "line": 290,
+          "last_line": 301,
+          "ast_sha256": "468bd50d03c8d218dbf7353ded36efbdb509e6f35bd90132d4b7fdad58693f62"
+        }
+      ]
+    },
+    {
+      "path": "work/extension_20261030/bridge/original_tail/BE_cutoff49_20260930/baseline/certificates/work/below50_20260929/entry/contracted_kernel.py",
+      "sha256": "0367aae733dfe2d6467188d941d6fc8ccd7bb6f4bf3aa4c98dca3c4781534d22",
+      "functions": [
+        {
+          "name": "sixth",
+          "line": 65,
+          "last_line": 85,
+          "ast_sha256": "8db8655aa0b49034324895a3e41a9f97bcc130babe0af54af233540ef8d0f2a1"
+        },
+        {
+          "name": "paired",
+          "line": 277,
+          "last_line": 308,
+          "ast_sha256": "41e16fcd35eab096a5212491d19e7f0ac09c7ea2c6a51a24d811d63cf74a7d96"
+        },
+        {
+          "name": "J",
+          "line": 292,
+          "last_line": 303,
+          "ast_sha256": "468bd50d03c8d218dbf7353ded36efbdb509e6f35bd90132d4b7fdad58693f62"
+        }
+      ]
+    },
+    {
+      "path": "work/extension_20261030/bridge/portable-finite/coarse4-fixture01/work/extension_20261030/finite/actual20-coarse4-static-source01/native/paired_extended.py",
+      "sha256": "9fbfdee44f42fe29caa3ee049d8b60d84670c8b4f5d53c147b6fbe280ccb5998",
+      "functions": [
+        {
+          "name": "paired",
+          "line": 7,
+          "last_line": 44,
+          "ast_sha256": "0af7f8095f7871e1158c8469cadbe66e045f6080e00dce5862567b2ee1eb1680"
+        },
+        {
+          "name": "eligible",
+          "line": 45,
+          "last_line": 51,
+          "ast_sha256": "d02bb87be1f87442c3e2835a94568b20717968dcf5f3929d8700b909274ba9a9"
+        },
+        {
+          "name": "J",
+          "line": 28,
+          "last_line": 39,
+          "ast_sha256": "468bd50d03c8d218dbf7353ded36efbdb509e6f35bd90132d4b7fdad58693f62"
+        }
+      ]
+    }
+  ]
+}

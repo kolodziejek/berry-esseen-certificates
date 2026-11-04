@@ -1,0 +1,65 @@
+{
+  "scope": "prefix capture only, no numerical certificate acceptance",
+  "files": {
+    "capture_prefix.py": {
+      "sha256": "a070b5e26e49656a772e451f6dd3eac4a38ceb9ac3512e01a2eb6cab1fb64277",
+      "bytes": 7639
+    },
+    "compare_psd.py": {
+      "sha256": "ad8fef67c3cf54b01fcc7abd80b2c1b2b36bade0e95b93aea5dd6e0f1be743b8",
+      "bytes": 2743
+    },
+    "evidence/RESULT.json": {
+      "sha256": "b889d2f92f50cf51bc21dd128312f9f76e494f4607f7a0cac91b8ca3994b9c17",
+      "bytes": 5211
+    },
+    "evidence/STARTED.json": {
+      "sha256": "37a7d775d418650544d8733fd874118a433c4ed614cebaabfe5d133a5a6df54c",
+      "bytes": 1742
+    },
+    "evidence/cells.jsonl.gz": {
+      "sha256": "6b66b6b53dc928a42e783ea2005fed04b38aab8b4a377c5cc41dc9f51d04b134",
+      "bytes": 10470217
+    },
+    "evidence/prefix_only.py": {
+      "sha256": "e44ea135cc365a7fd3926e76ad75f448be98d9660c6c90ed0be5156c81952e9f",
+      "bytes": 6513
+    },
+    "evidence/process/PROCESS.json": {
+      "sha256": "f57933e5aa4e9d65445610f1ef187ab8d1450ef2e5e538bb17fce7e190f5c822",
+      "bytes": 255
+    },
+    "evidence/process/STARTED.json": {
+      "sha256": "c1de0e6cbeb690b4dc29c9f40a63528d68b9d265892bc26299b13b1d098ce241",
+      "bytes": 1025
+    },
+    "evidence/process/stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/process/stdout.txt": {
+      "sha256": "58ff22940a40e28994b684afda936ed9b60d7e0598fc0620b254dad5c6fb10eb",
+      "bytes": 3941
+    },
+    "native/accept_initial47.py": {
+      "sha256": "cd0030c8ba3fbd9fdd357f191fe519c093ce69968c292e2eaf2b40cd7d6561bd",
+      "bytes": 5337
+    },
+    "native/high_window_core.py": {
+      "sha256": "53e181be63852e21abc3f44191cce7237c46d9e9d7868d3b6b94fccb606c7232",
+      "bytes": 1966
+    },
+    "native/initial47_proof.json": {
+      "sha256": "95c5c1de0062b6a9e294a81ee8497eee8bdb2e0798299422d7ad39b885e4a951",
+      "bytes": 21890
+    },
+    "native/kernel.py": {
+      "sha256": "d71f58b7527c3cf6d2146d816e5d124f6f331d1b153e5aaedee5182707647f12",
+      "bytes": 19042
+    },
+    "native/local_signed_core.py": {
+      "sha256": "f0c2df790b794413e7fd08c4f3fc20f79c15c27a6456c8eae5013b96eb093c11",
+      "bytes": 8939
+    }
+  }
+}

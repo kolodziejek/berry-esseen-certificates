@@ -1,0 +1,40 @@
+{
+  "schema": "PAIRED_EXACT_ALGEBRA_AUDIT_V1",
+  "status": "PASS_EXACT_IDENTITIES_AND_REJECTION_CONTROLS",
+  "identities": [
+    "pearson_second",
+    "pearson_fifth",
+    "pearson_sixth",
+    "signed_upper_z",
+    "signed_lower_z",
+    "positive_z_derivative",
+    "quadratic_upper_p",
+    "quadratic_upper_q",
+    "positive_c_upper",
+    "positive_c_lower",
+    "dominant_P"
+  ],
+  "gaussian_coefficients": [
+    "35/48",
+    "35/24",
+    "1",
+    "5/2"
+  ],
+  "rejected_false_identities": [
+    "pearson_second_changed_constant",
+    "pearson_fifth_changed_constant",
+    "pearson_sixth_changed_constant",
+    "signed_upper_z_changed_constant",
+    "signed_lower_z_changed_constant",
+    "positive_z_derivative_changed_constant",
+    "quadratic_upper_p_changed_constant",
+    "quadratic_upper_q_changed_constant"
+  ],
+  "damping_countercheck": {
+    "M": "5/2",
+    "N": 47,
+    "old43_constant_exceeds_allowed": true
+  },
+  "source_sha256": "c301f000c551eecb168770f1310594f43f7896bc3f556ab7fa00f8541406f304",
+  "scope": "Exact polynomial equalities and rational constants only. Sign domains, integration, uniform remainders and native coverage are proved separately; no numerical family rerun."
+}

@@ -1,0 +1,93 @@
+{
+  "status": "PASS_EXACT_EXAMPLE_REGRESSION",
+  "continuous_domain_proof_claimed": false,
+  "laws": {
+    "symmetric_bernoulli": {
+      "atoms": 2,
+      "p": "1/2",
+      "theta": "0",
+      "gamma_sign": 0,
+      "support_determinants": 6,
+      "zero_denominator_branches": 6
+    },
+    "skew_bernoulli": {
+      "atoms": 2,
+      "p": "4/13",
+      "theta": "0",
+      "gamma_sign": 1,
+      "support_determinants": 6,
+      "zero_denominator_branches": 6
+    },
+    "zero_atom": {
+      "atoms": 3,
+      "p": "2/21",
+      "theta": "1/19",
+      "gamma_sign": 1,
+      "support_determinants": 6,
+      "zero_denominator_branches": 5
+    },
+    "zero_atom_reflected": {
+      "atoms": 3,
+      "p": "4/7",
+      "theta": "2/3",
+      "gamma_sign": -1,
+      "support_determinants": 6,
+      "zero_denominator_branches": 5
+    },
+    "nearby_four_atoms": {
+      "atoms": 4,
+      "p": "40460893/131484899",
+      "theta": "56350671/1841456283598679",
+      "gamma_sign": 1,
+      "support_determinants": 6,
+      "zero_denominator_branches": 0
+    },
+    "tiny_noise": {
+      "atoms": 4,
+      "p": "577955600000000000000004001/1878355700000000000000000000",
+      "theta": "1878355699999999999981216443/751573520035560000000002890500444499999999999983991999",
+      "gamma_sign": 1,
+      "support_determinants": 6,
+      "zero_denominator_branches": 0
+    },
+    "tiny_noise_reflected": {
+      "atoms": 4,
+      "p": "1300400099999999999999995999/1878355700000000000000000000",
+      "theta": "1878355699999999999981216443/751573520035560000000002890500444499999999999983991999",
+      "gamma_sign": -1,
+      "support_determinants": 6,
+      "zero_denominator_branches": 0
+    },
+    "tiny_far_atom": {
+      "atoms": 5,
+      "p": "9999999999999999999999990001/20000000000000000000000000000",
+      "theta": "197999999999999999999999802009999/99999999999999999999999999999999999999999999999900019999",
+      "gamma_sign": 0,
+      "support_determinants": 6,
+      "zero_denominator_branches": 0
+    },
+    "collision_mixture": {
+      "atoms": 4,
+      "p": "13/30",
+      "theta": "25/221",
+      "gamma_sign": 1,
+      "support_determinants": 6,
+      "zero_denominator_branches": 2
+    },
+    "large_noise": {
+      "atoms": 3,
+      "p": "1/200",
+      "theta": "99/199",
+      "gamma_sign": 0,
+      "support_determinants": 6,
+      "zero_denominator_branches": 5
+    }
+  },
+  "rectangle_grid_points": 4056,
+  "unsafe_shortcuts_detected": {
+    "omit_zero_resource_vertex": true,
+    "negative_coefficient_uses_wrong_mass_endpoint": true,
+    "omit_quadratic_interior_minimum": true,
+    "variance_endpoint_K_monotonicity_requires_v_gate": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "domain_rejection_means": "not applicable; never an automatic law exclusion",
+  "invalid_domain_rejections": [
+    "negative_outer_budget",
+    "zero_price",
+    "reversed_rectangle",
+    "negative_mass",
+    "theta_one"
+  ],
+  "native_numeric_exports_accepted": false,
+  "object_rejections": 75,
+  "positive_boundary_cases": [
+    {
+      "case": "two_point_a=1",
+      "passed": true
+    },
+    {
+      "case": "two_point_a=1/2",
+      "passed": true
+    },
+    {
+      "case": "two_point_a=3/2",
+      "passed": true
+    },
+    {
+      "case": "PSD_zero_row",
+      "passed": true
+    },
+    {
+      "case": "one_outer_budget",
+      "passed": true
+    },
+    {
+      "case": "negative_m_endpoint",
+      "passed": true
+    },
+    {
+      "case": "zero_conditional_variance",
+      "passed": true
+    }
+  ],
+  "status": "PASS_FIXED_FAMILY_CONTROLS"
+}
