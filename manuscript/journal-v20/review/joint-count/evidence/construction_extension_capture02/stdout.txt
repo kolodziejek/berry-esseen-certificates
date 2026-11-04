@@ -1,0 +1,83 @@
+{
+  "status": "COMPLETED_BOUNDED_LARGER_NOISE_PROBE",
+  "cases": [
+    {
+      "noise_upper": "3/50",
+      "status": "UNCHANGED_WITNESS_EXTENSION_NOT_ESTABLISHED",
+      "failures": [
+        {
+          "case": "negative_quartic",
+          "all_coefficients_nonnegative": false,
+          "minimum_coefficient": "-117469524592927555781026865613484352583/644675720445952000000000000000000000000",
+          "rational_failure_witness": {
+            "x": "37/40",
+            "y": "1",
+            "exact_polynomial_value": "-51705036996751036324281213512905191897576382563/4224946801514591027200000000000000000000000000000",
+            "meaning": "this chosen sufficient witness fails; not a counterexample to the probability claim"
+          }
+        },
+        {
+          "case": "positive_normal",
+          "all_coefficients_nonnegative": false,
+          "minimum_coefficient": "-299672418874872371903/100000000000000000000000",
+          "rational_failure_witness": {
+            "x": "37/40",
+            "y": "1",
+            "exact_polynomial_value": "-285014494771149688511/4000000000000000000000000",
+            "meaning": "this chosen sufficient witness fails; not a counterexample to the probability claim"
+          }
+        }
+      ]
+    },
+    {
+      "noise_upper": "2/25",
+      "status": "UNCHANGED_WITNESS_EXTENSION_NOT_ESTABLISHED",
+      "failures": [
+        {
+          "case": "negative_quartic",
+          "all_coefficients_nonnegative": false,
+          "minimum_coefficient": "-2781251404862820293689863713073813/2459242708000000000000000000000000",
+          "rational_failure_witness": {
+            "x": "7/10",
+            "y": "39/40",
+            "exact_polynomial_value": "-54919069458161273044757541869392087186725074472333/4484700663971840000000000000000000000000000000000000",
+            "meaning": "this chosen sufficient witness fails; not a counterexample to the probability claim"
+          }
+        },
+        {
+          "case": "negative_Cantelli",
+          "all_coefficients_nonnegative": false,
+          "minimum_coefficient": "-2886849040051162220853440012523363/4882812500000000000000000000000000000",
+          "rational_failure_witness": {
+            "x": "37/40",
+            "y": "0",
+            "exact_polynomial_value": "-678533303656260828229855476654601151921967879/12800000000000000000000000000000000000000000000000",
+            "meaning": "this chosen sufficient witness fails; not a counterexample to the probability claim"
+          }
+        },
+        {
+          "case": "positive_quartic",
+          "all_coefficients_nonnegative": false,
+          "minimum_coefficient": "-4792103196235375989290792012705398750777353/15010026293945312500000000000000000000000000",
+          "rational_failure_witness": {
+            "x": "4/5",
+            "y": "1",
+            "exact_polynomial_value": "-6837085901442812123066726697988690512393/1047611236572265625000000000000000000000000",
+            "meaning": "this chosen sufficient witness fails; not a counterexample to the probability claim"
+          }
+        },
+        {
+          "case": "positive_normal",
+          "all_coefficients_nonnegative": false,
+          "minimum_coefficient": "-894207027152018618827/50000000000000000000000",
+          "rational_failure_witness": {
+            "x": "7/10",
+            "y": "1",
+            "exact_polynomial_value": "-26775674749095478733/62500000000000000000000",
+            "meaning": "this chosen sufficient witness fails; not a counterexample to the probability claim"
+          }
+        }
+      ]
+    }
+  ]
+}

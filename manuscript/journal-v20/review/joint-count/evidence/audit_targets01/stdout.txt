@@ -1,0 +1,91 @@
+{
+  "continuous_proof_basis": "independent algebraic derivation plus reviewed exact inverse-Bernstein reconstruction",
+  "exact_formula_points": 196,
+  "exact_strict_margin": "252847053/18800000000",
+  "formula_grid_is_not_continuous_proof": true,
+  "native_acceptance_result": {
+    "all_83_rows_accepted": false,
+    "cases": [
+      {
+        "case": "negative_quartic",
+        "coefficients": 72,
+        "degree": [
+          7,
+          8
+        ],
+        "minimum": "23540408225773505764967244140487979599/132029587547330969600000000000000000000",
+        "zero_coefficients": 0
+      },
+      {
+        "case": "negative_Cantelli",
+        "coefficients": 64,
+        "degree": [
+          7,
+          7
+        ],
+        "minimum": "0",
+        "zero_coefficients": 3
+      },
+      {
+        "case": "positive_quartic",
+        "coefficients": 72,
+        "degree": [
+          7,
+          8
+        ],
+        "minimum": "7437604330082072415775320790089413317549827/25182645329920000000000000000000000000000000",
+        "zero_coefficients": 0
+      },
+      {
+        "case": "positive_normal",
+        "coefficients": 36,
+        "degree": [
+          5,
+          5
+        ],
+        "minimum": "0",
+        "zero_coefficients": 1
+      }
+    ],
+    "execution_scope": "fresh exact native normalization and four polynomial identities; no acquisition/integral replay",
+    "fourier_calls": 0,
+    "lower_loss_per_own_variance": "1/10",
+    "mathematical_scope": "conditional on existing same-law acquired row inputs; all n>=47, 0<lambda<=1/20, -1/2<=u<=1/2",
+    "native_target_changed": false,
+    "normalization_gates": 41,
+    "selected_rows": [
+      {
+        "id": "central",
+        "native_index": 10,
+        "p": [
+          "2/5",
+          "201/500"
+        ]
+      },
+      {
+        "id": "left",
+        "native_index": 28,
+        "p": [
+          "9/25",
+          "181/500"
+        ]
+      }
+    ],
+    "status": "PASS_TWO_NATIVE_PANELS_COMPLETE_TINY_PHASE",
+    "strict_reserve_beyond_original_target": "252847053/18800000000",
+    "whole_count_LOW_replaced": false
+  },
+  "negative_controls": [
+    "weakened_target",
+    "changed_eta",
+    "missing_phase_branch",
+    "reordered_phase_branches",
+    "missing_Bernstein_row",
+    "changed_coefficient",
+    "negative_coefficient",
+    "noncanonical_rational",
+    "duplicate_JSON_key"
+  ],
+  "new_acquisition_or_integral_execution": false,
+  "status": "PASS_INDEPENDENT_TARGET_EVALUATIONS"
+}

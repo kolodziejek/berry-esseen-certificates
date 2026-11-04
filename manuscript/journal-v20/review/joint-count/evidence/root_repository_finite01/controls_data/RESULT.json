@@ -1,0 +1,127 @@
+{
+  "duplicate_JSON_rejected": true,
+  "negative_eta_endpoint_counterexample": {
+    "eta": "-1/20",
+    "exact_reserve_overstatement": "266734213/12500000000",
+    "family": "left40_42",
+    "invalid_m_lower_variance_loss": "-419165787/12500000000",
+    "native_row": 17,
+    "true_loss_at_b1_tupper": "-6859/125000"
+  },
+  "no_original_reserve_or_target_changed": true,
+  "object_rejections": [
+    {
+      "case": "missing_last_row",
+      "fixture_sha256": "c3f5289128997ae087621329f4d41f66b73ff5f3180767e400743dc25ec18111",
+      "reason": "complete ordered267finitecover"
+    },
+    {
+      "case": "duplicated_row",
+      "fixture_sha256": "cae31961333562932f428cb905575b2a2c9a2812fcef86aee9b4bf9a2b661cee",
+      "reason": "complete ordered267finitecover"
+    },
+    {
+      "case": "reordered_rows",
+      "fixture_sha256": "5f25497e3d1fb60a5497fd0d89626a70b576a08bae48b7747a692c9d00a9033e",
+      "reason": "complete ordered267finitecover"
+    },
+    {
+      "case": "boolean_index",
+      "fixture_sha256": "4c307ae5cab8e58104f89bcdbcddbc41e39e94bddb0c655e146de05779c20833",
+      "reason": "strict finite row indices"
+    },
+    {
+      "case": "wrong_score_target",
+      "fixture_sha256": "399f8c6df49bce42a431de5d235a8cf04d0c8d44064c2f7aca7f44bd4862c25b",
+      "reason": "all original finite score targets"
+    },
+    {
+      "case": "unsupported_eta",
+      "fixture_sha256": "a02c7a7bb33b3e5065bd03c92fefeae8027af5a85a3b8187eebf77d2891f14df",
+      "reason": "fixed finite loss-witness choices"
+    },
+    {
+      "case": "missing_branch",
+      "fixture_sha256": "7b0a9bdd348f434cbe2fe3dcb58c9482e26d0ee45ba7972de88b483e927483c3",
+      "reason": "all four finite branches in fixed order"
+    },
+    {
+      "case": "reordered_branches",
+      "fixture_sha256": "6f598dd9f460b3d4a18d338968a58648c659e324edb41907a2c394eb7f1ead5f",
+      "reason": "all four finite branches in fixed order"
+    },
+    {
+      "case": "extra_claim",
+      "fixture_sha256": "3afd4f89127d85cc5d94fcd8683698ce497fc5683449bab220a742cde133c1ea",
+      "reason": "exact object fields"
+    },
+    {
+      "case": "negative_coefficient",
+      "fixture_sha256": "376c8dcc3ddc2b3983fac68aa6732a59926c50b1ca25685fb65e912d8821de3d",
+      "reason": "finite continuous rectangle positivity"
+    },
+    {
+      "case": "false_positive_coefficient",
+      "fixture_sha256": "c13aab63572b306acb24a220ec4b56d4b693186f209db6de01b4397ca59e2750",
+      "reason": "finite complete inverse polynomial identity"
+    },
+    {
+      "case": "last_row_false_coefficient",
+      "fixture_sha256": "807f63cbbe33525114aef163961807bcec678e356feabebf06e3253517119e18",
+      "reason": "finite complete inverse polynomial identity"
+    },
+    {
+      "case": "float_coefficient",
+      "fixture_sha256": "092150663bd91ee5b1af802b105930953f090e6d579f18b4c69d175ed38ce2f4",
+      "reason": "rational string"
+    },
+    {
+      "case": "noncanonical_fraction",
+      "fixture_sha256": "9e3c2feadf6bb0c59565202f190b9c28d879687b50c376b6461bc03602aac88f",
+      "reason": "canonical rational"
+    },
+    {
+      "case": "missing_coefficient",
+      "fixture_sha256": "067c67bf5048d71ce997fad2618c2ece2ea0759bb7569f29d6615c703e6af70e",
+      "reason": "full finite coefficient column census"
+    },
+    {
+      "case": "negative_eta_relabelled",
+      "fixture_sha256": "5baac97dae65d70b492dd73f02f707e26c264f7f911786bb465be297c7916ab8",
+      "reason": "finite complete inverse polynomial identity"
+    }
+  ],
+  "original_source_bytes_unchanged": true,
+  "scalar_domain_rejections": [
+    {
+      "field": "mass",
+      "reason": "explicit finite mass, variance and repair signs",
+      "value": "2"
+    },
+    {
+      "field": "ownlo",
+      "reason": "explicit finite mass, variance and repair signs",
+      "value": "0"
+    },
+    {
+      "field": "repair",
+      "reason": "explicit finite mass, variance and repair signs",
+      "value": "-1"
+    }
+  ],
+  "source_rejections": [
+    {
+      "case": "normalizer_bytes",
+      "reason": "fixed finite native source bytes"
+    },
+    {
+      "case": "changed_binomial_reserve",
+      "reason": "fixed finite native source bytes"
+    },
+    {
+      "case": "changed_source_manifest",
+      "reason": "fixed complete finite native source manifest"
+    }
+  ],
+  "status": "PASS_FINITE267_CORRUPTION_AND_SIGN_CONTROLS"
+}

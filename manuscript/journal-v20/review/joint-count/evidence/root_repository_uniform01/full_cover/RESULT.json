@@ -1,0 +1,2231 @@
+{
+  "N": 47,
+  "analytic_premises_not_inferred_from_rows": [
+    "actual iid conditional laws",
+    "C>=2/5",
+    "conditional centering",
+    "acquired support and signed threshold bounds",
+    "the inherited acquisition reduction"
+  ],
+  "count_scope": "every integer n>=47",
+  "execution_status": "fresh exact source-bound census, native normalization and common four-polynomial acceptance",
+  "four_polynomials": [
+    {
+      "case": "negative_quartic",
+      "coefficients": 72,
+      "degree": [
+        7,
+        8
+      ],
+      "minimum": "23540408225773505764967244140487979599/132029587547330969600000000000000000000",
+      "zero_coefficients": 0
+    },
+    {
+      "case": "negative_Cantelli",
+      "coefficients": 64,
+      "degree": [
+        7,
+        7
+      ],
+      "minimum": "0",
+      "zero_coefficients": 3
+    },
+    {
+      "case": "positive_quartic",
+      "coefficients": 72,
+      "degree": [
+        7,
+        8
+      ],
+      "minimum": "7437604330082072415775320790089413317549827/25182645329920000000000000000000000000000000",
+      "zero_coefficients": 0
+    },
+    {
+      "case": "positive_normal",
+      "coefficients": 36,
+      "degree": [
+        5,
+        5
+      ],
+      "minimum": "0",
+      "zero_coefficients": 1
+    }
+  ],
+  "mathematical_status": "same-law acquired input premises retained; the common joint-count implication applies to each full TINY row",
+  "no_MID_or_LOW_replacement": true,
+  "no_acquisition_replay": true,
+  "normalization_gates": 41,
+  "normalization_sha256": "f1e2606359e321d17db11c7240467a597f00094d1747d40ed4f69ceae18d4b71",
+  "object_sha256": "bb006dac400fa56281910cba4fdf6ed9a8319461d568ce56c8631d5ecbaad020",
+  "original_target": "rho_B(C-C_B)<-lambda/1000",
+  "probability_union": [
+    "38/125",
+    "47/100"
+  ],
+  "rows": [
+    {
+      "H": [
+        "-13423/10000",
+        "9759/10000"
+      ],
+      "amplitude": "1/5",
+      "d0": "1/1250",
+      "native_index": 0,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "38/125",
+        "153/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "37/5000"
+      ],
+      "row_sha256": "febd65adc203229fca6a90eafb78f3d7611c18484b129f5dd4099347be3395de",
+      "side": "left",
+      "theta": "9/10000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-3373/2500",
+        "9823/10000"
+      ],
+      "amplitude": "1/5",
+      "d0": "9/5000",
+      "native_index": 1,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "153/500",
+        "77/250"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "9/500"
+      ],
+      "row_sha256": "4ece33c5fb6c096670f7e43dcb9ecef2754129dd0aaba3529f6174d4448a4259",
+      "side": "left",
+      "theta": "19/10000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-3389/2500",
+        "9883/10000"
+      ],
+      "amplitude": "1/5",
+      "d0": "7/2500",
+      "native_index": 2,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "77/250",
+        "31/100"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "141/5000"
+      ],
+      "row_sha256": "0c6d162bc5e96266aae70e0eae15d3953cd60bf4fb1f4bf5cfab6ed95b3f6f8c",
+      "side": "left",
+      "theta": "29/10000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-2723/2000",
+        "9939/10000"
+      ],
+      "amplitude": "1/4",
+      "d0": "37/10000",
+      "native_index": 3,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "31/100",
+        "39/125"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "191/5000"
+      ],
+      "row_sha256": "988e61b12217acf0ee977619fb7ee2f016425371e71385f3ded2c1a8b5e16560",
+      "side": "left",
+      "theta": "39/10000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-1367/1000",
+        "9991/10000"
+      ],
+      "amplitude": "1/4",
+      "d0": "47/10000",
+      "native_index": 4,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "39/125",
+        "157/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "477/10000"
+      ],
+      "row_sha256": "fc3b9c63b5b4ba66cb68ec5cfd222c70dbb9f8fe5e026c0116b0082e24773bbb",
+      "side": "left",
+      "theta": "3/625",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-343/250",
+        "10041/10000"
+      ],
+      "amplitude": "1/4",
+      "d0": "11/2000",
+      "native_index": 5,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "157/500",
+        "79/250"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "25382f0d0d1540ff5d73017aabb8d345f4898b0a3dee21cce8e74ccfd3ea583c",
+      "side": "left",
+      "theta": "57/10000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-6883/5000",
+        "5043/5000"
+      ],
+      "amplitude": "3/10",
+      "d0": "4/625",
+      "native_index": 6,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "79/250",
+        "159/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "6dff024fb90814d9a68461c5c7b417f6357fe90b5b0814eee455b5e5906d0d0d",
+      "side": "left",
+      "theta": "13/2000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-13807/10000",
+        "633/625"
+      ],
+      "amplitude": "3/10",
+      "d0": "9/1250",
+      "native_index": 7,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "159/500",
+        "8/25"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "083c11be21b5f63dbe2119e886a3017d648a5435f35313cca09c6f93ec305360",
+      "side": "left",
+      "theta": "73/10000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-13843/10000",
+        "10167/10000"
+      ],
+      "amplitude": "3/10",
+      "d0": "1/125",
+      "native_index": 8,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "8/25",
+        "161/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "48927f53bc06928e16cb6f505ecea62214c7a6a37b8cfabc45bda5820456de61",
+      "side": "left",
+      "theta": "81/10000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-111/80",
+        "5101/5000"
+      ],
+      "amplitude": "3/10",
+      "d0": "11/1250",
+      "native_index": 9,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "161/500",
+        "81/250"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "c2e63d7434b61e6ed1e2057afeb923e8a09d8ced776b8aff644bdc7bae541416",
+      "side": "left",
+      "theta": "11/1250",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-6951/5000",
+        "5117/5000"
+      ],
+      "amplitude": "7/20",
+      "d0": "19/2000",
+      "native_index": 10,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "81/250",
+        "163/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "ddc11c462cc536d7713540fc19461634d5c37c46dbb422e452dd84632695b08a",
+      "side": "left",
+      "theta": "19/2000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-557/400",
+        "10263/10000"
+      ],
+      "amplitude": "7/20",
+      "d0": "51/5000",
+      "native_index": 11,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "163/500",
+        "41/125"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "5d79ddee2dbbd215acfa2bb28ffb3b6e2c5954af3497e4462b0b88a960e42dc2",
+      "side": "left",
+      "theta": "51/5000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-1741/1250",
+        "411/400"
+      ],
+      "amplitude": "7/20",
+      "d0": "27/2500",
+      "native_index": 12,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "41/125",
+        "33/100"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "1594e2b38103b076aadd85531a1ce135ff779f0a8df8d2e17db58a2e764113c7",
+      "side": "left",
+      "theta": "107/10000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-2783/2000",
+        "411/400"
+      ],
+      "amplitude": "7/20",
+      "d0": "57/5000",
+      "native_index": 13,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "33/100",
+        "83/250"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "594b24f60ba5a914405d1576e67070c0bef01979cf10202a8cb99256a8fdd671",
+      "side": "left",
+      "theta": "7/625",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-13899/10000",
+        "5137/5000"
+      ],
+      "amplitude": "7/20",
+      "d0": "119/10000",
+      "native_index": 14,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "83/250",
+        "167/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "6581255b40ee1c0d3daec6e4de25c843acf2bb9ab55d12c51cc7f88848a0f273",
+      "side": "left",
+      "theta": "29/2500",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-13879/10000",
+        "10271/10000"
+      ],
+      "amplitude": "7/20",
+      "d0": "31/2500",
+      "native_index": 15,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "167/500",
+        "42/125"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "484035509994637ef53a0eaef374db6de4ca7760ca976a19accfbf47ca36dba8",
+      "side": "left",
+      "theta": "3/250",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-866/625",
+        "5133/5000"
+      ],
+      "amplitude": "7/20",
+      "d0": "129/10000",
+      "native_index": 16,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "42/125",
+        "169/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "7ad86ff448debe26739928dbac1af9e161c66e222fcc1f6ffee8f48ad2a873c3",
+      "side": "left",
+      "theta": "31/2500",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-13829/10000",
+        "10259/10000"
+      ],
+      "amplitude": "7/20",
+      "d0": "133/10000",
+      "native_index": 17,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "169/500",
+        "17/50"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "e8d202c340ca1161ea9f3a7e2b0e9d0f365aa3b2dd127272c387e60a397fe137",
+      "side": "left",
+      "theta": "8/625",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-69/50",
+        "10249/10000"
+      ],
+      "amplitude": "3/8",
+      "d0": "69/5000",
+      "native_index": 18,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "17/50",
+        "171/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "676d21a7a6de1fef771a0f3e1822de65f57564928805017e1f71e86b0800f8d9",
+      "side": "left",
+      "theta": "131/10000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-13767/10000",
+        "5119/5000"
+      ],
+      "amplitude": "3/8",
+      "d0": "71/5000",
+      "native_index": 19,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "171/500",
+        "43/125"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "9c831e67fe8e1de36e0e923cfd956167edefa7795af927342d98c192fe49b62c",
+      "side": "left",
+      "theta": "67/5000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-13731/10000",
+        "639/625"
+      ],
+      "amplitude": "3/8",
+      "d0": "29/2000",
+      "native_index": 20,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "43/125",
+        "173/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "354ffb2f05e2eecd825bb975172a7f1a2984299cdf8c7b1e0e46194245d3d1a4",
+      "side": "left",
+      "theta": "137/10000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-3423/2500",
+        "10209/10000"
+      ],
+      "amplitude": "3/8",
+      "d0": "149/10000",
+      "native_index": 21,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "173/500",
+        "87/250"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "097faebd8ac7a509a61fa00cabc182270808f689d8ff0cb46c068450a2584a1b",
+      "side": "left",
+      "theta": "139/10000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-273/200",
+        "10191/10000"
+      ],
+      "amplitude": "3/8",
+      "d0": "19/1250",
+      "native_index": 22,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "87/250",
+        "7/20"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "0409c100ab12241296f5cf63386a5c8ffc3f2a8d0b8f10accd622ef5100f0793",
+      "side": "left",
+      "theta": "71/5000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-2721/2000",
+        "10171/10000"
+      ],
+      "amplitude": "3/8",
+      "d0": "31/2000",
+      "native_index": 23,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "7/20",
+        "44/125"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "ec34e700f3f0ca8638f8d6cf03c9df4ae029b219ae4eac89e9d46b9bb977c631",
+      "side": "left",
+      "theta": "9/625",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-3389/2500",
+        "10149/10000"
+      ],
+      "amplitude": "3/8",
+      "d0": "79/5000",
+      "native_index": 24,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "44/125",
+        "177/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "fc2b660557a8b86f72ce35b8d7f29c544d72fe22215f8713c5c9a00a6a3a6d2a",
+      "side": "left",
+      "theta": "29/2000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-2701/2000",
+        "81/80"
+      ],
+      "amplitude": "3/8",
+      "d0": "161/10000",
+      "native_index": 25,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "177/500",
+        "89/250"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "3cfd24cf7bc920b8e5114a359c4bddc5a56d18addcac28ccc87264c32b5102b4",
+      "side": "left",
+      "theta": "147/10000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-3363/2500",
+        "10101/10000"
+      ],
+      "amplitude": "3/8",
+      "d0": "163/10000",
+      "native_index": 26,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "89/250",
+        "179/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "a9fd8eb2c4b048767b18d71d06f9277c52939c3b290c62ec55a598bc2fe3521f",
+      "side": "left",
+      "theta": "37/2500",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-3349/2500",
+        "403/400"
+      ],
+      "amplitude": "3/8",
+      "d0": "33/2000",
+      "native_index": 27,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "179/500",
+        "9/25"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "4376c7addc54d7b07cf1603224c43fe614318bc8f671e4b14ed716ea79f68aa1",
+      "side": "left",
+      "theta": "149/10000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-6669/5000",
+        "5023/5000"
+      ],
+      "amplitude": "3/8",
+      "d0": "167/10000",
+      "native_index": 28,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "9/25",
+        "181/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "3555ddbbeea4032249432ac908924bb745b302468f02a8dadc3e518bd83bbf04",
+      "side": "left",
+      "theta": "3/200",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-3319/2500",
+        "626/625"
+      ],
+      "amplitude": "3/8",
+      "d0": "169/10000",
+      "native_index": 29,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "181/500",
+        "91/250"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "ec7aac7d28c237b883d23e38cc11ac7fb6a0acab3fcf932ef28dc1e7168ce5f0",
+      "side": "left",
+      "theta": "151/10000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-3303/2500",
+        "624/625"
+      ],
+      "amplitude": "3/8",
+      "d0": "171/10000",
+      "native_index": 30,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "91/250",
+        "183/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "c67744eac0b7280fb68232310348b5d6ef887b8b8006f33d4504fb31c2da6dea",
+      "side": "left",
+      "theta": "19/1250",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-2629/2000",
+        "199/200"
+      ],
+      "amplitude": "3/8",
+      "d0": "43/2500",
+      "native_index": 31,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "183/500",
+        "46/125"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "2775efe7d37537fd98521a12aa7de4d0d8b995061ed56251dcd07c8c784795c2",
+      "side": "left",
+      "theta": "19/1250",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-1633/1250",
+        "9899/10000"
+      ],
+      "amplitude": "3/8",
+      "d0": "173/10000",
+      "native_index": 32,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "46/125",
+        "37/100"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "a8789d15bffbde48c13adfd315ec439698cc5672afe4d722a75a327a430511d5",
+      "side": "left",
+      "theta": "19/1250",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-12981/10000",
+        "9847/10000"
+      ],
+      "amplitude": "3/8",
+      "d0": "173/10000",
+      "native_index": 33,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "37/100",
+        "93/250"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "4116f2ffb481bc44ef8099406116f31969238c4d409a9b90aeae2ecf35762dc7",
+      "side": "left",
+      "theta": "19/1250",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-806/625",
+        "4897/5000"
+      ],
+      "amplitude": "3/8",
+      "d0": "87/5000",
+      "native_index": 34,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "93/250",
+        "187/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "04d4b276cccafcf0618bc2c3bc8b38c8fddd81570d42b024411750227e5d6e39",
+      "side": "left",
+      "theta": "151/10000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-1601/1250",
+        "487/500"
+      ],
+      "amplitude": "3/8",
+      "d0": "87/5000",
+      "native_index": 35,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "187/500",
+        "47/125"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "f4281808c18864c2018b42ae43d83b8b558a4284b558c6dd3e1b01c15781e759",
+      "side": "left",
+      "theta": "151/10000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-12719/10000",
+        "1937/2000"
+      ],
+      "amplitude": "3/8",
+      "d0": "87/5000",
+      "native_index": 36,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "47/125",
+        "189/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "11fcb39f56df935351e30075cd47ca270804c58c3f9963b87844e42b0287bda7",
+      "side": "left",
+      "theta": "3/200",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-12627/10000",
+        "2407/2500"
+      ],
+      "amplitude": "7/20",
+      "d0": "87/5000",
+      "native_index": 37,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "189/500",
+        "19/50"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "f3b8a23458f0e0b38c38037e23e03269645494f5aa9f002c3a96f6412331b2b5",
+      "side": "left",
+      "theta": "149/10000",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-2513/2000",
+        "9591/10000"
+      ],
+      "amplitude": "3/8",
+      "d0": "0.0180",
+      "native_index": 0,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "19/50",
+        "191/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "b59f96da639ce8cd0dc73a480b1966a9527da6ac62b9798ffcd281a12cc0936e",
+      "side": "central",
+      "theta": "0.0153",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-6231/5000",
+        "381/400"
+      ],
+      "amplitude": "7/20",
+      "d0": "0.0179",
+      "native_index": 1,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "191/500",
+        "48/125"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "649f8d57053c96d2aa43331bea197a225f5c8514abd418c363f37b4e5c60c670",
+      "side": "central",
+      "theta": "0.0151",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-12357/10000",
+        "9457/10000"
+      ],
+      "amplitude": "7/20",
+      "d0": "0.0178",
+      "native_index": 2,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "48/125",
+        "193/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "28d39500b9df4abe8faca93840f5b8a67485abab6ba22d4f5e7bf77986471984",
+      "side": "central",
+      "theta": "0.0149",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-12251/10000",
+        "9389/10000"
+      ],
+      "amplitude": "7/20",
+      "d0": "0.0177",
+      "native_index": 3,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "193/500",
+        "97/250"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "7c21766e06b83aabfef328ad1237ce922dac09245a09819469a248ede1553fb7",
+      "side": "central",
+      "theta": "0.0148",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-12143/10000",
+        "233/250"
+      ],
+      "amplitude": "7/20",
+      "d0": "0.0175",
+      "native_index": 4,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "97/250",
+        "39/100"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "bc9a7b75d749fe39b2694b4038dccc49f571ceea3dd681701f86ae265fa3f760",
+      "side": "central",
+      "theta": "0.0146",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-12031/10000",
+        "9249/10000"
+      ],
+      "amplitude": "7/20",
+      "d0": "0.0174",
+      "native_index": 5,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "39/100",
+        "49/125"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "4ee6835a83a93a9f1cf9fbec628df592234bb34015ed7d8df2f1167c4e8428b0",
+      "side": "central",
+      "theta": "0.0144",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-11917/10000",
+        "9177/10000"
+      ],
+      "amplitude": "7/20",
+      "d0": "0.0172",
+      "native_index": 6,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "49/125",
+        "197/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "fdd8cb28f6bf79735bb1faa4247e9d07578d4fe23c908c49da7e01b75d06a48d",
+      "side": "central",
+      "theta": "0.0142",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-5901/5000",
+        "569/625"
+      ],
+      "amplitude": "7/20",
+      "d0": "0.0170",
+      "native_index": 7,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "197/500",
+        "99/250"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "e1cb1a5c6250f2969db9efe174af258b01bbfef9469dcf21f0ac6edb489e46d1",
+      "side": "central",
+      "theta": "0.0139",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-2337/2000",
+        "903/1000"
+      ],
+      "amplitude": "7/20",
+      "d0": "0.0168",
+      "native_index": 8,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "99/250",
+        "199/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "04982869b8eb256c6716421c34e3cf7617d4f8c85248624747d487f2710bde57",
+      "side": "central",
+      "theta": "0.0137",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-11567/10000",
+        "2239/2500"
+      ],
+      "amplitude": "13/40",
+      "d0": "0.0165",
+      "native_index": 9,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "199/500",
+        "2/5"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "5deb01a9c2b9846b6a21f803dadc48e9115dd8c8957f6a10fbca358d9f657a8d",
+      "side": "central",
+      "theta": "0.0134",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-1431/1250",
+        "8881/10000"
+      ],
+      "amplitude": "13/40",
+      "d0": "0.0163",
+      "native_index": 10,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "2/5",
+        "201/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "e49fd8e508c28a49d265f2a764044722d74e12e1174b19273b99c5a70790314d",
+      "side": "central",
+      "theta": "0.0132",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-11327/10000",
+        "1761/2000"
+      ],
+      "amplitude": "13/40",
+      "d0": "0.0161",
+      "native_index": 11,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "201/500",
+        "101/250"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "099c00f5f10aa48b1eb89db3f4357c001024bfd00b477f622240903d8bf7e9d1",
+      "side": "central",
+      "theta": "0.0129",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-2241/2000",
+        "1091/1250"
+      ],
+      "amplitude": "13/40",
+      "d0": "0.0158",
+      "native_index": 12,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "101/250",
+        "203/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "55fa81105c7dd821134cefd5dbb7ae9eb543a0f22583c5daceb8fe0c9649a075",
+      "side": "central",
+      "theta": "0.0126",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-5543/5000",
+        "4327/5000"
+      ],
+      "amplitude": "13/40",
+      "d0": "0.0155",
+      "native_index": 13,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "203/500",
+        "51/125"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "88aa3351d193c403e9b162152d23680f55162ee187d3e2c9acc994ccbd6042ba",
+      "side": "central",
+      "theta": "0.0124",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-10971/10000",
+        "1717/2000"
+      ],
+      "amplitude": "3/10",
+      "d0": "0.0152",
+      "native_index": 14,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "51/125",
+        "41/100"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "c8c0c489882481823744b37cc271c7359b429bc57b5397d9d0ca37a3bcb38fa1",
+      "side": "central",
+      "theta": "0.0122",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-5427/5000",
+        "4257/5000"
+      ],
+      "amplitude": "3/10",
+      "d0": "0.0150",
+      "native_index": 15,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "41/100",
+        "103/250"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "fbdd2e193c94fd0b8698257478fb07e38e3ddd9950a56b9080fa561acd0ae976",
+      "side": "central",
+      "theta": "0.0120",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-671/625",
+        "8443/10000"
+      ],
+      "amplitude": "3/10",
+      "d0": "0.0147",
+      "native_index": 16,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "103/250",
+        "207/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "3e45830c8a1a51f087bb7dc7733e15918c982d0a21493e84e7f2fb6a6b79a5b1",
+      "side": "central",
+      "theta": "0.0118",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-1327/1250",
+        "837/1000"
+      ],
+      "amplitude": "3/10",
+      "d0": "0.0143",
+      "native_index": 17,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "207/500",
+        "52/125"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "a8a03b5d94a86f2cafa993c967723ac27c39a0b3dcce6cdd0a18a2e2bf2017ed",
+      "side": "central",
+      "theta": "0.0116",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-5247/5000",
+        "1037/1250"
+      ],
+      "amplitude": "3/10",
+      "d0": "0.0140",
+      "native_index": 18,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "52/125",
+        "209/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "c2992613cc503889b92570f262c75861efaa891cf0678a7e79c35bec8702e2ad",
+      "side": "central",
+      "theta": "0.0114",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-10371/10000",
+        "8221/10000"
+      ],
+      "amplitude": "3/10",
+      "d0": "0.0137",
+      "native_index": 19,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "209/500",
+        "21/50"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "216595b6fcbc960b361eb1bca774472b36b449d68f9b30e9714dbe101cecb511",
+      "side": "central",
+      "theta": "0.0112",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-10247/10000",
+        "4073/5000"
+      ],
+      "amplitude": "3/10",
+      "d0": "0.0133",
+      "native_index": 20,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "21/50",
+        "211/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "526f2cabaa088c008b288c719ba29ec7f029e6b53d693795f983c77fd3e52b1f",
+      "side": "central",
+      "theta": "0.0109",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-10121/10000",
+        "807/1000"
+      ],
+      "amplitude": "11/40",
+      "d0": "0.0130",
+      "native_index": 21,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "211/500",
+        "53/125"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "545a8de16a8c114c77c38a024f631086bda17f82d77dbb4452a5f8383db9a756",
+      "side": "central",
+      "theta": "0.0107",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-9993/10000",
+        "999/1250"
+      ],
+      "amplitude": "11/40",
+      "d0": "0.0126",
+      "native_index": 22,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "53/125",
+        "213/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "515d6b17136ff98d543c98bd73468f0c4d4d314a4ab9957deb50cd255a3a6545",
+      "side": "central",
+      "theta": "0.0104",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-1233/1250",
+        "3957/5000"
+      ],
+      "amplitude": "11/40",
+      "d0": "0.0122",
+      "native_index": 23,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "213/500",
+        "107/250"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "94f5b89392c7b644870e60348955d07e7860ce7067c0e9ed1438fa9542205f7c",
+      "side": "central",
+      "theta": "0.0101",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-9733/10000",
+        "7833/10000"
+      ],
+      "amplitude": "11/40",
+      "d0": "0.0118",
+      "native_index": 24,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "107/250",
+        "43/100"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "b9aa4e82053f55f62b0fe619afd1cfb5c548799dbabb4fabcc1b653fe785f84b",
+      "side": "central",
+      "theta": "0.0098",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-24/25",
+        "969/1250"
+      ],
+      "amplitude": "11/40",
+      "d0": "0.0114",
+      "native_index": 25,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "43/100",
+        "54/125"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "d14e4425e5a9f6fa904d9b08a5331a28f491f44e85d5dafcbb13789a473b6598",
+      "side": "central",
+      "theta": "0.0095",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-1893/2000",
+        "7669/10000"
+      ],
+      "amplitude": "1/4",
+      "d0": "0.0109",
+      "native_index": 26,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "54/125",
+        "217/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "411a82055633849b324929f990eae7cb72f3079af55d6d4681237fa1ba683d86",
+      "side": "central",
+      "theta": "0.0092",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-9329/10000",
+        "1517/2000"
+      ],
+      "amplitude": "1/4",
+      "d0": "0.0105",
+      "native_index": 27,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "217/500",
+        "109/250"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "e863c776b0acdbcbbcaad6b3771ab698dbd0727d369d06c488740507b185bbd2",
+      "side": "central",
+      "theta": "0.0088",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-919/1000",
+        "7499/10000"
+      ],
+      "amplitude": "1/4",
+      "d0": "0.0100",
+      "native_index": 28,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "109/250",
+        "219/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "fddc8c428124ea8a1a19479cd87aca9df1f24ec8fd791f728a9b86f6d715f396",
+      "side": "central",
+      "theta": "0.0085",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-181/200",
+        "1853/2500"
+      ],
+      "amplitude": "1/4",
+      "d0": "0.0095",
+      "native_index": 29,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "219/500",
+        "11/25"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "73aba9d5baa36532703568ce91bf823d21fa7f5517c6bd81808b6a569dbf6233",
+      "side": "central",
+      "theta": "0.0081",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-2227/2500",
+        "1831/2500"
+      ],
+      "amplitude": "1/4",
+      "d0": "0.0091",
+      "native_index": 30,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "11/25",
+        "221/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "47677af7ed70c2914fd9c4a877b037fd5e4d9ebfc0a941e36d38f153089861cc",
+      "side": "central",
+      "theta": "0.0077",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-2191/2500",
+        "3617/5000"
+      ],
+      "amplitude": "9/40",
+      "d0": "0.0085",
+      "native_index": 31,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "221/500",
+        "111/250"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "b374849b0e1a190ad157239bea91dbe63973e39ace5e80af5b4f50a2da136d56",
+      "side": "central",
+      "theta": "0.0073",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-8619/10000",
+        "7143/10000"
+      ],
+      "amplitude": "9/40",
+      "d0": "0.0080",
+      "native_index": 32,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "111/250",
+        "223/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "ce4b67f42a52bc79c9a72b6fb1e70a1e1dfd30a0a17fa0ad4e9908363801894c",
+      "side": "central",
+      "theta": "0.0069",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-1059/1250",
+        "7051/10000"
+      ],
+      "amplitude": "9/40",
+      "d0": "0.0075",
+      "native_index": 33,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "223/500",
+        "56/125"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "aadeb7dd1b05bad173322cbf11fa7014dc5c3029f8a0de69a75f4133ad89bb5b",
+      "side": "central",
+      "theta": "0.0065",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-8323/10000",
+        "6957/10000"
+      ],
+      "amplitude": "9/40",
+      "d0": "0.0069",
+      "native_index": 34,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "56/125",
+        "9/20"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "08777358dd5f7b7daa1ed3726f1f6168e928f370b3dfd25662a06a079156baa2",
+      "side": "central",
+      "theta": "0.0060",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-8173/10000",
+        "6863/10000"
+      ],
+      "amplitude": "9/40",
+      "d0": "0.0064",
+      "native_index": 35,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "9/20",
+        "113/250"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "af958707b92e16ab4a6646afdf11495e4583d86bc8c760afde72bda9a2ab7f83",
+      "side": "central",
+      "theta": "0.0056",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-8021/10000",
+        "6767/10000"
+      ],
+      "amplitude": "1/5",
+      "d0": "0.0058",
+      "native_index": 36,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "113/250",
+        "227/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "b1bae967b3b401713bd65e66d8eeecc1d589bb18c491591a3f0df28bc3955ff5",
+      "side": "central",
+      "theta": "0.0051",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-3929/5000",
+        "3329/5000"
+      ],
+      "amplitude": "1/5",
+      "d0": "0.0052",
+      "native_index": 37,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "227/500",
+        "57/125"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "1/20"
+      ],
+      "row_sha256": "b6e6fed3ad5f0e77081704a9e9acdec7155e3537cb7fa3c5ce812be109066990",
+      "side": "central",
+      "theta": "0.0046",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-1537/2000",
+        "817/1250"
+      ],
+      "amplitude": "1/5",
+      "d0": "0.0046",
+      "native_index": 38,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "57/125",
+        "229/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "459/10000"
+      ],
+      "row_sha256": "4e1cbbe65473afed367dc7c6e0dd8b9c724daf0f21ffd0118d0c4babf124c632",
+      "side": "central",
+      "theta": "0.0041",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-7509/10000",
+        "641/1000"
+      ],
+      "amplitude": "1/5",
+      "d0": "0.0039",
+      "native_index": 39,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "229/500",
+        "23/50"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "79/2000"
+      ],
+      "row_sha256": "364cebd31f1a21a8137725c20971f546bb887fb9d96cf2993dbc7ff3bbb7b24c",
+      "side": "central",
+      "theta": "0.0035",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-733/1000",
+        "157/250"
+      ],
+      "amplitude": "1/5",
+      "d0": "0.0033",
+      "native_index": 40,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "23/50",
+        "231/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "329/10000"
+      ],
+      "row_sha256": "89e45c3b7368b8345b5abb25ded39ea6d1fb6b3115bcabf5345a2eefbb777317",
+      "side": "central",
+      "theta": "0.0029",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-1787/2500",
+        "6147/10000"
+      ],
+      "amplitude": "1/5",
+      "d0": "0.0026",
+      "native_index": 41,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "231/500",
+        "58/125"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "261/10000"
+      ],
+      "row_sha256": "d69e52c77a2931b055d15b060c2a5512a342791cef44896ad946f07130dee377",
+      "side": "central",
+      "theta": "0.0024",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-1741/2500",
+        "6009/10000"
+      ],
+      "amplitude": "1/5",
+      "d0": "0.0020",
+      "native_index": 42,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "58/125",
+        "233/500"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "191/10000"
+      ],
+      "row_sha256": "d347f82771d3e22fda8a5dc92cb69ef3a4fec7907198c6f38190ef7740506002",
+      "side": "central",
+      "theta": "0.0018",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-847/1250",
+        "1467/2500"
+      ],
+      "amplitude": "1/5",
+      "d0": "0.0013",
+      "native_index": 43,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "233/500",
+        "117/250"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "119/10000"
+      ],
+      "row_sha256": "87e2da11d2a1b4035cbd54eda7d65153a6eba870301f7e7aef715c0e2ea195f1",
+      "side": "central",
+      "theta": "0.0012",
+      "zero_noise": "separate Bernoulli argument"
+    },
+    {
+      "H": [
+        "-3293/5000",
+        "2861/5000"
+      ],
+      "amplitude": "1/5",
+      "d0": "0.0006",
+      "native_index": 44,
+      "noise_lower_endpoint_open": true,
+      "p": [
+        "117/250",
+        "47/100"
+      ],
+      "phase": [
+        "-1/2",
+        "1/2"
+      ],
+      "positive_noise": [
+        "0",
+        "9/2000"
+      ],
+      "row_sha256": "049af21750e88ef25e64e1ae70a9fd248b6c1ed08aedbfe2be96d1d4d7464e51",
+      "side": "central",
+      "theta": "0.0005",
+      "zero_noise": "separate Bernoulli argument"
+    }
+  ],
+  "source_pins": {
+    "conditional_input47.json": "b9d2aa15ad96181f5a8eb846e76ae296d2c2c8ed1a5975c6f389c2f7d14ff2b7",
+    "left270_input47_table.json": "4b7bb259e469ee57ca6a61d89fd0b3385443508129138899fe597fd82dc9521a"
+  },
+  "status": "PASS_ALL83_UNIFORM47_TINY_INPUT_APPLICABILITY",
+  "strict_reserve_beyond_original_target": "252847053/18800000000"
+}

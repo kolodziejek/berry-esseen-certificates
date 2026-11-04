@@ -1,0 +1,23 @@
+{
+  "execution_scope": "complete fixed polynomial/normalization/input census plus corruptions, no integral or acquisition replay",
+  "jobs": [
+    {
+      "job": "full_cover",
+      "returncode": 0,
+      "status": "PASS_ALL83_UNIFORM47_TINY_INPUT_APPLICABILITY"
+    },
+    {
+      "job": "object_controls",
+      "returncode": 0,
+      "status": "PASS_JOINT_COUNT_CORRUPTION_AND_ACTUAL_LAW_CONTROLS"
+    },
+    {
+      "job": "input_controls",
+      "returncode": 0,
+      "status": "PASS_ALL83_INPUT_CORRUPTION_CONTROLS"
+    }
+  ],
+  "mathematical_scope": "all83 inherited acquired uniform47 TINY input rows; C>=.4 and actual same-law support/centering remain premises",
+  "source_hashes_unchanged": true,
+  "status": "PASS_PORTABLE_ALL83_TINY_JOINT_COUNT"
+}

@@ -1,0 +1,181 @@
+{
+  "acquisition_status": "existing acquired inputs preserved; no new acquisition replay",
+  "format": "JOINT_COUNT_TWO_NATIVE_ROWS_V1",
+  "rows": [
+    {
+      "id": "central",
+      "input_file": "native/conditional_input47.json",
+      "input_index": 10,
+      "scope": {
+        "N": 47,
+        "amplitude": "17/40",
+        "noise": [
+          "0",
+          "1/20"
+        ],
+        "noise_zero": "separate Bernoulli case",
+        "phase": [
+          "-1/2",
+          "1/2"
+        ]
+      },
+      "target": "rho_B(C-C_B)<-lambda/1000",
+      "unchanged_row": {
+        "A_lo": "0.7783",
+        "B_lo": "1.1788",
+        "D": "0.1944",
+        "H_minus": "1.1448",
+        "H_plus": "0.8881",
+        "T": "0.6208",
+        "beta_hi": "0.2106",
+        "beta_lo": "0.1801",
+        "candidate_amplitude": ".375",
+        "d0": "0.0163",
+        "index": 10,
+        "lambda_max": "0.1491",
+        "p": [
+          "2/5",
+          "201/500"
+        ],
+        "quadratics": [
+          {
+            "A": "0.5140",
+            "Fminus": "0.3103",
+            "Fplus": "0.0131",
+            "Qbudget": "0.6662",
+            "Qraw": "0.4628"
+          },
+          {
+            "A": "0.5591",
+            "Fminus": "0.3103",
+            "Fplus": "0.0131",
+            "Qbudget": "0.7308",
+            "Qraw": "0.5169"
+          },
+          {
+            "A": "0.5263",
+            "Fminus": "0.3195",
+            "Fplus": "0.0057",
+            "Qbudget": "0.6804",
+            "Qraw": "0.4770"
+          },
+          {
+            "A": "0.5729",
+            "Fminus": "0.3195",
+            "Fplus": "0.0057",
+            "Qbudget": "0.7458",
+            "Qraw": "0.5318"
+          }
+        ],
+        "rho": "1.1122",
+        "theta": "0.0132"
+      }
+    },
+    {
+      "id": "left",
+      "input_file": "native/left270_input47_table.json",
+      "input_index": 28,
+      "scope": {
+        "N": 47,
+        "amplitude": "17/40",
+        "noise": [
+          "0",
+          "1/20"
+        ],
+        "noise_zero": "separate Bernoulli case",
+        "phase": [
+          "-1/2",
+          "1/2"
+        ]
+      },
+      "target": "rho_B(C-C_B)<-lambda/1000",
+      "unchanged_row": {
+        "A_lo": "71/100",
+        "B_lo": "802/625",
+        "D": "1383/5000",
+        "H_minus": "6669/5000",
+        "H_plus": "5023/5000",
+        "T": "8843/10000",
+        "beta_hi": "2909/10000",
+        "beta_lo": "2569/10000",
+        "d0": "167/10000",
+        "index": 28,
+        "lambda_max": "821/5000",
+        "p": [
+          "9/25",
+          "181/500"
+        ],
+        "quadratics": [
+          {
+            "A": "3677/5000",
+            "Fminus": "1989/5000",
+            "Fplus": "-107/10000",
+            "Qbudget": "3589/5000",
+            "Qraw": "5081/10000"
+          },
+          {
+            "A": "1967/2500",
+            "Fminus": "1989/5000",
+            "Fplus": "-107/10000",
+            "Qbudget": "1941/2500",
+            "Qraw": "1393/2500"
+          },
+          {
+            "A": "757/1000",
+            "Fminus": "258/625",
+            "Fplus": "-57/2500",
+            "Qbudget": "1837/2500",
+            "Qraw": "5251/10000"
+          },
+          {
+            "A": "8103/10000",
+            "Fminus": "258/625",
+            "Fplus": "-57/2500",
+            "Qbudget": "7941/10000",
+            "Qraw": "23/40"
+          }
+        ],
+        "rho": "2337/2000",
+        "theta": "3/200"
+      }
+    }
+  ],
+  "source_pins": [
+    {
+      "copy": "native/tiny47wide_normalization.py",
+      "sha256": "f1e2606359e321d17db11c7240467a597f00094d1747d40ed4f69ceae18d4b71",
+      "size": 4221,
+      "source": "work/below50_20260929/local/tiny47wide_normalization.py"
+    },
+    {
+      "copy": "native/tiny47wide_kernel.py",
+      "sha256": "daa468b6b825dbb692c8a1930cc1cf94ffd9bd143c354fe22dde9575752b2626",
+      "size": 4815,
+      "source": "work/below50_20260929/local/tiny47wide_kernel.py"
+    },
+    {
+      "copy": "native/conditional_input47.json",
+      "sha256": "b9d2aa15ad96181f5a8eb846e76ae296d2c2c8ed1a5975c6f389c2f7d14ff2b7",
+      "size": 50654,
+      "source": "work/below50_20260929/local/conditional_input47.json"
+    },
+    {
+      "copy": "native/left270_input47_table.json",
+      "sha256": "4b7bb259e469ee57ca6a61d89fd0b3385443508129138899fe597fd82dc9521a",
+      "size": 44521,
+      "source": "work/below50_20260929/local/left270_input47_table.json"
+    },
+    {
+      "copy": "native/sperner47_contract.py",
+      "sha256": "f815e4d0b0124709f4f5922726cd20ef224d115dbd6251de6a633c955c60b8a2",
+      "size": 2225,
+      "source": "work/below50_20260929/local/sperner47_contract.py"
+    },
+    {
+      "copy": "native/left_sperner47_contract.py",
+      "sha256": "4444fbd3c361ca76f21fe72f67059a9fbe44a045c45dc3b72d64b4c2813bf19e",
+      "size": 2175,
+      "source": "work/below50_20260929/local/left_sperner47_contract.py"
+    }
+  ]
+}

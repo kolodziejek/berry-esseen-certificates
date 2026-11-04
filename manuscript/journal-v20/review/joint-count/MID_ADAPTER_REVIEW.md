@@ -1,0 +1,7 @@
+# Source-bound MID adapter review
+
+The complete `root/accept_mid_bound.py` was read after the independent MID audit. Its explicit `.08` configuration agrees with the independently recomputed and recorded normalizer. It runs all original normalization gates, binds the amplitude, inward gap, incoming ratio, derivative constants and actual variance enclosure to the constants used by the majorant checker, and checks the unchanged strict score target.
+
+Its pinned sibling reader is the already reviewed complete-83-row applicability reader. The adapter recovers each original acquired noise ceiling from the same native row, rather than reusing the reader's `.05`-truncated output. It then intersects with `.08`, retaining an empty MID interval when the native ceiling is below `.05`. Both the exact row probability interval and the native index are preserved. This agrees with the independent 71-active/12-empty classification in `audit_mid01`.
+
+No defect was found. The score premise `C>=.4`, actual same-law conditional structure, acquired support/threshold/variance hypotheses and the analytic normalization/joint-count theorems are explicitly retained. No acquisition or integral replay is inferred from the adapter. The selected MID files are staged byte-for-byte in `audit/portable/mid`, with a fixed sibling `../tiny` layout and a complete package-file manifest. The independent portable controls check the leaf identities and negative controls without historical workspace paths.

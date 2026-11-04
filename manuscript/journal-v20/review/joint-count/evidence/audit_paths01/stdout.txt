@@ -1,0 +1,26 @@
+{
+  "actual_iid_law_families": [
+    "symmetric",
+    "skew",
+    "skew_reflection",
+    "deterministic_zero",
+    "deterministic_one",
+    "tiny_amplitude",
+    "tiny_outward_atom",
+    "bernoulli"
+  ],
+  "continuous_domain_proof_claimed": false,
+  "exact_event_collisions": 13662,
+  "expectation_identity_checks": 1122,
+  "independent_iid_convolution_equalities": 72,
+  "joint_path_checks": 122370,
+  "native_acquisition_replayed": false,
+  "negative_controls": {
+    "closed_outgoing_at_collision": true,
+    "false_inward_spacing": true,
+    "quadratic_without_abs_phase_guard": true,
+    "quartic_without_phase_guard": true
+  },
+  "scalar_and_staircase_checks": 5220,
+  "status": "PASS_FINITE_ADVERSARIAL_CONTROLS"
+}
