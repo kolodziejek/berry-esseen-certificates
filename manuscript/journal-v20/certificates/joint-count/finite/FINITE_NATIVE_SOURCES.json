@@ -1,0 +1,155 @@
+{
+  "families": {
+    "central40": {
+      "count": 48,
+      "gate": "sharp",
+      "n": [
+        40,
+        42
+      ]
+    },
+    "central42_48": {
+      "count": 47,
+      "gate": "sharp",
+      "n": [
+        42,
+        48
+      ]
+    },
+    "left40_42": {
+      "count": 49,
+      "gate": "binomial_reserve",
+      "n": [
+        40,
+        42
+      ]
+    },
+    "left42_48": {
+      "count": 45,
+      "gate": "sharp",
+      "n": [
+        42,
+        48
+      ]
+    },
+    "positive39": {
+      "count": 78,
+      "gate": "positive_allowance",
+      "n": [
+        39,
+        39
+      ]
+    }
+  },
+  "files": [
+    {
+      "path": "finite_native_sources/positive39/normalization.py",
+      "sha256": "959456789bd98f6c2aac9c7d38e188f7c72a068deb00a61fb3f39fda4e707fb9",
+      "size": 8555,
+      "source": "work/extension_20261030/finite/positive39-source01/payload/work/toward40_20261007/entry/acquisition39/comparison/normalization.py"
+    },
+    {
+      "path": "finite_native_sources/positive39/signed_normalization.py",
+      "sha256": "baeb74513bf40f460054f78d0f77d166723b7e44a2df112a0723b1d97a142dfb",
+      "size": 1178,
+      "source": "work/extension_20261030/finite/positive39-source01/payload/work/toward40_20261007/entry/acquisition39/comparison/signed_normalization.py"
+    },
+    {
+      "path": "finite_native_sources/positive39/targets39_candidate.json",
+      "sha256": "50fe9de2fe3027d2877d3ea12342b48f4777dd00b7954f1f9e2b8ab004d7e8b3",
+      "size": 93014,
+      "source": "work/extension_20261030/finite/positive39-source01/payload/work/toward40_20261007/entry/acquisition39/comparison/targets39_candidate.json"
+    },
+    {
+      "path": "finite_native_sources/central40/normalization.py",
+      "sha256": "3525584b3cf0e9d98b6d3408705f85648bc644081a682e5b6904cac084181603",
+      "size": 8571,
+      "source": "work/extension_20261030/bridge/4042_audit_sources/companions9/payload/work/toward40_20261007/root/central_compare/normalization.py"
+    },
+    {
+      "path": "finite_native_sources/central40/signed_normalization.py",
+      "sha256": "baeb74513bf40f460054f78d0f77d166723b7e44a2df112a0723b1d97a142dfb",
+      "size": 1178,
+      "source": "work/extension_20261030/bridge/4042_audit_sources/companions9/payload/work/toward40_20261007/root/central_compare/signed_normalization.py"
+    },
+    {
+      "path": "finite_native_sources/central40/targets.json",
+      "sha256": "424276b99967bf078d4fbd9fa9d9bfb53234b19cb449fa6bf8ec92da786af451",
+      "size": 50858,
+      "source": "work/extension_20261030/bridge/4042_audit_sources/companions9/payload/work/toward40_20261007/root/central_compare/targets.json"
+    },
+    {
+      "path": "finite_native_sources/left40_42/normalization.py",
+      "sha256": "3525584b3cf0e9d98b6d3408705f85648bc644081a682e5b6904cac084181603",
+      "size": 8571,
+      "source": "work/extension_20261030/bridge/4042_audit_sources/companions9/payload/work/toward40_20261007/local/actual_left40_final/normalization.py"
+    },
+    {
+      "path": "finite_native_sources/left40_42/signed_normalization.py",
+      "sha256": "baeb74513bf40f460054f78d0f77d166723b7e44a2df112a0723b1d97a142dfb",
+      "size": 1178,
+      "source": "work/extension_20261030/bridge/4042_audit_sources/companions9/payload/work/toward40_20261007/local/actual_left40_final/signed_normalization.py"
+    },
+    {
+      "path": "finite_native_sources/left40_42/targets.json",
+      "sha256": "19b1d97c34afcfda60d20bc7bdea9ccd6a364a2fbf7daa13063d3ad9abf24ee5",
+      "size": 52125,
+      "source": "work/extension_20261030/bridge/4042_audit_sources/companions9/payload/work/toward40_20261007/local/actual_left40_final/targets.json"
+    },
+    {
+      "path": "finite_native_sources/left40_42/binomial40.json",
+      "sha256": "d10c881485f47133e71e9652be86de104f7d460605675ff65ad052a35070a19e",
+      "size": 31562,
+      "source": "work/extension_20261030/bridge/4042_audit_sources/companions9/payload/work/toward40_20261007/local/actual_left40_final/binomial40.json"
+    },
+    {
+      "path": "finite_native_sources/left40_42/binomial41.json",
+      "sha256": "708262a3dabec3dcf89cfd52452028efd4651b65171fb79356c9af04b0e84b07",
+      "size": 31582,
+      "source": "work/extension_20261030/bridge/4042_audit_sources/companions9/payload/work/toward40_20261007/local/actual_left40_final/binomial41.json"
+    },
+    {
+      "path": "finite_native_sources/left40_42/binomial42.json",
+      "sha256": "dbde33e51918312cea8f783c004e177cf29f6a76ddb1533bb4110e47708e1bac",
+      "size": 31584,
+      "source": "work/extension_20261030/bridge/4042_audit_sources/companions9/payload/work/toward40_20261007/local/actual_left40_final/binomial42.json"
+    },
+    {
+      "path": "finite_native_sources/left40_42/gap_table.py",
+      "sha256": "4dfb85f17d5c307aa9b333ad0b8f4d2dad078c53c85660a654c39df7f4e68a34",
+      "size": 961,
+      "source": "work/extension_20261030/bridge/4042_audit_sources/companions9/payload/work/toward40_20261007/local/actual_left40_final/gap_table.py"
+    },
+    {
+      "path": "finite_native_sources/left40_42/fixed_inputs.json",
+      "sha256": "b7a9379d473d31bfcc574ec80d06103ae02729d0eea7b504bb8eec1d2731a06d",
+      "size": 444,
+      "source": "work/extension_20261030/bridge/4042_audit_sources/companions9/payload/work/toward40_20261007/local/actual_left40_final/fixed_inputs.json"
+    },
+    {
+      "path": "finite_native_sources/left42_48/normalization_piecewise42_v2.py",
+      "sha256": "acc4055234a2629298cb665b12474ba5a9f35ed979dd3d238fffe9afd4aa5708",
+      "size": 8445,
+      "source": "runs/extension_20261030/bridge/local42_native01/tasks/61.native.44.local.left42_tiny_actual_accept01/capsule/work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_tiny_final/normalization_piecewise42_v2.py"
+    },
+    {
+      "path": "finite_native_sources/left42_48/targets.json",
+      "sha256": "bf0801eeecbcfea259ffa8ad042404aab0dcc6d1459e917ff1cf7307d4cda84e",
+      "size": 11239,
+      "source": "runs/extension_20261030/bridge/local42_native01/tasks/61.native.44.local.left42_tiny_actual_accept01/capsule/work/toward40_20261007/audit43/capsule/work/below49_20261006/local/left42_tiny_final/targets.json"
+    },
+    {
+      "path": "finite_native_sources/central42_48/tiny42_normalization.py",
+      "sha256": "3650f39f618def7615d8be20ce8b9efd28e16202102fb8fa76dd8687deff4a6c",
+      "size": 7986,
+      "source": "runs/extension_20261030/bridge/local42_native01/tasks/61.low.central42_v2.30.minus/capsule/work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2/tiny42_normalization.py"
+    },
+    {
+      "path": "finite_native_sources/central42_48/new_central42_targets.json",
+      "sha256": "c281ad46d97c0c5054609a88727c079e509fa1e07837bb856d470d7e2171f1c0",
+      "size": 47668,
+      "source": "runs/extension_20261030/bridge/local42_native01/tasks/61.low.central42_v2.30.minus/capsule/work/toward40_20261007/audit43/capsule/work/below49_20261006/local/central42_v2/new_central42_targets.json"
+    }
+  ],
+  "format": "FINITE_NATIVE_NORMALIZATION_SOURCES_V1"
+}

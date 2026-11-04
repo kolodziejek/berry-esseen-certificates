@@ -1,0 +1,74 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hyphens]{url}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+\setlength{\emergencystretch}{2em}
+\setcounter{tocdepth}{1}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{condition}[theorem]{Condition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\CE}{C_{\mathrm E}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\pos}[1]{(#1)_+}
+\newcommand{\ind}{\mathbf1}
+\newcommand{\iid}{\mathrm{iid}}
+\title{The sharp iid Berry--Esseen inequality:\\
+the mathematical argument and its certificates\thanks{AI systems were used
+extensively in mathematical exploration, checking programs and manuscript
+revision. Their output and agreement are not substitutes for mathematical
+proof or independent human review. The authors are responsible for the content.}}
+\author{Bartosz Ko{\l}odziejek \and Kacper Rodziewicz}
+\date{4 November 2026}
+\begin{document}
+\maketitle
+\begin{center}\small
+Revision for mathematical review.
+\end{center}
+\begin{abstract}
+We give a computer-assisted proof of the sharp iid Berry--Esseen
+inequality with constant $(3+\sqrt{10})/(6\sqrt{2\pi})$.
+The argument excludes a first failing index using a finite sharp base
+and two local comparisons. Extremal contact and a nonnegative support-gap
+defect force a possible maximizer near a two-point law; conditional
+binomial counts then measure the effect of its remaining fluctuations.
+Fourier bounds and exact certificates establish the quantitative
+inequalities on complete parameter regions. We prove their analytic
+reductions and explain certificate construction, acceptance and
+independent reproduction. Equality in the uniform local comparison
+also gives a strict bound for each sample size at least $47$.
+\end{abstract}
+\begingroup\small\tableofcontents\endgroup
+\input{sections/introduction}
+\input{sections/core}
+\input{sections/smoothing}
+\input{sections/certificates}
+\input{sections/fourier}
+\input{sections/finite}
+\input{sections/local}
+\input{sections/composition}
+\begingroup\small\raggedright
+\urlstyle{same}
+\bibliographystyle{plainnat}
+\bibliography{references-classical,references-modern-a,references-modern-b,references-added}
+\endgroup
+\end{document}

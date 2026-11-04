@@ -1,0 +1,38 @@
+{
+  "files": [
+    {
+      "count": 48,
+      "family": "central40",
+      "path": "finite_inputs/central40.json",
+      "sha256": "4522b7f7d861c52ad65539f880979bad82b0ecdc9afc398e1d88f41261a43764"
+    },
+    {
+      "count": 49,
+      "family": "left40_42",
+      "path": "finite_inputs/left40_42.json",
+      "sha256": "79eedc51d48eb141f94b5e2e6346ddaee26ac17e1949f1bbaad633d907484ecc"
+    },
+    {
+      "count": 45,
+      "family": "left42_48",
+      "path": "finite_inputs/left42_48.json",
+      "sha256": "2dce8b1871e7772fe7860db4694eeb49273619bd420afcfec554a05b1e582cee"
+    },
+    {
+      "count": 78,
+      "family": "positive39",
+      "path": "finite_inputs/positive39.json",
+      "sha256": "1b838032f742f6d3a1430b9e943656f50ccc2c97b038f86b4ee122cb1f733f2b"
+    },
+    {
+      "path": "finite_inputs/tiny42_normalization.py",
+      "sha256": "3650f39f618def7615d8be20ce8b9efd28e16202102fb8fa76dd8687deff4a6c"
+    },
+    {
+      "path": "finite_inputs/new_central42_targets.json",
+      "sha256": "c281ad46d97c0c5054609a88727c079e509fa1e07837bb856d470d7e2171f1c0"
+    }
+  ],
+  "format": "FINITE_TINY_FEASIBILITY_INPUTS_V1",
+  "scope": "exact feasibility against selected native contracts; no historical acceptance is inferred from stored gates"
+}

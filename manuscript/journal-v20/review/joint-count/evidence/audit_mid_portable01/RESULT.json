@@ -1,0 +1,84 @@
+{
+  "status": "PASS_RELOCATED_MID_PACKAGE",
+  "actions": [
+    {
+      "command": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "accept_mid.py",
+        "proof_objects.json"
+      ],
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/joint_count_20261104/audit_mid_portable01/workspace/mid",
+      "returncode": 0,
+      "elapsed_seconds": 0.6768465840141289,
+      "stdout_sha256": "8eff275d51145613ad51fbb7686db612eb9970e5f1520b98790127ee599a5705",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "accept_mid_bound.py",
+        "../tiny",
+        "proof_objects.json"
+      ],
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/joint_count_20261104/audit_mid_portable01/workspace/mid",
+      "returncode": 0,
+      "elapsed_seconds": 0.7648262080037966,
+      "stdout_sha256": "ac14f64f5a56daee1f80442a66e2ed8309c7f4f37080c0fcb4fbcf83af2d7a57",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "controls.py",
+        "../tiny"
+      ],
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/joint_count_20261104/audit_mid_portable01/workspace/mid",
+      "returncode": 0,
+      "elapsed_seconds": 2.2769530420191586,
+      "stdout_sha256": "497dfb77021667110eafedd0809b3ccb41891db703efd43a04811e4d63ff85b2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "all31_source_files_unchanged": true,
+  "source_file_count": 31,
+  "input_sha256_after": {
+    "mid/PACKAGE_FILES.json": "d2b16484c295d0f00741cdea106952ccbcf971569000e6aa962144312a939aaf",
+    "mid/README.md": "b05dd4b53e9dcf0201ccf6cc3bc0e2d2e3fa90b30f7e0c3441f101a751cfdd3f",
+    "mid/accept_mid.py": "abdd5d28b654e2fe52b757789c932b89eae17df820e96bd84172777877b272ff",
+    "mid/accept_mid_bound.py": "29cfffa6637529aa7fdde2c1b2feeed18c7acbe527d9cd3f11f4ee166643fc93",
+    "mid/controls.py": "5e67b7699896fd596e6564007b6444508341822d6e21286041243dee33c8bf05",
+    "mid/mid_math.py": "2d11ca186c14703abed09be9997a0dd7b7694d13baafc1021e6117e82656a99f",
+    "mid/proof_objects.json": "b1f882b745e410dd34af9c2dbe609e5dfef47687a3f62bc4564a1cb57473331f",
+    "mid/proofs/ADAPTER_REVIEW.md": "fc15dd61f1a2ed8f477f8085be779673324aa645518181493e6179bf9361e32a",
+    "mid/proofs/EXPECTATION_RULE.md": "3a725574e0503bf6b0e833d968e901e0d5953d75a4f03a4b0dd70ec91cb8e659",
+    "mid/proofs/FIXED_PHASE_QUARTIC.md": "58afdcce33d1a7b27c8e2bb2840a8495d1922113fa740a740ad618a9578e1c47",
+    "mid/proofs/INDEPENDENT_REVIEW.md": "b13c9a2364ae945c16a46117d55d2f3d2191ae98166b0556d5761d8a18db019f",
+    "tiny/EXPECTATION_RULE.md": "3a725574e0503bf6b0e833d968e901e0d5953d75a4f03a4b0dd70ec91cb8e659",
+    "tiny/FILES.json": "3d7613af154b99ed53a48445a47e66b7918f172c775b1d7cd5593dced363cbe4",
+    "tiny/README.md": "4c961ab832f3080baeaadbaaddf3e83f9fb754f1c02a54829a227babb1a2b4b9",
+    "tiny/RESULT_SCOPE.md": "854fed688cfd06fb64fb2ea2ebc5fe60e5d0393518ddded874656f20f63b4a93",
+    "tiny/SELECTED_INPUTS.json": "4ab002fb70633deb47a07ac33d6e97f27ceccee2e19e96d9abe8a1f4e6edf8fc",
+    "tiny/accept.py": "0a2445616087c46fd3d6ca680044eb50341ad084f549e85ac367c09f4080096b",
+    "tiny/audit_full_inputs.py": "f3ccf04e0d7c4a5dbb5138a985a40a6211a2a7f6ee894c03f4282b9962f78301",
+    "tiny/capture.py": "e8a7e1b87cf0aeaaef5882ee0cefba0e64ebfd664facd3cbcc8c22a4980f4f21",
+    "tiny/capture_all83.py": "2411a06b24f60336338f780a5f71e60e67e405a3f3e15708725d8f8808b15b6a",
+    "tiny/controls.py": "b580c4866e5de83197e83ea7231ab5cd3ab3842ca0ef187f2b99d3a198bad0b5",
+    "tiny/full_input_controls.py": "0c6636ce3e7131c21dce8ce30449bc485213b7d5caf3569289bb076fd76c84a1",
+    "tiny/model.py": "8e8b6a6ff1f2728a1a793244c95f79e8f789db1cecd95a8e7b7a49ff8d56e752",
+    "tiny/native/conditional_input47.json": "b9d2aa15ad96181f5a8eb846e76ae296d2c2c8ed1a5975c6f389c2f7d14ff2b7",
+    "tiny/native/left270_input47_table.json": "4b7bb259e469ee57ca6a61d89fd0b3385443508129138899fe597fd82dc9521a",
+    "tiny/native/left_sperner47_contract.py": "4444fbd3c361ca76f21fe72f67059a9fbe44a045c45dc3b72d64b4c2813bf19e",
+    "tiny/native/sperner47_contract.py": "f815e4d0b0124709f4f5922726cd20ef224d115dbd6251de6a633c955c60b8a2",
+    "tiny/native/tiny47wide_kernel.py": "daa468b6b825dbb692c8a1930cc1cf94ffd9bd143c354fe22dde9575752b2626",
+    "tiny/native/tiny47wide_normalization.py": "f1e2606359e321d17db11c7240467a597f00094d1747d40ed4f69ceae18d4b71",
+    "tiny/polynomials.py": "d03ff12f385ddee6772c6be992172ec02acc688d3569a62d4eabecba4b2f96ae",
+    "tiny/proof_objects.json": "bb006dac400fa56281910cba4fdf6ed9a8319461d568ce56c8631d5ecbaad020"
+  },
+  "native_acquisition_or_integral_replay": false
+}

@@ -1,0 +1,40 @@
+{
+  "binomial_reserves": "unchanged inherited inputs; no new binomial probability acceptance",
+  "direct_formula_checks": 12816,
+  "eta_counts": {
+    "-1/20": 11,
+    "0": 12,
+    "1/10": 244
+  },
+  "exact_Bernstein_coefficients": 65148,
+  "families": {
+    "central40": 48,
+    "central42_48": 47,
+    "left40_42": 49,
+    "left42_48": 45,
+    "positive39": 78
+  },
+  "negative_controls": [
+    "missing_finite_row",
+    "reordered_families",
+    "boolean_index",
+    "changed_original_score_target",
+    "missing_phase_branch",
+    "negative_coefficient",
+    "changed_eta_with_old_polynomial",
+    "negative_eta_relabelled_zero",
+    "negative_repair",
+    "mass_above_one",
+    "nonpositive_variance_lower"
+  ],
+  "new_acquisition_or_Fourier_execution": false,
+  "original_native_gates": 17115,
+  "positive39_rows_with_smaller_actual_noise_ceiling": 18,
+  "rows": 267,
+  "status": "PASS_INDEPENDENT_FINITE267_AUDIT",
+  "wrong_negative_eta_endpoint_rule": {
+    "eta": "-1/20",
+    "incorrect_lower_endpoint_product": "-419165787/12500000000",
+    "valid_minimum": "-6859/125000"
+  }
+}

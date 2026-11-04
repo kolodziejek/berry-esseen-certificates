@@ -1,0 +1,23 @@
+{
+  "empty_MID_rows": 12,
+  "method": "five exact evaluation points identify each degree-at-most-four leaf polynomial",
+  "negative_controls": [
+    "old_row69_false_far_ray",
+    "missing_left_ray",
+    "missing_right_ray",
+    "missing_phase_cell",
+    "changed_phase_boundary",
+    "negative_fourth_coefficient",
+    "changed_polynomial_constant",
+    "swapped_rays",
+    "boolean_row_index",
+    "negative_Bernstein_leaf"
+  ],
+  "new_acquisition_or_integral_replay": false,
+  "nonempty_MID_rows": 71,
+  "polynomial_identity_leaves": 4243,
+  "proof_sha256": "b1f882b745e410dd34af9c2dbe609e5dfef47687a3f62bc4564a1cb57473331f",
+  "source_bound_input_rows": 83,
+  "status": "PASS_PORTABLE_MID_CONTROLS",
+  "strict_reserve": "5359299/400000000"
+}

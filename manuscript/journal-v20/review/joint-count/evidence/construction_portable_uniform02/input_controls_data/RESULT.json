@@ -1,0 +1,77 @@
+{
+  "cases": [
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/joint_count_20261104/construction_portable_uniform02/input_controls_data/missing_last_central/audit_full_inputs.py"
+      ],
+      "case": "missing_last_central",
+      "elapsed_seconds": 0.023758333001751453,
+      "mutated_input_sha256": "1febae3ee57a6bc8dad4859feed290e0774ac4085cb0f1f9c70877651eb20bd2",
+      "returncode": 1,
+      "stderr_sha256": "9d01bee23b8efe7c65e19f2d58e216dd9e6cc35872b73f4cb0fc39bf929711ca",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/joint_count_20261104/construction_portable_uniform02/input_controls_data/duplicated_last_central/audit_full_inputs.py"
+      ],
+      "case": "duplicated_last_central",
+      "elapsed_seconds": 0.024035916023422033,
+      "mutated_input_sha256": "35a69cdb9e32d64d61e653f5596519846c3ea162c6784b6bb7acfba06537932a",
+      "returncode": 1,
+      "stderr_sha256": "cf07548fc56ae8820484273c258792efc878d67a3cdaeef6d844ad6c97a58d0f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/joint_count_20261104/construction_portable_uniform02/input_controls_data/reordered_left/audit_full_inputs.py"
+      ],
+      "case": "reordered_left",
+      "elapsed_seconds": 0.02391883300151676,
+      "mutated_input_sha256": "74cb74f6c8add229309102ff709d60b6c816b953bda24b8842e7278821a5d0b9",
+      "returncode": 1,
+      "stderr_sha256": "9bf462d6b11a5b695ad05f089a7fced3ec5b35cfc70f3515c0b6c56682162ad5",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/joint_count_20261104/construction_portable_uniform02/input_controls_data/gap_in_unselected_row/audit_full_inputs.py"
+      ],
+      "case": "gap_in_unselected_row",
+      "elapsed_seconds": 0.024196749960538,
+      "mutated_input_sha256": "9294568a54f5aefa981da3b80ee1ff00637c4218bb0e84d6bf8917ca42f6698d",
+      "returncode": 1,
+      "stderr_sha256": "f00d0acc022cd67b8d4e7378ab4ce0f11366b69ccd8e88ef4062b534c0a625ad",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/joint_count_20261104/construction_portable_uniform02/input_controls_data/zero_noise_ceiling/audit_full_inputs.py"
+      ],
+      "case": "zero_noise_ceiling",
+      "elapsed_seconds": 0.024191832984797657,
+      "mutated_input_sha256": "04629f6aa1d015927df68686373c65d5bf1598103b7df1112000b33e7286d158",
+      "returncode": 1,
+      "stderr_sha256": "2be83e00569dc4a329ec64da6ca68d1445b0ba8511152eb3225927c4f1879c75",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "rejected": 5,
+  "scope": "externally fixed full input identity; no source pin is relaxed to accept a malformed cover",
+  "status": "PASS_ALL83_INPUT_CORRUPTION_CONTROLS"
+}
