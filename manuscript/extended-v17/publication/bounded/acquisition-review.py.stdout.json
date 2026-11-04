@@ -1,0 +1,172 @@
+{
+  "status": "PASS_INDEPENDENT_ACQUISITION_JOIN_REVIEW",
+  "scalar_gate_count": 61,
+  "gates": {
+    "sqrt10 lower": "2662311/2500000000000000",
+    "sqrt10 upper": "5259630921/1000000000000000000",
+    "initial defect": "34667311/50000000",
+    "central gap product": "105763883/150000000",
+    "product below 1": "44236117/150000000",
+    "minimizer above .36": "117722339/2000000000",
+    "minimizer below .48": "6113883/100000000",
+    "coarse square base 9/25": "1334378571/31250000000",
+    "coarse probability exclusion 9/25": "31820316388391768411200742852984635201763/91552734375000000000000000000000000000000000",
+    "coarse square base 12/25": "1439645379/31250000000",
+    "coarse probability exclusion 12/25": "70206179664935120853116675062292339820563/91552734375000000000000000000000000000000000",
+    "ell greater than 1.67": "1180133/37500000",
+    "positive residual price": "2590786779913319/62500000000000000",
+    "negative residual price": "23522786516863067/62500000000000000",
+    "theta below .006": "319/62500",
+    "ell greater than 1.99": "159/10000",
+    "inward below .2": "4791649/488281250",
+    "all direct noise branches positive": "22303488087/5000000000",
+    "all direct branches increasing in d": "1758713167017/500000000000",
+    "large inward endpoint impossible": "443041/1562500000",
+    "theta monotonic before variance removal": "1989253685097/156250000000",
+    "left fine base": "37936011/1600000000",
+    "left fine square": "113740930592121/2560000000000000000",
+    "right fine direct": "2736410267/500000000000",
+    "fine minimizer left": "87722339/2000000000",
+    "fine minimizer right": "4613883/100000000",
+    "theta below .0036": "2146960589413/2500000000000000",
+    "ell greater than 1.996": "99/62500",
+    "Bernoulli rho bound": "7/5120",
+    "rho price": "113883/50000000",
+    "rho below 9/8": "7/2160",
+    "AMGM radical negative": "16383211803/50000000000",
+    "AMGM radical positive": "191434554307/1250000000000",
+    "AMGM radical left positive": "14470711803/31250000000",
+    "negative cubic price": "11489157107/125000000000",
+    "positive cubic price": "5975816707/125000000000",
+    "left cubic price": "14862669339/250000000000",
+    "common noise ceiling": "3971890223/6250000000",
+    "left noise ceiling": "11410349183/31250000000",
+    "heat scaling": "201/262400",
+    "heat eta": "20101/725788000",
+    "CE lower multiplier": "4857643/39600000000",
+    "negative heat radius": "78730521/100000000",
+    "negative negative Q ray coefficient 0": "4743561484971/3500000000000",
+    "negative negative Q ray coefficient 1": "499227213/100000000",
+    "negative negative Q ray coefficient 2": "10377/2500",
+    "negative negative Q ray coefficient 3": "1",
+    "negative negative L ray coefficient 0": "1516504153329/1400000000000",
+    "negative negative L ray coefficient 1": "6552663/2500000",
+    "negative negative L ray coefficient 2": "2057/2000",
+    "negative boundary exclusion": "2055131773117789097684941299/5120000000000000000000000000",
+    "positive heat radius": "5330772529/2500000000",
+    "positive negative Q ray coefficient 0": "541860539525647/437500000000000",
+    "positive negative Q ray coefficient 1": "17482248837/2500000000",
+    "positive negative Q ray coefficient 2": "63861/12500",
+    "positive negative Q ray coefficient 3": "1",
+    "positive negative L ray coefficient 0": "57171569501321/35000000000000",
+    "positive negative L ray coefficient 1": "40974859/12500000",
+    "positive negative L ray coefficient 2": "2057/2000",
+    "positive boundary exclusion": "90407171035344656196151979948487/656000000000000000000000000000000",
+    "raw threshold join": "4929/1250000"
+  },
+  "symbolic_identities": [
+    "central and outer gap constant",
+    "conditional third-moment decomposition",
+    "one-sided cubic factor"
+  ],
+  "ray_coefficients": [
+    {
+      "ray": "negative",
+      "boundary": "19461/10000",
+      "shifted_Q": [
+        "-4743561484971/3500000000000",
+        "-499227213/100000000",
+        "-10377/2500",
+        "-1"
+      ],
+      "shifted_L": [
+        "-1516504153329/1400000000000",
+        "-6552663/2500000",
+        "-2057/2000"
+      ],
+      "boundary_margin": "2055131773117789097684941299/5120000000000000000000000000"
+    },
+    {
+      "ray": "positive",
+      "boundary": "113273/50000",
+      "shifted_Q": [
+        "-541860539525647/437500000000000",
+        "-17482248837/2500000000",
+        "-63861/12500",
+        "-1"
+      ],
+      "shifted_L": [
+        "-57171569501321/35000000000000",
+        "-40974859/12500000",
+        "-2057/2000"
+      ],
+      "boundary_margin": "90407171035344656196151979948487/656000000000000000000000000000000"
+    }
+  ],
+  "actual_laws": [
+    {
+      "p": "2/5",
+      "amplitude": "3/5",
+      "lambda": "1/1000000",
+      "group": 0,
+      "budget_licensed": true
+    },
+    {
+      "p": "2/5",
+      "amplitude": "3/5",
+      "lambda": "1/1000000",
+      "group": 1,
+      "budget_licensed": true
+    },
+    {
+      "p": "21/50",
+      "amplitude": "3/5",
+      "lambda": "1/1000000",
+      "group": 0,
+      "budget_licensed": true
+    },
+    {
+      "p": "21/50",
+      "amplitude": "3/5",
+      "lambda": "1/1000000",
+      "group": 1,
+      "budget_licensed": true
+    },
+    {
+      "p": "9/20",
+      "amplitude": "3/5",
+      "lambda": "1/1000000",
+      "group": 0,
+      "budget_licensed": true
+    },
+    {
+      "p": "9/20",
+      "amplitude": "3/5",
+      "lambda": "1/1000000",
+      "group": 1,
+      "budget_licensed": true
+    },
+    {
+      "p": "21/50",
+      "amplitude": "4/5",
+      "lambda": "1/1000000",
+      "group": 0,
+      "budget_licensed": true
+    }
+  ],
+  "negative_controls": [
+    "geometry alone does not imply amplitude .6",
+    "reflected closed discrepancy need not equal negative closed discrepancy",
+    "source alteration rejected by pins"
+  ],
+  "source_pins": {
+    "mathematics/simplification-v16/2026-10-29/acquisition-direct.tex": "c996f20f2202def6fb945f6e7c809a0517930a1a97402e1d11aedd840f88a6fd",
+    "mathematics/simplification-v16/2026-10-29/composition.tex": "76f4a3b591adf7ba6a03461f4fe28c9c5c0fb81d273a404bfe017c38676743fc",
+    "mathematics/simplification-v16/2026-10-29/small-common.tex": "da583ea6712fa159345aa22d402faaa5cd60c518aec51c8aff033c09df636e11",
+    "mathematics/simplification-v16/2026-10-29/unified-comparison.tex": "2be0dc58973a281accb66cf3c8dffd7209592e68278ef4c0c46805708e374938",
+    "manuscript/arxiv-v1/sections/04-fixed-entry.tex": "db7156ca43f874b29216d6f297d74ea79ace4b988ec200a93a169e0d342498d8",
+    "manuscript/arxiv-v1/sections/06-fixed-resources.tex": "1c8c5357a7057cff203fc580847dfdd0ee5befa5788d20761cce4956b0bd5ad0",
+    "manuscript/arxiv-v1/sections/07-fixed-confinement.tex": "a1961a20b3dd8a6b6b465c82493e59a83d254559a9705e02e00626d2ce302fc4"
+  },
+  "scope": "Independent post-entry algebra and join review; retained contact/heat/entry and finite base remain explicit inputs"
+}

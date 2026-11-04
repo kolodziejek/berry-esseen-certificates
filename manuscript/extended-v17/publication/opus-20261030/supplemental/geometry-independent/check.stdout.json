@@ -1,0 +1,41 @@
+{
+  "status": "PASS_INDEPENDENT_GEOMETRY_LOCAL_CHECKS",
+  "mathematical_scope": "Polynomial budget identity and finite lattice diagnostics; full lattice/unbounded and conservation proofs are in independent review.",
+  "execution_scope": "Exact fractions; tensor interpolation verifies the polynomial identity, while finite-law examples are diagnostics only.",
+  "polynomial_grid_checks": 81,
+  "lattice_cases": [
+    {
+      "law": "two_point",
+      "zero_bias_weights": [
+        "1"
+      ],
+      "J_over_h": "1",
+      "reflection_preserves_J": true
+    },
+    {
+      "law": "atom_zero",
+      "zero_bias_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "J_over_h": "1",
+      "reflection_preserves_J": true
+    },
+    {
+      "law": "missing_site",
+      "zero_bias_weights": [
+        "2/7",
+        "5/7"
+      ],
+      "J_over_h": "12/7",
+      "reflection_preserves_J": true
+    }
+  ],
+  "coupled_displacement_margin": "2939585167017/500000000000",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "source_hashes": {
+    "sections/03-conservation.tex": "c619b2a81f7034a5f5947772657ec305410b3ea3d22f4089b116c162f1d6deae",
+    "sections/05-geometry-counts.tex": "4341f9c7407eed180e9da8f14a06e3d94a43ec135d50ac62ffd40619ced4ad0e",
+    "sections/07-direct-acquisition.tex": "a11ce05c1158f77ded70d0333614ac5204ef0c6948943b9a08cb51058c1ed283"
+  }
+}

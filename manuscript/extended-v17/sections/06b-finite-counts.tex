@@ -1,0 +1,237 @@
+\section{A common finite count comparison}\label{ext:finite-counts}
+The finite argument follows the number of positive summands. Conditional on
+that number, the sum is a binomial lattice point plus a centered residual.
+The residual can move mass across a threshold in both directions. Keeping
+its outgoing and incoming contributions together is essential near a
+binomial jump. Everything in this section concerns one common marginal;
+no finite-atom assumption is made.
+
+\subsection{Exact conditioning and the common moments}
+For a standardized law put
+\[
+ p=\Pp(X>0),\quad q=1-p,\quad v=pq,\quad m=\E X_+,
+ \quad h=v/m.
+\]
+Centering and positive variance imply $0<p<1$ and $m>0$. With
+$B=\ind_{\{X>0\}}$, define $U=hX-B+p$. Then
+$\E(U\mid B)=0$, and
+\[
+ hX=B-p+U,\qquad h^2=v+s,\qquad
+ s=q w_0+p w_1,\quad w_i=\E(U^2\mid B=i).
+\]
+The atom at zero belongs to $B=0$. If $s>0$, let
+$\alpha=pw_1/s$ and $\lambda=ns$; thus
+$w_0=\lambda(1-\alpha)/(nq)$ and $w_1=\lambda\alpha/(np)$.
+When $s=0$, both conditional residuals vanish and these formulas hold
+with any $\alpha\in[0,1]$.
+
+Write $W_j$ for a sum of $n-j$ independent copies of $U\mid B=0$
+and $j$ independent copies of $U\mid B=1$, all independent. For
+$b_j=\binom njp^jq^{n-j}$ and $z=np+hH=k+u$,
+\begin{align}
+ \Pp(S_n\le H)&=\sum_{j=0}^n b_j\Pp(W_j\le k+u-j),
+ \label{ext:count-identity}\\
+ \Pp(S_n\le H)&\le F_{\mathrm{Bin}(n,p)}(k)
+ -b_k\Pp(W_k>u)+\sum_{j>k}b_j\Pp(W_j\le u-(j-k)).
+ \label{ext:count-bound}
+\end{align}
+The second line discards nonnegative outgoing probabilities at $j<k$.
+The outgoing event is strict and the incoming event is closed. In particular,
+an atom exactly on the threshold is retained on the CDF side.
+Also
+\[
+ V_j:=\E W_j^2=(n-j)w_0+jw_1
+ =\lambda\left(1+\frac{(j-np)(\alpha-p)}{npq}\right).
+\]
+
+Suppose support acquisition gives
+$U_0\in[-O_0,a_0]$ and $U_1\in[-a_1,O_1]$, with nonnegative
+endpoints. For a centered $T\in[-L,R]$ of variance $w$,
+\begin{equation}\label{ext:conditional-moments}
+ w\le LR,\quad w^2/L-Lw\le\E T^3\le Rw-w^2/R,
+ \quad \E T^4\le(R-L)\E T^3+LRw.
+\end{equation}
+The first inequality integrates $(T+L)(R-T)\ge0$. The two cubic
+bounds integrate $(T+L)(T-w/L)^2\ge0$ and
+$(R-T)(T+w/R)^2\ge0$. Multiplying the first polynomial by $T^2$
+gives the fourth-moment bound. If $L=0$ or $R=0$, centering forces
+$T=0$; the divisions are replaced by this deterministic case.
+
+Put $\mu_i=\E U_i^3$. Expanding on the two actual sign classes gives
+\begin{align}
+ \rho h^3&=v(1-2v)+3v(w_0+w_1)-q\mu_0+p\mu_1,
+ \label{ext:conditional-rho}\\
+ \gamma h^3&=v(1-2p)+3v(w_1-w_0)+q\mu_0+p\mu_1,\\
+ \beta h^2&=v(1-2p)+s(2\alpha-1).
+\end{align}
+Here $\gamma=\E X^3$ and $\beta=\E[X|X|]$. The same
+$(\mu_0,\mu_1)$ must be used in these identities and in every probability
+bound below. Optimizing each term at a different pair would lose the
+constraint that all terms arise from one law.
+
+\subsection{Outgoing and incoming probability bounds}
+A useful outgoing minorant is
+\[
+ G_a(x)=x(x+a)^2(2a-x),\qquad a>0.
+\]
+It is nonpositive outside $[0,2a]$, and its maximum is
+$K a^4$, where $K=9/4+3\sqrt3/2$. Consequently
+\[
+ \Pp(W_k>u)\ge \frac{\E G_a(W_k-u)}{K a^4}.
+\]
+This is a global polynomial inequality, including $W_k=u$.
+Its expectation uses
+\[
+ \E W_k^3=(n-k)\mu_0+k\mu_1,
+\]
+\[
+ \E W_k^4=(n-k)\E U_0^4+k\E U_1^4
+ +3\{V_k^2-(n-k)w_0^2-kw_1^2\}.
+\]
+Thus \eqref{ext:conditional-moments} makes the outgoing bound affine in
+the two common cubic moments. Negative lower bounds remain valid; they
+are not mistaken for negative probabilities.
+
+For an incoming count $j>k$ and phase $u\le1/2$, put $d=j-k-u>0$.
+Cantelli gives
+\[
+ \Pp(W_j\le-d)\le\frac{V_j}{V_j+d^2}.
+\]
+For completeness, for a centered $Y$ of variance $V$ and $a>0$,
+$\Pp(Y\ge d)\le\E(Y+a)^2/(d+a)^2=(V+a^2)/(d+a)^2$.
+Choosing $a=V/d$ proves the formula; $V=0$ is deterministic.
+Exponential bounds can be sharper. If $\E Y=0$, $Y\le B$, $B>0$,
+and $\E Y^2\le w$, then for $t\ge0$,
+\begin{equation}\label{ext:one-sided-mgf}
+ \E e^{tY}\le
+ M(w;B,t):=\frac{B^2e^{-tw/B}+we^{tB}}{B^2+w}.
+\end{equation}
+Indeed, the quadratic interpolating $e^{tx}$ at $-w/B$ with multiplicity
+two and at $B$ majorizes it on $x\le B$: the Hermite remainder has
+sign $(x+w/B)^2(x-B)\le0$. Its quadratic coefficient is nonnegative.
+The centered two-point law on $\{-w/B,B\}$ with variance $w$ evaluates
+its expectation exactly. This proves the formula also with an upper
+variance bound. At zero variance use $Y=0$.
+Differentiation shows that $M$ is increasing and concave in $w$:
+with $x=t(B^2+w)/B$,
+\[
+ M''(w)=\frac{B^2e^{-tw/B}}{(B^2+w)^3}
+          (x^2+2x+2-2e^x)\le0.
+\]
+Also
+\[
+ M'(w)=\frac{B^2}{(B^2+w)^2}
+ \{e^{tB}-e^{-tw/B}(1+x)\}\ge0,
+\]
+since $e^x\ge1+x$. Its tangents therefore give affine upper bounds throughout the variance
+half-line. Applying \eqref{ext:one-sided-mgf} to $-U_0,-U_1$ and
+multiplying the corresponding factors bounds $\E e^{-tW_j}$.
+Chernoff then gives $e^{-td}\E e^{-tW_j}$ as an incoming upper bound.
+
+One can also retain the common cubic moments. On $[A,B]$, $A<0<B$,
+the function
+\[
+ r_t(x)=\frac{e^{tx}-1-tx}{x^2}
+       =t^2\int_0^1(1-r)e^{trx}\,dr
+\]
+is increasing and convex. Its chord gives
+$e^{tx}\le1+tx+c_2x^2+c_3x^3$, with $c_2,c_3\ge0$.
+Applied to $-U_i$, choose $C_2\ge c_2$ and
+$0\le C_{3,-}\le c_3\le C_{3,+}$, and put
+\[
+ Q_i(\mu_i)=\max\{0,1+C_2w_{i,+}-C_{3,-}\mu_i,
+                     1+C_2w_{i,+}-C_{3,+}\mu_i\}.
+\]
+This is a nonnegative convex upper bound for its MGF. The maximum with zero
+also makes it nonnegative at infeasible vertices of a relaxed moment polygon.
+For fixed positive pivots $P_0,P_1$, weighted AM--GM yields
+\[
+ Q_0^{n-j}Q_1^j\le P_0^{n-j}P_1^j
+ \left(\frac{n-j}{n}\frac{Q_0}{P_0}
+       +\frac{j}{n}\frac{Q_1}{P_1}\right)^n.
+\]
+The right side is convex in $(\mu_0,\mu_1)$. A fixed exponential rate
+and its phase chord produce a convex common-moment bound on an entire
+closed phase interval. Choose a strategy on that whole interval and
+moment polygon before comparing different strategies; a pointwise
+minimum of convex functions need not be convex.
+
+\subsection{Normalization and a finite closed cover}
+Let $\mathcal M$ be a compact polygon containing the actual common
+cubic moments, obtained from proved moment and defect restrictions.
+Suppose $F$ is convex on $\mathcal M$ and $L$ is affine and strictly
+positive there. Then
+\begin{equation}\label{ext:normalized-vertex}
+ \frac{F(x)}{L(x)}\le
+ \max_{v\text{ vertex of }\mathcal M}\frac{F(v)}{L(v)}.
+\end{equation}
+To see this, write $x=\sum_v\theta_vv$. Convexity bounds the numerator
+by $\sum_v\theta_vF(v)$; affinity identifies the denominator with
+$\sum_v\theta_vL(v)$. The ratio is therefore bounded by the largest
+vertex ratio. Segments and single points are included. If the lower
+bound for $\rho$ is $\max\{r_0,L\}$, split $\mathcal M$ along
+$L=r_0$ and retain both closed pieces.
+
+\begin{proposition}[Whole-cell count certificate]\label{ext:count-cell}
+Fix a closed box of acquired parameters, a count $k$, and a closed
+phase interval. Let $B_k$ bound the binomial CDF above, $b_k^-$ the own
+mass below, and $b_j^+$ the incoming masses above. Let $L_k$ be a
+proved outgoing lower bound, $A_j\ge0$ proved incoming upper bounds,
+and $N$ a lower bound for $\Phi((k+u-np)/(\sqrt n h))$.
+Suppose the combination
+\[
+ B_k-b_k^-L_k+\sum_{j>k}b_j^+A_j-N
+\]
+is bounded on the whole phase interval by convex Bernstein control
+functions $F_i(\mu_0,\mu_1)$. Let $r>0$ be the affine lower bound for
+$\rho$ on each closed normalization piece and let $n_+\ge\sqrt n$.
+Then the positive normalized CDF error is at most
+\[
+ n_+\max_{i,\,v\text{ vertex}}
+       \frac{\max\{0,F_i(v)\}}{r(v)}.
+\]
+\end{proposition}
+\begin{proof}
+Insert the probability bounds into \eqref{ext:count-bound}. For the outgoing
+term, $b_k\Pp(W_k>u)\ge b_k^-\Pp(W_k>u)\ge b_k^-L_k$,
+even if $L_k<0$. The nonnegativity of the incoming bounds justifies the
+upper mass substitutions. The Bernstein basis is nonnegative and sums
+to one. Take the positive part and apply \eqref{ext:normalized-vertex};
+the positive part of a convex function is convex. Finally enlarge
+$\sqrt n$ to $n_+$.
+\end{proof}
+
+The acquired $p,h,H$ bounds must first put every actual threshold into
+one of the original roots $k=0,\ldots,n$, $u\in[-1/2,1/2]$.
+If they do not, prove the remaining phase tails separately. A tied
+nearest count belongs to both closed roots. Apply
+Proposition~\ref{ext:closed-cover} only after every leaf is either a
+proved necessary-condition contradiction or satisfies the whole-cell
+score bound. The finite tree then covers infinitely many parameters.
+Its leaves never assert that every feasible moment tuple is an iid law;
+they need only contain all actual laws.
+
+\subsection{The predecessor input and index transfers}
+At a ratio maximizer from Corollary~\ref{ext:ratio-attainment},
+$C=C_n>\CE$ and $C_{n-1}\le\CE$ imply
+\[
+ n\left(\frac{\sqrt{n-1}\Delta_{n-1}(P)}{\rho(P)}-C\right)_+=0.
+\]
+This supplies the zero predecessor allowance for the same law. It is
+not a monotonicity assertion about the sequence $C_n$.
+
+When a resource calculation is transferred from a floor $N$ to an actual
+index $m\ge N$, the invariant is
+\[
+ \mathcal R_{\rm actual}\le r,\qquad mD_{\rm actual}\le Nd.
+\]
+For example, if the same-law defect inequality is
+$D\ge b+g d_{\rm in}+(N/m)h_N\lambda_m$ with nonnegative
+$b,g,h_N$, multiplying by $m$ and dividing by $N$ gives
+$(m/N)(b+g d_{\rm in})+h_N\lambda_m\le d$.
+Since $m/N\ge1$ and $b+g d_{\rm in}\ge0$, this implies
+$b+g d_{\rm in}+h_N\lambda_m\le d$.
+The noise is $\lambda_m=ms$, and cannot be replaced by $Ns$.
+Every downstream bound must retain its original index interval.
+In particular, $I/m\le\max\{I/40,I/42\}$ for a signed $I$ is a
+valid floor transfer only on $40\le m\le42$.

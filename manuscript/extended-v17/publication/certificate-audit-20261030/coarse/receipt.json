@@ -1,0 +1,31 @@
+{
+  "command": [
+    "python3",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/certificate_discharge_20261030/coarse_reconstruction.py"
+  ],
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029",
+  "returncode": 0,
+  "completed_recorded_at_utc": "2026-10-30T07:54:27.340430+00:00",
+  "artifacts": {
+    "coarse.stdout.log": {
+      "sha256": "d3b19904eeda79ccb716d3bc06c568332c53aff46db738a0acd4738ba5688770",
+      "bytes": 3343
+    },
+    "coarse.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "coarse/summary.json": {
+      "sha256": "d3b19904eeda79ccb716d3bc06c568332c53aff46db738a0acd4738ba5688770",
+      "bytes": 3343
+    },
+    "coarse/selected.json": {
+      "sha256": "c52122bea63beaed83de741a347863a39fb0faeaa34dec5dc4b2741a0a88594a",
+      "bytes": 117503
+    },
+    "coarse/reconstructed.json": {
+      "sha256": "d661d740e2abc33e898ca332638097c80199e3f32e59a1974f65797da164f78c",
+      "bytes": 65148
+    }
+  }
+}

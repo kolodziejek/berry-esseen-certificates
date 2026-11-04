@@ -1,0 +1,240 @@
+\section{The problem, results, and proof strategy}\label{ms:introduction}
+\subsection{The problem and the candidate constant}
+Let $\mathcal P$ be the laws on $\R$ with mean zero, variance one and
+finite third absolute moment $\rho(P)=\E|X|^3$. For independent copies
+$X_1,\ldots,X_n$ of $P$, put $S_n=\sum_iX_i$ and
+\[
+ \Delta_n(P)=\sup_{H\in\R}|\Pp_P(S_n\le H)-\Phi(H/\sqrt n)|,
+ \qquad C_n=\sup_{P\in\mathcal P}\frac{\sqrt n\,\Delta_n(P)}{\rho(P)}.
+\]
+Here $\Phi$ and $\phi$ are the standard normal distribution function
+and density. The sharp-constant conjecture is
+\begin{equation}\label{ms:conjecture}
+ \sup_{n\ge1}C_n=\CE,
+ \qquad \CE=\frac{3+\sqrt{10}}{6\sqrt{2\pi}}=0.409732\ldots.
+\end{equation}
+Throughout, $H$ is a threshold for the unnormalized sum $S_n$, and
+a terminating decimal in an inequality denotes the corresponding exact
+rational number. Affine standardization gives the equivalent result
+for any mean and positive variance, with third absolute central moment
+divided by the cube of the standard deviation.
+
+Berry and Esseen established the classical order $n^{-1/2}$
+\cite{Berry1941,Esseen1942,Esseen1945}. Esseen's lower bound
+\cite{Esseen1956} explains the proposed constant. If
+$p_*=(4-\sqrt{10})/2$, $q_*=1-p_*$ and
+$X=(B-p_*)/\sqrt{p_*q_*}$ for $B\sim\operatorname{Bernoulli}(p_*)$,
+the fixed-law lattice limit gives
+\begin{equation}\label{ms:bernoulli-limit}
+ \lim_{n\to\infty}\frac{\sqrt n\Delta_n(P)}{\rho(P)}
+ =\frac{3+q_*-p_*}{6\sqrt{2\pi}(p_*^2+q_*^2)}=\CE.
+\end{equation}
+Indeed $p_*^2+q_*^2=10-3\sqrt{10}$ and
+$(3+q_*-p_*)/(p_*^2+q_*^2)=3+\sqrt{10}$.
+Every constant below $\CE$ therefore fails for a sufficiently large sum
+of this one law. The upper conjecture is associated with Zolotarev
+\cite{Zolotarev1966,Zolotarev1967}; Schulz proves the strict finite-index
+bound for every nondegenerate Bernoulli law \cite{Schulz2016}.
+
+
+\subsection{Results and their hypotheses}\label{ms:scope}
+Theorem~\ref{short:global} proves $C_n\le\CE$ for every $n\ge1$,
+with strict inequality for $n\ge700$. The Bernoulli limit above proves
+that the global constant cannot be lowered. The proof uses three parts.
+\begin{center}\small
+\begin{tabular}{@{}P{.25\linewidth}P{.68\linewidth}@{}}
+\toprule
+Part & Conclusion and role \\
+\midrule
+Finite induction through $42$ &
+The first four indices use polynomial majorants and a physical comparison.
+For $5\le n\le42$, actual-index support and Fourier bounds acquire the
+hypotheses of finite count comparisons. Each step uses sharp earlier
+indices and retains one common marginal throughout. \\
+First-failure comparison, Theorem~\ref{ext:bridge-composition} &
+At a least index with $C_n>\CE$, a one-step smoothing estimate gives
+$n(C_n-\CE)<0.3$, sharp deleted predecessors and zero predecessor loss.
+A finite comparison excludes $43\le n\le48$; a uniform comparison
+excludes every $n\ge49$. This proves the weak bound for all $n$. \\
+Compact strict comparison, Theorem~\ref{short:acquired-exclusion} &
+For $n\ge700$, a fixed-target maximizer with nonnegative excess would
+have $nD\le32.20665378$ and $|H|\le1.83605680$. These bounds place
+it in an explicit conditional-support region where the binomial
+comparison is strict, including the zero-noise case. \\
+\bottomrule
+\end{tabular}
+\end{center}
+The small-index and localization calculations are computer-assisted.
+Their proofs combine continuous analytic bounds, exact inequalities on
+closed parameter regions, and checks that successive bounds concern
+the same law. Appendix~\ref{revision:reproducibility} identifies the
+inputs, complete executions and acceptance procedures. The published
+structural and finite-binomial results used in the compact comparison
+are stated at \eqref{v9:entry:structural} and
+\eqref{short:count:binomial}, with their hypotheses and references.
+
+There is no assumption of a sharp bound through $699$. The finite
+induction stops at $42$; the first-failure argument supplies all later
+indices at once. The separate compact comparison proves strictness
+from $700$ onward. Nor is eventual two-point optimality asserted:
+the proof bounds every possible extremal witness without replacing
+an unrestricted law by a two-point law.
+
+\subsection{Why the defect controls a maximizer}
+At a fixed $n$, maximize the difference between the two sides of the
+candidate inequality:
+\begin{equation}\label{v9:intro:excess}
+ a(P,H)=\sqrt n\{\Pp_P(S_n\le H)-\Phi(H/\sqrt n)\}-\CE\rho(P).
+\end{equation}
+Proposition~\ref{v9:core:attainment} proves attainment. Its first-order
+condition bounds $y\mapsto\Pp(S_{n-1}\le H-y)$ by an explicit
+piecewise cubic function that agrees with it on the closed support.
+This contact condition allows us to use the geometry of that support.
+
+Let $\tau(t)=\E[X\ind_{\{X\ge t\}}]$ be the zero-bias density and
+$J=\sum_g\tau_g|g|^2$, where $g$ runs over bounded support gaps and
+$\tau_g$ is the constant value of $\tau$ there. A lattice law of span
+$h$ has $J\ge h$; if every successive gap has length $h$, then $J=h$.
+Thus $J$ measures gap size with zero-bias weights. The inequality
+\[
+ \gamma+3J\le(3+\sqrt{10})\rho,\qquad \gamma=\E X^3,
+\]
+proved in Lemma~\ref{ms:physical-defect}, extends the moment--span
+bound from lattice laws to arbitrary standardized laws. Its slack
+\[
+ D=(3+\sqrt{10})\rho-\gamma-3J
+\]
+is nonnegative and vanishes exactly at the positive-skew Bernoulli
+law in \eqref{ms:bernoulli-limit}. The lattice consequence and its
+reflection are proved in Corollary~\ref{opus:lattice-gap}.
+
+Integrating the contact relation against $\tau$ in two ways gives the
+conservation identity of Theorem~\ref{revision:contact-conservation}.
+Since $\CE=(3+\sqrt{10})\phi(0)/6$, its two leading moment terms
+combine into a multiple of $D$. Solving for the excess gives
+\[
+ a=\frac{\mathcal R_c-n\CE\rho(1-e)
+             -n\phi(0)eD/6-n^{3/2}L}{n+H^2},
+ \qquad e=\exp(-H^2/(2n)).
+\]
+Here $L\ge0$ is a weighted contribution from the law of $H-S_{n-1}$
+inside the support gaps, and $\mathcal R_c$ is an explicitly defined
+remainder. The three subtracted terms are nonnegative. A nonnegative
+excess therefore requires $n\phi(0)eD/6\le\mathcal R_c$.
+Once localization bounds both $\mathcal R_c$ and $|H|$, this bounds
+$nD$. The uniform bounds come from Theorem~\ref{v9:entry:theorem},
+not from a fixed-law asymptotic expansion.
+
+The predecessor hypothesis supplies an upper bound for
+$\Pp(S_{n-1}\le H-t)$ in the contact condition, which excludes remote
+support points; see \eqref{v9:entry:contact}. This support argument is
+used both in coarse localization and in the final two-ray estimate.
+With $nD\le32.20665378$, the geometry at $n\ge700$ gives
+$3/8<p<93/200$, inward support displacement below $1/250$ and
+$\lambda<7/20$. Count conditioning then compares the law with a
+binomial sum. One threshold count controls noise up to $1/100$;
+five neighboring counts control the remaining interval. Both
+comparisons keep all probabilities entering from other counts.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[node distance=4mm,>=Latex,
+ box/.style={draw,rounded corners,align=center,text width=.86\linewidth,
+ inner sep=5pt,font=\small}]
+\node[box] (contact) {Attainment and contact; nonnegative support-gap defect $D$};
+\node[box,below=of contact] (identity) {Conservation and Fourier bounds acquire support, defect and threshold bounds};
+\node[box,fill=gray!10,below=of identity] (finite) {Polynomial and count comparisons, with exact closed-domain checks\\
+Sharp finite base: $C_n\le\CE$ for $1\le n\le42$};
+\node[box,below=of finite] (failure) {A least strict failure has sharp predecessors, zero loss and excess $<0.3/n$};
+\node[box,fill=gray!10,below=of failure] (local) {Finite local comparison for $43\le n\le48$; uniform local comparison for $n\ge49$\\
+Every possible first failure is excluded};
+\node[box,line width=.8pt,below=of local] (global) {$C_n\le\CE$ for all $n$; the compact comparison also gives $C_n<\CE$ for $n\ge700$};
+\draw[->] (contact)--(identity);
+\draw[->] (identity)--(finite);
+\draw[->] (finite)--(failure);
+\draw[->] (failure)--(local);
+\draw[->] (local)--(global);
+\end{tikzpicture}
+\caption{The proof's main dependencies. The shaded comparisons combine
+analytic inequalities with complete exact finite checks. The uniform
+comparison is proved for every index in its range; it is not an
+extrapolation from the finite calculation.}
+\end{figure}
+
+\FloatBarrier
+\subsection{What the certificates prove}
+A certificate is finite exact data for a specified mathematical inequality,
+together with rules for checking those data. Here the claim is always about
+an entire region of possible laws or parameters. It is not a claim about
+only the distributions or points tried during a numerical search.
+
+The proof uses three forms of certificate. For the first few indices,
+rational polynomial coefficients majorize the closed sum event on a whole
+support product; independence expresses the expectation through moments of
+one common marginal. For localization and Fourier bounds, rational boxes
+cover the complete admissible parameter region. A box is either excluded
+by a necessary inequality or assigned bounds valid everywhere on it.
+For the count comparisons, a finite tree subdivides the acquired probability,
+phase and noise region until each terminal cell has a strict score bound
+or a proved contradiction. The checker verifies the initial domains,
+every subdivision and all terminal inequalities, including shared
+boundaries. Thus every possible witness is accounted for.
+
+Finding these data and verifying them are separate tasks. A search can
+choose polynomial coefficients, subdivisions, prices or refinement passes.
+It may use floating-point calculations to suggest those choices. Acceptance
+uses the resulting exact rational data and checks every claimed inequality;
+a successful search or a saved success message has no independent authority.
+Some of the present candidates are supplied objects whose complete
+acceptance is repeated. Other tables are constructed and then recomputed.
+The reproduction record distinguishes these cases. Where the constructor
+and acceptor share numerical routines, this is described as exact replay,
+not as an independent implementation of the same calculation.
+
+Acceptance uses integer and rational arithmetic. Roots, exponentials,
+trigonometric functions and Gaussian probabilities are enclosed by rational
+bounds with explicit analytic remainders. The main checking programs use
+Python integers; the three-summand Bernstein checker uses C++ with
+Boost's arbitrary-precision integers. No floating-point approximation is
+accepted as an exact sign test. The trusted implementation includes the
+checking programs, their arithmetic libraries and their execution environment;
+this is a computer-assisted proof, not a proof-assistant formalization.
+
+A passed certificate still needs its mathematical hypotheses. For example,
+a count certificate can establish a bound for every law in a prescribed
+support and moment region, while a separate localization argument proves
+that the same hypothetical maximizing law lies in that region. The
+resource-to-count checks verify this implication without changing the
+index, the marginal, or the discrepancy orientation. Continuous arguments
+such as attainment, contact, Fourier inversion and the least-failure
+induction are proved in the text; they do not follow from an arithmetic
+success flag.
+
+The appendices give the inequalities implemented by the checkers and the
+rules for their domain coverage. Appendix~\ref{revision:reproducibility}
+maps the full argument to its numerical families and explains the source
+package, commands and execution records. An independent verification needs these derivations,
+the exact inputs, the complete acceptors and the checks matching each
+output to the next theorem's hypotheses. Hashes identify the files used;
+they do not prove the inequalities.
+
+Subdivision and rigorous enclosure have established precedents in
+computer-assisted proofs \cite{SolovyevHales2013}. Numerical optimization
+also appears in Berry--Esseen estimates \cite[Section~2]{Shevtsova2011}.
+The custom JSON files organize this proof's exact data; their format is
+not a standard theorem-proving language. The mathematical justification
+comes from the inequalities, complete coverage and correct implementation
+of the checking rules.
+
+\subsection{Related work}
+Fourier and structural moment inequalities progressively improved the
+universal upper bound \cite{vanBeek1972,Prawitz1972,Tyurin2010,
+Shevtsova2011,Shevtsova2013}. We use Shevtsova's structural inequality
+explicitly in localization. Recent manuscripts report smaller upper
+constants \cite{xiao2026berryesseen,lin2026berryesseen}, and He and Cheng
+report eventual sharpness beyond a uniform, very large threshold
+\cite{hecheng2026eventually}. Work on independent arrays and extremizers
+addresses the related non-iid problem \cite{BellIndependent2026,
+BellExtremizers2026}. These recent reported results are not used in
+our proof. An earlier AI-assisted working draft is on Hexagon
+\cite{rodziewiczkolodziejek2026momentdefects}.

@@ -1,0 +1,65 @@
+\section{A short bridge from a sharp finite base}
+\label{ext:bridge}
+
+The smoothing estimate removes the need for the historical sequence of
+positive upper barriers. At the first strict failure of the sharp bound,
+the predecessor is already sharp. This supplies a much smaller excess
+than either local exclusion requires, and makes the predecessor loss zero.
+
+\begin{proposition}[Finite local exclusion]
+\label{ext:local42-input}
+For an integer $42\le n\le48$, the conjunction
+\[
+ 0<n(C_n-\CE)\le\frac{54}{100},\qquad
+ n(C_{n-1}-C_n)_+\le\frac{19}{100},
+\]
+\[
+ C_n<\frac{4226}{10000},\qquad
+ C_{n-1},C_{n-2}<\frac{4253}{10000}
+\]
+is impossible.
+\end{proposition}
+
+\begin{proposition}[Uniform local exclusion]
+\label{ext:local47-input}
+For an integer $n\ge47$, the conjunction
+\[
+ 0<n(C_n-\CE)\le\frac7{10},\qquad
+ n(C_{n-1}-C_n)_+\le\frac{19}{100},
+\]
+\[
+ C_n<\frac{4247}{10000},\qquad
+ C_{n-1},C_{n-2}<\frac{4253}{10000}
+\]
+is impossible.
+\end{proposition}
+
+\begin{theorem}[First-failure composition]
+\label{ext:bridge-composition}
+Assume the two local exclusions above and $C_j\le\CE$ for
+$1\le j\le42$. Then $C_n\le\CE$ for every $n\ge1$.
+In particular, these inputs fill the range $43\le n\le699$ needed
+to join the finite base to the compact manuscript's tail theorem.
+\end{theorem}
+\begin{proof}
+Suppose otherwise and choose the least integer $n$ with $C_n>\CE$.
+The finite base gives $n\ge43$, and both deleted predecessors satisfy
+$C_{n-1},C_{n-2}\le\CE$. Corollary~\ref{ext:first-failure-entry} gives
+\[
+ 0<n(C_n-\CE)<\frac{3003}{10250}<\frac3{10},
+ \qquad C_n<\frac{73}{175}<\frac{4226}{10000},
+ \qquad n(C_{n-1}-C_n)_+=0.
+\]
+Also $\CE<41/100<4253/10000$. If $43\le n\le48$, every
+hypothesis of Proposition~\ref{ext:local42-input} holds. If $n\ge49$,
+every hypothesis of Proposition~\ref{ext:local47-input} holds.
+Both alternatives are impossible.
+\end{proof}
+
+The finite local exclusion concerns actual indices up to $48$; it
+cannot be extrapolated to a larger index. The second exclusion is
+uniform in $n$. This distinction is what makes the dependency structure
+acyclic: the finite argument uses no previously established sharp tail,
+and the uniform argument uses no conclusion from the present induction.
+The sharp base may be weak. Strict local comparisons are used only to
+exclude a strict failure above that base.

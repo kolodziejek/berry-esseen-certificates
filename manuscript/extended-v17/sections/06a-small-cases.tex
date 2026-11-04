@@ -1,0 +1,309 @@
+\section{The starting cases}\label{ext:starting-cases}
+\subsection{The first three sample sizes}
+\label{ext:small-foundations}
+
+The small cases provide quantitative starting bounds for the later
+induction.  The second and third cases use the same idea: a hypothetical
+violating extremizer has bounded support, and a polynomial majorizes its
+closed sum event on the whole support product.  Independence then evaluates
+the polynomial using moments of the same marginal.  No restriction on the
+number of atoms is imposed.
+
+\begin{theorem}\label{ext:n123}
+For every standardized law with finite third absolute moment,
+\[
+ C_1\le\frac25,\qquad C_2\le\frac{2\sqrt2}{7},\qquad
+ C_3\le\frac{59\sqrt3}{250}.
+\]
+All three upper bounds are strictly smaller than $\CE$.
+\end{theorem}
+
+\paragraph{One summand.}
+The certificate consists of 150 consecutive rational cells $[a,b]$
+covering $[-2,1]$, with two rational coefficients $u,v$ in each cell.
+It proves
+\begin{equation}\label{ext:n1-dual}
+ L_a-v+uy+vy^2+\frac25|y|^3-\ind_{\{y\le b\}}\ge0
+ \quad(y\in\R),\qquad L_a\le\Phi(a).
+\end{equation}
+Taking expectations cancels the linear and quadratic moment terms.
+For $t\in[a,b]$ this gives
+\[
+ F_P(t)-\Phi(t)\le F_P(b)-L_a\le\frac25\rho.
+\]
+For $t\le-2$, Cantelli gives $F_P(t)\le1/(1+t^2)\le1/5$.
+For $t\ge1$, the discrepancy is at most $1-\Phi(1)<2/5$.
+Since $\rho\ge1$, these bounds cover both exterior rays.
+Reflection gives the negative branch, including atoms.
+
+For completeness, the verification of \eqref{ext:n1-dual} splits the
+real line at $-10,0,b,10$.  On each finite interval the expression is a
+cubic, checked in the Bernstein basis with subdivision; on either
+infinite ray its translated coefficients are nonnegative.  The value at
+$b$ uses the included, closed-event polynomial.  The normal lower bound
+uses Machin's identity, integer square-root brackets and an alternating
+Gaussian series.  All 150 cells and 1,128 terminal Bernstein intervals
+pass exact rational verification.
+
+\paragraph{A common support argument for two and three summands.}
+Let $K_2=2\sqrt2/7$, $K_3=59\sqrt3/250$ and suppose $C_n>K_n$,
+where $n=2$ or $3$.  Corollary~\ref{ext:ratio-attainment} supplies a
+positive closed-CDF maximizing pair.  Write
+\[
+ z=H/\sqrt n,\quad F=\Pp(S_n\le H),\quad D_0=F-\Phi(z),
+ \quad \lambda=D_0/\rho,\quad \beta=\E[X|X|].
+\]
+Here $D_0$ denotes the discrepancy, not the support-gap defect used in
+the main argument.  The contact condition is equivalently
+\begin{align}
+ n\Pp(S_{n-1}\le H-y)&\le Q_n(y),\notag\\
+ Q_n(y)&=\lambda|y|^3-\frac{z\phi(z)+3D_0}{2}y^2
+ -(\sqrt n\phi(z)+3\lambda\beta)y
+ +nF+\frac{z\phi(z)+D_0}{2},\label{ext:n23-contact}
+\end{align}
+with equality on the entire closed support.
+The published affine estimate
+\begin{equation}\label{ext:n23-affine}
+ \frac{\sqrt n\,\Delta_n(P)}{\rho(P)}\le\frac{1661}{5000}
+       \left(1+\frac{429}{1000\rho(P)}\right)
+\end{equation}
+from \citet{Shevtsova2013} rules out $\rho\ge2$ at $n=2$ and
+$\rho\ge15/8$ at $n=3$.  Together with $|\beta|\le1$,
+$\phi(z)<2/5$ and $|z\phi(z)|<1/4$, it gives the following lower
+bounds $Q_n(y)\ge P_n(|y|)$:
+\[
+\begin{array}{c|c|c}
+ n&\rho\text{ ceiling}&P_n(r)\\\hline
+ 2&2&\displaystyle\frac27r^3-\frac{67}{56}r^2-\frac{23}{14}r-\frac18\\[2pt]
+ 3&15/8&\displaystyle\frac8{35}r^3-\frac45r^2-\frac85r-\frac18
+\end{array}
+\]
+Indeed, for $n=2$, $\lambda>2/7$, $D_0<5/7$ and
+$\lambda<5/14$ suffice: $\sqrt2<10/7$ gives
+$\sqrt2\phi(z)+3\lambda<4/7+15/14=23/14$.
+For $n=3$, the corresponding bounds are
+$\lambda>8/35$, $D_0<9/20$ and $\lambda<2/7$.
+In the latter case \eqref{ext:n23-affine} gives $C_3\rho<77/100$,
+and $\sqrt3>12/7$ then gives $D_0=C_3\rho/\sqrt3<9/20$.
+The shifted differences are
+\begin{align*}
+ P_2(6+s)-2&=\frac27s^3+\frac{221}{56}s^2+
+                  \frac{104}{7}s+\frac{373}{56},\\
+ P_3(6+s)-3&=\frac8{35}s^3+\frac{116}{35}s^2+
+                  \frac{472}{35}s+\frac{2197}{280}.
+\end{align*}
+Every coefficient is positive.  Equality in
+\eqref{ext:n23-contact} therefore excludes every support point with
+$|y|\ge6$, because its left side is at most $n$.
+
+\paragraph{The two-summand majorants.}
+Put $\gamma=\E X^3$ and
+\[
+ v=(1,y,y^2,y^3,|y|^3),\qquad \mu=\E v(X)=(1,0,1,\gamma,\rho).
+\]
+For a rational symmetric coefficient array indexed by $i\le j$, let
+\[
+ M_c(x,y)=\sum_i c_{ii}v_i(x)v_i(y)+
+ \sum_{i<j}c_{ij}\{v_i(x)v_j(y)+v_j(x)v_i(y)\},
+\]
+and $q_c(\gamma,\rho)=\sum_i c_{ii}\mu_i^2+
+2\sum_{i<j}c_{ij}\mu_i\mu_j$.
+Independence gives $\E M_c(X_1,X_2)=q_c(\gamma,\rho)$.
+Theorem~\ref{ms:sharp-third} puts the actual moments in
+\[
+ \mathcal D_2=\{(\gamma,\rho)\in[-2,2]\times[1,2]:
+ \rho^2(\gamma^2+4)-(\gamma^2+2)^2\ge0\}.
+\]
+The 70 certificate rows use
+$a_j=-5/2+j/20$, $b_j=a_j+1/20$, $0\le j<70$.
+Their exact inequalities are
+\begin{align*}
+ M_{c^{(j)}}(x,y)&\ge\ind_{\{x+y\le b_j\}}
+                    &&((x,y)\in[-6,6]^2),\\
+ q_{c^{(j)}}(\gamma,\rho)&\le\Phi(a_j/\sqrt2)+\frac27\rho
+                    &&((\gamma,\rho)\in\mathcal D_2).
+\end{align*}
+Each sign quadrant is cut by the event line and triangulated into
+closed triangles.  Degree-six Bernstein coefficients, with exact
+subdivision, establish the first inequality.  A second checker
+independently homogenizes the original polynomial on every triangle
+and checks integer coefficients.  Both checkers accept all 70 rows:
+35,878 triangle nodes and 134 moment boxes.  The second inequality is
+checked on moment rectangles; a rectangle is discarded only if
+$\rho_+^2(g_*+4)-(g_*+2)^2<0$, where $g_*$ is the minimum of
+$\gamma^2$ on that rectangle.  This is valid because the expression
+increases with $\rho$ and decreases with $\gamma^2$ when $\rho\le2$.
+
+For a threshold in $[a_j,b_j]$, expectation of the first inequality and
+the second give discrepancy at most $2\rho/7$.
+For $H\le-5/2$, Cantelli gives $2/(2+H^2)\le8/33<2/7$;
+for $H\ge1$, $1-\Phi(H/\sqrt2)<2/7$.
+These bounds contradict the chosen violating maximizer.  This proves
+the second assertion of Theorem~\ref{ext:n123}.
+
+\paragraph{The three-summand majorants.}
+Use the features
+\[
+ (v_0,\ldots,v_6)(y)=(1,y,y^2-1,y^3,|y|^3,y^4,y^5).
+\]
+Let $\mathcal I$ be the 59 nondecreasing triples from $\{0,\ldots,6\}$
+whose largest entry is less than 5 or which contain an entry 1 or 2.
+For $\alpha\in\mathcal I$, average the associated product over its
+distinct coordinate permutations, obtaining $V_\alpha$.
+Set $M_c=\sum_\alpha c_\alpha V_\alpha$.
+The bounded-support argument above makes every feature integrable.
+Every term involving a fourth or fifth power contains a zero-mean
+factor $X_i$ or $X_i^2-1$ in a different coordinate.  Independence
+therefore gives the exact identity
+\[
+ \E M_c(X_1,X_2,X_3)=q_c(\gamma,\rho)
+ =\sum_{\substack{\alpha\in\mathcal I\\\alpha\text{ uses only }0,3,4}}
+     c_\alpha\gamma^{\#3(\alpha)}\rho^{\#4(\alpha)}.
+\]
+There are ten surviving monomials and 49 zero-expectation controls.
+The controls improve the pointwise majorant without adding moment
+parameters.
+
+The 111 rational rows form a consecutive closed cover of
+$[-7/2,3/2]$.  They satisfy
+\begin{align*}
+ M_{c^{(j)}}(x_1,x_2,x_3)&\ge\ind_{\{x_1+x_2+x_3\le b_j\}}
+                    &&((x_1,x_2,x_3)\in[-7,7]^3),\\
+ q_{c^{(j)}}(\gamma,\rho)&\le\Phi(a_j/\sqrt3)+\frac{59}{250}\rho
+                    &&((\gamma,\rho)\in\mathcal D_3),
+\end{align*}
+where $\mathcal D_3$ replaces $2$ by $15/8$ in the rectangular
+bounds defining $\mathcal D_2$.
+Symmetry reduces the sign patterns to four ordered-coordinate
+orthants.  A box is discarded only when it has no ordered point.
+On every other box, degree-five tensor Bernstein bounds establish
+the pointwise inequalities.  On a box crossing the event plane,
+the included side is checked by $M-1\ge s(x_1+x_2+x_3-b_j)$ with
+$s\le0$, and the other side by the analogous inequality with $s\ge0$.
+Existence of a slope is checked by intersecting exact rational intervals;
+zero plane coefficients are checked directly.  This retains the closed
+event boundary.
+
+Fresh exact verification accepts all 111 cells, with 501,156 cube
+nodes, 219,860 terminal leaves and 349 moment boxes.  An additional
+95,904 exact interpolation identities compare the initial polynomial
+expansion with direct evaluation of the original features.  Those
+identities check the expansion; the cube verification proves positivity.
+As in the two-summand case, expectation bounds the discrepancy on each
+threshold interval.  The exterior bounds are
+$3/(3+H^2)\le12/61<59/250$ for $H\le-7/2$ and
+$1-\Phi(H/\sqrt3)<59/250$ for $H\ge3/2$.
+They contradict the violating maximizer and prove the third assertion.
+The first assertion was proved above.  Rational square-root and Machin
+bounds give $K_2<0.405<0.409<\CE$ and $K_3<0.409<\CE$.
+
+\subsection{The fourth case: localization before numerical comparison}
+\label{ext:n4-localization-section}
+
+The third bound is needed quantitatively.  Merely knowing $C_3\le\CE$
+would not give the following support reduction.
+Write
+\[
+ K_3=\frac{59\sqrt3}{250},\quad c_0=\frac{256}{625},\quad
+ T=\frac{4097}{10000};\qquad K_3<c_0<T<\CE.
+\]
+For any standardized law set
+$\beta=\E[X|X|]$, $u=\E X_+=\E X_->0$,
+$v_\pm=(1\pm\beta)/2$, and
+\begin{equation}\label{ext:n4-reference}
+ a=\frac{v_-}{u},\quad b=\frac{v_+}{u},\quad
+ w=\frac{4u^2}{1-\beta^2},\quad
+ Q=\frac ua\delta_{-a}+(1-w)\delta_0+\frac ub\delta_b.
+\end{equation}
+Cauchy's inequality gives $0<w\le1$ and makes $Q$ a standardized
+probability law.  Put $r=\rho(Q)=(1+\beta^2)/\sqrt{w(1-\beta^2)}$.
+\begin{lemma}\label{ext:n4-excess}
+The nonnegative quantity
+\[
+ W(X)=X_+(X_+-b)^2+X_-(X_--a)^2
+\]
+has expectation $\eta=\rho(P)-r$.  Thus $r\le\rho(P)$, with
+equality exactly when $P=Q$.  Moreover, writing $c(X)=b$ for $X>0$
+and $c(X)=a$ for $X<0$,
+\begin{align}
+ \E X^3&=b-a+\E[\operatorname{sgn}(X)W(X)],\notag\\
+ \E X^4&=a^2-ab+b^2+\E[(|X|+2c(X))W(X)]
+ \label{ext:n4-physical-moments}
+\end{align}
+whenever the fourth moment is finite.
+\end{lemma}
+\begin{proof}
+On either half-line put $y=|X|$ and $c=a$ or $b$.  The identities
+$y^3=y(y-c)^2+2cy^2-c^2y$ and
+$y^4=(y+2c)y(y-c)^2+3c^2y^2-2c^3y$ integrate using
+$\E[y;\text{half-line}]=u$ and
+$\E[y^2;\text{half-line}]=uc$.
+If $\E W=0$, the support is contained in $\{-a,0,b\}$ and the
+first two moments fix the masses.  Conversely $P=Q$ has $W=0$.
+\end{proof}
+The three-point law is a reference;
+the original law remains arbitrary.
+
+\begin{proposition}\label{ext:n4-localization}
+If $C_4>c_0$, a positive closed-CDF maximizing pair satisfies
+\[
+ \supp P\subset(-101/25,101/25),\quad\rho(P)<46/25,
+ \quad 625/2116<w\le1,\quad|\beta|<321/500.
+\]
+In particular it belongs to the closed numerical class with
+$|X|\le17/4$ and $|\beta|\le13/20$.
+\end{proposition}
+\begin{proof}
+Use Corollary~\ref{ext:ratio-attainment}.  The affine inequality
+\eqref{v9:entry:structural} first gives
+$\rho<979013/532500<46/25$, without a support assumption.
+Since $r\le\rho$ and $w\le1$, the inequality
+\[
+ \frac{(1+(321/500)^2)^2}{1-(321/500)^2}>(46/25)^2
+\]
+gives $|\beta|<321/500$.
+Put $C=C_4$, $z=H/2$, $s=\sqrt{4/3}$.  The contact expression,
+using the quantitative bound on the three-summand predecessor, obeys
+\begin{align*}
+ I_{\rm new}(y)\le{}&\mathcal H_4(z,y)+4\rho(K_3-C)
+                    +4\rho(s-1)K_3\\
+ &+C\{-|y|^3+\tfrac32\rho y^2+3\beta y-\rho/2\},
+\mathcal H_4(z,y)={}&8\!\left\{\Phi\left(\frac{z-y/2}{\sqrt{3/4}}\right)-\Phi(z)\right\}
+                 \\
+ &+4y\phi(z)+z\phi(z)(y^2-1).
+\end{align*}
+Taylor expansion in the translation and the variance gives, uniformly
+in $z,y$,
+\[
+ |\mathcal H_4(z,y)|<\frac{\phi(0)}6|y|^3+\frac{|y|}{5}+\frac1{15}.
+\]
+Here $\sup|\phi''|=\sup|(x\phi(x))'|=\phi(0)<2/5$ and
+$\sup|x(3-x^2)\phi(x)|<3/5$ suffice.  For the last bound, on
+$t=x^2\le3$ compare $e^t$ with its cubic Taylor polynomial and use
+\[
+ \tfrac94(1+t+t^2/2+t^3/6)-t(3-t)^2
+ =\tfrac34\{7(t-9/14)^2+3/28\}+\tfrac58t^2(3-t)>0.
+\]
+For $t\ge3$, use $|x|^3\phi(x)<1/2$.
+The second derivative of
+$\Phi((z-y/2)/\sqrt{1-\lambda})$ has absolute value below $4/15$
+on $0\le\lambda\le1/4$, giving the remainder $1/15$ after
+multiplication by eight.
+
+Discard $4\rho(K_3-C)<0$ and use $4(s-1)<5/8$.
+For $R=|y|\ge4$, the remaining coefficient of $C$ is at most
+$B(R)=-R^3+69R^2/25+963R/500+23/100$.
+All coefficients of $B(4+t)$ are negative, so substituting $C>c_0$
+is now valid.  Consequently
+\[
+ I_{\rm new}(y)<-\frac{643}{1875}R^3+
+ \frac{17664}{15625}R^2+\frac{77257}{78125}R+\frac{7541}{46875}.
+\]
+The coefficients after translation by $R=101/25+t$ are all negative.
+This excludes $|y|\ge101/25$ from the closed support by contact.
+Finally $r^2\ge1/w$ gives $w>625/2116$.
+\end{proof}
+
+% The numerical ROOT4 physical-class theorem and its full common-measure,
+% quadrature, low/high-excess and closed-cover proof must follow here.
+% Do not infer C4<=T merely from Proposition ext:n4-localization.

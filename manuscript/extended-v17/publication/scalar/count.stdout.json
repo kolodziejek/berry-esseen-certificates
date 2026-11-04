@@ -1,0 +1,86 @@
+{
+  "status": "PASS_REVISION_COUNT_CONSTANTS",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "mathematical_scope": "Exact changed scalar identities and endpoint inequalities; analytical soundness remains in the manuscript.",
+  "arithmetic": "Python integer and fractions.Fraction; no floating-point acceptance",
+  "rectangle": [
+    {
+      "phase": "negative",
+      "t": "0",
+      "z": "3/2",
+      "quadratic": "0",
+      "extremal_derivative": "-21/100",
+      "minimum": "933/1000"
+    },
+    {
+      "phase": "negative",
+      "t": "101/10000",
+      "z": "3/2",
+      "quadratic": "27842487291/1250000000000",
+      "extremal_derivative": "-275932538127/1250000000000",
+      "minimum": "3849022385619/5000000000000"
+    },
+    {
+      "phase": "positive",
+      "t": "0",
+      "z": "0",
+      "quadratic": "0",
+      "extremal_derivative": "19/100",
+      "minimum": "156/125"
+    },
+    {
+      "phase": "positive",
+      "t": "101/10000",
+      "z": "0",
+      "quadratic": "27842487291/1250000000000",
+      "extremal_derivative": "7027/62500",
+      "minimum": "3597/3125"
+    }
+  ],
+  "polynomials": {
+    "W": [
+      "0",
+      "54085531/137200000",
+      "-8066367/11200000",
+      "1128111921/1715000000",
+      "-1174364509761/2401000000000"
+    ],
+    "Eminus": [
+      "293003/305100",
+      "36120549/6190592",
+      "717474375/82799168"
+    ],
+    "Eplus": [
+      "800/3051",
+      "729457/193456",
+      "17296875/2587474"
+    ],
+    "P": [
+      "-293003/213570000",
+      "9976510490511/26542163200000",
+      "-1516446576747/2069979200000",
+      "1128111921/1715000000",
+      "-1174364509761/2401000000000"
+    ],
+    "gap": [
+      "7889/100000",
+      "511117/2191360",
+      "1311795/5861888"
+    ],
+    "small_endpoint": "19409025049390417531054861/8386908849900000000000000000",
+    "large_endpoint": "16788798784733560132189/273858248160000000000000"
+  },
+  "diagnostic_events": 32,
+  "rejected_mutations": [
+    "wrong_negative_phase_slope",
+    "oversized_variance_rectangle",
+    "oversized_summand_amplitude",
+    "wrong_positive_phase_slope",
+    "minorant_constant_at_atom",
+    "minorant_positive_leading_term",
+    "lost_small_endpoint_margin",
+    "incorrect_domination_constant"
+  ],
+  "manuscript_sha256": "c37477087ddbd51327072d99e59e5e7da663734be28e365a2984e696d695674a",
+  "checker_sha256": "eb55bfd92bd3975dd904f1440d8a0a06ac286fd7d6e333388cf7c4f318bd9454"
+}

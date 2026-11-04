@@ -1,0 +1,110 @@
+The exploratory producer considers candidate subdivisions, support radii, and passes. The
+exporter selects the first four stages of a six-stage discovery trace and rounds ceilings outward.
+Acceptance reconstructs the two coarse and four signed passes; it does not rely on a discovery
+success label. The selected path uses integer and rational arithmetic. Generation and checking
+share mathematical kernels, so this is not a claim of independent implementations.
+E.2 Exact arithmetic and its limits
+Rationals are represented by integer numerators and denominators. Outward rounding
+deliberately weakens a bound. Square-root endpoints are checked by rational square compar-
+isons. For a nonnegative numerator, an upper numerator bound divided by a positive lower
+denominator bound gives an upper quotient bound. Signed quotients require the endpoint
+extrema: ifa∈[a−,a +]and0<b −≤b≤b+, then
+a
+b∈
+[
+min
+i,j∈{−,+}
+ai
+bj
+,max
+i,j∈{−,+}
+ai
+bj
+]
+.
+A denominator interval containing zero requires a separate argument; this rule does not
+permit division by it. The exponential helper uses, for rational0≤y≤min(x,64),
+e−x≤e−y≤
+
+
+64∑
+j=0
+yj
+j!
+
+
+−1
+,
+followed by upward rounding. The positive exponential series proves this enclosure. The
+Gaussian constants, including the narrow interval forCE, are proved in Appendix B.
+Numerical precision determines whether an enclosure is sharp enough to prove a strict
+inequality; extra digits alone do not prove it. Uniformity inn comes from the analytical
+majorants in the Fourier appendix, not from sampling indices or assuming monotonicity
+of Cn. The checker semantics, their correspondence with the displayed formulas, and the
+integer/rational implementation remain part of the computational trust boundary. Hashes
+identify bytes, not mathematical truth. Subdivision certificates have established methodolog-
+ical precedents [17]; that precedent does not validate this custom format or transfer a proof
+assistant’s guarantee to Python.
+E.3 Three separate checks
+Use a fresh output path for each replay. From the repository root, the retained entry is
+reproduced by
+python3 -I -B \
+mathematics/fixed-target-v8/2026-10-28/isolated_entry_replay.py \
+--output-dir runs/compact-v16-entry-review
+The wrapper copies a fixed13-file source/data set into an isolated source environment. The
+wrapper status isPASS_ISOLATED_REPRODUCTION_FIXED_ENTRY_V7; its numerical output is
+PASS_INITIAL42_FIXED_TARGET_COARSE_V7 . It reconstructs11264nominal signed boxes,
+100panels,30nonempty panels and14surviving moment cells. Nineteen checker rejection
+controls and five wrapper controls test malformed or altered inputs. They supplement rather
+than replace the coverage proof.
+The bounded historical checks and the current document’s reference structure are repro-
+duced separately by
+51
+python3 -I -B \
+manuscript/compact-v16/tools/recheck.py \
+compact-v16-bounded-review
+Here the output path is relative tomanuscript/compact-v16/; an absolute fresh path with
+an existing parent can instead be supplied. This runs nine unchanged v16 mathematical
+programs. They retain their original parameters, including the former small-noise minorant.
+They are regression evidence for the retained inputs, not verification of the revised scalar
+choices and not a replay of the coarse entry.
+The changed scalar claims have their own exact checks:
+python3 -I -B \
+manuscript/compact-v16/tools/check_revision_constants.py \
+--output-dir runs/compact-v16-scalar-review
+This runs the geometry, count, and foundation checks. They reconstruct the rational
+comparisons from their definitions: the endpoint probability exclusion, six ray bounds, the
+new minorant’s full rectangle argument, the common error envelope and its two quartic
+endpoints, the Fourier quadratic identity, and the narrowCE enclosure. The continuous
+proofs of sign, concavity, monotonicity, and coverage remain in the text. Selected atomic-law
+examples are diagnostics, not an all-law proof. The revision record reports these executions
+separately from the inherited entry replay and from document compilation.
+References
+[1] Logan Bell. Extremizers for the independent Berry–Esseen inequality. Manuscript dated
+2026-10-06; collection version 0.7.0; source snapshot f61bc638774bfa1165065462f98fe31efade30bf,
+2026. URL https://github.com/epicycloids/independent-berry-esseen-
+bounds/blob/f61bc638774bfa1165065462f98fe31efade30bf/paper/extremizers/extremizers.pdf.
+[2] Logan Bell. An upper bound on the Berry–Esseen constant for independent summands.
+Manuscript dated 2026-10-06; collection version 0.7.0; source snapshot
+f61bc638774bfa1165065462f98fe31efade30bf, 2026. URL
+https://github.com/epicycloids/independent-berry-esseen-
+bounds/blob/f61bc638774bfa1165065462f98fe31efade30bf/paper/independent-berry-esseen.pdf.
+[3] Andrew C. Berry. The accuracy of the Gaussian approximation to the sum of independent
+variates.Transactions of the American Mathematical Society, 49(1):122–136, 1941. doi:
+10.1090/S0002-9947-1941-0003498-3.
+[4] BerryEsseenLean. BerryEsseenLean: Berry–Esseen eventual sharpness in Lean. Lean 4
+formalization accompanying the manuscript of Hengzhi He and Guang Cheng, 2026. URL
+https://github.com/UCLA-Trustworthy-AI-
+Lab/BerryEsseenLean/tree/2b97fa7400dd85fc98b829224c89b0f986789395. Commit
+2b97fa7400dd85fc98b829224c89b0f986789395; designated endpoints retain explicit external
+mathematical inputs; Lean v4.28.0.
+[5] Carl-Gustav Esseen. On the Liapunoff limit of error in the theory of probability.Arkiv för
+Matematik, Astronomi och Fysik, 28A(9):1–19, 1942.
+[6] Carl-Gustav Esseen. Fourier analysis of distribution functions. A mathematical study of the
+Laplace–Gaussian law.Acta Mathematica, 77:1–125, 1945. doi: 10.1007/BF02392223.
+[7] Carl-Gustav Esseen. A moment inequality with an application to the central limit theorem.
+Scandinavian Actuarial Journal, 1956(2):160–170, 1956. doi: 10.1080/03461238.1956.10414946.
+[8] Larry Goldstein and Gesine Reinert. Stein’s method and the zero bias transformation with
+application to simple random sampling.The Annals of Applied Probability, 7(4):935–952, 1997.
+doi: 10.1214/aoap/1043862419.
+52

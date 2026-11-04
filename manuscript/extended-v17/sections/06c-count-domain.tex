@@ -1,0 +1,97 @@
+\subsection{How a physical defect bound becomes a count domain}
+\label{ext:physical-count-domain}
+This step explains the origin of the count coordinates and their joint
+constraint. A small defect must be acquired for the same extremal law
+before the following argument is used. Put $\sigma=\sqrt{10}$ and use
+the physical defect $D=(3+\sigma)\rho-\gamma-3J$ from the conserved
+identity, where $J$ is the gap sum.
+
+Suppose $\supp P$ is bounded and has a central gap $(-A,B)$ with
+$A,B>0$. Let $p=\Pp(X>0)$, $q=1-p$, $m=\E X_+=\E X_-$,
+$V=\E(X\mid\ind_{\{X>0\}})$, and $W=X-V$. Write
+\[
+ \theta_+=\E[W^2;X>0],\quad \theta_-=\E[W^2;X<0],
+ \quad\theta=\theta_++\theta_-,\quad
+ \overline B=m/p,\quad\overline A=m/q.
+\]
+Then $m^2=(1-\theta)pq$. Set
+$\Delta B=\overline B-B$ and $\Delta A=\overline A-A$; both
+are nonnegative. The gap decomposition gives the joint inequality
+\begin{align}
+ D\ge{}&b(p,\theta)
+ +6m\{(A+B)(\Delta A+\Delta B)+\Delta A\Delta B\}
+ \notag\\
+ &+3(\sigma+1)B\theta_++3(\sigma+3)A\theta_-,
+ \label{ext:joint-physical-resource}\\
+ b(p,\theta)={}&
+ (6+2\sigma)(1-\theta)^{3/2}
+       \frac{(p-p_*)^2}{\sqrt{pq}},\qquad p_*=(4-\sigma)/2.
+ \notag
+\end{align}
+Here the binary charge, the inward displacement, and the conditional
+variance all spend one common defect budget.
+
+For clarity, the derivation needs only polynomial inequalities. Put
+$a_\pm=\E X_\pm^2$, $b_\pm=\E X_\pm^3$, and
+$T_+=b_+-mB^2$, $T_-=b_--mA^2$. Gap integration on each
+side of the central gap gives
+\[
+ J-m(A+B)^2\le
+ T_++T_--2B(a_+-mB)-2A(a_--mA).
+\]
+Substitute this bound in the definition of $D$. For a nonnegative
+variable $Y$ of conditional mean $c$ one has exactly
+\[
+ \E Y^3=c^3+\E[(Y-c)^2(Y+2c)]
+\]
+under the conditional probability measure. Since $X\ge B$ on the
+positive class and $-X\ge A$ on the negative class, this yields
+$b_+\ge m\overline B^2+3B\theta_+$ and
+$b_-\ge m\overline A^2+3A\theta_-$. Also
+$a_+=m\overline B+\theta_+$ and
+$a_-=m\overline A+\theta_-$. Substitution and collection of terms
+give \eqref{ext:joint-physical-resource}; the constant part is
+\[
+ m\{(\sigma-1)\overline B^2+(\sigma+1)\overline A^2
+          -6\overline A\overline B\}=b(p,\theta),
+\]
+because $(\sigma+1)p^2+(\sigma-1)q^2-6pq
+=(6+2\sigma)(p-p_*)^2$.
+
+Suppose a closed probability panel and a prior resource calculation
+provide $p\in[l,u]\subset(0,1)$, $\theta\le\Theta<1$,
+$A\ge A_l>0$, $B\ge B_l>0$, and $D\le d$.
+Let $v_u=\max_{p\in[l,u]}p(1-p)$,
+$k_+=3(\sigma+1)B_l$, $k_-=3(\sigma+3)A_l$, and let
+$b_l\ge0$ be any proved lower bound for $b(p,\theta)$ on this
+closed panel. These quantities may be replaced by rational bounds in
+their indicated directions. With
+\[
+ \ell=\frac m{pq}=\sqrt{\frac{1-\theta}{pq}},\qquad
+ X=\ell(\ind_{\{X>0\}}-p+U),
+\]
+put $d_Y=(\Delta A+\Delta B)/\ell$ and
+$\lambda=n\E U^2=npq\theta/(1-\theta)$. Then
+\begin{equation}\label{ext:count-triangle-derived}
+ b_l+g d_Y+h\lambda\le D\le d,\qquad
+ g=6(1-\Theta)(A_l+B_l),\quad
+ h=\frac{\min(k_+,k_-)(1-\Theta)}{n v_u}.
+\end{equation}
+Indeed $m\ell=1-\theta$, so the displacement term in
+\eqref{ext:joint-physical-resource} is at least $g d_Y$.
+Its variance term is at least $\min(k_+,k_-)\theta\ge h\lambda$.
+All coefficients are positive. Thus $d<b_l$ excludes the panel; if
+$d=b_l$, the residual is deterministic; if $d>b_l$, the admissible
+triangle is
+\[
+ \frac{d_Y}{d_0}+\frac\lambda\Lambda\le1,\qquad
+ d_0=\frac{d-b_l}{g},\qquad\Lambda=\frac{d-b_l}{h}.
+\]
+The separate intercept bounds $d_Y\le d_0$ and
+$\lambda\le\Lambda$ are weaker consequences of this one inequality.
+They must not be used to invent an additional independent defect budget.
+
+The construction is finite: each new moment, gap, or support bound must
+follow from previously acquired simultaneous inequalities for this same
+law. Intersecting those inequalities preserves the law. No assertion
+about convergence of the refinement procedure is needed.

@@ -1,0 +1,121 @@
+\subsection{Closing the fifth index}
+\label{ext:five-assembly}
+The fifth-index calculation has three complementary parts: a count
+comparison at small third moments, an elementary corner estimate where
+the signed moment is large and positive, and a Fourier estimate for the
+remaining third moments. The corner is a genuine part of the cover;
+it cannot be discarded as a small exceptional region.
+
+\begin{proposition}[Fifth-index assembly criterion]
+\label{ext:five-assembly-criterion}
+Assume $C_4\le\CE$, the continuous inequalities proved in this paper,
+and complete verification of the finite inputs and their implications
+described below. Then $C_5\le\CE$.
+\end{proposition}
+\begin{proof}
+Suppose $C_5>\CE$ and choose a positive closed-event ratio maximizer.
+Its same-law predecessor score is at most $C_4$, so its contact
+allowance is zero. The support calculations in
+Appendix~\ref{ext:n5-support} therefore apply to this very marginal.
+They precede the supported Fourier estimates. The unrestricted
+auxiliary Fourier estimate first supplies $C_5<429/1000$; this is
+the input to the two lowest-moment initializers, not their conclusion.
+The higher-moment initializers use separately acquired supported
+own-score bounds. Their scalar input ceilings are
+\[
+\begin{array}{c|cc}
+\text{region}&\text{own score}&\text{HIGH}\\\hline
+1\le\rho\le11/10&429/1000&337/1000\\
+11/10\le\rho\le23/20&429/1000&369/1000\\
+23/20\le\rho\le237/200&52/125&393/1000\\
+237/200\le\rho\le6/5,\ \beta\le1/5&207/500&193/500\\
+237/200\le\rho\le6/5,\ \beta\ge1/5&103/250&193/500
+\end{array}
+\]
+Here HIGH is the compensated high-frequency contribution, as in
+Lemma~\ref{ext:compensated-high}. Each such input is used only on a
+support and moment domain contained in the domain of its Fourier
+proof. In particular a better score bound requiring a smaller support
+radius is not transferred to a larger-radius profile.
+The last two rows are restricted to the count rectangles specified below;
+the separate corner does not require these inputs.
+
+Here is the exact signed-moment partition behind the small-moment
+count calculation. Set
+\[
+ b_2=\frac{84729828287999}{250000000000000},\qquad
+ b_3=\frac{35139006743001}{10^{14}}.
+\]
+The sharp signed-moment inequality bounds $|\beta|$ by $b_2$ on
+$\rho\le237/200$ and by $b_3$ on $\rho\le6/5$.
+The rational endpoints are checked by
+$(1+b_i^2)^2\ge\rho_i^2(1-b_i^2)$ at the respective upper
+third moments, using the monotonicity of this expression in $b_i\ge0$.
+
+The two lowest moment intervals each form one full signed region.
+On $[23/20,237/200]$, split $\rho$ at $467/400$ and $\beta$ at
+$1/5$, giving four closed rectangles. On $[237/200,6/5]$, split
+$\rho$ at $477/400$. In the lower half use the three signed intervals
+$[-b_3,1/5]$, $[1/5,3/10]$, and $[3/10,b_3]$. In the upper half
+use $[-b_3,1/5]$, $[1/5,3/10]$, and $[3/10,17/50]$.
+These are the other six count regions. The remaining rectangle is
+\begin{equation}\label{ext:five-corner-domain}
+ [477/400,6/5]\times[17/50,b_3]
+ \quad\text{in }(\rho,\beta).
+\end{equation}
+It is covered by the whole-line elementary estimate in
+Appendix~\ref{ext:gapfree5}, including its two
+unbounded threshold rays. This estimate has no support or predecessor
+premise. Its upper bound is below $4097/10000<\CE$.
+
+In each of the twelve count regions, an unseeded finite initializer
+first acquires the raw remainder and then the physical defect, gap
+and threshold constraints. The whole final moment cover is exported.
+For each probability panel $[j/100,(j+1)/100]$, the subsequent resource
+calculation concerns that same cover and that same law. Its signed
+cubic, conditional variance and inward-displacement inequalities give
+a joint count domain as in Section~\ref{ext:physical-count-domain}.
+Every inequality in the numerical count contract must follow in its
+stated direction from this acquired domain; matching a filename or
+an isolated scalar maximum is insufficient.
+
+The twelve regions have $1,200$ probability-panel instances. Of
+these, $905$ are excluded by their resource inequalities. The other
+$295$ are covered by six-root count forests with $1,770$ roots and
+$75,178$ terminal leaves. Every accepted leaf has score strictly below
+the fixed count target, and that target is strictly below $\CE$.
+The interval boundaries in $\rho$, $\beta$ and $p$ are included.
+Consequently these twelve regions and \eqref{ext:five-corner-domain}
+cover all $1\le\rho\le6/5$, without assuming that the sign of
+$\beta$ can be changed while keeping the event fixed.
+
+For completeness, the supported Fourier complement has six closed
+bands, each supplied with a previously acquired support radius:
+\[
+\begin{array}{c|c}
+\rho& R\\\hline
+{[6/5,5/4]}&13/5\\
+{[5/4,7/5]}&117/40\\
+{[7/5,3/2]}&25/8\\
+{[3/2,8/5]}&133/40\\
+{[8/5,17/10]}&7/2\\
+{[17/10,7361/4000]}&15/4
+\end{array}
+\]
+The first band uses the additional radius-$13/5$ support calculation.
+The second restricts the wider support interval $[6/5,7/5]$.
+All six implications retain both support signs and every real
+threshold. The Fourier proof subdivides these bands into $41$ closed
+strips and bounds the score below $4097/10000$ on each. Its recorded
+$42$ mesh attempts include the unsuccessful coarser attempt; only
+the successful complete enclosures are used as inequalities.
+For $\rho\ge7361/4000$, the decreasing published affine bound is
+at most $819/2000<4097/10000$.
+
+Thus the count regions, the elementary corner, the six Fourier
+bands and the infinite tail exclude the chosen maximizing witness.
+Closed-event attainment and reflection account for either sign of
+the original Kolmogorov discrepancy. This proves the implication.
+\end{proof}
+
+\subsection{Induction from six through fourteen}

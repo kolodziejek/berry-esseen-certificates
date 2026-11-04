@@ -1,0 +1,162 @@
+\section{A support criterion at a specified index}
+\label{ext:direct-gaussian-support}
+The support calculations throughout the finite range use one elementary
+criterion. Its inputs are a lower bound for the attained score, upper
+bounds for moments of the same marginal, and a predecessor allowance.
+The Gaussian calculation keeps the actual integer $n$ throughout.
+
+\begin{lemma}[Direct Gaussian support criterion]
+\label{ext:direct-gaussian-support-criterion}
+Let $n\ge2$, and let $(P,H)$ be an attained positive closed-event
+ratio maximizer with score $C$. Write
+$\rho=\E|X|^3$, $\beta=\E[X|X|]$ and
+$A=\sqrt{n-1}\Delta_{n-1}(P)/\rho$.
+Suppose known numbers $c,r,b_-,b_+,S,e,q$ satisfy
+\[
+ 0<c\le C,\quad 1\le\rho\le r,\quad
+ -1<b_-\le\beta\le b_+<1,\quad q\ge0,
+\]
+\[
+ \sqrt{n/(n-1)}\le S,\qquad
+ n(\sqrt{n/(n-1)}-1)-1/2\le e,\qquad
+ n(A-C)_+\le q.
+\]
+Fix $R\ge1$ and a support sign $\eta\in\{-1,1\}$, and put
+$B_+=b_+$, $B_-=-b_-$. Define
+\[
+ Q_\eta(v)=-v^3+\tfrac32rv^2+3B_\eta v+re,
+ \qquad
+ L_\eta(v)=\tfrac25(v^2/2+1/2+e)+cQ_\eta'(v).
+\]
+Suppose that
+\begin{equation}\label{ext:direct-support-ray-gates}
+ Q_\eta(R),Q_\eta'(R),Q_\eta''(R),
+ L_\eta(R),L_\eta'(R)<0,
+ \qquad 1/5-3c<0.
+\end{equation}
+Define the actual-index Gaussian expression
+\[
+ G_n(H,t)=n\sqrt n\{\Phi((H-t)/\sqrt{n-1})-\Phi(H/\sqrt n)\}
+ +nt\phi(H/\sqrt n)+\tfrac H2(t^2-1)\phi(H/\sqrt n),
+\]
+and suppose $U_\eta$ satisfies
+\[
+ \sup_{H\in\R}\eta G_n(H,R)\le U_\eta,
+ \qquad U_\eta+cQ_\eta(R)+rSq<0.
+\]
+Then $\supp P$ contains no point in the ray
+$\{\eta v:v\ge R\}$. The two signs can be checked separately,
+with different signed-moment bounds.
+\end{lemma}
+
+\begin{proof}
+Contact gives
+\[
+ 0\le G_n(H,t)+
+ C\{-|t|^3+\tfrac32\rho t^2+3\beta t+\rho e_n\}
+ +\rho s_n n(A-C),
+\]
+where $s_n=\sqrt{n/(n-1)}$ and $e_n=n(s_n-1)-1/2$.
+The last term is at most $rSq$. At $t=\eta v$ with $v\ge R$,
+the bracket is at most $Q_\eta(v)$.
+Since $Q_\eta'''=-6$, the first three gates make this polynomial
+strictly negative on the full ray. Thus multiplication by $C\ge c$
+gives an upper bound $cQ_\eta(v)$.
+
+The derivative is
+$n\phi(z)+Ht\phi(z)-ns_n\phi(s_ny)$, where
+$z=H/\sqrt n$ and $y=(H-t)/\sqrt n$.
+Taylor's theorem and $\|\phi''\|_\infty=\phi(0)$ bound
+$|n\phi(y)-n\phi(z)-Ht\phi(z)|$ by $\phi(0)t^2/2$.
+The identity $\partial_s[s\phi(sy)]=-\phi''(sy)$ bounds the
+remaining scaling error by $n\phi(0)(s_n-1)$.
+This proves, for every $n\ge2$,
+$|\partial_tG_n(H,t)|\le\phi(0)(t^2/2+1/2+e)$.
+Therefore the derivative in $v$ of
+$G_n(H,\eta v)+cQ_\eta(v)+rSq$ is at most $L_\eta(v)$.
+Its second derivative as a polynomial bound is
+$L_\eta''=2/5-6c<0$; the last two endpoint gates imply
+$L_\eta(v)<0$ on $[R,\infty)$.
+Finally $G_n(H,-R)=-G_n(-H,R)$, so the assumed $U_\eta$
+bounds $G_n(H,\eta R)$ uniformly in $H$.
+The strict endpoint inequality and monotonicity contradict contact
+on every point of the specified support ray.
+\end{proof}
+
+\paragraph{How the Gaussian-line certificate supplies $U_+$ and $U_-$.}
+Let $z=H/\sqrt n$ and $a=(H-R)/\sqrt{n-1}$. Direct
+differentiation gives
+\[
+ \partial_HG_n(H,R)=ns_n\phi(a)+
+ \left[-n-RH+\tfrac12(R^2-1)(1-H^2/n)\right]\phi(z).
+\]
+Choose an integer $H_0$ such that
+$H_0\ge5\sqrt n$ and $H_0-R\ge5\sqrt{n-1}$.
+An outward enclosure of the square roots makes this choice exact.
+On the whole real line,
+\[
+ |\partial_H^2G_n(H,R)|\le M_{n,R}
+ :=\frac{\sqrt n}{4}\left(\frac n{n-1}+1\right)
+   +\frac25R+\frac{2|R^2-1|}{5\sqrt n}.
+\]
+On a closed threshold cell with midpoint $h$ and half-width $w$,
+let $[g_-,g_+]$ and $[d_-,d_+]$ enclose $G_n(h,R)$ and
+$\partial_HG_n(h,R)$. Taylor's theorem then gives the two upper
+bounds
+\[
+ g_++\max(|d_-|,|d_+|)w+M_{n,R}w^2/2,
+ \qquad
+ -g_-+\max(|d_-|,|d_+|)w+M_{n,R}w^2/2.
+\]
+They bound $G_n(H,R)$ and $-G_n(H,R)$ respectively throughout
+the cell. The certificate includes every consecutive cell from
+$-H_0$ to $H_0$, including their endpoints.
+
+On the two exterior rays, both distribution-function arguments lie
+in the same normal tail, so
+\[
+ |G_n(H,R)|\le n\sqrt n\,\tau+
+ \left(nR+\tfrac12H_0|R^2-1|\right)\phi(H_0/\sqrt n),
+ \quad |H|\ge H_0,
+\]
+where $\tau=3\cdot10^{-7}>\Phi(-5)$ is sufficient.
+Take the largest positive-cell bound and the exterior bound for
+$U_+$, and the largest negative-cell bound and the exterior bound
+for $U_-$. This proves a statement about the entire threshold line,
+not just about its grid points.
+
+\paragraph{Exact arithmetic and the native input interface.}
+The implementation \texttt{direct\_gaussian\_support.py} uses
+integer-bracketed square roots and outward rational interval operations.
+Its density enclosure first divides the nonnegative exponential argument
+by a power of two until it is at most one, uses the alternating Taylor
+polynomial through degree23 with the degree24 upper remainder, and
+repeatedly squares with outward rounding. For a nonnegative normal
+argument at most five, its distribution-function enclosure integrates
+the first80 terms of the exponential series and adds the next-term
+error; floor and ceiling arithmetic encloses every term. The normal
+argument is rounded outward to a grid of width $10^{-12}$, and
+monotonicity of $\Phi$ supplies the interval endpoints. Outside this
+range it uses the preceding Mills bound. The density constant is
+enclosed by Machin's arctangent identity and integer square roots.
+These rules justify the midpoint value and derivative intervals used
+above.
+
+The native function \texttt{target(n,K,R,q,...)} uses
+$c=819/2000+K/n$. The hypothesis $C\ge\CE+K/n$ implies
+$C>c$. Its default third-moment cap comes from the two published
+affine Berry--Esseen estimates already used in the introduction:
+\[
+ r=\min\left\{
+ \frac{0.3031\cdot0.646}{c-0.3031},
+ \frac{0.3322\cdot0.429}{c-0.3322}\right\}.
+\]
+Both denominators are positive on its admitted domain. The signed-moment
+inequality gives the default symmetric interval for $\beta$.
+An explicitly supplied tighter $\rho$ or signed-$\beta$ interval must
+come from a previously established property of the same marginal.
+The program checks all the strict polynomial gates and the two full
+Gaussian-line bounds. Its return value proves the support conclusion
+of this lemma only after these analytic and same-marginal hypotheses
+have been supplied. In particular, it does not itself prove a score
+bound or transfer a result from one index to another.

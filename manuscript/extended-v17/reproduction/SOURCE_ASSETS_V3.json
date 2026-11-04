@@ -1,0 +1,172 @@
+{
+  "assets": [
+    {
+      "archive": "assets/framework-static03/static-sources.tar.gz",
+      "archive_sha256": "3efd04860100dd010de930a11f947d5cceac4414201cb12884db4af42871ed23",
+      "bytes": 64020798,
+      "id": "framework",
+      "logical_files": 4700,
+      "manifest": "assets/framework-static03/MANIFEST.json",
+      "manifest_sha256": "a7ac83d8f1de03738f1d8350a11f7c1cf7c76fc66fb740a514da5312211e7929",
+      "trees": [
+        "work/end2end25_audit_20261024",
+        "work/extension_20261030",
+        "work/manuscript_revision_20261029",
+        "work/unconditional_legacy_20261030"
+      ]
+    },
+    {
+      "archive": "assets/foundations-static-cache-v2.tar.gz",
+      "archive_sha256": "7b1cf5d1b3223a3bcabd9867a52693f6e069b57b3e5ef59d7684bd562d0aebaf",
+      "bytes": 23938916,
+      "id": "foundations",
+      "logical_files": 5393,
+      "manifest": "assets/foundations-static-cache-v2.manifest.json",
+      "manifest_sha256": "9ae6c145b8202a81815d69be9d7a2e4e3fd517f118b9512694826dee49e60fb5",
+      "trees": [
+        "work/extension_20261030/foundations/finite1014-cache-core01",
+        "work/extension_20261030/foundations/finite1014-cache-corner01",
+        "work/extension_20261030/foundations/finite1014-cache-high01",
+        "work/extension_20261030/foundations/finite1014-cache-highrho01",
+        "work/extension_20261030/foundations/finite1014-cache-supported01",
+        "work/extension_20261030/foundations/finite69-cache-caps01",
+        "work/extension_20261030/foundations/finite69-cache-initial7_901",
+        "work/extension_20261030/foundations/finite69-cache-n601",
+        "work/extension_20261030/foundations/finite69-cache-remaining01"
+      ]
+    },
+    {
+      "archive": "assets/n5-static-cache02/static-sources.tar.gz",
+      "archive_sha256": "816209cd4d81861c7909f7a3145771da5d14107ba14b17922aad5fb7135f387f",
+      "bytes": 22411375,
+      "id": "n5",
+      "logical_files": 16729,
+      "manifest": "assets/n5-static-cache02/MANIFEST.json",
+      "manifest_sha256": "c6d35d6b04b1a3cc659d287944330cb4850a432ef5938e02a8b2176f5f96ec5d",
+      "trees": [
+        "work/extension_20261030/coordinator/n5-cache",
+        "work/extension_20261030/coordinator/n5-join-inputs"
+      ]
+    },
+    {
+      "archive": "assets/finite-static-cache02/static-sources.tar.gz",
+      "archive_sha256": "d6a3ebbbc6af53192959b3816941e3a165b9819c040b62fe2a02ae94dc4415af",
+      "bytes": 53466481,
+      "id": "finite",
+      "logical_files": 10969,
+      "manifest": "assets/finite-static-cache02/MANIFEST.json",
+      "manifest_sha256": "10fb0244ba685e5122cd8bfba3af55204438ba0c1ef888abf6ad241f2629490b",
+      "trees": [
+        "work/extension_20261030/finite/actual20-coarse4-source01",
+        "work/extension_20261030/finite/actual20-direct-source01",
+        "work/extension_20261030/finite/actual20-math-source01",
+        "work/extension_20261030/finite/actual21-24-acquisitions02/source-cache",
+        "work/extension_20261030/finite/actual21-24-counts01/source-cache",
+        "work/extension_20261030/finite/exact-target-projection-source01",
+        "work/extension_20261030/finite/finite1519-core-cache01",
+        "work/extension_20261030/finite/finite1519-support-cache01",
+        "work/extension_20261030/finite/finite1519_high_sources-cache01",
+        "work/extension_20261030/finite/finite1519_highrho_sources-cache01",
+        "work/extension_20261030/finite/finite1519_supported_sources-cache01",
+        "work/extension_20261030/finite/finite1920-feedback-cache01",
+        "work/extension_20261030/finite/finite2024-auxiliary-cache01",
+        "work/extension_20261030/finite/finite2024-supported-cache01",
+        "work/extension_20261030/finite/finite2024-universal-cache01",
+        "work/extension_20261030/finite/finite2124-math-source01",
+        "work/extension_20261030/finite/finite2630_b1_sources-cache01",
+        "work/extension_20261030/finite/initial35_39-source01",
+        "work/extension_20261030/finite/low26_30_support-source01",
+        "work/extension_20261030/finite/low31-source01",
+        "work/extension_20261030/finite/n25-acquisitions01/b0/source",
+        "work/extension_20261030/finite/n25-acquisitions01/b1/source",
+        "work/extension_20261030/finite/n25-acquisitions01/b2/source",
+        "work/extension_20261030/finite/n25-count-source01",
+        "work/extension_20261030/finite/positive39-source01",
+        "work/extension_20261030/finite/radius3-20-24-source01",
+        "work/extension_20261030/finite/resource35_39-source01",
+        "work/extension_20261030/finite/scalar-kappa01",
+        "work/extension_20261030/finite/shared-high25-39-source01",
+        "work/extension_20261030/finite/support16-source01",
+        "work/extension_20261030/finite/support32_34-source01",
+        "work/extension_20261030/finite/support35-source01"
+      ]
+    }
+  ],
+  "complete_relocated_114_command_campaign_executed": false,
+  "existing_framework_bytes_replaced": false,
+  "external_count_asset": {
+    "all_law_theorem_verified": false,
+    "bytes": 94179896,
+    "candidates": 1243,
+    "destination_relative_to_workspace": "work/unconditional_legacy_20261030/certificates/count",
+    "filename": "count-candidates.zip",
+    "historical_acceptance_adopted": false,
+    "installer_sha256": "18405cd705137729957b1a23938a77219498256591242af11c6bf7aea8b97e48",
+    "manifest_bytes": 1762067,
+    "manifest_sha256": "0431403e05326655f316991eae6fcdaa8c64bef244f055a40e1dc6958c892f5f",
+    "members": 1244,
+    "native_arithmetic_executed": false,
+    "original_catalog_url": "https://github.com/kolodziejek/berry-esseen-certificates/releases/download/v0.1.0/count-candidates.zip",
+    "public_batch_sha256": "e82caad81cd2220c6b6d88e70d85fc50b182d4876e83031de1122930aaeaf91a",
+    "public_registry_sha256": "f5ddd40aefe85b5ce036b2c23fe540c2032997bf8a51f4999a08573e9a4c34f7",
+    "public_worker_sha256": "fda35a4870dc8642d9fb593bda5e5a31d6aa3218f17d394e29963562540b7659",
+    "schema": "PINNED_PUBLIC_COUNT_INPUT_ASSET_V1",
+    "sha256": "5c08ddbd642e5da7eea9d7053df721a89bdce1e91a17c82cc46b2a66c34a84e0",
+    "uncompressed_bytes": 1249228509,
+    "url": "https://github.com/rodziewiczk/berry-esseen-certificates/releases/download/v0.1.0/count-candidates.zip",
+    "url_provenance": "Byte-identical mirror downloaded and checked in fetch_assets02; original catalog URL was unavailable",
+    "verified_download_receipt_sha256": "16ee2f503084295d8dcd218ca19ec44bb343fa9565e8ae187554d844c9d1fd62"
+  },
+  "framework_additive_files": 44,
+  "framework_builder_sha256": "a82741e398b88ea6f9c7a8df2bd581844f24e68e49881344dd3d7a065dfbb2a1",
+  "framework_inventory": "FRAMEWORK_FILE_MANIFEST_V3.json",
+  "framework_inventory_sha256": "cc55938665e5110ab316f0d1d1710db3a40425a526abc0a8ce1352b25354fb0d",
+  "framework_supplements": {
+    "BOUNDED_REVIEW_SUPPLEMENT_20261104_V1.json": "3898de529fff3f8435046d9bce82dcda97bdc44c4ed402264e6879cbf8011457",
+    "CURRENT_EVIDENCE_ADDITIVE_SOURCES_20261104_V1.json": "3cc89303dcd593ed8ca34bb876681aab15c883313c6a7ea15d8d9219051c21d1",
+    "FOUNDATIONS_PARALLEL_CORE_SUPPLEMENT_20261104_V1.json": "ce6c8f0f3f71e15f67bd84f1f973f47b42808a6b5ed44a5ad577631ab83e1f2d",
+    "finite-final-completion20261104-01.json": "f15fdd4b7394f096fa868ece8b8218d7f331f10c29abd87bbbf11d00620be95d"
+  },
+  "mathematical_acceptance_claimed": false,
+  "reproduction_index_sha256": "e261a8b06071266c1860101e38fc70cff6a986af0ad1ba09b5396286efc93ad1",
+  "schema": "BE_EXTENSION_SOURCE_ASSETS_V3",
+  "supersedes_source_assets_sha256": "6b7d02812ad1dfd19d3a84247ea946eddcd011b898c575615f5c8b8a368156c7",
+  "tools": {
+    "evidence_pack.py": {
+      "bytes": 11320,
+      "sha256": "75d2dd1df7fd14c7892f185ff4d03e58d4c61cf7f26acc3d6cd40eaf46464763"
+    },
+    "evidence_pack_v2.py": {
+      "bytes": 11543,
+      "sha256": "58ad9d8a3ebd909729b3ddbd074e51d992138adf6049bfd6270d5b40b584fc63"
+    },
+    "install_count_candidates.py": {
+      "bytes": 9310,
+      "sha256": "18405cd705137729957b1a23938a77219498256591242af11c6bf7aea8b97e48"
+    },
+    "run_reproduction_index.py": {
+      "bytes": 15547,
+      "sha256": "816a778fb2bb0bf76c6ac88139237ab17d8589b1f4f6bebab45fb3f54489418d"
+    },
+    "source_cache_pack.py": {
+      "bytes": 8080,
+      "sha256": "294641404ea768eda08a6d93508ff3f2c3d32dea944d27edb4a7b61d51b38e3c"
+    },
+    "test_count_candidate_installer.py": {
+      "bytes": 4474,
+      "sha256": "29418ecdbd9f812e9b840a63fdd386ec272d6dce00ac2437a6ab8d3c0edbcfe3"
+    },
+    "test_evidence_pack.py": {
+      "bytes": 7653,
+      "sha256": "cb8aa871247460dc1ed46105e190ac5331753a9ef22f9012b6fe4430e78c3593"
+    },
+    "test_evidence_pack_v2.py": {
+      "bytes": 8271,
+      "sha256": "88e530bdf396dcd504d70408e3f0cd7edef27f632c82d05858c67a855e10c4da"
+    },
+    "test_reproduction_index.py": {
+      "bytes": 7921,
+      "sha256": "4db9b8e13c0c266fde02fe003ce606025cdd21494019c7d5fcc3488da96d0d8c"
+    }
+  }
+}

@@ -1,0 +1,298 @@
+\section{The finite induction from fifteen to thirty-nine}
+\label{ext:finite1539}
+The same argument is repeated at each index, with different rational
+bounds. Suppose that $n$ is the first index in this range for which
+$C_n>\CE$. By Corollary~\ref{ext:ratio-attainment}, choose an unrestricted
+positive closed ratio maximizer $P$ at this index. Its score is $C_n$,
+and the same marginal satisfies $C_{n-1}(P)\le\CE<C_n$.
+Consequently its contact predecessor allowance is zero. The positive
+allowances retained in some calculations below are weaker valid inputs.
+The law is never replaced when passing from a support calculation to a
+moment calculation or to a conditional count probability.
+
+There are two ways to exclude this law. For sufficiently large $\rho$,
+a Fourier estimate directly bounds its score below $\CE$. In the
+remaining moment intervals, support and Fourier estimates first give
+necessary constraints. A finite moment calculation then gives a central
+support gap and, on each probability panel, a joint bound on inward
+displacement and conditional variance. The count calculation excludes
+every distribution obeying those constraints. Its domain is larger than
+the set of distributions, which is harmless in this direction.
+
+\subsection{Moment intervals and the order of their inputs}
+Write $P_j=[j/100,(j+1)/100]$. All moment intervals and probability
+panels in the tables are closed; common endpoints are checked in both
+adjacent pieces. The value $4097/10000$ is strictly below $\CE$.
+The following are the exact low-moment input contracts. An own-score
+ceiling bounds $C_n$, whereas a HIGH ceiling bounds only the named
+high-frequency term in the compensated Fourier formula.
+\begin{center}\small
+\begin{tabular}{c|c|c|c|c}
+actual $n$ & $\rho$ & initial radius & own-score ceiling & HIGH ceiling\\\hline
+$15$--$19$ & $[1,11/10]$ & $23/10$ & $417/1000$ & $191/500$\\
+$15$--$18$ & $[11/10,23/20]$ & $12/5$ & $827/2000$ & $409/1000$\\
+$19$ & $[11/10,23/20]$ & $23/10$ & $827/2000$ & $409/1000$\\
+$20$ & $[1,11/10]$ & $23/10$ & $831/2000$ & cellwise\\
+$20$ & $[11/10,9/8]$ & $23/10$ & $103/250$ & cellwise\\
+$21$--$24$ & $[1,11/10]$ & $23/10$ & $419/1000$ & cellwise\\
+$21$--$24$ & $[11/10,9/8]$ & $12/5$ & $419/1000$ & cellwise\\
+$25$--$30$ & $[1,11/10]$, $[11/10,6/5]$
+ & actual support table & $434477/10^6$ & cellwise\\
+$31$--$34$ & $[1,11/10]$, $[11/10,6/5]$
+ & $47/20$, $13/5$ & $432313/10^6$ & cellwise
+\end{tabular}
+\end{center}
+For an entry marked ``cellwise'', the compensated Fourier formula is
+evaluated directly on each moment cell, without a separate scalar HIGH ceiling.
+The floor-$25$ and floor-$31$ entries require the actual-index support
+calculations in addition to the listed scalar ceilings. They do not
+assert that support at index $25$ or $31$ transfers to another index.
+The direct Gaussian criterion supplies each such calculation.
+
+For $15\le n\le19$, support of radius $3$ is first established on
+$1\le\rho\le33/25$. Supported Fourier bounds then establish the first
+three own-score ceilings in the table; their hypotheses therefore do
+not depend on the later, smaller support radii. The HIGH computation
+uses this already acquired radius $3$. At index $15$ the retained
+contact allowances in the two low bands are $219/2000$ and $57/1000$;
+at indices $16$--$19$ they are zero. The exact Gaussian support tests
+then establish the smaller radii used by the moment calculation.
+
+At index $20$, the direct radius-$3$ result on $\rho\le6/5$ supplies
+the support premise for the two supported Fourier own-score estimates
+$831/2000$ and $103/250$. The two subsequent moment calculations
+retain contact allowances $29/250$ and $23/500$, respectively.
+They start without a numerical moment seed, perform eight refinements,
+and export a ninth complete cover. There is no need to assume the
+older coarse index-$20$ calculation in order to start this iteration.
+The original coarse count contracts on $P_{37},\ldots,P_{40}$ do,
+however, require a separate simultaneous-containment check against the
+newly acquired constraints; their historical headers are not a proof
+of that implication.
+
+For $21\le n\le24$, the unrestricted auxiliary Fourier calculation
+covers each actual index and gives $C_n<419/1000$. Its acceptance
+checks this strict per-index ceiling, not merely the looser discovery
+target $21/50$. Each band then uses eight refinements and a ninth
+export, and all $100$ probability panels are retained. The direct
+radius-$3$ theorem supplies the supported complement below $6/5$.
+
+The high-moment alternatives are as follows:
+\begin{center}\small
+\begin{tabular}{c|c|c|c}
+actual $n$ & moment interval & extra hypothesis & score ceiling\\\hline
+$15$--$19$ & $[23/20,33/25]$ & $|X|\le3$ & $4097/10000$\\
+$15$--$19$ & $[33/25,19/10]$ & none & $4097/10000$\\
+$20$--$24$ & $[9/8,6/5]$ & $|X|\le3$ & $4097/10000$\\
+$20$--$24$ & $[6/5,19/10]$ & none & $4097/10000$\\
+$25$--$39$ & $[6/5,19/10]$ & none & $4097/10000$
+\end{tabular}
+\end{center}
+The published decreasing Berry--Esseen majorant supplies $\rho\ge19/10$.
+Every unrestricted row uses the full admissible auxiliary-moment
+interval, not a selected value of that moment. Thus the last row
+removes all need for the older index-$25$ band
+$[6/5,13/10]$ and the subsequent high-moment resource chains. The
+unused computations may be retained as supplementary evidence but
+are not premises of this shorter proof.
+
+\subsection{Finite acquisition and the common probability law}
+The Fourier and contact bounds contain a few signed moments. Split
+their complete admissible rectangle into closed cells. On a cell,
+use outward bounds for the Fourier terms and for the signed Gaussian
+maximum in the contact inequality. If the resulting upper bound is
+negative, no maximizing witness lies in the cell. Otherwise retain
+all necessary constraints established there. Taking minima of valid
+upper bounds and maxima of valid lower bounds improves the same
+witness's constraints. It does not require a contraction or convergence
+of the iteration. A finite number of passes, followed by one complete
+export pass, is sufficient.
+
+The exported global defect upper bound is smaller than the positive
+central-gap threshold. Hence zero is excluded from the support, and
+sign conditioning is legitimate. In a probability panel $P_j$, the
+resource calculation retains bounds for both central endpoints,
+both outer endpoints, both signs of the phase, the signed moments,
+and one common physical defect. Section~\ref{ext:count-filters} and
+the resource-to-count calculation turn these into a simultaneous
+count domain. In particular, if
+\[
+ D\le d,\qquad D\ge b+g d_{\rm in}+h\lambda,
+\]
+then $g d_{\rm in}+h\lambda\le d-b$. The triangle's original
+variance intercept is retained even when a separate scalar estimate
+further clips $\lambda$. Its two intercepts must not be independently
+improved and then treated as a new joint triangle.
+
+The floor-$25$ calculation is used at actual indices $26$--$30$,
+and the floor-$31$ calculation at actual indices $32$--$34$.
+Their invariant is $nD\le Nd$, where $N$ is the floor. This is stronger
+than simply reusing $D\le d$. The count contract uses $D\le Nd/n$
+and the corresponding noise coefficient $Nh/n$, with the actual
+index in every binomial probability and Gaussian argument. The
+actual-index support checks are separate inputs. These facts explain
+why the reuse is valid and why it is limited to the stated finite
+ranges.
+
+The floor-$31$ low-moment calculation has two special local refinements
+in the second band, on $P_{35}$ and $P_{36}$. The full global
+acquisition supplies every other panel. At indices $32$--$34$ the
+same weighted physical inequalities are used, with individually
+checked directed count domains.
+
+\subsection{The extra own-score bound at index 39}
+Indices $35$--$39$ use actual-index INITIAL calculations, rather than
+the floor-$31$ profile. Their input pairs (support radius, own-score
+ceiling) are
+\[
+\begin{array}{c|ccccc}
+ n&35&36&37&38&39\\\hline
+ R&39/10&19/5&19/5&19/5&19/5\\
+ c&53539/125000&1699/4000&84867/200000&211449/500000&41449/100000.
+\end{array}
+\]
+Lemma~\ref{ext:first-failure25}, retaining its sharper expression
+$C_n<41/100+4177/(13824n)$, implies the first four score ceilings.
+The fifth requires an additional argument: the same-law local
+comparison at actual index $39$ with
+\[
+ K=741/4000,\qquad q=33/100,\qquad C_{39}<2113/5000,
+\]
+excludes $39(C_{39}-\CE)\ge741/4000$. Its scalar entry conditions
+follow from sharpness at $38$ and Lemma~\ref{ext:first-failure25}.
+Since $\CE<40974/10^5$ and $741/(4000\cdot39)=19/4000$,
+this gives $C_{39}<41449/10^5$, the required native ceiling.
+Thus this positive-excess calculation is an internal prerequisite of
+the selected sharp-$39$ calculation. Omitting it merely because
+sharp-$39$ will later be available would be circular.
+
+The actual-index traversals then cover every probability panel.
+At $35$ they combine four local refinements with separate lower and
+upper probability ranges; at $36$ only one interval needs a local
+refinement. The remaining indices use their global INITIAL exports.
+Appendix~\ref{ext:actual3539-acquisition} gives the complete union and
+explains how the acquired bounds imply the $120$ surviving count
+contracts, including their signed phase inequalities.
+
+\subsection{Exact count coverage and assembly}
+The following table specifies the surviving probability panels.
+Every omitted panel must be explicitly excluded by its acquired
+resource or scalar inequality. A failed resource evaluation is not
+an exclusion. Multiple forests in one panel form a closed subdivision
+in probability or another displayed coordinate; their union is
+checked separately.
+\begin{center}\small
+\begin{tabular}{c|c|c|c}
+$n$ & first low band & second low band & selected forests\\\hline
+15 & $37$--$56$ & $33$--$44$ &32\\
+16 & $37$--$56$ & $33$--$43$ &31\\
+17 & $37$--$55$ & $33$--$43$ &30\\
+18 & $37$--$54$ & $34$--$43$ &28\\
+19 & $37$--$53$ & $34$--$42$ &26\\
+20 & $37$--$58$ & $35$--$45$ &49\\
+21 & $37$--$57$ & $35$--$44$ &31\\
+22 & $37$--$56$ & $35$--$43$ &29\\
+23 & $37$--$55$ & $35$--$43$ &28\\
+24 & $37$--$54$ & $35$--$42$ &26\\
+25 & $37$--$53$ & $32$--$42$ &52\\
+26 & $37$--$53$ & Fourier &17\\
+27 & $37$--$52$ & Fourier &16\\
+28 & $37$--$52$ & Fourier &16\\
+29 & $37$--$52$ & Fourier &16\\
+30 & $37$--$51$ & Fourier &15\\
+31--34 & $36$--$49$ & $30$--$40$ &25 per index\\
+35 & \multicolumn{2}{c|}{$23$--$48$} &26\\
+36 & \multicolumn{2}{c|}{$24$--$48$} &25\\
+37 & \multicolumn{2}{c|}{$24$--$47$} &24\\
+38 & \multicolumn{2}{c|}{$25$--$47$} &23\\
+39 & \multicolumn{2}{c|}{$26$--$47$} &22
+\end{tabular}
+\end{center}
+At $26\le n\le30$, the second-band resource survivors are
+$P_{32},\ldots,P_{42}$; the selected supported Fourier calculation
+checks $23$ closed moment strips, at each of the five actual indices,
+using the acquired support and moment constraints on these panels.
+\paragraph{Five panels excluded before the count calculation.}
+The first-band count list shortens as $n$ increases because the upper
+bound $D\le25d/n$ improves while the physical binary-asymmetry cost
+does not decrease. The floor-$25$ calculation leaves the $17$ panels
+$P_{37},\ldots,P_{53}$. Five of the $85$ resulting index--panel pairs
+at $26\le n\le30$ are excluded as follows.
+
+The complete acquisition gives these convenient outward bounds for the
+same actual law:
+\[
+\begin{array}{c|c|c}
+ j& d\ \text{in }D\le25d/n&\Theta\ \text{in }\theta\le\Theta\\\hline
+ 52&3/10&1/500\\
+ 53&5/16&1/2500.
+\end{array}
+\]
+The physical variance bound is transferred by the argument in
+Appendix~\ref{ext:finite-floor-transfer}; it is not a bound for an
+unrelated optimizer at index $25$. Set $s=316227766/10^8<\sqrt{10}$
+and $l=j/100$. Since $p\ge l>(4-s)/2\ge p_*$ and
+$\sqrt{p(1-p)}\le1/2$, \eqref{ext:joint-physical-resource} gives
+\[
+ D\ge (12+4s)(1-\Theta)^2
+            \left(l-\frac{4-s}{2}\right)^2
+ >\begin{cases}251/1000,&j=52,\\38/125,&j=53.\end{cases}
+\]
+We used $(1-\theta)^{3/2}\ge(1-\Theta)^2$; the two final strict
+comparisons are rational arithmetic. But on $P_{53}$ for
+$n=27,28,29,30$ the upper bound gives
+$D\le125/432<38/125$, and on $P_{52}$ for $n=30$ it gives
+$D\le1/4<251/1000$. These contradictions exclude all five closed
+panels, including their endpoints. The remaining $80$ selected cases
+have full actual-index count certificates. Thus no missing certificate
+is treated as an exclusion.
+
+At index $20$, $P_{36}$ in the first band and $P_{34}$ in the second
+are excluded by a strict Bernoulli-moment lower bound. These two
+panels must not be silently omitted from the probability union.
+
+For each selected forest, the source-to-domain join has four distinct
+checks. First, the fresh resource bounds contain the same witness
+on the entire original moment and probability domain. Second, all
+scalar and phase constraints in the count contract are consequences
+of those bounds, with upper bounds enlarged, lower bounds diminished,
+and each signed phase quadratic dominated on its full phase interval.
+Third, the native count calculation uses the actual $n$ and verifies
+every closed leaf and every root count. Finally, the accepted leaves
+and split panels form the complete closed domain. The common-count
+identity then bounds the original convolution probability; it is not
+an inference from the feasibility of a relaxation.
+
+The direction of the phase comparison deserves emphasis. The count
+kernel uses the maximum of its listed quadratic bounds, since an
+exported list can represent alternative surviving moment cells.
+If the acquired quadratics are $q_i(H)$ and the count quadratics are
+$\widetilde q_j(H)$, the join verifies, for each $i$, some $j$ with
+$q_i(H)\le\widetilde q_j(H)$ throughout the relevant signed interval.
+It follows that
+\[
+ \max_i q_i(H)\le\max_j\widetilde q_j(H).
+\]
+The full-interval comparison checks the two endpoints and any interior
+minimum of their quadratic difference. Replacing either maximum by a
+minimum would require a different argument.
+
+\begin{proposition}[Finite assembly criterion]\label{ext:finite1539-assembly}
+Assume $C_{14}\le\CE$, the continuous support, Fourier, finite-moment,
+resource, and count inequalities stated above, and the complete exact
+arithmetic and source-to-domain joins for the displayed families.
+Then $C_n\le\CE$ for every $15\le n\le39$.
+\end{proposition}
+\begin{proof}
+If the conclusion failed, choose the least such $n$ and its positive
+closed ratio maximizer. The moment tables cover its $\rho$. In a
+Fourier region its score is already strictly below $\CE$, a
+contradiction. In every remaining region the support and own-score
+premises precede the moment acquisition; at $n=39$ include the
+positive-excess prerequisite just described. The full exported
+probability cover either excludes its panel or places the same
+marginal in an accepted count domain. The count identity and the
+strict leaf bound again give a score below $\CE$. This contradiction
+proves the conclusion, and supplies the sharp predecessor for the
+next actual index.
+\end{proof}

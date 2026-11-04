@@ -1,0 +1,192 @@
+\section{Support at the actual indices six through fourteen}
+\label{ext:support6-14}
+The support calculation at index five extends to each subsequent small
+index, but its Gaussian expression must be evaluated at that index. We
+record these evaluations explicitly; no numerical maximum at index five
+is used at another index.
+
+\begin{proposition}[Actual-index low-moment support]
+\label{ext:support6-14-table}
+Let $6\le n\le14$, assume $C_{n-1}\le\CE<C_n$, and let $(P,H)$ be
+a positive closed-event ratio maximizer from
+Corollary~\ref{ext:ratio-attainment}. For each applicable row below,
+$\rho(P)$ in the stated closed interval implies
+$\supp P\subset(-R,R)$. The number $b$ bounds
+$|\beta|=|\E[X|X|]|$; the final column is a strict rational lower
+bound for the endpoint margin, uniform over the indicated indices.
+\begin{center}\small
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+indices & $\rho$ interval & $b$ & $R$ & margin $>$\\
+\midrule
+$6,\ldots,14$ & $[1,11/10]$ & $0.253257$ & $23/10$ & $0.259317$\\
+$6,\ldots,14$ & $[11/10,23/20]$ & $0.307221$ & $12/5$ & $0.161008$\\
+$6,\ldots,9$ & $[23/20,237/200]$ & $0.338920$ & $5/2$ & $0.182254$\\
+$6,\ldots,9$ & $[23/20,6/5]$ & $0.351391$ & $13/5$ & $0.357463$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The overlapping last two rows serve different purposes: the smaller
+radius is used in the low-moment contact calculation, and the wider
+moment interval is used by the supported Fourier estimate.
+\end{proposition}
+
+\begin{proof}
+Put $C=C_n$, $s_n=\sqrt{n/(n-1)}$,
+$e_n=n(s_n-1)-1/2$, and
+$A=\sqrt{n-1}\Delta_{n-1}(P)/\rho$.
+Then $d_P=n(A-C)\le0$. Define
+\[
+ G_n(H,t)=n\sqrt n\left\{
+ \Phi\left(\frac{H-t}{\sqrt{n-1}}\right)
+ -\Phi\left(\frac H{\sqrt n}\right)\right\}
+ +nt\phi\left(\frac H{\sqrt n}\right)
+ +\frac H2(t^2-1)\phi\left(\frac H{\sqrt n}\right).
+\]
+The contact inequality at the same marginal gives, at every support
+point $t$,
+\begin{equation}\label{ext:support6-14-contact}
+ 0\le G_n(H,t)
+ +C\{-|t|^3+\tfrac32\rho t^2+3\beta t+\rho e_n\}
+ +\rho s_n d_P.
+\end{equation}
+Indeed $n(s_nA-C)=s_nd_P+n(s_n-1)C$; together with
+the constant $-C\rho/2$ in the contact polynomial this gives the
+displayed $C\rho e_n$. Thus the immediate predecessor enters only
+through the nonpositive last term.
+
+For a table row let $r$ denote its upper moment endpoint and set
+\[
+ \begin{gathered}
+ c=819/2000,\qquad E=91/1000,\\
+ Q(v)=-v^3+\tfrac32rv^2+3bv+rE,\\
+ L(v)=\tfrac25(v^2/2+1/2+E)+cQ'(v).
+ \end{gathered}
+\]
+We have $c<\CE<C$ and $e_n<E$. The latter inequality can be
+checked without a square root by
+$((E+1/2+n)/n)^2>n/(n-1)$, for each of the nine indices.
+The signed-moment inequality in Lemma~\ref{ms:sign-moment} and the
+strict rational comparison $(1+b^2)^2>r^2(1-b^2)$ give
+$|\beta|\le b$.
+Every row satisfies
+\[
+ Q(R),Q'(R),Q''(R),L(R),L'(R)<0,\qquad L''=2/5-6c<0.
+\]
+Hence $Q(v)<0$ for $v\ge R$, and the polynomial term in
+\eqref{ext:support6-14-contact} is at most $cQ(|t|)$.
+
+The Gaussian derivative estimate used at index five holds with the
+actual index:
+\begin{equation}\label{ext:support6-14-derivative}
+ |\partial_tG_n(H,t)|
+ \le\phi(0)\{t^2/2+n(s_n-1)\}
+ <\tfrac25(t^2/2+1/2+E).
+\end{equation}
+For completeness, with $z=H/\sqrt n$ and $y=(H-t)/\sqrt n$,
+the derivative is $n\phi(z)+Ht\phi(z)-ns_n\phi(s_ny)$.
+Taylor's theorem for $\phi$ bounds
+$|n\phi(y)-n\phi(z)-Ht\phi(z)|$ by $\phi(0)t^2/2$.
+The identity $\partial_s[s\phi(sy)]=-\phi''(sy)$ bounds
+the remaining scaling error by $n\phi(0)(s_n-1)$.
+For either sign $\eta$, the derivative of
+$G_n(H,\eta v)+cQ(v)$ is therefore at most $L(v)$, which is
+negative on $[R,\infty)$. It remains to exclude $v=R$ for every
+real threshold $H$.
+
+Differentiating twice in $H$ gives the uniform bound
+\[
+ |\partial_H^2G_n(H,R)|\le
+ M_{n,R}:=\frac{\sqrt n}{4}\left(\frac n{n-1}+1\right)
+ +\frac25R+\frac{2|R^2-1|}{5\sqrt n}.
+\]
+Here one uses $\|\phi'\|_\infty<1/4$,
+$\|\phi''\|_\infty<2/5$, and
+$\|\phi'''\|_\infty<4/5$. Set $H_0=35/2$ for
+$6\le n\le9$, and $H_0=22$ for $10\le n\le14$.
+The rational interval evaluations at the nodes
+$-H_0,-H_0+1/10,\ldots,H_0$, enlarged by $M_{n,R}/800$,
+cover every closed interval between consecutive nodes. This is the
+standard second-derivative interpolation error $Mh^2/8$, applied to
+both signs of $G_n$.
+
+For both exterior rays, the exact squared comparisons
+$H_0^2\ge25n$ and $(H_0-R)^2\ge25(n-1)$ put the two
+Gaussian arguments in the same tail beyond five standard deviations.
+Consequently, with $\tau=10^{-6}>\Phi(-5)$,
+\[
+ |G_n(H,R)|\le n\sqrt n\,\tau+
+ \left(nR+\frac{H_0}2|R^2-1|\right)
+ \phi(0)e^{-H_0^2/(2n)},\qquad |H|\ge H_0.
+\]
+The difference of the two distribution functions is bounded by
+$\tau$, since both lie in the same tail interval of length $\tau$.
+Also $|H|\phi(H/\sqrt n)$ decreases on these rays.
+The reflection identity $G_n(H,-R)=-G_n(-H,R)$ supplies the other
+support endpoint.
+
+Let $B_{n,R}$ be the larger of the central interpolation bound and
+the exterior bound. Exact rational arithmetic proves
+$B_{n,R}+cQ(R)<0$ in all 26 rows; the table gives lower bounds for
+$-cQ(R)-B_{n,R}$. Ray monotonicity now contradicts
+\eqref{ext:support6-14-contact} whenever $|t|\ge R$.
+\end{proof}
+
+\paragraph{Reproduction of the table.}
+The independent programs \texttt{check\_support6\_14.py} and
+\texttt{check\_support6\_9\_bc.py} use the rational Gaussian,
+exponential and square-root enclosures described after
+Proposition~\ref{ext:n5-support-table}. They check respectively
+8,600 and 1,400 closed threshold cells, both exterior rays, and all
+moment and derivative gates. The actual integer $n$ occurs in every
+Gaussian expression. The saved records retain the full rational
+margins; each displayed decimal is an exact rational rounded down.
+These support conclusions apply to violating ratio maximizers under
+the stated predecessor hypothesis. They do not assert that arbitrary
+laws with a bounded third moment have bounded support.
+
+
+\begin{proposition}[Support for the complementary Fourier intervals]
+\label{ext:support6-14-high-table}
+Under the same predecessor and ratio-maximizer hypotheses, each row below
+also gives $\supp P\subset(-R,R)$ on its whole stated moment interval.
+The signed-moment bound and endpoint-margin convention are those of
+Proposition~\ref{ext:support6-14-table}.
+\begin{center}\small
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+indices & $\rho$ interval & $b$ & $R$ & margin $>$\\
+\midrule
+$6,\ldots,9$ & $[6/5,7/5]$ & $0.478710$ & $3$ & $0.281666$\\
+$6,\ldots,9$ & $[7/5,3/2]$ & $0.525521$ & $16/5$ & $0.316642$\\
+$6,\ldots,9$ & $[3/2,8/5]$ & $0.565414$ & $17/5$ & $0.392665$\\
+$6,\ldots,9$ & $[8/5,17/10]$ & $0.600001$ & $18/5$ & $0.516295$\\
+$6,\ldots,9$ & $[17/10,7361/4000]$ & $0.641563$ & $19/5$ & $0.278368$\\
+$10,\ldots,14$ & $[23/20,71/50]$ & $0.488731$ & $3$ & $0.139019$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{proposition}
+\begin{proof}
+Use the same $c=819/2000$, $E=91/1000$, contact inequality and
+polynomials $Q,L$ as in the preceding proof, substituting each listed
+$(r,b,R)$. Every signed-moment and derivative gate holds strictly.
+For these larger support radii take
+\[
+ H_0=35/2\quad(6\le n\le8),\qquad
+ H_0=18\quad(n=9),\qquad H_0=22\quad(10\le n\le14).
+\]
+These choices satisfy both squared tail comparisons in that proof.
+The enlargement at $n=9$ is needed for $R=19/5$:
+$(18-19/5)^2\ge25(9-1)$, whereas $H_0=35/2$ would not satisfy
+this condition. Apply the same interpolation bound on the closed
+mesh of width $1/10$ and the same estimate on both exterior rays.
+
+The program \texttt{check\_support6\_14\_high.py} evaluates all
+$25$ actual-index rows, comprising $9250$ closed threshold cells.
+Its exact rational margins are strictly larger than the displayed
+rounded-down values. Thus $B_{n,R}+cQ(R)<0$ throughout each row;
+ray monotonicity excludes every support point with $|t|\ge R$.
+These bounds supply the supported Fourier premises in the
+complementary-moment part of Section~\ref{ext:finite-five-fourteen}.
+\end{proof}

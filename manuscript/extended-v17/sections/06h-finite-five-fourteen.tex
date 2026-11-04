@@ -1,0 +1,152 @@
+\section{The finite induction from five to fourteen}
+\label{ext:finite-five-fourteen}
+The fifth index starts a different part of the proof. The polynomial
+majorants for two and three summands and the physical comparison at four
+are followed by the conditional count comparison of
+Section~\ref{ext:finite-counts}.
+The comparison itself is the same at every index; what changes is the
+numerical region in which the law has first been placed. This section
+describes how those regions are acquired and how they cover all third
+moments.
+
+\input{sections/06i-five-summand-assembly}
+
+\begin{proposition}[Finite induction, with explicit numerical premises]
+\label{ext:finite-five-fourteen-assembly}
+Assume $C_5\le\CE$. For each integer $n=6,\ldots,14$, assume that
+the support, Fourier, initializer, resource, and count checks described
+below pass on their complete domains, and that every output is joined
+to the input of the next check for the same index and marginal law.
+Then $C_n\le\CE$ for $6\le n\le14$.
+\end{proposition}
+
+The complete checks and their input joins are recorded in
+Appendix~\ref{revision:reproducibility}. We state the assembly implication
+with explicit numerical premises so that each computation can be matched
+to the precise hypothesis it supplies.
+
+\begin{proof}
+Suppose there is a first failure in this range and let $n$ be its
+index. Corollary~\ref{ext:ratio-attainment} supplies an attained
+positive closed-event ratio maximizer $(P,H)$ with
+$C=C_n>\CE$. Write $\rho=\E|X|^3$ and
+$A=\sqrt{n-1}\Delta_{n-1}(P)/\rho$. The induction hypothesis gives
+\[
+ A\le C_{n-1}\le\CE<C,\qquad d_P=n(A-C)<0.
+\]
+This is the only predecessor estimate needed here. In particular it
+implies the nonnegative allowances retained in the original numerical
+formulas: $579/5000$ at $n=6$, and $99/1000$ or $63/1000$ in the two
+low-moment bands at $n=10$. At other indices the allowance is zero.
+Keeping a larger allowance weakens an upper bound; it does not introduce
+an assumption about a different marginal or a later sample size.
+
+\paragraph{The low-moment bands.}
+The required data are as follows. An own-score ceiling means an upper
+bound on $\sqrt n\Delta_n(P)/\rho$. A HIGH ceiling bounds the
+compensated Fourier integral defined in
+Lemma~\ref{ext:compensated-high}; it is not by itself a score bound.
+\begin{center}\small
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+indices & $\rho$ interval & support radius & own-score ceiling & HIGH ceiling\\
+\midrule
+$6,\ldots,9$ & $[1,11/10]$ & $23/10$ & $423/1000$ & $69/200$\\
+$6,\ldots,9$ & $[11/10,23/20]$ & $12/5$ & $209/500$ & $3/8$\\
+$6,\ldots,9$ & $[23/20,237/200]$ & $5/2$ & $83/200$ & $83/200$\\
+$10,\ldots,14$ & $[1,11/10]$ & $23/10$ & $1047/2500$ & $69/200$\\
+$10,\ldots,14$ & $[11/10,23/20]$ & $12/5$ & $519/1250$ & $93/250$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The support column is acquired first, by
+Proposition~\ref{ext:support6-14-table}. The two Fourier columns
+are then evaluated with the actual integer $n$ and that supported law,
+using Appendix~\ref{ext:fourier-moments}. A Fourier estimate may
+cover a larger moment interval or support radius than the row requires;
+the join checks inclusion of the whole smaller region. In particular,
+the third row may use the wider interval $[23/20,6/5]$ with radius
+$13/5$ for its Fourier inputs. No estimate at index nine is transferred
+numerically to index ten.
+
+The order after these three inputs is important. First an unseeded
+initializer proves a raw remainder bound, and only then feeds the
+resulting defect and threshold bounds back into subsequent passes.
+Appendix~\ref{ext:finite-acquisition} proves this finite enclosure
+induction. The resource calculation consumes the complete initializer
+and acquires a central gap, signed moments, and the common conditional
+variance budget. Its export supplies the hypotheses of the count
+comparison. Thus support, the own-score and HIGH bounds, the
+initializer, the resource, and the count contraction all concern one
+law. An initializer or count certificate alone does not supply the
+earlier hypotheses.
+The additional outer-BN initializer at $n=6$ uses exactly the same
+support, own-score, HIGH and predecessor premises as the ordinary
+BN initializer. Its output is joined separately to the subsequent
+$n=6$ resource calculation.
+
+For $6\le n\le9$ the three bands give twelve families, each covering
+the one hundred closed probability panels
+$[j/100,(j+1)/100]$, $0\le j\le99$. Of these 1,200 panels,
+910 are excluded by the resource inequalities, six by the separate
+whole-panel sign-mass inequality of Lemma~\ref{ext:sign-mass-bound},
+and 284 by complete count forests.
+For $10\le n\le14$ the two bands give 1,000 panels: 798 resource
+exclusions and 202 retained parent panels. The latter have 217 count
+forests, because five parent panels are covered by four closed
+subintervals each. These are coverage censuses, not estimates obtained
+by sampling. Each retained parent rectangle is checked against the
+entire corresponding count input, including its signed moment and
+inward-displacement bounds. Shared endpoints belong to both adjacent
+panels and cannot be discarded.
+
+\paragraph{The complementary moment intervals.}
+For $6\le n\le9$ a supported Fourier comparison covers
+$[237/200,6/5]$ at radius $13/5$. Five further supported comparisons
+cover the following closed intervals:
+\[
+\begin{array}{c|ccccc}
+\rho & [6/5,7/5]&[7/5,3/2]&[3/2,8/5]&[8/5,17/10]&[17/10,7361/4000]\\
+R & 3&16/5&17/5&18/5&19/5 .
+\end{array}
+\]
+Proposition~\ref{ext:support6-14-high-table} acquires each radius by
+an actual-index Gaussian calculation, using
+Lemma~\ref{ext:direct-gaussian-support-criterion}.
+The ensuing full Fourier calculation excludes a score above
+$4097/10000<\CE$ throughout the stated band. It does not assume
+the low-moment resource bound outside its domain.
+
+For $10\le n\le14$ the supported corner is
+$[23/20,71/50]$, with radius three acquired first. An unrestricted
+Fourier comparison then covers $[71/50,15/8]$. Both comparisons
+have target $4097/10000$.
+Beyond the displayed intervals the published affine Berry--Esseen
+bound already used in the entry argument gives
+\[
+ \frac{\sqrt n\Delta_n(P)}{\rho}
+ \le\frac{3031}{10000}\left(1+\frac{323}{500\rho}\right)
+ \le\frac{819}{2000}<\frac{4097}{10000}<\CE
+ \quad(\rho\ge7361/4000).
+\]
+For the second group this tail overlaps the unrestricted Fourier
+interval, since $7361/4000<15/8$. Hence every $\rho\ge1$ belongs
+to a low-moment band, a complementary band, or the affine tail.
+All boundaries are included. Reflection and closed-event attainment
+cover the original negative-discrepancy branch as well. Every possible
+first failure is therefore excluded, completing the finite induction.
+\end{proof}
+
+\paragraph{What must be checked at an interface.}
+The numerical record must bind complete source and result objects, not
+just a success word or a maximum value. In the original fifth- and
+sixth-index chains some immutable candidate inputs contain earlier
+receipt bytes. Their mathematical contents must agree with the entire
+newly verified parent result, apart from explicitly identified timing
+metadata. Later chains bind directly to the fresh initializer and cap
+receipts. In either representation the join must preserve the actual
+index, the full moment interval, both support signs, every probability
+panel, and the direction of every rounded inequality. These checks are
+the finite proof of applicability of the count comparison; their
+meaning is independent of the operating system used to run the exact
+arithmetic.

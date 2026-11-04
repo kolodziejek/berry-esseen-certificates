@@ -1,5 +1,26 @@
 # The iid Berry–Esseen constant
 
+## Completed extended manuscript — 4 November 2026
+
+[Extended proof PDF](manuscript/extended-v17/main.pdf) ·
+[Reading guide and source](manuscript/extended-v17/README.md) ·
+[Proof dependencies](manuscript/extended-v17/PROOF_DEPENDENCIES.md) ·
+[Reproduction instructions](manuscript/extended-v17/reproduction/REPRODUCE.md)
+
+The extension proves the sharp iid inequality for every sample size, with
+strictness from 700, using a finite base through 42 and a first-failure argument.
+Its required selected numerical checks and complete input joins have passed.
+It supplies 194 pages, including 63 pages of main text, full analytic appendices,
+checking sources and preserved execution records. The separate 114-command
+fresh reproduction recipe has not been rerun as one relocated campaign.
+
+The material below describes the original v0.1 publication and its public CLI.
+Its recorded verification scope is preserved. Use the extension's reproduction
+instructions for the completed route described above.
+
+## Original v0.1 publication
+
+
 **Mathematical argument, exact certificates, and public replay tools.**
 
 [Read the paper](paper/main.pdf) · [TeX source](paper/main.tex) ·

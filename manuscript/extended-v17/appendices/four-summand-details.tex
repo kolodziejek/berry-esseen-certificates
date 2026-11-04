@@ -1,0 +1,651 @@
+\section{The four-summand physical comparison}\label{ext:four-summand-details}
+\subsection{A majorant that includes the boundary atom}
+\label{ext:closed-half-line}
+
+The Fourier bound below concerns a closed event. Its value at equality
+must therefore be one, even when the law has an atom at the threshold.
+The following construction proves both this endpoint convention and the
+normalization used in the four-summand certificate.
+
+\begin{lemma}[Closed-half-line majorant]\label{ext:prawitz:majorant}
+Put
+\[
+ K(t)=\frac{1-t}{2}+\frac{i}{2}
+       \left((1-t)\cot(\pi t)+\frac1\pi\right),\qquad 0<t<1.
+\]
+For every integrable real random variable $Y$, every real $h$ and every
+$A>0$,
+\begin{equation}\label{ext:prawitz:expectation}
+ \Pp(Y\le h)\le\frac12+
+  2\lim_{\epsilon\downarrow0}\Re\int_\epsilon^1
+ K(t)e^{-iAth}\E e^{iAtY}\,dt.
+\end{equation}
+Only the real-part improper limit is intended. The unmodified complex
+integral need not converge.
+\end{lemma}
+\begin{proof}
+Define
+\[
+ W(x)=\left(\frac{\sin\pi x}{\pi x}\right)^2,\quad W(0)=1,
+ \qquad
+ H_B(x)=\sum_{m\ge1}\{W(x-m)-W(x+m)\}+2xW(x).
+\]
+The series converges absolutely and locally uniformly, since the shifted
+terms are bounded by a constant times $m^{-2}$ on each bounded $x$ interval.
+The function $H_B$ is odd, $H_B(0)=0$ and
+$H_B(j)=\operatorname{sgn}(j)$ at every nonzero integer.
+
+We first show $|H_B(x)-\operatorname{sgn}(x)|\le W(x)$.
+The partial-fraction identity
+\[
+ \sum_{m\in\mathbb Z}(x-m)^{-2}=\pi^2\csc^2(\pi x)
+ \qquad(x\notin\mathbb Z)
+\]
+follows by integrating $\pi\cot(\pi z)/(z-x)^2$ around the square
+with vertices $\pm(N+1/2)\pm i(N+1/2)$. The cotangent is uniformly
+bounded on its edges, so the integral is $O(N^{-1})$; the residues are
+$(m-x)^{-2}$ at its integer poles and $-\pi^2\csc^2(\pi x)$ at $x$.
+For positive noninteger $x$, subtracting this identity from the series
+for $H_B$ gives
+\[
+ H_B(x)-1=\left(\frac{\sin\pi x}{\pi}\right)^2
+ \left\{\frac2x-\frac1{x^2}-2\sum_{m\ge1}(x+m)^{-2}\right\}.
+\]
+Monotonicity of $s\mapsto(x+s)^{-2}$ gives
+\[
+ \sum_{m\ge1}(x+m)^{-2}\le\frac1x
+ \le\frac1{x^2}+\sum_{m\ge1}(x+m)^{-2}.
+\]
+The braces consequently lie between $-x^{-2}$ and $x^{-2}$.
+Integer values, oddness and $W(-x)=W(x)$ prove the claimed bound
+on the whole real line. Hence
+\[
+ M(x):=\frac{1-H_B(x)+W(x)}2\ge\ind_{\{x\le0\}},
+ \qquad M(0)=1,
+ \qquad 0\le M(x)-\ind_{\{x\le0\}}\le W(x).
+\]
+In particular $M$ is bounded, and the boundary point is included.
+
+It remains to identify its Fourier kernel. Elementary integration gives
+\[
+ W(x)=2\int_0^1(1-t)\cos(2\pi tx)\,dt,
+ \qquad 2xW(x)=\frac2\pi\int_0^1\sin(2\pi tx)\,dt.
+\]
+Insert the first identity into the Abel-weighted shifted series with
+weight $r^m$, $0<r<1$. Absolute convergence allows termwise integration,
+and the difference of the two cosines yields
+\[
+ \sum_{m\ge1}r^m\{W(x-m)-W(x+m)\}
+ =4\int_0^1(1-t)\sin(2\pi tx)
+ \frac{r\sin(2\pi t)}{1-2r\cos(2\pi t)+r^2}\,dt.
+\]
+The fraction tends to $\tfrac12\cot(\pi t)$ and has absolute value
+at most $\tfrac12|\cot(\pi t)|$: its denominator equals
+$(1-r)^2+4r\sin^2(\pi t)$. The resulting majorant is integrable,
+since the sine vanishes at zero and $(1-t)\cot(\pi t)$ is bounded
+at one. Dominated convergence therefore gives
+\[
+ H_B(x)=2\int_0^1
+ \left((1-t)\cot(\pi t)+\frac1\pi\right)\sin(2\pi tx)\,dt.
+\]
+Combining these formulas proves
+\[
+ M(x)=\frac12+2\lim_{\epsilon\downarrow0}\Re\int_\epsilon^1
+                 K(t)e^{2\pi itx}\,dt
+     =1+2\Re\int_0^1K(t)(e^{2\pi itx}-1)\,dt.
+\]
+The second integral is absolutely convergent. For an integrable $U$,
+$\E|e^{2\pi itU}-1|\le2\pi t\E|U|$, while $K(t)=O(t^{-1})$
+at zero and is bounded near one. Absolute Fubini thus justifies
+expectation of this compensated identity. Apply it to
+$U=A(Y-h)/(2\pi)$ and use $M(U)\ge\ind_{\{Y\le h\}}$ to obtain
+\eqref{ext:prawitz:expectation}.
+\end{proof}
+
+For $Z=(X_1+\cdots+X_4)/2$, take $A=6$.
+Independence gives $\E e^{6itZ}=\varphi_P(3t)^4$, so
+\eqref{ext:prawitz:expectation} has exactly the factor six, raw
+frequency $3t$ and positive imaginary kernel used below. Its assumptions
+are only integrability and independence; atoms and infinite supports
+cause no change to the closed-event bound.
+\subsection{Exact elementary enclosures}
+\label{ext:elementary-enclosures}
+
+The four-summand certificate uses rational intervals, not floating-point
+values as premises. Addition and multiplication take the extrema of
+the appropriate endpoint expressions; division first verifies that its
+denominator interval excludes zero. At integer scale $S=10^{40}$,
+lower and upper endpoints are rounded using floor and ceiling. If
+$v=p/q\ge0$, a square-root bracket is checked by the integer inequalities
+$qL^2\le pS^2\le qU^2$. Thus the true value stays in the recorded interval
+under every permitted arithmetic operation.
+
+The transcendental enclosures have explicit finite remainders. Machin's
+identity $\pi=16\arctan(1/5)-4\arctan(1/239)$ and the alternating series
+for $\arctan$ give rational endpoints for $\pi$; the first omitted term
+bounds each error. The identity follows by the tangent addition formula,
+with the angle in $(0,\pi/2)$. Positive square-root and reciprocal
+brackets then give $\phi(0)=1/\sqrt{2\pi}$.
+For real $z$,
+\[
+ \left|e^{iz}-\sum_{k=0}^{60}\frac{(iz)^k}{k!}\right|
+ \le\frac{|z|^{61}}{61!},
+\]
+by Taylor's integral remainder and $|e^{is}|=1$.
+For $y\ge0$, integration of the Taylor remainder for $e^{-v}$,
+$v\ge0$, gives
+\[
+ \left|\int_0^y e^{-s^2/2}\,ds-
+ \sum_{k=0}^{60}\frac{(-1)^k y^{2k+1}}{2^k k!(2k+1)}\right|
+ \le\frac{y^{123}}{2^{61}61!\,123}.
+\]
+Together with $\Phi(-y)=1-\Phi(y)$ this encloses every required normal
+CDF value. The proof uses $|d^{61}e^{-v}/dv^{61}|\le1$ on $v\ge0$,
+so it does not presume decreasing terms at the start of the series.
+
+Finally, for $0<u<1$ and an integer $m\ge1$,
+\[
+ \cot(\pi u)=\frac1{\pi u}-\frac{2u}{\pi}
+                  \sum_{j\ge1}\frac1{j^2-u^2},\qquad
+ \frac1{m+1}\le\sum_{j>m}\frac1{j^2-u^2}
+       \le\frac{2m+1}{2m(m+1)}.
+\]
+The lower tail bound follows by comparison with
+$\int_{m+1}^\infty s^{-2}\,ds$; the upper bound follows from the
+telescoping sum of $(j^2-1)^{-1}$. The partial-fraction identity is
+obtained by integrating the absolutely convergent derivative identity
+proved in Lemma~\ref{ext:prawitz:majorant}, with the constant fixed at
+$u=1/2$. These formulas enclose every midpoint kernel value.
+All strict comparisons used below are comparisons of the resulting
+rational endpoints.
+% Extracted, normalized physical-class proof from the pinned older manuscript.
+% The terminal numerical premise is not discharged by this text alone.
+\subsubsection{One defect measure for all frequencies}
+For $\eta>0$, let $\nu=W\,dP/\eta$, viewed as a probability on
+tagged points $(\sigma,y)$, $\sigma\in\{-1,1\}$, $y>0$.
+Write $c_+=b$, $c_-=a$, $p_0=1-w$, and
+\[
+ k_0(\sigma,y)=\frac1{c_\sigma^2y},\qquad
+ k_2(\sigma,y)=\frac1{(y-c_\sigma)^2},\qquad
+ k_1(\sigma,y)=\frac1{y-c_\sigma}.
+\]
+The contacts have zero $\nu$ mass. Singular expressions are integrated
+only off the contacts; the following identities prove integrability.
+
+\begin{lemma}\label{ext:n4:lem:common-measure}
+With $g(q)=\varphi_Q(q)$ and
+$r_q(\sigma,y)=\exp(\mathrm i\sigma q\,\cdot)[0,c_\sigma,c_\sigma,y]$,
+\begin{align}
+ \varphi_P(q)-g(q)&=\eta\int r_q\,d\nu,\notag\\
+ \eta\int k_0\,d\nu&=p_0-P\{0\}\le p_0,\notag\\
+ \eta\int_{\sigma}k_2\,d\nu&=u-c_\sigma P\{\sigma c_\sigma\}\le u,
+ &\int_{\sigma}k_1\,d\nu&=0.\label{ext:n4:eq:budgets}
+\end{align}
+The same $\nu$ occurs at every frequency, and $|r_q|\le |q|^3/6$.
+For $\eta=0$, $P=Q$ and every characteristic-function difference is
+zero, without defining $\nu$.
+\end{lemma}
+\begin{proof}
+Hermite interpolation at $0,c,c$ has remainder
+$y(y-c)^2\exp(\mathrm i\sigma q\,\cdot)[0,c,c,y]$.
+On each tag, the linear and quadratic terms have the same integrals
+against $P$ and $Q$, by their matching first two tagged moments.
+Both interpolating polynomials have constant term 1. Their constant
+contributions agree only after summing the tags and adding the atom
+at zero, since both total masses are 1.
+Hermite--Genocchi gives the response bound. Multiplication of the
+three costs by $W=y(y-c)^2$ gives
+$(y-c)^2/c^2$, $y$, and $y(y-c)$, respectively.
+Their integrals give \eqref{ext:n4:eq:budgets}, including the omitted
+contact masses. Absolute integrability of $k_1$ follows from Cauchy
+and the $k_2$ bound. Lemma~\ref{ext:n4-excess} handles $\eta=0$.
+\end{proof}
+
+Fix a threshold $H$ and finite coefficients $\kappa_j(H)$, defined
+below. For the bounded class $|X|\le R_*=17/4$, all suprema below
+are over $\sigma\in\{-1,1\}$ and $0<y\le R_*$, off the contact.
+The linear response is
+\[
+ A_H(\sigma,y)=\Re\sum_{j=0}^{N-1}
+        4\kappa_j(H)g(q_j)^3r_{q_j}(\sigma,y).
+\]
+For any fixed $\lambda_0,\lambda_+,\lambda_-\ge0$ and
+$\theta_+,\theta_-\in\R$, a bound
+\begin{equation}\label{ext:n4:eq:priced-supremum}
+ S_H\ge\sup_{\sigma,y}
+ \{A_H-\lambda_0k_0-\lambda_\sigma k_2-\theta_\sigma k_1\}
+\end{equation}
+implies
+\begin{equation}\label{ext:n4:eq:gamma}
+ \eta\int A_H\,d\nu\le
+ \Gamma_H(\eta):=p_0\lambda_0+u(\lambda_++\lambda_-)+S_H\eta.
+\end{equation}
+Upper bounds for $p_0,u$ may replace them. The two equality prices
+retain their signs. In particular, $S_H$ and $\Gamma_H$ need not be
+nonnegative. The prices are fixed before taking the supremum over
+the whole tagged domain. This preserves the cancellation between
+frequencies; separate absolute estimates for each $r_q$ do not.
+
+\subsubsection{The fourth-power remainder}
+For complex $\psi=g+\delta$,
+\begin{equation}\label{ext:n4:eq:quartic}
+ \psi^4-g^4=4g^3\delta+
+ \delta^2(\psi^2+2\psi g+3g^2).
+\end{equation}
+Suppose $|g|\le A\le1$, $|\psi|\le1$ and $|\delta|\le E$.
+Two complete bounds for the remainder are
+\begin{equation}\label{ext:n4:eq:quartic-basic}
+ E^2(p^2+2pA+3A^2),\quad p=\min(1,A+E),\qquad
+ v(4A^2+2-v),\quad v=\min(E^2,2A^2+1).
+\end{equation}
+The first follows directly from \eqref{ext:n4:eq:quartic}. For the
+second, use
+\[
+ \psi^4-g^4-4g^3\delta
+   =12\delta^2\int_0^1(1-t)(g+t\delta)^2\,dt
+\]
+and
+$|g+t\delta|^2=(1-t)|g|^2+t|\psi|^2-t(1-t)|\delta|^2$.
+
+A sharper two-disk bound is also finite algebra. Rotate $g=a\ge0$
+and put $\delta=x+\mathrm i y$, $s=|\delta|^2$. Then
+\[
+ |\psi^4-g^4-4g^3\delta|^2
+ =s^2\{36a^4+4a^2s+s^2+8ax(6a^2+s)+24a^2x^2\}.
+\]
+For fixed $a,s$, the expression in braces is convex in $x$.
+Its maximum on the two disks occurs at a collinear endpoint or on
+$|\psi|=1$. Put $r_+=\min(E,1)$, $m=\min(A,1-r_+)$,
+$r_-=\min(E,1+A)$. The collinear bounds are
+\[
+ r_+^2(6m^2+4mr_++r_+^2),\qquad
+ r_-^2(6A^2-4Ar_-+r_-^2),\qquad
+ \begin{cases}r_-^4,&r_-\le1,\\
+ r_-^2(3r_-^2-8r_-+6),&r_-\ge1.
+ \end{cases}
+\]
+On the unit circle it remains to maximize
+\begin{equation}\label{ext:n4:eq:lens-polynomial}
+ Q_A(s)=s^2\{18A^4+12A^2+6-(12A^2+8)s+3s^2\}
+\end{equation}
+on $[(1-A)^2,\min(E^2,(1+A)^2)]$. Its endpoints and the sole
+interior local maximum
+\[
+ s_-=(3A^2+2-A\sqrt{4-3A^2})/2
+\]
+suffice. For $A=0$ the interval is degenerate or empty.
+Taking the maximum of the collinear values and the square root of
+this last maximum gives the lens bound. To see that no $a<A$ is
+lost, note that the unit-circle expression is convex in $a^2$;
+its lower feasible endpoint is already collinear. The collinear
+expressions increase with their admissible radius after maximization
+over $a$. Thus these are whole-disk bounds, not sampled values.
+Their minimum with \eqref{ext:n4:eq:quartic-basic} is valid.
+
+On a closed excess interval $[L,U]$, an affine radius
+$e_j(\eta)=A_j+B_j\eta$ is used only when it is nonnegative at both
+ends and bounds $|\delta_j|$ throughout. Freeze
+$p_j=\min(1,a_j+\max\{e_j(L),e_j(U)\})$ in the first bound of
+\eqref{ext:n4:eq:quartic-basic}. This gives a quadratic in $\eta$
+with nonnegative leading coefficient. Alternatively, freezing $E$
+on the whole cell gives a constant disk or lens bound. A choice
+between complete bounds is allowed; a coefficientwise minimum is not.
+
+\subsubsection{A physical Prawitz comparison}
+We use the closed-CDF Prawitz majorant~\cite{Prawitz1972}, in the
+normalization proved in Lemma~\ref{ext:prawitz:majorant}. To distinguish the
+factor from the kernel $K$ used there, put
+\[
+ \widehat K(u)=2K(u)=(1-u)+\mathrm i R(u),\qquad
+ R(u)=(1-u)\cot(\pi u)+1/\pi.
+\]
+For $Z=(X_1+\cdots+X_4)/2$,
+\begin{equation}\label{ext:n4:eq:prawitz}
+ F_Z(x)\le J_P(x):=\frac12+
+ \int_0^1\Re\{\widehat K(u)e^{-6\mathrm i ux}\varphi_P(3u)^4\}\,du.
+\end{equation}
+The real integrand is regular at zero; no convergence of the complex
+integral by itself is asserted. With $D=x-Z$ and $S(u)=uR(u)$ it is
+\[
+ F_x(u)=(1-u)\E\cos(6Du)+S(u)\E[6D\operatorname{sinc}(6Du)].
+\]
+The cotangent partial fractions, extended to the endpoints, give
+\[
+ 0\le S\le1/3,\qquad |S'|<2,\qquad |S''|<5.
+\]
+Here is a direct derivative check. Separate the first pole:
+\[
+ S=\frac1\pi-\frac2\pi(A+MG),\quad
+ A=\frac{u^2}{1+u},\quad M=u^2(1-u),\quad
+ G=\sum_{j\ge2}\frac1{j^2-u^2}.
+\]
+On $[0,1]$, $|A'|\le3/4$, $|A''|\le2$, $|M|\le1/6$,
+$|M'|\le1$ and $|M''|\le4$. The derivative series converge
+uniformly, and
+\[
+ G\le3/4,\qquad |G'|\le10/27<1/2,\qquad
+ |G''|\le106/135<7/6.
+\]
+The first sum telescopes. For the other two use
+$j^2-u^2\ge3j^2/4$ and
+$\sum_{j\ge2}j^{-k}\le2^{-k}+\int_2^\infty t^{-k}\,dt$,
+with $k=4,6$. The product rule gives
+$|S'|<19/18<2$ and $|S''|<223/54<5$.
+For $u>1/2$, put $v=1-u$ and use
+$v\cot(\pi v)\le1/\pi$; for $u\le1/2$ the cotangent is
+nonnegative. This proves $R\ge0$. The positive partial-fraction
+terms then give $0\le S\le1/\pi<1/3$.
+Since $\operatorname{sinc}(v)=\int_0^1\cos(tv)\,dt$,
+\begin{equation}\label{ext:n4:eq:integrand-curvature}
+ |F_x''(u)|\le42\E|D|+108\E D^2+24\E|D|^3.
+\end{equation}
+These differentiations are justified by the displayed moments.
+
+Now assume $|X|\le R_*=17/4$ and $\rho<46/25$.
+The fourth moment follows from these hypotheses; it is not an
+additional input. Write $\kappa=\E X^3$, $M_4=\E X^4$.
+Lemma~\ref{ext:n4-excess} gives the useful cell bounds
+\begin{align}
+ |\kappa|&\le\min\{\rho,|b-a|+\eta\},\notag\\
+ M_4&\le\min\{R_*\rho, a^2-ab+b^2+
+                         (R_*+2\max(a,b))\eta\}.
+ \label{ext:n4:eq:local-moments}
+\end{align}
+For $x=H/2$, choose whole-cell bounds $\kappa_*$ and $M_{4,*}$
+from these formulas and put
+\[
+ D_2=x^2+1,\qquad
+ D_4=x^4+6x^2+2|x|\kappa_*+(M_{4,*}+9)/4.
+\]
+Then $\E|D|\le\sqrt{D_2}$ and
+$\E|D|^3\le\sqrt{D_2D_4}$. Uniformly on $|x|\le2$, the simpler
+bounds $\E D^2\le5$, $\E D^4<54$, $\E|D|<9/4$,
+$\E|D|^3<33/2$ give $|F_x''|<2061/2$.
+
+Take $N=256$, $u_j=(j+1/2)/N$, $q_j=3u_j$ and
+\[
+ \kappa_j(H)=\widehat K(u_j)e^{-\mathrm i q_jH}/N,\qquad
+ C_H(Q)=1+2\Re\sum_j\kappa_j(H)g(q_j)^4-2\Phi(H/2).
+\]
+Composite midpoint quadrature gives one raw numerator reserve
+\begin{equation}\label{ext:n4:eq:midpoint}
+ Q_H=\min\left\{\frac{687}{8N^2},
+ \frac{42\sqrt{D_2}+108D_2+24\sqrt{D_2D_4}}{12N^2}\right\}.
+\end{equation}
+It controls the integral of the original law $P$ once. No separate
+reference, linear-transfer or remainder quadrature error is added.
+
+The raw thresholds are $H_\ell=-4+\ell/8$, $0\le\ell\le57$.
+To fill the intervals between them, bound the characteristic function
+on entire frequency cells, not just at the midpoints. If
+$a_j\ge|g(q_j)|$ and $e_j$ bounds $|\varphi_P(q_j)-g(q_j)|$ on the
+whole excess cell, then
+\[
+ P_j=\min\{1,a_j+e_j+3/(2N)\}
+\]
+bounds $|\varphi_P(3u)|$ throughout $j/N\le u\le(j+1)/N$,
+since $\E|X|\le1$. Two complete kernel bounds are
+\[
+ u^2|\widehat K(u)|\le u^2(1-u)+u/3,\qquad
+ u^2|\widehat K(u)|\le u^2(1-u)+u(1-u)/2.
+\]
+The second follows by retaining the first term of the cotangent
+partial fractions:
+$S(u)\le(1-u)(1+2u)/(\pi(1+u))<(1-u)/2$.
+Let $d_j$ be the smaller of the two exact integrals over the $j$th
+frequency cell. Their separate totals are $1/4$ and $1/6$.
+Thus, for the same whole geometry and excess cell,
+\[
+ |J_P''(x)|\le B=36\sum_jd_jP_j^4.
+\]
+Since $\sup|\Phi''|<1/4$, the smooth physical function
+$H\mapsto2\{J_P(H/2)-\Phi(H/2)\}$ needs the single interpolation
+reserve
+\begin{equation}\label{ext:n4:eq:H-reserve}
+ E_H=\frac{h^2}{16}(B+1/4),\qquad h=1/8.
+\end{equation}
+The elementary cube, mass and unit radii
+\[
+ \eta q_j^3/6,\qquad \max(a,b)^2p_0q_j^2,\qquad 1+a_j
+\]
+suffice for this curvature calculation. The mass bound follows from
+$|r_q|\le q^2/y$ and the first budget in
+\eqref{ext:n4:eq:budgets}. To verify the former inequality without
+dividing at a contact, put $f(y)=e^{\mathrm i\sigma qy}$. The
+divided-difference identity gives
+\[
+ y f[0,c,c,y]=f[c,c,y]-f[0,c,c].
+\]
+Each second divided difference has modulus at most $q^2/2$ by
+Hermite--Genocchi, including repeated nodes. Hence, for $\eta>0$,
+\[
+ |\varphi_P(q)-g(q)|
+ \le\eta q^2\int\frac1y\,d\nu
+ \le q^2\max(a,b)^2p_0.
+\]
+The zero-excess case has $\varphi_P=g$ and requires no division.
+
+For $H\le-4$, Cantelli gives $F_Z(H/2)\le1/5$.
+For $H\ge25/8$, $\Phi(H/2)>4/5$. The latter inequality follows,
+for example, by integrating the alternating Gaussian Taylor
+polynomial through degree six on $[0,25/16]$ and using
+$\phi(0)>19947/50000$. Consequently both threshold tails have
+positive normalized score at most $2/5$.
+
+\subsubsection{The low-excess certificate}
+On a geometry rectangle and a closed excess cell $[L,U]$, let
+$M_H$ bound $C_H(Q)-Tr$ for the entire rectangle. Let
+$\Gamma_H$ be obtained from \eqref{ext:n4:eq:gamma}, and let
+\[
+ R_2(\eta)=r_0+r_1\eta+r_2\eta^2,\qquad r_2\ge0,
+\]
+bound the sum of the fourth-power remainders weighted by
+$|\kappa_j(H)|$. Combining \eqref{ext:n4:eq:quartic} at the same
+$H$ gives
+\begin{equation}\label{ext:n4:eq:low-polynomial}
+ 2\{F_{4,P}(H)-\Phi(H/2)\}-T\rho
+ \le P_H(\eta):=M_H+Q_H+E_H+2\Gamma_H(\eta)+2R_2(\eta)-T\eta.
+\end{equation}
+When used at grid points, $E_H$ reserves interpolation to adjacent
+thresholds. The leading coefficient is nonnegative. Endpoint
+nonpositivity therefore proves the bound on the entire closed excess
+cell. Equivalently its degree-two Bernstein coefficients are
+\[
+ P_H(L),\quad
+ \frac{P_H(L)+P_H(U)}2-\frac{p_2(U-L)^2}{2},\quad P_H(U),
+\]
+where $p_2$ is the quadratic coefficient. For a quantitative signed
+score, with $r_L\le r$ and $\rho<46/25$, use
+\[
+ T+\max_{\eta=L,U}
+ \left\{\frac{P_H(\eta)}{46/25},
+        \frac{P_H(\eta)}{r_L+\eta}\right\}.
+\]
+Both denominator faces are needed when the numerator is negative.
+The cap branch is convex; for the other branch the derivative
+numerator has derivative $P_H''(\eta)(r_L+\eta)\ge0$, so an
+interior critical point can only be a minimum.
+
+Here are the finite enclosures that produce these polynomials.
+The center is enclosed by signed Taylor expansion in $(w,\beta)$
+or in the contacts $(a,b)$ along probability-preserving paths.
+For either pair of coordinates $i,j$,
+\[
+ \partial_i C_H=8\Re\sum_j\kappa_jg^3\partial_i g,\qquad
+ |\partial_{ik}C_H|\le8\sum_j|\kappa_j|
+       (3D_iD_k+D_{ik}),
+\]
+where $D_i,D_{ik}$ bound the derivatives of the explicit
+three-atom characteristic function. The first-order terms retain
+their signs; the second-order error bounds the whole rectangle.
+The function $r(w,\beta)$ is jointly convex. Indeed, writing
+$r=w^{-1/2}f(\beta)$, $f=(1+\beta^2)/\sqrt{1-\beta^2}$,
+the Hessian determinant has the positive factor
+\[
+ 3ff''-(f')^2=
+ \frac{9+9\beta^2+15\beta^4-\beta^6}{(1-\beta^2)^3}.
+\]
+Subtracting its supporting plane therefore encloses $C_H-Tr$
+without an absolute Hessian charge for $r$.
+
+For the signed response, put $R_*=17/4$, $y_k=k/64$,
+$0\le k\le272$, and use their nearest-node closed cells,
+clipped to $[0,R_*]$. Hermite--Genocchi gives
+\begin{align}
+ r_q(\sigma,y)&=\sum_{m=0}^{60}(\mathrm i\sigma)^{m+3}b_m h_m+E_q,
+ &|E_q|&\le\frac{q^3}{6}\frac{(qR_*)^{61}}{61!},\notag\\
+ b_0&=q^3/6,&b_m&=b_{m-1}qR_* /(m+3),\notag\\
+ h_0&=1,&h_m&=(y/R_*)h_{m-1}+(m+1)(c/R_*)^m.
+ \label{ext:n4:eq:response-series}
+\end{align}
+The bound $|\partial_y r_q|\le q^4/24$ adds the half-cell reserve
+$q^4/(48\cdot64)$. The signed frequency coefficients are summed
+before bounding their polynomial on a $y$ cell. If $g_0,c_0'$ are
+nominal values, $e_q\ge|g-g_0|$ is the geometry error,
+$p_q\ge|g|$ and $a_{0,q}\ge|g_0|$, then
+\[
+ |g^3-g_0^3|\le e_q(p_q^2+p_qa_{0,q}+a_{0,q}^2),
+ \qquad |\partial_c r_q|\le q^4/12.
+\]
+These give a whole-rectangle correction for
+$g^3r_q-g_0^3r_{q,0}$, with no second copy of the series or mesh
+reserve. Thus the priced supremum bounds actual references throughout
+the rectangle, not only its nominal center.
+
+The prices used in the finite certificate are chosen from
+\begin{align*}
+ \lambda_0&\in\{0,1/1000,1/400,1/200,1/100,1/50,1/25,
+                         2/25,4/25,8/25,16/25\},\\
+ \lambda_\pm&\in\{0,1/2000,1/1000,1/400,1/200,1/100,1/50\},\\
+ \theta_\pm&\in\{0,\pm1/200,\pm1/100,\pm1/50\}.
+\end{align*}
+For each fixed choice, all 273 cells on each of the two tags enter
+the supremum.
+When $\lambda_\sigma=0$, only $\theta_\sigma=0$ is used;
+otherwise the reciprocal contact rays would give an infinite supremum.
+On a cell $[y_L,y_U]$, with $c\in[c_L,c_U]$,
+$k_0\ge1/(c_U^2y_U)$. The remaining cost is the concave quadratic
+$-\lambda_\sigma z^2-\theta_\sigma z$ in $z=1/(y-c)$.
+Its endpoints and admissible vertex suffice; when the cell crosses
+the contact both reciprocal rays are included. No division at the
+contact or at zero is used for the response series.
+
+The same budgets yield whole-cell radius models by pricing
+$|r_q|$ or its signed coordinate projections. They are combined
+with the three elementary radii above and the complete two-disk
+remainder. An independent absolute branch uses
+\[
+ |\psi^4-g^4|\le E(p^3+p^2A+pA^2+A^3),\qquad p=\min(1,A+E),
+\]
+or the complete linear-plus-remainder bound. It is evaluated as a
+whole alternative. In every branch, the actual reference modulus,
+the actual normalization $\rho=r+\eta$, one midpoint reserve and
+one physical threshold reserve are retained. The final maximum over
+$H$ is taken only after assembling each complete row.
+
+\subsubsection{Closing the large excess}
+Let $p=P(X\ge0)$ and $q=1-p$; zero belongs to the nonnegative class.
+Condition on exactly $j$ nonnegative observations among four.
+For $Z=(X_1+\cdots+X_4)/2$, the conditional moments are
+\[
+ \mu_j=\frac{u(j-4p)}{2pq},\qquad
+ V_j=\frac14\left[j\left(\frac{v_+}{p}-\frac{u^2}{p^2}\right)
+ +(4-j)\left(\frac{v_-}{q}-\frac{u^2}{q^2}\right)\right].
+\]
+Closed-event Cantelli gives, for every $x$,
+\begin{equation}\label{ext:n4:eq:count-cantelli}
+ F_Z(x)\le\sum_{j=0}^4\binom4j p^jq^{4-j}A_j(x),\qquad
+ A_j(x)=\begin{cases}1,&x\ge\mu_j,\\
+ V_j/(V_j+(\mu_j-x)^2),&x<\mu_j.
+ \end{cases}
+\end{equation}
+This includes variance zero and atoms at the threshold. The necessary
+sign-mass interval is
+\[
+ w(1-\beta)/2\le p\le1-w(1+\beta)/2.
+\]
+It is covered by closed cells. On a threshold cell $[x_L,x_U]$,
+bound $A_j(x_U)$ and subtract a lower bound for $\Phi(x_L)$.
+The five degree-four Bernstein coefficients bound the binomial
+mixture jointly; its masses are not maximized independently.
+Each retained sign-mass cell supplies a nonnegative raw numerator
+bound $d_i$ and a correlated lower bound $r_i\le r$, so its score
+is at most $d_i/(r_i+\eta)$.
+
+If $r_B$ is the whole-box lower bound for $r$, put
+\[
+ c_C^0=\max\left\{0,\max_i(d_i/T-r_i),\frac{2}{5T}-r_B\right\},
+ \qquad
+ c_C=10^{-4}\lceil10^4c_C^0\rceil+10^{-4}.
+\]
+This closes every $\eta\ge c_C$ by a strict bound below $T$,
+including the threshold tails. Independently, Shevtsova closes
+every $\rho\ge979013/533000$:
+\[
+ \frac{3031}{10000}\left(1+\frac{323}{500\rho}\right)\le T.
+\]
+Hence $c_S=\max\{0,979013/533000-r_B\}$ is another closed sufficient
+cutoff. Take $c_B=\min(c_C,c_S)$, selecting one complete route.
+The low-excess interval $[0,c_B]$ and the large-excess range
+$[c_B,\infty)$ include their common endpoint.
+
+\subsubsection{The finite cover and conclusion}
+\begin{proposition}[Bounded-law certificate implication]
+\label{ext:n4:prop:certificate}
+Assume all the terminal inequalities and domain covers in the following
+finite scheme have been verified. Then, for every standardized law $P$ with
+\[
+ |X|\le17/4,\quad \rho(P)<46/25,\quad
+ 625/2116\le w\le1,\quad |\beta|\le13/20,
+\]
+and every real $H$,
+\[
+ \frac{2\{F_{4,P}(H)-\Phi(H/2)\}}{\rho(P)}\le T.
+\]
+The same assertion holds for the genuine reflected law $-P$.
+\end{proposition}
+\begin{proof}
+Divide $[625/2116,1]$ into 20 equal closed bands and $[0,13/20]$
+into 13 closed bands of width $1/20$. There are 260 rectangles.
+The minimum of
+$r^2=(1+\beta^2)^2/[w(1-\beta^2)]$ is attained at the
+largest $w$ and smallest $|\beta|$. A rectangle with
+$\min r^2\ge(46/25)^2$ is empty for the strict physical cap.
+For every other rectangle construct its own large-excess cutoff.
+If $c_B=0$, the large-excess bound covers all $\eta\ge0$ directly.
+If $c_B>0$, divide $[0,c_B]$ into 16 equal closed intervals. At each interval
+check all 58 thresholds, their 57 joins, the two tails, and both
+actual reflected orientations, using the preceding inequalities.
+A parent is accepted by its complete bound or by complete bounds
+for all four children obtained by bisecting both coordinates.
+Each child has its own cutoff; no part of another child's domain
+or numerical conclusion is used in its place.
+
+The certificate condition requires a disposition for every one of the
+260 closed parent rectangles: a proved necessary-condition contradiction,
+a complete direct comparison, or complete comparisons on all four children.
+Acceptance requires the complete rational inequalities and their
+reconstruction, with no unresolved rectangle.
+All elementary operations
+are outward rational enclosures; square roots are checked by integer
+squaring. Trigonometric, Gaussian and cotangent values are enclosed
+by finite series with analytic remainders, using the arithmetic
+rules of Section~\ref{ext:elementary-enclosures}. The response uses
+\eqref{ext:n4:eq:response-series}, not divided quotients at contacts.
+The complete exact replay reconstructs this whole cover and its upper
+bounds; its execution and acceptance record are described in
+Appendix~\ref{revision:reproducibility}. A sampled value or an optimizer's
+status would not supply these inequalities.
+
+For completeness, acceptance has a direct mathematical interpretation.
+Every actual canonical point belongs to a closed parent.
+In a nonempty parent or child, the large-excess inequalities cover
+$\eta\ge c_B$, while the low-excess inequalities cover all of
+$[0,c_B]$, including $\eta=0$. The same unknown law supplies the
+single $\nu$ in every priced frequency response. Quadrature and
+physical interpolation extend the finite rows to every central
+threshold; the tails cover the rest. Thus the accepted rational
+inequalities prove the proposition for all actual laws, including
+bounded infinite supports and zero atoms.
+\end{proof}
+

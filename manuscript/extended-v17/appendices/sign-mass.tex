@@ -1,0 +1,66 @@
+\subsection{A universal lower bound for each sign probability}
+\label{ext:sign-mass}
+Six probability panels at index six are excluded before the count
+calculation. The exclusion is the following elementary moment inequality;
+it does not require support, a central gap, or absence of a zero atom.
+
+\begin{lemma}[Sign mass and third moment]\label{ext:sign-mass-bound}
+If $\E X=0$, $\E X^2=1$, and $\rho=\E|X|^3<\infty$, then
+\[
+ \rho^2\Pp(X>0),\quad \rho^2\Pp(X<0)
+ \ \ge\ \frac{8(7\sqrt7-17)}{27}
+ \ >\ \frac{11261}{25000}.
+\]
+\end{lemma}
+\begin{proof}
+Write $p=\Pp(X>0)$, $a=\E X_+^2$, and
+$m=\E X_+=\E X_->0$. Centering and unit variance imply
+$0<a<1$. Cauchy's inequality, first with factors
+$X_+^{1/2}$ and $X_+^{3/2}$ and then with their negative-sign
+counterparts, gives
+\[
+ a^2\le m\E X_+^3,\qquad (1-a)^2\le m\E X_-^3.
+\]
+Also $m^2\le pa$. Consequently
+\[
+ p\rho^2\ge f(a):=\frac{(a^2+(1-a)^2)^2}{a}.
+\]
+The derivative has the sign of $6a^2-2a-1$, because
+\[
+ f'(a)=\frac{(2a^2-2a+1)(6a^2-2a-1)}{a^2}.
+\]
+Thus the unique minimum on $(0,1)$ is at
+$a=(1+\sqrt7)/6$, where
+$f(a)=8(7\sqrt7-17)/27$. The strict rational comparison follows
+from $2645751^2<7\cdot10^{12}$ and
+$8(7\cdot2645751/10^6-17)/27>11261/25000$.
+Apply the same argument to $-X$ for the other sign probability.
+\end{proof}
+
+The exact constant is attained. Take
+$p=(5-\sqrt7)/6$, $q=1-p=(1+\sqrt7)/6$, and
+$X=(B-p)/\sqrt{pq}$ for $B\sim\operatorname{Bernoulli}(p)$.
+Then $\E X_+^2=q$ and
+$p\rho^2=(p^2+q^2)^2/q=f(q)$ equals the minimum above.
+The smaller rational constant is used only to simplify the finite checks.
+
+For a closed probability panel $p\in[j/100,(j+1)/100]$ and
+$\rho\le r$, the necessary lower bound therefore excludes the
+entire panel whenever
+\[
+ \frac{j+1}{100}r^2<\frac{11261}{25000}.
+\]
+This verifies precisely the six sign-mass dispositions used at index six:
+\[
+\begin{array}{c|c|c}
+\rho\text{ interval}&j\text{ values}&
+\text{largest }(j+1)r^2/100\\\hline
+{[1,11/10]}&35,36&4477/10000\\
+{[11/10,23/20]}&32,33&8993/20000\\
+{[23/20,237/200]}&30,31&56169/125000
+\end{array}
+\]
+Each last-column value is strictly less than $11261/25000$.
+The inequalities include both panel endpoints. They apply to the
+actual sign probability in the count representation, regardless of
+which discrepancy orientation supplied that representation.

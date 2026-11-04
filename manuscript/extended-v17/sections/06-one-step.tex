@@ -1,0 +1,163 @@
+\section{What a first failing index must satisfy}
+\label{ext:smoothing}
+
+The finite arguments use the ratio extremizer of
+Corollary~\ref{ext:ratio-attainment}. A simple recurrence supplies the
+same small excess at any first failure of the sharp bound. This lets us
+use local exclusions directly, without first proving a separate sequence
+of positive upper barriers.
+
+\begin{lemma}[Gaussian derivative bounds]\label{ext:gaussian-constants}
+The standard normal density satisfies
+\[
+ \|\phi''\|_\infty=\phi(0)<\frac25,
+ \qquad \|\phi'''\|_\infty\le\frac2\pi,
+ \qquad \frac1{4\pi}<\frac2{25},\qquad \CE<\frac{41}{100}.
+\]
+\end{lemma}
+\begin{proof}
+Since $\phi''(x)=(x^2-1)\phi(x)$, its absolute maximum is at zero:
+the other candidates $x=\pm\sqrt3$ have value
+$2e^{-3/2}\phi(0)<\phi(0)$. The absolutely convergent Gaussian
+Fourier integral gives
+\[
+ |\phi'''(x)|\le\frac1{2\pi}
+       \int_{\R}|t|^3e^{-t^2/2}\,dt=\frac2\pi.
+\]
+The bounds for $\phi(0)$ and $1/(4\pi)$ follow from $\pi>25/8$.
+For the last comparison one may use
+$\sqrt{10}<31623/10000$ and $\pi>314159/100000$, square the
+positive sides, and compare rational numbers.
+\end{proof}
+
+\begin{theorem}[One-step smoothing]\label{ext:one-step}
+For every integer $n\ge2$,
+\begin{equation}\label{ext:smoothing-recurrence}
+ C_n\le\sqrt{\frac n{n-1}}\,C_{n-1}
+       +\frac{\sqrt n}{15(n-1)^{3/2}}
+       +\frac{2\sqrt n}{25(n-1)^2}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Fix one standardized marginal $P$, write $v=n-1$, and put
+$G_v(x)=\Phi(x/\sqrt v)$. Conditioning on the last summand yields
+\[
+ |\Pp(S_n\le H)-\E G_v(H-X)|\le C_{n-1}\rho/\sqrt v.
+\]
+Taylor expansion of the smooth Gaussian CDF, followed by expectation
+under this same marginal, gives
+\[
+ |\E G_v(H-X)-G_v(H)-\tfrac12G_v''(H)|
+ \le\frac{\phi(0)\rho}{6v^{3/2}}<\frac\rho{15v^{3/2}}.
+\]
+Here $\E X=0$ and $\E X^2=1$ cancel the first two Taylor terms.
+For the change of variance, $\partial_vG_v=G_v''/2$ and
+$\partial_v^2G_v=G_v^{(4)}/4$. Thus
+\[
+ G_{v+1}(H)-G_v(H)-\tfrac12G_v''(H)
+ =\frac14\int_0^1(1-t)G_{v+t}^{(4)}(H)\,dt.
+\]
+Since $G_w^{(4)}(H)=w^{-2}\phi'''(H/\sqrt w)$, this remainder
+has absolute value at most $1/(4\pi v^2)<2/(25v^2)$.
+Combine the three estimates, multiply by $\sqrt n/\rho$, and use
+$\rho\ge1$. The bound is uniform in $P$ and $H$ and treats both
+signs of the discrepancy, so it passes to the two suprema defining $C_n$.
+\end{proof}
+
+\begin{corollary}[Entry from a sharp predecessor]
+\label{ext:first-failure-entry}
+If $n\ge40$ and $C_{n-1}\le\CE\le C_n$, then
+\[
+ 0\le n(C_n-\CE)<\frac{1433}{4875}<\frac3{10},
+ \qquad C_n<\frac{167}{400}<0.4226,
+ \qquad n(C_{n-1}-C_n)_+=0.
+\]
+For $n\ge42$ the excess bound improves to $3003/10250$ and
+the score bound to $73/175$.
+For every standardized marginal $P$, the same-law predecessor loss
+$n(\sqrt{n-1}\Delta_{n-1}(P)/\rho(P)-C_n)_+$ is zero.
+At a first failing index $n\ge43$ above a sharp base, both deleted
+constants $C_{n-1}$ and $C_{n-2}$ are below $0.4253$.
+\end{corollary}
+\begin{proof}
+Put $s=\sqrt{n/(n-1)}$. The recurrence and
+$n(s-1)=\{n/(n-1)\}/(s+1)$ give
+\[
+ n(C_n-\CE)\le\frac n{n-1}
+ \left\{\frac{\CE}{s+1}+\frac{s}{15}
+                  +\frac{2s}{25\sqrt{n-1}}\right\}.
+\]
+For $n\ge40$, $n/(n-1)\le40/39$, $\sqrt{n-1}>6$, and
+$1<s<51/50$, since $39\cdot51^2-40\cdot50^2=1439>0$.
+The right side is therefore less than
+\[
+ \frac{40}{39}\left(\frac{41}{200}
+                  +\frac{17}{250}+\frac{17}{1250}\right)
+ =\frac{1433}{4875}<\frac3{10}.
+\]
+This gives $C_n<0.41+0.3/40=167/400$.
+For $n\ge42$, $n/(n-1)\le42/41$ and
+$1<s<81/80$; the last comparison follows from
+$41\cdot81^2-42\cdot80^2=201>0$.
+Using $\CE<41/100$ and $s+1>2$, the right side is less than
+\[
+ \frac{42}{41}\left(\frac{41}{200}
+                    +\frac{27}{400}+\frac{27}{2000}\right)
+ =\frac{3003}{10250}<\frac3{10}.
+\]
+Consequently $C_n<0.41+0.3/42=73/175$.
+Every law's predecessor ratio is bounded by $C_{n-1}\le\CE\le C_n$,
+so both loss assertions follow. At a first failure the two deleted
+indices are sharp and $\CE<0.41<0.4253$.
+\end{proof}
+
+\subsection{The loose ceilings needed after index twenty-four}
+\label{ext:finite-loose-ceilings}
+\begin{lemma}\label{ext:first-failure25}
+If $n\ge25$ and $C_{n-1}\le\CE\le C_n$, then
+\[
+ n(C_n-\CE)<\frac{4177}{13824}<\frac{303}{1000},
+ \qquad C_n<\frac{145873}{345600}<\frac{423}{1000}.
+\]
+For each marginal the same-law predecessor allowance is zero.
+\end{lemma}
+\begin{proof}
+Set $s=\sqrt{n/(n-1)}$. Theorem~\ref{ext:one-step} gives
+\[
+ n(C_n-\CE)\le\frac{n}{n-1}
+ \left(\frac{\CE}{s+1}+\frac{s}{15}
+                       +\frac{2s}{25\sqrt{n-1}}\right).
+\]
+For $n\ge25$ one has $n/(n-1)\le25/24$,
+$1<s<49/48$ and $\sqrt{n-1}>24/5$.
+The latter strict comparisons follow from
+$24\cdot49^2-25\cdot48^2=24>0$ and $24>576/25$.
+Together with $\CE<41/100$, these imply
+\[
+ n(C_n-\CE)<\frac{25}{24}
+  \left(\frac{41}{200}+\frac{49}{720}+\frac{49}{2880}\right)
+ =\frac{4177}{13824}.
+\]
+Dividing by $n\ge25$ proves the score bound. The exact positive
+comparison margins are
+$303/1000-4177/13824=1459/1728000$ and
+$423/1000-145873/345600=1579/1728000$.
+Finally each marginal's predecessor score is at most $C_{n-1}\le\CE\le C_n$.
+\end{proof}
+
+In the original floor-$25$ initial and resource calculations, the own-score
+ceiling is $434477/10^6$ and the retained predecessor allowance is $5/16$.
+In the floor-$31$ calculations they are respectively $432313/10^6$ and
+$31/100$. Both own-score ceilings exceed $423/1000$, by respectively
+$11477/10^6$ and $9313/10^6$. Both allowances are nonnegative.
+Thus Lemma~\ref{ext:first-failure25} supplies strictly stronger entry
+information at a first failure. The native targets and numerical inputs
+remain exactly as originally specified. The stronger information licenses
+their weaker hypotheses; it does not change any certificate inequality.
+
+Using a floor-$N$ resource calculation at an actual index $n>N$ additionally
+requires its weighted invariant and its actual-index support hypotheses.
+Lemma~\ref{ext:first-failure25} supplies only the scalar entry conditions;
+it does not transfer support or the bound $D\le d$ from one index to another.
+The transfer used here is the proved $nD\le Nd$ from the common finite
+resource calculus, together with separately verified actual-index support.

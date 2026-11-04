@@ -1,0 +1,59 @@
+{
+  "records": [
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/compact-v16/tools/check_revision_count_constants.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.058932333,
+      "stdout_sha256": "3da29d9906b24b649d4e25404b728a385b75e00b1cc6569f285a71ec4ce378eb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Library/TeX/texbin/pdflatex",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "main.tex"
+      ],
+      "returncode": 0,
+      "seconds": 0.534663625,
+      "stdout_sha256": "83aef4fbd55d5f0334e531aa53083ee21de559fca303f341a0c9a89753f44388",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Library/TeX/texbin/pdflatex",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "main.tex"
+      ],
+      "returncode": 0,
+      "seconds": 0.49131745799999993,
+      "stdout_sha256": "4603fe3c41b112c16ebd0b8a487d9be737e86492bcb9b0f7b5644027b2c2b7b8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Library/TeX/texbin/pdflatex",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "main.tex"
+      ],
+      "returncode": 0,
+      "seconds": 0.4989994580000001,
+      "stdout_sha256": "4603fe3c41b112c16ebd0b8a487d9be737e86492bcb9b0f7b5644027b2c2b7b8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "source_sha256": "4599414d6435247cc435904d44d5cc96ec0ab91105da0d0344b9013a94972dfa",
+  "explanation_check_sha256": "5f980225c9fe2f046e85af58194ae44d9320eb98a1907a4584ddcf6fd65cf64a",
+  "checker_sha256": "eb55bfd92bd3975dd904f1440d8a0a06ac286fd7d6e333388cf7c4f318bd9454",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]"
+}

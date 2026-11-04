@@ -1,0 +1,46 @@
+{
+  "entry": {
+    "command": [
+      "python3",
+      "-I",
+      "-B",
+      "mathematics/fixed-target-v8/2026-10-28/isolated_entry_replay.py",
+      "--output-dir",
+      "runs/compact-v16-entry-review"
+    ],
+    "python_executable": "/usr/bin/python3",
+    "returncode": 0,
+    "elapsed_seconds": 67.82069308310747,
+    "stdout_sha256": "da85dad258009fd3cda7f9986a2a847896facb023aaadf322cc3b058018188b4",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "bounded": {
+    "command": [
+      "python3",
+      "-I",
+      "-B",
+      "manuscript/compact-v16/tools/recheck.py",
+      "compact-v16-bounded-review"
+    ],
+    "python_executable": "/usr/bin/python3",
+    "returncode": 0,
+    "elapsed_seconds": 53.50619254191406,
+    "stdout_sha256": "eb229def2d7b17afcfca3d5c1672c9d4a00a00ba7ef81dddd40292f6de08d188",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "scalar": {
+    "command": [
+      "python3",
+      "-I",
+      "-B",
+      "manuscript/compact-v16/tools/check_revision_constants.py",
+      "--output-dir",
+      "runs/compact-v16-scalar-review"
+    ],
+    "python_executable": "/usr/bin/python3",
+    "returncode": 0,
+    "elapsed_seconds": 0.3175364581402391,
+    "stdout_sha256": "12207801314cd44897ffc6fd0b234122c09a775f16f0ad16f56cdb995b4b36f4",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

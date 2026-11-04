@@ -1,0 +1,3104 @@
+{
+  "all_law_theorem": false,
+  "conductor_executable": "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+  "conductor_python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "execute": false,
+  "immutable_inputs_sha256": {
+    "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12": "50a1e90abbf1d2d2d072682189efc9937f14b93f0cf71370dbe6f8c58e835e3b",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/EXECUTION_DAG.json": "8d918fce27db9bdf4f109af78988f92b4512d9301a60c44f7239c5e43fb2a91f",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/coordinator/N5_FRESH_V3_DAG.json": "2c8571287950d98c023591465c87a4e4f36bd82b10154fa32119af0f1fef4db4",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/FULL_COMMANDS_V3.json": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/SCALAR_KAPPA_FRESH_COMMANDS_V2.json": "086f14e9345470a902c1347a4cbf385f600d1a55221fe0ef154f5d556372774b",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/FULL_COMMANDS_V2.json": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/extended-v17/reproduction/REPRODUCTION_INDEX_V1.json": "e261a8b06071266c1860101e38fc70cff6a986af0ad1ba09b5396286efc93ad1",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/extended-v17/reproduction/tools/run_reproduction_index.py": "816a778fb2bb0bf76c6ac88139237ab17d8589b1f4f6bebab45fb3f54489418d"
+  },
+  "index": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/extended-v17/reproduction/REPRODUCTION_INDEX_V1.json",
+  "index_sha256": "e261a8b06071266c1860101e38fc70cff6a986af0ad1ba09b5396286efc93ad1",
+  "nodes": [
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/extended-v17/reproduction/tools/source_cache_pack.py",
+        "restore",
+        "--archive",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/extended-v17/reproduction/assets/foundations-static-cache-v2.tar.gz",
+        "--sha256",
+        "7b1cf5d1b3223a3bcabd9867a52693f6e069b57b3e5ef59d7684bd562d0aebaf",
+        "--manifest-sha256",
+        "9ae6c145b8202a81815d69be9d7a2e4e3fd517f118b9512694826dee49e60fb5",
+        "--workspace",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace"
+      ],
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [],
+      "id": "foundation-static-inputs-restored",
+      "outputs": [],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Static inputs only; no arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/restore_finite_static_v3.py",
+        "restore",
+        "--archive",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/extended-v17/reproduction/assets/finite-static-cache02/static-sources.tar.gz",
+        "--sha256",
+        "d6a3ebbbc6af53192959b3816941e3a165b9819c040b62fe2a02ae94dc4415af",
+        "--manifest-sha256",
+        "10fb0244ba685e5122cd8bfba3af55204438ba0c1ef888abf6ad241f2629490b",
+        "--workspace",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace"
+      ],
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [],
+      "id": "finite-static-inputs-restored",
+      "outputs": [],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Static inputs; old scalar outputs are archived separately"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/extended-v17/reproduction/tools/install_count_candidates.py",
+        "--archive",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/unconditional_legacy_20261030/.be/downloads/count-candidates.zip",
+        "--workspace",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace"
+      ],
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [],
+      "id": "public-count-inputs",
+      "outputs": [],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Hash-pinned untrusted public candidates only"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/unconditional_legacy_20261030/verification/count/batch_verify.py",
+        "--manifest",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/unconditional_legacy_20261030/certificates/count/MANIFEST.json",
+        "--worker",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/unconditional_legacy_20261030/verification/count/count_worker_v2.py",
+        "--output",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/coordinator/count1243-01/native",
+        "--jobs",
+        "2",
+        "--timeout",
+        "1800"
+      ],
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "public-count-inputs"
+      ],
+      "id": "public-count1243",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/coordinator/count1243-01/native"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "All1243 original COUNT acceptances; acquisition joins remain separate"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/audit_n1.py"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.n1",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/n1-audit01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "whole exact dual plus controls; continuous implication in manuscript"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/run_logged.py",
+        "n2-scalars"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.n2-scalars",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/n2-scalars01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "complete conditional native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/run_logged.py",
+        "n2-primary"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.n2-primary",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/n2-primary01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "complete conditional native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/run_logged.py",
+        "n2-independent"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.n2-independent",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/n2-independent01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "complete conditional native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/run_logged.py",
+        "n3-scalars"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.n3-scalars",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/n3-scalars01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "complete conditional native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/run_logged.py",
+        "n3-identities"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.n3-identities",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/n3-identities01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "complete conditional native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/run_logged.py",
+        "n3-full"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.n3-full",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/n3-full01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "complete conditional native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/root4_macos.py",
+        "run",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/root4-macos-full01",
+        "--wall-seconds",
+        "54000"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.root4",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/root4-macos-full01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "all1300 HIGH slots and260 parents, full producer then fresh full replay"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/check_support6_14.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/support6-14-01"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.support-low",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/support6-14-01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "22 exact actual-index support rows"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/check_support6_9_bc.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/support6-9-bc01"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.support-BC",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/support6-9-bc01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "4 exact broader BC rows"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/run_finite69_parents.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite69-initial-smoke01",
+        "--job",
+        "n6.initial.B2",
+        "--workers",
+        "1"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.initial-B2",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite69-initial-smoke01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "complete conditional native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/run_finite69_parents_v2.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite69-initial-remaining01",
+        "--workers",
+        "1",
+        "--reuse-initial",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite69-initial-smoke01/jobs/n6.initial.B2"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundations.initial-B2",
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.initial-remaining",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite69-initial-remaining01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "complete conditional native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/run_finite69_owncaps.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite69-owncaps01"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.owncaps",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite69-owncaps01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "complete conditional native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/check_support6_14_high.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/support6-14-high01"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.support-high",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/support6-14-high01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [
+        "foundations.owncaps"
+      ],
+      "scope": "25 exact higher-rho/corner support rows"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/run_finite69_remaining.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite69-remaining01",
+        "--stages",
+        "high",
+        "bridge",
+        "radius"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.remaining-fourier69",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite69-remaining01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [
+        "foundations.support-high"
+      ],
+      "scope": "complete conditional native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/run_finite6_remaining.py"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundations.initial-remaining",
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.remaining-n6",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite6-remaining01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "37 remaining native acquisitions plus whole41 n6 parent/fact joins"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/run_finite79_resources.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite79-resources01",
+        "--initials",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite69-initial-remaining01",
+        "--owncaps",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite69-owncaps01",
+        "--workers",
+        "1"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundations.initial-remaining",
+        "foundations.owncaps",
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.resources79",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite79-resources01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [
+        "foundations.remaining-fourier69"
+      ],
+      "scope": "complete conditional native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/run_finite1014_core.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite1014-core01"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.core1014",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite1014-core01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [
+        "foundations.remaining-n6"
+      ],
+      "scope": "40 original10--14 INITIAL/resource actions"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/run_finite1014_families.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite1014-families01"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.fourier1014",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite1014-families01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [
+        "foundations.resources79"
+      ],
+      "scope": "15 original supported/HIGH/corner/highrho actions"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/finite614_semantic_join.py",
+        "n6_9",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite69-final-join01"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundations.remaining-n6",
+        "foundations.resources79",
+        "public-count1243",
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.same-law69",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite69-final-join01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "complete conditional native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/finite614_semantic_join.py",
+        "n10_14",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite1014-final-join01"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundations.core1014",
+        "public-count1243",
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.same-law1014",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite1014-final-join01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "complete conditional native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/prepare_scalar_kappa_fresh.py",
+        "--workspace",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+        "--receipt",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/scalar-preparation01.json"
+      ],
+      "component": "scalar",
+      "component_map_sha256": "086f14e9345470a902c1347a4cbf385f600d1a55221fe0ef154f5d556372774b",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "scalar-kappa-prepare",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/scalar-preparation01.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete command at its stated modular scope"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "-S",
+        "controls.py"
+      ],
+      "component": "scalar",
+      "component_map_sha256": "086f14e9345470a902c1347a4cbf385f600d1a55221fe0ef154f5d556372774b",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/scalar-kappa01",
+      "dependencies": [
+        "scalar-kappa-prepare"
+      ],
+      "id": "scalar-kappa",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/scalar-kappa01/CERTIFICATE.json",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/scalar-kappa01/CHECKED.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete command at its stated modular scope"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/finite614_acquisition_join.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite614-acquisition-join01"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundations.support-low",
+        "foundations.support-BC",
+        "foundations.support-high",
+        "foundations.initial-remaining",
+        "foundations.owncaps",
+        "foundations.remaining-fourier69",
+        "foundations.core1014",
+        "foundations.fourier1014",
+        "scalar-kappa",
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.acquisition614",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite614-acquisition-join01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "51 exact support replays, actual Fourier/INITIAL inputs and complement/scalar joins"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/finite6_outer_initial_join.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite6-outer-initial-join02"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundations.initial-remaining",
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.outer-initial-premises",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/finite6-outer-initial-join02"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete ordinary and outer n6.BN parent re-admission and exact equality of all analytic inputs; nine malformed-premise controls"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/check_initial_beta_constants.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/initial-beta-constants01"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.initial-beta-constants",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/initial-beta-constants01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Independent exact3whole-band ceilings with3inward-rounding rejectioncontrols"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/bind_initial_beta_profiles.py",
+        "sources",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/initial-beta-source-bind01"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundations.initial-beta-constants",
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.initial-beta-source-bind",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/initial-beta-source-bind01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "All23pinned sourceprofiles and6malformedpremisecontrols"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/bind_initial_beta_profiles.py",
+        "fresh",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/initial-beta-fresh-bind01"
+      ],
+      "component": "foundations",
+      "component_map_sha256": "e6762fcb3834bbc9e11bf92a75abc41aa3dbce56ec2f3d8644c2f2c72843870d",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "foundations.initial-beta-constants",
+        "foundations.initial-remaining",
+        "foundations.core1014",
+        "foundation-static-inputs-restored",
+        "finite-static-inputs-restored"
+      ],
+      "id": "foundations.initial-beta-fresh-bind",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/foundations/initial-beta-fresh-bind01"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "All23actualcomplete INITIALprofiles, whole current readers and6controls"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/run_1519_support.py"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite1519-support",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/finite1519-support01/SUMMARY.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/run_1519_high.py"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite1519-high",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/finite1519-high01/SUMMARY.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/run_1519_fourier.py"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite1519-fourier",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/finite1519-fourier02/highrho/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/run_1920_feedback.py"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite1920-feedback",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/finite1920-feedback01/feedback/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/run_2024_auxiliary.py"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite2024-auxiliary",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/finite2024-auxiliary01/auxiliary/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/run_2024_fourier.py"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite2024-fourier",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/finite2024-fourier01/universal/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/check_radius3_20_24.py"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite-radius3",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/radius3-20-24-01/ACCEPTED.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/run_2630_b1.py"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite2630-B1-Fourier",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/finite2630-b1-01/SUMMARY.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/run_1519_core.py"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite1519-high"
+      ],
+      "id": "finite1519-core",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/finite1519-core02/SUMMARY.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/run_n25_acquisitions.py"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite25-parents",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/n25-acquisitions01/SUMMARY.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/run_public_resource.py",
+        "shared_high25_39--01",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/shared-high25-39-source01",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/shared-high25-39-run01",
+        "2"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite-shared-high25-39",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/shared-high25-39-run01/RESULT.json",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/shared_high25_39--01/SUMMARY.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/run_public_resource.py",
+        "low26_30_support--01",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/low26_30_support-source01",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/low26_30_support-run01",
+        "1"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite-low26-30-support",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/low26_30_support-run01/RESULT.json",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/low26_30_support--01/SUMMARY.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/run_public_resource.py",
+        "support32_34--01",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/support32_34-source01",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/support32_34-run01",
+        "1"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite-support32-34",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/support32_34-run01/RESULT.json",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/support32_34--01/SUMMARY.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/run_public_resource.py",
+        "support35--01",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/support35-source01",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/support35-run01",
+        "1"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite-support35",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/support35-run01/RESULT.json",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/support35--01/SUMMARY.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/run_public_resource.py",
+        "low31--01",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/low31-source01",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/low31-run01",
+        "1"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite-low31",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/low31-run01/RESULT.json",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/low31--01/SUMMARY.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/run_public_resource.py",
+        "initial35_39--02",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/initial35_39-source01",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/initial35_39-run02",
+        "1"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite-initial35-39",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/initial35_39-run02/RESULT.json",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/initial35_39--02/SUMMARY.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/run_public_resource.py",
+        "resource35_39--01",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/resource35_39-source01",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/resource35_39-run01",
+        "1"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite-resource35-39",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/resource35_39-run01/RESULT.json",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/resource35_39--01/SUMMARY.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/run_floor31_support_portable.py"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite-floor31-support",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/support16-portable01/SUMMARY.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/audit_actual20_direct_sources.py"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite20-source-audit",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/actual20-direct-source-audit01/SUMMARY.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/run_actual20_direct.py"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite20-source-audit"
+      ],
+      "id": "finite20-direct",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/actual20-direct01/SUMMARY.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/portable-finite/prepare_actual20_coarse4.py",
+        "--workspace",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+        "--prepare",
+        "--receipt",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/coarse4-static-preparation01.json"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite20-coarse-source-preparation",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/coarse4-static-preparation01.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Verify and preserve restored static source before the unchanged fresh constructor"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/run_actual20_coarse4.py"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite20-direct",
+        "finite20-coarse-source-preparation"
+      ],
+      "id": "finite20-coarse4",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/actual20-coarse4-01/SUMMARY.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/portable-finite/run_actual20_counts.py"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite20-count49",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/actual20-all49-run01/SUMMARY.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_actual20_coarse4.py"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite20-coarse4"
+      ],
+      "id": "finite20-coarse-readback",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/actual20-coarse4-readback01/SUMMARY.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/portable-finite/run_from_cache.py",
+        "n25-counts",
+        "--workspace",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+        "--cache",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/n25-count-source01",
+        "--output",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/n25-counts01",
+        "--log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/n25-counts01",
+        "--execute"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite-n25-counts",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/n25-counts01/WRAPPER_COMPLETED.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/portable-finite/run_from_cache.py",
+        "2124-counts",
+        "--workspace",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+        "--cache",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/actual21-24-counts01/source-cache",
+        "--output",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-2124-counts01",
+        "--log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/portable-2124-counts01",
+        "--execute"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite-2124-counts",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/portable-2124-counts01/WRAPPER_COMPLETED.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/portable-finite/run_from_cache.py",
+        "2124-acquisitions",
+        "--workspace",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+        "--cache",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/actual21-24-acquisitions02/source-cache",
+        "--output",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-2124-acquisitions01",
+        "--log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/portable-2124-acquisitions01",
+        "--execute"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite-2124-acquisitions",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/portable-2124-acquisitions01/WRAPPER_COMPLETED.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/foundations/public_count_admission.py",
+        "n15_19",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/finite1519-count-admission01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "public-count1243"
+      ],
+      "id": "finite1519-count-admission",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/finite1519-count-admission01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/admit_current2639_v7.py"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "public-count1243"
+      ],
+      "id": "finite2639-count-admission",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/current2639-count-admission07/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_1519_components.py",
+        "support",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/support1519-final-readback01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite1519-support",
+        "scalar-kappa"
+      ],
+      "id": "finite-support1519-readback",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/support1519-final-readback01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_1519_components.py",
+        "high",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/high1519-final-readback01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite1519-high",
+        "scalar-kappa"
+      ],
+      "id": "finite-high1519-readback",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/high1519-final-readback01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_1519_components.py",
+        "supported",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/supported1519-final-readback01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite1519-fourier",
+        "scalar-kappa"
+      ],
+      "id": "finite-supported1519-readback",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/supported1519-final-readback01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_1519_components.py",
+        "highrho",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/highrho1519-final-readback01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite1519-fourier",
+        "scalar-kappa"
+      ],
+      "id": "finite-highrho1519-readback",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/highrho1519-final-readback01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_1519_components.py",
+        "feedback",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/feedback1920-final-readback01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite1920-feedback",
+        "scalar-kappa"
+      ],
+      "id": "finite-feedback1920-readback",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/feedback1920-final-readback01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_fourier_components.py",
+        "auxiliary",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/auxiliary2024-final-readback01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite2024-auxiliary",
+        "scalar-kappa"
+      ],
+      "id": "finite-auxiliary2024-readback",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/auxiliary2024-final-readback01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_fourier_components.py",
+        "supported",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/supported2024-final-readback01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite2024-fourier",
+        "scalar-kappa"
+      ],
+      "id": "finite-supported2024-readback",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/supported2024-final-readback01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_fourier_components.py",
+        "universal",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/universal2024-final-readback01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite2024-fourier",
+        "scalar-kappa"
+      ],
+      "id": "finite-universal2024-readback",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/universal2024-final-readback01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_fourier_components.py",
+        "high2539",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/high2539-final-readback01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-shared-high25-39",
+        "scalar-kappa"
+      ],
+      "id": "finite-high2539-readback",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/high2539-final-readback01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_1519_case_v2.py",
+        "n15-b0",
+        "finite1519-join-n15-b0-01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite1519-core",
+        "finite1519-count-admission",
+        "finite-support1519-readback",
+        "finite-high1519-readback",
+        "finite-supported1519-readback",
+        "finite-highrho1519-readback",
+        "finite-feedback1920-readback"
+      ],
+      "id": "finite1519-join-15-b0",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/finite1519-join-n15-b0-01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_1519_case_v2.py",
+        "n15-bn",
+        "finite1519-join-n15-bn-01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite1519-core",
+        "finite1519-count-admission",
+        "finite-support1519-readback",
+        "finite-high1519-readback",
+        "finite-supported1519-readback",
+        "finite-highrho1519-readback",
+        "finite-feedback1920-readback"
+      ],
+      "id": "finite1519-join-15-bn",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/finite1519-join-n15-bn-01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_1519_case_v2.py",
+        "n16-b0",
+        "finite1519-join-n16-b0-01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite1519-core",
+        "finite1519-count-admission",
+        "finite-support1519-readback",
+        "finite-high1519-readback",
+        "finite-supported1519-readback",
+        "finite-highrho1519-readback",
+        "finite-feedback1920-readback"
+      ],
+      "id": "finite1519-join-16-b0",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/finite1519-join-n16-b0-01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_1519_case_v2.py",
+        "n16-bn",
+        "finite1519-join-n16-bn-01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite1519-core",
+        "finite1519-count-admission",
+        "finite-support1519-readback",
+        "finite-high1519-readback",
+        "finite-supported1519-readback",
+        "finite-highrho1519-readback",
+        "finite-feedback1920-readback"
+      ],
+      "id": "finite1519-join-16-bn",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/finite1519-join-n16-bn-01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_1519_case_v2.py",
+        "n17-b0",
+        "finite1519-join-n17-b0-01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite1519-core",
+        "finite1519-count-admission",
+        "finite-support1519-readback",
+        "finite-high1519-readback",
+        "finite-supported1519-readback",
+        "finite-highrho1519-readback",
+        "finite-feedback1920-readback"
+      ],
+      "id": "finite1519-join-17-b0",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/finite1519-join-n17-b0-01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_1519_case_v2.py",
+        "n17-bn",
+        "finite1519-join-n17-bn-01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite1519-core",
+        "finite1519-count-admission",
+        "finite-support1519-readback",
+        "finite-high1519-readback",
+        "finite-supported1519-readback",
+        "finite-highrho1519-readback",
+        "finite-feedback1920-readback"
+      ],
+      "id": "finite1519-join-17-bn",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/finite1519-join-n17-bn-01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_1519_case_v2.py",
+        "n18-b0",
+        "finite1519-join-n18-b0-01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite1519-core",
+        "finite1519-count-admission",
+        "finite-support1519-readback",
+        "finite-high1519-readback",
+        "finite-supported1519-readback",
+        "finite-highrho1519-readback",
+        "finite-feedback1920-readback"
+      ],
+      "id": "finite1519-join-18-b0",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/finite1519-join-n18-b0-01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_1519_case_v2.py",
+        "n18-bn",
+        "finite1519-join-n18-bn-01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite1519-core",
+        "finite1519-count-admission",
+        "finite-support1519-readback",
+        "finite-high1519-readback",
+        "finite-supported1519-readback",
+        "finite-highrho1519-readback",
+        "finite-feedback1920-readback"
+      ],
+      "id": "finite1519-join-18-bn",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/finite1519-join-n18-bn-01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_1519_case_v2.py",
+        "n19-b0",
+        "finite1519-join-n19-b0-01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite1519-core",
+        "finite1519-count-admission",
+        "finite-support1519-readback",
+        "finite-high1519-readback",
+        "finite-supported1519-readback",
+        "finite-highrho1519-readback",
+        "finite-feedback1920-readback"
+      ],
+      "id": "finite1519-join-19-b0",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/finite1519-join-n19-b0-01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_1519_case_v2.py",
+        "n19-bn",
+        "finite1519-join-n19-bn-01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite1519-core",
+        "finite1519-count-admission",
+        "finite-support1519-readback",
+        "finite-high1519-readback",
+        "finite-supported1519-readback",
+        "finite-highrho1519-readback",
+        "finite-feedback1920-readback"
+      ],
+      "id": "finite1519-join-19-bn",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/finite1519-join-n19-bn-01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_actual20_band_v3.py",
+        "B0",
+        "actual20-join-B0-01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite20-direct",
+        "finite20-count49",
+        "finite20-coarse-readback",
+        "finite-radius3",
+        "finite-feedback1920-readback",
+        "finite-auxiliary2024-readback",
+        "finite-supported2024-readback",
+        "finite-universal2024-readback"
+      ],
+      "id": "finite20-join-B0",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/actual20-join-B0-01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/readback_actual20_band_v3.py",
+        "BN",
+        "actual20-join-BN-01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite20-direct",
+        "finite20-count49",
+        "finite20-coarse-readback",
+        "finite-radius3",
+        "finite-feedback1920-readback",
+        "finite-auxiliary2024-readback",
+        "finite-supported2024-readback",
+        "finite-universal2024-readback"
+      ],
+      "id": "finite20-join-BN",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/actual20-join-BN-01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/portable-finite/collect_from_cache.py",
+        "2124",
+        "--n",
+        "21",
+        "--band",
+        "B0",
+        "--workspace",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+        "--acquisitions",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-2124-acquisitions01",
+        "--acquisition-log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/portable-2124-acquisitions01",
+        "--counts",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-2124-counts01",
+        "--count-log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/portable-2124-counts01",
+        "--output",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-n21-B0-join01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-2124-acquisitions",
+        "finite-2124-counts",
+        "finite-radius3",
+        "finite-auxiliary2024-readback",
+        "finite-supported2024-readback",
+        "finite-universal2024-readback"
+      ],
+      "id": "finite2124-join-21-B0",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-n21-B0-join01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full explicit-root native capture and original complete band-interface readback"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/portable-finite/collect_from_cache.py",
+        "2124",
+        "--n",
+        "21",
+        "--band",
+        "BN",
+        "--workspace",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+        "--acquisitions",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-2124-acquisitions01",
+        "--acquisition-log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/portable-2124-acquisitions01",
+        "--counts",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-2124-counts01",
+        "--count-log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/portable-2124-counts01",
+        "--output",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-n21-BN-join01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-2124-acquisitions",
+        "finite-2124-counts",
+        "finite-radius3",
+        "finite-auxiliary2024-readback",
+        "finite-supported2024-readback",
+        "finite-universal2024-readback"
+      ],
+      "id": "finite2124-join-21-BN",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-n21-BN-join01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full explicit-root native capture and original complete band-interface readback"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/portable-finite/collect_from_cache.py",
+        "2124",
+        "--n",
+        "22",
+        "--band",
+        "B0",
+        "--workspace",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+        "--acquisitions",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-2124-acquisitions01",
+        "--acquisition-log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/portable-2124-acquisitions01",
+        "--counts",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-2124-counts01",
+        "--count-log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/portable-2124-counts01",
+        "--output",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-n22-B0-join01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-2124-acquisitions",
+        "finite-2124-counts",
+        "finite-radius3",
+        "finite-auxiliary2024-readback",
+        "finite-supported2024-readback",
+        "finite-universal2024-readback"
+      ],
+      "id": "finite2124-join-22-B0",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-n22-B0-join01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full explicit-root native capture and original complete band-interface readback"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/portable-finite/collect_from_cache.py",
+        "2124",
+        "--n",
+        "22",
+        "--band",
+        "BN",
+        "--workspace",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+        "--acquisitions",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-2124-acquisitions01",
+        "--acquisition-log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/portable-2124-acquisitions01",
+        "--counts",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-2124-counts01",
+        "--count-log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/portable-2124-counts01",
+        "--output",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-n22-BN-join01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-2124-acquisitions",
+        "finite-2124-counts",
+        "finite-radius3",
+        "finite-auxiliary2024-readback",
+        "finite-supported2024-readback",
+        "finite-universal2024-readback"
+      ],
+      "id": "finite2124-join-22-BN",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-n22-BN-join01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full explicit-root native capture and original complete band-interface readback"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/portable-finite/collect_from_cache.py",
+        "2124",
+        "--n",
+        "23",
+        "--band",
+        "B0",
+        "--workspace",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+        "--acquisitions",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-2124-acquisitions01",
+        "--acquisition-log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/portable-2124-acquisitions01",
+        "--counts",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-2124-counts01",
+        "--count-log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/portable-2124-counts01",
+        "--output",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-n23-B0-join01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-2124-acquisitions",
+        "finite-2124-counts",
+        "finite-radius3",
+        "finite-auxiliary2024-readback",
+        "finite-supported2024-readback",
+        "finite-universal2024-readback"
+      ],
+      "id": "finite2124-join-23-B0",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-n23-B0-join01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full explicit-root native capture and original complete band-interface readback"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/portable-finite/collect_from_cache.py",
+        "2124",
+        "--n",
+        "23",
+        "--band",
+        "BN",
+        "--workspace",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+        "--acquisitions",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-2124-acquisitions01",
+        "--acquisition-log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/portable-2124-acquisitions01",
+        "--counts",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-2124-counts01",
+        "--count-log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/portable-2124-counts01",
+        "--output",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-n23-BN-join01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-2124-acquisitions",
+        "finite-2124-counts",
+        "finite-radius3",
+        "finite-auxiliary2024-readback",
+        "finite-supported2024-readback",
+        "finite-universal2024-readback"
+      ],
+      "id": "finite2124-join-23-BN",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-n23-BN-join01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full explicit-root native capture and original complete band-interface readback"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/portable-finite/collect_from_cache.py",
+        "2124",
+        "--n",
+        "24",
+        "--band",
+        "B0",
+        "--workspace",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+        "--acquisitions",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-2124-acquisitions01",
+        "--acquisition-log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/portable-2124-acquisitions01",
+        "--counts",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-2124-counts01",
+        "--count-log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/portable-2124-counts01",
+        "--output",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-n24-B0-join01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-2124-acquisitions",
+        "finite-2124-counts",
+        "finite-radius3",
+        "finite-auxiliary2024-readback",
+        "finite-supported2024-readback",
+        "finite-universal2024-readback"
+      ],
+      "id": "finite2124-join-24-B0",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-n24-B0-join01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full explicit-root native capture and original complete band-interface readback"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/portable-finite/collect_from_cache.py",
+        "2124",
+        "--n",
+        "24",
+        "--band",
+        "BN",
+        "--workspace",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+        "--acquisitions",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-2124-acquisitions01",
+        "--acquisition-log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/portable-2124-acquisitions01",
+        "--counts",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-2124-counts01",
+        "--count-log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/portable-2124-counts01",
+        "--output",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-n24-BN-join01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-2124-acquisitions",
+        "finite-2124-counts",
+        "finite-radius3",
+        "finite-auxiliary2024-readback",
+        "finite-supported2024-readback",
+        "finite-universal2024-readback"
+      ],
+      "id": "finite2124-join-24-BN",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-n24-BN-join01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full explicit-root native capture and original complete band-interface readback"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/portable-finite/collect_from_cache.py",
+        "n25",
+        "--n",
+        "25",
+        "--band",
+        "b0",
+        "--workspace",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+        "--acquisitions",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/n25-acquisitions01",
+        "--acquisition-log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/n25-acquisitions01",
+        "--counts",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/n25-counts01",
+        "--count-log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/n25-counts01",
+        "--output",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-n25-b0-join01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite25-parents",
+        "finite-n25-counts",
+        "finite-high2539-readback"
+      ],
+      "id": "finite25-join-b0",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-n25-b0-join01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full explicit-root native capture and original complete lower25 region readback"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/portable-finite/collect_from_cache.py",
+        "n25",
+        "--n",
+        "25",
+        "--band",
+        "b1",
+        "--workspace",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+        "--acquisitions",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/n25-acquisitions01",
+        "--acquisition-log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/n25-acquisitions01",
+        "--counts",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/n25-counts01",
+        "--count-log",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/n25-counts01",
+        "--output",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-n25-b1-join01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite25-parents",
+        "finite-n25-counts",
+        "finite-high2539-readback"
+      ],
+      "id": "finite25-join-b1",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/portable-n25-b1-join01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full explicit-root native capture and original complete lower25 region readback"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/join_weighted2630_b0_v2.py"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite25-join-b0",
+        "finite-low26-30-support",
+        "finite2639-count-admission"
+      ],
+      "id": "finite2630-B0-join",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/weighted2630-b0-join02/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Complete fresh native arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/join_weighted2630_b1.py",
+        "full",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/weighted2630-b1-full01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite25-join-b1",
+        "finite-low26-30-support",
+        "finite2630-B1-Fourier",
+        "scalar-kappa"
+      ],
+      "id": "finite2630-B1-join",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/weighted2630-b1-full01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/join_weighted3134_v2.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/weighted3134-full-join01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-floor31-support",
+        "finite-low31",
+        "finite-support32-34",
+        "finite2639-count-admission"
+      ],
+      "id": "finite3134-join",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/weighted3134-full-join01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/run_public_resource.py",
+        "positive39--01",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/positive39-source01",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/positive39-run01",
+        "1"
+      ],
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "positive39-native",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/positive39-run01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "All nine native positive39 actions"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/coordinator/collect_positive39.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension-reproduction/positive39-readback"
+      ],
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "positive39-native"
+      ],
+      "id": "positive39-readback",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension-reproduction/positive39-readback/RESULT.json"
+      ],
+      "required_fields": {
+        "status": "PASS_FRESH_COMPLETE_POSITIVE39_CAPTURE_AND_CLOSED_DOMAIN_JOIN"
+      },
+      "scheduling_only_dependencies": [],
+      "scope": "Complete closed noise/phase cover and actual input readback"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/join_actual3539_v2.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/actual3539-full-join01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-initial35-39",
+        "finite-resource35-39",
+        "finite-support35",
+        "finite2639-count-admission",
+        "positive39-readback"
+      ],
+      "id": "finite3539-join",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/actual3539-full-join01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/finite/check_finite_join_controls_v2.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/weighted-final-join-controls01"
+      ],
+      "component": "finite",
+      "component_map_sha256": "b448b47b10146e36d00c113f2c1bf8148195360f6e28faeb8b560d813af6c268",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "finite-static-inputs-restored"
+      ],
+      "id": "finite-final-interface-controls",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/finite/weighted-final-join-controls01/RESULT.json"
+      ],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Full source/capture and mathematical interface readback; native arithmetic is not repeated"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/extended-v17/reproduction/tools/source_cache_pack.py",
+        "restore",
+        "--archive",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/extended-v17/reproduction/assets/n5-static-cache02/static-sources.tar.gz",
+        "--sha256",
+        "816209cd4d81861c7909f7a3145771da5d14107ba14b17922aad5fb7135f387f",
+        "--manifest-sha256",
+        "c6d35d6b04b1a3cc659d287944330cb4850a432ef5938e02a8b2176f5f96ec5d",
+        "--workspace",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace"
+      ],
+      "component": "n5",
+      "component_map_sha256": "2c8571287950d98c023591465c87a4e4f36bd82b10154fa32119af0f1fef4db4",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/extended-v17/reproduction",
+      "dependencies": [],
+      "id": "n5.restore_n5_static_cache",
+      "outputs": [],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "16619 parent inputs and110 separate join-only inputs; no arithmetic"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/coordinator/prepare_portable_n5_v3.py"
+      ],
+      "component": "n5",
+      "component_map_sha256": "2c8571287950d98c023591465c87a4e4f36bd82b10154fa32119af0f1fef4db4",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "n5.restore_n5_static_cache"
+      ],
+      "id": "n5.prepare_n5_v3",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/coordinator/n5-source-epoch05/STATIC_CACHE_PREPARATION.json"
+      ],
+      "required_fields": {
+        "arithmetic_executed": false,
+        "cache_checked_by_original_reader": true,
+        "source_cache_files": 16619
+      },
+      "scheduling_only_dependencies": [],
+      "scope": "Complete C5 command at its stated modular scope"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/coordinator/run_n5_parents_v3.py",
+        "run",
+        "--output",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/coordinator/n5-parents-v3-full01",
+        "--workers",
+        "2"
+      ],
+      "component": "n5",
+      "component_map_sha256": "2c8571287950d98c023591465c87a4e4f36bd82b10154fa32119af0f1fef4db4",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "n5.prepare_n5_v3"
+      ],
+      "id": "n5.all31_n5_v3_parents",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/coordinator/n5-parents-v3-full01/RESULT.json"
+      ],
+      "required_fields": {
+        "all_selected_arithmetic_verified": true,
+        "full_n5_verified": false,
+        "required_jobs": 31
+      },
+      "scheduling_only_dependencies": [],
+      "scope": "Complete C5 command at its stated modular scope"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/coordinator/activate_n5_join_inputs_v3.py"
+      ],
+      "component": "n5",
+      "component_map_sha256": "2c8571287950d98c023591465c87a4e4f36bd82b10154fa32119af0f1fef4db4",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "n5.all31_n5_v3_parents"
+      ],
+      "id": "n5.activate_n5_v3_join_inputs",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/coordinator/n5-source-epoch05/SEMANTIC_SOURCE_ADDITION.json"
+      ],
+      "required_fields": {
+        "additional_static_inputs": 110,
+        "arithmetic_executed": false
+      },
+      "scheduling_only_dependencies": [],
+      "scope": "Complete C5 command at its stated modular scope"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/coordinator/run_gapfree5.py"
+      ],
+      "component": "n5",
+      "component_map_sha256": "2c8571287950d98c023591465c87a4e4f36bd82b10154fa32119af0f1fef4db4",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "n5.restore_n5_static_cache"
+      ],
+      "id": "n5.fresh_n5_corner",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/coordinator/gapfree5-01/RESULT.json"
+      ],
+      "required_fields": {
+        "status": "PASS_FRESH_PORTABLE_POSITIVE_CLOSED_N5_CORNER"
+      },
+      "scheduling_only_dependencies": [],
+      "scope": "Complete C5 command at its stated modular scope"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/coordinator/check_n5_high_support.py"
+      ],
+      "component": "n5",
+      "component_map_sha256": "2c8571287950d98c023591465c87a4e4f36bd82b10154fa32119af0f1fef4db4",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "n5.restore_n5_static_cache"
+      ],
+      "id": "n5.fresh_n5_tight_support",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/coordinator/n5-high-support01/RESULT.json"
+      ],
+      "required_fields": {
+        "status": "PASS_EXACT_N5_HIGH_SUPPORT_ROWS"
+      },
+      "scheduling_only_dependencies": [],
+      "scope": "Complete C5 command at its stated modular scope"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/coordinator/compose_n5_fresh_v3.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/coordinator/n5-fresh-v3-assembly"
+      ],
+      "component": "n5",
+      "component_map_sha256": "2c8571287950d98c023591465c87a4e4f36bd82b10154fa32119af0f1fef4db4",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "n5.activate_n5_v3_join_inputs",
+        "public-count1243",
+        "n5.fresh_n5_corner",
+        "n5.fresh_n5_tight_support"
+      ],
+      "id": "n5.whole_n5_fresh_v3_assembly",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension_20261030/coordinator/n5-fresh-v3-assembly/RESULT.json"
+      ],
+      "required_fields": {
+        "conditional_finite_assembly_verified": true,
+        "full_n5_verified": false
+      },
+      "scheduling_only_dependencies": [],
+      "scope": "Complete C5 command at its stated modular scope"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/run_local42.py",
+        "--output",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension-reproduction/bridge/local42_native",
+        "--seconds",
+        "64800",
+        "--task-seconds",
+        "14400"
+      ],
+      "component": "bridge",
+      "component_map_sha256": "8d918fce27db9bdf4f109af78988f92b4512d9301a60c44f7239c5e43fb2a91f",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [],
+      "id": "bridge.local42_native",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension-reproduction/bridge/local42_native/RESULT.json"
+      ],
+      "required_fields": {
+        "status": "FRESH_171_NUMERICAL_PREDICATES_PASS"
+      },
+      "scheduling_only_dependencies": [],
+      "scope": "Complete bridge arithmetic and/or original interface reader"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/collect_local42.py",
+        "--campaign",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension-reproduction/bridge/local42_native",
+        "--output",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension-reproduction/bridge/local42_collector"
+      ],
+      "component": "bridge",
+      "component_map_sha256": "8d918fce27db9bdf4f109af78988f92b4512d9301a60c44f7239c5e43fb2a91f",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "bridge.local42_native"
+      ],
+      "id": "bridge.local42_collect",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension-reproduction/bridge/local42_collector/RESULT.json"
+      ],
+      "required_fields": {
+        "status": "FRESH_FINITE_LOCAL42_NUMERICAL_CLOSURE_PASS"
+      },
+      "scheduling_only_dependencies": [],
+      "scope": "Complete bridge arithmetic and/or original interface reader"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/run_tail_local.py",
+        "--output",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension-reproduction/bridge/uniform47_native",
+        "--seconds",
+        "64800"
+      ],
+      "component": "bridge",
+      "component_map_sha256": "8d918fce27db9bdf4f109af78988f92b4512d9301a60c44f7239c5e43fb2a91f",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [],
+      "id": "bridge.uniform47_native_and_collect",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension-reproduction/bridge/uniform47_native/RESULT.json"
+      ],
+      "required_fields": {
+        "status": "FRESH_ORIGINAL_14_PLUS_41_NUMERICAL_PASS"
+      },
+      "scheduling_only_dependencies": [],
+      "scope": "Complete bridge arithmetic and/or original interface reader"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/run_4042.py",
+        "--output",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension-reproduction/bridge/floor40_native",
+        "--seconds",
+        "64800"
+      ],
+      "component": "bridge",
+      "component_map_sha256": "8d918fce27db9bdf4f109af78988f92b4512d9301a60c44f7239c5e43fb2a91f",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [],
+      "id": "bridge.floor40_native",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension-reproduction/bridge/floor40_native/RESULT.json"
+      ],
+      "required_fields": {
+        "status": "FRESH_FOUR_NATIVE_BRANCHES_PASS"
+      },
+      "scheduling_only_dependencies": [],
+      "scope": "Complete bridge arithmetic and/or original interface reader"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/extension_20261030/bridge/collect_4042.py",
+        "--campaign",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension-reproduction/bridge/floor40_native",
+        "--output",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension-reproduction/bridge/floor40_collector"
+      ],
+      "component": "bridge",
+      "component_map_sha256": "8d918fce27db9bdf4f109af78988f92b4512d9301a60c44f7239c5e43fb2a91f",
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "bridge.floor40_native"
+      ],
+      "id": "bridge.floor40_collect",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension-reproduction/bridge/floor40_collector/RESULT.json"
+      ],
+      "required_fields": {
+        "status": "FRESH_4042_NUMERICAL_BRANCHES_AND_ACTUAL_INPUT_JOINS"
+      },
+      "scheduling_only_dependencies": [],
+      "scope": "Complete bridge arithmetic and/or original interface reader"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/manuscript_revision_20261029/mathematics/fixed-target-v8/2026-10-28/isolated_entry_replay.py",
+        "--output-dir",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension-reproduction/compact-entry"
+      ],
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [],
+      "id": "compact-entry",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension-reproduction/compact-entry/summary.json"
+      ],
+      "required_fields": {
+        "status": "PASS_ISOLATED_REPRODUCTION_FIXED_ENTRY_V7"
+      },
+      "scheduling_only_dependencies": []
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/manuscript_revision_20261029/manuscript/compact-v16/tools/check_entry_claims.py",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/manuscript_revision_20261029/mathematics/fixed-target-v7/2026-10-27/entry-proof.json"
+      ],
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [
+        "compact-entry"
+      ],
+      "id": "compact-entry-claims",
+      "outputs": [],
+      "required_fields": {},
+      "scheduling_only_dependencies": [],
+      "scope": "Sharper manuscript constants, supplementing whole entry replay"
+    },
+    {
+      "argv": [
+        "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/work/manuscript_revision_20261029/manuscript/compact-v16/tools/check_revision_constants.py",
+        "--output-dir",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension-reproduction/compact-scalars"
+      ],
+      "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace",
+      "dependencies": [],
+      "id": "compact-revision-scalars",
+      "outputs": [
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace/runs/extension-reproduction/compact-scalars/receipt.json"
+      ],
+      "required_fields": {
+        "status": "PASS_REVISION_SCALAR_CHECKS"
+      },
+      "scheduling_only_dependencies": []
+    }
+  ],
+  "outputs_are_not_acceptance_without_native_readers": true,
+  "requested_ids": null,
+  "schema": "BE_REPRODUCTION_COMMAND_REQUEST_V1",
+  "selected_order": [
+    "foundation-static-inputs-restored",
+    "finite-static-inputs-restored",
+    "public-count-inputs",
+    "public-count1243",
+    "foundations.n1",
+    "foundations.n2-scalars",
+    "foundations.n2-primary",
+    "foundations.n2-independent",
+    "foundations.n3-scalars",
+    "foundations.n3-identities",
+    "foundations.n3-full",
+    "foundations.root4",
+    "foundations.support-low",
+    "foundations.support-BC",
+    "foundations.initial-B2",
+    "foundations.initial-remaining",
+    "foundations.owncaps",
+    "foundations.support-high",
+    "foundations.remaining-fourier69",
+    "foundations.remaining-n6",
+    "foundations.resources79",
+    "foundations.core1014",
+    "foundations.fourier1014",
+    "foundations.same-law69",
+    "foundations.same-law1014",
+    "scalar-kappa-prepare",
+    "scalar-kappa",
+    "foundations.acquisition614",
+    "foundations.outer-initial-premises",
+    "foundations.initial-beta-constants",
+    "foundations.initial-beta-source-bind",
+    "foundations.initial-beta-fresh-bind",
+    "finite1519-support",
+    "finite1519-high",
+    "finite1519-fourier",
+    "finite1920-feedback",
+    "finite2024-auxiliary",
+    "finite2024-fourier",
+    "finite-radius3",
+    "finite2630-B1-Fourier",
+    "finite1519-core",
+    "finite25-parents",
+    "finite-shared-high25-39",
+    "finite-low26-30-support",
+    "finite-support32-34",
+    "finite-support35",
+    "finite-low31",
+    "finite-initial35-39",
+    "finite-resource35-39",
+    "finite-floor31-support",
+    "finite20-source-audit",
+    "finite20-direct",
+    "finite20-coarse-source-preparation",
+    "finite20-coarse4",
+    "finite20-count49",
+    "finite20-coarse-readback",
+    "finite-n25-counts",
+    "finite-2124-counts",
+    "finite-2124-acquisitions",
+    "finite1519-count-admission",
+    "finite2639-count-admission",
+    "finite-support1519-readback",
+    "finite-high1519-readback",
+    "finite-supported1519-readback",
+    "finite-highrho1519-readback",
+    "finite-feedback1920-readback",
+    "finite-auxiliary2024-readback",
+    "finite-supported2024-readback",
+    "finite-universal2024-readback",
+    "finite-high2539-readback",
+    "finite1519-join-15-b0",
+    "finite1519-join-15-bn",
+    "finite1519-join-16-b0",
+    "finite1519-join-16-bn",
+    "finite1519-join-17-b0",
+    "finite1519-join-17-bn",
+    "finite1519-join-18-b0",
+    "finite1519-join-18-bn",
+    "finite1519-join-19-b0",
+    "finite1519-join-19-bn",
+    "finite20-join-B0",
+    "finite20-join-BN",
+    "finite2124-join-21-B0",
+    "finite2124-join-21-BN",
+    "finite2124-join-22-B0",
+    "finite2124-join-22-BN",
+    "finite2124-join-23-B0",
+    "finite2124-join-23-BN",
+    "finite2124-join-24-B0",
+    "finite2124-join-24-BN",
+    "finite25-join-b0",
+    "finite25-join-b1",
+    "finite2630-B0-join",
+    "finite2630-B1-join",
+    "finite3134-join",
+    "positive39-native",
+    "positive39-readback",
+    "finite3539-join",
+    "finite-final-interface-controls",
+    "n5.restore_n5_static_cache",
+    "n5.prepare_n5_v3",
+    "n5.all31_n5_v3_parents",
+    "n5.activate_n5_v3_join_inputs",
+    "n5.fresh_n5_corner",
+    "n5.fresh_n5_tight_support",
+    "n5.whole_n5_fresh_v3_assembly",
+    "bridge.local42_native",
+    "bridge.local42_collect",
+    "bridge.uniform47_native_and_collect",
+    "bridge.floor40_native",
+    "bridge.floor40_collect",
+    "compact-entry",
+    "compact-entry-claims",
+    "compact-revision-scalars"
+  ],
+  "selected_python_sha256": "50a1e90abbf1d2d2d072682189efc9937f14b93f0cf71370dbe6f8c58e835e3b",
+  "substitutions": {
+    "count_archive": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/unconditional_legacy_20261030/.be/downloads/count-candidates.zip",
+    "python": "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+    "release": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/extended-v17/reproduction",
+    "workspace": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/extension_20261104/coordinator/framework-restore03/workspace"
+  }
+}

@@ -1,0 +1,388 @@
+% Reader-facing integration draft.  Its finite arithmetic propositions must
+% be joined to fresh complete numerical checks and the source correspondence
+% before they can be asserted as verified results in the released manuscript.
+% The original complete analytic bodies are preserved in analytic_sources/.
+\section{Why the intermediate indices reduce to finite local comparisons}
+\label{ext:local-engine}
+
+The argument has two distinct parts. First, contact at an extremizer
+forces its marginal into a finite list of neighborhoods of two-point
+laws. Second, a direct comparison of the actual iid sum with its own
+binomial count excludes every neighborhood. The first part uses
+extremality; the second part uses only the explicit support and moment
+bounds already acquired for that same marginal. This order is essential.
+
+The two index ranges use the same analytic argument. The finite range
+$42\le n\le48$ permits a stronger Gaussian support estimate and has
+92 surviving probability intervals. The uniform range $n\ge47$ uses a
+different support estimate and has 83 surviving intervals. An interval
+table supplies simultaneous bounds on one law. Its coordinates are not
+independently selected laws, and it is not an assertion that every
+point of a rectangular relaxation is realizable. The complete hypotheses
+for the two applications are as follows, with
+$d_n=n(C_{n-1}-C_n)_+$:
+\[
+\begin{array}{c|c|c|c|c}
+ \text{index range}&n(C_n-\CE)&d_n&C_n&C_{n-1},C_{n-2}\\\hline
+ 42\le n\le48&(0,.54]&\le.19&<.4226&<.4253\\
+ n\ge47&(0,.7]&\le.19&<.4247&<.4253.
+\end{array}
+\]
+Every support and acquisition claim in this section is applied under
+the corresponding full row of hypotheses.
+
+\subsection{Contact first gives bounded support}
+
+Let $C=C_n>\CE$ and choose the standardized attained positive ratio
+maximizer from Corollary~\ref{ext:ratio-attainment}. Write
+$\rho=\E|X|^3$, $\beta=\E[X|X|]$, and let $H$ be its raw sum
+threshold. Set $d_n=n(C_{n-1}-C_n)_+$ and
+$s_n=\sqrt{n/(n-1)}$. The contact inequality and the predecessor bound
+give, at every support point $t$,
+\begin{equation}\label{ext:contact-support}
+ 0\le \mathcal H_n(H,t)+C\left\{-|t|^3+
+       \frac32\rho t^2+3\beta t+\rho e_n\right\}
+       +\rho s_n d_n,
+ \qquad e_n=n(s_n-1)-\frac12,
+\end{equation}
+where
+\[
+ \mathcal H_n(H,t)=n^{3/2}
+ \left\{\Phi\left(\frac{H-t}{\sqrt{n-1}}\right)
+              -\Phi\left(\frac H{\sqrt n}\right)\right\}
+ +nt\phi\left(\frac H{\sqrt n}\right)
+ +\frac H2(t^2-1)\phi\left(\frac H{\sqrt n}\right).
+\]
+This estimate requires only a finite third moment. In particular, it
+can exclude a tiny exterior atom before any fourth or higher moment
+is used.
+
+Here is the finite calculation underlying the support check. Put
+$v=n-1$, $u=|t|$, $z=H/\sqrt v$, and
+\[
+ A=\frac{u^3-3u}{6},\quad
+ B=\frac{u^4-6u^2+3}{24\sqrt v},\quad
+ D_5=\frac{u^5-15u}{120v}.
+\]
+Taylor's theorem in the argument and the variance of the Gaussian CDF
+gives
+\[
+ s_n^{-3}\mathcal H_n(H,\pm u)
+ =\pm A(1-z^2)\phi(z)+B\phi'''(z)
+       \mp D_5\phi^{(4)}(z)+R_5,
+\]
+\[
+ |R_5|\le \frac{51u^6}{14400v^{3/2}}
+       +\frac{51(3u^2-2)}{960v^{3/2}}+\frac{u}{8v^2}.
+\]
+Here $u\ge3.84$, the range needed for the exterior-support test, so in
+particular $3u^2-2>0$. The displayed remainder follows from the
+more general expansion for $u>\sqrt3$ and is uniform over all real
+thresholds. Gaussian Fourier
+inversion proves the derivative bounds used here. For $|z|\le1$ use
+$\phi^{(4)}(z)\ge\phi(0)(3-15z^2/2)$ and complete a square; on
+$|z|\ge1$ use the uniform derivative bounds. The resulting polynomial
+inequalities in $u$ are checked on adjacent closed intervals from
+$3.84$ to $4.5$. The exterior rays use the cubic bound
+$|\mathcal H_n(H,t)|\le u^3/15+u/5+1/2$ and its derivative signs.
+Under the corresponding local hypotheses stated above, the accepted
+polynomial signs exclude all support with $|t|\ge3.84$.
+
+For a finite index band $N\le n\le L$, the favorable term
+$-3D_5$ is evaluated at $L$, and the adverse terms at $N$.
+For an infinite band its lower bound is zero. Thus finite support
+estimates must keep their upper endpoint. The finite campaign uses
+$(N,L)=(42,48)$. The uniform campaign covers
+\[
+ [45,49],\ [50,59],\ [60,89],\ [90,134],\ [135,199],\ [200,\infty),
+\]
+using only indices at least 47. These bands have no uncovered integer.
+The full support polynomials and their derivation are retained in the
+support supplement; no asymptotic remainder is used.
+
+\subsection{A single nonnegative resource controls distance from two points}
+
+Now all moments exist. For the closed support gaps $g=(a,b)$ put
+$\tau_g=\E[X\mathbf1_{X\ge t}]$, constant for $a<t<b$, and define
+\[
+ J=\sum_g\tau_g(b-a)^2,\qquad
+ D=(3+\sqrt{10})\rho-\E X^3-3J.
+\]
+Let $\nu$ be the law of $H-S_{n-1}$ and
+\[
+ L=\sum_{g=(a,b)}\tau_g\int_{[a,b)}(t-a)\,\nu(dt)\ge0.
+\]
+The half-open convention fixes the contribution of every atom. Contact
+and compensated inversion of the smooth function $(x-z)|x-z|$ give
+the exact identity
+\begin{equation}\label{ext:resource-identity}
+ n(C-\CE)\rho+n\CE\rho(1-e^{-w})
+       +\frac{n\phi(0)e^{-w}}6D+n^{3/2}L=\mathcal R,
+ \qquad w=H^2/(2n).
+\end{equation}
+For completeness, the right side is the following explicit expression.
+Set $\gamma=\E X^3$, $M_j=\E|X|^j$ and
+$\varphi=\phi(H/\sqrt n)$, and define
+\[
+ J_1=\sum_{g=(a,b)}\tau_g\int_a^b(t-a)t\,dt,\qquad
+ J_2=\sum_{g=(a,b)}\tau_g\int_a^b(t-a)t|t|\,dt,
+\]
+\[
+ K_1=\E[X|X|^3]-3\beta-\tfrac32\rho\gamma,\qquad
+ K_q=M_5/4-\rho M_4/2-\tfrac32\beta\gamma+\rho/2,
+ \qquad U=J_1+(M_4-3)/6.
+\]
+Then
+\begin{align}\label{ext:resource-remainder}
+ \mathcal R={}&C\{3\beta J/2+3\rho J_1-3J_2-K_q\}
+      +H(CK_1+\varphi U)\notag\\
+ &-H^2(C\rho+\gamma\varphi/2)+E_n.
+\end{align}
+If $f(t)=\E e^{itX}$ and
+$V_n(t)=f(t)^n-e^{-nt^2/2}(1-in\gamma t^3/6)$, the exact error is
+\[
+ E_n=\frac{2\sqrt n}{\pi}\int_0^\infty
+             \frac{\Im(e^{-itH}V_n(t))}{t^3}\,dt.
+\]
+The integral is absolutely convergent. A complete Fourier estimate
+gives a coherent bound $|E_n|\le K_F+s_F|H|$; a constant and a slope
+from unrelated estimates may not be combined. The low-frequency part retains the signed
+quartic/fifth-order cancellation. The high-frequency part includes the
+whole half-line and uses an event under the product of the same
+marginal law. The detailed formulas appear in the Fourier supplement.
+There is no inversion of a discontinuous CDF and no hidden lattice
+midpoint convention.
+
+The key geometric inequality is elementary. If the central support
+gap is $(-A_0,B_0)$, let $p=\Pp(X>0)$, $q=1-p$,
+$m=\E X_+=\E X_-$, $V=\E[X\mid\mathbf1_{X>0}]$ and
+$\theta=\E(X-V)^2$. Then $m^2=(1-\theta)pq$. Put
+$\Delta_A=m/q-A_0$ and $\Delta_B=m/p-B_0$ and
+$p_*=(4-\sqrt{10})/2$. Direct conditional expansion gives
+\begin{align}\label{ext:joint-gap}
+ D\ge{}&\frac{(6+2\sqrt{10})(1-\theta)^{3/2}}{\sqrt{pq}}
+                      (p-p_*)^2\notag\\
+ &+6m\{(A_0+B_0)(\Delta_A+\Delta_B)+\Delta_A\Delta_B\}\notag\\
+ &+3(\sqrt{10}+1)B_0\theta_+
+       +3(\sqrt{10}+3)A_0\theta_-,
+\end{align}
+where $\theta_\pm=\E[(X-V)^2;\pm X>0]$.
+Every term is nonnegative. If zero belongs to the support, instead
+$D\ge(\sqrt{10}-1)\rho$. Consequently a sufficiently small bound on
+$D$ proves that the central gap exists, then simultaneously bounds the
+probability parameter, conditional noise and inward support displacement.
+
+A first raw bound $\mathcal R<r<.4n$ licenses removal of the Gaussian
+weight in \eqref{ext:resource-identity}. Indeed, before making that
+change, its rearrangement proves
+$\phi(H/\sqrt n)(\E X^3+3J)/6>0$. The resulting resource includes
+\[
+ n(C-\CE)\rho+\frac{997}{15000}nD+n^{3/2}L
+ \le\min\left\{T,\max_j(A_j+F_{j,\pm}|H|-Q_jH^2)\right\}.
+\]
+The four corner quadratics retain the common score/moment alternatives.
+The favorable Gaussian phase term is already charged in $Q_j$ and
+must not be charged again.
+
+Each acquisition step intersects previously established enclosures with
+one of these inequalities. A split preserves the union of the closed
+cells; an empty necessary interval excludes the cell. A support
+improvement is proved before its radius enters a later moment estimate.
+Induction over this finite schedule establishes all exported bounds.
+No convergence of an iteration or existence of a fixed point is needed.
+In particular, the weighted inequality $nD\le Nd_D$ is retained;
+the unweighted inequality $D\le d_D$ alone would not bound $n\theta$.
+
+\subsection{The comparison uses the actual binomial count}
+
+On each surviving row write
+\begin{gather*}
+ X=\ell(B+U-p),\qquad \Pp(B=1)=p,\qquad \E(U\mid B)=0,\\
+ v=p(1-p),\qquad s=\E U^2,\qquad\lambda=ns,
+ \qquad\ell=(v+s)^{-1/2}.
+\end{gather*}
+The conditional noises obey
+\[
+ |U_j|\le A,\qquad U_0\le a_0,\qquad U_1\ge-a_1,
+ \qquad d=a_0+a_1<\min(p,1-p).
+\]
+The row supplies these quantities and both signed threshold ranges.
+Choose the nearest binomial count so that
+$np+H/\ell=k+u$, $|u|\le1/2$, and put $\delta=k-np$.
+The acquired ranges ensure $1\le k\le n-1$.
+Let $\pi_j=\binom njp^j(1-p)^{n-j}$ and let $W_j$ be the sum of
+$j$ independent copies of $U_1$ and $n-j$ independent copies of $U_0$.
+Then the exact difference from the Bernoulli CDF is
+\begin{equation}\label{ext:local-count-identity}
+ Q=-\sum_{i=0}^k\pi_{k-i}\Pp(W_{k-i}>u+i)
+       +\sum_{i=1}^{n-k}\pi_{k+i}\Pp(W_{k+i}\le u-i).
+\end{equation}
+Notice the strict outgoing and closed incoming events. This is simply
+conditioning on the actual iid labels, so it holds at atom collisions.
+
+Put $\rho_B=(1-2v)/\sqrt v$ and
+\[
+ C_B^+=\frac{\sqrt n}{\rho_B}
+       \{\Pp(\operatorname{Bin}(n,p)\le k)-\Phi(\delta/\sqrt{nv})\},
+\]
+\[
+ f(u)=\frac{\Phi((\delta+u)/\sqrt{n(v+s)})
+                  -\Phi(\delta/\sqrt{n(v+s)})}{\pi_k}.
+\]
+Subtracting the two normalized scores yields
+\begin{equation}\label{ext:comparison-master}
+ \rho_B(C-C_B^+)=\sqrt n\pi_k\{Q/\pi_k-f(u)\}+\mathcal R_c,
+\end{equation}
+\[
+ \mathcal R_c=\sqrt n\{\Phi(\delta/\sqrt{nv})
+                   -\Phi(\delta/\sqrt{n(v+s)})\}+C(\rho_B-\rho).
+\]
+The count $k$ and $\delta$ are held fixed when differentiating $f$.
+This convention matters in the signed Gaussian refinement.
+
+\begin{lemma}[Two sufficient local tests]\label{ext:two-local-tests}
+Suppose $\sqrt n\pi_k\ge m>0$ and $\lambda>0$.
+The following are sufficient to prove
+$\rho_B(C-C_B^+)<-\varepsilon\lambda$.
+\begin{enumerate}
+\item Bounds $O,T,R_0,\kappa$ satisfy
+\[
+ \Pp(W_k>u)+f(u)\ge O,\quad
+ \sum_{i\ge1}\Pp(W_{k+i}\le u-i)\le T,\quad
+ \pi_{k+i}/\pi_k\le R_0,\quad
+ \mathcal R_c\le\kappa\lambda/n.
+\]
+If $D_c=O-R_0T>0$ and $mD_c-\kappa\lambda/n>
+\varepsilon\lambda$, the conclusion holds.
+\item Valid functions $B(\lambda)<0$, $I(\lambda)\ge0$ obey
+\[
+ \rho_B(C-C_B^+)\le\sqrt n\pi_k\lambda B(\lambda)
+                         +\lambda I(\lambda)/n.
+\]
+For $n\ge N$, it is sufficient that
+$mB(\lambda)+I(\lambda)/N<-\varepsilon$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+For the first test discard only outgoing terms with $i>0$ in
+\eqref{ext:local-count-identity}; the discarded terms are nonpositive.
+Use \eqref{ext:comparison-master}, then the positive lower mass bound.
+For the second test use $B<0$ before replacing $\sqrt n\pi_k$ by $m$,
+and $I\ge0$ before replacing $n$ by $N$.
+\end{proof}
+
+The nearest-count estimates use a quartic minorant of the strict event,
+Cantelli's inequality and a Poisson/Bennett upper-tail comparison.
+For vanishing noise the quartic is rescaled by the actual variance;
+its expression extends to zero noise. Thus the first interval is
+$(0,.05]$, with no missing positive lower cutoff.
+
+The whole-count estimate couples all conditional noises independently
+and defines $K=\max\{j:j+W_j\le k+u\}$. Since every increment of
+$j+W_j$ is at least $1-d>1/2$, this is a genuine random cutoff and
+the actual sum probability is $\E F_B(K)$. Binomial curvature,
+marked crossings and the nonzero fractional-part remainder give the
+second test. The bound on marked crossings uses one common deleted
+background law; it does not maximize two conditional probabilities
+using unrelated marginals. A positive harmonic gain is obtained from
+\[
+ 1-\cos(2\pi x)\le\frac{4553}{1000}x\quad(0\le x\le1)
+\]
+in the finite refinement, and its weaker constant $23/5$ in the uniform
+campaign. All resulting error bounds are proportional to $\lambda$.
+This is why the comparison remains valid for arbitrarily small defects.
+
+The joint inequality \eqref{ext:joint-gap} is also retained in the local
+comparison. In the finite refinement it gives a resource of the form
+$d/d_*+\lambda/\Lambda_*\le1$. On a noise interval
+$\lambda\ge L_0$, one may therefore use
+$d\le d_*(1-L_0/\Lambda_*)$. The two separate ceilings would lose
+the information needed near the lower end of the probability range.
+
+\subsection{The two complete acquisitions and their phase covers}
+
+The finite campaign starts with 100 closed probability cells. Refining
+the surviving cells gives the following partition, including all seams:
+\[
+\begin{array}{c|c}
+ {[0,.23],\ [.63,1]}&\text{initial exclusion}\\
+ {[.23,.27]}&4\text{ coarse exclusions}\\
+ {[.27,.29]}&10\text{ fine exclusions}\\
+ {[.29,.38]}&45\text{ left rows}\\
+ {[.38,.474]}&47\text{ central rows}\\
+ {[.474,.48]}&3\text{ central exclusions}\\
+ {[.48,.63]}&15\text{ upper exclusions}.
+\end{array}
+\]
+There are 184 closed cells altogether. Endpoint probabilities zero and
+one cannot occur for a centered variance-one law. The left support
+radius is first contracted to $3.025$ and then row by row. Contact
+proves the strip $(-.575,1.575)$ in Bernoulli coordinates before
+concentration supplies the conditional-noise amplitude. The ensuing
+feedback and four noise-dependent profiles use already acquired data.
+
+On the left, the local witnesses have the exact domain cover
+\[
+\begin{array}{c|c|c}
+ \lambda&\text{nearest-count test}&\text{whole-count test}\\
+ (0,.05]&\text{all }u&--\\
+ {[.05,.08]}&\text{all }u&--\\
+ {[.08,.10]}&|u|\ge.19&|u|\le.19\\
+ {[.10,.12]}&|u|\ge.27&|u|\le.27\\
+ {[.12,\Lambda]}&--&\text{all }u.
+\end{array}
+\]
+The central rows have complementary phase radii $.09,.14,.19,.29$
+on the successive bands $[.05,.06]$, $[.06,.08]$, $[.08,.10]$,
+$[.10,.12]$; beyond $.12$ the whole-count test covers all phases.
+Every interval is intersected with the row's actual $\Lambda$, and
+both signs of $H$ are present. The amplitude profiles on
+$[.05,.08]$, $[.08,.10]$, $[.10,.12]$, $[.12,\Lambda]$ are
+$.40,.35,.30,.275$ on the left and $.375,.325,.275,.25$ centrally,
+each intersected with the previously proved global amplitude.
+
+The uniform campaign starts with radius $3.84$ and 13 signed resource
+passes. Central and complementary acquisition are followed by support
+contraction and concentration; the central antichain step consumes the
+original central data, then intersects the first improved table. This
+prevents a circular use of its own output. A signed resource step
+excludes one left probability interval. The final cover has 38 left
+rows on $[.304,.38]$ and 45 central rows on $[.38,.47]$.
+All complementary probabilities have already been excluded.
+The initialization stores a floor $N=47$ and an old upper-index field
+$98$. The latter is used only to check that the stored band is ordered
+and in the lower-score expression $.4095+K/98$, with $K=0$ here.
+It therefore imposes no upper bound on the actual index. The analytic
+licenses still matter: the all-threshold support cover ends in an
+infinite band, the bounded-threshold series controls the entire interval
+$0\le1/n\le1/47$, the Fourier bounds have explicit monotonicity gates,
+and the local tests retain the signs needed before replacing $n$ by 47.
+Together these facts, rather than the name of a table, establish the
+uniform index scope.
+
+Its nearest-count comparison covers $(0,.05]$ completely. The central
+MID phase radii on the next four bands are $.09,.13,.18,.29$; the left
+radii are $.09,.14,.19,.29$. On the final left band the positive
+phases $[.29,.5]$ use a further whole-count test. The central,
+phase-resolved left and extra positive-left whole-count objects cover
+the complementary phases and every phase above $.12$. All seams are
+closed. These uniform constants are not substituted into the finite
+campaign, or conversely.
+
+The specified target for both campaigns is the strict local inequality
+with $\varepsilon=.001$ on every remaining positive-noise cell.
+Each calculation is a finite
+collection of rational inequalities, with radicals and transcendental
+terms replaced by proved outward rational enclosures. The checkers
+test all required signs before division or multiplication, all rectangle
+corners, and complete probability/noise/phase coverage.
+
+At $\lambda=0$, conditional centering implies $U=0$ almost surely.
+The marginal is Bernoulli and the all-probability finite-$n$ Bernoulli
+theorem gives $C\le\CE$. For $\lambda>0$ the same theorem gives
+$C_B^+\le\CE$, while Lemma~\ref{ext:two-local-tests} gives
+$C<C_B^+$. Thus each acquired neighborhood contradicts $C>\CE$.
+This completes the mathematical reduction of the two local exclusions
+to their specified finite arithmetic predicates and the Bernoulli
+theorem. The executable correspondence must retain those precise
+predicates and scopes.

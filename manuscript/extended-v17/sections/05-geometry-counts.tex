@@ -1,0 +1,314 @@
+\section{The two-point skeleton and its moment defect}
+\label{ms:geometry-counts}
+
+Every centered law can be separated into its positive and nonpositive
+parts. Replacing each part by its conditional mean gives a two-point law;
+the remaining conditional fluctuations measure its departure from that
+law. We first make this decomposition exact, then identify a moment
+defect that vanishes at Esseen's extremal distribution.
+
+\subsection{The sign split and its units}
+
+Fix $P\in\mathcal P$ and put
+\[
+ p=\Pp(X>0),\quad q=1-p,\quad v=pq,\quad
+ m=\E X_+=\E X_->0,\quad B_0=\mathbf1_{\{X>0\}}.
+\]
+Both $p,q$ are positive; a possible atom at zero is assigned to the
+nonpositive class. Define $V=\E[X\mid B_0]$ and $W=X-V$, so that
+\[
+ V=-m/q\quad(B_0=0),\qquad V=m/p\quad(B_0=1),\qquad
+ \theta=\E W^2=1-m^2/v<1.
+\]
+Write $\theta_-=\E[W^2;B_0=0]$ and $\theta_+=\E[W^2;B_0=1]$.
+The distance between the two conditional means is
+\[
+ \ell=m/v=\sqrt{(1-\theta)/v}>0.
+\]
+Set $U=W/\ell$, $Y=B_0+U$, and $s=\E U^2$. Then
+\begin{subequations}\label{ms:bernoulli-coordinates}
+\begin{align}
+ X&=\ell(Y-p)=\frac{B_0+U-p}{\sqrt{pq+s}},\qquad
+ \E[U\mid B_0]=0,\label{revision:canonical-decomposition}\\
+ 1&=pq\ell^2+\theta,\qquad s=\theta/\ell^2,\qquad
+ v+s=\ell^{-2}.\label{short:acq:normalization}
+\end{align}
+\end{subequations}
+Let $U_0,U_1$ have the two conditional laws, and put
+\[
+ w_i=\E U_i^2,\quad \mu_i=\E U_i^3,\quad
+ s=qw_0+pw_1=\frac{v\theta}{1-\theta},\quad
+ \lambda=ns.
+\]
+The moments $\mu_i$ are finite because $\rho<\infty$. Higher moments
+will be used only after bounded support is known: for extremizers this
+follows from Proposition~\ref{v9:core:attainment}, and for the local
+comparison it is an explicit hypothesis.
+
+If $s=0$, both nonnegative conditional variances vanish, so $U_0=U_1=0$
+almost surely. This is exactly the standardized Bernoulli law. If $s>0$,
+the parameter $\alpha=pw_1/s$ lies in $[0,1]$ and gives
+$w_0=s(1-\alpha)/q$, $w_1=s\alpha/p$.
+
+The signs of $X$ are still those defining the two classes, so expansion
+of the actual conditional moments gives
+\begin{align}
+ \rho/\ell^3&=v(1-2v)+3v(w_0+w_1)-q\mu_0+p\mu_1,\notag\\
+ \gamma/\ell^3&=v(q-p)+3v(w_1-w_0)+q\mu_0+p\mu_1,\notag\\
+ \beta/\ell^2&=v(q-p)+pw_1-qw_0.
+\label{ms:conditional-moments}
+\end{align}
+For example, on the nonpositive class $|X|^3=\ell^3(p-U_0)^3$;
+on the positive class it is $\ell^3(q+U_1)^3$. Conditional centering removes
+the linear terms and gives the first identity; the other two follow in
+the same way. The three identities share the same pair $(\mu_0,\mu_1)$.
+
+\subsection{A nonnegative moment defect}
+
+The constant $3+\sqrt{10}$ has a simple geometric explanation. The
+signed third moment and the first absolute moment satisfy a circle
+inequality; the lengths of the support gaps are controlled by the same
+first absolute moment. Neither fact requires bounded support.
+
+Define
+\[
+ \tau(t)=\E[X\mathbf1_{\{X\ge t\}}],\qquad \sigma=\sqrt{10}.
+\]
+For $t<0$, centering gives $\tau(t)=-\E[X\mathbf1_{\{X<t\}}]\ge0$;
+for $t\ge0$ nonnegativity is immediate. Signwise Tonelli integration gives
+\begin{equation}
+ \int_\R\tau(t)\,dt=1,
+ \qquad 2\int_\R|t|\tau(t)\,dt=\rho.
+\label{ms:tau-moments}
+\end{equation}
+On each bounded complementary interval $(a,b)$ of the closed support,
+$\tau$ is constant in the interior, with value $\tau_{a,b}$. Put
+\begin{equation}
+ J=\sum_{(a,b)}\tau_{a,b}(b-a)^2,
+ \qquad D=(3+\sigma)\rho-\gamma-3J.
+\label{ms:physical-defect-definition}
+\end{equation}
+There are at most countably many gaps; the next proof shows that the
+nonnegative sum is finite. Endpoint atoms do not affect its integrals.
+
+\begin{lemma}[A moment circle and the gap inequality]
+\label{ms:physical-defect}
+\label{ms:fourier:afcore:lem:physical-defect}
+For every $P\in\mathcal P$,
+\begin{equation}
+ \gamma^2+(2m)^2\le\rho^2,\qquad J\le\rho+2m,
+ \qquad \gamma+tJ\le\bigl(t+\sqrt{1+t^2}\bigr)\rho\quad(t>0).
+ \label{ms:gap-family}
+\end{equation}
+The last constant is sharp. Equality holds exactly at the standardized
+Bernoulli law with positive mass $p_t=(1+t-\sqrt{1+t^2})/2$.
+In particular, $D\ge0$. If zero belongs to the support, then
+$D\ge(\sigma-1)\rho$; hence $D<(\sigma-1)\rho$ implies a central
+support gap $(-A_-,A_+)$ with $A_-,A_+>0$.
+\end{lemma}
+\begin{proof}
+Write $a_\pm=\E X_\pm^2$ and $b_\pm=\E X_\pm^3$, so
+$a_++a_-=1$, $b_++b_-=\rho$ and $b_+-b_-=\gamma$.
+Cauchy--Schwarz on each sign class gives
+$a_\pm^2\le mb_\pm$. It also gives
+$m^2\le pa_+$ and $m^2\le qa_-$, where an atom at zero is included
+in $q$. Thus
+$m^2(1/a_++1/a_-)\le1$, or $m^2\le a_+a_-$.
+Consequently $b_+b_-\ge(a_+a_-)^2/m^2\ge m^2$, proving the
+circle inequality since $\rho^2-\gamma^2=4b_+b_-$.
+
+Every gap on one side of zero satisfies
+$(b-a)^2\le2\int_a^b|x|\,dx$.
+If a central gap $(-A_-,A_+)$ exists, its weight is $m$ and its excess
+over this integral is $2mA_-A_+$. Moreover
+$0\le\E[(X+A_-)(X-A_+)]=1-A_-A_+$.
+Summing the gap bounds by Tonelli proves $J\le\rho+2m$.
+If zero is in the support there is no central gap, so $J\le\rho$.
+Finally Cauchy--Schwarz in $\mathbb R^2$ gives
+$\gamma+2tm\le\sqrt{1+t^2}\rho$, proving the family and the
+assertions about $D$.
+
+Equality in the circle forces equality in the two signwise Cauchy
+bounds: the positive and negative parts are each concentrated at one
+nonzero value. Equality in $m^2\le a_+a_-$ excludes mass at zero.
+For such a law, with positive mass $p$ and $q=1-p$, one has
+$J=\rho+2m$. Equality in the last Cauchy bound requires
+$\gamma=2m/t$, equivalently $t(1-2p)=2p(1-p)$.
+Its unique solution in $(0,1)$ is the stated $p_t$.
+\end{proof}
+
+\begin{corollary}[The zero-defect law]\label{ms:zero-defect}
+For $P\in\mathcal P$, $D=0$ if and only if
+\[
+ X=(B_0-p_*)/\sqrt{p_*q_*},\qquad
+ p_*=(4-\sqrt{10})/2,\quad q_*=1-p_*,
+ \quad B_0\sim\operatorname{Bernoulli}(p_*).
+\]
+\end{corollary}
+\begin{proof}
+Apply the equality case of Lemma~\ref{ms:physical-defect} with $t=3$.
+\end{proof}
+
+\begin{corollary}[The lattice consequence]\label{opus:lattice-gap}
+Let $P\in\mathcal P$ be a lattice law with maximal span $h>0$. Then
+\[
+ J\ge h,\qquad |\gamma|+3h\le(3+\sqrt{10})\rho.
+\]
+Equality in the second inequality holds exactly for the law of
+Corollary~\ref{ms:zero-defect} and its reflection. If successive support
+points are all separated by $h$, then $J=h$.
+\end{corollary}
+\begin{proof}
+The support is a closed subset of a translate of $h\mathbb Z$, so its
+points have Lebesgue measure zero and every bounded gap has length
+$k_gh$ for an integer $k_g\ge1$. The density $\tau$ vanishes outside
+the convex hull of the support. Hence, by nonnegative integration,
+\[
+ \sum_g\tau_gk_gh=\int_\R\tau(t)\,dt=1,
+ \qquad J=\sum_g\tau_gk_g^2h^2\ge h.
+\]
+These identities also hold for unbounded support: the gaps are
+countable and their contributions increase to the full integral.
+If all $k_g=1$, the inequality is an equality. Under reflection the
+zero-bias density becomes $\tau(-t)$ almost everywhere. Thus reflection
+preserves $\rho$, $J$ and $h$, and changes the sign of $\gamma$. Apply
+Lemma~\ref{ms:physical-defect} to the orientation with nonnegative
+third moment. Equality forces $D=0$, and the equality law has
+$J=h$, so Corollary~\ref{ms:zero-defect} proves both directions.
+\end{proof}
+For a lattice law, $J$ is therefore a weighted average of support-gap
+lengths, with weights $\tau_g|g|$ summing to one. The same functional
+is defined for arbitrary support, which is why it can replace the
+lattice span in the defect inequality.
+
+In particular the defect separates two losses:
+\[
+ D=\underbrace{\sigma\rho-\gamma-6m}_{\text{moment loss}}
+       +3\underbrace{(\rho+2m-J)}_{\text{gap loss}},
+\]
+each nonnegative. The point $(\gamma/\rho,2m/\rho)$ lies in the upper
+unit disk. The line $x+3y=\sqrt{10}$ supports that disk at
+$(1/\sqrt{10},3/\sqrt{10})$, explaining the coefficient in the moment
+loss. For a standardized Bernoulli law with positive mass $p$, direct
+calculation gives
+\begin{align}
+ J&=\frac1{\sqrt{pq}},&
+ \rho_B(p)&=\frac{1-2pq}{\sqrt{pq}},\notag\\
+ \gamma_B(p)&=\frac{q-p}{\sqrt{pq}},&
+ D_B(p)&=\frac{(6+2\sigma)(p-p_*)^2}{\sqrt{pq}}.
+ \label{ms:bernoulli-defect}
+\end{align}
+Indeed its zero-bias density is $\sqrt{pq}$ on the interval between its
+two support points. The probability displacement therefore has a
+quadratic cost. The equality proof above is what rules out other laws
+with zero defect.
+
+For quantitative estimates we need more information than their signs.
+Suppose a central gap $(-A_-,A_+)$ has been established,
+and write
+\[
+ T_+=\E X_+^3-mA_+^2,\quad T_-=\E X_-^3-mA_-^2,\qquad
+ R_+=\E X_+^2-mA_+,\quad R_-=\E X_-^2-mA_-.
+\]
+These four quantities are nonnegative. For the outer gaps put
+$J_o=J-m(A_-+A_+)^2$. A positive outer gap satisfies
+$(b-a)^2\le2\int_a^b(t-A_+)\,dt$, so Tonelli gives
+\[
+ J_o^+\le2\int_{A_+}^\infty(t-A_+)\tau(t)\,dt
+       =\E[X_+(X_+-A_+)^2]=T_+-2A_+R_+\le T_+.
+\]
+Similarly $J_o^-\le T_--2A_-R_-\le T_-$.
+Expanding $D$, using $\sqrt{\sigma+1}\sqrt{\sigma-1}=3$, gives
+\begin{align}
+ D={}&m\{\sqrt{\sigma+1}A_--\sqrt{\sigma-1}A_+\}^2
+       +(\sigma-1)T_++(\sigma+1)T_-\notag\\
+    &+3(T_++T_--J_o).\label{ms:defect-decomposition}
+\end{align}
+Every term is nonnegative. Cauchy--Schwarz also gives
+$1/(2\rho)\le m\le1/2$: indeed $1\le\rho\E|X|=2m\rho$ and
+$\E|X|\le1$. Since $\sigma-1>2$, the decomposition yields
+$T_++T_-\le D/2$. If $D<2$, then
+\[
+ m(A_-^2+A_+^2)=\rho-T_+-T_-\ge1-D/2,
+ \qquad A_-+A_+\ge\sqrt{2-D}.
+\]
+
+\subsection{One joint budget for endpoint motion and noise}
+
+Let $\bar A_-=m/q=\ell p$, $\bar A_+=m/p=\ell q$ be the conditional mean
+magnitudes. For a central support gap $(-A_-,A_+)$ define
+\[
+ \Delta_-=\bar A_--A_-,\quad \Delta_+=\bar A_+-A_+,\qquad
+ a_0=\Delta_-/\ell,\quad a_1=\Delta_+/\ell,\quad d=a_0+a_1.
+\]
+These quantities are nonnegative, $d<1$, and
+$U_0\le a_0$, $U_1\ge-a_1$. The physical displacement
+$\Delta_-+\Delta_+$ is $\ell d$; the displacement $d$ is in count units.
+Put $w=1-\theta=pq\ell^2$ and
+\[
+ \mathcal Q(p)=(\sigma+1)p^2+(\sigma-1)q^2-6pq
+       =(6+2\sigma)(p-p_*)^2.
+\]
+
+\begin{lemma}[Joint defect budget]\label{ms:joint-defect}
+For every $P\in\mathcal P$ whose closed support has a central gap
+$(-A_-,A_+)$ with $A_-,A_+>0$,
+\begin{align}
+ D\ge{}&\ell w\mathcal Q(p)+6\ell w\{d(1-d)+a_0a_1\}\notag\\
+ &+\E[\{(\sigma-1)(X+2\bar A_+)+6A_+\}W^2;X>0]\notag\\
+ &+\E[\{(\sigma+1)(-X+2\bar A_-)+6A_-\}W^2;X<0].
+ \label{ms:joint-defect-budget}
+\end{align}
+All terms on the right are nonnegative. In order, they charge
+$p\ne p_*$, inward motion of the gap endpoints away from their conditional
+means, and the spread within each sign class. The last two expectations
+retain the actual locations of the conditional fluctuations.
+\end{lemma}
+\begin{proof}
+Write $M_{j,\pm}=\E X_\pm^j$. The outer-gap bounds proved above give
+\[
+ J_o^+\le M_{3,+}-2A_+M_{2,+}+A_+^2m,\qquad
+ J_o^-\le M_{3,-}-2A_-M_{2,-}+A_-^2m.
+\]
+Adding the central term $m(A_-+A_+)^2$ and substituting in $D$ yields
+\begin{align*}
+ D\ge{}&(\sigma-1)M_{3,+}+(\sigma+1)M_{3,-}
+       +6A_+M_{2,+}+6A_-M_{2,-}\\
+       &-6m(A_-^2+A_-A_++A_+^2).
+\end{align*}
+Conditional centering gives the exact identities
+\[
+ M_{2,+}=m\bar A_++\E[W^2;X>0],\qquad
+ M_{3,+}=m\bar A_+^2+\E[(X+2\bar A_+)W^2;X>0],
+\]
+and the analogous identities with $-X,\bar A_-$ on the negative class.
+After substituting $A_-=\ell(p-a_0)$ and $A_+=\ell(q-a_1)$, the
+deterministic terms are
+\[
+ \ell w\{\mathcal Q(p)+6[d(1-d)+a_0a_1]\};
+\]
+the remaining terms are exactly the two expectations in
+\eqref{ms:joint-defect-budget}. The gap sums are nonnegative, so
+monotone convergence justifies summing countably many gaps. Each
+expectation is integrable under the finite third-moment assumption;
+endpoint atoms do not affect the Lebesgue integrals.
+\end{proof}
+
+\begin{corollary}[Simultaneous gap inequality]
+\label{ms:simultaneous-gap}
+For this central gap,
+\begin{align}
+ D\ge{}&\frac{(6+2\sigma)(1-\theta)^{3/2}}{\sqrt{pq}}(p-p_*)^2
+ +6m\{(A_-+A_+)(\Delta_-+\Delta_+)+\Delta_-\Delta_+\}\notag\\
+ &+3(\sigma+1)A_+\theta_++3(\sigma+3)A_-\theta_-.
+\label{ms:simultaneous-gap-formula}
+\end{align}
+\end{corollary}
+\begin{proof}
+On the positive support $X\ge A_+$ and $\bar A_+\ge A_+$, so the positive
+kernel in \eqref{ms:joint-defect-budget} is at least $3(\sigma+1)A_+$.
+On the negative support $-X\ge A_-$ and $\bar A_-\ge A_-$, the corresponding
+kernel is at least $3(\sigma+3)A_-$. Finally $m=pq\ell$ and
+$A_-+A_+=\ell(1-d)$ identify the two deterministic terms with those in
+\eqref{ms:simultaneous-gap-formula}.
+\end{proof}
