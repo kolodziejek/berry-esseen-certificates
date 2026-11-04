@@ -1,0 +1,41 @@
+\section{Completion of the proof}\label{j:composition}
+
+We now put together the finite induction and the two local exclusions.
+Each exclusion concerns one attained ratio maximizer. The induction
+supplies its predecessor hypotheses before any acquisition or comparison
+is applied to that law.
+
+\begin{proof}[Proof of Theorem~\ref{j:main}]
+The finite induction, Theorem~\ref{j:finite:base}, gives
+$C_j\le\CE$ for $1\le j\le42$. If a later strict failure exists,
+choose its least index $n$. Both deleted constants are then at most
+$\CE$, and Corollary~\ref{j:smoothing:entry} yields
+\[
+ 0<n(C_n-\CE)<\frac{3003}{10250}<.3,\qquad
+ C_n<\frac{73}{175}<.4226,\qquad
+ n(C_{n-1}-C_n)_+=0.
+\]
+Also $C_{n-1},C_{n-2}\le\CE<.4253$.
+For $43\le n\le46$, apply Proposition~\ref{j:local:finite4346};
+for $n\ge47$, apply Proposition~\ref{j:local:uniform}.
+In each case the displayed bounds supply every entry hypothesis,
+attainment supplies the maximizing law, and the local comparison rules
+it out. Thus $C_n\le\CE$ at every index.
+
+Now suppose $C_n=\CE$ for some $n\ge47$. The just-proved upper bound
+makes both deleted constants at most $\CE$ and the predecessor loss
+zero. The scaled excess is zero as well. The uniform local exclusion
+includes this boundary case, so attainment again gives a contradiction.
+This proves strictness of the supremum. Finally,
+Proposition~\ref{j:external:limit} supplies a fixed Bernoulli law whose
+normalized discrepancies converge to $\CE$. Hence every smaller
+universal coefficient fails.
+\end{proof}
+
+There is no assumption of a sharp tail in this induction. The finite base
+uses previously established smaller indices and its stated loose ceilings.
+The comparison at $43$--$46$ uses its actual indices, and the uniform
+comparison uses analytic estimates valid for every index above its floor.
+Their certificates establish numerical inequalities on those independently
+justified domains. Equality is considered only after the weak all-index
+bound has been proved.
