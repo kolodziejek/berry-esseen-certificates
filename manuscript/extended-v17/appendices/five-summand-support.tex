@@ -1,0 +1,189 @@
+\section{Support acquisition at the fifth index}\label{ext:n5-support}
+The finite Fourier and count estimates require an explicit support radius.
+Compactness alone is insufficient: the radius enters their error bounds.
+Here we obtain the radii in the following table directly from contact at
+$n=5$, uniformly in the raw threshold. Corollary~\ref{ext:n5-refined-support} gives the tighter radii used by the
+signed-moment sectors of the initial acquisitions.
+
+\begin{proposition}[The fifth-index support table]\label{ext:n5-support-table}
+Assume $C_4\le\CE$ and $C_5>\CE$. Let $(P,H)$ be a positive
+closed-event ratio maximizer supplied by Corollary~\ref{ext:ratio-attainment}.
+If $\rho(P)$ belongs to a row in the following table, then
+$\supp P\subset(-R,R)$ for that row's radius. The values of $b$
+are upper bounds for $|\E[X|X|]|$. The last column is a rational
+lower bound on the strict endpoint margin in the proof.
+\begin{center}\small
+\begin{tabular}{@{}cccc@{}}
+\toprule
+$\rho$ interval & $b$ & $R$ & endpoint margin $>$\\
+\midrule
+$[1,11/10]$ & $0.253257$ & $23/10$ & $0.251666$\\
+$[11/10,23/20]$ & $0.307221$ & $12/5$ & $0.153351$\\
+$[23/20,237/200]$ & $0.338920$ & $5/2$ & $0.174691$\\
+$[237/200,6/5]$ & $0.351391$ & $13/5$ & $0.350224$\\
+$[6/5,5/4]$ & $0.389174$ & $13/5$ & $0.020061$\\
+$[5/4,7/5]$ & $0.478710$ & $117/40$ & $0.005870$\\
+$[7/5,3/2]$ & $0.525521$ & $25/8$ & $0.008946$\\
+$[3/2,8/5]$ & $0.565414$ & $133/40$ & $0.059409$\\
+$[8/5,17/10]$ & $0.600001$ & $7/2$ & $0.033467$\\
+$[17/10,7361/4000]$ & $0.641563$ & $15/4$ & $0.061370$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{proposition}
+
+\begin{proof}
+Write $C=C_5$, $\beta=\E[X|X|]$, $s=\sqrt{5/4}$ and
+$e=5(s-1)-1/2$. The score of the same marginal at index four is
+$A=2\Delta_4(P)/\rho\le C_4<C$. Hence the signed predecessor term
+$d_P=5(A-C)$ is nonpositive.
+Define
+\[
+ \mathcal H(H,t)=5\sqrt5\{\Phi((H-t)/2)-\Phi(H/\sqrt5)\}
+ +5t\phi(H/\sqrt5)+\tfrac H2(t^2-1)\phi(H/\sqrt5).
+\]
+Contact and the predecessor bound imply, at every support point $t$,
+\begin{equation}\label{ext:n5-contact-envelope}
+ 0\le\mathcal H(H,t)
+ +C\{-|t|^3+\tfrac32\rho t^2+3\beta t+\rho e\}
+ +\rho s d_P.
+\end{equation}
+To verify the scale term, the probability part contributes
+$5\rho(sA-C)$. The identity
+$5(sA-C)=s d_P+5(s-1)C$ combines with the constant
+$-C\rho/2$ in the contact polynomial to give exactly $C\rho e$.
+Thus there is no approximation in \eqref{ext:n5-contact-envelope}.
+
+For a row with upper moment endpoint $r$, put
+\[
+ c=819/2000,\qquad E=91/1000,\qquad
+ Q(v)=-v^3+\tfrac32rv^2+3bv+rE,
+\]
+\[
+ L(v)=\tfrac25(v^2/2+1/2+E)+cQ'(v).
+\]
+The elementary constants satisfy $c<\CE<C$, $e<E$ and
+$s<1119/1000$. The signed-moment inequality of Lemma~\ref{ms:sign-moment},
+$(1+\beta^2)^2\le\rho^2(1-\beta^2)$ implies $|\beta|\le b$,
+because direct rational substitution gives
+$(1+b^2)^2>r^2(1-b^2)$ for each row.
+The exact arithmetic check gives
+\begin{equation}\label{ext:n5-ray-gates}
+ Q(R),Q'(R),Q''(R),L(R),L'(R)<0,
+ \qquad 1/5-3c<0.
+\end{equation}
+Since $Q'''=-6$, these gates imply $Q(v)<0$ for all $v\ge R$.
+The bracket multiplying $C$ in \eqref{ext:n5-contact-envelope} is
+at most $Q(|t|)$, so on those rays its product with $C$ is at most
+$cQ(|t|)$. The predecessor term is nonpositive.
+
+The Gaussian envelope has the uniform derivative bound
+\begin{equation}\label{ext:n5-ray-derivative}
+ |\partial_t\mathcal H(H,t)|
+ \le\phi(0)(t^2/2+1/2+e)
+ <\tfrac25(t^2/2+1/2+E).
+\end{equation}
+Indeed, with $z=H/\sqrt5$ and $y=(H-t)/\sqrt5$,
+$\partial_t\mathcal H=5\phi(z)+Ht\phi(z)-5s\phi(sy)$.
+Taylor's theorem and $\|\phi''\|_\infty=\phi(0)$ bound
+$|5\phi(y)-5\phi(z)-Ht\phi(z)|$ by $\phi(0)t^2/2$.
+Also $\partial_s[s\phi(sy)]=-\phi''(sy)$, so the remaining
+error is at most $5\phi(0)(s-1)$. This proves
+\eqref{ext:n5-ray-derivative} for every real $H,t$.
+For either sign $\eta$, the derivative in $v\ge R$ of
+$\mathcal H(H,\eta v)+cQ(v)$ is at most $L(v)$.
+Now $L''=2/5-6c<0$; the last two gates in
+\eqref{ext:n5-ray-gates} make $L$ strictly negative throughout the ray.
+It remains to prove a strict upper bound at $v=R$, on the whole
+threshold line.
+
+For that purpose, Gaussian differentiation gives
+\[
+ |\partial_H^2\mathcal H(H,R)|
+ \le\frac{\sqrt5}{4}\left(\frac54+1\right)
+       +\frac25R+\frac{2|R^2-1|}{5\sqrt5}
+ \le M_R:=\frac{81}{64}+\frac25R+\frac{|R^2-1|}{5}.
+\]
+The first bound uses $\|\phi'\|_\infty=1/\sqrt{2\pi e}<1/4$
+(the maximum of $|x|e^{-x^2/2}$ occurs at $|x|=1$),
+$\|\phi''\|_\infty<2/5$ and
+$\|\phi'''\|_\infty\le2/\pi<4/5$; the last follows either
+by differentiation or by the Gaussian Fourier integral. The second
+bound uses $2<\sqrt5<9/4$.
+For a twice differentiable function with $|f''|\le M$ on $[a,b]$,
+its deviation from the affine endpoint interpolant is at most
+$M(b-a)^2/8$. This follows by comparing the interpolation error
+with $\pm M(x-a)(b-x)/2$. Consequently, the values at
+\[
+ H=-16,-16+1/10,\ldots,16
+\]
+plus $M_R/800$ bound $|\mathcal H(H,R)|$ on every one of the
+320 closed intervening cells.
+
+The two exterior rays are covered separately. Since $16\ge5\sqrt5$
+and $16-R\ge10$, Mills' bound gives, with $\tau=10^{-6}>\Phi(-5)$,
+\[
+ |\mathcal H(H,R)|\le5\sqrt5\,\tau+
+ \left(5R+8|R^2-1|\right)\phi(16/\sqrt5),\qquad |H|\ge16.
+\]
+Here $|H|\phi(H/\sqrt5)$ decreases for $|H|\ge16$.
+Finally $\mathcal H(H,-R)=-\mathcal H(-H,R)$, so the same
+absolute enclosure handles both support rays.
+The resulting whole-line bound $B_R$ satisfies
+$B_R+cQ(R)<0$; the table records lower bounds for $-cQ(R)-B_R$.
+Together with the ray monotonicity, this contradicts
+\eqref{ext:n5-contact-envelope} whenever $|t|\ge R$.
+\end{proof}
+
+\paragraph{Exact evaluation of the finite table.}
+The check is a short independent rational program, rather than a sampled
+numerical maximum. It brackets $\pi$ using the alternating arctangent
+series and $\pi=16\arctan(1/5)-4\arctan(1/239)$, and brackets positive
+square roots by integer squaring on the grid $10^{-25}$.
+For $0\le x\le26$, truncating $e^{-x}$ after the even term 120 and
+adding the negative next term gives an enclosing interval. For
+$H^2<25v$, the formula
+\[
+ \Phi(H/\sqrt v)=\frac12+
+ \frac{\phi(0)}{\sqrt v}
+ \sum_{k=0}^{\infty}
+ \frac{(-1)^kH^{2k+1}}{(2v)^k k!(2k+1)}
+\]
+is truncated after the even term 80, with the next term as remainder
+bound. The relevant tails of both alternating series decrease in absolute
+value. For $H^2\ge25v$, use $\Phi(-5)<10^{-6}$ and reflection.
+All interval operations retain their signs. The check evaluates all 3,200
+closed threshold cells in the ten rows, both exterior rays, every
+polynomial gate, the signed-moment enclosures and the constants.
+Insufficient support, an invalid moment bound and a threshold mesh too
+coarse to prove the assertion are rejected in separate controls.
+The full fractions are saved with the execution record; displayed decimals
+are exact rationals rounded down from the proved margins.
+
+\begin{corollary}[Radii for the fifth-index Fourier and resource bounds]
+\label{ext:n5-refined-support}
+Under the assumptions of Proposition~\ref{ext:n5-support-table}, one has
+\[
+ \begin{array}{c|c|c|c}
+ \rho\text{ interval}&|\beta|\text{ upper bound}&R&
+       \text{endpoint margin}>\\ \hline
+ {[1,11/10]}&0.253257&11/5&0.045938\\
+ {[11/10,23/20]}&0.307221&47/20&0.039564\\
+ {[23/20,237/200]}&0.338920&49/20&0.050250\\
+ {[237/200,6/5]}&0.351391&99/40&0.016341
+ \end{array}
+\]
+In each row, $\supp P\subset(-R,R)$. These radii hold on the
+whole signed-moment range and therefore on every narrower signed sector
+used by the resource calculation.
+\end{corollary}
+\begin{proof}
+Use exactly the polynomial gates, interpolation bound, Gaussian enclosures,
+and two infinite tails from Proposition~\ref{ext:n5-support-table}.
+The additional exact checks use the four displayed radii,
+on the same 320 closed threshold cells per row. All five ray gates and
+the strict endpoint inequalities pass. The lower margins shown in the
+table are rounded downward from the exact rational margins. The trial radii $21/10$, $9/4$, $12/5$ and $12/5$, respectively,
+fail the acceptance criterion. These failures are rejection controls,
+not counterexamples to a support theorem.
+\end{proof}

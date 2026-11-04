@@ -1,0 +1,364 @@
+{
+  "actionable_layout_defects_observed": [],
+  "conclusion": "No actionable layout defect observed at the inspected scales.",
+  "detail_dpi": 130,
+  "detail_pages_inspected": [
+    {
+      "page": 1,
+      "path": "detail-page-001.png",
+      "sha256": "aae7b48cd2bdfb16638585db96e446f8a343d705b8692a8bdc5025d63d8ef7c2"
+    },
+    {
+      "page": 62,
+      "path": "detail-page-062.png",
+      "sha256": "ebeff0743f8baa0cdb4c9d8ce4cfdfbc5b69e5b24bbba34670f73e5d5b28080a"
+    },
+    {
+      "page": 63,
+      "path": "detail-page-063.png",
+      "sha256": "1fdcc824e671b5fadb5de7964c164c21e61887c41b0c4979ffa18f3a5b206c0e"
+    },
+    {
+      "page": 165,
+      "path": "detail-page-165.png",
+      "sha256": "10a46cfd2b9bf2df4a2f393f0234c5986d3102d9333fcd7cbfb9ac804ab9397b"
+    },
+    {
+      "page": 166,
+      "path": "detail-page-166.png",
+      "sha256": "b7eb9854f72ec6e28137a4fbfa10eca52e0d539932ed5495a616759e14e3c4f5"
+    },
+    {
+      "page": 189,
+      "path": "detail-page-189.png",
+      "sha256": "cca5632fa2e24ad89d3a269c97a0997321ca16734ce95bf339d85adb8c6815a7"
+    },
+    {
+      "page": 191,
+      "path": "detail-page-191.png",
+      "sha256": "27074fc1830b9d2ff271c04527e168d5f65cd10755d24f88c846f35ace277cca"
+    },
+    {
+      "page": 192,
+      "path": "detail-page-192.png",
+      "sha256": "e508974cf3a2dba908cac03aa550cf3c6d1f2e413b68871d6a091c3e8c77a752"
+    },
+    {
+      "page": 193,
+      "path": "detail-page-193.png",
+      "sha256": "cb3e7cb8d2c65c4e648dda0b03ac11c745189082da734ccf2e9a3d0cb2760395"
+    }
+  ],
+  "limitations": [
+    "This is a visual presentation review, not a mathematical reread or proof verification.",
+    "The contact sheets support only an overview check; enlarged visual inspection was limited to the explicitly listed pages.",
+    "No new native certificate execution, independent arithmetic verification, or theorem acceptance is claimed."
+  ],
+  "mathematical_acceptance_claimed": false,
+  "observations": [
+    "All ten overview contact sheets were visually inspected, covering PDF pages 1 through 194 at 65 dpi. No visible gross clipping, text outside margins, overlapping equations or tables, broken rules, or unexplained blank PDF pages was found at that scale.",
+    "The PDF has no visible draft watermark. Page numbering is continuous at overview scale. The six empty gray tiles after page 194 in the last contact sheet are contact-sheet padding, not PDF pages.",
+    "Page 1: title, authors, abstract, beginning of contents, and disclosure footnote fit without collision. The contents continues onto page 2.",
+    "Page 62: Theorem 16.1 and its proof of the upper bound remain together; the following Theorem 16.2 interface table and closing strictness argument fit within margins.",
+    "Page 63: the discussion and source/reproduction paragraphs fit. This observation concerns placement and typography only.",
+    "Pages 165-166: page 165 ends the preceding setup with remaining whitespace; Theorem V.1 begins on page 166. Both cases, equations (201)-(202), the closing coverage sentence, and the proof fit together on page 166. The earlier stranded conclusion is absent.",
+    "Page 189: the reproduction metadata and lower table fit. One long filename wraps within the paragraph without clipping.",
+    "Page 191: source paths wrap within the text block; source-entry labels and exact-arithmetic displays fit.",
+    "Page 192: command blocks and the 64-character hash fit within the text block.",
+    "Page 193: the final command block, explanatory paragraphs, and beginning of references fit; reference entries continue normally on page 194."
+  ],
+  "overview_contact_sheets_inspected": [
+    {
+      "path": "contact-01.jpg",
+      "pdf_pages_inclusive": [
+        1,
+        20
+      ],
+      "sha256": "c812f60dce9eae05356c962d867c3962e3301ddae371e0195aeb8e7afdb1630b"
+    },
+    {
+      "path": "contact-02.jpg",
+      "pdf_pages_inclusive": [
+        21,
+        40
+      ],
+      "sha256": "3f21e35bc6cc227b4f8777771b7f25b33417293e1a004288dac75e9af74ad08f"
+    },
+    {
+      "path": "contact-03.jpg",
+      "pdf_pages_inclusive": [
+        41,
+        60
+      ],
+      "sha256": "8372b6c9ecfe2633289db0525089fa254d47aff76c03a9ff7989656aa37d1b6d"
+    },
+    {
+      "path": "contact-04.jpg",
+      "pdf_pages_inclusive": [
+        61,
+        80
+      ],
+      "sha256": "af7a9bd293469582d1aa33ddd0013feccf156eab13953bf091ec9b1a81ba35a5"
+    },
+    {
+      "path": "contact-05.jpg",
+      "pdf_pages_inclusive": [
+        81,
+        100
+      ],
+      "sha256": "2c1ac1f2529d2ff15df3c80fd0644127787bd82118e06b0d1f0f3a8d90c157b7"
+    },
+    {
+      "path": "contact-06.jpg",
+      "pdf_pages_inclusive": [
+        101,
+        120
+      ],
+      "sha256": "bfa97c840dbba3c158585b56a985bf8cd1f16d8454dd0f8f0c1299c145eae0e7"
+    },
+    {
+      "path": "contact-07.jpg",
+      "pdf_pages_inclusive": [
+        121,
+        140
+      ],
+      "sha256": "e895bf5ea71e409b0b03d4a707382f8235fd561d4417befb199537f51a778362"
+    },
+    {
+      "path": "contact-08.jpg",
+      "pdf_pages_inclusive": [
+        141,
+        160
+      ],
+      "sha256": "e20b7a9a0ec4d86a3682bd7620028514e150ccd15b9d68a2bb8e78b32e679128"
+    },
+    {
+      "path": "contact-09.jpg",
+      "pdf_pages_inclusive": [
+        161,
+        180
+      ],
+      "sha256": "8bf258856fe1afea3796c42e6765f6c6921268fa23366ca55ac53de2efc83411"
+    },
+    {
+      "path": "contact-10.jpg",
+      "pdf_pages_inclusive": [
+        181,
+        194
+      ],
+      "sha256": "2c246b0907a5ba84d99a08e9f6e1327cbabc46ea3e2f552f3f2aba8d06fb96fd"
+    }
+  ],
+  "overview_dpi": 65,
+  "overview_pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194
+  ],
+  "pdf": {
+    "bytes": 1498280,
+    "page_count": 194,
+    "path": "runs/extension_20261104/coordinator/final-build01/build/main.pdf",
+    "sha256": "f61b2747cc5e4e059fc795b2afd1b9e388c3255d5552a0ba5dddcaa6eb6edab8"
+  },
+  "pdf_unchanged": true,
+  "recorded_utc": "2026-11-04T12:55:11.293578+00:00",
+  "render_record": {
+    "path": "runs/extension_20261104/finite/final-layout-review01/RENDER_RESULT.json",
+    "sha256": "febe0297b9133e81e6c192d0519d2a925c9f09c52259454ac07a562a8cdc6372"
+  },
+  "reviewer": "/root/resume_finite",
+  "schema": "BOUNDED_PDF_LAYOUT_REVIEW_V1",
+  "tex_edited": false
+}

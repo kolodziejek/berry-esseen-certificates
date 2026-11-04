@@ -1,0 +1,250 @@
+\section{Finite acquisition for one fixed marginal}
+\label{ext:finite-acquisition}
+The count argument needs more than an upper bound for the defect. Its
+input includes the sign probability, the central gap, the two conditional
+variances, and bounds for several signed moments. This appendix explains
+how the finite calculation acquires them together. The sample size stays
+fixed throughout each application.
+
+Suppose $n\ge5$ is a strict first failure, and take the attained positive
+closed-event ratio maximizer $(P,H)$. Then $C=C_n>\CE$, and its same-law
+predecessor loss is zero. First acquire support by
+Lemma~\ref{ext:direct-gaussian-support-criterion} or one of its separately
+proved specializations. This step uses the contact inequality and the
+Gaussian CDF, without higher moments. Only afterwards use
+\[
+ \rho=\E|X|^3,\quad \gamma=\E X^3,\quad
+ \beta=\E[X|X|],\quad m=\E X_+=\E X_-,\quad \mu_j=\E X^j.
+\]
+The signed-moment and Fourier formulas in Appendix~\ref{re:atlas} then
+apply to this supported marginal. At small indices their numerical
+integrals use the literal value of $n$ and, where needed,
+\eqref{ext:finite-low}. No later-index approximation is substituted.
+
+\subsection{What a state asserts}
+A state is a finite list of simultaneous inequalities for this one law:
+closed intervals for $\rho,\beta,\gamma,m$, signed support radii, a
+score ceiling, and any already established raw, defect, or threshold
+bounds. Once a central gap is known, it also contains intervals for
+$p=\Pp(X>0)$ and its two endpoints. The inequalities are necessary
+conditions. Their feasible set may contain points that do not represent
+any probability law, which is harmless for an upper bound.
+
+The following rules preserve the actual parameter point. Intersect a
+coordinate interval with a newly proved necessary interval; replace an
+upper bound by the smaller of two valid upper bounds; or subdivide a
+closed interval into two closed children sharing their endpoint.
+A negative upper bound for a nonnegative quantity excludes a cell.
+A failed denominator, Taylor-domain, or positivity gate does not exclude
+the law: that proposed bound is unavailable, and the cell must receive
+another valid bound or remain unresolved.
+
+\subsection{Moment contractions with the correct sign radii}
+Write $a_\pm=(1\pm\beta)/2$, $b_\pm=(\rho\pm\gamma)/2$.
+The inequalities
+\[
+ m^2\le a_+a_-,\qquad a_\pm^2\le m b_\pm,\qquad
+ m\ge\frac{1+\beta^2}{2\rho}
+\]
+retain the same $m$ on both signs. They also hold when there is a zero
+atom. Thus solving them on a closed moment box is a valid contraction,
+but choosing a different mean separately for different tests is not an
+acquisition of one common state.
+
+Here is the version of the moment matrices that permits different
+positive and negative support radii. On either sign write $Y=|X|$,
+$0\le Y\le r$, and let $p_s,m,a,b,c_4,c_5$ be its unnormalized
+moments of orders zero through five. Positivity of the weights
+$r-Y$, $Y(r-Y)$, and $Y^2(r-Y)$ gives
+\[
+ \begin{pmatrix}rp_s-m&rm-a\\rm-a&ra-b\end{pmatrix},\quad
+ \begin{pmatrix}rm-a&ra-b\\ra-b&rb-c_4\end{pmatrix},\quad
+ \begin{pmatrix}ra-b&rb-c_4\\rb-c_4&rc_4-c_5\end{pmatrix}
+ \succeq0.
+\]
+For positive denominators their determinant inequalities imply
+\begin{align*}
+ p_s&\ge m/r+(rm-a)^2/[r(ra-b)],\\
+ c_4&\le rb-(ra-b)^2/(rm-a),\\
+ c_5&\le rc_4-(rb-c_4)^2/(ra-b).
+\end{align*}
+A zero diagonal entry forces the corresponding off-diagonal entry to
+vanish. One may check that condition or discard the nonnegative
+correction, but one cannot divide by zero. In interval form a correction
+is bounded below by the square of a positive-part lower numerator
+divided by an upper positive denominator. The sign radius $r$ is used
+only for its own class. Summing the first inequality over the two signs
+and using $p_++p_-\le1$ can improve the common upper mean.
+
+One further bound used at small indices strengthens the signed constant
+coefficient. Set $\delta=\gamma-\rho\beta$ and $Y=|X|$. Then
+\[
+ V:=\E\{Y(Y^2-\rho Y)^2\}
+   =\E|X|^5-2\rho\mu_4+\rho^3,
+ \qquad
+ \delta=\E\{Y\operatorname{sgn}(X)(Y^2-\rho Y)\}.
+\]
+Here $m>0$ by centering and unit variance.
+Cauchy's inequality for the nonnegative measure $Y\,dP$ gives
+$\delta^2\le2mV$. Consequently
+\begin{equation}\label{ext:weighted-cubic-loss}
+ \frac\rho2\mu_4-\frac14\E|X|^5
+ \le\frac{\rho^3}{4}-\frac{(\gamma-\rho\beta)^2}{8m}.
+\end{equation}
+This deduction can be combined with the two other deductions in
+Appendix~\ref{re:atlas} by taking their maximum. Their sum would spend
+the same nonnegative quantity more than once.
+
+\subsection{The first raw bound comes before defect feedback}
+Let $e=C-\CE>0$, $w=H^2/(2n)$ and $\phi_0=\phi(0)$.
+The exact conserved identity, with nonnegative contact loss $L$, is
+\[
+ ne\rho+n\CE\rho(1-e^{-w})+
+       n\phi_0e^{-w}D/6+n^{3/2}L=\mathcal R.
+\]
+Initially use only $D\ge0$, acquired support and moments, and complete
+LOW and HIGH estimates. The first full cover must prove a raw upper
+bound $\mathcal R\le r<2n/5$. In particular, it must not assume the
+defect bound that it proposes to export.
+
+Since $C\rho>\CE>2/5$, rearrangement now gives
+\[
+ \phi_0e^{-w}(\gamma+3J)/6
+       =C\rho+\sqrt nL-\mathcal R/n>0.
+\]
+This is precisely the sign license needed for removing the Gaussian
+weight. Lemma~\ref{re:weight}, used here at $N=n$, therefore proves
+\[
+ ne\rho+n\phi_0D/6+n^{3/2}L\le\mathcal R,
+ \qquad e^{-w}\ge1-5r/(2n),\qquad D\le15000r/(997n).
+\]
+Every later refinement may use these inequalities, always from a
+previous completed pass. The optional additional phase curvature is
+\eqref{re:extra}; it is included once in the budget used to update $D$.
+The raw remainder and that smaller budget have different meanings.
+
+The signed moment in the actual identity remains $\gamma$, even if an
+auxiliary Fourier estimate is evaluated after reflection. In particular,
+when $\gamma\ge g_0$ and $\phi\in[\phi_l,\phi_u]$, the valid
+curvature lower bound is
+\[
+ C\rho+\tfrac12\min\{\phi_lg_0,\phi_ug_0\}.
+\]
+Section~\ref{re:signed-phase-repair} proves the coherent corner rule
+for this expression. Complete score and moment corners are taken before
+maximizing over $H$ or completing the square. If two complete Fourier
+estimates are available, their resulting upper bounds may be minimized;
+mixing their separate coefficients is not justified.
+
+\subsection{From the acquired gap to the count input}
+With $\sigma=\sqrt{10}$, the bound
+$D<\sigma\rho-\gamma$ excludes zero from the support, because otherwise
+$J\le\rho$. Both signs have positive probability, so a genuine central
+gap $(-A,B)$ follows. The signed endpoint, central-integral and outer-gap
+bounds of Appendix~\ref{re:atlas} can now refine the state. In particular,
+the complete central rectangle is bounded by its tensor Bernstein
+coefficients, using the lower mean for a negative coefficient and the
+upper mean for a positive coefficient.
+
+The joint inequality~\eqref{ext:joint-physical-resource} then acquires
+the triangle~\eqref{ext:count-triangle-derived}. Its remaining defect
+budget is shared by inward displacement and conditional variance.
+All refinements of conditional moments price their entire nonnegative
+linear cost under this single budget, as in Lemma~\ref{re:pricing}.
+This supplies the actual common-law hypotheses for the count calculation
+and the optional filters in Appendix~\ref{ext:count-filters}.
+
+The induction is finite. At each complete pass, every actual parameter
+point belongs to an initial cell and remains in a child or in a cell
+with a proved exclusion. A declared grid with sizes
+$(N_\rho,N_\beta,N_\gamma,N_m)$ must account for exactly
+$N_\rho N_\beta N_\gamma N_m$ cells; skipping an excluded block must
+account for its full multiplicity. An export to the probability panel
+$[j/100,(j+1)/100]$ takes maxima of upper bounds and minima of lower
+bounds over every active cell touching that panel. In particular,
+an endpoint at $j/100$ belongs to both adjacent panels. This is why
+the export range is
+\[
+ \lceil100p_l\rceil-1\ \le j\le\ \lfloor100p_u\rfloor,
+\]
+intersected with $\{0,\ldots,99\}$. An empty intersection or a strict
+necessary-inequality contradiction can close a cell; an incomplete
+calculation cannot.
+
+The resulting proof is an induction on finite enclosures, not a
+convergence claim about an iterative search. Its last obligations are
+concrete: the complete covers must pass, each resource must consume its
+proved initializer, and each count contract must be implied by the
+resource for the same moment and probability panel. These are the joins
+checked by the accompanying reproduction programs.
+
+\subsection{The actual-index acquisitions at $35$ through $39$}
+\label{ext:actual3539-acquisition}
+These five steps use the actual index in every INITIAL and resource
+bound. They therefore need no transfer from a smaller evaluation index.
+For $35\le n\le38$, Lemma~\ref{ext:first-failure25} supplies
+$C_n<41/100+4177/(13824n)$. This is below all four native INITIAL
+ceilings in Section~\ref{ext:finite1539} and also below $423493/10^6$, the smaller
+ceiling used by the local calculations at $35$.
+The sharp predecessor gives contact allowance zero; the weaker allowances
+$19/100$ and $63/340$ retained in the index-$35$ support and resource
+programs are consequently valid. At $39$, use the separately proved
+positive-allowance step to obtain the smaller ceiling $41449/10^5$.
+
+The global INITIAL covers have respectively $10,16,12,15,12$ finite
+refinement passes, followed by a full $100$-panel export. Each pass
+retains one law's earlier bounds, proves support before using its
+higher moments, and rounds upper bounds upwards and lower bounds
+downwards. The global support bounds are $39/10$ at $35$ and $19/5$
+at $36$--$39$. At $35$, the separate support calculation actually gives
+$96/25<39/10$. Local refinements use separately checked smaller radii.
+
+At $35$, four short INITIAL refinements cover the intervals
+$[.29,.34]$, $[.34,.39]$, $[.39,.45]$ and $[.45,.57]$;
+they use respectively $4,3,3,2$ passes. Bounds shared by a whole
+interval are the weakest bounds over its still possible panels:
+the maximum of their upper bounds and the minimum of their lower
+bounds. These are intersected with the already acquired bounds for
+that interval. Thus no moment from one law is assigned to another.
+The resulting count interfaces cover $P_{31},\ldots,P_{48}$.
+Three further alternating INITIAL/resource calculations cover
+$P_{16},\ldots,P_{28}$: they exclude $P_{16},\ldots,P_{22}$
+and produce count interfaces on $P_{23},\ldots,P_{28}$.
+The first short interval also supplies the two interfaces on
+$P_{29},P_{30}$. Finally the global source, supplemented by the last
+short interval on $P_{49},\ldots,P_{56}$, excludes every panel in
+$P_0,\ldots,P_{15}$ and $P_{49},\ldots,P_{99}$.
+The union consists of $74$ excluded panels and $26$ count panels,
+with every probability endpoint included.
+
+At $36$, a two-pass localized INITIAL calculation on $[.30,.42]$
+replaces the global source only on $P_{30},\ldots,P_{41}$; its proved
+one-sided support radii are $3$ and $37/10$. All other panels retain
+their global source. At $37$--$39$, the global exports are used directly.
+The full resource traversals leave respectively
+$P_{24},\ldots,P_{48}$, $P_{24},\ldots,P_{47}$,
+$P_{25},\ldots,P_{47}$ and $P_{26},\ldots,P_{47}$.
+Every other panel reaches an explicit moment, support or budget
+contradiction during the finite traversal.
+
+
+At $35$ the phase budget also retains the actual excess. Since
+$C>\CE$ and $\CE<20487/50000$, its lower charge is
+$35\max\{0,C-20487/50000\}\rho$. For each fixed phase, the resulting
+upper budget is affine in $C$ on either side of this breakpoint,
+and affine in $\rho$ for fixed $C$. Its maximum on the score--moment
+rectangle therefore occurs among the six corners obtained from the
+two score endpoints, the breakpoint, and the two moment endpoints.
+Subtracting this charge before the phase comparison is justified by
+the same conserved identity used in Appendix~\ref{ext:finite-floor-transfer}.
+
+Each surviving row supplies upper bounds for the gap, noise,
+amplitudes and the two signed phases, together with one simultaneous
+affine defect lower bound. The count contract weakens each of these
+bounds in the valid direction. For the phase envelopes, every acquired
+corner polynomial is bounded above on the whole signed interval by
+at least one count-certificate corner polynomial. The comparison checks
+the endpoints and, when it lies inside the interval and the difference
+is convex, its vertex. Taking maxima therefore preserves the
+inequality. These comparisons connect the freshly acquired same-law
+rows to the $26+25+24+23+22=120$ actual-index count forests.

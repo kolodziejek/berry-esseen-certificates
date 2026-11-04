@@ -1,0 +1,131 @@
+\section{The fixed-index positive allowance at 39}
+\label{ext:positive39-local}
+
+The acquisition used by the sharp argument at $39$ requires the
+intermediate cap $C_{39}<.41449$. It is sufficient first to exclude
+\[
+ C_{39}\ge\CE+K/39,\qquad K=741/4000,
+\]
+because $.40974+K/39=.41449$ and $\CE<.40974$.
+This is a separate fixed-index comparison. Its inputs are
+$C_{39}<.4226$, $39(C_{39}-\CE)<.50$, predecessor loss at most
+$.33$, and both deleted score bounds at most $.4253$.
+Sharp predecessors and the one-step estimate supply these inputs.
+Indeed $\sqrt{39/38}<51/50$ and $\sqrt{38}>6$ give
+\[
+ \begin{gathered}
+ 39(C_{39}-\CE)<\frac{39}{38}
+       \left(\frac{41}{200}+\frac{17}{250}+\frac{17}{1250}\right)
+ =\frac{55887}{190000}<.3,\\
+ C_{39}<.41+.3/39<.4226.
+ \end{gathered}
+\]
+Under the contrary hypothesis the predecessor loss is zero, and the
+two sharp deleted bounds are below $.4253$.
+No positive-allowance result at another index is used.
+
+The support polynomial in Section~\ref{support:polynomial} is
+evaluated with
+\[
+             (N,L,K,q,R)=(39,39,741/4000,.33,3.84).
+\]
+Its derivation applies at this index, including the scale estimate
+valid for $n\ge36$. Subsequent radius contractions use the same
+fixed-index polynomial. Central bounded-threshold contractions use
+the positive-error series with excess allowance $.50$ and loss $.33$.
+The initializer covers all signed moment cells and all 100 probability
+panels. It retains the lower score $C\ge.4095+K/39$ and the
+charge $K\rho_l$, because $39(C-\CE)\rho\ge K\rho_l$.
+This charge is part of the actual resource budget and is kept through
+the coherent score corners and the later refinements.
+
+The confinement proof of Section~\ref{conf:re:confinement} applies
+with its actual parameters $N=39$, $J_0=37$ and deletion factor
+strictly larger than $\sqrt{\max\{(39/38)^3,39/37\}}$.
+The acquired initial strip is $(-w,1+w)$ with
+$w\in\{.55,.575\}$; the conditional cubic coefficient is $30$
+on the left and $24$ centrally. In the proof replace $.55$ by $w$
+in the cubic bound, interval endpoints, width gates and upper
+contradiction $L_g-wU_+>\mathcal E$. The gate
+\[
+ c_\rho^2[l(1-l)]^3>[3(1-l)+w]^2,
+ \qquad [l,h]\subset(0,1/2),
+\]
+licenses the cubic bound. Together with $d_0<w$, the strip and the
+inward endpoints give $|U_i|<w$. All positive slopes, inverse
+denominators and signed budget gates are checked at the actual
+index. After each contraction the newly proved amplitude is the
+next strip. Thus this is the same confinement proof with explicit
+parameters, without extending the fixed-index statement to another
+integer.
+
+The local comparison then consumes 78 probability rows covering
+$[151/500,229/500]=[.302,.458]$, with all the probability and moment
+complements excluded by the preceding acquisition. Its 624 signed
+profile cells retain both signs of $H$ and four noise bands. The
+whole-count part has 90 signed rows. Its closed phase cover is:
+nearest-count comparison on $(0,.05]$ and $[.05,.08]$ at every
+phase; nearest count for $|u|\ge.19$ and whole count for
+$|u|\le.19$ on $[.08,.10]$; the corresponding boundary $.27$ on
+$[.10,.12]$; and whole count at every phase above $.12$.
+Each band is intersected with its own acquired noise ceiling.
+
+Here the target is $C< C_B+K/39$, so the scalar tests differ from
+the zero-allowance tests in Section~\ref{shortloc:section}.
+All of them follow from the same identity
+\eqref{shortloc:master}. Write $b=\sqrt{39}\pi_k$ and retain
+the verified two-sided bound $m\le b\le1$. A nearest-count
+bracket $D$ may now have either sign; consequently
+\[
+ bD\ge\min\{mD,D\}.
+\]
+If the repair is at most $r\lambda/39$, with $r\ge0$, a noise
+band $[a,b_\lambda]$ is excluded by the intermediate-noise test
+\[
+ \min\{mD,D\}-r b_\lambda/39+K/39>0.
+\]
+Indeed the identity gives $\rho_B(C-C_B)<K/39$.
+The elementary inequality $\rho_B\ge1$ follows from
+$(1-2v)^2-v=(1-v)(1-4v)\ge0$, $0<v\le1/4$.
+Thus $C<C_B+K/39\le\CE+K/39$.
+
+At arbitrarily small positive noise the rescaled quartic and tail
+estimates give the same inequality per unit $\lambda$. The tiny-noise
+test adds the allowance
+\[
+             \frac{K}{39\max\{.05,\Lambda\}}
+\]
+to that per-noise reserve. Multiplying by
+$0<\lambda\le\min\{.05,\Lambda\}$ again gives a bound
+strictly below $K/39$. No positive lower noise cutoff is inserted.
+
+For the whole-count test, write
+\[
+ S(\lambda)=\max\{mB(\lambda),B(\lambda)\}
+                         +I(\lambda)/39.
+\]
+Both the bracket and the inverse correction may have either sign;
+the first maximum uses $m\le b\le1$, while the division by $39$
+uses the actual integer. Hence
+$\rho_B(C-C_B)\le\lambda S(\lambda)$.
+The saved gate on $[a,b_\lambda]$ is
+\[
+        K\rho_{B,l}/39-b_\lambda S(\lambda)>0,
+\]
+where $\rho_{B,l}$ is a positive lower bound for $\rho_B$.
+If $S<0$ the conclusion is immediate; otherwise it follows by
+$\lambda\le b_\lambda$ and $\rho_B\ge\rho_{B,l}$.
+The formula is convex in positive $\lambda$, since its only
+nonaffine terms are positive multiples of
+$(\alpha\lambda+\beta)^{-1}$ and $1/\lambda$, and maxima of
+convex functions preserve convexity. Both endpoint gates therefore
+cover the whole noise cell.
+
+Finally, zero noise makes the marginal exactly Bernoulli and gives
+$C\le\CE<\CE+K/39$. The weak all-probability Bernoulli theorem
+suffices; no finite binomial slack table is needed here. Once the
+nine original arithmetic actions and their full source interfaces
+are verified, these strict comparisons exclude the hypothesized
+positive allowance and supply the cap required by the sharp39
+initializer. The positive-allowance and sharp39 checks remain
+distinct numerical obligations.

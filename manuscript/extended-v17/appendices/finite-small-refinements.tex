@@ -1,0 +1,263 @@
+\section{Fourier refinements at a small fixed index}
+\label{ext:small-fourier}
+At a small index, replacing a finite frequency integral by an integral
+over the whole half-line can lose much of the available margin. The
+following estimates retain the finite interval and the actual integer
+power. They use the moments of the same supported marginal throughout.
+
+\subsection{A finite-interval compensated estimate}
+Let $n>2$ be an integer, $\E X=0$, $\E X^2=1$, $|X|\le R\le6$,
+$\gamma=\E X^3$, $\mu_j=\E X^j$, and $f(t)=\E e^{itX}$.
+Assume $\mu_4\le M\le111/10$ and $|\gamma|\le g\le37/20$.
+The coefficient and moment bounds proved in the formula atlas give
+\[
+ |a|\le A_*,\quad |z|\le Z,\quad \mu_6\le M_6,
+ \qquad a=(3-\mu_4)/24,\quad z=(10\gamma-\mu_5)/120.
+\]
+Define
+\[
+ E=\frac{M_6}{720}+\frac{g^2}{72}
+       +\frac{(1/2+g^2/144)^3}{5},\qquad
+ B=A_*+Z/2+E/4,
+\]
+\[
+ a_n=(n-1)/2,\qquad b_n=(n-2)(45-M)/96,\qquad
+ I_j(A)=\int_0^{1/2}t^j e^{-At^2}\,dt.
+\]
+All these quantities are nonnegative, and the two damping rates are
+positive. Put
+\begin{align*}
+ L_0={}&\sqrt n\left\{nZI_2(a_n)
+       +\frac{n(n-1)A_*g}{6}I_4(a_n)
+       +\frac{n^3g^3}{1296}I_6(n/2)\right\},\\
+ L_H={}&\sqrt n\left\{nA_*I_2(a_n)
+                              +\frac{n^2g^2}{72}I_4(n/2)\right\},\\
+ L_2={}&n\left\{nEI_3(a_n)+\frac{n(n-1)B^2}{2}I_5(b_n)\right\}.
+\end{align*}
+For every real raw threshold $H$, the complete low-frequency estimate is
+\begin{equation}\label{ext:finite-low}
+ \int_0^{1/2}\frac{\left|\Im\left[e^{-itH}
+ \{f(t)^n-e^{-nt^2/2}(1-in\gamma t^3/6)\}\right]\right|}{t^3}\,dt
+ \le\frac{L_0+L_H|H|}{\sqrt n}+\frac{L_2}{n}.
+\end{equation}
+
+To prove it, set $h(t)=e^{-t^2/2-i\gamma t^3/6}$. Taylor's formula gives
+\[
+ f-h=-at^4-izt^5+r_6,\qquad |r_6|\le Et^6,
+ \qquad |f-h|\le Bt^4 \quad(0\le t\le1/2).
+\]
+Indeed, for $w=-t^2/2-i\gamma t^3/6$, one has
+$|w|\le t^2(1/2+g^2/144)<1/6$. The quadratic exponential
+polynomial contributes at most $g^2t^6/72$ beyond degree five; its
+remaining error is at most $|w|^3e^{|w|}/6\le |w|^3/5$.
+The characteristic-function remainder is at most $M_6t^6/720$.
+Symmetrization and the global fourth-degree cosine upper bound give
+\[
+ |f(t)|^2\le1-t^2+(M+3)t^4/12
+           \le1-(45-M)t^2/48.
+\]
+Thus $|f|$, $|h|$, and every point of their complex line segment are
+at most $e^{-(45-M)t^2/96}$. The integral Taylor remainder for the
+polynomial $z\mapsto z^n$ consequently yields
+\[
+ f^n-h^n=n(f-h)h^{n-1}+R_2,\qquad
+ |R_2|\le\tfrac12 n(n-1)B^2t^8e^{-b_nt^2}.
+\]
+The $r_6$ and $R_2$ integrals give $L_2/n$. For the leading terms use
+\[
+ |\Im[e^{-itH}(-at^4-izt^5)h^{n-1}]|
+ \le e^{-a_nt^2}\{(Z+A_*|H|)t^5+(n-1)A_*gt^7/6\}.
+\]
+Finally, for $u=n\gamma t^3/6$, the rotated imaginary part of
+$e^{-nt^2/2}(e^{-iu}-1+iu)$ is bounded by
+$e^{-nt^2/2}(|u|^3/6+|H|tu^2/2)$. Integration proves
+\eqref{ext:finite-low}, including its continuous endpoint at zero.
+
+For the small indices the quantities $I_j(A)$ are enclosed directly.
+The degree-20 and degree-21 Taylor polynomials of $e^{-x}$ are,
+respectively, upper and lower bounds on all $x\ge0$, by the sign of
+the integral remainder. Their integrated values are the rational sums
+\[
+ \sum_{k=0}^{m}\frac{(-A)^k}{k!(j+2k+1)2^{j+2k+1}},
+ \qquad m=20,21.
+\]
+The selected routines require $0\le A\le8$ and $0\le j\le16$;
+the rates above meet those gates for $5\le n\le9$.
+Every coefficient multiplying an integral is nonnegative. When two
+complete triples $(L_0,L_H,L_2)$ are available, either may be selected
+by a rule independent of $H$. Selecting different coefficients from
+different triples is not justified by this argument.
+
+\subsection{Containing rectangles and exact finite powers}
+The supported fourth-moment bound also improves the real coordinate.
+If $\rho\in[\rho_l,\rho_u]$, $|X|\le R$, and $\mu_4\le M_4$, then
+\[
+ \Re f(t)\le1-t^2/2+M_4t^4/24.
+\]
+If $R^2t^2\le30$, a second lower endpoint is
+\[
+ \Re f(t)\ge1-t^2/2
+              +\rho_l^2t^4(1-R^2t^2/30)/24.
+\]
+These follow from the global fourth-degree upper and sixth-degree
+lower Taylor polynomials of cosine, $\mu_6\le R^2\mu_4$, and
+$\mu_4\ge\rho^2$ by Cauchy's inequality. The nonnegative coefficient
+gate is needed before substituting $\rho_l^2$. Intersect these real
+intervals with the anchored bounds of Lemma~\ref{ext:fourier-anchor}.
+
+\begin{lemma}[Two corners of a complex-power rectangle]
+\label{ext:two-corners}
+Let $n\ge2$ be an integer, $a\ge0$, $0<x_0\le x_1$ and $Y\ge0$.
+If
+\[
+ (n-2)Y\le3x_0/2,\qquad (2n-1)x_0^n\ge(n-1)a,
+\]
+then for $x\in[x_0,x_1]$ and $|y|\le Y$,
+\[
+ |(x+iy)^n-a|^2
+ \le\max\{|(x_0+iY)^n-a|^2,|(x_1+iY)^n-a|^2\}.
+\]
+\end{lemma}
+\begin{proof}
+Write $z=x+iy$, $r=|z|$ and $F(x,y)=|z^n-a|^2$.
+Since $|\arg z|\le Y/x_0$, the first gate and $3/2<\pi/2$ imply
+$\Re z^{n-2}\ge0$. Direct differentiation gives
+\begin{align*}
+ F_{yy}&=2nr^{2n-4}\{r^2+2(n-1)y^2\}
+                         +2an(n-1)\Re z^{n-2}\ge0,\\
+ F_{xx}&=2nr^{2n-4}\{r^2+2(n-1)x^2\}
+                         -2an(n-1)\Re z^{n-2}.
+\end{align*}
+Divide the latter by $2nr^{n-2}>0$. Its first term is
+$r^{n-2}((2n-1)x^2+y^2)\ge(2n-1)x_0^n$; the subtracted
+term is at most $a(n-1)$. Thus $F$ is convex in each coordinate.
+Apply convexity first in $y$ and then in $x$, and use
+$F(x,Y)=F(x,-Y)$.
+\end{proof}
+
+For Fourier smoothing take $a=e^{-nt^2/2}$ and any proved containing
+rectangle for $f(t)$. Both gates must hold throughout the frequency
+cell. If either fails, the geometric-sum estimate remains available.
+The maximum of the two pointwise corner bounds is enclosed before
+integration; the maximum of their separate integrals would not suffice.
+Complex powers are finite polynomial recurrences, so zero or equal
+bases create no division. A fourth-Taylor endpoint is kept fixed on
+each integration cell when differentiating its smooth majorant.
+
+Cancellation can be retained when computing the real endpoints.
+For example, on $0\le u\le1$,
+\[
+ 1-u^2/2+M_4u^4/24-e^{-u^2/2}
+ =\frac{M_4-3}{24}u^4
+   +\sum_{k=3}^{10}\frac{(-1)^{k+1}u^{2k}}{2^kk!}+R(u).
+\]
+For derivative order $j=0,1,2$ with $u=ct$, the absolute remainder
+is at most $2(22)_j u_{\max}^{22-j}c^j/(2^{11}11!)$; consecutive
+absolute tail terms have ratio below $1/2$ on this domain.
+Alternatively, at higher frequencies enclose each explicit smooth
+residual $d(u)=\cos u-e^{-u^2/2}$ or
+$d(u)+(\rho_u-1)u^3/6$ by its midpoint value plus the half-width
+times an enclosure of its derivative on the entire cell.
+Intersecting two such valid enclosures preserves their common function.
+These operations differentiate scalar envelopes, not the law's CDF.
+
+\section{A five-summand corner without a support assumption}
+\label{ext:gapfree5}
+The last small moment rectangle can be treated directly by conditioning
+on signs. This avoids contact and Fourier estimates in that rectangle.
+Let $\beta=\E[X|X|]$, $p=\Pp(X>0)$, $q=1-p$,
+$m=\E X_+=\E X_-$ and $a_\pm=(1\pm\beta)/2$.
+Zero atoms belong to the nonpositive class. Signwise Cauchy gives
+\[
+ m\ge\frac{1+\beta^2}{2\rho},\qquad
+ \frac{m^2}{a_+}\le p\le1-\frac{m^2}{a_-},\qquad m^2\le pq.
+\]
+Set $h=pq/m$, $Y=p+hX$, $B=\ind_{\{X>0\}}$, and $U=Y-B$.
+Both conditional means of $U$ vanish, with variances
+\[
+ v_0=p^2(qa_-/m^2-1),\qquad v_1=q^2(pa_+/m^2-1).
+\]
+Given $\sum_{i=1}^5B_i=j$, the noises are independent with variance
+$V_j=(5-j)v_0+jv_1$. Write $b_j=\binom5j p^jq^{5-j}$ and define
+\[
+ T(V,d)=\begin{cases}1,&d\le0,\\V/(V+d^2),&d>0.\end{cases}
+\]
+Conditional Cantelli and the exact normal coordinate yield
+\begin{equation}\label{ext:gapfree-bound}
+ \frac{\sqrt5}{\rho}\{\Pp(S_5\le t)-\Phi(t/\sqrt5)\}
+ \le\frac{\sqrt5}{\rho}
+ \left\{\sum_{j=0}^5 b_jT(V_j,j-z)
+          -\Phi\left(\frac{(z-5p)m}{\sqrt5pq}\right)\right\},
+ \qquad z=5p+ht.
+\end{equation}
+The value $T(0,0)=1$ is essential: a deterministic sum at the threshold
+belongs to the closed event.
+
+\begin{proposition}[The positive corner]
+\label{ext:gapfree5-result}
+For every standardized iid marginal satisfying
+\[
+ \frac{477}{400}\le\rho\le\frac65,\qquad
+ \frac{17}{50}\le\beta\le\frac{35139006743001}{10^{14}},
+\]
+the positive closed-CDF score in \eqref{ext:gapfree-bound} is strictly
+below $4097/10000<\CE$ at every real threshold.
+\end{proposition}
+\begin{proof}
+Here are the enclosures defining the finite proof. On a closed
+$\beta$ slab $[b_l,b_u]$ put $m_l=(1+b_l^2)/(2(6/5))$.
+The moment inequalities enclose $p$ in
+$[2m_l^2/(1+b_u),\,1-2m_l^2/(1-b_l)]$.
+On a closed $p,z$ box $[l,u]\times[a,b]\subset(0,1/2)\times[0,5]$
+use
+\begin{align*}
+ v_0&\le\max\{0,u^2((1-l)(1-b_l)/(2m_l^2)-1)\},\\
+ v_1&\le\max\{0,(1-l)^2(u(1+b_u)/(2m_l^2)-1)\}.
+\end{align*}
+Each binomial mass is maximized at the projection of $j/5$ onto
+$[l,u]$, and each Cantelli factor is maximized at $z=b$ and the
+variance upper bound. Clip the sum of the six upper bounds at one.
+If $a-5u\ge0$, the normal argument is at least
+$(a-5u)m_l/(\sqrt5\,u(1-u))$.
+Otherwise it is at least $(a-5u)/\sqrt{5u(1-u)}$: use
+$m\le\sqrt{pq}$ on the negative part and the fact that
+$(z-5p)/\sqrt{pq}$ decreases in $p$ for $z\ge0$, $p<1/2$.
+Its derivative has numerator $-[5p+z(1-2p)]/2$.
+Outward square roots and a rational Gaussian lower enclosure therefore
+bound the complete box. Take the nonnegative part of the CDF difference
+before multiplying by $\sqrt5/\rho_l$.
+
+The twelve closed $\beta$ slabs have endpoints
+\[
+ 17/50,\quad 341/1000,\ldots,351/1000,\quad
+ 35139006743001/10^{14}.
+\]
+Together with the five intervals $z\in[k,k+1]$, $0\le k<5$, these
+give sixty roots. The supplied binary subdivisions have 1,027 leaves.
+Exact evaluation on every closed leaf gives a maximum upper bound
+\[
+ 204848338979/500000000000<4097/10000.
+\]
+The independent evaluator uses a 100-term integrated Gaussian Taylor
+polynomial with its explicit remainder, rational Machin bounds and
+integer square-root enclosures. Complete root order, both children at
+every split, and all leaf bounds are checked; twenty-one negative
+controls reject missing cells, false bounds and malformed data.
+
+Both omitted rays have direct bounds. Use the full rectangle's $m_l$
+and enclosing $[p_l,p_u]$, put $v_u=p_u(1-p_u)$ and
+$s_u=v_u^2/m_l^2-v_u$. On the feasible domain $m^2\le v$,
+$v^2/m^2-v$ increases with $v$ and decreases with $m$. Thus
+$V_j\le\max\{j/p_l,(5-j)/(1-p_u)\}s_u$.
+For $z\le0$, discard the nonnegative Gaussian CDF and evaluate the
+Cantelli upper sum at zero, using binomial upper masses
+$\binom5j p_u^j(1-p_l)^{5-j}$. The resulting score is below $331/1000$.
+For $z\ge5$, the CDF is at most one and normal Cantelli gives the
+score upper bound
+\[
+ \frac{\sqrt5}{\rho_l}\frac1{1+5m_l^2/p_u^2}<187/1000.
+\]
+These exact rational comparisons and the sixty roots cover all real $z$.
+The proposition concerns the stated positive branch; it is not silently
+extended to the opposite $\beta$ rectangle by reflection.
+\end{proof}

@@ -1,0 +1,109 @@
+\subsection{Scalar consequences of the common inward budget}
+\label{ext:inward-scalar}
+Some finite count domains use a stronger absolute-third-moment floor or
+noise ceiling before their five-dimensional subdivision. The following
+calculation supplies those scalar restrictions. It uses the same sign
+conditioning as Section~\ref{ext:count-filters}.
+
+Reflect only for the scalar calculation, so that
+$0<p\le1/2$, $q=1-p$, $v=pq$. This preserves $\rho$, total
+conditional variance $s$ and total inward displacement. The count
+probability, its phase and its original orientation are not reflected.
+Suppose the inward endpoints obey $a_0+a_1\le d$ with $0<d\le p$.
+The conditional third-moment inequalities and Cauchy's inequality give
+\begin{equation}\label{ext:inward-I}
+ \rho\ge I(p,s,d):=
+ \frac{v(1-2v)+(3p-d)s+s^2/(qd)}{(v+s)^{3/2}}.
+\end{equation}
+Indeed, writing $b=qs_0$, $c=ps_1$ and $b+c=s$, the absolute-cubic
+numerator is at least
+\[
+ v(1-2v)+3pb+3qc-a_0b-a_1c
+                       +\frac{b^2}{qa_0}+\frac{c^2}{pa_1}.
+\]
+Its linear part is at least $(3p-d)s$, while its quadratic part is
+at least $(b+c)^2/(q(a_0+a_1))\ge s^2/(qd)$.
+Vanishing inward endpoints force the corresponding centered variance
+to vanish; those terms are handled before division. If $d=0$, then
+$s=0$ directly.
+
+The derivative has the exact numerator
+\begin{equation}\label{ext:inward-I-derivative}
+ (v+s)^{5/2}I_s
+ =v(6p-3p^2-d-3/2)
+   +\left\{\frac{2p}{d}-\frac{3p-d}{2}\right\}s
+   +\frac{s^2}{2qd}.
+\end{equation}
+Consequently, on $p\in[l,u]\subset(0,1/2]$, the two gates
+$d\le l$ and $f:=6l-3l^2-d-3/2\ge0$ imply
+\[
+ \rho\ge\rho_B(p):=\frac{1-2p(1-p)}{\sqrt{p(1-p)}}
+                  \ge\rho_B(u).
+\]
+The last function is decreasing on this half-interval. If a previously
+acquired ceiling is $\rho\le R$, a point with
+\[
+ R^2p(1-p)-(1-2p(1-p))^2<0
+\]
+is impossible. This polynomial increases on $0<p\le1/2$, because
+its derivative is $(1-2p)(R^2+4-8p(1-p))\ge0$.
+Exact bisection may therefore raise the closed lower probability
+endpoint to a known infeasible point; retaining that endpoint is a
+conservative enlargement.
+
+When $f>0$ and $s\le S$, formula~\eqref{ext:inward-I-derivative}
+also gives
+\[
+ I_s\ge
+ \frac{l(1-l)f}{[u(1-u)+S]^{5/2}}.
+\]
+Integration from zero supplies a new variance ceiling. Directed square
+roots and outward division make every finite update valid separately.
+
+A useful weaker floor survives failure of the monotonicity gate.
+Assume still $0<d\le l$ and set
+\[
+ a=(3/2-6l+3l^2+d)_+,
+ \qquad B=2l/d-3u/2\ge5/4.
+\]
+The only possible decrease of $I$ is bounded below by
+$-(va-Bs)_+/v^{5/2}$. Integrating this negative triangle gives
+\begin{equation}\label{ext:inward-deficit}
+ \rho\ge\rho_B(u)-\frac{a^2}{2B\sqrt{l(1-l)}}.
+\end{equation}
+In particular, failure of the monotonicity gate must not be replaced
+by the unsupported assertion $\rho\ge\rho_B(p)$.
+
+There is a second variance contraction which works with either sign
+of $f$. The global Taylor upper bound for $(v+s)^{3/2}$, combined
+with \eqref{ext:inward-I}, gives the necessary inequality
+\begin{equation}\label{ext:scalar-noise-quadratic}
+ Gs^2+fs\le\epsilon\,[u(1-u)+S]^{3/2},
+\end{equation}
+where
+\[
+ \epsilon=(R-\rho_B(u))_+,\qquad
+ G=\frac1{(1-l)d}-\frac{3(1-2l(1-l))}{8l(1-l)}
+       \ge\frac5{8l(1-l)}+\frac34>0.
+\]
+To see this, subtract $\rho_B(p)(v+s)^{3/2}$ from the lower
+numerator in \eqref{ext:inward-I}, use the quadratic Taylor upper
+bound on the subtracted term, and then use $p\ge l$ and
+$\rho_B(p)\ge\rho_B(u)$. The positive part in $\epsilon$ is
+necessary when $f<0$. The larger real root of
+\eqref{ext:scalar-noise-quadratic}, enclosed from above, is a valid
+new upper bound for $s$, even for negative $f$.
+
+Finally suppose the original joint resource has the stronger form
+\[
+ d_{\rm actual}\le d_0(1-s/S_0),\qquad S_0=\Lambda/n.
+\]
+To test a proposed upper endpoint $a\in(0,S_0)$, assume $s\ge a$.
+Then $d_{\rm actual}\le d_0(1-a/S_0)$, so the preceding quadratic
+calculation can be repeated with this smaller inward bound. If its
+resulting upper bound is strictly less than $a$, the whole region
+$s\ge a$ is impossible. Otherwise the probe proves no lower bound
+on $s$. A finite sequence of such hypothetical tests is sound
+without any convergence assertion. Throughout it, the original
+$S_0$ remains in the joint budget; a separately improved noise
+ceiling clips that budget and does not replace its intercept.

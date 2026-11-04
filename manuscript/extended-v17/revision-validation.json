@@ -1,0 +1,86 @@
+{
+  "baseline_commit": "cd10654222f4b63d50f9d8f108597b140d263ec5",
+  "utc": "2026-10-29T18:29:54.864408+00:00",
+  "branch": "manuscript/revision-v16-20261029",
+  "mathematical_status": "Revised proofs locally derived and independently reviewed at their original scope; acquired exclusion and global conclusion retain their explicit hypotheses. No finite-base proof or full-conjecture acceptance.",
+  "execution_status": "Fresh isolated entry replay, nine historical bounded checks, three new scalar checks, final source graph, source integrity, compilation and rendered-page review passed.",
+  "pdf": {
+    "file": "main.pdf",
+    "pages": 53,
+    "sha256": "4a656391d4c22b7b7c80c280087d9f2fe3329c227004f4ddd5f2a33318f9c0c4",
+    "compiler": "TeX Live 2025, pdfLaTeX, shell escape disabled",
+    "build_receipt": "validation-evidence/build04/receipt.json",
+    "unresolved_references": 0,
+    "missing_citations": 0,
+    "overfull_boxes": 0,
+    "visual_review": "All 53 pages reviewed; build04 renders byte-identical to reviewed build03. See reviews/visual-review-*.md and validation-evidence/render04-correspondence.json."
+  },
+  "source_graph": {
+    "included_tex_files": 17,
+    "original_labels": 119,
+    "current_unique_labels": 132,
+    "lost_labels": [],
+    "cited_keys": 24,
+    "unresolved_references": []
+  },
+  "preservation": {
+    "tracked_changes_outside_compact_v16": [],
+    "reviewed_v16_source_pins": 36,
+    "entry_allowlist_files": 13,
+    "historical_validation_files_unchanged": true
+  },
+  "fresh_runs": {
+    "entry_status": "PASS_ISOLATED_REPRODUCTION_FIXED_ENTRY_V7",
+    "bounded_status": "PASS_COMPACT_V16_BOUNDED_RECHECK",
+    "bounded_jobs": 9,
+    "new_scalar_status": "PASS_REVISION_SCALAR_CHECKS",
+    "new_scalar_jobs": 3
+  },
+  "evidence_local_root": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/manuscript_revision_20261029/root01",
+  "source_sha256": {
+    "appendices/entry-details.tex": "a93f5a0473f3266b17cbbc0edc7160ba770165e8617b6f0f169abb6a8dc1b73f",
+    "appendices/fixed-fourier.tex": "77dc20187e2753dab0654f6ed5416506dbb268bd097c2c6bd3385214f644b058",
+    "appendices/normalization.tex": "d25f8e3ea98261d67f4abe4f6570c29d43289ef613d6e5976150cc8ca2bf405a",
+    "appendices/off-contact.tex": "914a634cb50b354741b093ff171bde8d639fb321278fa8dd93d3ca8c00eef1e8",
+    "appendices/reproducibility.tex": "0c053a4a920a37807c2e3dbc42d8fbaedc79f03107b6f76819bbad6bbe3d41c3",
+    "main.bbl": "fb1491adc8583080ef50d9a24abec1ccb6d1e7e00ebb5a8258f2c8c3a573d229",
+    "main.tex": "d2475c8412d16ec01f47843420d8376929d13d89dd098fb6ae5a33cd354e2083",
+    "references-added.bib": "d4e0f8593eb6cc129a437c7b95f278aea30f82dc3a6869743f40720f3174f893",
+    "references-classical.bib": "d572142ac859fb2ff3a2e4679e33869cb54aa41320df60f23139b149a0a94084",
+    "references-modern-a.bib": "6375a56e09258d12e6ff5b79eb240d720335f9e9030fe9ba4306a5b210bf304a",
+    "references-modern-b.bib": "9b49eba5de769bad53a61b0e0d8b46faf2ed20a7588860f86d542a0c51fb5060",
+    "sections/01-introduction.tex": "d176469cfa027af8fae34e46b0bc77cee1875f2b94a6a97ddbefd6d3548d3aea",
+    "sections/01b-guide.tex": "ce4340dc473bcb2c33b8178784fc8fdea1aa557d8e768e67fbb7eb9f9fdc3232",
+    "sections/02-fixed-target.tex": "4c33899b621366495401f6f29b01c28f4a2883b0bcf94ee136509a0952b86f9f",
+    "sections/02b-moment-domain.tex": "13e4e29cc68b87ed2e07be15953b1c027eece2d0bb5ca5711419e4f0af95225e",
+    "sections/03-conservation.tex": "b5597836fec8bce72fccf49ccc4b6238a039d03d53233debf29f8d597ffc05b1",
+    "sections/04-fixed-entry.tex": "8e9541b26b6cb9bd164af3138ffb00c14669948e103d619b88fdd08e69937311",
+    "sections/05-geometry-counts.tex": "46023d458ce70695ca7d889d34e5d632fb8a4cdfb816fcd4b40337d60ec80eb1",
+    "sections/07-direct-acquisition.tex": "4e4766a76caf6e68ed7e7fc709f1d45752bc4a855320b332286e59f00568209d",
+    "sections/08-direct-comparison.tex": "ebbfd05de0424e00d85dc6a8f445f84ea01c3ecd79d8afa4ada3867003f76098",
+    "sections/09-composition.tex": "70d1783a8ecf983c520bd7c370d436488036ac49e5ddebf2d5cfb4a05d2e1557",
+    "sections/10-discussion.tex": "f2f463d19463267ee61308229c3d19754933b3a507a107ef2e485520c546a854",
+    "tools/check_revision_constants.py": "36216e619d37b719095dcbf4bf83158b496a9613e584585c70d0319877324f1f",
+    "tools/check_revision_count_constants.py": "eb55bfd92bd3975dd904f1440d8a0a06ac286fd7d6e333388cf7c4f318bd9454",
+    "tools/check_revision_foundation_constants.py": "440edecaef41563100353b308fa22414708b8f29547ad149c01d0e915803c7be",
+    "tools/check_revision_geometry_constants.py": "dda816e32fc47afa6f6bea49888a91b434ef990e982390e66f4de31ab594b67f",
+    "tools/recheck.py": "62b84b0e853f3623f73c9d7481ebad9a8df4165af04b2fbf68d8a94b170e79c0"
+  },
+  "reviews_sha256": {
+    "reviews/count-review.md": "1901a6ed8818d86306e73b052229c10d477257d69b0825497bc9f8b430055743",
+    "reviews/count-second-review.md": "0d83b4b6eaa51e4b85f9c449f21dcc70e32bbbebd5fc436bdc130e902c4db9cb",
+    "reviews/final-scope-review.md": "7a0530772b330a5e04bdde277bb533f129373d407c310bd040bb3804b8dd5b8d",
+    "reviews/geometry-review.md": "4717df2c381937d99aa1c2fc8865e9d730ffcd86418c7d321eea86efa41d8d08",
+    "reviews/geometry-second-review.md": "03f32c977bc0b18be4a0efbde0c106fdc659aa824887f2e7e919ade26ecbd93f",
+    "reviews/independent-review.md": "3f994b41838393868f9d3e780c967085c9838f17c19fe9d498bfcdfc7fbf0bc4",
+    "reviews/visual-review-01-20.md": "1f19a437dd5aa2aced5177614f7acff17a64552225e0d3c1425f304ba657e4e4",
+    "reviews/visual-review-21-38.md": "fc3e51d84d7f5cf5174a4e5dffbef4fadf60c00107e2dd62213173407a374c68",
+    "reviews/visual-review-39-53.md": "4a2c5938844e3f1596a38f041168bed794d5f8185711411f1d8116e7d8f2fcf3"
+  },
+  "limitations": [
+    "The changed scalar programs do not prove the continuous analytical reduction.",
+    "The entry replay uses retained kernels; it is not a second independent implementation.",
+    "Source hashes and negative controls do not themselves prove checker semantics or complete coverage.",
+    "No finite base through699 or full sharp iid Berry\u2013Esseen conjecture is established."
+  ]
+}

@@ -1,0 +1,441 @@
+\section{The common moment information in the Fourier bounds}
+\label{ext:fourier-moments}
+The finite Fourier estimates use two kinds of information. Bounds valid for
+every standardized law cover the larger moment ranges. Smaller moment ranges
+also use the support bound already obtained from contact. The distinction is
+essential: a support hypothesis cannot be inferred from a successful numerical
+integral.
+
+Let $X$ be centered with $\E X^2=1$, $\rho=\E|X|^3<\infty$,
+$\gamma=\E X^3$, and $f(u)=\E e^{iuX}$. In this section put
+\[
+ \begin{gathered}
+ h=\E|X|,\quad m=\E X_+=\E X_-=h/2,\quad
+ A=\E X_+^2,\quad B=\E X_-^2,\\
+ \zeta=2AB/m,\qquad b(r)=\frac{\sqrt{r^2+8}-r}{2}.
+ \end{gathered}
+\]
+Here $X_-=\max\{-X,0\}$, so $A+B=1$ and all of $h,m,A,B$ are
+positive. The letter $b$ is used for this root function to avoid confusion
+with the signed second moment $\beta=\E[X|X|]$.
+
+\begin{lemma}[Anchored characteristic function]\label{ext:fourier-anchor}
+For $0\le u\le\pi$,
+\[
+ \cos u\le\Re f(u)\le\cos u+(\rho-1)u^3/6,
+ \qquad
+ |\Im f(u)|^2\le\frac{u^6}{36}(\rho-1)(\rho+5/3).
+\]
+\end{lemma}
+\begin{proof}
+Write $\operatorname{sinc}t=\int_0^1\cos(st)\,ds$. For real $a,b$,
+\[
+ |\operatorname{sinc}a-\operatorname{sinc}b|
+ \le |a-b|/2,\qquad
+ |\operatorname{sinc}a-\operatorname{sinc}b|
+ \le |a^2-b^2|/6.
+\]
+The first follows from the Lipschitz bound for cosine. For the second,
+$v\mapsto\cos\sqrt v$ has derivative of absolute value at most $1/2$
+on $v\ge0$, including its limit at zero; integrate with respect to $s$.
+For $r\ge0$, integration from $1$ to $r$ of the first estimate gives
+\[
+ \left|\cos(ur)-\cos u+\frac{u\sin u}{2}(r^2-1)\right|
+ \le \frac{u^3}{12}(r-1)^2(2r+1).
+\]
+Since $\E(|X|-1)^2(2|X|+1)=2(\rho-1)$, averaging proves the
+upper real bound. For the lower bound, when $0<u\le\pi$ set
+$a=\sin u/(2u)$ and $J(v)=\cos v+av^2$. The function
+$\operatorname{sinc}v$ decreases on $[0,\pi]$, so $J$ decreases up to
+$u$ and increases from $u$ to $\pi$. For $v\ge\pi$,
+$J(v)\ge-1+a\pi^2=J(\pi)\ge J(u)$. Evenness gives the same conclusion
+for negative $v$. Average $J(uX)\ge J(u)$ and use $\E X^2=1$.
+
+The second sinc estimate, together with $\E X=0$, gives
+$|\Im f(u)|\le u^3\E[|X|\,||X|^2-1|]/6$.
+Put $W(r)=(r-1)^2(2r+1)$. Cauchy's inequality applies to the factorization
+$r|r^2-1|=\sqrt{W(r)}\,r(r+1)/\sqrt{2r+1}$.
+The exact identity
+\[
+ r^3+\frac{29r^2+1}{18}
+ -\frac{2r^2(r+1)^2}{2r+1}
+ =\frac{(r-1)^2(4r+1)}{18(2r+1)}\ge0
+\]
+bounds the second squared factor in expectation by $(\rho+5/3)/2$;
+the first has expectation $2(\rho-1)$. All expectations are finite under
+the stated third-moment hypothesis. The value at $u=0$ is immediate.
+\end{proof}
+
+\begin{lemma}[One common moment surrogate]\label{ext:fourier-surrogate}
+For an independent copy $X'$, put
+$\eta=\E|X-X'|^3/2-\rho$. Then
+\[
+ \eta\le h\le1,\qquad \zeta\ge h,\qquad
+ \rho+\zeta\ge2/h,\qquad \zeta\ge b(\rho),
+ \qquad \gamma^2+\zeta^2\le\rho^2.
+\]
+For every real $u$ one also has
+$36|\Im f(u)|^2\le u^6(\rho^2-\zeta^2)$.
+If $|X|\le R$ almost surely, then additionally
+\[
+ \eta\le b(\rho)+\frac{(R-\sqrt{\rho^2+8})_+^2}{4R}.
+\]
+In particular $R\le\sqrt{\rho^2+8}$ implies $\eta\le b(\rho)$.
+\end{lemma}
+\begin{proof}
+The scalar inequality
+$|x-y|^3\le(x-y)^2(|x|+|y|)$, independence and centering give
+$\E|X-X'|^3\le2\rho+2h$; Cauchy gives $h\le1$.
+Signwise Cauchy gives
+\[
+ A^2\le m\E X_+^3,\quad B^2\le m\E X_-^3,
+ \quad \frac{m^2}{A}+\frac{m^2}{B}\le\Pp(X\ne0)\le1.
+\]
+Thus $AB\ge m^2$, $\zeta\ge2m=h$, and
+$\rho+\zeta\ge(A+B)^2/m=2/h$. Multiplication yields
+$\zeta(\rho+\zeta)\ge2$, proving $\zeta\ge b(\rho)$.
+
+For completeness, the sine-circle bound uses an exact mixture, not an
+extreme-point assertion about convolution. Let $\mu_+$ and $\mu_-$ be the
+restrictions of the law of $|X|$ to its positive and negative sign classes.
+On $a,b>0$ define
+\[
+ d\nu(a,b)=\frac{a+b}{m}\,d\mu_+(a)d\mu_-(b).
+\]
+Integrating the centered law with atoms $a,-b$ and probabilities
+$b/(a+b),a/(a+b)$ against $\nu$ recovers the nonzero part of the original
+law; the zero atom is added separately. For this two-point law the second
+sinc estimate implies
+\[
+ \frac{6|\Im f_{a,b}(u)|}{|u|^3}
+ \le\frac{ab|a^2-b^2|}{a+b}.
+\]
+Together with $e_{a,b}=2a^2b^2/(a+b)$, the right side is one coordinate
+of a vector of length $ab(a^2+b^2)/(a+b)$. Minkowski's inequality in
+$\R^2$ therefore bounds the vector
+$(\zeta,6\Im f(u)/u^3)$ by $\rho$. The third-moment assumption
+justifies all integrals. Letting $u\to0$ proves the assertion for $\gamma$:
+Taylor's remainder is dominated by $|X|^3/6$, so dominated convergence
+applies after using $\E X=0$.
+
+For the final assertion the exact same-sign deficit is
+\[
+ h-\eta=\E\!\left[
+ \min(|X|,|X'|)(X-X')^2\ind_{\{XX'>0\}}\right].
+\]
+On a common sign class, $\min(a,b)\ge ab/R$. Expansion of the two
+independent class integrals gives
+\[
+ h-\eta\ge\frac{h\rho-2(A^2+B^2)}{R}
+ =\frac{h(\rho+\zeta)-2}{R}.
+\]
+If $h\le b(\rho)$, the already proved $\eta\le h$ suffices. Otherwise,
+write $b=b(\rho)$, use $\zeta\ge h$ and $b(\rho+b)=2$ to obtain
+\[
+ \eta-b\le\frac{(h-b)(R-\rho-h-b)}{R}\le0,
+\]
+when $R\le\rho+2b=\sqrt{\rho^2+8}$. For general $R$, the quadratic
+$y(R-\sqrt{\rho^2+8}-y)$ on $y\ge0$ is at most
+$(R-\sqrt{\rho^2+8})_+^2/4$. This proves the stated remainder too.
+In particular radius three suffices for every $\rho\ge1$.
+\end{proof}
+
+For a universal calculation put $H_* =\max\{h,b(\rho)\}$.
+Then $b(\rho)\le H_*\le1$, $\eta\le H_*$, $\zeta\ge H_*$ and
+$\rho+\zeta\ge2/H_*$. On a closed cell
+$\rho\in[\ell,r]$, $H_*\in[a,b]$, it is consequently safe to use
+\[
+ \eta\le b,\qquad
+ \zeta\ge\max\{a,2/b-r,b(r)\}.
+\]
+Every cell uses both bounds from the same marginal law. A lower bound on
+$H_*$ is not a lower bound on $h$; no later sign-probability argument may
+substitute it for one. If support $|X|\le R\le\sqrt{\ell^2+8}$ has independently been acquired,
+the last part of Lemma~\ref{ext:fourier-surrogate} instead permits
+$\eta\le b(\ell)$ and $\zeta\ge b(r)$. For larger $R$ its displayed
+nonnegative remainder must be retained.
+
+\subsection{Keeping the cubic compensation in the high frequencies}
+\label{ext:compensated-high}
+Suppose now that $|X|\le R$ and $\rho\le r$. We may use
+\begin{align*}
+ M_4&=\min\left\{Rr,1+\frac{(R+1)^2}{R+1/2}(r-1)\right\},\\
+ M_5&=\min\left\{RM_4,
+ 1+\frac{R^3+2R^2+3R+3/2}{R+1/2}(r-1)\right\}
+\end{align*}
+as upper bounds on $\E X^4$ and $\E|X|^5$ of the same law. To verify the
+less immediate branches, set $y=|X|$ and expand
+\[
+ \rho-1=\E(y-1)^2(y+1/2),\quad
+ \E X^4-1=\E(y-1)^2(y+1)^2,
+\]
+\[
+ \E|X|^5-1=\E(y-1)^2(y^3+2y^2+3y+3/2).
+\]
+The ratios of the last two factors to $y+1/2$ increase on $y\ge0$:
+their derivatives are respectively
+$y(y+1)/(y+1/2)^2$ and $y(4y^2+7y+4)/(2(y+1/2)^2)$.
+The other branches follow from $y\le R$. These moment bounds require
+no bound on the product-gap defect.
+
+Put $G=\min\{(r-1)(r+5/3),r^2-Z^2\}$, where $0<Z\le b(r)$.
+Assume that a proved nonnegative envelope $m(u)$ bounds $|f(u)|$ on
+the interval being integrated. Set
+\[
+ g=e^{-u^2/2},\quad v=-i\gamma u^3/6,\quad
+ b_u=\sqrt G\,u^3/6,\quad W=g\sqrt{1+b_u^2},
+\]
+and, for $0\le u\le\pi$,
+\[
+ \begin{gathered}
+ A_u=\max\{|\cos u-g|,
+ |\cos u+(r-1)u^3/6-g|\},\\
+ B_u=\min\{M_4u^4/24, M_5u^5/120\}+b_u(1-g).
+ \end{gathered}
+\]
+Taylor's theorem gives
+\[
+ |\Im f(u)+\gamma u^3/6|\le\min\{M_4u^4/24,M_5u^5/120\}.
+\]
+The anchored real estimate therefore gives
+$|f-g(1+v)|\le\sqrt{A_u^2+B_u^2}$. Telescoping the $n$th powers and
+then applying the integral Taylor remainder to $(1+sv)^n$, $0\le s\le1$,
+proves, for every integer $n\ge2$,
+\begin{align*}
+ |f(u)^n-g^n(1+nv)|
+ &\le\sqrt{A_u^2+B_u^2}\sum_{j=0}^{n-1}m(u)^jW^{n-1-j}
+ +\binom n2 b_u^2g^n(1+b_u^2)^{(n-2)/2},\\
+ |f(u)^n-g^n(1+nv)|
+ &\le m(u)^n+g^n\sqrt{1+n^2b_u^2}.
+\end{align*}
+One may take their pointwise minimum. These formulas use no quotient of
+$m(u)-W$, so coincident and zero values cause no exceptional cases.
+
+On a closed frequency cell $[a,b]\subset[1/2,T]$, a rigorous upper
+bound for this minimum is multiplied by the exact weight
+$\int_a^b u^{-3}\,du=(a^{-2}-b^{-2})/2$. The infinite remainder is
+bounded without a periodicity assumption: for $T>0$,
+\[
+ \int_T^\infty\frac{|f(u)^n-g(u)^n(1+nv(u))|}{u^3}\,du
+ \le\frac1{2T^2}
+ +\frac{e^{-nT^2/2}}{nT}
+ \left(T^{-3}+\frac{n\sqrt G}{6}\right).
+\]
+Indeed $|f|\le1$, $\sqrt{1+x^2}\le1+|x|$, $u^{-3}\le T^{-3}$
+on the normal part, and
+$\int_T^\infty e^{-nu^2/2}\,du\le e^{-nT^2/2}/(nT)$.
+This explains both the compensation and the complete tail in the native
+high-frequency certificates.
+
+To preserve cancellation in the real residual on a closed frequency cell,
+put $d_0(u)=\cos u-e^{-u^2/2}$ and
+$d_1(u)=d_0(u)+(r-1)u^3/6$. Their derivatives are
+\[
+ d_0'(u)=-\sin u+ue^{-u^2/2},\qquad
+ d_1'(u)=d_0'(u)+(r-1)u^2/2.
+\]
+If $D_j$ encloses $d_j'$ throughout a cell of width $w$ and midpoint
+$u_0$, the fundamental theorem of calculus gives
+$d_j(u)\in d_j(u_0)+[-w/2,w/2]D_j$.
+Intersecting this with a direct interval evaluation remains valid.
+This avoids losing the cancellation in $\cos u-e^{-u^2/2}$ by bounding
+its two terms separately.
+
+\subsection{The compatible modulus profile}
+\label{ext:cosine-profile}
+The scalar certificate uses $\kappa=62/625$ and proves
+\begin{equation}\label{ext:scalar-cosine}
+ \cos x\le1-x^2/2+\kappa|x|^3\qquad(x\in\R).
+\end{equation}
+Here is the entire reduction to its finite check. For $x\ge625/124$ the
+right side is at least one. On the remaining interval, the degree-sixteen
+Taylor polynomial $P_{16}$ bounds cosine above: the sixteenth derivative
+of $\cos-P_{16}$ is $\cos-1\le0$, and its lower derivatives vanish at
+zero. The degree-thirteen polynomial
+\[
+ Q(x)=\kappa+\sum_{j=2}^{8}\frac{(-1)^{j+1}x^{2j-3}}{(2j)!}
+\]
+satisfies $x^3Q(x)=1-x^2/2+\kappa x^3-P_{16}(x)$.
+On the eighty cells $[i/16,(i+1)/16]$, $0\le i<80$, and the last
+cell $[5,625/124]$, the exact verifier checks the inverse Bernstein
+identity and all fourteen coefficients. The smallest coefficient is
+$2479189/65585520000>0$. Lemma~\ref{ext:bernstein} proves positivity
+on every closed cell; evenness completes \eqref{ext:scalar-cosine}.
+The native checker rejects twenty-one malformed objects and also checks
+324 exact evaluations of the power/Bernstein identity.
+
+Put $a=1/2-4\kappa=129/1250$, $C=1-\cos4$ and $A_0=16a/C$.
+The profile
+\[
+ q(z)=\begin{cases}
+ 1/2-\kappa z,&0\le z\le4,\\
+ A_0(1-\cos z)/z^2,&4\le z\le2\pi,\\
+ 0,&z\ge2\pi
+ \end{cases}
+\]
+is nonnegative, convex and nonincreasing on $[0,\infty)$, and satisfies
+$\cos z\le1-z^2q(z)$. Indeed \eqref{ext:scalar-cosine} gives
+$0<A_0\le1$. The pieces agree at their endpoints. On the middle interval
+the first derivative is nonpositive and the second has the sign of
+\[
+ B_0(z)=6+(z^2-6)\cos z-4z\sin z.
+\]
+On $[4,3\pi/2]$, $B_0'(z)=-2z\cos z+(2-z^2)\sin z\ge0$ and
+$B_0(4)\ge4$: indeed $7\pi/6\le4\le3\pi/2$ implies
+$\sin4\le-1/2$, and $\cos4\ge-1$, so
+$6+10\cos4-16\sin4\ge4$. On $[3\pi/2,2\pi]$, $B_0(z)\ge6$.
+The derivative at $2\pi$ is zero. The derivative jump at $4$ has the
+correct sign because $258\sin4+119(1-\cos4)>0$. Its exact lower bound is
+obtained by replacing sine by its degree-fifteen Taylor lower bound and
+cosine by $P_{16}$. The same scalar checker verifies this rational
+inequality and the needed $25/8<\pi<22/7$ by Machin's formula.
+
+To apply the profile, weight the distribution of $X-X'$ by
+$(X-X')^2/2$. This is a probability measure whose first absolute moment
+is $\rho+\eta$. Jensen's inequality gives, for $u\ge0$,
+\[
+ |f(u)|^2=\E\cos(u(X-X'))
+ \le1-2u^2q(u(\rho+\eta)).
+\]
+If $\rho+\eta\le D$, monotonicity permits $D$ on the right. Thus the
+linear part gives $1-u^2+2\kappa Du^3$; when $4\le Du\le2\pi$ the
+curved part gives $1-2A_0(1-\cos(Du))/D^2$.
+Take the minimum with one and with the coordinate-disk estimate from
+Lemmas~\ref{ext:fourier-anchor}--\ref{ext:fourier-surrogate}. The upper
+square of a real interval is the larger of the squares of its two
+endpoints, even when that interval crosses zero or lies below it.
+
+\subsection{From characteristic functions to the CDF}
+\label{ext:finite-fourier-transfer}
+We use Prawitz's smoothing inequality in the form recorded in
+I.~Shevtsova, \emph{Annales Mathematicae et Informaticae} 39 (2012),
+Lemma~4.1, p.~263. For $n\ge2$, $c>0$, $0<\tau\le1$, put
+\[
+ K_2(t)=(1-t)+i\{(1-t)\cot(\pi t)+1/\pi\},\qquad 0<t<1.
+\]
+With $T=c\sqrt n$, that inequality gives
+\begin{align*}
+ \Delta_n\le{}&\int_0^\tau |K_2(t)|
+   |f(ct)^n-e^{-nc^2t^2/2}|\,dt
+ +\int_\tau^1|K_2(t)|\,|f(ct)|^n\,dt\\
+ &+\int_0^\tau|K_2(t)-i/(\pi t)|e^{-nc^2t^2/2}\,dt
+ +\frac1\pi\int_\tau^\infty e^{-nc^2t^2/2}\frac{dt}{t}.
+\end{align*}
+Our standardized iid laws satisfy its independence, centering and positive
+total-variance hypotheses. The cited convention uses a strict CDF.
+Continuity of $\Phi$ makes the supremum identical for closed CDFs: take
+one-sided limits at each evaluation point. Thus atoms require no smoothing
+of the original law.
+
+For $g(u)=e^{-u^2/2}$ and envelopes $m\ge|f|$, $E_0\ge|f-g|$,
+the first integrand uses
+$|f^n-g^n|\le\min\{E_0\sum_{j=0}^{n-1}m^jg^{n-1-j},m^n+g^n\}$.
+Every literal integer $n$ is evaluated separately. The original $20$--$24$ integral verifier
+covers $[\epsilon,\tau]$ and $[\tau,1-\epsilon]$ by closed cells,
+where $\epsilon=1/1024$; its numerical parameter domain is
+$0<c<\pi$ and $\epsilon<\tau\le3/10<1-\epsilon$.
+In particular $c\tau<1$ licenses the stable low-frequency Taylor bounds.
+On a cell of width $w$ and midpoint $t_0$,
+it uses either $w\sup F$ or
+$w\{F(t_0)+w^2\max(0,\sup F'')/24\}$ for a fixed smooth majorant
+$F$. The latter follows by Taylor expansion and integration; a failed
+derivative-domain guard triggers the former bound on the entire cell.
+Switching branches at a sampled midpoint would not justify this rule.
+
+For the omitted endpoint pieces, the respective upper bounds are
+\begin{align*}
+ L_\epsilon&=n\left[
+ \frac{rc^3}{6}\left(\frac{\epsilon^4}{4}
+       +\frac{\epsilon^3}{3\pi}\right)
+ +\frac{c^4}{8}\left(\frac{\epsilon^5}{5}
+       +\frac{\epsilon^4}{4\pi}\right)\right],\\
+ N_\epsilon&=\epsilon+\pi\epsilon^2/2,\qquad
+ H_\epsilon=\epsilon^2/2+\pi\epsilon^3/3.
+\end{align*}
+They follow from $|K_2(t)|\le1+1/(\pi t)$ near zero, cubic Taylor
+error for $f$, $e^{-u^2/2}-1+u^2/2\le u^4/8$, and
+\[
+ 0\le1/x-\cot x\le\frac{x}{3(1-x^2/6)}\le x\quad(0<x\le1).
+\]
+For this last estimate use
+$\sin x-x\cos x=\int_0^x t\sin t\,dt\le x^3/3$ and
+$\sin x\ge x-x^3/6$. Apply the same identity with $1-t$ near one.
+Finally the infinite Gaussian term is at most
+$e^{-nc^2\tau^2/2}/(\pi nc^2\tau^2)$, by
+$\int_a^\infty e^{-v}v^{-1}\,dv\le e^{-a}/a$.
+For a strip $\rho\in[\ell,r]$, multiply the full four-term bound by
+$\sqrt n/\ell$, with outward enclosures. A complete closed strip cover
+and a strict rational comparison then establish the claimed CDF bound.
+
+
+\subsection{Sharper scalar bounds for the same integrals}
+\label{ext:finite-fourier-scalars}
+For $a>0$ write $E_1(a)=\int_a^\infty e^{-v}v^{-1}\,dv$.
+Integration by parts, followed by Jensen's inequality for the convex
+function $t\mapsto(a+t)^{-2}$ and an exponential random variable of mean
+one, gives
+\[
+ E_1(a)=\frac{e^{-a}}a-e^{-a}\int_0^\infty
+                \frac{e^{-t}}{(a+t)^2}\,dt
+ \le e^{-a}\left(\frac1a-\frac1{(a+1)^2}\right).
+\]
+The last Gaussian term in Prawitz's inequality is $E_1(a)/(2\pi)$,
+where $a=nc^2\tau^2/2$. This improvement has no additional moment or
+support hypothesis.
+
+Some small-index certificates require $\tau>3/10$. Their low-frequency
+range is still controlled explicitly. Put $U=6/5$. On $0\le x\le U$,
+the alternating sine bounds and integration give
+\[
+ \sin x\ge x\left(1-x^2/6+x^4/120-x^6/5040\right),\qquad
+ 0\le\sin x-x\cos x\le x^3/3-x^5/30+x^7/840.
+\]
+The denominator below is at least $1-U^2/6-U^6/5040>0$, and the
+numerator factor is at least $1/3-U^2/30>0$. Consequently
+\[
+ 0\le1/x-\cot x\le L(x):=
+ \frac{x(1/3-x^2/30+x^4/840)}
+      {1-x^2/6+x^4/120-x^6/5040},
+ \qquad L(0)=0.
+\]
+It follows that
+\[
+ |K_2(t)-i/(\pi t)|
+ \le(1-t)\sqrt{1+L(\pi t)^2}
+ \quad(0<t\le19/50).
+\]
+At the high endpoint put $s=1-t$. The identity
+$K_2(t)=s+i\,s(1/(\pi s)-\cot(\pi s))$ gives
+$|K_2(t)|\le s\sqrt{1+L(\pi s)^2}$ for $t\ge3/4$.
+The rational upper bound $\pi<22/7$ implies
+$\pi(19/50)<6/5$ and $\pi/4<6/5$.
+The numerical quadrature must therefore declare
+$\epsilon<\tau\le19/50<1-\epsilon$, $c<\pi$, and $c\tau\le6/5$.
+It differentiates the displayed smooth rational majorant on whole cells;
+it does not differentiate an interval-selected minimum.
+
+The cancellation series on this larger range also have explicit tails.
+Truncate the even series for cosine and $e^{-u^2/2}$ at degree twenty.
+For their difference, the error in each $t$ derivative of order
+$j=0,1,2$, with $u=ct\in[0,U]$, is at most
+\[
+ \frac{2(22)_j c^j u_{\max}^{22-j}}{2^{11}11!}.
+\]
+Indeed, for terms of Gaussian index $k\ge11$, the ratios of consecutive
+absolute derivative terms are bounded respectively by
+\[
+ \frac{U^2}{2(k+1)},\qquad \frac{U^2}{2k},\qquad
+ \frac{U^2(2k+1)}{2k(2k-1)}.
+\]
+All decrease with $k$ and are less than $1/8$ at $k=11$.
+The cosine ratios are
+$U^2/\{(2k+2-j)(2k+1-j)\}<1/8$.
+The first cosine tail is $2^{11}11!/22!<1/4$ times the first Gaussian
+tail, for every $j$. Summing both geometric tails gives a factor less
+than $(1+1/4)/(1-1/8)=10/7<2$.
+Uniform absolute convergence justifies these differentiations.
+For the removable function $2(\cos u-e^{-u^2/2})/u^3$, divide the series
+symbolically, so its value tail is bounded by
+$4u_{\max}^{19}/(2^{11}11!)$ and its value at zero is obtained directly
+from the series. No numerical division by a nearly zero frequency is
+needed.

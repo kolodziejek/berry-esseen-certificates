@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+    "-I",
+    "-B",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/extension_release_20261030/tools/evidence_pack_v2.py",
+    "build",
+    "--workspace",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff",
+    "--inventory",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/extension_release_20261030/manifests/EVIDENCE_FINAL_FILES_20261104_V1.json",
+    "--output",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/extension_release_20261030/assets/evidence-final01"
+  ],
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff",
+  "input_sha256": {
+    "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12": "50a1e90abbf1d2d2d072682189efc9937f14b93f0cf71370dbe6f8c58e835e3b",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/extension_20261104/foundations/evidence-final-package01/capture_pack.py": "4b109388afb0e0d5adad6921f126024adad0731977782b48a56318c0f2b22b0c",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/extension_release_20261030/manifests/EVIDENCE_FINAL_FILES_20261104_V1.json": "afeb27f053ec4c1764f4930dc0bffc85224d4d57c3087c349a786366bfaeee1c",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/extension_release_20261030/tools/evidence_pack_v2.py": "58ad9d8a3ebd909729b3ddbd074e51d992138adf6049bfd6270d5b40b584fc63"
+  },
+  "mathematical_acceptance_claimed": false,
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]"
+}

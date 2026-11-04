@@ -1,0 +1,50 @@
+\subsection{Organization and notation}\label{ms:guide}\label{ms:notation}
+Section~\ref{v9:core:section} gives attainment, contact and reflection.
+The next two sections develop the defect and the conservation identity.
+These are the shared analytic tools. The remaining argument has two routes.
+The compact route in Sections~\ref{v9:entry:section}--\ref{short:count:section}
+gives strict exclusion at $n\ge700$ from a sharp predecessor.
+The extension supplies a finite induction and a different local comparison
+that applies at a first strict failure below that threshold as well.
+
+For the logic of the extension, read the one-step estimate in
+Section~\ref{ext:smoothing} and the first-failure argument in
+Section~\ref{ext:bridge} before the numerical tables. Their conclusion
+requires a sharp base through $42$ and two local exclusions.
+Section~\ref{ext:starting-cases} treats the first four indices;
+Sections~\ref{ext:finite-counts}--\ref{ext:floor40} describe the finite
+induction through $42$. Section~\ref{ext:local-engine} explains the two
+local exclusions. The continuous estimates and full numerical interfaces
+are in the appendices. The assembly criteria state the numerical premises
+explicitly, so each can be matched to its reproduction record.
+
+Two optimization problems are used. The finite induction maximizes the
+ratio, with attained score $C=C_n$. The compact tail argument maximizes
+the excess above the fixed coefficient $c=\CE$. Both give contact,
+but their excesses and normalization differ; Corollary~\ref{ext:ratio-attainment}
+records the precise relation. Neither route changes the marginal law
+while acquiring its successive bounds.
+
+The following table distinguishes the three scales used in the proof.
+Gap-specific parameters are introduced after the existence of a central
+gap has been established.
+\begin{center}\small
+\begin{tabular}{@{}P{.27\linewidth}P{.66\linewidth}@{}}
+\toprule
+Symbol & Meaning and scale \\
+\midrule
+$H$, $H/\sqrt n$ & Threshold for the original sum; its normal-standardized value. \\
+$B_0=\ind_{\{X>0\}}$, $p,q$ & Sign class and its probabilities for the original marginal. \\
+$m$, $\ell=m/(pq)$ & $m=\E X_+=\E X_-$; distance between conditional means. \\
+$W$, $\theta=\E W^2$ & $W=X-\E(X\mid B_0)$; conditional noise in original units. \\
+$U=W/\ell$, $s=\E U^2$, $\lambda=ns$ & Noise in count units; marginal and total noise variances. \\
+$t=np+H\sqrt{pq+s}=k+u$ & Count threshold, integer anchor, and phase. \\
+$a_0,a_1$, $d=a_0+a_1$ & Inward support displacements in count units. \\
+$J$, $D$ & Weighted support-gap sum and defect of the original law. \\
+\bottomrule
+\end{tabular}
+\end{center}
+The exact normalization is proved in \eqref{ms:bernoulli-coordinates}.
+It identifies the count-coordinate law with the original $X$ and leaves
+$H$ as its raw sum threshold. The signed moments are
+$\gamma=\E X^3$ and $\beta=\E[X|X|]$.

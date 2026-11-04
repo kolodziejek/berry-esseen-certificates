@@ -1,0 +1,97 @@
+\clearpage
+\section{The sharp inequality and strictness above the finite range}
+\label{short:composition}
+
+\begin{theorem}[The sharp iid Berry--Esseen inequality]
+\label{short:global}
+Let $X_1,X_2,\ldots$ be independent copies of a random variable with
+$\E X_1=0$, $\E X_1^2=1$ and $\rho=\E|X_1|^3<\infty$.
+For every integer $n\ge1$,
+\[
+ \sup_{H\in\R}\left|
+ \Pp\!\left(\sum_{i=1}^nX_i\le H\right)-\Phi(H/\sqrt n)
+ \right|\le\frac{\CE\rho}{\sqrt n},
+ \qquad \CE=\frac{3+\sqrt{10}}{6\sqrt{2\pi}}.
+\]
+Equivalently, $C_n\le\CE$ for every $n\ge1$. Moreover,
+$C_n<\CE$ for every $n\ge700$, and $\sup_{n\ge1}C_n=\CE$.
+\end{theorem}
+
+\begin{proof}[Proof of the upper bound]
+The small-index comparisons and the finite induction establish
+$C_j\le\CE$ for $1\le j\le42$; their complete numerical checks
+and same-law input joins are recorded in
+Appendix~\ref{revision:reproducibility}. Suppose that the upper bound
+fails, and choose the least index $n$ with $C_n>\CE$.
+Then $n\ge43$, both deleted predecessors are sharp, and
+Corollary~\ref{ext:first-failure-entry} gives
+\[
+ 0<n(C_n-\CE)<\frac{3003}{10250}<\frac3{10},\qquad
+ C_n<\frac{73}{175}<\frac{4226}{10000},\qquad
+ n(C_{n-1}-C_n)_+=0.
+\]
+Since $\CE<41/100<4253/10000$, both deleted-predecessor ceilings
+also hold. These bounds are stronger than the hypotheses of the finite local exclusion
+when $43\le n\le48$, and of the uniform local exclusion when
+$n\ge49$. Propositions~\ref{ext:local42-input} and
+\ref{ext:local47-input} exclude both alternatives. Thus the upper
+bound holds at every index. This is the first-failure composition
+of Theorem~\ref{ext:bridge-composition}.
+\end{proof}
+
+The weak upper bound already proves the conjectured inequality.
+The compact fixed-target comparison supplies the stated strictness.
+We give the interface explicitly because it uses a different
+optimization problem from the finite induction.
+
+\begin{theorem}[Exclusion of a nonnegative-excess maximizer]
+\label{short:acquired-exclusion}
+Let $n\ge700$ and suppose $C_{n-1}\le\CE$. No pair $(P,H)$
+attaining the fixed-target maximum at $\CE$ has $a(P,H)\ge0$.
+\end{theorem}
+\begin{proof}
+The structural inequality~\eqref{v9:entry:structural} and
+Theorem~\ref{v9:entry:theorem} give $nD\le32.20665378$ and
+$|H|\le1.83605680$ for the same compactly supported law.
+Propositions~\ref{short:acq:geometry} and \ref{short:acq:strip}
+then give a central gap and the bounds below. In
+\eqref{revision:canonical-decomposition}, identify the local theorem's
+$B$ with $B_0=\ind_{\{X>0\}}$. The variable
+$(B+U-p)/\sqrt{pq+s}$ is exactly the original $X$, and $H$ remains
+its raw sum threshold.
+\begin{center}\small
+\begin{tabular}{@{}P{.49\linewidth}P{.44\linewidth}@{}}
+\toprule
+Bound just obtained & Hypothesis of Theorem~\ref{short:count:local} \\
+\midrule
+$3/8<p<93/200$ & $p\in[3/8,93/200]$ \\
+$a_0,a_1\ge0$, $a_0+a_1<1/250$ & Nonnegative inward endpoints, sum at most $1/250$ \\
+$-3/5<U_0\le a_0$, $-a_1\le U_1<3/5$ & The stated closed conditional-support bounds \\
+$0\le\lambda<7/20$ & Positive-noise interval or separate zero-noise case \\
+$|H|\le1.83605680<46/25$ & The full threshold interval \\
+Independent copies of $X$ & The iid sum in the local comparison \\
+\bottomrule
+\end{tabular}
+\end{center}
+Positive noise gives $a(P,H)<-\lambda/100$. At zero noise the law
+is Bernoulli, so Schulz's strict finite-binomial bound gives
+$a(P,H)<0$. Both contradict $a(P,H)\ge0$.
+\end{proof}
+
+\begin{proof}[Proof of strictness and sharpness in Theorem~\ref{short:global}]
+The proved upper bound supplies $C_{n-1}\le\CE$ for every $n\ge700$.
+If $C_n\ge\CE$, fixed-target attainment and reflection give a
+maximizer with $a\ge0$, contrary to the preceding theorem.
+Hence $C_n<\CE$ for $n\ge700$.
+Finally, Esseen's fixed skew-Bernoulli limit
+\eqref{ms:bernoulli-limit} gives $\sup_n C_n\ge\CE$.
+Together with the upper bound, this proves equality for the global
+supremum.
+\end{proof}
+
+The two local comparisons have different purposes. The first-failure
+comparison proves the weak bound at every index; the compact comparison
+excludes equality from $700$ onward. Neither argument assumes that
+an unrestricted extremizer is a two-point law. The certificates verify
+inequalities on whole parameter regions for the original marginal,
+after the analytic acquisition of those regions.

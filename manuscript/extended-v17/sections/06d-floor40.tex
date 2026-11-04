@@ -1,0 +1,301 @@
+\section{The three indices preceding the uniform local range}
+\label{ext:floor40}
+
+The local argument at $n=40,41,42$ uses the same contact, Fourier and
+conditional-count identities as Section~\ref{ext:local-engine}. There are
+two extra issues. A bound computed with index $40$ must remain valid at
+the actual index, and a signed correction divided by $n$ cannot always
+be enlarged by replacing $n$ by $40$.
+
+Suppose that $40\le n\le42$ is a first strict failure above a sharp base
+through $39$. The recurrence of Theorem~\ref{ext:one-step} gives
+\[
+ 0<n(C_n-\CE)<\frac{40}{39}
+ \left(\frac{41}{200}+\frac{17}{250}+\frac{17}{1250}\right)
+ =\frac{1433}{4875}<\frac3{10},\qquad C_n<\frac{167}{400}<.4226.
+\]
+Here $\sqrt{n/(n-1)}<51/50$ and $\sqrt{n-1}>6$ were used.
+Both deleted constants are at most $\CE<.4253$ and the predecessor loss
+is zero. In particular all bounds remain valid if the local estimates
+use the weaker excess allowance $.54/n$ and deletion allowance $.19$.
+
+\subsection{Why a computation at floor 40 can be reused}
+
+The invariant on one fixed actual law is
+\begin{equation}\label{ext:floor40-invariant}
+ \mathcal R_{\mathrm{actual}}\le r,\qquad nD_{\mathrm{actual}}\le40d.
+\end{equation}
+The second inequality implies $D_{\mathrm{actual}}\le d$, which may be
+used in index-free moment and endpoint bounds. Its converse is not used.
+Every contact update bounds $\kappa nD$ by a phase budget $B$, where
+$\kappa=997/15000$, and therefore exports $d=B/(40\kappa)$.
+A negative budget excludes the law. Taking minima with established
+bounds or maxima over a complete cover preserves this invariant.
+
+For example, suppose the joint resource gives
+\[
+ D\ge b+6(1-\theta)(A+B)d_{\rm in}+K\theta,
+ \qquad b,K\ge0,
+\]
+and $\theta\le\Theta<1$, $pq\le v_+$. Since
+$\lambda=npq\theta/(1-\theta)$, multiplication by $n$ yields
+\[
+ 40(d-b)\ge40(1-\Theta)6(A+B)d_{\rm in}
+            +\frac{K(1-\Theta)}{v_+}\lambda.
+\]
+This proves the saved joint intercepts for the actual noise $\lambda$.
+On a noise band $[a,b']$, the further simultaneous restrictions are
+\[
+ d_{\rm in}\le d_0(1-a/\Lambda),\qquad
+ \theta\le\min\left\{\Theta,\frac{b'}{40v_-+b'}\right\}.
+\]
+No different law is selected when one of these bounds improves another.
+If a saved harmonic geometry bound has the form
+\[
+ \theta\le\left(1+\frac{nv_-}{\Lambda}
+                   +\frac{v_-}{B_0d_0}\right)^{-1},
+ \qquad B_0,d_0,\Lambda>0,
+\]
+its value at $40$ is an upper bound. This substitution bounds $\theta$;
+the actual count noise remains $\lambda=npq\theta/(1-\theta)$.
+
+The nonnegative Fourier error coefficients decrease with the actual
+index. The low-frequency factors are products and sums of
+$(n/(n-1))^{3/2}$, $(n-1)^{-1}$, $n^{-1/2}$ and inverse powers of
+$(n-1)/(2n)$ and $(45-M)(1-2/n)/96$. The latter bases are positive
+and increasing on their retained domains. For the high-frequency
+terms, $\sqrt n e^{-cn}$ decreases when $2\cdot40c>1$; the other
+factors are $n^{-1}$, $e^{-knb^2}/\sqrt n$ and the positive decreasing
+Mills bound $(x+2)/(x^2+4x+2)$.
+The optional product $\sqrt x e^{-x}(x+2)/(x^2+4x+2)$ decreases for
+$x\ge1/4$: the numerator of its logarithmic derivative, after
+multiplication by a positive denominator, is
+$4-10x-22x^2-13x^3-2x^4<0$ there. Each use retains its executable
+positivity and domain gates.
+
+The density lower bound $\phi(0)(1-5r/80)$ remains valid later.
+Signed coefficients are minimized over the whole density interval;
+in particular the paired curvature is
+\[
+ C\rho+\frac12\min\{\phi_lg_0,(2/5)g_0\},
+ \qquad g_0=(79/25)\rho-3-d.
+\]
+This is increasing with $\phi_l$ if $g_0\ge0$, and constant at the
+upper-density endpoint otherwise. This verifies the sign-dependent
+direction of the floor substitution. The positive conserved phase
+price and both signed linear endpoints are retained.
+The general, unpaired curvature has lower-density derivative
+$(g_0+(d-4/25)_+)/2\ge0$: for $d\le4/25$ one has
+$g_0\ge4/25-d$, and otherwise the numerator is
+$(79/25)(\rho-1)$. The conserved addition has coefficient
+$(.4095\rho-d/15)(1-5r/80)/2>0$ on each admitted cell.
+The own-score numerator
+\[
+ \frac r{40}-\phi_{0,l}(1-5r/80)\frac{D_l}{6}
+\]
+also bounds its actual-index counterpart when $r,D_l\ge0$.
+For a strict failure, the additional sharp-score charge satisfies
+\[
+ n(C-\CE)\rho\ge40\max\{0,C-.40974\}\rho_l.
+\]
+Indeed $\CE<.40974$, and each replacement decreases a nonnegative
+factor on the part where $C>.40974$. The score cover includes that
+breakpoint. The charge is affine on either side; hence the coherent
+$(C,\rho)$ corner argument still applies before maximizing over the
+threshold. These statements concern the zero-barrier sharp target.
+
+The first support proof is evaluated separately on the full band
+$40\le n\le42$, with zero loss and radius $96/25$. Its favourable
+fifth-derivative term uses the upper endpoint $42$; the value at index
+$40$ alone would not suffice. Every later left radius contraction
+also carries this two-endpoint proof. In the central contact expansion,
+all index-dependent error numerators are nonnegative after taking
+positive parts, so their values at $40$ bound their later values.
+The already acquired support closes the exterior of every such expansion.
+In particular its complete cell bound is
+\[
+ L_P+\frac{.54Q_+}{n}
+ +.4\left(\sum_{j=1}^5\frac{M_j}{n^j}+\frac{T}{n^6}\right)
+ +\rho\left(\sqrt{\frac n{n-1}}\delta_n+
+                          \frac{.384(.4226)}n\right),
+\]
+where $Q_+,M_j,T\ge0$, $L_P$ is independent of $n$ and may be
+negative, and $\delta_n\le.19$. Every positive term is bounded by
+its value at $40$. This discards favourable Gaussian terms and is
+therefore distinct from the two-endpoint initial support polynomial.
+
+For concentration, $\sqrt{\max\{(40/39)^3,40/38\}}$ bounds both
+deletion factors. The binomial mode interval at $n-2$ is contained in
+the wider interval at $38$. The positive inverse-index errors increase
+when evaluated at $40$. A retained negative penalty is kept outside
+this substitution: an expression $(zr+\mathrm{Dist})/n-zP$ uses
+$zr+\mathrm{Dist}\ge0$ and keeps $-zP$ unchanged. For $d\ge0$,
+$\tau>0$, its bad-pair factor satisfies
+\[
+ \frac{d}{n\tau+d}\le\frac{d}{40\tau+d}
+ \le\frac{40\tau}{(40\tau+s)^2}d+
+       \frac{s^2}{(40\tau+s)^2}\qquad(s\ge0),
+\]
+the tangent bound for a concave function. Thus the same actual
+moment/noise triangle and every positive-width and signed derivative
+gate license the confinement and its feedback at all three indices.
+
+Here the numerical constants in the confinement proof of
+Section~\ref{conf:re:confinement} are parameters. More precisely,
+replace its floor $47$ by $N\ge40$, its initial strip $.55$ by a
+number $w\in(0,1)$, and its conditional cubic coefficient by
+$c_\rho>0$. Retain a probability panel $[l,h]\subset(0,1/2)$ and assume
+\[
+ \operatorname{supp}Y\subset(-w,1+w),\quad d_0<w,
+ \quad c_\rho^2[l(1-l)]^3>[3(1-l)+w]^2.
+\]
+The strip and the inward bounds $U_0\le d_0$, $U_1\ge-d_0$
+together give $|U_i|<w$. The displayed conditional cubic identity gives
+$\rho\le\rho_B+\ell^3(3q+w)s\le\rho_B+c_\rho s$.
+Use $J_0=N-2$ for the binomial mode interval and the deletion factor
+$\sqrt{\max\{(N/(N-1))^3,N/(N-2)\}}$. In the interval geometry
+use $g=1-w-2d_0>0$ and $r\le w+d_0$; in the upper contradiction
+use $L_g-wU_+>\mathcal E$. The other width, disjointness,
+positive-slope and budget gates are unchanged. These substitutions
+follow directly through the proof: $w$ enters only the conditional
+cubic bound and the endpoints of the known strip, while the index
+enters only the decreasing factors already bounded above. They
+therefore prove the same confinement implication whenever all the
+resulting gates pass.
+
+The central sequence uses $N=40$, $w=.55$ initially and
+$c_\rho=24$. The left rows start with their separately acquired
+strip $w\in\{.55,.575,.6\}$ and use $c_\rho=30$. After a strict
+contraction, the proved amplitude becomes the next strip width.
+Thus every later use has an already established strip, and the
+left sequence does not assume the narrower uniform-tail strip.
+
+\subsection{The full acquired domain and its local cover}
+
+The initializer covers the whole moment range from $\rho=1$ to the
+Shevtsova upper cap, not merely a low-moment subinterval. Its fourteen
+refinements and final export each cover all signed second and third
+moments and the common first moment; its probability table has 100
+closed cells. The left acquisition covers its 38 cells below $.38$,
+refines all twelve surviving cells into sixty children and excludes
+the first eleven children. The remaining 49 rows cover $[.282,.38]$.
+The central acquisition covers the other 62 coarse cells, excludes
+every cell above $.48$, and refines $[.38,.48]$ into fifty children;
+the final two children are excluded. Its 48 remaining rows cover
+$[.38,.476]$. Thus the probability and moment complements are part of
+this acquisition itself.
+
+Each local row uses the same-law joint resource and both signs of the
+raw threshold. Zero noise is covered by the Bernoulli theorem. At
+positive noise, nearest-count and whole-count witnesses come from
+the common exact identity~\eqref{ext:local-count-identity}.
+The central phase cover is
+\[
+\begin{array}{c|c|c}
+ \lambda&\text{nearest-count phase}&\text{whole-count phase}\\
+ (0,.05]&\text{all}&--\\
+ {[.05,.08]}&\text{all}&--\\
+ {[.08,.10]}&|u|\ge.19&|u|\le.19\\
+ {[.10,.12]}&|u|\ge.27&|u|\le.27\\
+ {[.12,\Lambda]}&--&\text{all}.
+\end{array}
+\]
+The left rows require a different cover:
+\[
+\begin{array}{c|c|c}
+ \lambda&\text{nearest-count phase}&\text{whole-count phase}\\
+ (0,.05]&\text{all}&--\\
+ {[.05,.0925]}&\text{all}&--\\
+ {[.0925,.10]}&|u|\ge.16&|u|\le.16\\
+ {[.10,.12]}&|u|\ge.25&|u|\le.25\\
+ {[.12,.135]}&u\le-.27&-.27\le u\le.5\\
+ {[.135,\Lambda]}&--&\text{all}.
+\end{array}
+\]
+Every band is intersected with the row's acquired $\Lambda$ and all
+seams are closed. The actual computations further split noise into
+intervals of width $1/400$ and phase into intervals of width $1/1000$
+where needed. The full-count families have 70 central signed rows and
+82 left signed rows; the other rows end below the respective starting
+noise levels and are already covered by the nearest-count tests.
+
+At these three finite indices the proof uses a positive lower bound
+$\epsilon_p$ for $\min_{n=40,41,42}(\CE-C^{\rm bin}_{n,p})$,
+uniform on its probability cell.
+The complete binomial check covers $p\in[.28,.48]$, both discrepancy
+signs and every count at each actual index. A signed inverse correction
+$I$ is bounded by
+\[
+ I/n\le\max\{I/40,I/42\}.
+\]
+For normalized mass $b=\sqrt n\pi_k\in[b_0,1]$, a bracket $J$ of either sign is
+bounded above by $\max\{b_0J,J\}$. These replacements explain why
+this finite comparison is not an unrestricted floor-40 theorem.
+They also give the finite-slack version of the whole-count test.
+Suppose $S$ bounds $\rho_B(C-C_B)/\lambda$ on a closed noise
+band $[a,b]$ with $a>0$, and $\rho_B\ge\rho_{B,l}>0$.
+It is enough to check
+\[
+                  S<\rho_{B,l}\epsilon_p/b.
+\]
+If $S<0$, then $C<C_B$; otherwise multiplication by
+$\lambda\le b$ gives $C<C_B+\epsilon_p\le\CE$.
+The saved full-count formulas have a bracket affine in $\lambda$
+plus a positive multiple of $(\alpha\lambda+\beta)^{-1}$,
+and an inverse correction that is constant plus a nonnegative
+multiple of $1/\lambda$. The two sign-sensitive maxima above
+preserve convexity. Thus their values at the two noise endpoints
+bound the entire band. The finite check may use positive binomial
+slack even where strict comparison with $C_B$ itself is unavailable.
+For the nearest-count comparisons, the entropy segment
+$p\pm\delta/40$ contains the actual segment $p\pm\delta/n$.
+All log-factorial, variance and ratio errors have positive numerators.
+The signed Gaussian derivative factors have the forms
+$1-A_n/n$ and $(1-\eta_n/n)^{-1}$, with
+$0\le A_n\le A_{40}$ and $0\le\eta_n\le\eta_{40}<40$.
+Thus the lower bound for the first and upper bound for the second
+are valid at the floor. Their phase and threshold domains and the
+gate $40pq>\delta^2$ are retained. A signed cubic correction is
+minimized over its whole positive multiplier interval before it is
+used in a lower repair bound; its sign is not discarded by changing
+the index.
+
+The finite binomial slack itself has a direct one-dimensional proof.
+On a probability cell $[a,b]\subset(0,1/2)$ put
+$F_j(p)=\Pr(\operatorname{Bin}(n,p)\le j)$ and
+$z_j(p)=(j-np)/\sqrt{np(1-p)}$. Both functions decrease with $p$,
+while $\sqrt{np(1-p)}/(1-2p(1-p))$ increases. Therefore both jump
+sides of the normalized discrepancy are bounded by
+\[
+ \frac{\sqrt{nb(1-b)}}{1-2b(1-b)}
+ \max\{F_j(a)-\Phi(z_j(b)),\,
+        \Phi(z_j(a))-F_{j-1}(b),\,0\}.
+\]
+Here $F_{-1}=0$. Taking every $j=0,\ldots,n$ covers all thresholds,
+because between jumps the distribution function is constant and
+$\Phi$ increases. Each of the 100 probability panels is divided
+into 128 closed subcells. The binomial probabilities at the endpoints
+are exact rational numbers. On $|z|\le5$, an integrated degree-158
+Taylor polynomial for $e^{-z^2/2}$ with its explicit next-term
+integral remainder $|z|^{161}/(2^{80}80!161)$ encloses $\Phi$
+after multiplication by $\phi(0)$; outside this interval the proved Mills
+bound is $3\cdot10^{-7}$. Directed integer square roots and a rational
+Machin enclosure for $\pi$ complete the enclosure. Subtracting these
+upper scores from a rational lower bound for $\CE$ gives the saved
+positive $\epsilon_p$ with both atom conventions included.
+
+\paragraph{Binding the actual inputs.}
+The comparison's amplitude profiles are the exact rational-string
+acquisition object, renamed \texttt{profiles.json}; their complete bytes
+must agree with \texttt{profile\_candidate.json}. The same source binding
+is checked for the probability targets and for every actual-index
+binomial table. Thus the numerical comparisons consume the data already
+proved for the same marginal.
+
+\paragraph{Numerical completion.}
+The finite conclusion requires the ten fresh acquisition actions,
+the separate indexed support check, all nine companion checks, all
+152 full-count rows with their separate arithmetic replays and two
+complete binders. The numerical
+status of these branches is recorded separately; source identities and
+historical success fields do not supply any of these inequalities.

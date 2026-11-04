@@ -1,0 +1,154 @@
+\section{The finite-frequency sine bound used at indices 26--30}
+\label{ext:finite-sine}
+Let the positive and negative support magnitudes lie in
+$[a_+,R_+]$ and $[a_-,R_-]$, respectively. Assume
+\[
+ 0<A\le a_+^2+a_-^2,\qquad
+ B\ge R_+^2+R_-^2,\qquad M\ge\max(R_+,R_-).
+\]
+Put $R(u)=1-Au^2(1-Bu^2/42)/20$.
+For $u\ge0$, $Mu\le\pi$ and $Bu^2\le42$,
+\begin{equation}\label{ext:finite-sine-bound}
+ |\Im f(u)|^2\le(\rho^2-\zeta^2)u^6R(u)^2/36.
+\end{equation}
+In particular $R(u)\ge1-21A/(40B)\ge19/40$.
+Outside these frequency gates the ordinary sine-circle inequality
+remains available.
+
+Here is a proof retaining the same marginal. Write
+$\operatorname{sinc}t=\int_0^1\cos(vt)\,dv$. For $u\sqrt z\le\pi$,
+\[
+ 0\le-\frac{d}{dz}\operatorname{sinc}(u\sqrt z)
+ =\frac{u^2}{2}\int_0^1v^2\operatorname{sinc}(uv\sqrt z)\,dv
+ \le\frac{u^2}6-\frac{u^4z}{60}+\frac{u^6z^2}{1680}.
+\]
+The upper bound follows by integrating the global polynomial
+$\operatorname{sinc}t\le1-t^2/6+t^4/120$; nonnegativity follows
+from $0\le uv\sqrt z\le\pi$.
+Integrating between $a^2$ and $b^2$ gives
+\[
+ |\operatorname{sinc}(au)-\operatorname{sinc}(bu)|
+ \le\frac{|a^2-b^2|u^2}{6}
+ \left(1-\frac{(a^2+b^2)u^2}{20}
+       +\frac{(a^4+a^2b^2+b^4)u^4}{840}\right).
+\]
+The last bracket is at most $R(u)$, since
+$a^4+a^2b^2+b^4\le B(a^2+b^2)$ and
+$1-Bu^2/42\ge0$. At $a=b$ use the undivided inequality.
+
+For the centered two-point law at $a,-b$, put
+\[
+ e_{a,b}=\frac{2a^2b^2}{a+b},\quad
+ r_{a,b}=\frac{ab(a^2+b^2)}{a+b},\quad
+ h_{a,b}=\frac{abu}{a+b}
+       \{\operatorname{sinc}(au)-\operatorname{sinc}(bu)\}.
+\]
+The identity $(2ab)^2+(a^2-b^2)^2=(a^2+b^2)^2$ gives
+$\|(e_{a,b},6h_{a,b}/(u^3R(u)))\|_2\le r_{a,b}$.
+Integrate against the exact centered two-point mixture from the
+ordinary sine-circle proof. The three integrals are $\zeta$, $\rho$
+and $\Im f(u)$, respectively. The triangle inequality proves
+\eqref{ext:finite-sine-bound}. The case $u=0$ is immediate.
+
+For each of the $55$ acquired rows ($26\le n\le30$,
+$32\le j\le42$), retain its closed probability interval
+$[p_l,p_u]$, an actual-noise bound $s\le s_u$, and an upper
+bound $d>0$ on the inward sum $a_0+a_1$.
+The interface requires $d<p_l$, $d\le1-2p_u$ and
+\begin{equation}\label{ext:b1-support-map}
+ \frac{p_u^2+(1-p_u-d)^2}{p_u(1-p_u)+s_u}\ge\frac{17}{10},
+ \qquad R_-^2+R_+^2\le\frac{1037}{100},
+ \qquad \max(R_-,R_+)\le\frac{13}{5}.
+\end{equation}
+Indeed the minimum of $(p-a_0)^2+(1-p-a_1)^2$ under
+$a_0,a_1\ge0$, $a_0+a_1\le d\le1-2p$ is
+$p^2+(1-p-d)^2$: use the full inward sum and differentiate in
+$a_0$, obtaining $2(1-2p-d)+4a_0\ge0$.
+This numerator decreases in $p$ on the retained interval, while
+$p(1-p)+s$ increases. Thus \eqref{ext:b1-support-map} gives the
+required standardized inner support sum. It licenses
+\eqref{ext:finite-sine-bound} with
+$A=17/10$, $B=1037/100$, $M=13/5$ on every row.
+
+\paragraph{A direct resource-to-sine map at indices $26$--$30$.}
+The three common constants in \eqref{ext:b1-support-map} follow
+directly from the acquired floor-$25$ resource.
+Write its original simultaneous intercepts as $d_0,L$, and its prices
+as $b,g,h$, so that
+\[
+ d_{\rm floor}-b=g d_0=hL>0,\qquad b\ge0.
+\]
+These identities are checked exactly against the exported residual;
+$L$ is the original joint intercept, even when another bound further
+clips the variance. The weighted resource implication gives
+\[
+ \frac n{25}(b+g\delta)+h\lambda_n\le d_{\rm floor},
+ \qquad
+ \frac n{25}\frac{\delta}{d_0}+\frac{\lambda_n}{L}\le1.
+\]
+The second inequality follows by subtracting $nb/25$, dividing by
+$d_{\rm floor}-b$, and using $n\ge25$. Therefore
+\[
+ \delta\le \delta_u:=\min\left\{\frac{25d_0}{n},
+                 \frac{25d_{\rm floor}/n-b}{g}\right\}.
+\]
+The bounded conditional supports give $s\le\mathcal B\delta$, where
+$\mathcal B=\max(O_0,O_1)\max(p_u,1-p_l)$ and $\lambda_n=ns$.
+Substitution in the joint plane yields
+\[
+ \lambda_n\le
+ \left\{L^{-1}+(25\mathcal B d_0)^{-1}\right\}^{-1}=:\lambda_u.
+\]
+This step uses one joint plane before optimizing. For all $55$ rows,
+the choices $d=\delta_u$ and $s_u=\lambda_u/n$ satisfy the two
+preceding gates and
+\[
+ \frac{p_u^2+(1-p_u-\delta_u)^2}
+      {p_u(1-p_u)+\lambda_u/n}>\frac{17}{10}.
+\]
+The smallest left side is greater than $1716/1000$ and occurs
+at $n=26$ on $P_{38}$. The same rows satisfy
+$R_-^2+R_+^2\le1037/100$ and $\max(R_-,R_+)\le13/5$.
+The actual-index support proofs and the full $100$-panel resource
+cover are checked separately. Thus the finite-sine majorant applies
+on every surviving panel. Its integral uses only these common
+constants and the rational moment and frequency intervals below.
+
+The symmetrization inputs admit a shorter derivation than the older
+special first-moment envelope. Since
+$(13/5)^2< (11/10)^2+8$, the general bounded-support inequality
+for $\eta$ gives $\eta\le b(\rho)$ throughout $[11/10,6/5]$,
+where $b(r)=(\sqrt{r^2+8}-r)/2$.
+The universal inequality $\zeta\ge b(\rho)$ was proved separately.
+Since $b$ decreases and $r+b(r)$ increases, on a strip $[r_l,r_u]$
+we may use simultaneously
+\[
+ \rho+\eta\le r_u+b(r_u),\qquad
+ \rho^2-\zeta^2\le r_u^2-b(r_u)^2.
+\]
+Rational brackets $z_l,z_u$ for $b(r_u)$ are checked by
+$z_l^2+r_uz_l\le2\le z_u^2+r_uz_u$ with $0<z_l\le z_u$.
+The integrator uses $r_u+z_u$ and $r_u^2-z_l^2$ in their indicated
+upper-bound directions. The value $z_u$ is not separately asserted
+to bound $\eta$ at the lower end of the strip.
+
+The selected $23$ closed strips cover $[11/10,6/5]$. All five
+actual indices are evaluated on each strip, giving $115$ complete
+four-term Fourier inequalities. The optional fourth-Taylor real
+endpoint and Lemma~\ref{ext:two-corners} are used only when their
+whole-cell gates hold. The remaining cells use a previously valid
+geometric-sum or direct interval bound.
+
+The implementation sometimes integrates the maximum of the two
+corner majorants more accurately. If $f_0,f_1$ are twice continuously
+differentiable on $[t_0-h,t_0+h]$, enclose their midpoint values above
+by $a_i$, their midpoint derivatives by $[d_i^-,d_i^+]$, and both
+second derivatives above by $C\ge0$. Taylor's theorem bounds the
+integral of their pointwise maximum by
+\[
+ \int_0^h\max_i(a_i+d_i^+x)\,dx
+ +\int_0^h\max_i(a_i-d_i^-x)\,dx+\frac{Ch^3}{3}.
+\]
+Each affine maximum has at most one crossing, found exactly. This
+bounds the maximum before integration and assumes nothing about
+how often the original smooth curves cross.

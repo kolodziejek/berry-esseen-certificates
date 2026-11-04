@@ -1,0 +1,72 @@
+{
+  "status": "PASS_REVISION_SCALAR_CHECKS",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "utc": "2026-10-29T19:42:23.057595+00:00",
+  "mathematical_scope": "Changed scalar identities and comparisons; continuous proofs remain in the text. No finite-base or full-conjecture acceptance.",
+  "checks": [
+    {
+      "name": "geometry",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/compact-v16/tools/check_revision_geometry_constants.py"
+      ],
+      "returncode": 0,
+      "status": "PASS_REVISION_GEOMETRY_CONSTANTS",
+      "accepted": true,
+      "source_sha256": "dda816e32fc47afa6f6bea49888a91b434ef990e982390e66f4de31ab594b67f",
+      "stdout_sha256": "c6cd9c23695abe198879eafc28d1c831671bf4ec745dbe7215991ca6a25c5296",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "count",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/compact-v16/tools/check_revision_count_constants.py"
+      ],
+      "returncode": 0,
+      "status": "PASS_REVISION_COUNT_CONSTANTS",
+      "accepted": true,
+      "source_sha256": "eb55bfd92bd3975dd904f1440d8a0a06ac286fd7d6e333388cf7c4f318bd9454",
+      "stdout_sha256": "815f3aa2b500d7762e2d65c9e1caeaefaab543a15497787d602710305cc2d450",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "foundation",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-I",
+        "-B",
+        "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/manuscript/compact-v16/tools/check_revision_foundation_constants.py"
+      ],
+      "returncode": 0,
+      "status": "PASS_REVISION_FOUNDATION_CONSTANTS",
+      "accepted": true,
+      "source_sha256": "440edecaef41563100353b308fa22414708b8f29547ad149c01d0e915803c7be",
+      "stdout_sha256": "b4e545c2f5e0f2e92d9f94ca6c71ef3dd0c9af1d4b80fbd03fd75431462aece2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "tex_sha256": {
+    "appendices/entry-details.tex": "a93f5a0473f3266b17cbbc0edc7160ba770165e8617b6f0f169abb6a8dc1b73f",
+    "appendices/fixed-fourier.tex": "4d461e017860a28587ee7f502670b11ffab64e27c822725bb25377cc8384298d",
+    "appendices/normalization.tex": "d25f8e3ea98261d67f4abe4f6570c29d43289ef613d6e5976150cc8ca2bf405a",
+    "appendices/off-contact.tex": "914a634cb50b354741b093ff171bde8d639fb321278fa8dd93d3ca8c00eef1e8",
+    "appendices/reproducibility.tex": "2ff12a0debf7307fcb6bc5a03d1ce682d4786b01137436aef715d8c68bafefca",
+    "main.tex": "8b13ff190d017c9ca74e331a820e326c597098eccc5afa5c1acda078e0ae3f31",
+    "sections/01-introduction.tex": "d176469cfa027af8fae34e46b0bc77cee1875f2b94a6a97ddbefd6d3548d3aea",
+    "sections/01b-guide.tex": "ce4340dc473bcb2c33b8178784fc8fdea1aa557d8e768e67fbb7eb9f9fdc3232",
+    "sections/02-fixed-target.tex": "4c33899b621366495401f6f29b01c28f4a2883b0bcf94ee136509a0952b86f9f",
+    "sections/02b-moment-domain.tex": "13e4e29cc68b87ed2e07be15953b1c027eece2d0bb5ca5711419e4f0af95225e",
+    "sections/03-conservation.tex": "b5597836fec8bce72fccf49ccc4b6238a039d03d53233debf29f8d597ffc05b1",
+    "sections/04-fixed-entry.tex": "f1af11af988d69ffb341153d637580f2ad8707a7b12486310669ab3cbe8b85fe",
+    "sections/05-geometry-counts.tex": "b1138e9d7938d2692cb16a57bbfeb8788c4eaeb49b3a07eb77d1ecf423a109a5",
+    "sections/07-direct-acquisition.tex": "59d56935e230a6ffac5b287599317c4da6a6293aaa7487d20d91f6e840be9f20",
+    "sections/08-direct-comparison.tex": "c37477087ddbd51327072d99e59e5e7da663734be28e365a2984e696d695674a",
+    "sections/09-composition.tex": "70d1783a8ecf983c520bd7c370d436488036ac49e5ddebf2d5cfb4a05d2e1557",
+    "sections/10-discussion.tex": "f2f463d19463267ee61308229c3d19754933b3a507a107ef2e485520c546a854"
+  }
+}

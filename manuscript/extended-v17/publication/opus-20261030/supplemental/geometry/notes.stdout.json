@@ -1,0 +1,99 @@
+{
+  "status": "PASS_OPUS_GEOMETRY_NOTES",
+  "mathematical_scope": "Diagnostics of new explanations; continuous lattice and conservation arguments are proved in TeX.",
+  "rational_margins": {
+    "probability_036_squared_margin": "31820316388391768411200742852984635201763/91552734375000000000000000000000000000000000",
+    "probability_048_squared_margin": "70206179664935120853116675062292339820563/91552734375000000000000000000000000000000000",
+    "inward_displacement_margin": "443041/1562500000",
+    "probability_038_margin": "336011/1600000000",
+    "drop_combined_d_terms": "2939585167017/500000000000",
+    "count_variance_margin": "3971890223/6250000000"
+  },
+  "lattice_examples": [
+    {
+      "support": [
+        -1,
+        1
+      ],
+      "variance": "1",
+      "maximal_span": 2,
+      "gap_mass": "1",
+      "Jraw": "2",
+      "margin": "0"
+    },
+    {
+      "support": [
+        0,
+        1
+      ],
+      "variance": "2/9",
+      "maximal_span": 1,
+      "gap_mass": "2/9",
+      "Jraw": "2/9",
+      "margin": "0"
+    },
+    {
+      "support": [
+        -1,
+        0,
+        1
+      ],
+      "variance": "1/2",
+      "maximal_span": 1,
+      "gap_mass": "1/2",
+      "Jraw": "1/2",
+      "margin": "0"
+    },
+    {
+      "support": [
+        -2,
+        -1,
+        1,
+        2
+      ],
+      "variance": "5/2",
+      "maximal_span": 1,
+      "gap_mass": "5/2",
+      "Jraw": "4",
+      "margin": "3/2"
+    },
+    {
+      "support": [
+        0,
+        2,
+        5
+      ],
+      "variance": "81/25",
+      "maximal_span": 1,
+      "gap_mass": "81/25",
+      "Jraw": "9",
+      "margin": "144/25"
+    },
+    {
+      "support": [
+        -100,
+        0,
+        1
+      ],
+      "variance": "350999/1000000",
+      "maximal_span": 1,
+      "gap_mass": "350999/1000000",
+      "Jraw": "25751/2500",
+      "margin": "9949401/1000000"
+    },
+    {
+      "support": [
+        -4,
+        -1,
+        5
+      ],
+      "variance": "14",
+      "maximal_span": 3,
+      "gap_mass": "14",
+      "Jraw": "72",
+      "margin": "30"
+    }
+  ],
+  "identity_diagnostics": 12,
+  "rejected_false_equality_for_missing_lattice_sites": true
+}

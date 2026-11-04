@@ -1,0 +1,93 @@
+\section{How the finite inequalities imply bounds for arbitrary laws}
+\label{ext:finite-soundness}
+
+The finite calculations bound functions on continuous parameter domains.
+The first task in each application is to prove that the parameters of the
+same extremal law belong to that domain. The calculations then verify
+pointwise majorants or exclude all possible parameter values. They do not
+replace the marginal by a finitely supported law.
+
+\begin{lemma}[Tensor expectation for a common marginal]
+\label{ext:tensor-soundness}
+Let $K$ contain the support of a standardized law $P$, and let
+$f_0=1,f_1,\ldots,f_d$ be integrable under $P$. Put $m_j=\E f_j(X)$.
+For a finite tensor sum
+\[
+ T(x_1,\ldots,x_n)=\sum_\alpha t_\alpha
+                       \prod_{i=1}^n f_{\alpha_i}(x_i),
+ \qquad M_T=\sum_\alpha t_\alpha\prod_{i=1}^n m_{\alpha_i},
+\]
+one has $\E T(X_1,\ldots,X_n)=M_T$. If
+\[
+ T\ge\ind_{\{x_1+\cdots+x_n\le H\}}\quad\hbox{on }K^n,
+ \qquad M_T-\Phi(H/\sqrt n)\le b\rho/\sqrt n,
+\]
+then the positive closed-CDF score of $P$ at $H$ is at most $b$.
+\end{lemma}
+\begin{proof}
+Independence makes the absolute expectation of each product equal to the
+product of its finite absolute expectations. Fubini's theorem and linearity
+therefore evaluate the finite sum. Integrate the pointwise inequality and
+multiply by $\sqrt n/\rho$, which is positive.
+\end{proof}
+
+A product with a centered factor has expectation zero if each factor
+uses a different summand. Adding such products can improve a majorant
+without changing $M_T$. The same marginal supplies every $m_j$;
+one cannot choose different moment vectors for different factors.
+Polynomial features of degree above three are used only after a support
+bound has supplied their integrability.
+
+\begin{lemma}[Exact positivity on a box]\label{ext:bernstein}
+Let $p(t)=\sum_\alpha a_\alpha t^\alpha$ have coordinate degrees at most
+$d_i$. On $[0,1]^r$ its tensor Bernstein coefficients are
+\[
+ b_\nu=\sum_{\alpha\le\nu}a_\alpha
+                 \prod_{i=1}^r\frac{\binom{\nu_i}{\alpha_i}}
+                                      {\binom{d_i}{\alpha_i}}.
+\]
+If all $b_\nu\ge0$, then $p\ge0$ throughout the closed box.
+\end{lemma}
+\begin{proof}
+The identity
+\[
+ t^k=\sum_{j=k}^d\frac{\binom jk}{\binom dk}
+              \binom dj t^j(1-t)^{d-j}
+\]
+follows from the binomial theorem after extracting $t^k$.
+Apply it in each coordinate. The resulting basis functions are
+nonnegative and sum to one, so $p$ is a convex combination of the
+$b_\nu$ at each point of the box.
+\end{proof}
+
+Rational affine changes map general rational boxes to the unit box,
+and exact subdivision can strengthen the coefficient test. The
+polynomial identity, coordinate degrees and every retained child box
+are part of the check. For a closed event the majorant must satisfy
+$T-1\ge0$ on the event plane as well as its lower side. Checking
+only $T\ge0$ on that plane would lose threshold atoms.
+
+\begin{proposition}[Closed-cover soundness]\label{ext:closed-cover}
+Suppose every law and threshold under consideration has a proved map
+into a domain covered by finitely many closed root cells. At each root
+there is a finite subdivision tree, and every split retains closed
+children whose union contains the parent. Suppose that on every leaf
+either a proved necessary condition excludes all actual mapped points,
+or a valid whole-leaf inequality bounds their positive scores by $b$.
+Then all actual scores in the root domain are at most $b$.
+If instead every leaf excludes an assumed extremal score $C\ge b$,
+no such extremizer belongs to the domain.
+\end{proposition}
+\begin{proof}
+Every point of a parent belongs to a child, including boundary points.
+Following children down a finite tree reaches a leaf. Its conclusion
+therefore applies to the point. The root cover proves the assertion
+on the whole domain.
+\end{proof}
+
+Each application must specify its support and moment bounds, its root
+domain, and the inequality checked at a leaf. An empty-cell test must
+exclude actual laws, not merely inconvenient numerical parameters.
+Transcendental quantities require proved outward enclosures; divisions
+require a positive denominator on the entire cell. Missing roots,
+unresolved leaves and omitted endpoint cases prevent acceptance.

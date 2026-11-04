@@ -1,0 +1,113 @@
+{
+  "status": "PASS_RIGHT_ANALYTIC_003_TO_036",
+  "gate_count": 30,
+  "gates": {
+    "sqrt variance": "51/250000",
+    "raw displacement": "1/3125",
+    "bump theorem displacement": "2/125",
+    "crossing lower": "16169/250",
+    "crossing upper": "19669/250",
+    "window displacement": "19/250",
+    "left five indices": "19269/250",
+    "right five indices": "22519/250",
+    "window variance lower": "7/1250",
+    "window variance upper": "7/400",
+    "phi lower": "1889/437500",
+    "mass13/20": "169/27600",
+    "variance power": "27/200000",
+    "sqrt T coefficient": "23/188",
+    "curvature c": "3/500",
+    "mode linear loss": "3/25",
+    "mode quadratic loss": "3/25",
+    "mode variance ratio": "49/73960",
+    "mode coefficient": "4633357/1379170000",
+    "cubic sign": "27723/80000",
+    "tangent license": "23/188",
+    "CE exceeds2/5": "17/125",
+    "sqrt10 lower": "9/625",
+    "sqrt2pi upper": "1007/70000",
+    "negative error curvature": "20679375/918944",
+    "negative endpoint 3/100": "55071686905856599351/70027943731200000000000000",
+    "negative endpoint 9/25": "114058065273815431/273546655200000000000000",
+    "positive error curvature": "1921875/114868",
+    "positive endpoint 3/100": "40281706912256599351/70027943731200000000000000",
+    "positive endpoint 9/25": "4530691307601187/21042050400000000000000"
+  },
+  "polynomials": {
+    "negative": {
+      "W": [
+        "0",
+        "48197201/196000000",
+        "-19402851/32000000",
+        "6940323/12800000",
+        "-812017791/2048000000"
+      ],
+      "E": [
+        "638629/631800",
+        "3063479/469248",
+        "20679375/1837888"
+      ],
+      "P": [
+        "-638629/126360000",
+        "584203271089/2874144000000",
+        "-608890109667/918944000000",
+        "6940323/12800000",
+        "-812017791/2048000000"
+      ],
+      "endpoints": [
+        "32337953746989056599351/70027943731200000000000000",
+        "242202847917273815431/273546655200000000000000"
+      ]
+    },
+    "positive": {
+      "W": [
+        "0",
+        "48197201/196000000",
+        "-19402851/32000000",
+        "6940323/12800000",
+        "-812017791/2048000000"
+      ],
+      "E": [
+        "800/3159",
+        "3444821/879840",
+        "1921875/229736"
+      ],
+      "P": [
+        "-4/3159",
+        "116579419837/538902000000",
+        "-595629172167/918944000000",
+        "6940323/12800000",
+        "-812017791/2048000000"
+      ],
+      "endpoints": [
+        "325950331831917056599351/70027943731200000000000000",
+        "236664471540107601187/21042050400000000000000"
+      ]
+    }
+  },
+  "negative_controls": {
+    "old_tangent_lower_endpoint": "-35391636959186943400649/70027943731200000000000000",
+    "unsupported_zero_noise_endpoint": "-638629/126360000",
+    "overaggressive_tangent_upper_endpoint": "-71972499596726184569/273546655200000000000000"
+  },
+  "source_mutation_rejections": 6,
+  "union_strata": [
+    "0",
+    "3/100",
+    "3/40",
+    "9/25",
+    "3/200",
+    "21/400",
+    "87/400"
+  ],
+  "source_pins": {
+    "mathematics/simplification-v15/2026-10-28/loss-direct.tex": "1bb19aee8183fbf70e81424dfb4503a54877a1938cd073bf58e751556e387ead",
+    "mathematics/simplification-v15/2026-10-28/right-direct.tex": "5946340c178bc54c5094fcde567ec2c260a1abd0d39daf16306dadbb12971d67",
+    "mathematics/simplification-v13/2026-10-28/crossing.tex": "0dda285adb9aaa24277fdc1d74843c20bc6100b2a64a0cd5ae34bb696a68a6ec",
+    "mathematics/simplification-v14/2026-10-28/geometry-slack.tex": "8eb6fc89d82eb458fef45fb9a2f9783c1cae2705c908dcb8bebba725a4a36461",
+    "mathematics/simplification-v11/2026-10-28/counts-v11.tex": "209f173c19a73c4fecf5aaf9aa2732c30b72266ff3f1673ddd52fa4a4e6c4641"
+  },
+  "proof_sha256": "b6aabeb75a3c9bbcc28beb4e6bc8b259ba2ff5aee793877fbb5b92dfbc94cb5f",
+  "scope": "Full continuous scalar interval [.03,.36], all n>=200 via explicit estimates. No proof of acquisition or unrestricted cutoff; no claim to replace n42 theorem.",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]"
+}

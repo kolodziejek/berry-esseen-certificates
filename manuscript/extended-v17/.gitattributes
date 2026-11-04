@@ -1,0 +1,10 @@
+# Preserve captured stdout/stderr byte-for-byte, including compiler whitespace.
+publication/**/*.txt -whitespace linguist-generated=true
+publication/*.txt -whitespace linguist-generated=true
+publication/bounded/*.stdout.json linguist-generated=true
+publication/build/*.stdout.txt linguist-generated=true
+
+# Preserve pinned release bytes on all checkouts.
+reproduction/** -text
+reproduction/assets/*.tar.gz -diff linguist-generated=true
+reproduction/assets/**/*.tar.gz* -diff linguist-generated=true

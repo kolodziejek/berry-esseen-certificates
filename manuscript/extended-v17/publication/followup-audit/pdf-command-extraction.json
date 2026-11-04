@@ -1,0 +1,31 @@
+{
+  "status": "PASS_PDF_COMMAND_ARGUMENT_EXTRACTION",
+  "extractor": "pypdf",
+  "pdf_sha256": "6c7dbb12af7a03510f15a6cfc56895d0f7d10ddf0aa7fac859ce03e99f637e93",
+  "commands": [
+    [
+      "python3",
+      "-I",
+      "-B",
+      "mathematics/fixed-target-v8/2026-10-28/isolated_entry_replay.py",
+      "--output-dir",
+      "runs/compact-v16-entry-review"
+    ],
+    [
+      "python3",
+      "-I",
+      "-B",
+      "manuscript/compact-v16/tools/recheck.py",
+      "compact-v16-bounded-review"
+    ],
+    [
+      "python3",
+      "-I",
+      "-B",
+      "manuscript/compact-v16/tools/check_revision_constants.py",
+      "--output-dir",
+      "runs/compact-v16-scalar-review"
+    ]
+  ],
+  "scope": "PDF extraction and shell argument parsing only; commands not executed by this review."
+}

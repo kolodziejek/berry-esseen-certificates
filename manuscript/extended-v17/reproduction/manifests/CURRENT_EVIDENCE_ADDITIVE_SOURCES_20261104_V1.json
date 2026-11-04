@@ -1,0 +1,328 @@
+{
+  "additive_source_bytes": 117207,
+  "additive_source_files": 23,
+  "all_law_theorem_verified": false,
+  "already_identical_in_frozen_framework": [
+    {
+      "bytes": 5641,
+      "originating_manifests": [
+        "bridge-recovery-supplement01.json"
+      ],
+      "path": "work/extension_20261030/bridge/RECOVERY_20261104.md",
+      "sha256": "c81f1f957e21b22e98beb4f32698d541533f3e31b9dae8107d3b699638a10741"
+    },
+    {
+      "bytes": 3782,
+      "originating_manifests": [
+        "bridge-recovery-supplement01.json"
+      ],
+      "path": "work/extension_20261030/bridge/RECOVERY_DAG_20261104.json",
+      "sha256": "ade9f65df324d9f4a744c086053966a11250f769b43aa5b1396b8f7bae0a1404"
+    },
+    {
+      "bytes": 13634,
+      "originating_manifests": [
+        "bridge-recovery-supplement01.json"
+      ],
+      "path": "work/extension_20261030/bridge/recover_4042_capture.py",
+      "sha256": "4a2a37482938bb672864b4ad832799582eae853561cb65ea8d78619967184d66"
+    },
+    {
+      "bytes": 4544,
+      "originating_manifests": [
+        "bridge-recovery-supplement01.json"
+      ],
+      "path": "work/extension_20261030/bridge/recover_tail_capture.py",
+      "sha256": "0513cc256481bc6cd84571c128a81756537f3439d711f6553cf8cc011834de39"
+    },
+    {
+      "bytes": 8164,
+      "originating_manifests": [
+        "bridge-recovery-supplement01.json"
+      ],
+      "path": "work/extension_20261030/bridge/resume_local42.py",
+      "sha256": "7b4c81bf7a7c1a77b6028e6f670a11db2c4d50c6f422e0a7f7fa98aaea95e654"
+    }
+  ],
+  "already_identical_in_staging": [
+    "work/extension_20261030/bridge/RECOVERY_20261104.md",
+    "work/extension_20261030/bridge/RECOVERY_COMPLETE_DAG_20261104.json",
+    "work/extension_20261030/bridge/RECOVERY_DAG_20261104.json",
+    "work/extension_20261030/bridge/inventory_completed_bridge.py",
+    "work/extension_20261030/bridge/recover_4042_capture.py",
+    "work/extension_20261030/bridge/recover_tail_capture.py",
+    "work/extension_20261030/bridge/resume_local42.py",
+    "work/extension_20261030/coordinator/test_n5_selected_parents_v2.py",
+    "work/extension_20261030/foundations/INDEPENDENT_RESOURCE_SCHEDULING_20261104.md",
+    "work/extension_20261030/foundations/PHYSICAL_RUNTIME_20261104.md",
+    "work/extension_20261030/foundations/RECOVERY_COMMANDS_20261104_V2.json",
+    "work/extension_20261030/foundations/RECOVERY_COMMANDS_20261104_V3.json",
+    "work/extension_20261030/foundations/RECOVERY_COMMANDS_20261104_V4.json",
+    "work/extension_20261030/foundations/SERIAL_RESOURCE_RECOVERY_20261104.md",
+    "work/extension_20261030/foundations/continue_foundation_controls_20261104_v2.py",
+    "work/extension_20261030/foundations/continue_foundations_20261104_v3.py",
+    "work/extension_20261030/foundations/continue_foundations_20261104_v4.py",
+    "work/extension_20261030/foundations/continue_foundations_20261104_v5.py",
+    "work/extension_20261030/foundations/launch_foundation_chain_v3.py",
+    "work/extension_20261030/foundations/launch_foundation_chain_v4.py",
+    "work/extension_20261030/foundations/launch_foundation_chain_v5.py",
+    "work/extension_20261030/foundations/owncaps_recovery_epoch.py",
+    "work/extension_20261030/foundations/recovered_foundation_bindings_v2.py",
+    "work/extension_20261030/foundations/recovered_foundation_bindings_v3.py",
+    "work/extension_20261030/foundations/recovered_initial_beta_binding_v2.py",
+    "work/extension_20261030/foundations/serial_resource_executor.py",
+    "work/extension_20261030/foundations/test_owncaps_physical_epoch.py",
+    "work/extension_20261030/foundations/test_serial_resource_dispatch.py"
+  ],
+  "builder": {
+    "bytes": 7146,
+    "path": "work/extension_20261030/bridge/inventory_recovery_sources.py",
+    "sha256": "eefac0abb841710fc07d7f8924f43790f93e00a2a5089087877df11adb4a9b13"
+  },
+  "conflicts": [],
+  "excluded_execution_evidence": [
+    {
+      "manifest": "bridge-completed-evidence20261104-01.json",
+      "path": "runs/extension_20261030/bridge/completed_evidence01/INVENTORY.json",
+      "reason": "execution evidence; source-only inventory"
+    },
+    {
+      "manifest": "bridge-completed-evidence20261104-01.json",
+      "path": "runs/extension_20261030/bridge/completed_evidence01/REVIEW.json",
+      "reason": "execution evidence; source-only inventory"
+    },
+    {
+      "manifest": "coordinator-selection-controls20261104-01.json",
+      "path": "runs/extension_20261104/coordinator/n5-selection-v2-controls01/RESULT.json",
+      "reason": "execution evidence; source-only inventory"
+    }
+  ],
+  "execution_trees_copied": false,
+  "files": [
+    {
+      "bytes": 4267,
+      "originating_manifests": [
+        "bridge-completed-evidence20261104-01.json"
+      ],
+      "path": "work/extension_20261030/bridge/RECOVERY_COMPLETE_DAG_20261104.json",
+      "sha256": "d5a550a674280e3769ac0eef7735a4a65b0e87c92360efa925caa8e0ee45672a"
+    },
+    {
+      "bytes": 5352,
+      "originating_manifests": [
+        "bridge-completed-evidence20261104-01.json"
+      ],
+      "path": "work/extension_20261030/bridge/inventory_completed_bridge.py",
+      "sha256": "c75b0d6731abe253ffcab4b147ec4e0e85a990eeb7a239ab2ade3b446e0093e7"
+    },
+    {
+      "bytes": 6992,
+      "originating_manifests": [
+        "coordinator-selection-controls20261104-01.json"
+      ],
+      "path": "work/extension_20261030/coordinator/test_n5_selected_parents_v2.py",
+      "sha256": "5900c47ab8dce57d64d46ce1a848f6a519a674c7c80637bfab0734134376308d"
+    },
+    {
+      "bytes": 2975,
+      "originating_manifests": [
+        "FOUNDATIONS_INDEPENDENT_SCHEDULE_SUPPLEMENT_20261104_V1.json"
+      ],
+      "path": "work/extension_20261030/foundations/INDEPENDENT_RESOURCE_SCHEDULING_20261104.md",
+      "sha256": "d7d604e83ee49dfb6ba2dde178f243597586b289fef2d302e75ff7144a9f275c"
+    },
+    {
+      "bytes": 3645,
+      "originating_manifests": [
+        "FOUNDATIONS_PHYSICAL_RUNTIME_SUPPLEMENT_20261104_V2.json"
+      ],
+      "path": "work/extension_20261030/foundations/PHYSICAL_RUNTIME_20261104.md",
+      "sha256": "734bcc0bf5bcdc65c21f5892797b16457b5be5a3e671838034f72d4d7f0138a0"
+    },
+    {
+      "bytes": 12217,
+      "originating_manifests": [
+        "FOUNDATIONS_PHYSICAL_RUNTIME_SUPPLEMENT_20261104_V2.json"
+      ],
+      "path": "work/extension_20261030/foundations/RECOVERY_COMMANDS_20261104_V2.json",
+      "sha256": "6fb5c5ba581d21726b6495f755a3c0e92a460d2a01d58c613bfed569b4c98711"
+    },
+    {
+      "bytes": 12530,
+      "originating_manifests": [
+        "FOUNDATIONS_SERIAL_RESOURCE_SUPPLEMENT_20261104_V1.json"
+      ],
+      "path": "work/extension_20261030/foundations/RECOVERY_COMMANDS_20261104_V3.json",
+      "sha256": "ce8ac945172d2fedef37bcb8101b1b1985e659890ad1856bb589ca952beb8660"
+    },
+    {
+      "bytes": 14505,
+      "originating_manifests": [
+        "FOUNDATIONS_INDEPENDENT_SCHEDULE_SUPPLEMENT_20261104_V1.json"
+      ],
+      "path": "work/extension_20261030/foundations/RECOVERY_COMMANDS_20261104_V4.json",
+      "sha256": "38dce18ca45464633a9ff6d9250cb4736d99686c62426b19e3ad95f3a8ae4959"
+    },
+    {
+      "bytes": 3058,
+      "originating_manifests": [
+        "FOUNDATIONS_SERIAL_RESOURCE_SUPPLEMENT_20261104_V1.json"
+      ],
+      "path": "work/extension_20261030/foundations/SERIAL_RESOURCE_RECOVERY_20261104.md",
+      "sha256": "cc9ff86c1abc7ea4d5d25cc6b126fb0ddc2370e99b03632a1dcee474153e637c"
+    },
+    {
+      "bytes": 4025,
+      "originating_manifests": [
+        "FOUNDATIONS_PHYSICAL_RUNTIME_SUPPLEMENT_20261104_V2.json"
+      ],
+      "path": "work/extension_20261030/foundations/continue_foundation_controls_20261104_v2.py",
+      "sha256": "fe6bac22103c7aba16239adb23110b09d0d6e8b21f791d4cd43293b685542399"
+    },
+    {
+      "bytes": 4974,
+      "originating_manifests": [
+        "FOUNDATIONS_PHYSICAL_RUNTIME_SUPPLEMENT_20261104_V2.json"
+      ],
+      "path": "work/extension_20261030/foundations/continue_foundations_20261104_v3.py",
+      "sha256": "01d5617ef59add7abf8d0b2b06dd680f97a485251b528d5ade6f07f0e3db765c"
+    },
+    {
+      "bytes": 4639,
+      "originating_manifests": [
+        "FOUNDATIONS_SERIAL_RESOURCE_SUPPLEMENT_20261104_V1.json"
+      ],
+      "path": "work/extension_20261030/foundations/continue_foundations_20261104_v4.py",
+      "sha256": "75a451897ab42c3cb7acb5b19ce4335e39c4a0172f12cca98ec3f06c281918e5"
+    },
+    {
+      "bytes": 4787,
+      "originating_manifests": [
+        "FOUNDATIONS_INDEPENDENT_SCHEDULE_SUPPLEMENT_20261104_V1.json"
+      ],
+      "path": "work/extension_20261030/foundations/continue_foundations_20261104_v5.py",
+      "sha256": "d5d86c39feb4b76fd41d1e1a505876fca8b0f35e9c5cf19ed66fc4c4a4cdbccb"
+    },
+    {
+      "bytes": 1706,
+      "originating_manifests": [
+        "FOUNDATIONS_PHYSICAL_RUNTIME_SUPPLEMENT_20261104_V2.json"
+      ],
+      "path": "work/extension_20261030/foundations/launch_foundation_chain_v3.py",
+      "sha256": "31faab3c1c6228e92962665def5f42c421d2c94a9f6d2580371b8578c1aa5aec"
+    },
+    {
+      "bytes": 1706,
+      "originating_manifests": [
+        "FOUNDATIONS_SERIAL_RESOURCE_SUPPLEMENT_20261104_V1.json"
+      ],
+      "path": "work/extension_20261030/foundations/launch_foundation_chain_v4.py",
+      "sha256": "80dc4a65ba8905a7d5354abea8cb094bf8734431d394e49e9ad476055be7f901"
+    },
+    {
+      "bytes": 1706,
+      "originating_manifests": [
+        "FOUNDATIONS_INDEPENDENT_SCHEDULE_SUPPLEMENT_20261104_V1.json"
+      ],
+      "path": "work/extension_20261030/foundations/launch_foundation_chain_v5.py",
+      "sha256": "1844d59337808a7b4f34e0b1d04557b39382c7d89842fbaadae8c09b8c5cee50"
+    },
+    {
+      "bytes": 1239,
+      "originating_manifests": [
+        "FOUNDATIONS_PHYSICAL_RUNTIME_SUPPLEMENT_20261104_V2.json"
+      ],
+      "path": "work/extension_20261030/foundations/owncaps_recovery_epoch.py",
+      "sha256": "a06967ecc8398241c51113cef5a3c959040551bc54dc639a7dbca8c77bf260f0"
+    },
+    {
+      "bytes": 7182,
+      "originating_manifests": [
+        "FOUNDATIONS_PHYSICAL_RUNTIME_SUPPLEMENT_20261104_V2.json"
+      ],
+      "path": "work/extension_20261030/foundations/recovered_foundation_bindings_v2.py",
+      "sha256": "3245c052817899482e2b367bf73633e3b43e7b7c032719635114409a221b087f"
+    },
+    {
+      "bytes": 7744,
+      "originating_manifests": [
+        "FOUNDATIONS_SERIAL_RESOURCE_SUPPLEMENT_20261104_V1.json"
+      ],
+      "path": "work/extension_20261030/foundations/recovered_foundation_bindings_v3.py",
+      "sha256": "59dacbb6e3f5e0360bac47f6bf3bcddc642228a65a21409061e5bbf31d43045d"
+    },
+    {
+      "bytes": 2921,
+      "originating_manifests": [
+        "FOUNDATIONS_PHYSICAL_RUNTIME_SUPPLEMENT_20261104_V2.json"
+      ],
+      "path": "work/extension_20261030/foundations/recovered_initial_beta_binding_v2.py",
+      "sha256": "38f503bec4e51886fd49080093178f33e88ccb0df955af514c867e7bdba35a9f"
+    },
+    {
+      "bytes": 1399,
+      "originating_manifests": [
+        "FOUNDATIONS_SERIAL_RESOURCE_SUPPLEMENT_20261104_V1.json"
+      ],
+      "path": "work/extension_20261030/foundations/serial_resource_executor.py",
+      "sha256": "753870d3690fe88c66f0b3be0013c9d71bd216201cc5e8fbfbcde328e61c0bb0"
+    },
+    {
+      "bytes": 2886,
+      "originating_manifests": [
+        "FOUNDATIONS_PHYSICAL_RUNTIME_SUPPLEMENT_20261104_V2.json"
+      ],
+      "path": "work/extension_20261030/foundations/test_owncaps_physical_epoch.py",
+      "sha256": "667775617ce69a0c68e47e10a17dfe5633a02f46aefa134cb2c9981670d13ab3"
+    },
+    {
+      "bytes": 4752,
+      "originating_manifests": [
+        "FOUNDATIONS_SERIAL_RESOURCE_SUPPLEMENT_20261104_V1.json"
+      ],
+      "path": "work/extension_20261030/foundations/test_serial_resource_dispatch.py",
+      "sha256": "d24bf2074784f59a00fe4d4bef27c09bfb66ba6dbd4b123b9a7ec15745c0fde9"
+    }
+  ],
+  "frozen_framework": {
+    "bytes": 1131801,
+    "path": "FRAMEWORK_FILE_MANIFEST_V2.json",
+    "sha256": "4f7140c273e738c54d7676fc075a0a2d16b9e5fa3b62f4743df74b068b9d00f7"
+  },
+  "frozen_framework_modified": false,
+  "generated_epochs_staged": false,
+  "native_arithmetic_executed": false,
+  "newly_staged": [],
+  "originating_manifests": {
+    "FOUNDATIONS_INDEPENDENT_SCHEDULE_SUPPLEMENT_20261104_V1.json": {
+      "bytes": 1489,
+      "sha256": "a7d4a98001a721545ffca816c2477089c12506ea043cfa88485f72022caaddee"
+    },
+    "FOUNDATIONS_PHYSICAL_RUNTIME_SUPPLEMENT_20261104_V2.json": {
+      "bytes": 2540,
+      "sha256": "e04dc465831ba516742a75c8defd0a5b8179f009edabaa7b2de4e8a6ad59ffbb"
+    },
+    "FOUNDATIONS_SERIAL_RESOURCE_SUPPLEMENT_20261104_V1.json": {
+      "bytes": 2021,
+      "sha256": "15ca5c8353d67c70eebda60fdaa7f878b3830ddd6008242e1714888bd468a7a5"
+    },
+    "bridge-completed-evidence20261104-01.json": {
+      "bytes": 1055,
+      "sha256": "422104dbdd3189acb197cf4b4fa16f03b5f74c5c2269b91713add52459f92dc7"
+    },
+    "bridge-recovery-supplement01.json": {
+      "bytes": 1355,
+      "sha256": "20fe0d33f5a25f5d6e8ca7fb0fe34440792b00db8e05888814427e672177bf13"
+    },
+    "coordinator-selection-controls20261104-01.json": {
+      "bytes": 674,
+      "sha256": "81f37ed3069faab4fd59fa2e82f9d050671e9059505e37741a1817ff443db1e5"
+    }
+  },
+  "paths_relative_to": "workspace",
+  "schema": "CURRENT_EVIDENCE_ADDITIVE_SOURCE_INVENTORY_V1",
+  "scope": "Selected retrospective execution-epoch readers and controls; not a numerical result or the fresh campaign",
+  "selected_source_bytes": 152972,
+  "selected_source_files": 28,
+  "status": "PASS_SOURCE_ONLY_ADDITIVE_INVENTORY"
+}

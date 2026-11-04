@@ -1,0 +1,214 @@
+\section{Moment constraints in finite count comparisons}
+\label{ext:count-filters}
+The finite count calculation discards some parameter boxes before testing
+their probability bound. Each such rejection must follow from a necessary
+inequality for the same marginal. This section derives these inequalities.
+It does not assert that a point satisfying them is realizable by a law.
+
+Use $hX=B-p+U$, where $p=\Pp(X>0)$, $q=1-p$, $v=pq$,
+$m=\E X_+=\E X_-$ and $h=v/m$. A positive central support gap
+has already been established. Write
+\[
+ U_0\in[-O_0,a_0],\qquad U_1\in[-a_1,O_1],\qquad
+ \E U_i=0,\quad s_i=\E U_i^2,\quad x=\E U_0^3,\quad y=\E U_1^3.
+\]
+Here $a_0<p$, $a_1<q$ and $O_i,a_i\ge0$.
+Set $s=qs_0+ps_1$, $\lambda=ns$, and, when $s>0$,
+$\alpha=ps_1/s\in[0,1]$. Then
+\[
+ h^2=v+s,\qquad s_0=\frac{(1-\alpha)s}{q},\qquad
+ s_1=\frac{\alpha s}{p}.
+\]
+If $s=0$, both conditional laws vanish and no division by $s$ is used.
+
+\subsection{One pair of conditional third moments}
+For a centered $W\in[-L,U]$ of variance $w$, with $L,U>0$,
+the nonnegative polynomials $(W+L)(W-w/L)^2$ and
+$(U-W)(W+w/U)^2$ give
+\begin{equation}\label{ext:conditional-third}
+ w^2/L-Lw\le\E W^3\le Uw-w^2/U.
+\end{equation}
+At a zero endpoint, centering forces $W=0$ almost surely.
+The two exact cubic identities are
+\begin{align}
+ \rho h^3&=v(1-2v)+3v(s_0+s_1)-qx+py,\label{ext:rho-cubic}\\
+ \gamma h^3&=v(1-2p)+3v(s_1-s_0)+qx+py.\label{ext:gamma-cubic}
+\end{align}
+The differing sign of $x$ is essential. The sign restrictions on the
+conditional supports justify the absolute cube in the first identity.
+
+These identities restrict the single pair $(x,y)$ to a rectangle and
+linear strips. For example, replacing $p$ by the midpoint $p_m$ in
+$-qx+py$ incurs error $(p-p_m)(x+y)$. On a closed cubic rectangle
+its absolute value is at most the probability half-width times
+$\max(|x_l+y_l|,|x_u+y_u|)$. In the signed-cubic identity the
+corresponding factor is $y-x$, bounded by
+$\max(|y_l-x_u|,|y_u-x_l|)$. All other products use directed interval
+endpoints. Thus these strips contain every actual common pair.
+
+\subsection{The physical defect as a further half-plane}
+Let $\sigma=\sqrt{10}$ and retain the physical gap defect
+$D=(3+\sigma)\rho-\gamma-3J$.
+The endpoints of the central gap are
+$A=(p-a_0)/h$, $B=(q-a_1)/h$.
+The outer-gap inequality gives
+\[
+ D\ge\sigma\rho-\gamma-6mAB
+       +6B(\E X_+^2-mB)+6A(\E X_-^2-mA).
+\]
+Substituting the count coordinates and the two cubic identities yields
+\begin{align}
+ Dh^3\ge{}&B_\sigma(p)+6vF(a_0,a_1)\notag\\
+ &+qs_0\{3p(\sigma+3)-6a_0\}
+  +ps_1\{3q(\sigma+1)-6a_1\}\notag\\
+ &-(\sigma+1)qx+(\sigma-1)py,\label{ext:defect-halfplane}\\
+ B_\sigma(p)&=v\{(\sigma-1)+2p-(2\sigma+6)v\},\notag\\
+ F(a_0,a_1)&=a_0+a_1-a_0^2-a_1^2-a_0a_1.\notag
+\end{align}
+The polynomial $B_\sigma$ is the Bernoulli defect square.
+Replacing $\sigma$ by a lower enclosure decreases the complete right
+side, because its coefficient is exactly $\rho h^3\ge0$.
+After that replacement, signed interval products and the explicit
+nonnegative-coefficient gates license the termwise lower bounds.
+If such a gate fails, this additional half-plane is omitted.
+
+Substitution of \eqref{ext:conditional-third} into
+\eqref{ext:defect-halfplane} gives the stronger scalar inequality
+\begin{align}
+ Dh^3\ge{}&B_\sigma+6vF(a_0,a_1)\notag\\
+ &+q\left\{[3p(\sigma+3)-(\sigma+7)a_0]s_0
+                         +(\sigma+1)s_0^2/a_0\right\}\notag\\
+ &+p\left\{[3q(\sigma+1)-(\sigma+5)a_1]s_1
+                         +(\sigma-1)s_1^2/a_1\right\}.
+ \label{ext:defect-sharp}
+\end{align}
+The terms with $a_i=0$ are treated by $s_i=0$, not by division.
+Also $s_i\le O_i a_i$, by averaging the nonnegative quadratic
+$(U_i+O_i)(a_i-U_i)$, with reflection for class one.
+
+On a rectangle clipped by $a_0+a_1\le d<1$, the function $F$ is
+nonnegative and concave: its Hessian is
+$\left(\begin{smallmatrix}-2&-1\\-1&-2\end{smallmatrix}\right)$.
+Its minimum therefore occurs at a vertex of the clipped polygon.
+There is no requirement $d<1/2$ for this vertex argument.
+The older coordinate-monotonicity shortcut requires separate gates.
+For example, a lower bound for the $a_0$ derivative in
+\eqref{ext:defect-sharp} is
+\[
+ 6v_l(1-2d)-q_u(\sigma_u+7)(s_0)_u
+                       -q_u(\sigma_u+1)O_0^2.
+\]
+The reflected expression uses $\sigma+5$ and $\sigma-1$.
+Positivity of these gates implies $d<1/2$ and licenses that shortcut
+only on its smaller domain. A bisection discards an interval only when
+its entire defect lower bound exceeds the already acquired upper bound.
+
+\subsection{Second moments and necessary noise floors}
+The exact second-moment relations are
+\begin{equation}\label{ext:beta-noise}
+ \beta=\frac{v(1-2p)+s(2\alpha-1)}{v+s},\qquad
+ m=\frac{v}{\sqrt{v+s}}.
+\end{equation}
+The second expression increases with $v$ and decreases with $s$.
+For $s>0$, the first can be solved for $\alpha$; the case $s=0$
+is tested directly. If an acquired upper bound $\beta_u$ is below
+$t_l=1-2p_u$, then
+\[
+ v_l(t_l-\beta_u)\le s(\beta_u+1-2\alpha_l).
+\]
+A nonpositive right coefficient excludes the box; a positive one
+gives a lower bound for $s$. If an acquired lower bound $\beta_l$
+exceeds $t_u=1-2p_l$, use instead
+$v_l(\beta_l-t_u)\le s(2\alpha_u-1-\beta_l)$.
+These tests retain the same $\alpha$ as the conditional probabilities.
+
+There is a further floor from the absolute third moment. The elementary
+bounds $-x\le O_0s_0$, $y\le O_1s_1$ in
+\eqref{ext:rho-cubic} give
+\[
+ \rho_l(v+s)^{3/2}\le v(1-2v)+Ms,
+\]
+where $M$ bounds
+$(3p+O_0)(1-\alpha)+(3q+O_1)\alpha$ at all four
+$p,\alpha$ corners. Convexity of $(v+s)^{3/2}$ implies
+\[
+ A(v):=\rho_l v^{3/2}-v+2v^2
+ \le [M-\tfrac32\rho_l\sqrt v]s.
+\]
+If $A(v_l)>0$, then
+$\rho_l\sqrt{v_l}>1-2v_l$, so
+$A'(v_l)>1/2+v_l>0$; moreover $A''>0$.
+Hence a positive lower bound for $A(v_l)$ and an upper bound for
+the right coefficient give a necessary noise floor on the whole box.
+A nonpositive upper coefficient proves infeasibility. Directed square
+roots preserve both conclusions.
+
+Finally, the common inward bound $a_0+a_1\le d$, $d>0$,
+together with \eqref{ext:conditional-third}, implies
+\begin{equation}\label{ext:common-inward}
+ \rho(v+s)^{3/2}\ge v(1-2v)+B_*s+H_*s^2/d,
+\end{equation}
+where
+\[
+ B_*=3p(1-\alpha)+3q\alpha-d\max(\alpha,1-\alpha),\qquad
+ H_*=\left(\frac{1-\alpha}{\sqrt q}+\frac\alpha{\sqrt p}\right)^2.
+\]
+For the quadratic term use
+\[
+ \frac{(1-\alpha)^2}{qa_0}+\frac{\alpha^2}{pa_1}
+ \ge\frac{((1-\alpha)/\sqrt q+\alpha/\sqrt p)^2}{a_0+a_1}.
+\]
+The zero-variance restrictions cover vanishing endpoints by a limit.
+The minimum of $B_*$ is at the four $p,\alpha$ corners, because it is
+affine in $p$ and concave in $\alpha$.
+On a $p$ interval $[p_l,p_u]$ a positive lower envelope for
+$\sqrt{H_*}$ is $(1-\alpha)/\sqrt{q_u}+\alpha/\sqrt{p_u}$,
+where $q_u=1-p_l$. This affine function is minimized at an
+$\alpha$ endpoint. The global upper Taylor bound
+\[
+ (v+s)^{3/2}\le v^{3/2}+\tfrac32\sqrt v\,s
+                                      +\tfrac38s^2/\sqrt v
+\]
+turns \eqref{ext:common-inward}, with $\rho\le\rho_u$, into a
+necessary quadratic inequality in $s$. Its exact minimum on the
+closed variance interval is tested at both endpoints and any interior
+vertex. Strict positivity excludes the whole box. The implementation
+defers $d=0$ to its deterministic branch.
+
+\subsection{An additional outgoing event and full phase coverage}
+For centered $W\in[-a_1,O_1]$ and $-a_1\le b<O_1$,
+\[
+ (W+a_1)(W-b)\le\ind_{\{W>b\}}(O_1+a_1)(O_1-b).
+\]
+Thus $\Pp(W>b)$ is at least the nonnegative part of
+$(s_1-a_1b)/((O_1+a_1)(O_1-b))$.
+For $b<-a_1$ the strict event is certain; for $b\ge O_1$ use zero.
+If any of the $k$ class-one variables exceeds
+$b=u+B+(k-1)a_1$, their sum exceeds $u+B$.
+Independence gives the lower probability $1-(1-r)^k$, where $r$
+is the preceding bound. The remaining centered sum, of variance $V_0$
+and upper support $(n-k)a_0$, is at least $-B$ with probability at
+least
+\[
+ \max\left\{\frac{B^2}{V_0+B^2},
+                         \frac{B}{B+(n-k)a_0}\right\}\quad(B>0).
+\]
+These follow from Cantelli and Markov, respectively. At $B=0$ use
+one if $V_0=0$ and zero otherwise. Multiplication of the two lower
+bounds is valid because the two conditional groups are independent.
+This supplies the optional single-event outgoing witness.
+
+The acquired lower bound $m_l>0$ also gives
+\[
+ \lambda=n(v^2/m^2-v)\le n(v^2/m_l^2-v),\qquad h\le v_u/m_l.
+\]
+The quadratic on the right is convex, so its maximum on the $v$
+interval occurs at an endpoint. If $-H_-\le H\le H_+$, the gates
+\[
+ np_l-H_-h_u>-1/2,\qquad np_u+H_+h_u<n+1/2
+\]
+ensure that all nearest counts belong to $\{0,\ldots,n\}$.
+The original joint budget $d/d_0+\lambda/\Lambda\le1$ retains
+its own intercept $\Lambda$ when a separate sharper noise cap clips
+the count domain. Replacing that intercept by the sharper cap would
+assert an additional joint inequality and is not licensed here.
