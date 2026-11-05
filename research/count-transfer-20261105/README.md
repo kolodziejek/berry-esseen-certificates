@@ -27,9 +27,10 @@ criterion.
 
 | Result | Mathematical status | Execution status |
 | --- | --- | --- |
-| Entire original n5 B0/p50 comparison | Conditional positive closed-score implication at the original C_E target | Fresh complete replay: 383 leaves, 4,596 rays, 816,750 coefficients |
-| Entire original n5 B2 S3/p34 comparison | Same original conditional target | Fresh complete replay: 54 leaves, 648 rays, 121,500 coefficients |
-| Entire original n5 BN/p39 comparison | Same original conditional target; 11 leaves use the new Gaussian polynomial | Fresh complete replay: 1,126 leaves, 13,512 rays, 2,116,800 coefficients |
+| Entire original n5 B0/p50 comparison | Conditional positive closed-score implication at the original C_E target | Fresh complete replay: 383 baseline leaves (`n5-two-rows/`) and **11 all-Taylor leaves** (`n5-all-taylor/`) |
+| Entire original n5 B2 S3/p34 comparison | Same original conditional target | Fresh complete replay: 54 baseline leaves (`n5-two-rows/`) and **7 all-Taylor leaves** (`n5-all-taylor/`) |
+| Entire original n5 BN/p39 comparison | Same original conditional target; 11 leaves use the new Gaussian polynomial in mixed mode, and all 18 leaves in all-Taylor mode | Fresh complete replay: 1,126 mixed leaves (`n5-bn39/`) and **18 all-Taylor leaves** (`n5-all-taylor/`) |
+| Entire original n5 BN/p38, B0/p53 (`k4`), B3 S0/p59 (`k4`), B3 S2/p59 (`k4`) comparisons | Same original conditional target across all active nearest-count roots (`k=1,2,3` or `k=2,3,4`) with curvature-corrected both-half Gaussian Taylor bounds | Fresh complete replay in `n5-all-taylor/`: **13** (`BN38`), **5** (`B0_53`), **4** (`B3_S0_59`), and **5** (`B3_S2_59`) leaves (**63 leaves total across 7 rows** vs. 2,736 old `COUNT` leaves) |
 | Sharp39, k15, full original p in [.38,.39], u in [-.01,.01], full original noise | Conditional comparison on this entire bounded rectangle, including both signs of the normal argument | Fresh two-cell exact replay: 160 ray checks, 11,880 score coefficients, 3,006 corrected PSD coefficients |
 | n6, fixed p=77/200, k2, u=0 | Conditional comparison over all noise compatible with the original mean premise | Fresh exact replay and canonical-input controls; no p/phase interval claim |
 | Full manuscript shortening | Not completed | 86 pages unchanged; about 60 pages remains the objective |
@@ -51,6 +52,18 @@ reduction and domain coverage have been justified.
   `python3 -I -B portable.py replay --out /absolute/NEW` there to recheck all
   1,126 leaves. The mixed reader uses the original bound on 1,115 leaves and
   an explicitly tagged Gaussian Taylor bound on 11; both prove the same target.
+- `n5-all-taylor/`: additive all-Taylor curvature-corrected $n=5$ package and
+  general 295-contract external selector (`code/selector.py`,
+  `contracts/CENSUS_295.json`). Generalizes the quadratic Gaussian Taylor scalar
+  to both probability halves ($0 < p_l < p_u < 1$) using
+  $v_{\min} = \min(p_l(1-p_l), p_u(1-p_u))$, certifies the uniform noise-curvature
+  bound $g''(\lambda) \le M$ via $v^2(H_F(p) - 25 M J) \succeq 0$ on every leaf,
+  and closes **7 complete original $n=5$ rows** (`BN39`, `B0_50`, `B2_S3_34`,
+  `BN38`, `B0_53`, `B3_S0_59`, `B3_S2_59`, 19 roots) in **63 total leaves**
+  (18 on `BN39` vs. 1,126 mixed leaves; 49 across `BN39`, `B0_50`, `B2_S3_34`,
+  `BN38` vs. 2,296 baseline/mixed leaves; 63 across all 7 rows vs. 2,736 old
+  `COUNT` leaves). Run `python3 -I -B -S portable.py replay --out /absolute/NEW`
+  from that package.
 - `later-index/`: the general n+1-count proof, tangent normalization, Gaussian
   polynomial proof, fixed-n6 evidence and bounded sharp39 checks. Run
   `python3 -I -B -S replay.py /absolute/NEW` there to reproduce the entire
@@ -87,8 +100,10 @@ failures. Its fresh complete replay is what admits the new mixed object.
 ## Why this is not yet a shorter manuscript
 
 The previous census found 295 original n5 comparison contracts and 1,243 count
-objects overall. Four n5 rows now have complete replacements by this method:
-the previous BN/p38 row and the three here; 291 remain. Even replacing every
+objects overall. Seven n5 rows now have complete replacements by this method in
+`n5-all-taylor/` (`BN39`, `B0_50`, `B2_S3_34`, `BN38`, `B0_53`, `B3_S0_59`,
+`B3_S2_59`, spanning `B0`, `BN`, `B2`, `B3`, right-half $p \ge 1/2$, and active
+$k=4$ roots in 63 total leaves vs. 2,736 old `COUNT` leaves); 288 remain. Even replacing every
 n5 row leaves the generic count proof used by n6--38 and sharp39. The signed
 fifth-index corner, Fourier complements
 and the 17-page acquisition argument also remain. The new criterion must
