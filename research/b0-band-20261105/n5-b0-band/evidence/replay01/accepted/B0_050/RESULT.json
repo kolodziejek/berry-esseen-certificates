@@ -1,0 +1,79 @@
+{
+  "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+  "row_id": "B0_050",
+  "contract_path": "work/cutoff5_20261020/root/count5_prepare_v1/pilots01/n5/B0/panel050/contract.json",
+  "contract_sha256": "2939dcca05896e1c6393c50944df8dd5e872efb26076a7304df45d9f6d07a93f",
+  "band": "B0",
+  "slab_family": "pilots01",
+  "index": 50,
+  "n": 5,
+  "K": "0",
+  "p": [
+    "1/2",
+    "51/100"
+  ],
+  "rho": [
+    "1",
+    "11/10"
+  ],
+  "beta": [
+    "-126629/1000000",
+    "159997/1000000"
+  ],
+  "roots": [
+    {
+      "k": 2,
+      "p": [
+        "1/2",
+        "51/100"
+      ],
+      "u": [
+        "-44943245351/125000000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "32813/125000"
+      ],
+      "leaves": 6,
+      "taylor_leaves": 6,
+      "baseline_leaves": 0,
+      "global_rays": 72,
+      "psd_coefficients": 186,
+      "tensor_coefficients": 10800,
+      "result_sha256": "440f824be1029465fc09abd8fe1daae8909d6dfd7e8efd79599f4374210e6916",
+      "object_sha256": "1e9bf89d57de07d5928f26969977117ee5abcc781cbabaed460833b4ab0363ae"
+    },
+    {
+      "k": 3,
+      "p": [
+        "1/2",
+        "51/100"
+      ],
+      "u": [
+        "-1/2",
+        "51193245351/125000000000"
+      ],
+      "noise": [
+        "0",
+        "32813/125000"
+      ],
+      "leaves": 2,
+      "taylor_leaves": 2,
+      "baseline_leaves": 0,
+      "global_rays": 24,
+      "psd_coefficients": 62,
+      "tensor_coefficients": 3600,
+      "result_sha256": "9a080a14270e551df2ba7c353060eda864c9be397fff7928f908f312a158270f",
+      "object_sha256": "b77a78004677e3fac85e58766278d1f3b6f6f1d1125b98117bcda5197b9a7bbc"
+    }
+  ],
+  "leaves": 8,
+  "taylor_leaves": 8,
+  "baseline_leaves": 0,
+  "global_rays": 96,
+  "psd_coefficients": 248,
+  "tensor_coefficients": 14400,
+  "old_checked_leaves": 212,
+  "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+}

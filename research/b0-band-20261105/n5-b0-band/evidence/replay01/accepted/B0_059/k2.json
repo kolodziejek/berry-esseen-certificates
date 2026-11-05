@@ -1,0 +1,71 @@
+{
+  "status": "PASS_EXACT_ALL_TAYLOR_CLOSED_REGION",
+  "row_id": "B0_059",
+  "contract_path": "work/cutoff5_20261020/root/count5_prepare_v1/B0_BN_rest01/n5/B0/panel059/contract.json",
+  "contract_sha256": "0933fc19b8592e954480cb39a21b6d65e88088ebd695888b5451b6e247510a61",
+  "band": "B0",
+  "slab_family": "B0_BN_rest01",
+  "index": 59,
+  "n": 5,
+  "k": 2,
+  "p": [
+    "59/100",
+    "3/5"
+  ],
+  "u": [
+    "64258038653/250000000000",
+    "1/2"
+  ],
+  "noise": [
+    "0",
+    "10249/200000"
+  ],
+  "nodes": 1,
+  "leaves": [
+    {
+      "path": "",
+      "row_id": "B0_059",
+      "contract_sha256": "0933fc19b8592e954480cb39a21b6d65e88088ebd695888b5451b6e247510a61",
+      "k": 2,
+      "p": [
+        "59/100",
+        "3/5"
+      ],
+      "u": [
+        "64258038653/250000000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "10249/200000"
+      ],
+      "theta": "4292583999/10000000000",
+      "prices": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "vertices": 4,
+      "moment_pairs": 9,
+      "global_rays": 12,
+      "psd_coefficients": 31,
+      "psd_minima": [
+        "459511465872793280259921/62500000000000000000000",
+        "195398013846699/24414062500000",
+        "89593675713476982194814444718943281647650727/62500000000000000000000000000000000000000000"
+      ],
+      "gaussian_noise_curvature_upper": "0",
+      "tensor_coefficients": 1800,
+      "cleared_margin": "419641523529903797654432781845179443031784886442206535886968664974343639174940076603861155260235877318132641315628111713/66849338007411784742227031094880447544440183255411402213890911102294921875000000000000000000000000000000000000000000000000",
+      "method": "gaussian_taylor_both_halves_v1"
+    }
+  ],
+  "taylor_leaves": 1,
+  "baseline_leaves": 0,
+  "global_rays": 12,
+  "psd_coefficients": 31,
+  "tensor_coefficients": 1800,
+  "object_sha256": "39830b80d5b0a087eab15ffadab0cfa5b1698eb46356eab097ec06c91bbbe564",
+  "seconds": 0.4723593750386499
+}

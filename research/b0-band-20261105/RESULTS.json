@@ -1,0 +1,126 @@
+{
+  "schema": "B0_BAND_COMPLETED_RESULTS_V1",
+  "status": "PASS_COMPLETE_N5_B0_BAND_24ROWS_AND_AUDIT",
+  "parent_commit": "8517231c089d5ce09a814c8b4242b49113fc59ce",
+  "count_transfer_manifest_sha256": "9c7cf55a7611c51c9a264c5c428e6a69010b60038833c06db60ed14516038b0c",
+  "argon_audit_manifest_sha256": "a47456095fb8178ebbe4ce021ba10397eab9bc86ff8d1ffebddd35f8ba5f0d32",
+  "package": "n5-b0-band",
+  "package_manifest_sha256": "485d56038804b79663b2dd5633d7a74cbd4eb53aed86983c2ed22d78db2e6329",
+  "completion_sha256": "bb10538aeb9332994665a5d3728b5d5a6e802677c665da18f4d30c582c0862dc",
+  "band_join": {
+    "band": "B0",
+    "contracts_verified": 24,
+    "index_range": [
+      37,
+      60
+    ],
+    "p_union": [
+      "37/100",
+      "61/100"
+    ],
+    "rho_floor": "1",
+    "rho_ceiling_max": "11/10",
+    "contiguous_probability_joins": 23,
+    "cross_slab_family_joins": [
+      {
+        "join_p": "23/50",
+        "left_row": "B0_045",
+        "left_family": "gamma16_01",
+        "right_row": "B0_046",
+        "right_family": "B0_BN_rest01"
+      },
+      {
+        "join_p": "1/2",
+        "left_row": "B0_049",
+        "left_family": "B0_BN_rest01",
+        "right_row": "B0_050",
+        "right_family": "pilots01"
+      },
+      {
+        "join_p": "51/100",
+        "left_row": "B0_050",
+        "left_family": "pilots01",
+        "right_row": "B0_051",
+        "right_family": "B0_BN_rest01"
+      }
+    ],
+    "roots_verified": 67
+  },
+  "counts": {
+    "rows": 24,
+    "roots": 67,
+    "leaves": 222,
+    "psd": 6882,
+    "score": 456300,
+    "positive_curvature": 79,
+    "zero_curvature": 143,
+    "nonpositive_numerator": 143,
+    "sign_crossing_numerator": 37,
+    "positive_numerator": 42,
+    "priced_leaves": 0,
+    "noise_split_nodes": 51
+  },
+  "old_checked_leaves": 5040,
+  "leaf_reduction_factor": 22.7027,
+  "global_rays": 2664,
+  "psd_coefficients": 6882,
+  "tensor_coefficients": 456300,
+  "replay01": {
+    "result_path": "evidence/replay01/accepted/RESULT.json",
+    "result_sha256": "a2b772b64db11ce1082d682b2ae10e8197bf923fec365337cbe30051b55ca84e",
+    "process_path": "evidence/replay01/capture/PROCESS.json",
+    "process_sha256": "fbb4ace4f8855b7e79a561cb593377244d2f3694226c3e20c0e0f77f8e31ead1",
+    "returncode": 0,
+    "seconds": 105.35439662495628
+  },
+  "controls01": {
+    "result_path": "evidence/controls01/accepted/RESULT.json",
+    "result_sha256": "a307adb8858b467a14dd07cd63bc3df70b7e9e1f2552c38e43a2dcc0613af953",
+    "process_path": "evidence/controls01/capture/PROCESS.json",
+    "process_sha256": "7848676af3face1828cf8a98c94ffddd4f5b975dcd378feb0a7b6e88ff0185b0",
+    "returncode": 0,
+    "seconds": 0.979917332995683,
+    "negative_controls_count": 48
+  },
+  "smoke01": {
+    "result_path": "evidence/smoke01/accepted/RESULT.json",
+    "result_sha256": "ad14976a62eb089aafb75c909143733d7cd524bfb979b4082fee93e89eb9cfff",
+    "process_path": "evidence/smoke01/capture/PROCESS.json",
+    "process_sha256": "2516445997633cf26b2196ab64357e65117899aedd953c80eddd9d575d133f94",
+    "returncode": 0,
+    "seconds": 0.6197390840388834
+  },
+  "independent_review": {
+    "result_path": "evidence/review_b0_band01/checked/RESULT.json",
+    "result_sha256": "49834537825b6262cccf3c0d48fd176be2fbb114e5f8566321ce11196b3b8ec8",
+    "process_path": "evidence/review_b0_band01/capture/PROCESS.json",
+    "process_sha256": "f298f916c0f1af4de97caf9afb629867d7931124135937b05059cbd40493a536",
+    "returncode": 0,
+    "seconds": 111.2181887080078,
+    "isolated_curvature_control": {
+      "row": "B0_037",
+      "k": 2,
+      "path": "01",
+      "rays_passed": 12,
+      "PSD_rejected": true
+    },
+    "selector": {
+      "contracts": 295,
+      "band_counts": {
+        "B0": 24,
+        "BN": 32,
+        "B2": 104,
+        "B3": 135
+      },
+      "ambiguous_pairs": 68,
+      "unique_pairs": 58
+    }
+  },
+  "all_n5_contracts": 295,
+  "b0_band_contracts_verified": 24,
+  "distinct_n5_contracts_verified_including_prior_7row_package": 29,
+  "remaining_n5_contracts": 266,
+  "original_acquisition_replayed": false,
+  "manuscript_unchanged": true,
+  "manuscript_pages": 86
+}

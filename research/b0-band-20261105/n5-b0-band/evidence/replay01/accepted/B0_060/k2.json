@@ -1,0 +1,71 @@
+{
+  "status": "PASS_EXACT_ALL_TAYLOR_CLOSED_REGION",
+  "row_id": "B0_060",
+  "contract_path": "work/cutoff5_20261020/root/count5_prepare_v1/B0_BN_rest01/n5/B0/panel060/contract.json",
+  "contract_sha256": "56c65b26f7be87f2a9c30929549f3f4bab935b12b88b7ae476e5812fbd3a785d",
+  "band": "B0",
+  "slab_family": "B0_BN_rest01",
+  "index": 60,
+  "n": 5,
+  "k": 2,
+  "p": [
+    "3/5",
+    "61/100"
+  ],
+  "u": [
+    "80309202013/250000000000",
+    "1/2"
+  ],
+  "noise": [
+    "0",
+    "9867/500000"
+  ],
+  "nodes": 1,
+  "leaves": [
+    {
+      "path": "",
+      "row_id": "B0_060",
+      "contract_sha256": "56c65b26f7be87f2a9c30929549f3f4bab935b12b88b7ae476e5812fbd3a785d",
+      "k": 2,
+      "p": [
+        "3/5",
+        "61/100"
+      ],
+      "u": [
+        "80309202013/250000000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "9867/500000"
+      ],
+      "theta": "1",
+      "prices": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "vertices": 3,
+      "moment_pairs": 9,
+      "global_rays": 12,
+      "psd_coefficients": 31,
+      "psd_minima": [
+        "267525554259339/24414062500000",
+        "1349456973733173092179743/125000000000000000000000",
+        "10209520760959173813391701/4768371582031250000000000"
+      ],
+      "gaussian_noise_curvature_upper": "0",
+      "tensor_coefficients": 1350,
+      "cleared_margin": "394005189326275385047109535884046428953965897443327410276432038474579310167061420986221232833401904642391731495905935683174400858197/50195392919423877009159461824808861273346258175949099235571539062500000000000000000000000000000000000000000000000000000000000000000000",
+      "method": "gaussian_taylor_both_halves_v1"
+    }
+  ],
+  "taylor_leaves": 1,
+  "baseline_leaves": 0,
+  "global_rays": 12,
+  "psd_coefficients": 31,
+  "tensor_coefficients": 1350,
+  "object_sha256": "df2c3a1c90224d6ab7a7d82cd8cf3b959fe1a62060e6fc0cf5ac66acf936f7ac",
+  "seconds": 0.3131367090390995
+}

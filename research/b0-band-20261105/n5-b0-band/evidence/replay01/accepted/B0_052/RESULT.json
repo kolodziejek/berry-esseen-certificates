@@ -1,0 +1,79 @@
+{
+  "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+  "row_id": "B0_052",
+  "contract_path": "work/cutoff5_20261020/root/count5_prepare_v1/B0_BN_rest01/n5/B0/panel052/contract.json",
+  "contract_sha256": "ea296a40f09c9b2ff1b6f98202fa8acd05f4241bd1d2b80b2dbccd735d0c9b82",
+  "band": "B0",
+  "slab_family": "B0_BN_rest01",
+  "index": 52,
+  "n": 5,
+  "K": "0",
+  "p": [
+    "13/25",
+    "53/100"
+  ],
+  "rho": [
+    "1",
+    "11/10"
+  ],
+  "beta": [
+    "-129991/1000000",
+    "129991/1000000"
+  ],
+  "roots": [
+    {
+      "k": 2,
+      "p": [
+        "13/25",
+        "53/100"
+      ],
+      "u": [
+        "-217214501983/1000000000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "259667/1000000"
+      ],
+      "leaves": 3,
+      "taylor_leaves": 3,
+      "baseline_leaves": 0,
+      "global_rays": 36,
+      "psd_coefficients": 93,
+      "tensor_coefficients": 5400,
+      "result_sha256": "b4fba44a1bba21eda0bbb90883408493690425300057ea06feeae5ca05ef67f4",
+      "object_sha256": "50f00538e7ac77ba918dee4831e6fb85702c29922b9599393f9ce790bf7e03b3"
+    },
+    {
+      "k": 3,
+      "p": [
+        "13/25",
+        "53/100"
+      ],
+      "u": [
+        "-1/2",
+        "467214501983/1000000000000"
+      ],
+      "noise": [
+        "0",
+        "259667/1000000"
+      ],
+      "leaves": 2,
+      "taylor_leaves": 2,
+      "baseline_leaves": 0,
+      "global_rays": 24,
+      "psd_coefficients": 62,
+      "tensor_coefficients": 3600,
+      "result_sha256": "f754ad66d9009b01120ec07f64079b03a5463e021199f0301376bd78cc102f96",
+      "object_sha256": "5f1516301e3986aa8897b4cdd04936ba2827b5e6fd141f52c7aa6a64766a8514"
+    }
+  ],
+  "leaves": 5,
+  "taylor_leaves": 5,
+  "baseline_leaves": 0,
+  "global_rays": 60,
+  "psd_coefficients": 155,
+  "tensor_coefficients": 9000,
+  "old_checked_leaves": 101,
+  "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+}
