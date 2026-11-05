@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/Users/bkolodziejek/miniforge3/bin/python3",
+    "-I",
+    "-B",
+    "work/count_row_20261105/construct/discover.py",
+    "runs/count_row_20261105/construct_first_cell03/objects",
+    "--k",
+    "2",
+    "--u",
+    "-0.01",
+    "0.01",
+    "--max-depth",
+    "5"
+  ],
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff",
+  "inputs": {
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/construct/model.py": "348e5a756dde9c556a31dae234adb810cf63c1edcee777b56a1f304f882469e3",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/construct/discover.py": "92738f6d12eab4b9caa8d5e1b26f292bdbf7ba6194f2c748e1a75afce3932c17"
+  },
+  "runtime": {
+    "executable": "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+    "version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "optimized": 0
+  },
+  "capture_driver_sha256": "48e67827d2eaca9f60c8877bc7113ff98a1c5e73bd2f5e69fe12efecbe8d7727"
+}

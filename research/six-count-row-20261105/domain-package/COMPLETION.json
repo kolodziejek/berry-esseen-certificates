@@ -1,0 +1,25 @@
+{
+  "status": "PASS_BYTE_EXACT_DOMAIN_PACKAGE_AND_RELOCATED_CHECK",
+  "runtime_original_inputs": 10,
+  "preserved_selected_files": 20,
+  "relocated_result_sha256": "6178f6d0344277ad5f01243fb0912bcc422dbfbb2c360eea98246b6e21b92379",
+  "actual_returncode": 0,
+  "statistics": {
+    "threshold_test_points": 38,
+    "coordinate_checks": 45,
+    "mixture_checks": 128,
+    "reflection_checks": 128,
+    "atom_collisions": 104,
+    "beta_actual_laws": 9,
+    "degree_polynomials": 108,
+    "independent_degree_identities": 972,
+    "maximum_degree": [
+      9,
+      4
+    ]
+  },
+  "negative_controls": 20,
+  "native_acquisition_rerun": false,
+  "full_row_score_claimed": false,
+  "builder_sha256": "e077532371662e563904af07a271aa52058fe27874701efb206367d032831c07"
+}
