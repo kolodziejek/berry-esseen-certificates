@@ -1,0 +1,34 @@
+{
+  "command": [
+    "/Users/bkolodziejek/miniforge3/bin/python3",
+    "-I",
+    "-B",
+    "work/count_transfer_20261105/construct/discover_dual.py",
+    "runs/count_transfer_20261105/construct_BN39_dual_pilot01/objects",
+    "--row",
+    "BN39",
+    "--k",
+    "2",
+    "--u",
+    "-0.47",
+    "-0.46",
+    "--max-depth",
+    "4",
+    "--node-budget",
+    "31"
+  ],
+  "cwd": "/Users/bkolodziejek/Downloads/BE_Codex_Handoff",
+  "inputs": {
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_transfer_20261105/construct/algebra.py": "f8c2fa3e36c6d142645745ff3dff70235114b39b8e723b21a4b3140c0400f3c4",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_transfer_20261105/construct/model.py": "d9767248da46f42a6c8b1bec667c53be006bdc255e4e8ed6cd820966d4e736f9",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_transfer_20261105/construct/model_dual.py": "2cf4a133064c9b5388a16b29ede46b564def648ef2940d3af568eddbb7e112bf",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_transfer_20261105/construct/discover_dual.py": "c52845667f1474afebc82a20296b7b66f69dccdb89c5a29b974c175cf363ea29"
+  },
+  "runtime": {
+    "executable": "/Users/bkolodziejek/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+    "version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "optimized": 0
+  },
+  "capture_driver_sha256": "48e67827d2eaca9f60c8877bc7113ff98a1c5e73bd2f5e69fe12efecbe8d7727"
+}

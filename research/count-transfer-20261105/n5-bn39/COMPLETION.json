@@ -1,0 +1,102 @@
+{
+  "status": "COMPLETE_ORIGINAL_BN39_MIXED_COMPARISON",
+  "mathematical_status": "Conditional original positive closed-score implication; original acquisition not replayed; no all-n5 claim.",
+  "historical_result": "evidence/construct_BN39_mixed_complete01/accepted/RESULT.json",
+  "historical_result_sha256": "8f8752d58b5b630d0090980667465c7665122d6a5ffd458be252412b3946ee96",
+  "roots": [
+    {
+      "k": 1,
+      "p": [
+        "39/100",
+        "2/5"
+      ],
+      "u": [
+        "-163866809871/1000000000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "12941/40000"
+      ],
+      "leaves": 149,
+      "baseline_leaves": 149,
+      "taylor_leaves": 0,
+      "global_rays": 1788,
+      "tensor_coefficients": 279900,
+      "result_sha256": "b452cd3cfa2ff6d8f4f94774b51b3c9cf96f2df48636b0bf2c87fd2cda0e241e",
+      "object_sha256": "66f121b02da2c60ee3511f00ee1faeddc59ccbf693ff8c833f6c42e4dd646f2b"
+    },
+    {
+      "k": 2,
+      "p": [
+        "39/100",
+        "2/5"
+      ],
+      "u": [
+        "-1/2",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "12941/40000"
+      ],
+      "leaves": 974,
+      "baseline_leaves": 963,
+      "taylor_leaves": 11,
+      "global_rays": 11688,
+      "tensor_coefficients": 1831500,
+      "result_sha256": "f2ebcc55b977c1a2760c9088cb9263aa21ef9994e284d8dddb45f68aee4bec11",
+      "object_sha256": "7583d956ea6d9d16ca33b84bac20a0022b6676b9886939340222af97bab8a583"
+    },
+    {
+      "k": 3,
+      "p": [
+        "39/100",
+        "2/5"
+      ],
+      "u": [
+        "-1/2",
+        "113866809871/1000000000000"
+      ],
+      "noise": [
+        "0",
+        "12941/40000"
+      ],
+      "leaves": 3,
+      "baseline_leaves": 3,
+      "taylor_leaves": 0,
+      "global_rays": 36,
+      "tensor_coefficients": 5400,
+      "result_sha256": "7655eeaf0d74c332423ded1cee055ffa5d94959867584f9c772170fae646858c",
+      "object_sha256": "5eb19d692b5bc652973bf01669c1d788cbe26ffb1db163ae1b78a284793280cf"
+    }
+  ],
+  "leaves": 1126,
+  "baseline_leaves": 1115,
+  "taylor_leaves": 11,
+  "global_rays": 13512,
+  "tensor_coefficients": 2116800,
+  "historical_process": {
+    "returncode": 0,
+    "seconds": 417.8417020419729,
+    "stdout_sha256": "a26e3244d3b03790dead5e2efe7e47d85362abd0f49d3c7a9ad90e44b14faddb",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "inputs_unchanged": true
+  },
+  "source_sha256": {
+    "model.py": "d9767248da46f42a6c8b1bec667c53be006bdc255e4e8ed6cd820966d4e736f9",
+    "algebra.py": "f8c2fa3e36c6d142645745ff3dff70235114b39b8e723b21a4b3140c0400f3c4",
+    "accept.py": "c237e8e4b1aea10a357b660d6a3ed0f26ed9ee2e4c7c7361a5fe508527be25d5",
+    "native/finite_binomial_core.py": "939236711b080f9148ee3d3f7f6a0cd15b86cb24f3d2700f0e7127b2a345291f",
+    "native/quartic_global.py": "0760d772b6cf1858ed139a1fe179490cb1e523a5d685a37a25271a10b349aa35",
+    "native/quartic_sturm.py": "1f815ccb23692f78be98691a76a5fe0605f8995abdab5d9a3964f1625a4c2617",
+    "contracts/B0_50.json": "2939dcca05896e1c6393c50944df8dd5e872efb26076a7304df45d9f6d07a93f",
+    "contracts/B2_S3_34.json": "a9e2574fbb79e8d21d7bf6d5a9bc152ba6981878101c0dafd3eb7088233ba6d5",
+    "contracts/BN39.json": "8d2a6ec51bf43b45a7ce2de62d5ed734a90498924cb60c833a3976394eef3d9a",
+    "accept_row.py": "bb1a3cd733790238deffbbb88dbe87594094146b60d734fb17bb703b143b4568",
+    "model_taylor.py": "fbfc615e7f3b9b9d7aecee949960176e9c878cde393c50e706439de47f4015ba",
+    "gaussian_scalar.py": "d69e659c6fa8d696a07a45756873e6dabeeecab1eb7ffc18664bce3ce18edc14",
+    "accept_mixed.py": "ce7eaf841d13fef24807e6dab75acb2feba516e15e8912f8a6fc5f9eed7edf57"
+  },
+  "scope": "Original acquired row only. Full exact arithmetic is complete; no acquisition replay, all-n5 theorem or manuscript deletion claim."
+}

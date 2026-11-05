@@ -1,0 +1,20 @@
+{
+  "status": "PASS_RECTANGLE_POLYNOMIAL_AND_CANONICAL_CONTROLS",
+  "inverse_polynomial_coefficients": 167,
+  "independent_translated_mixture_identities": 27,
+  "rejected_mutations": [
+    "boolean",
+    "integer",
+    "float",
+    "noncanonical integer",
+    "noncanonical zero",
+    "zero denominator",
+    "boolean blend",
+    "missing count",
+    "extra object field",
+    "duplicate key"
+  ],
+  "unsplit_target_minus_zero_noise_cdf": "-13583154067365262917384472338203336479359624210208973449234074749883704083972710757231364972035192908287884758199989022213686626233511897553629072019691114235194234485306966337335471452299745080000517355599389844101179275219721/40529570404672012820454894435878223618138321166484940460478326712629743955431250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "obstruction_scope": "Only the unsplit constant p_hi/u_lo Gaussian gate; the four-strip continuous check is separate.",
+  "source_sha256": "014ceffd691342ed3f7e80b5963a26cd21d20d606b50a8ab19fdd3e59ee4a801"
+}

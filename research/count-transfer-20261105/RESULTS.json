@@ -1,0 +1,83 @@
+{
+  "schema": "COUNT_TRANSFER_COMPLETED_RESULTS_V1",
+  "n5_rows": [
+    {
+      "row": "B0_50",
+      "mathematical_status": "Locally derived and checked conditional positive closed-score implication under original acquisition.",
+      "execution_status": "Fresh complete exact PASS",
+      "original_contract_sha256": "2939dcca05896e1c6393c50944df8dd5e872efb26076a7304df45d9f6d07a93f",
+      "result_sha256": "722ecb69e3bcac17206cc2035cd3f86802935bdd0cf9bb2d19eb590358099b9a",
+      "source_run": "runs/count_transfer_20261105/construct_B0_complete01",
+      "returncode": 0,
+      "seconds": 179.83274174999679,
+      "leaves": 383,
+      "global_rays": 4596,
+      "score_coefficients": 816750
+    },
+    {
+      "row": "B2_S3_34",
+      "mathematical_status": "Locally derived and checked conditional positive closed-score implication under original acquisition.",
+      "execution_status": "Fresh complete exact PASS",
+      "original_contract_sha256": "a9e2574fbb79e8d21d7bf6d5a9bc152ba6981878101c0dafd3eb7088233ba6d5",
+      "result_sha256": "dd6fde86aaad2ff58d7fdd89c039bf3cd3e31194622a4c802b2d83bb51b6b82d",
+      "source_run": "runs/count_transfer_20261105/construct_B2_complete01",
+      "returncode": 0,
+      "seconds": 23.870499707991257,
+      "leaves": 54,
+      "global_rays": 648,
+      "score_coefficients": 121500
+    },
+    {
+      "row": "BN39",
+      "mathematical_status": "Locally derived and checked conditional positive closed-score implication under original acquisition.",
+      "execution_status": "Fresh complete exact PASS",
+      "original_contract_sha256": "8d2a6ec51bf43b45a7ce2de62d5ed734a90498924cb60c833a3976394eef3d9a",
+      "result_sha256": "8f8752d58b5b630d0090980667465c7665122d6a5ffd458be252412b3946ee96",
+      "source_run": "runs/count_transfer_20261105/construct_BN39_mixed_complete01",
+      "returncode": 0,
+      "seconds": 417.8417020419729,
+      "leaves": 1126,
+      "global_rays": 13512,
+      "score_coefficients": 2116800
+    }
+  ],
+  "sharp39": {
+    "mathematical_status": "Locally derived and checked original acquired-row implication on full p, narrow phase, one count.",
+    "execution_status": "Fresh full two-cell PASS and full relocated PASS",
+    "n": 39,
+    "k": 15,
+    "p": [
+      "19/50",
+      "39/100"
+    ],
+    "u": [
+      "-1/100",
+      "1/100"
+    ],
+    "noise": [
+      "0",
+      "37/200"
+    ],
+    "score_coefficients": 11880,
+    "psd_coefficients": 3006,
+    "ray_checks": 160,
+    "result_sha256": "e6495b16fc3f7fadc236951f94e05142219d1e778f9aacdeafd7d125d8d8f8d4",
+    "relocated_result_sha256": "5447c4164c0096009f801927c45c266a15f35a96694ec330e889c52a09abe5df",
+    "full_original_row": false
+  },
+  "proof_note": {
+    "pages": 4,
+    "pdf_sha256": "a79ecc5774eb06842b00e9e0cd0085aebdbce1902d29d7f14083f102f887637c",
+    "tex_sha256": "0de6ced4d6683309d896cc84f3f6c3d13e241c5ad7148f4a90e49374195df8ab",
+    "build": "delivery-evidence/runs/count_transfer_20261105/root_build04",
+    "visual_review": "delivery-evidence/runs/count_transfer_20261105/root_visual04/RESULT.json"
+  },
+  "original_acquisition_replayed": false,
+  "selected_manuscript_unchanged": true,
+  "manuscript_pages": 86,
+  "all_n5_contracts": 295,
+  "complete_new_method_rows_including_previous_BN38": 4,
+  "remaining_n5_contracts": 291,
+  "formal_verification": false,
+  "external_referee_review": false
+}

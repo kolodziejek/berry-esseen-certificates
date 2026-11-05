@@ -1,0 +1,66 @@
+{
+  "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_TRANSFER_ROW",
+  "row_id": "B0_50",
+  "contract_sha256": "2939dcca05896e1c6393c50944df8dd5e872efb26076a7304df45d9f6d07a93f",
+  "n": 5,
+  "K": "0",
+  "mathematical_status": "Conditional positive closed-score implication under this original acquired row. No acquisition replay or all-n5 theorem.",
+  "roots": [
+    {
+      "k": 2,
+      "p": [
+        "1/2",
+        "51/100"
+      ],
+      "u": [
+        "-44943245351/125000000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "32813/125000"
+      ],
+      "leaves": 360,
+      "global_rays": 4320,
+      "tensor_coefficients": 772650,
+      "result_sha256": "f1d22fc0388142c812a97d2c2f95fa62961bcefc57e640fe1936bd67d1c62906",
+      "object_sha256": "ea76a6b2b5a871cbf3b40f6ed9a798fe564331416de4b25343bee6d5d6ab89e5"
+    },
+    {
+      "k": 3,
+      "p": [
+        "1/2",
+        "51/100"
+      ],
+      "u": [
+        "-1/2",
+        "51193245351/125000000000"
+      ],
+      "noise": [
+        "0",
+        "32813/125000"
+      ],
+      "leaves": 23,
+      "global_rays": 276,
+      "tensor_coefficients": 44100,
+      "result_sha256": "b763f2d55c619ee6d10672cd88c834c556e3e00859e13a95c88a669137d8bcf5",
+      "object_sha256": "73baf6e9aff701466eb7070ccbad78dd824f54a12134ed9b235543f7320996c2"
+    }
+  ],
+  "leaves": 383,
+  "global_rays": 4596,
+  "tensor_coefficients": 816750,
+  "source_sha256": {
+    "model.py": "d9767248da46f42a6c8b1bec667c53be006bdc255e4e8ed6cd820966d4e736f9",
+    "algebra.py": "f8c2fa3e36c6d142645745ff3dff70235114b39b8e723b21a4b3140c0400f3c4",
+    "accept.py": "c237e8e4b1aea10a357b660d6a3ed0f26ed9ee2e4c7c7361a5fe508527be25d5",
+    "native/finite_binomial_core.py": "939236711b080f9148ee3d3f7f6a0cd15b86cb24f3d2700f0e7127b2a345291f",
+    "native/quartic_global.py": "0760d772b6cf1858ed139a1fe179490cb1e523a5d685a37a25271a10b349aa35",
+    "native/quartic_sturm.py": "1f815ccb23692f78be98691a76a5fe0605f8995abdab5d9a3964f1625a4c2617",
+    "contracts/B0_50.json": "2939dcca05896e1c6393c50944df8dd5e872efb26076a7304df45d9f6d07a93f",
+    "contracts/B2_S3_34.json": "a9e2574fbb79e8d21d7bf6d5a9bc152ba6981878101c0dafd3eb7088233ba6d5",
+    "contracts/BN39.json": "8d2a6ec51bf43b45a7ce2de62d5ed734a90498924cb60c833a3976394eef3d9a",
+    "accept_row.py": "bb1a3cd733790238deffbbb88dbe87594094146b60d734fb17bb703b143b4568"
+  },
+  "selection_sha256": "638820814af19881dff845ce312e56167c447c9ccc8e0c890748e77867ec833d"
+}

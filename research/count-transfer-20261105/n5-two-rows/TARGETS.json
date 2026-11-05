@@ -1,0 +1,52 @@
+{
+  "schema": "N5_TRANSFER_PORTABLE_TARGETS_V1",
+  "rows": [
+    {
+      "row_id": "B0_50",
+      "contract_sha256": "2939dcca05896e1c6393c50944df8dd5e872efb26076a7304df45d9f6d07a93f",
+      "roots": [
+        {
+          "k": 2,
+          "object": "objects/B0_50/k2.json",
+          "sha256": "ea76a6b2b5a871cbf3b40f6ed9a798fe564331416de4b25343bee6d5d6ab89e5"
+        },
+        {
+          "k": 3,
+          "object": "objects/B0_50/k3.json",
+          "sha256": "73baf6e9aff701466eb7070ccbad78dd824f54a12134ed9b235543f7320996c2"
+        }
+      ],
+      "historical_result": "evidence/construct_B0_complete01/accepted/RESULT.json",
+      "historical_result_sha256": "722ecb69e3bcac17206cc2035cd3f86802935bdd0cf9bb2d19eb590358099b9a",
+      "leaves": 383,
+      "global_rays": 4596,
+      "tensor_coefficients": 816750
+    },
+    {
+      "row_id": "B2_S3_34",
+      "contract_sha256": "a9e2574fbb79e8d21d7bf6d5a9bc152ba6981878101c0dafd3eb7088233ba6d5",
+      "roots": [
+        {
+          "k": 1,
+          "object": "objects/B2_S3_34/k1.json",
+          "sha256": "bdde6594b11cfcd319a37cd77aede8b340ab05c818e7b32e3478bbdb08dbc75d"
+        },
+        {
+          "k": 2,
+          "object": "objects/B2_S3_34/k2.json",
+          "sha256": "2678a1ec321a83cb1f359c18cc3b8ccad20d85c5970c013c16d6e47ffbef2263"
+        },
+        {
+          "k": 3,
+          "object": "objects/B2_S3_34/k3.json",
+          "sha256": "b092bdb4c976e404039cce4680f684f761a41172a3603969cc4c3d035197e94d"
+        }
+      ],
+      "historical_result": "evidence/construct_B2_complete01/accepted/RESULT.json",
+      "historical_result_sha256": "dd6fde86aaad2ff58d7fdd89c039bf3cd3e31194622a4c802b2d83bb51b6b82d",
+      "leaves": 54,
+      "global_rays": 648,
+      "tensor_coefficients": 121500
+    }
+  ]
+}

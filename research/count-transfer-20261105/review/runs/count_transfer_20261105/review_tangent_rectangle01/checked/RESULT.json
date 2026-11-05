@@ -1,0 +1,59 @@
+{
+  "status": "PASS_INDEPENDENT_SELECTED_CONTINUOUS_TANGENT_ALGEBRA",
+  "scope": "First and last closed p strips; all nine complete Hessian polynomial triples on each, three full moment/score tensors on each. Shared directed Gaussian primitive; no independent global-ray or complete original-row admission.",
+  "n": 39,
+  "p": [
+    "3849/10000",
+    "3851/10000"
+  ],
+  "u": [
+    "-1/1000",
+    "1/1000"
+  ],
+  "noise": [
+    "0",
+    "37/200"
+  ],
+  "independent_hessian_sets": 18,
+  "independent_moment_tensors": 6,
+  "inverse_univariate_coefficients": 3006,
+  "inverse_tensor_coefficients": 1320,
+  "coefficient_mutants": 60,
+  "actual_law_semantic_cases": 6,
+  "zero_variance_components": 4,
+  "negative_convexity_and_range_controls": 2,
+  "cleared_selected_margin": "86119322302394103180670625719297960308971423706518302854478885742115210219523601717061090341313327574098708241489838270335651703286876859786712148113312380937235253804111631647366348575276633468747305798201951598637454779963106345231514255789809308699346585661844279412267080821/5704029942873973741005913831677274996030795999294173693682043903919650912515879741895475200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "sources_unchanged": true,
+  "source_sha256_before": {
+    "work/count_transfer_20261105/review/check_tangent_rectangle_independent.py": "7b3b71263c9b242ebccddd6418fba5a1240a726f759eedbbc755f17f52d7864a",
+    "work/count_transfer_20261105/later/analysis/PUBLIC_SOURCE_PINS.json": "f9decafe221c3eed92c758e710cad8f1989646679d944ccce6677f9387d9dd7e",
+    "work/count_transfer_20261105/later/analysis/pilot.py": "d3661f7f588dd525052427fa303dd89407effc5d44c4edd71ea16409b6a1ce21",
+    "work/count_transfer_20261105/later/analysis/native/PINS.json": "af7b3abff162f3eb993292a51d53282550d8c7d6fb09534dcee8d0349b959cd0",
+    "work/count_transfer_20261105/later/analysis/native/finite_binomial_core.py": "939236711b080f9148ee3d3f7f6a0cd15b86cb24f3d2700f0e7127b2a345291f",
+    "work/count_transfer_20261105/later/analysis/native/quartic_global.py": "0760d772b6cf1858ed139a1fe179490cb1e523a5d685a37a25271a10b349aa35",
+    "work/count_transfer_20261105/later/analysis/native/quartic_sturm.py": "1f815ccb23692f78be98691a76a5fe0605f8995abdab5d9a3964f1625a4c2617",
+    "work/count_transfer_20261105/later/analysis/../selected/n6.BN.p38/contract.json": "30957315d287cdae6aec2d933900c339b14d2cc0c4eae6487f44d3abafac6111",
+    "work/count_transfer_20261105/later/analysis/../selected/n39.strict.dce5d64054154a1a/contract.json": "6e3ba2cef34cc577ef966ebe5708b83bccd33698b4388f8c0f652c239661f1c4",
+    "work/count_transfer_20261105/later/analysis/tangent_pilot.py": "3d4898a89efb73aa421623b8089879c8742e113206e4a72a96779b4146d74a5d",
+    "work/count_transfer_20261105/later/analysis/strict_object.py": "419a186904cfd8fdffe2e39c87f06b6e6e28700586c23fcf5948c1a53e5bf9e4",
+    "work/count_transfer_20261105/later/analysis/check_tangent_rectangle.py": "68bb3ddf3d12355a0a957c11690dac9481ed8486b792b1078ab68e38233a0a2a",
+    "work/count_transfer_20261105/later/analysis/N39_TANGENT_CANDIDATE.json": "dffec8eb618e7390905c7aa5c93a0126c252c6616e0118cdc90cea0df28d0502"
+  },
+  "source_sha256_after": {
+    "work/count_transfer_20261105/review/check_tangent_rectangle_independent.py": "7b3b71263c9b242ebccddd6418fba5a1240a726f759eedbbc755f17f52d7864a",
+    "work/count_transfer_20261105/later/analysis/PUBLIC_SOURCE_PINS.json": "f9decafe221c3eed92c758e710cad8f1989646679d944ccce6677f9387d9dd7e",
+    "work/count_transfer_20261105/later/analysis/pilot.py": "d3661f7f588dd525052427fa303dd89407effc5d44c4edd71ea16409b6a1ce21",
+    "work/count_transfer_20261105/later/analysis/native/PINS.json": "af7b3abff162f3eb993292a51d53282550d8c7d6fb09534dcee8d0349b959cd0",
+    "work/count_transfer_20261105/later/analysis/native/finite_binomial_core.py": "939236711b080f9148ee3d3f7f6a0cd15b86cb24f3d2700f0e7127b2a345291f",
+    "work/count_transfer_20261105/later/analysis/native/quartic_global.py": "0760d772b6cf1858ed139a1fe179490cb1e523a5d685a37a25271a10b349aa35",
+    "work/count_transfer_20261105/later/analysis/native/quartic_sturm.py": "1f815ccb23692f78be98691a76a5fe0605f8995abdab5d9a3964f1625a4c2617",
+    "work/count_transfer_20261105/later/analysis/../selected/n6.BN.p38/contract.json": "30957315d287cdae6aec2d933900c339b14d2cc0c4eae6487f44d3abafac6111",
+    "work/count_transfer_20261105/later/analysis/../selected/n39.strict.dce5d64054154a1a/contract.json": "6e3ba2cef34cc577ef966ebe5708b83bccd33698b4388f8c0f652c239661f1c4",
+    "work/count_transfer_20261105/later/analysis/tangent_pilot.py": "3d4898a89efb73aa421623b8089879c8742e113206e4a72a96779b4146d74a5d",
+    "work/count_transfer_20261105/later/analysis/strict_object.py": "419a186904cfd8fdffe2e39c87f06b6e6e28700586c23fcf5948c1a53e5bf9e4",
+    "work/count_transfer_20261105/later/analysis/check_tangent_rectangle.py": "68bb3ddf3d12355a0a957c11690dac9481ed8486b792b1078ab68e38233a0a2a",
+    "work/count_transfer_20261105/later/analysis/N39_TANGENT_CANDIDATE.json": "dffec8eb618e7390905c7aa5c93a0126c252c6616e0118cdc90cea0df28d0502"
+  },
+  "full_original_row": false,
+  "acquisition_rerun": false
+}

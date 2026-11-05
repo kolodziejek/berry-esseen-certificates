@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_transfer_20261105/later/gaussian_curvature01/check_full_p.py", line 77, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_transfer_20261105/later/gaussian_curvature01/check_full_p.py", line 69, in main
+    try:result=check(obj,progress)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_transfer_20261105/later/gaussian_curvature01/check_full_p.py", line 60, in check
+    m.need(reserve>0,'strict full-p continuous score tensor')
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_transfer_20261105/later/analysis/pilot.py", line 16, in need
+    if not v:raise ValueError(m)
+             ^^^^^^^^^^^^^^^^^^^
+ValueError: strict full-p continuous score tensor

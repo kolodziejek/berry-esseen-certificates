@@ -1,0 +1,208 @@
+{
+  "job_id": "n6.BN.p38",
+  "definition": {
+    "arguments": [
+      "accept"
+    ],
+    "candidate": "COUNT_FOREST.json",
+    "conditional_on_exact_same_law_resource_acquisition": true,
+    "constructor": {
+      "arguments": [
+        "construct"
+      ],
+      "script": "count_protocol.py"
+    },
+    "expected_negative_controls": [
+      "wrong n",
+      "boolean n",
+      "wrong index",
+      "boolean index",
+      "wrong target",
+      "wrong contract",
+      "missing kernel source",
+      "wrong checker",
+      "missing count",
+      "reordered counts",
+      "wrong count",
+      "boolean count",
+      "missing child",
+      "invalid axis",
+      "boolean axis",
+      "outside cut",
+      "nontext cut",
+      "changed leaf box",
+      "false decision",
+      "false leaf arithmetic",
+      "missing result",
+      "unknown node",
+      "extra success claim",
+      "extra leaf claim"
+    ],
+    "index": 38,
+    "n": 6,
+    "original_source_paths": {
+      "KERNEL_COPY_MANIFEST.json": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/KERNEL_COPY_MANIFEST.json",
+      "RIGHT_HALF_COUNT_PROOF.txt": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/RIGHT_HALF_COUNT_PROOF.txt",
+      "SOURCE_TRANSFORM.json": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/SOURCE_TRANSFORM.json",
+      "bernstein_fast.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/bernstein_fast.py",
+      "contract.json": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/contract.json",
+      "count_protocol.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/count_protocol.py",
+      "exact35_core.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/exact35_core.py",
+      "exact_count_core_v5.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/exact_count_core_v5.py",
+      "finite_gaussian.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/finite_gaussian.py",
+      "generalized_scope.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/generalized_scope.py",
+      "interval_scalar_fast.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/interval_scalar_fast.py",
+      "inward_filter.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/inward_filter.py",
+      "inward_triangle.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/inward_triangle.py",
+      "joint.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/joint.py",
+      "joint_cubic.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/joint_cubic.py",
+      "joint_cubic_defect.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/joint_cubic_defect.py",
+      "joint_cubic_normalized.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/joint_cubic_normalized.py",
+      "joint_cubic_normalized_fast.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/joint_cubic_normalized_fast.py",
+      "joint_filter.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/joint_filter.py",
+      "mean_noise.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/mean_noise.py",
+      "optimized_arithmetic.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/optimized_arithmetic.py",
+      "probability_extrema.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/probability_extrema.py",
+      "rho_signed_moment_tightener.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/rho_signed_moment_tightener.py",
+      "rho_variance_floor.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/rho_variance_floor.py",
+      "signed_beta_variance_floor.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/signed_beta_variance_floor.py",
+      "signed_gamma.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/signed_gamma.py",
+      "signed_moment_floor_tightener.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/signed_moment_floor_tightener.py",
+      "signed_moment_prefilter.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/signed_moment_prefilter.py",
+      "signed_moment_tightener.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/signed_moment_tightener.py",
+      "variance_geometry.py": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/variance_geometry.py"
+    },
+    "receipt": "COUNT_ACCEPTED.json",
+    "receipt_invariants": {
+      "index": 38,
+      "n": 6,
+      "scope": "Conditional fixed count proof only. Exact same-law resource acquisition and parent proof composition remain separate obligations. Every original root box and leaf is reconstructed; rho/beta/alpha contractions are recomputed by the frozen wrapper.",
+      "status": "PASS_FRESH_CONDITIONAL_ACTUAL6_GAMMA_SHARP_BN_JOINT_PANEL38"
+    },
+    "role": "projected-C69",
+    "script": "count_protocol.py",
+    "source": {
+      "KERNEL_COPY_MANIFEST.json": {
+        "bytes": 2760,
+        "sha256": "cfe31b4f87e23cbe7bc55422468ce640ba819f4fc496b8b528c423a8cd913f46"
+      },
+      "RIGHT_HALF_COUNT_PROOF.txt": {
+        "bytes": 7176,
+        "sha256": "a73a4f6abf8796e6e20ab161922f33a075c972953e1f6ee545709c51566a355b"
+      },
+      "SOURCE_TRANSFORM.json": {
+        "bytes": 11401,
+        "sha256": "5da6ce26255dafad387d566a8620a3549659e834f8aea23f63c0c80d2d8df11c"
+      },
+      "bernstein_fast.py": {
+        "bytes": 1401,
+        "sha256": "4983c9af05673775c3fd5b521e898a9c7f7fe5c9523a5009646872bf75adc607"
+      },
+      "contract.json": {
+        "bytes": 2704,
+        "sha256": "30957315d287cdae6aec2d933900c339b14d2cc0c4eae6487f44d3abafac6111"
+      },
+      "count_protocol.py": {
+        "bytes": 10308,
+        "sha256": "6868641e1bd075b6f1c45c015353b9a6c86d50efec6aa23925e788c9987253e6"
+      },
+      "exact35_core.py": {
+        "bytes": 17194,
+        "sha256": "32e0e3d1178fb44dd92b3e0c67d92f08ea0d185875251950c0148ad55d0b3e64"
+      },
+      "exact_count_core_v5.py": {
+        "bytes": 7506,
+        "sha256": "0ffba7a5e1a91fc3c3c770f9d3bcb073a529fade3d622bc5615567153a4255a0"
+      },
+      "finite_gaussian.py": {
+        "bytes": 3594,
+        "sha256": "4f5b1a829df4c3c8c0e5467adb79f112984ee8eab8ba5f25b20fd7173b78a4a0"
+      },
+      "generalized_scope.py": {
+        "bytes": 2869,
+        "sha256": "0bbc0b9cf881bda73851324da689a60e879db1c467230c269e0d2006b6a46eec"
+      },
+      "interval_scalar_fast.py": {
+        "bytes": 559,
+        "sha256": "3eaa0d78eec8b8d5c2044eb020a406ec352ac5a99b30f9d2773694a4f9601512"
+      },
+      "inward_filter.py": {
+        "bytes": 1144,
+        "sha256": "11922c9ab0f8faa6334756535755e1ee5df6eab8c9e6a80511fff02687b8ec7a"
+      },
+      "inward_triangle.py": {
+        "bytes": 844,
+        "sha256": "31cf56d6118596f4217266c91e29576a996ee71c0169183a6e38b05c03671159"
+      },
+      "joint.py": {
+        "bytes": 1698,
+        "sha256": "5d6e3fecf6627d9cc1e00869e41077ddd6cd714952a60bd8fab00069269e20be"
+      },
+      "joint_cubic.py": {
+        "bytes": 2845,
+        "sha256": "d4adf6e9cfa430bbd7be7ffd90b994672d648d9886c42aa38e0a94b66eb55238"
+      },
+      "joint_cubic_defect.py": {
+        "bytes": 2089,
+        "sha256": "452f798af68df222417e9f1710e8d72b4ae574791caa6d59005eaf4fbae5b137"
+      },
+      "joint_cubic_normalized.py": {
+        "bytes": 1835,
+        "sha256": "1403856612e213b9a14118a5a4098b7f470ce890499811dd1ad53c808904e2f6"
+      },
+      "joint_cubic_normalized_fast.py": {
+        "bytes": 2144,
+        "sha256": "7d72ff8ec7cfc2ad59e45d26fcccd6998ef01abe24cb54653ba18b05f2bbf347"
+      },
+      "joint_filter.py": {
+        "bytes": 1446,
+        "sha256": "ffd2bcca7eada563c5c3fa83828a534a1229ef1f1b231b9af148d4f1f637e276"
+      },
+      "mean_noise.py": {
+        "bytes": 890,
+        "sha256": "515686c5c5a86f9fdc5bf7474ad17a6e35bf4172edf3e871cde314a6f0e9fab8"
+      },
+      "optimized_arithmetic.py": {
+        "bytes": 382,
+        "sha256": "ab9bc728fbb7901f94323a384caf367eee2b2064e919dac27a01cabae743b765"
+      },
+      "probability_extrema.py": {
+        "bytes": 435,
+        "sha256": "f808c4e82ba40ce094e45139c6e09872c43ca7249ab7ae1d25aca24bbc5ee9ac"
+      },
+      "rho_signed_moment_tightener.py": {
+        "bytes": 2884,
+        "sha256": "1fe8fefd93269e478be47077b3bf1c8d0cff9259de94824d55a66824b8052cdc"
+      },
+      "rho_variance_floor.py": {
+        "bytes": 1400,
+        "sha256": "615acbcb948d2ba5767082f0dd2a2ab6f1d3999ae0a8afac3fd4c1d73b3aab6b"
+      },
+      "signed_beta_variance_floor.py": {
+        "bytes": 1028,
+        "sha256": "c4208b88510735d0e808b947ec624ce785de42ef4c9fe3217505ebbef2c823c6"
+      },
+      "signed_gamma.py": {
+        "bytes": 1648,
+        "sha256": "cc11434233d013e29d3fd94ecc8a77f499b17157d7107148031327d3648b2c06"
+      },
+      "signed_moment_floor_tightener.py": {
+        "bytes": 2464,
+        "sha256": "6e7165bb4f16df296f58d511983696e10e56725fad28f1179002f31e232f5dbc"
+      },
+      "signed_moment_prefilter.py": {
+        "bytes": 1931,
+        "sha256": "fd82440f07f4be759d74c2d7d44d1075d293e054580e9fa28cc021311b5f2173"
+      },
+      "signed_moment_tightener.py": {
+        "bytes": 2254,
+        "sha256": "f6ea60e4592a5055c1ace9340765076a95784f5c5d02232f2f02544321e75b9d"
+      },
+      "variance_geometry.py": {
+        "bytes": 1749,
+        "sha256": "55ba277cf30a0dc571cd98f38fd99deb4deff15c3be8df249c370ae8b10b3734"
+      }
+    }
+  },
+  "registry_sha256": "f5ddd40aefe85b5ce036b2c23fe540c2032997bf8a51f4999a08573e9a4c34f7"
+}

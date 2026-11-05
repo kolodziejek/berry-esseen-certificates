@@ -1,0 +1,306 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm}
+\usepackage[margin=28mm]{geometry}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}[proposition]{Corollary}
+\title{Sharper bounds in count-specific quartic certificates}
+\author{Continuation of the count-specific quartic method}
+\date{5 November 2026}
+\begin{document}
+\maketitle
+The normal term in the count comparison depends on the same probability
+through both its numerator and variance. Bounding these two quantities
+separately loses information. The following elementary monotonicity gives
+their joint minimum and works on both sides of $p=1/2$.
+Throughout, $\Phi$ and $\phi$ are the standard normal distribution function
+and density, and $C_{\mathrm E}=(3+\sqrt{10})/(6\sqrt{2\pi})$.
+Thresholds $t$ here are in Bernoulli sum coordinates; in a
+count cell $t=k+u$, not the standardized threshold of the original sum.
+
+\begin{proposition}[Exact endpoint minimum]
+Let $n>0$, $0<l\le h<1$, $0\le t_-\le t_+\le n$ and
+$0\le L\le U$. Set
+\[
+ Z(p,t,\lambda)=\frac{t-np}{\sqrt{np(1-p)+\lambda}},
+ \qquad a=t_--nh,\qquad v_h=h(1-h).
+\]
+Then
+\[
+ \min_{\substack{p\in[l,h],\ t\in[t_-,t_+]\\\lambda\in[L,U]}}
+ \Phi(Z(p,t,\lambda))
+ =\Phi\left(\frac{a}{\sqrt{nv_h+\lambda_*}}\right),
+ \quad
+ \lambda_*=
+ \begin{cases} L,&a<0,\\ U,&a\ge0.\end{cases}
+ \tag{1}
+\]
+For a fixed noise $\lambda$, the minimum is at $p=h,t=t_-$.
+\end{proposition}
+\begin{proof}
+Put $D=np(1-p)+\lambda>0$. Differentiation gives
+\[
+ \frac{\partial Z}{\partial p}
+ =-\frac{n\{np+t(1-2p)+2\lambda\}}{2D^{3/2}},
+ \qquad \frac{\partial Z}{\partial t}=D^{-1/2}>0.
+ \tag{2}
+\]
+For $p\le1/2$, the bracket is at least $np$ because $t\ge0$.
+For $p\ge1/2$, its minimum over $0\le t\le n$ is at $t=n$,
+giving the lower bound $n(1-p)$. Thus the first derivative is
+strictly negative. This proves the fixed-noise assertion. The remaining
+function $a/\sqrt{nv_h+\lambda}$ increases with $\lambda$ when $a<0$
+and decreases when $a>0$; it is zero when $a=0$. Monotonicity of $\Phi$
+proves (1).
+\end{proof}
+
+\begin{corollary}[Sharper whole-cell concavity test]
+Under the preceding assumptions, suppose
+\[
+ t_+-nl\le0,\qquad (t_--nh)^2\le3(nh(1-h)+L).
+ \tag{3}
+\]
+For every fixed $p\in[l,h]$ and $t\in[t_-,t_+]$, the function
+$g(\lambda)=\Phi(Z(p,t,\lambda))$ is concave for all $\lambda\ge L$.
+\end{corollary}
+\begin{proof}
+The first condition gives $Z\le0$. Proposition 1 shows that on
+$\lambda\ge L$ the smallest value is
+$(t_--nh)/\sqrt{nh(1-h)+L}$, whose square is at most three.
+Hence $0\le Z^2\le3$ everywhere. With $b=t-np$,
+\[
+ g''(\lambda)=\frac{b\phi(b/\sqrt D)}{4D^{5/2}}
+                    \left(3-\frac{b^2}{D}\right)\le0.
+\]
+This includes zero noise and the constant case $b=0$; $p\in(0,1)$
+keeps $D$ positive.
+\end{proof}
+
+\paragraph{Use in an exact certificate.}
+For a fixed probability/phase cell, write $t_-=k+u_-$ and
+$t_+=k+u_+$. When (3) holds, the quartic upper expectation minus the
+normal CDF is convex in the common variance pair $(x,y)$. At a polygon
+vertex, set $\lambda=n(x+y)$ and use the directed rational lower bound
+for the normal value in (1) with this \emph{same} noise. The bound is
+constant on the probability/phase cell for that vertex, so the polynomial
+degree and Bernstein acceptance criterion are unchanged. Subtracting the
+fixed affine same-law absolute-cube price preserves the same convexity.
+
+When (3) fails, (1) still gives a valid constant Gaussian floor on the
+whole noise interval. The concavity claim is then not used. If the
+threshold cell is not contained in $[0,n]$, the reader must instead use
+the earlier sign-safe variance extrema, or verify a separate derivative
+gate. It cannot use (1) without a justification: the bracket in (2) may
+be negative for thresholds outside that interval.
+
+The other scalar enclosures also work on either probability half. On
+$[l,h]$, use
+\begin{align*}
+ v_{\min}&=\min\{l(1-l),h(1-h)\},\\
+ v_{\max}&=\begin{cases}
+ 1/4,&l\le1/2\le h,\\
+ \max\{l(1-l),h(1-h)\},&\text{otherwise}.
+ \end{cases}
+\end{align*}
+For the acquired mean bound $m\ge m_->0$, put $f(v)=v^2/m_-^2-v$.
+Then the noise ceiling satisfies
+\[
+ \lambda\le n\max\{f(v_{\min}),f(v_{\max})\}.
+\]
+This quadratic is convex, so its two endpoint values suffice even
+without a monotonicity gate. Intersect with the original noise ceiling;
+a failed or degenerate intersection is not automatically an exclusion.
+For acquired sign gaps $\varepsilon_0,\varepsilon_1>0$, a directed lower
+root of $v_{\min}+L/n$ gives the fixed inward ceilings
+\[
+ r_0=\min(d,h-\varepsilon_0\sqrt{v_{\min}+L/n}_{\,\rm lo}),\quad
+ r_1=\min(d,1-l-\varepsilon_1\sqrt{v_{\min}+L/n}_{\,\rm lo}).
+\]
+They still use the original acquired support and mean hypotheses. This
+note proves scalar refinements; acquisition remains a separate input.
+
+\paragraph{Fixed prices retain further acquired moment information.}
+In the common-law quartic criterion, put $q=1-p$, $v=pq$,
+$x=q\mathbb E U_0^2$, $y=p\mathbb E U_1^2$, $w=v+x+y$ and
+$\gamma_i\mathbb E U_i^2=\mathbb E U_i^3$. The exact raw third moments are
+\begin{align*}
+ R&=\mathbb E|Y-p|^3
+   =v(1-2v)+3px+3qy-\gamma_0x+\gamma_1y,\\
+ G&=\mathbb E(Y-p)^3
+   =v(1-2p)-3px+3qy+\gamma_0x+\gamma_1y.
+\end{align*}
+These follow by expanding the two conditional cubes. On actual laws,
+$R=\rho w^{3/2}$ and $G=\gamma w^{3/2}$, where $\gamma=\mathbb E X^3$.
+An acquired interval for each standardized moment and a positive interval
+for $w$ give fixed outward bounds $R_-\le R\le R_+$ and
+$G_-\le G\le G_+$. For the signed product, retain all four endpoint
+products: a negative lower endpoint of $\gamma$ uses an upper width
+factor to bound $G$ below.
+
+Let $T$ denote an already justified sufficient CDF target, including
+the normal term and any proved lower bound on $C_{\mathrm E}\rho/\sqrt n$.
+For fixed rational prices $a,b,c,d\ge0$, replace it by
+\[
+ T'=T+a(R_--R)+b(R-R_+)+c(G_--G)+d(G-G_+).
+ \tag{4}
+\]
+Every added term is nonpositive on an actual law. Hence proving a
+quartic upper expectation strictly below $T'$ suffices. The added
+terms are affine in the common $\gamma_i$; at an inward endpoint they
+add only linear terms, preserving the previous convex quadratic bound.
+After the nine common endpoint choices they are affine in $x,y$,
+preserving the variance-polygon convexity. Artificial corners may
+violate the acquired moment intervals and receive a higher target;
+the inequalities were justified on actual laws before enlargement.
+Clearing by $v^2$ gives degree at most eight in $p$, so the original
+degree $(9,4)$ suffices for $n=5$. Prices must be fixed on the whole
+cell, nonnegative, and shared across all counts and moment choices.
+
+\paragraph{A tangent price for the actual third absolute moment.}
+A constant multiple of $R$ can substantially underprice the
+normalization at small noise. Convexity gives a more accurate lower
+bound. Suppose $0<w\le W$, with $W$ fixed on the cell. The tangent
+line to $s^{-3/2}$ at $W$ yields
+\[
+ w^{-3/2}\ge\frac{5W-3w}{2W^{5/2}},\qquad 5W-3w\ge2W>0.
+ \tag{5}
+\]
+Choose a positive rational $c$ with
+$c\le C_{\mathrm E}/(2\sqrt n\,W^{5/2})$ by directed arithmetic.
+Since the actual $R$ is nonnegative,
+\[
+ \frac{C_{\mathrm E}\rho}{\sqrt n}
+       \ge cR(5W-3w).
+ \tag{6}
+\]
+The underlying tangent in (5) has first-order contact at $w=W$;
+directed rounding of its coefficient adds a fixed lower-bound error.
+It can be blended with a fixed lower bound $c_0\rho_-$ using
+any fixed rational $\theta\in[0,1]$, where
+$0<c_0\le C_{\mathrm E}/\sqrt n$. Both terms are bounds for the
+same actual law.
+
+The new target is quadratic in the common variances, so the old
+convexity conclusion must be checked again. Write $F$ for the
+mixture's quartic upper expectation after the common support-moment
+reduction, and fix one of the nine common skew pairs. For fixed $p$,
+write
+\[
+ R=R_0+\alpha_0x+\alpha_1y,\qquad
+ R_0=v(1-2v),\quad \alpha_0=3p-\gamma_0,\quad \alpha_1=3q+\gamma_1.
+\]
+If $H_F$ is the Hessian of $F$ in $(x,y)$,
+the Hessian of the quartic loss minus the tangent price is exactly
+\[
+ H_F+3c\theta
+ \begin{pmatrix}2\alpha_0&\alpha_0+\alpha_1\\\alpha_0+\alpha_1&2\alpha_1\end{pmatrix}.
+ \tag{7}
+\]
+Indeed the only added quadratic term in the loss is
+$3c\theta(x+y)(\alpha_0x+\alpha_1y)$. For a constant Gaussian floor,
+positive semidefiniteness of (7) proves convexity of the complete
+loss. Under the concavity test (3), subtracting the actual Gaussian
+adds another convex function, so (7) is still sufficient. The
+certificate must check this matrix for each common skew choice and
+every probability in its cell. Its two diagonal entries and determinant
+give an exact scalar test. The added matrix need not itself be
+positive semidefinite; omitting this gate would be an invalid proof.
+
+The preceding common-skew reduction still applies before this check:
+the new term is affine in each $\gamma_i$ and, at its inward endpoint,
+linear in that endpoint. The nonnegative quadratic coefficient from
+each quartic is unchanged. Thus no new choice of conditional laws
+is introduced, and the variance-polygon vertices suffice once (7)
+has been verified.
+
+On a probability/phase cell the cleared tangent target has $p$ degree
+at most ten. Consequently the full tensor degree is
+$(\max\{n+4,10\},4)$. Multiplying (7) by the positive factor $v^2$
+gives polynomial matrix entries; nonnegative Bernstein coefficients
+of its diagonal entries and determinant are sufficient for the
+uniform matrix gate. Alternatively a fixed-point certificate can
+check the rational matrix directly. These are different scopes:
+a successful fixed-point check proves no surrounding rectangle
+without the corresponding uniform inequalities and cover.
+\paragraph{Keeping probability and phase in the Gaussian lower bound.}
+Even the exact endpoint minimum (1) can lose a first-order amount across
+a wide probability cell. The quartic expectation still varies with $p$,
+so this loss need not reflect a small margin in the actual comparison.
+A quadratic Taylor lower bound retains this variation at each variance
+vertex without changing the common-law convexity argument.
+
+Fix such a vertex and its noise $\lambda$. Write
+$F(p,t)=\Phi(Z(p,t,\lambda))$ on a closed rectangle, with center
+$(p_0,t_0)$ and half-widths $\Delta_p,\Delta_t>0$.
+Suppose rational enclosures give
+\[
+ F(p_0,t_0)\ge f_0,\qquad
+ |F_p(p_0,t_0)-b_p|\le\epsilon_p,\qquad
+ |F_t(p_0,t_0)-b_t|\le\epsilon_t,
+\]
+and $|F_{pp}|\le M_{pp}$, $|F_{pt}|\le M_{pt}$,
+$|F_{tt}|\le M_{tt}$ throughout the rectangle.
+For any rational $\eta>0$, put
+\[
+ P=M_{pp}+\eta M_{pt},\qquad T=M_{tt}+M_{pt}/\eta.
+\]
+Taylor's formula with integral remainder gives, for
+$\delta_p=p-p_0$ and $\delta_t=t-t_0$,
+\begin{align*}
+ F(p,t)\ge{}& f_0+b_p\delta_p+b_t\delta_t
+ -\epsilon_p\Delta_p-\epsilon_t\Delta_t\\
+ &\hspace{12mm}-\tfrac12(P\delta_p^2+T\delta_t^2).
+ \tag{8}
+\end{align*}
+Indeed the absolute quadratic remainder is at most one half of
+$M_{pp}\delta_p^2+2M_{pt}|\delta_p\delta_t|+M_{tt}\delta_t^2$.
+Apply $2|ab|\le\eta a^2+b^2/\eta$. The two gradient enclosure
+errors cost the displayed fixed budget. The convenient choice
+$\eta=\Delta_t/\Delta_p$ balances this mixed error on the rectangle.
+
+Here all required derivative bounds have explicit rational enclosures.
+Put $a=t-np$, $D=np(1-p)+\lambda$ and $D'=n(1-2p)$. Directly,
+\begin{align*}
+ Z_t&=D^{-1/2},&
+ Z_p&=-nD^{-1/2}-\frac{aD'}{2D^{3/2}},\\
+ Z_{pt}&=-\frac{D'}{2D^{3/2}},&
+ Z_{pp}&=\frac{nD'+na}{D^{3/2}}
+                    +\frac{3a(D')^2}{4D^{5/2}},\qquad Z_{tt}=0.
+\end{align*}
+Choose $D_{\min}=nv_{\min}+\lambda$, a positive rational
+$s\le\sqrt{D_{\min}}$, and rational bounds $|a|\le A$, $|D'|\le B$.
+Valid upper bounds for $|Z|,|Z_p|,|Z_t|,|Z_{pp}|,|Z_{pt}|$ are
+\begin{gather*}
+ Z_*=A/s,\qquad T_*=1/s,\qquad
+ P_*=n/s+AB/(2D_{\min}s),\\
+ P_{**}=\frac{n(B+A)}{D_{\min}s}
+             +\frac{3AB^2}{4D_{\min}^2s},\qquad
+ T_{**}=B/(2D_{\min}s).
+\end{gather*}
+Since $F_{ij}=\phi(Z)(Z_{ij}-ZZ_iZ_j)$ and $\phi\le2/5$, we may use
+\[
+ M_{pp}=\tfrac25(Z_*P_*^2+P_{**}),\quad
+ M_{pt}=\tfrac25(Z_*P_*T_*+T_{**}),\quad
+ M_{tt}=\tfrac25 Z_*T_*^2,
+ \tag{9}
+\]
+or any outward rational upper enclosures of these expressions.
+The center gradient is $\phi(Z_0)\nabla Z_0$. In the selected
+calculation, $x=a_0^2/(2D_0)\le1$, so the alternating Taylor
+polynomials for $e^{-x}$ through orders 24 and 25 enclose this
+density after multiplication by directed bounds for $\phi(0)$.
+Directed square roots then enclose both derivatives. The existing
+exact normal-CDF enclosure supplies $f_0$.
+
+Use (8) only at the fixed variance vertices, after proving convexity
+of the loss with the \emph{actual} Gaussian by (3) and (7).
+No concavity of the lower polynomial as a function of the variance
+is needed or asserted. With $t=k+u$, (8) is a degree-two polynomial
+in $p,u$; multiplication by $v^2$ leaves it within the tensor degree
+already specified above. Thus it replaces a constant Gaussian floor
+without increasing the full certificate's degree.
+
+These refinements establish sufficient certificate criteria. They do
+not assert completion of all acquired rows or re-verification of
+their original acquisition.
+\end{document}
