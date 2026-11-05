@@ -1,0 +1,146 @@
+{
+  "status": "READ_ONLY_STATIC_FINAL_OBJECT_CENSUS",
+  "package_manifest_sha256": "b950e3f7457f66305d6626badaed26886cfb37b72bf8aa50575ac8aafdc3de27",
+  "target_sha256": "4e7ca427be4df9b3bde101b804d271d4a9da59ee3056e2484e62f6ba220ce14e",
+  "rows": [
+    {
+      "row": "BN39",
+      "roots": [
+        {
+          "k": 1,
+          "leaves": 5
+        },
+        {
+          "k": 2,
+          "leaves": 12
+        },
+        {
+          "k": 3,
+          "leaves": 1
+        }
+      ]
+    },
+    {
+      "row": "B0_50",
+      "roots": [
+        {
+          "k": 2,
+          "leaves": 9
+        },
+        {
+          "k": 3,
+          "leaves": 2
+        }
+      ]
+    },
+    {
+      "row": "B2_S3_34",
+      "roots": [
+        {
+          "k": 1,
+          "leaves": 4
+        },
+        {
+          "k": 2,
+          "leaves": 2
+        },
+        {
+          "k": 3,
+          "leaves": 1
+        }
+      ]
+    },
+    {
+      "row": "BN38",
+      "roots": [
+        {
+          "k": 1,
+          "leaves": 6
+        },
+        {
+          "k": 2,
+          "leaves": 6
+        },
+        {
+          "k": 3,
+          "leaves": 1
+        }
+      ]
+    },
+    {
+      "row": "B0_53",
+      "roots": [
+        {
+          "k": 2,
+          "leaves": 2
+        },
+        {
+          "k": 3,
+          "leaves": 2
+        },
+        {
+          "k": 4,
+          "leaves": 1
+        }
+      ]
+    },
+    {
+      "row": "B3_S0_59",
+      "roots": [
+        {
+          "k": 2,
+          "leaves": 1
+        },
+        {
+          "k": 3,
+          "leaves": 2
+        },
+        {
+          "k": 4,
+          "leaves": 1
+        }
+      ]
+    },
+    {
+      "row": "B3_S2_59",
+      "roots": [
+        {
+          "k": 2,
+          "leaves": 2
+        },
+        {
+          "k": 3,
+          "leaves": 2
+        },
+        {
+          "k": 4,
+          "leaves": 1
+        }
+      ]
+    }
+  ],
+  "actual_row_count": 7,
+  "actual_root_count": 20,
+  "actual_leaf_count": 63,
+  "numerator_sign_classification": {
+    "nonpositive": 40,
+    "crossing": 7,
+    "entirely_nonnegative": 16
+  },
+  "nonzero_price_leaves": [
+    {
+      "row": "B2_S3_34",
+      "k": 1,
+      "leaf_path": "11",
+      "object": "objects/B2_S3_34_k1.json",
+      "object_sha256": "6c275df31fa163e0df9aeba57133ed672460a015d11169029374cf31b5e14c49",
+      "prices": [
+        "0",
+        "2124448403/10000000000",
+        "0",
+        "0"
+      ]
+    }
+  ],
+  "external_code_executed": false
+}
