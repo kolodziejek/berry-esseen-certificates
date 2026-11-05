@@ -252,7 +252,97 @@ uniform lower bound. No endpoint choice for the normal term is
 borrowed from a different variance pair.
 \end{proof}
 
-\section{The selected row and its remaining obligation}
+\subsection{Keeping the same law's third absolute moment}
+The lower bound $\rho\ge\rho_-$ may also discard useful information.
+The sign partition gives an exact expression for the third absolute
+moment before normalization:
+\[
+ Q:=\E|Y-p|^3
+   =v(1-2v)+3(px+qy)-\gamma_0x+\gamma_1y,
+ \qquad \rho=\frac{Q}{(v+x+y)^{3/2}}.
+ \tag{11}
+\]
+Here $\gamma_i s_i=\E U_i^3$; a zero variance contributes zero.
+Indeed, expand $q\E(p-U_0)^3+p\E(q+U_1)^3$ and use the
+zero conditional means. The actual $Q$ is nonnegative.
+
+Fix a noise slab $[L_-,L_+]$ and a rational upper bound
+$W\ge v+x+y$ on it. Let $c_0>0$ and $c_1>0$ be rational lower
+bounds for $\CE/\sqrt n$ and $c_0/W^{3/2}$, respectively.
+For any fixed rational $\theta\in[0,1]$,
+\[
+ \frac{\CE\rho}{\sqrt n}
+ \ge (1-\theta)c_0\rho_-+\theta c_1Q.
+ \tag{12}
+\]
+This follows by taking a convex combination of $\rho\ge\rho_-$
+and $\rho\ge Q/W^{3/2}$. Directed square-root bounds suffice to
+choose $c_0,c_1$. The sign of $Q$ justifies rounding $c_1$ down.
+
+The cell test can therefore use the right side of (12) in place of
+the constant third-moment contribution in (7) or (10). To justify
+the same finite reductions, first subtract $\theta c_1Q$ from
+the upper expectation on actual laws. For fixed variances this
+expression is affine in each $\gamma_i$. At an inward skew
+endpoint the new contribution is affine in $a_i$, leaving the
+nonnegative quadratic coefficient from the quartic majorant
+unchanged. Thus the same nine endpoint choices apply. For each
+choice, $Q$ is affine in $x,y$, so subtracting it preserves the
+convexity used at the polygon vertices, including the Gaussian
+correction under (9). After multiplication by $p^2q^2$, the new
+term has degree at most eight in $p$; the bound $(9,4)$ for $n=5$
+is unchanged.
+
+An artificial endpoint evaluation of (11) need not be a moment
+of a probability law and can be negative. This causes no problem:
+nonnegativity was used only to derive (12) for actual laws.
+The resulting polynomial upper expression is then maximized on
+an enlarged domain. One must not round its coefficient again
+according to a sign inferred from a fictitious law.
+
+\subsection{Using acquired mean and sign information}
+Two further restrictions already present in the selected original
+contract tighten the same fixed polygon and endpoint bounds.
+Let $m=\E X_+=v/\sqrt w$, where the positive part follows from
+the sign partition. If $m\ge m_->0$, then
+\[
+ \lambda\le n\left(\frac{v^2}{m_-^2}-v\right).
+ \tag{13}
+\]
+If $2v_->m_-^2$, the right side increases with $v$ throughout
+the cell. We may replace the slab ceiling by
+\[
+ L_+^{\rm eff}=\min\left\{L_+,\,
+          n\left(\frac{v_+^2}{m_-^2}-v_+\right)\right\},
+ \qquad W=v_++L_+^{\rm eff}/n.
+ \tag{14}
+\]
+Intersect the polygon also with
+$L_-/n\le x+y\le L_+^{\rm eff}/n$.
+This still covers every actual law in the original slab.
+
+Suppose the original standardized conditional supports satisfy
+$X\le-\varepsilon_0$ in class zero and
+$X\ge\varepsilon_1$ in class one, with $\varepsilon_i>0$.
+Since $X=(B+U-p)/\sqrt w$, these conditions imply
+\[
+ a_0\le p-\varepsilon_0\sqrt w,\qquad
+ a_1\le q-\varepsilon_1\sqrt w.
+\]
+Retain also the acquired ceiling $a_0+a_1\le d$.
+If $s_-$ is a rational lower bound for $\sqrt{v_-+L_-/n}$,
+valid fixed inward ceilings are
+\[
+ r_0=\min(d,h-\varepsilon_0s_-),\qquad
+ r_1=\min(d,1-l-\varepsilon_1s_-).
+ \tag{15}
+\]
+The reader checks their nonnegativity. It rejects empty or
+degenerate polygons rather than treating a failed calculation as
+an exclusion. These are consequences of acquired hypotheses;
+their use does not independently prove those hypotheses.
+
+\section{The selected row and the complete-cover obligation}
 The original five-summand BN probability-panel38 contract supplies
 \[
  p\in[19/50,39/100],\quad \rho\in[11/10,23/20],\quad L=7687/25000,
@@ -264,6 +354,11 @@ The original five-summand BN probability-panel38 contract supplies
  A_0=82453/125000,\qquad A_1=703209/1000000.
 \]
 These are acquired inputs, not consequences of the criterion.
+For (13)--(15) the same contract supplies
+\[
+ m_-=217391/500000,\quad d=471533/500000,\quad
+ \varepsilon_0=29529/10^6,\quad\varepsilon_1=9459/200000.
+\]
 The original raw threshold bound $|H|\le2051019/10^6$ and
 $\sqrt w\le547171/10^6$ imply, for the Bernoulli-coordinate threshold
 $h_B=5p+\sqrt wH$,
@@ -279,10 +374,25 @@ have a different role and do not justify this threshold restriction.
 A completed row certificate must cover every mapped point or exclude
 it using a proved original necessary condition. A finite tree must
 retain both children at each split, all roots and all shared faces.
-Missing, duplicated or malformed objects reject. The earlier
+Missing roots or children, duplicated root selections, and malformed
+objects reject. The earlier
 fixed-probability, fixed-phase pilot does not fulfill this obligation.
 The accompanying progress records identify which continuous regions
 have actually been accepted; an incomplete cover cannot justify
 removing a manuscript argument.
+
+In this setting a certificate consists of a finite subdivision tree,
+six rational quartics and a rational weight $\theta$ at every leaf.
+Its mathematical claim is the score inequality (1) for every actual
+law in the specified acquired row. A floating-point linear program
+finds candidate coefficients. A separate standard-library Python
+reader recomputes the ray and tensor polynomials with exact rational
+arithmetic, checks strict inequalities, and checks both closed
+children at every split. A source-bound collector fixes the required
+threshold roots independently of the candidate data and runs the
+reader afresh on each. Thus a favorable search result or a stored
+success message is insufficient. The analytic reduction above,
+the original acquisition, and the exact readers are distinct parts
+of the proof available for human inspection.
 \end{document}
 

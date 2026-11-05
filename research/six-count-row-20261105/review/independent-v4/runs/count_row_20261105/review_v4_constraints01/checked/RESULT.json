@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "scope": "Conditional V4 mean/sign cap and tensor checks; no full cover or acquisition replay.",
+  "counts": {
+    "actual_gamma_identities": 48,
+    "actual_mean_identities": 48,
+    "licensed_mean_sign_pairs": 45,
+    "cap_checks": 135,
+    "complete_V4_rows": 81,
+    "exact_V4_moment_coefficients": 4050,
+    "negative_controls": 2
+  },
+  "source_sha256": {
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/review/check_v4_constraints.py": "2a56009be3919e9581c9bd28f83666a313b0f148e901f3b7f465db7416a77126",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/review/check_semantics.py": "2f46f981164749389e10f467842854cbdfdfd3300882f6749d22ddfc120ed0d0",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/review/check_tensors.py": "350dd242c1f9a6173f71e47fa51e02db95d86177a6a9e1f9cef403164772707d",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/construct/model.py": "348e5a756dde9c556a31dae234adb810cf63c1edcee777b56a1f304f882469e3",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/construct/model_v4.py": "38576e0da4fe5663008b9268aea15ea2540045bda188c2a95737a46a73cd9a99",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/construct/native/contract.json": "2b3f626ba3a9e954e4700bf206cf7a364f44958bb901b463198249dda2f37e48"
+  }
+}

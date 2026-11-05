@@ -1,0 +1,40 @@
+{
+  "status": "PASS_BOUNDED_COMPLETE_ROW_WRAPPER_REJECTION_CONTROLS",
+  "scope": "Header/source/closed-root controls and actual unchanged V4 rejection of a synthetic incomplete tree; no real score object or full row admitted.",
+  "preflight_baseline": "Three complete externally fixed root headers only, deliberately invalid numerical leaves",
+  "selector_order_invariant": true,
+  "explicit_full_phase_enlargement_preflight": true,
+  "rejected": [
+    "missing root",
+    "duplicate count",
+    "wrong nearest count",
+    "boolean count",
+    "wrong ID/object association",
+    "wrong object digest",
+    "wrong reader epoch",
+    "wrong contract",
+    "wrong domain pin",
+    "arbitrary unlicensed root policy",
+    "unexpected status authority",
+    "parent path traversal",
+    "absolute object path",
+    "narrow probability",
+    "noise omitted",
+    "wrong object schema",
+    "missing phase face",
+    "false declared n",
+    "source manifest changed",
+    "duplicate JSON key",
+    "optimized Python"
+  ],
+  "actual_invalid_reader_returncode": 1,
+  "actual_invalid_observation_sha256": "70a5fba83c6815aa432350c638c383df1cd20165a47d4c72277a4d1414c0fa76",
+  "optimized_actual_returncode": 1,
+  "source_pins": {
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/assembly/check_assembly_v4.py": "5b8e6af75ccf1a6a9987f78bdf4c7d2e0a9257b0217303e661eb32aab403c1d0",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/assembly/complete_v4.py": "4afe1afba7f11afbf5e6ebc69047b84d5857d5f997665635e0192fa51d5ad072",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/assembly/select_v4.py": "87c207568064ee0c873ca90ce379304ce5017c163340d87fb49bf18da30ae727",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/assembly/READER_SOURCES_V4.json": "ffa814c525fceaafe39e47e9352b544557ffb83d3225f5329ceba55180474589"
+  },
+  "full_row_claimed": false
+}

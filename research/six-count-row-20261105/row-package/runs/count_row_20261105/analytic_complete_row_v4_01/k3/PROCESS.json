@@ -1,0 +1,42 @@
+{
+  "command": [
+    "/Users/bkolodziejek/miniforge3/bin/python3",
+    "-I",
+    "-B",
+    "-S",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/construct/accept_v4.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/count_row_20261105/analytic_complete_row_v4_01/k3/proof_object.json",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/count_row_20261105/analytic_complete_row_v4_01/k3/accepted",
+    "--k",
+    "3",
+    "--p",
+    "0.38",
+    "0.39",
+    "--u",
+    "-0.5",
+    "0.072258117249",
+    "--noise",
+    "0",
+    "0.30748"
+  ],
+  "object_sha256": "8f93de5db3f23cdca1bd83e4d97ab07560a5ab78a1132e03135abf6b872d4c5e",
+  "reader_manifest_sha256": "ffa814c525fceaafe39e47e9352b544557ffb83d3225f5329ceba55180474589",
+  "k": 3,
+  "p": [
+    "19/50",
+    "39/100"
+  ],
+  "u": [
+    "-1/2",
+    "72258117249/1000000000000"
+  ],
+  "noise": [
+    "0",
+    "7687/25000"
+  ],
+  "returncode": 0,
+  "seconds": 1.3754477089969441,
+  "stdout_sha256": "af395f31428bd783eca3852e344848f330940be2f793701436961bf807aaf751",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "result_path": "accepted/RESULT.json"
+}

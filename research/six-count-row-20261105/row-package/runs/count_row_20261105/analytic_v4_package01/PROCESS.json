@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/Users/bkolodziejek/miniforge3/bin/python3",
+    "-I",
+    "-B",
+    "-S",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/assembly/portable_v4_01/work/count_row_20261105/construct/accept_v4.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/assembly/portable_v4_01/runs/count_row_20261105/construct_k3_v4_campaign01/objects/proof_object.json",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/count_row_20261105/analytic_v4_package01/k3-smoke",
+    "--k",
+    "3",
+    "--p",
+    ".38",
+    ".39",
+    "--u",
+    "-0.5",
+    "0.072258117249",
+    "--noise",
+    "0",
+    "0.30748"
+  ],
+  "returncode": 0,
+  "seconds": 1.313012250000611,
+  "preflight_returncode": 0,
+  "stdout_sha256": "af395f31428bd783eca3852e344848f330940be2f793701436961bf807aaf751",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source_unchanged": true,
+  "scope": "Relocated complete-source/root preflight plus actual k3 three-leaf smoke only; no extra full-row replay."
+}

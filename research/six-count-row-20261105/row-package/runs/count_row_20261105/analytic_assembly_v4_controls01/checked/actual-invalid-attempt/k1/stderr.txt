@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/construct/accept_v4.py", line 37, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/construct/accept_v4.py", line 32, in main
+    result=admit(json.loads(a.object.read_text(),object_pairs_hook=m.unique),a.k,a.p,a.u,a.noise)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/construct/accept_v4.py", line 23, in admit
+    visit(obj['tree'],domain,'')
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/construct/accept_v4.py", line 17, in visit
+    m.need(set(node)=={'axis','children'}and node['axis']in('p','u'),'fixed dyadic subdivision')
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/construct/model.py", line 15, in need
+    if not x:raise ValueError(msg)
+             ^^^^^^^^^^^^^^^^^^^^^
+ValueError: fixed dyadic subdivision

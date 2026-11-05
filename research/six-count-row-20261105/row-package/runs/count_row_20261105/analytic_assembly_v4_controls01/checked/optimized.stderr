@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/assembly/complete_v4.py", line 124, in <module>
+    ap=argparse.ArgumentParser();ap.add_argument('selection',type=Path);ap.add_argument('out',type=Path);a=ap.parse_args();raise SystemExit(execute(a.selection,a.out))
+                                                                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/assembly/complete_v4.py", line 84, in execute
+    need(__debug__ and not sys.flags.optimize,'unoptimized parent');selection_path=selection_path.resolve();ordinary(selection_path)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/assembly/complete_v4.py", line 18, in need
+    if not ok:raise ValueError(msg)
+              ^^^^^^^^^^^^^^^^^^^^^
+ValueError: unoptimized parent
