@@ -1,0 +1,398 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=28mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\CE}{C_{\mathrm E}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}[proposition]{Lemma}
+\title{Count-specific quartic majorants on a continuous parameter cell}
+\author{Research continuation accompanying journal-v21}
+\date{5 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give a finite exact certificate criterion for a conditional Berry--Esseen
+comparison throughout a probability and threshold cell. A separate quartic
+for each binomial count uses one common pair of conditional noise laws.
+Signed second-moment information restricts their variances to a polygon.
+A finite-sample fourth-moment bound makes the upper expectation convex
+on that polygon. This note proves the reduction; acquisition of its
+hypotheses and completion of a numerical cover are separate obligations.
+\end{abstract}
+
+\section{The conditional problem}
+Throughout, $\Phi$ and $\phi$ are the standard normal distribution
+function and density, and $\CE=(3+\sqrt{10})/(6\sqrt{2\pi})$.
+Write $Y=B+U$, where $\Pp(B=1)=p$, $q=1-p$, and
+$\E(U\mid B=i)=0$. The two conditional laws $U_0,U_1$ are fixed
+throughout every calculation. Let $n\ge2$ be an integer and assume
+$A_0,A_1\ge0$. Put
+\[
+ s_i=\E U_i^2,\quad x=qs_0,\quad y=ps_1,\quad
+ v=pq,\quad w=v+x+y,\quad \lambda=n(x+y).
+\]
+Then $X=(Y-p)/\sqrt w$ is centered with variance one. Assume
+\[
+ -A_0\le U_0\le a_0,\qquad -a_1\le U_1\le A_1,\qquad
+ 0\le a_i\le r_i,\quad a_0\le p,\quad a_1\le q,
+\]
+\[
+ 0\le\lambda\le L,\qquad \rho=\E|X|^3\ge\rho_->0,\qquad
+ b_-\le\beta:=\E[X|X|]\le b_+.
+\]
+The sign restrictions ensure $X\le0$ in class zero and $X\ge0$ in
+class one. On a closed probability cell $[l,h]\subset(0,1/2)$ choose
+support ceilings $A_i,r_i$ independently of $p$. For instance,
+$a_0+a_1\le d$ permits $r_0=\min(d,h)$,
+$r_1=\min(d,1-l)$; dropping the remaining joint restriction enlarges
+the domain.
+
+For a phase $u\in[u_-,u_+]$ and integer $k$, the target is the
+positive closed-event score
+\[
+ \frac{\sqrt n}{\rho}
+ \left\{\Pp\left(\sum_{i=1}^nY_i\le k+u\right)
+ -\Phi\left(\frac{k+u-np}{\sqrt{nv+\lambda}}\right)\right\}<\CE.
+ \tag{1}
+\]
+This is one oriented score. Both signs of the original discrepancy
+require their own acquisition or the justified reflection argument.
+
+\section{One common variance polygon}
+The sign partition gives the exact identity
+\[
+ \beta=\frac{v(1-2p)-x+y}{v+x+y}.
+ \tag{2}
+\]
+Indeed the positive and negative conditional square contributions are
+$p(q^2+s_1)$ and $q(p^2+s_0)$. Since the denominator is positive,
+the beta bounds are equivalent to
+\begin{align*}
+ -(1+b_+)x+(1-b_+)y&\le v[b_+-(1-2p)],\\
+ (1+b_-)x-(1-b_-)y&\le v[(1-2p)-b_-].
+\end{align*}
+Replace each right side by a rational upper bound for its cubic on
+$[l,h]$. Together with $x,y\ge0$ and $x+y\le L/n$, these halfplanes
+define a fixed compact outer polygon $\mathcal V$. Every actual
+common variance pair belongs to it, though not every point need be
+realizable. Intersecting each pair of boundary lines and retaining
+the intersections satisfying every halfplane gives all vertices.
+A reader may require a nonempty two-dimensional polygon and reject
+degenerate cases. Empty-domain exclusion needs its own exact proof.
+
+\section{Finite common-moment tests}
+For $j=0,\ldots,n$ choose quartics
+$P_j(z)=\sum_{r=0}^4c_{jr}z^r$, with $c_{j4}\ge0$, satisfying
+\[
+ P_j(z)\ge1\quad(z\le0),\qquad P_j(z)\ge0\quad(z\ge0).
+ \tag{3}
+\]
+Let $W_j$ sum $n-j$ independent $U_0$ variables and $j$ independent
+$U_1$ variables. Conditional independence gives
+\[
+ \Pp\left(\sum Y_i\le k+u\right)
+ \le\sum_{j=0}^n\pi_j(p)\E P_j(W_j+j-k-u),\qquad
+ \pi_j(p)=\binom njp^jq^{n-j}.
+ \tag{4}
+\]
+The left condition in (3) applies at zero, retaining every event-plane
+atom. All expectations use the same two conditional laws.
+
+\begin{lemma}[Support and variance reduction]
+For each fixed probability and phase, the right side of (4) is bounded
+by the maximum of the following evaluations: a vertex $(x,y)$ of
+$\mathcal V$ and one pair
+\[
+ \gamma_0\in\{-A_0,0,r_0\},\qquad
+ \gamma_1\in\{A_1,0,-r_1\}.
+ \tag{5}
+\]
+For that evaluation define
+\begin{align*}
+ t_j&=(n-j)x/q+jy/p,\\
+ M_{j0}&=1,\quad M_{j1}=0,\quad M_{j2}=t_j,\\
+ M_{j3}&=(n-j)\gamma_0x/q+j\gamma_1y/p,\\
+ M_{j4}&=(n-j)\gamma_0^2x/q+j\gamma_1^2y/p
+             +3(1-1/n)t_j^2,\\
+ E_j&=\sum_{r=0}^4c_{jr}\sum_{i=0}^r
+                \binom ri(j-k-u)^{r-i}M_{ji},\qquad
+ F=\sum_{j=0}^n\pi_j(p)E_j.
+\end{align*}
+\end{lemma}
+\begin{proof}
+Put $\mu_i=\E U_i^3$. Integrating the nonnegative support polynomials
+$(U_0+A_0)(a_0-U_0)U_0^2$ and its reflected counterpart gives
+\[
+ \E U_0^4\le(a_0-A_0)\mu_0+A_0a_0s_0,\qquad
+ \E U_1^4\le(A_1-a_1)\mu_1+A_1a_1s_1.
+ \tag{6}
+\]
+Independence and zero means give
+\[
+ \E W_j^4=(n-j)\E U_0^4+j\E U_1^4
+       +3t_j^2-3\{(n-j)s_0^2+js_1^2\}.
+\]
+Cauchy's inequality for the $n$ individual variances bounds the
+quantity in braces below by $t_j^2/n$. All leading coefficients
+and binomial weights are nonnegative, so this gives an upper bound
+in (4).
+
+For $s_0>0$, $\gamma_0=\mu_0/s_0\in[-A_0,a_0]$.
+The mixture bound is affine in $\gamma_0$. At its endpoint $-A_0$,
+the coefficient of $s_0$ in (6) is $A_0^2$, independent of $a_0$.
+At the other endpoint it is $a_0^2$. The remaining expression is
+convex quadratic in $a_0$, hence is bounded by its values at
+$0,r_0$. The reflected argument treats class one. This proves
+the nine common choices (5). A zero variance makes that conditional
+variable vanish and requires no division.
+
+For each choice (5), $F$ is affine in $x,y$ except for a sum of
+nonnegative multiples of squares $t_j^2$. Thus it is convex on
+$\mathcal V$, and its value at a convex combination of vertices
+is no larger than the largest vertex value. The displayed fourth
+moment is an extremal evaluation of an upper expression, not the
+false claim $\E U_i^4\le\gamma_i^2s_i$ for an arbitrary actual law.
+\end{proof}
+
+\section{Continuous cells and exact acceptance}
+Let $T_-$ be a rational lower bound, uniform on the cell, for
+\[
+ \Phi\left(\frac{k+u-np}{\sqrt{npq+\lambda}}\right)
+                 +\frac{\CE\rho_-}{\sqrt n}.
+ \tag{7}
+\]
+The Gaussian part must retain the numerator's sign. Put
+$a=k+u_--nh$, $v_-=l(1-l)$, $v_+=h(1-h)$.
+A valid lower normal argument is $a/\sqrt{nv_++L}$ for $a\ge0$,
+and $a/\sqrt{nv_-}$ for $a<0$. Outward square-root and Gaussian
+bounds then give (7). For a negative numerator, using only the
+upper noise endpoint would give the wrong inequality.
+
+\begin{proposition}[Exact cell criterion]
+Suppose (3) holds globally and, for every polygon vertex and every
+pair (5), the rational polynomial
+\[
+ R(p,u)=p^2(1-p)^2\{T_--F(p,u)\}
+ \tag{8}
+\]
+is strictly positive on $[l,h]\times[u_-,u_+]$. Then (1) holds on
+the entire cell for every actual conditional pair satisfying the
+stated hypotheses.
+\end{proposition}
+\begin{proof}
+The cleared denominator is positive. The lemma and (4) give
+$\Pp(\sum Y_i\le k+u)<T_-$. Subtract the Gaussian CDF and apply
+(7), followed by $\rho\ge\rho_-$. At zero noise the same expressions
+are the literal polynomial expectations at the actual threshold;
+no jump is discarded and no variance is divided out.
+\end{proof}
+
+The coordinate degrees in (8) are at most $n+4$ in $p$ and four in
+$u$. The moments have denominators at most $p^2q^2$; the largest
+degree is from $p^2q^2\pi_j(p)$ times a constant moment. For $n=5$
+the bounds are $(9,4)$. After mapping the cell to $[0,1]^2$,
+a polynomial $\sum r_{ij}s^it^j$ has tensor Bernstein coefficients
+\[
+ b_{ab}=\sum_{i\le a,\,j\le b}r_{ij}
+          \frac{\binom ai}{\binom9i}
+          \frac{\binom bj}{\binom4j}.
+\]
+Positive coefficients imply (8), since the basis is nonnegative
+and sums to one. Inconclusive coefficients do not disprove positivity.
+For (3), set $z=\pm t/(1-t)$ and multiply the appropriate ray
+polynomial by $(1-t)^4$. Exact positive endpoints and zero Sturm
+roots on $[0,1]$ prove positivity on the ray. Repeated-factor
+cases may conservatively reject; unresolved roots cannot accept.
+Floating-point optimization only proposes coefficients. Exact
+acceptance reconstructs these polynomials and the complete cover.
+
+
+\subsection{Keeping the Gaussian term at the same noise level}
+The uniform target in (7) can lose useful information by taking its
+minimum at a different noise level from the largest quartic expectation.
+For a negative normal numerator there is a direct remedy.
+
+\begin{proposition}[Concave Gaussian correction]
+Suppose throughout a cell
+\[
+ a_{\max}=k+u_+-nl\le0,\qquad
+ a_{\min}^2=(k+u_--nh)^2\le3nl(1-l).
+ \tag{9}
+\]
+Then the cell criterion remains valid if its target is chosen separately
+for each polygon vertex $(x,y)$, using a lower bound for
+\[
+ \Phi\left(\frac{k+u-np}{\sqrt{npq+n(x+y)}}\right)
+                         +\frac{\CE\rho_-}{\sqrt n}.
+ \tag{10}
+\]
+A rational lower Gaussian value can use numerator $a_{\min}$ and
+variance $nl(1-l)+n(x+y)$. It is constant on the probability/phase cell
+for this fixed vertex, so the same polynomial degree bound applies.
+\end{proposition}
+\begin{proof}
+For fixed $p,u$ set $a=k+u-np$, $D=npq+\lambda$, and
+$g(\lambda)=\Phi(a/\sqrt D)$. Direct differentiation gives
+\[
+ g'(\lambda)=-\frac{a\phi(a/\sqrt D)}{2D^{3/2}},\qquad
+ g''(\lambda)=\frac{a\phi(a/\sqrt D)}{4D^{5/2}}
+                         \left(3-\frac{a^2}{D}\right).
+\]
+Condition (9) implies $a\le0$ and $a^2\le3npq$, so $g$ is concave
+on the entire noise interval, including the constant case $a=0$.
+For each common skew choice, $F-g(n(x+y))$ is therefore convex
+on the polygon. Its maximum occurs at a vertex. Check (10) at
+each vertex and apply the same argument as before. For a negative
+numerator, increasing either the numerator or the denominator
+increases its standardized value. This justifies the stated
+uniform lower bound. No endpoint choice for the normal term is
+borrowed from a different variance pair.
+\end{proof}
+
+\subsection{Keeping the same law's third absolute moment}
+The lower bound $\rho\ge\rho_-$ may also discard useful information.
+The sign partition gives an exact expression for the third absolute
+moment before normalization:
+\[
+ Q:=\E|Y-p|^3
+   =v(1-2v)+3(px+qy)-\gamma_0x+\gamma_1y,
+ \qquad \rho=\frac{Q}{(v+x+y)^{3/2}}.
+ \tag{11}
+\]
+Here $\gamma_i s_i=\E U_i^3$; a zero variance contributes zero.
+Indeed, expand $q\E(p-U_0)^3+p\E(q+U_1)^3$ and use the
+zero conditional means. The actual $Q$ is nonnegative.
+
+Fix a noise slab $[L_-,L_+]$ and a rational upper bound
+$W\ge v+x+y$ on it. Let $c_0>0$ and $c_1>0$ be rational lower
+bounds for $\CE/\sqrt n$ and $c_0/W^{3/2}$, respectively.
+For any fixed rational $\theta\in[0,1]$,
+\[
+ \frac{\CE\rho}{\sqrt n}
+ \ge (1-\theta)c_0\rho_-+\theta c_1Q.
+ \tag{12}
+\]
+This follows by taking a convex combination of $\rho\ge\rho_-$
+and $\rho\ge Q/W^{3/2}$. Directed square-root bounds suffice to
+choose $c_0,c_1$. The sign of $Q$ justifies rounding $c_1$ down.
+
+The cell test can therefore use the right side of (12) in place of
+the constant third-moment contribution in (7) or (10). To justify
+the same finite reductions, first subtract $\theta c_1Q$ from
+the upper expectation on actual laws. For fixed variances this
+expression is affine in each $\gamma_i$. At an inward skew
+endpoint the new contribution is affine in $a_i$, leaving the
+nonnegative quadratic coefficient from the quartic majorant
+unchanged. Thus the same nine endpoint choices apply. For each
+choice, $Q$ is affine in $x,y$, so subtracting it preserves the
+convexity used at the polygon vertices, including the Gaussian
+correction under (9). After multiplication by $p^2q^2$, the new
+term has degree at most eight in $p$; the bound $(9,4)$ for $n=5$
+is unchanged.
+
+An artificial endpoint evaluation of (11) need not be a moment
+of a probability law and can be negative. This causes no problem:
+nonnegativity was used only to derive (12) for actual laws.
+The resulting polynomial upper expression is then maximized on
+an enlarged domain. One must not round its coefficient again
+according to a sign inferred from a fictitious law.
+
+\subsection{Using acquired mean and sign information}
+Two further restrictions already present in the selected original
+contract tighten the same fixed polygon and endpoint bounds.
+Let $m=\E X_+=v/\sqrt w$, where the positive part follows from
+the sign partition. If $m\ge m_->0$, then
+\[
+ \lambda\le n\left(\frac{v^2}{m_-^2}-v\right).
+ \tag{13}
+\]
+If $2v_->m_-^2$, the right side increases with $v$ throughout
+the cell. We may replace the slab ceiling by
+\[
+ L_+^{\rm eff}=\min\left\{L_+,\,
+          n\left(\frac{v_+^2}{m_-^2}-v_+\right)\right\},
+ \qquad W=v_++L_+^{\rm eff}/n.
+ \tag{14}
+\]
+Intersect the polygon also with
+$L_-/n\le x+y\le L_+^{\rm eff}/n$.
+This still covers every actual law in the original slab.
+
+Suppose the original standardized conditional supports satisfy
+$X\le-\varepsilon_0$ in class zero and
+$X\ge\varepsilon_1$ in class one, with $\varepsilon_i>0$.
+Since $X=(B+U-p)/\sqrt w$, these conditions imply
+\[
+ a_0\le p-\varepsilon_0\sqrt w,\qquad
+ a_1\le q-\varepsilon_1\sqrt w.
+\]
+Retain also the acquired ceiling $a_0+a_1\le d$.
+If $s_-$ is a rational lower bound for $\sqrt{v_-+L_-/n}$,
+valid fixed inward ceilings are
+\[
+ r_0=\min(d,h-\varepsilon_0s_-),\qquad
+ r_1=\min(d,1-l-\varepsilon_1s_-).
+ \tag{15}
+\]
+The reader checks their nonnegativity. It rejects empty or
+degenerate polygons rather than treating a failed calculation as
+an exclusion. These are consequences of acquired hypotheses;
+their use does not independently prove those hypotheses.
+
+\section{The selected row and the complete-cover obligation}
+The original five-summand BN probability-panel38 contract supplies
+\[
+ p\in[19/50,39/100],\quad \rho\in[11/10,23/20],\quad L=7687/25000,
+\]
+\[
+ (b_-,b_+)=(-15293/500000,307221/1000000).
+\]
+\[
+ A_0=82453/125000,\qquad A_1=703209/1000000.
+\]
+These are acquired inputs, not consequences of the criterion.
+For (13)--(15) the same contract supplies
+\[
+ m_-=217391/500000,\quad d=471533/500000,\quad
+ \varepsilon_0=29529/10^6,\quad\varepsilon_1=9459/200000.
+\]
+The original raw threshold bound $|H|\le2051019/10^6$ and
+$\sqrt w\le547171/10^6$ imply, for the Bernoulli-coordinate threshold
+$h_B=5p+\sqrt wH$,
+\[
+ \frac{777741882751}{10^{12}}\le h_B\le
+ \frac{3072258117249}{10^{12}}.
+\]
+Thus $1/2<h_B<7/2$, and only nearest thresholds $k=1,2,3$ occur.
+Both closed phase halves must be retained for each. At half-integers
+both representations may be included. Mixture counts $j=0,\ldots,5$
+have a different role and do not justify this threshold restriction.
+
+A completed row certificate must cover every mapped point or exclude
+it using a proved original necessary condition. A finite tree must
+retain both children at each split, all roots and all shared faces.
+Missing roots or children, duplicated root selections, and malformed
+objects reject. The earlier
+fixed-probability, fixed-phase pilot does not fulfill this obligation.
+The accompanying progress records identify which continuous regions
+have actually been accepted; an incomplete cover cannot justify
+removing a manuscript argument.
+
+In this setting a certificate consists of a finite subdivision tree,
+six rational quartics and a rational weight $\theta$ at every leaf.
+Its mathematical claim is the score inequality (1) for every actual
+law in the specified acquired row. A floating-point linear program
+finds candidate coefficients. A separate standard-library Python
+reader recomputes the ray and tensor polynomials with exact rational
+arithmetic, checks strict inequalities, and checks both closed
+children at every split. A source-bound collector fixes the required
+threshold roots independently of the candidate data and runs the
+reader afresh on each. Thus a favorable search result or a stored
+success message is insufficient. The analytic reduction above,
+the original acquisition, and the exact readers are distinct parts
+of the proof available for human inspection.
+\end{document}
+

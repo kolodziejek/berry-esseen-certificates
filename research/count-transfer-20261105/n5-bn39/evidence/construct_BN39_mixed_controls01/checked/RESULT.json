@@ -1,0 +1,100 @@
+{
+  "status": "PASS_EXACT_MIXED_DISPATCH_CONTROLS",
+  "positive": {
+    "status": "PASS_EXACT_MIXED_CLOSED_REGION",
+    "row_id": "BN39",
+    "contract_sha256": "8d2a6ec51bf43b45a7ce2de62d5ed734a90498924cb60c833a3976394eef3d9a",
+    "n": 5,
+    "k": 2,
+    "p": [
+      "639/1600",
+      "2/5"
+    ],
+    "u": [
+      "-53/128",
+      "-105/256"
+    ],
+    "noise": [
+      "0",
+      "12941/40000"
+    ],
+    "nodes": 1,
+    "leaves": [
+      {
+        "path": "",
+        "method": "gaussian_taylor_v1",
+        "row_id": "BN39",
+        "k": 2,
+        "p": [
+          "639/1600",
+          "2/5"
+        ],
+        "u": [
+          "-53/128",
+          "-105/256"
+        ],
+        "noise": [
+          "0",
+          "12941/40000"
+        ],
+        "theta": "2767324271/10000000000",
+        "vertices": 5,
+        "moment_pairs": 9,
+        "global_rays": 12,
+        "tensor_coefficients": 2250,
+        "cleared_margin": "6147802524821078929810327193211916262666016750998531959058129168612042072269581737202698657293542864399057981302507151345843253226772031945674869356553420534416827389172332833839489/51618195174497928108831080550989484631063551913717118748019234182075537790236100132864000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "gaussian_noise_correlation": true
+      }
+    ],
+    "baseline_leaves": 0,
+    "taylor_leaves": 1,
+    "global_rays": 12,
+    "tensor_coefficients": 2250
+  },
+  "negative_controls": [
+    "unknown mixed method",
+    "boolean method",
+    "missing theta",
+    "duplicate method field via wrong schema",
+    "stored PASS leaf",
+    "failed leaf",
+    "missing child",
+    "unknown split axis",
+    "wrong original row",
+    "wrong original contract",
+    "wrong actual n",
+    "boolean center",
+    "changed probability coverage",
+    "changed phase coverage",
+    "changed noise coverage",
+    "changed external target",
+    "noncanonical theta",
+    "negative rho weight",
+    "missing mixture count",
+    "extra mixture count",
+    "bad closed atom",
+    "negative quartic",
+    "positive numerator",
+    "right half unsupported by Taylor scalar",
+    "excessive squared numerator",
+    "duplicate JSON method key"
+  ],
+  "source_sha256": {
+    "model.py": "d9767248da46f42a6c8b1bec667c53be006bdc255e4e8ed6cd820966d4e736f9",
+    "algebra.py": "f8c2fa3e36c6d142645745ff3dff70235114b39b8e723b21a4b3140c0400f3c4",
+    "accept.py": "c237e8e4b1aea10a357b660d6a3ed0f26ed9ee2e4c7c7361a5fe508527be25d5",
+    "native/finite_binomial_core.py": "939236711b080f9148ee3d3f7f6a0cd15b86cb24f3d2700f0e7127b2a345291f",
+    "native/quartic_global.py": "0760d772b6cf1858ed139a1fe179490cb1e523a5d685a37a25271a10b349aa35",
+    "native/quartic_sturm.py": "1f815ccb23692f78be98691a76a5fe0605f8995abdab5d9a3964f1625a4c2617",
+    "contracts/B0_50.json": "2939dcca05896e1c6393c50944df8dd5e872efb26076a7304df45d9f6d07a93f",
+    "contracts/B2_S3_34.json": "a9e2574fbb79e8d21d7bf6d5a9bc152ba6981878101c0dafd3eb7088233ba6d5",
+    "contracts/BN39.json": "8d2a6ec51bf43b45a7ce2de62d5ed734a90498924cb60c833a3976394eef3d9a",
+    "accept_row.py": "bb1a3cd733790238deffbbb88dbe87594094146b60d734fb17bb703b143b4568",
+    "model_taylor.py": "fbfc615e7f3b9b9d7aecee949960176e9c878cde393c50e706439de47f4015ba",
+    "gaussian_scalar.py": "d69e659c6fa8d696a07a45756873e6dabeeecab1eb7ffc18664bce3ce18edc14",
+    "accept_mixed.py": "ce7eaf841d13fef24807e6dab75acb2feba516e15e8912f8a6fc5f9eed7edf57",
+    "controls_mixed.py": "781e0223c19d5bc3362cd5986435f1ad113ba16945909f2c0e632c9aa5a37f84"
+  },
+  "patch_sha256": "b06946ead8226a4c1f54069fdf608c8f096ce6c9eb074fc64550941e43042cf9",
+  "optimized_python_invoked": false
+}

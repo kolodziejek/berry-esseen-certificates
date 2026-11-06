@@ -1,0 +1,26 @@
+{
+  "schema": "EXACT_N5_BN38_THREE_ROOT_SELECTION_V1",
+  "contract_sha256": "2b3f626ba3a9e954e4700bf206cf7a364f44958bb901b463198249dda2f37e48",
+  "domain_sha256": "7808638d276d78f858ba64fb3124f088bf131f39c44729bb2e0a254e4c117154",
+  "reader_manifest_sha256": "ffa814c525fceaafe39e47e9352b544557ffb83d3225f5329ceba55180474589",
+  "roots": [
+    {
+      "k": 1,
+      "domain": "clipped",
+      "object": "runs/count_row_20261105/construct_k1_v4_repair01/objects/proof_object.json",
+      "object_sha256": "fdef77b6bafbb513c2a5557cb40c1fd606a1cf66a861cd57481d4f04272c632d"
+    },
+    {
+      "k": 2,
+      "domain": "clipped",
+      "object": "runs/count_row_20261105/construct_k2_v4_repair01/objects/proof_object.json",
+      "object_sha256": "d7c32f30be2a75232fd0fa0fa61b68c19471046861c3743dc0933645e4b3ee22"
+    },
+    {
+      "k": 3,
+      "domain": "clipped",
+      "object": "runs/count_row_20261105/construct_k3_v4_campaign01/objects/proof_object.json",
+      "object_sha256": "8f93de5db3f23cdca1bd83e4d97ab07560a5ab78a1132e03135abf6b872d4c5e"
+    }
+  ]
+}

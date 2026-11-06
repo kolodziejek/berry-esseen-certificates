@@ -1,0 +1,80 @@
+{
+  "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+  "row_id": "B0_050",
+  "contract_path": "work/cutoff5_20261020/root/count5_prepare_v1/pilots01/n5/B0/panel050/contract.json",
+  "contract_sha256": "2939dcca05896e1c6393c50944df8dd5e872efb26076a7304df45d9f6d07a93f",
+  "band": "B0",
+  "slab_family": "pilots01",
+  "series": "B0",
+  "index": 50,
+  "n": 5,
+  "K": "0",
+  "p": [
+    "1/2",
+    "51/100"
+  ],
+  "rho": [
+    "1",
+    "11/10"
+  ],
+  "beta": [
+    "-126629/1000000",
+    "159997/1000000"
+  ],
+  "roots": [
+    {
+      "k": 2,
+      "p": [
+        "1/2",
+        "51/100"
+      ],
+      "u": [
+        "-44943245351/125000000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "32813/125000"
+      ],
+      "leaves": 6,
+      "taylor_leaves": 6,
+      "baseline_leaves": 0,
+      "global_rays": 72,
+      "psd_coefficients": 186,
+      "tensor_coefficients": 4800,
+      "result_sha256": "54e36dc5b459b60a037f0a4d1913e5003382fccfb77a6b7896213675c78ba91d",
+      "object_sha256": "19576502ce51befbe839d675b65ad474ba4bcff331ed0c680e8e570443968a6d"
+    },
+    {
+      "k": 3,
+      "p": [
+        "1/2",
+        "51/100"
+      ],
+      "u": [
+        "-1/2",
+        "51193245351/125000000000"
+      ],
+      "noise": [
+        "0",
+        "32813/125000"
+      ],
+      "leaves": 2,
+      "taylor_leaves": 2,
+      "baseline_leaves": 0,
+      "global_rays": 24,
+      "psd_coefficients": 62,
+      "tensor_coefficients": 1600,
+      "result_sha256": "2a2f2bace964fb67976c142bedfcb8d9eecb86d53e31fabcd08942aa4d85c004",
+      "object_sha256": "ec7ebc3104b2e50f874dbc8028c099db984a7786c0c646f921bd3a13375851f8"
+    }
+  ],
+  "leaves": 8,
+  "taylor_leaves": 8,
+  "baseline_leaves": 0,
+  "global_rays": 96,
+  "psd_coefficients": 248,
+  "tensor_coefficients": 6400,
+  "old_checked_leaves": 212,
+  "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed."
+}

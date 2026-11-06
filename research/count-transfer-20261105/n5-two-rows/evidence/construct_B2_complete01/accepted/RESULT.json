@@ -1,0 +1,86 @@
+{
+  "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_TRANSFER_ROW",
+  "row_id": "B2_S3_34",
+  "contract_sha256": "a9e2574fbb79e8d21d7bf6d5a9bc152ba6981878101c0dafd3eb7088233ba6d5",
+  "n": 5,
+  "K": "0",
+  "mathematical_status": "Conditional positive closed-score implication under this original acquired row. No acquisition replay or all-n5 theorem.",
+  "roots": [
+    {
+      "k": 1,
+      "p": [
+        "17/50",
+        "7/20"
+      ],
+      "u": [
+        "-24216834461/62500000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "206391/1000000"
+      ],
+      "leaves": 35,
+      "global_rays": 420,
+      "tensor_coefficients": 78750,
+      "result_sha256": "d9fb33c04dd61ff604eec349fc7c7c79fe69b737c612442152b69800ffbd3060",
+      "object_sha256": "bdde6594b11cfcd319a37cd77aede8b340ab05c818e7b32e3478bbdb08dbc75d"
+    },
+    {
+      "k": 2,
+      "p": [
+        "17/50",
+        "7/20"
+      ],
+      "u": [
+        "-1/2",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "206391/1000000"
+      ],
+      "leaves": 18,
+      "global_rays": 216,
+      "tensor_coefficients": 40500,
+      "result_sha256": "5802f33efb3c1a785739ab376d4de74c6b95b714b36d00043af90c9300e62fdb",
+      "object_sha256": "2678a1ec321a83cb1f359c18cc3b8ccad20d85c5970c013c16d6e47ffbef2263"
+    },
+    {
+      "k": 3,
+      "p": [
+        "17/50",
+        "7/20"
+      ],
+      "u": [
+        "-1/2",
+        "-10158165539/62500000000"
+      ],
+      "noise": [
+        "0",
+        "206391/1000000"
+      ],
+      "leaves": 1,
+      "global_rays": 12,
+      "tensor_coefficients": 2250,
+      "result_sha256": "a4b95266f516593c80731029e3f94cbdad7e1aa1b456e530ada313c62f74a906",
+      "object_sha256": "b092bdb4c976e404039cce4680f684f761a41172a3603969cc4c3d035197e94d"
+    }
+  ],
+  "leaves": 54,
+  "global_rays": 648,
+  "tensor_coefficients": 121500,
+  "source_sha256": {
+    "model.py": "d9767248da46f42a6c8b1bec667c53be006bdc255e4e8ed6cd820966d4e736f9",
+    "algebra.py": "f8c2fa3e36c6d142645745ff3dff70235114b39b8e723b21a4b3140c0400f3c4",
+    "accept.py": "c237e8e4b1aea10a357b660d6a3ed0f26ed9ee2e4c7c7361a5fe508527be25d5",
+    "native/finite_binomial_core.py": "939236711b080f9148ee3d3f7f6a0cd15b86cb24f3d2700f0e7127b2a345291f",
+    "native/quartic_global.py": "0760d772b6cf1858ed139a1fe179490cb1e523a5d685a37a25271a10b349aa35",
+    "native/quartic_sturm.py": "1f815ccb23692f78be98691a76a5fe0605f8995abdab5d9a3964f1625a4c2617",
+    "contracts/B0_50.json": "2939dcca05896e1c6393c50944df8dd5e872efb26076a7304df45d9f6d07a93f",
+    "contracts/B2_S3_34.json": "a9e2574fbb79e8d21d7bf6d5a9bc152ba6981878101c0dafd3eb7088233ba6d5",
+    "contracts/BN39.json": "8d2a6ec51bf43b45a7ce2de62d5ed734a90498924cb60c833a3976394eef3d9a",
+    "accept_row.py": "bb1a3cd733790238deffbbb88dbe87594094146b60d734fb17bb703b143b4568"
+  },
+  "selection_sha256": "cdeea6e583ca493ccabdda661a64b25d268180118d19de1fff8fa371fe9923a9"
+}

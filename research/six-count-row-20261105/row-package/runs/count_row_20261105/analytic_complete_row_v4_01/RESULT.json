@@ -1,0 +1,95 @@
+{
+  "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_BN38_ROW_COMPARISON_V4",
+  "mathematical_status": "Exact positive closed-score implication on the whole original acquired n5 BN/p38 row; original acquisition/contact/threshold bounds remain premises. No whole n5 or all-law theorem.",
+  "execution_status": "Three fresh unchanged V4 exact reader processes completed; no stored PASS admitted.",
+  "n": 5,
+  "band": "BN",
+  "index": 38,
+  "K": "0",
+  "p": [
+    "19/50",
+    "39/100"
+  ],
+  "noise": [
+    "0",
+    "7687/25000"
+  ],
+  "source_contract_sha256": "2b3f626ba3a9e954e4700bf206cf7a364f44958bb901b463198249dda2f37e48",
+  "domain_sha256": "7808638d276d78f858ba64fb3124f088bf131f39c44729bb2e0a254e4c117154",
+  "reader_manifest_sha256": "ffa814c525fceaafe39e47e9352b544557ffb83d3225f5329ceba55180474589",
+  "wrapper_sha256": "4afe1afba7f11afbf5e6ebc69047b84d5857d5f997665635e0192fa51d5ad072",
+  "selection_sha256": "7f9286a7cd5526650f745ab9772c709fdbda8ac6a79c19ccfae979105703a76f",
+  "completed_roots": [
+    {
+      "k": 1,
+      "p": [
+        "19/50",
+        "39/100"
+      ],
+      "u": [
+        "-222258117249/1000000000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "7687/25000"
+      ],
+      "actual_returncode": 0,
+      "result_sha256": "a162dd468ce0bfd2498ec85e25a5836774e716673f61f0cc0ffe7f1edd1ade11",
+      "observation_sha256": "51eb484a74fffd3513a7a1ce025b06449b27964ba6aecc8d14c9b80751e5ee80",
+      "object_sha256": "fdef77b6bafbb513c2a5557cb40c1fd606a1cf66a861cd57481d4f04272c632d",
+      "leaves": 246,
+      "rays": 2952,
+      "tensor_coefficients": 442800
+    },
+    {
+      "k": 2,
+      "p": [
+        "19/50",
+        "39/100"
+      ],
+      "u": [
+        "-1/2",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "7687/25000"
+      ],
+      "actual_returncode": 0,
+      "result_sha256": "e9a985c0b022d359754e0a6f11c023bed6f3c81ab724a523fe83eeb885f48961",
+      "observation_sha256": "e8175a08441017e46976d5d9cab1bc1f8876bf23ea626d133bbacf018d6ba36c",
+      "object_sha256": "d7c32f30be2a75232fd0fa0fa61b68c19471046861c3743dc0933645e4b3ee22",
+      "leaves": 484,
+      "rays": 5808,
+      "tensor_coefficients": 871200
+    },
+    {
+      "k": 3,
+      "p": [
+        "19/50",
+        "39/100"
+      ],
+      "u": [
+        "-1/2",
+        "72258117249/1000000000000"
+      ],
+      "noise": [
+        "0",
+        "7687/25000"
+      ],
+      "actual_returncode": 0,
+      "result_sha256": "581423bb9882d0d011bd4023c10dc0f1c68ae46a7ae0f343ed896043df913b5f",
+      "observation_sha256": "2ec518b53d578e369dcfa2fd5951a2c4f8119235e04de494f851dfbd2e6ff95c",
+      "object_sha256": "8f93de5db3f23cdca1bd83e4d97ab07560a5ab78a1132e03135abf6b872d4c5e",
+      "leaves": 3,
+      "rays": 36,
+      "tensor_coefficients": 5400
+    }
+  ],
+  "total_leaves": 733,
+  "total_rays": 8796,
+  "total_tensor_coefficients": 1319400,
+  "original_acquisition_rerun": false,
+  "full_n5_claimed": false
+}

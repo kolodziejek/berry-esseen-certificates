@@ -1,0 +1,251 @@
+{
+  "schema": "B3_BAND_COMPLETED_RESULTS_V1",
+  "status": "PASS_COMPLETE_N5_B3_BAND_135ROWS_AND_FULL_CORNER_AUDIT_V3",
+  "parent_commit": "963c19c897bd7ea00446d0d872d9cfec04bb7508",
+  "count_transfer_manifest_sha256": "9c7cf55a7611c51c9a264c5c428e6a69010b60038833c06db60ed14516038b0c",
+  "argon_audit_manifest_sha256": "a47456095fb8178ebbe4ce021ba10397eab9bc86ff8d1ffebddd35f8ba5f0d32",
+  "b0_band_manifest_sha256": "fc53854e33c1f69d0ee9f8aad0571da8f3792b0573b14b48a9fff088c7e3c4ba",
+  "bn_band_manifest_sha256": "29a7cf4d148bbe57bf48f458971b626b7dd71be17a86ae7bacdb466744b5668f",
+  "b2_band_manifest_sha256": "62bf19e6bebf559b8be9da0e50cdb22e33094d9fa2f571958485c996bccf1eb3",
+  "package": "n5-b3-band",
+  "package_manifest_sha256": "af9effaeb5ed9d23eaaecd6cd1bc034af70154ccdbcd29c24a1b658a79596ad0",
+  "completion_sha256": "3840d2c5c9a9c43da98079448bee405827a8ed9237ebed47e2b949c954e9b4ca",
+  "band_join": {
+    "band": "B3",
+    "contracts_verified": 135,
+    "series": {
+      "S0": {
+        "contracts": 35,
+        "index_range": [
+          31,
+          65
+        ],
+        "p_union": [
+          "31/100",
+          "33/50"
+        ],
+        "rho_floor": "237/200",
+        "rho_ceiling_max": "477/400",
+        "contiguous_probability_joins": 34,
+        "roots": 107,
+        "leaves": 557,
+        "old_checked_leaves": 9808
+      },
+      "S2": {
+        "contracts": 36,
+        "index_range": [
+          31,
+          66
+        ],
+        "p_union": [
+          "31/100",
+          "67/100"
+        ],
+        "rho_floor": "477/400",
+        "rho_ceiling_max": "6/5",
+        "contiguous_probability_joins": 35,
+        "roots": 112,
+        "leaves": 684,
+        "old_checked_leaves": 10694
+      },
+      "T0": {
+        "contracts": 22,
+        "index_range": [
+          31,
+          52
+        ],
+        "p_union": [
+          "31/100",
+          "53/100"
+        ],
+        "rho_floor": "237/200",
+        "rho_ceiling_max": "477/400",
+        "contiguous_probability_joins": 21,
+        "roots": 69,
+        "leaves": 142,
+        "old_checked_leaves": 3978
+      },
+      "T1": {
+        "contracts": 9,
+        "index_range": [
+          32,
+          40
+        ],
+        "p_union": [
+          "8/25",
+          "41/100"
+        ],
+        "rho_floor": "237/200",
+        "rho_ceiling_max": "477/400",
+        "contiguous_probability_joins": 8,
+        "roots": 27,
+        "leaves": 35,
+        "old_checked_leaves": 668
+      },
+      "T2": {
+        "contracts": 22,
+        "index_range": [
+          31,
+          52
+        ],
+        "p_union": [
+          "31/100",
+          "53/100"
+        ],
+        "rho_floor": "477/400",
+        "rho_ceiling_max": "6/5",
+        "contiguous_probability_joins": 21,
+        "roots": 69,
+        "leaves": 167,
+        "old_checked_leaves": 4823
+      },
+      "T3lower": {
+        "contracts": 11,
+        "index_range": [
+          31,
+          41
+        ],
+        "p_union": [
+          "31/100",
+          "21/50"
+        ],
+        "rho_floor": "477/400",
+        "rho_ceiling_max": "6/5",
+        "contiguous_probability_joins": 10,
+        "roots": 33,
+        "leaves": 48,
+        "old_checked_leaves": 932
+      }
+    },
+    "contiguous_probability_joins": 129,
+    "beta_joins": {
+      "S0_T0": 22,
+      "T0_T1": 9,
+      "S2_T2": 22,
+      "T2_T3lower": 11
+    },
+    "total_beta_joins": 64,
+    "half_boundary_joins": [
+      {
+        "series": "S0",
+        "join_p": "1/2",
+        "left_row": "B3_S0_01_049",
+        "right_row": "B3_S0_01_050"
+      },
+      {
+        "series": "S2",
+        "join_p": "1/2",
+        "left_row": "B3_S2_01_049",
+        "right_row": "B3_S2_01_050"
+      },
+      {
+        "series": "T0",
+        "join_p": "1/2",
+        "left_row": "B3_T0_01_049",
+        "right_row": "B3_T0_01_050"
+      },
+      {
+        "series": "T2",
+        "join_p": "1/2",
+        "left_row": "B3_T2_01_049",
+        "right_row": "B3_T2_01_050"
+      }
+    ],
+    "roots_verified": 417
+  },
+  "counts": {
+    "rows": 135,
+    "roots": 417,
+    "leaves": 1633,
+    "psd": 50623,
+    "score": 1404400,
+    "positive_curvature": 538,
+    "zero_curvature": 1095,
+    "nonpositive_numerator": 1095,
+    "sign_crossing_numerator": 245,
+    "positive_numerator": 293,
+    "priced_leaves": 0,
+    "noise_split_nodes": 301,
+    "alpha_split_nodes": 336,
+    "independent_geometry_checks": 1633,
+    "independent_vertex_corner_rows": 28088,
+    "independent_score_coefficients": 1404400,
+    "independent_inverse_identities": 112352
+  },
+  "old_checked_leaves": 30903,
+  "leaf_reduction_factor": 18.9241,
+  "global_rays": 19596,
+  "psd_coefficients": 50623,
+  "tensor_coefficients": 1404400,
+  "replay01": {
+    "result_path": "evidence/replay01/accepted/RESULT.json",
+    "result_sha256": "6d34f9babc0b5deebfaa19b958d448282fb9fd5a8d83ceb8de3d1f68bf9e73eb",
+    "process_path": "evidence/replay01/capture/PROCESS.json",
+    "process_sha256": "36f6cf4e2f8302d4b261148ecbfed921e905d92b5a080cc34edaa17dda774766",
+    "returncode": 0,
+    "seconds": 454.53191979200346
+  },
+  "controls01": {
+    "result_path": "evidence/controls01/accepted/RESULT.json",
+    "result_sha256": "262b75c9f05761a66d1238cb99d49261fe385595058d342d6cb3a56701efb139",
+    "process_path": "evidence/controls01/capture/PROCESS.json",
+    "process_sha256": "2e77c4f9ddb56f3c3c1ef323ba74e136bbfb143bcc123359185c919a3e8bd43e",
+    "returncode": 0,
+    "seconds": 2.4949406249797903,
+    "negative_controls_count": 48
+  },
+  "smoke01": {
+    "result_path": "evidence/smoke01/accepted/RESULT.json",
+    "result_sha256": "7e60d2ffdd1f65fe60617abfda42d4f925574356a95cc2ff01bd2dcf9aaed20d",
+    "process_path": "evidence/smoke01/capture/PROCESS.json",
+    "process_sha256": "fa4f270237d6ad8b2c8664eaf71003e4a0e368db2e1d5a74aa0f730ab8dd7c46",
+    "returncode": 0,
+    "seconds": 2.3324765419820324
+  },
+  "independent_review": {
+    "result_path": "evidence/review03/checked/RESULT.json",
+    "result_sha256": "c8809d244b5774ca11853540c74383e36ae58d0adff96a00619b22b3897e0cc3",
+    "process_path": "evidence/review03/capture/PROCESS.json",
+    "process_sha256": "40f60f591889922116e81a8b985b4cca6295cdbd37d1f9eef94a9232af41e7e1",
+    "returncode": 0,
+    "seconds": 1426.4823027499951,
+    "isolated_curvature_control": {
+      "row": "B3_S0_01_031",
+      "k": 2,
+      "path": "0",
+      "rays_passed": 12,
+      "PSD_rejected": true
+    },
+    "selector": {
+      "contracts": 295,
+      "band_counts": {
+        "B0": 24,
+        "BN": 32,
+        "B2": 104,
+        "B3": 135
+      },
+      "ambiguous_pairs": 68,
+      "unique_pairs": 58
+    }
+  },
+  "all_n5_contracts": 295,
+  "b0_band_contracts_verified": 24,
+  "bn_band_contracts_verified": 32,
+  "b2_band_contracts_verified": 104,
+  "b3_band_contracts_verified": 135,
+  "complete_k0_bands_verified": [
+    "B0",
+    "BN",
+    "B2",
+    "B3"
+  ],
+  "distinct_n5_contracts_verified_including_prior_packages": 295,
+  "distinct_n5_roots_verified_including_prior_packages": 903,
+  "distinct_n5_taylor_leaves_including_prior_packages": 3673,
+  "distinct_n5_legacy_leaves_replaced_including_prior_packages": 75178,
+  "overall_n5_leaf_reduction_factor": 20.4677,
+  "remaining_n5_contracts": 0,
+  "original_acquisition_replayed": false,
+  "manuscript_unchanged": true,
+  "manuscript_pages": 86
+}

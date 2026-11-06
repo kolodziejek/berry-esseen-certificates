@@ -1,0 +1,41 @@
+{
+  "schema": "ACTUAL_N5_BN38_COMPLETE_ROW_ATTEMPT_V1",
+  "wrapper_sha256": "4afe1afba7f11afbf5e6ebc69047b84d5857d5f997665635e0192fa51d5ad072",
+  "selection_sha256": "7f9286a7cd5526650f745ab9772c709fdbda8ac6a79c19ccfae979105703a76f",
+  "reader_manifest_sha256": "ffa814c525fceaafe39e47e9352b544557ffb83d3225f5329ceba55180474589",
+  "domain_sha256": "7808638d276d78f858ba64fb3124f088bf131f39c44729bb2e0a254e4c117154",
+  "python": "3.12.12 | packaged by conda-forge | (main, Oct 22 2025, 23:34:53) [Clang 19.1.7 ]",
+  "executable": "/Users/bkolodziejek/miniforge3/bin/python3",
+  "resolved_executable": "/Users/bkolodziejek/miniforge3/bin/python3.12",
+  "executable_sha256": "7cbabfbd220cf3da6243b66e38a42c2d72b9c25ddb60d11e85a379b1eb85049b",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "jobs": [
+    {
+      "k": 1,
+      "u": [
+        "-222258117249/1000000000000",
+        "1/2"
+      ],
+      "object": "runs/count_row_20261105/construct_k1_v4_repair01/objects/proof_object.json",
+      "object_sha256": "fdef77b6bafbb513c2a5557cb40c1fd606a1cf66a861cd57481d4f04272c632d"
+    },
+    {
+      "k": 2,
+      "u": [
+        "-1/2",
+        "1/2"
+      ],
+      "object": "runs/count_row_20261105/construct_k2_v4_repair01/objects/proof_object.json",
+      "object_sha256": "d7c32f30be2a75232fd0fa0fa61b68c19471046861c3743dc0933645e4b3ee22"
+    },
+    {
+      "k": 3,
+      "u": [
+        "-1/2",
+        "72258117249/1000000000000"
+      ],
+      "object": "runs/count_row_20261105/construct_k3_v4_campaign01/objects/proof_object.json",
+      "object_sha256": "8f93de5db3f23cdca1bd83e4d97ab07560a5ab78a1132e03135abf6b872d4c5e"
+    }
+  ]
+}

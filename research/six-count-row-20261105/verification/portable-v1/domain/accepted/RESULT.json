@@ -1,0 +1,48 @@
+{
+  "status": "PASS_EXACT_SOURCE_BOUND_DOMAIN_AND_ALGEBRA_CONTROLS",
+  "mathematical_status": "Conditional domain and moment-polynomial implication independently derived; no score certificate or complete row acceptance.",
+  "execution_status": "Fresh exact rational census, endpoint/atom/convolution controls, polynomial identities and metadata rejections.",
+  "statistics": {
+    "threshold_test_points": 38,
+    "coordinate_checks": 45,
+    "mixture_checks": 128,
+    "reflection_checks": 128,
+    "atom_collisions": 104,
+    "beta_actual_laws": 9,
+    "degree_polynomials": 108,
+    "independent_degree_identities": 972,
+    "maximum_degree": [
+      9,
+      4
+    ]
+  },
+  "negative_controls": [
+    "missing signed root",
+    "duplicated root",
+    "reordered canonical roots",
+    "nearest confused with mixture",
+    "truncated mixture",
+    "wrong index",
+    "boolean index",
+    "omitted negative phase",
+    "open face",
+    "endpoint removed",
+    "changed target",
+    "changed p row",
+    "weakened rho lower",
+    "original affine Lambda replaced",
+    "wrong resource hash",
+    "hidden acquisition claim",
+    "missing beta plane",
+    "missing variance vertex",
+    "normal standardized H confusion",
+    "duplicate JSON key"
+  ],
+  "source_pins": {
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/research/six-count-row-20261105/domain-package/work/count_row_20261105/domain/domain.py": "1cc482d7fc75dbcb8a7f099a7f739db55f1b5ce253b9e69a954054f9d154b790",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/research/six-count-row-20261105/domain-package/work/count_row_20261105/domain/domain.json": "7808638d276d78f858ba64fb3124f088bf131f39c44729bb2e0a254e4c117154",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/manuscript_revision_20261029/research/six-count-row-20261105/domain-package/work/count_row_20261105/domain/check_domain.py": "8d7555112704664253ab3740852d617a90687b632cb56bb2e6c6506e1f73889a"
+  },
+  "domain_sha256": "7808638d276d78f858ba64fb3124f088bf131f39c44729bb2e0a254e4c117154",
+  "full_row_score_claimed": false
+}

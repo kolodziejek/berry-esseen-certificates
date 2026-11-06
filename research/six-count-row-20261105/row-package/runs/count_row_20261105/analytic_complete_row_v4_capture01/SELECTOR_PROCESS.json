@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/Users/bkolodziejek/miniforge3/bin/python3",
+    "-I",
+    "-B",
+    "-S",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_row_20261105/assembly/select_v4.py",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/count_row_20261105/SELECTED_COMPLETE_V4.json",
+    "--k1",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/count_row_20261105/construct_k1_v4_repair01/objects/proof_object.json",
+    "--k2",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/count_row_20261105/construct_k2_v4_repair01/objects/proof_object.json",
+    "--k3",
+    "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/runs/count_row_20261105/construct_k3_v4_campaign01/objects/proof_object.json"
+  ],
+  "returncode": 0,
+  "seconds": 0.08446904201991856,
+  "selector_sha256": "87c207568064ee0c873ca90ce379304ce5017c163340d87fb49bf18da30ae727",
+  "stdout_sha256": "8279041c9fb308b529f4716f87ccd8e554d249c76b4c2d13793a88e1f76804af",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

@@ -1,0 +1,104 @@
+{
+  "status": "ALL_ORIGINAL_ROOTS_COMPLETE_CANDIDATES",
+  "mathematical_status": "Conditional local comparison under original acquired same-law hypotheses; full row acceptance pending separate assembly.",
+  "selected": [
+    {
+      "k": 1,
+      "object": "objects/k1.json",
+      "object_sha256": "fdef77b6bafbb513c2a5557cb40c1fd606a1cf66a861cd57481d4f04272c632d",
+      "original_run": "runs/count_row_20261105/construct_k1_v4_repair01",
+      "process": {
+        "returncode": 0,
+        "seconds": 246.26302270800807,
+        "stdout_sha256": "08a4df793089cd87b5b0358390963107135c71e9cff098cc50f917066a6e84b6",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "inputs_unchanged": true
+      },
+      "construction_result": {
+        "status": "COMPLETE_CANDIDATE",
+        "reused": 232,
+        "repaired": 14,
+        "failed": 0,
+        "nodes": 491,
+        "seconds": 245.54757774999598,
+        "source_sha256": {
+          "model.py": "348e5a756dde9c556a31dae234adb810cf63c1edcee777b56a1f304f882469e3",
+          "model_v4.py": "38576e0da4fe5663008b9268aea15ea2540045bda188c2a95737a46a73cd9a99",
+          "discover_v4.py": "f6d5d192f5a6c296b612618b53c8315c1f0dc6fd3e8b5f9653d2ab6b0f344782",
+          "repair_v4.py": "4a37eec1d90e7e0b671f7b9add02dc3fb32896d8faa019b703d4e84dbd19affc",
+          "native/finite_binomial_core.py": "939236711b080f9148ee3d3f7f6a0cd15b86cb24f3d2700f0e7127b2a345291f",
+          "native/quartic_global.py": "0760d772b6cf1858ed139a1fe179490cb1e523a5d685a37a25271a10b349aa35",
+          "native/quartic_sturm.py": "1f815ccb23692f78be98691a76a5fe0605f8995abdab5d9a3964f1625a4c2617",
+          "native/contract.json": "2b3f626ba3a9e954e4700bf206cf7a364f44958bb901b463198249dda2f37e48"
+        },
+        "input_sha256": "184830ee26bae5681cbd7b24e3f9dcb669d548db554b75bc5e7c1343b6b9ae90",
+        "scope": "No prior success marker accepted; every reused leaf passed V4 exact arithmetic. Separate final replay still required."
+      }
+    },
+    {
+      "k": 2,
+      "object": "objects/k2.json",
+      "object_sha256": "d7c32f30be2a75232fd0fa0fa61b68c19471046861c3743dc0933645e4b3ee22",
+      "original_run": "runs/count_row_20261105/construct_k2_v4_repair01",
+      "process": {
+        "returncode": 0,
+        "seconds": 468.94866333302343,
+        "stdout_sha256": "7e3041954e3a55303817a0d8c606710fbb9b1e0f598108a216f64aa722c11ce1",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "inputs_unchanged": true
+      },
+      "construction_result": {
+        "status": "COMPLETE_CANDIDATE",
+        "reused": 282,
+        "repaired": 202,
+        "failed": 0,
+        "nodes": 897,
+        "seconds": 468.24421450000955,
+        "source_sha256": {
+          "model.py": "348e5a756dde9c556a31dae234adb810cf63c1edcee777b56a1f304f882469e3",
+          "model_v4.py": "38576e0da4fe5663008b9268aea15ea2540045bda188c2a95737a46a73cd9a99",
+          "discover_v4.py": "f6d5d192f5a6c296b612618b53c8315c1f0dc6fd3e8b5f9653d2ab6b0f344782",
+          "repair_v4.py": "4a37eec1d90e7e0b671f7b9add02dc3fb32896d8faa019b703d4e84dbd19affc",
+          "native/finite_binomial_core.py": "939236711b080f9148ee3d3f7f6a0cd15b86cb24f3d2700f0e7127b2a345291f",
+          "native/quartic_global.py": "0760d772b6cf1858ed139a1fe179490cb1e523a5d685a37a25271a10b349aa35",
+          "native/quartic_sturm.py": "1f815ccb23692f78be98691a76a5fe0605f8995abdab5d9a3964f1625a4c2617",
+          "native/contract.json": "2b3f626ba3a9e954e4700bf206cf7a364f44958bb901b463198249dda2f37e48"
+        },
+        "input_sha256": "9bb2d84db0bc89ef2103793e20cd291ca716a35f81b4b04c1a2343e49ddb9713",
+        "scope": "No prior success marker accepted; every reused leaf passed V4 exact arithmetic. Separate final replay still required."
+      }
+    },
+    {
+      "k": 3,
+      "object": "objects/k3.json",
+      "object_sha256": "8f93de5db3f23cdca1bd83e4d97ab07560a5ab78a1132e03135abf6b872d4c5e",
+      "original_run": "runs/count_row_20261105/construct_k3_v4_campaign01",
+      "process": {
+        "returncode": 0,
+        "seconds": 5.86272633302724,
+        "stdout_sha256": "b2840e0d121b0bbe892a53cd365bd77c2aa4328558e4183ae957067b9d28f040",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "inputs_unchanged": true
+      },
+      "construction_result": {
+        "status": "COMPLETE_CANDIDATE",
+        "nodes": 5,
+        "leaves": 3,
+        "failed": 0,
+        "source_sha256": {
+          "model.py": "348e5a756dde9c556a31dae234adb810cf63c1edcee777b56a1f304f882469e3",
+          "model_v4.py": "38576e0da4fe5663008b9268aea15ea2540045bda188c2a95737a46a73cd9a99",
+          "discover_v4.py": "f6d5d192f5a6c296b612618b53c8315c1f0dc6fd3e8b5f9653d2ab6b0f344782",
+          "native/finite_binomial_core.py": "939236711b080f9148ee3d3f7f6a0cd15b86cb24f3d2700f0e7127b2a345291f",
+          "native/quartic_global.py": "0760d772b6cf1858ed139a1fe179490cb1e523a5d685a37a25271a10b349aa35",
+          "native/quartic_sturm.py": "1f815ccb23692f78be98691a76a5fe0605f8995abdab5d9a3964f1625a4c2617",
+          "native/contract.json": "2b3f626ba3a9e954e4700bf206cf7a364f44958bb901b463198249dda2f37e48"
+        },
+        "seconds": 5.264536999980919
+      }
+    }
+  ],
+  "leaves": 733,
+  "original_contract_sha256": "2b3f626ba3a9e954e4700bf206cf7a364f44958bb901b463198249dda2f37e48",
+  "note": "Full-row acceptance and source-bound original threshold census are recorded separately by assembly, not inferred from this construction record."
+}

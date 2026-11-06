@@ -1,0 +1,42 @@
+{
+  "command": [
+    "/Users/bkolodziejek/miniforge3/bin/python3",
+    "-I",
+    "-B",
+    "-S",
+    "/Users/bkolodziejek/Documents/BerryEsseen/research/b2-band-20261106/n5-b2-band/code/accept_b2_band.py",
+    "/Users/bkolodziejek/Documents/BerryEsseen/research/b2-band-20261106/n5-b2-band/objects/B2_S2_01_050_k3.json",
+    "/private/tmp/b2_ev/smoke01/accepted",
+    "--mode",
+    "root",
+    "--row",
+    "B2_S2_01_050",
+    "--k",
+    "3"
+  ],
+  "cwd": "/Users/bkolodziejek/Documents/BerryEsseen",
+  "inputs": {
+    "/Users/bkolodziejek/Documents/BerryEsseen/research/b2-band-20261106/n5-b2-band/FILES.json": "bf61605220008afe94cbcf9470a47211a61ee9bb827e4400fb7de5d0fb1ca34c",
+    "/Users/bkolodziejek/Documents/BerryEsseen/research/b2-band-20261106/n5-b2-band/TARGET.json": "3d66ff61a3f89409e467fe05870d3e9efa9d3a29c84a4cfd58da30b7cf3dd6d3",
+    "/Users/bkolodziejek/Documents/BerryEsseen/research/b2-band-20261106/n5-b2-band/code/accept_b2_band.py": "3c04c3579bc35dfa2305d51afb2ff969773c76da65b2ffcec15c9a310fa05bed",
+    "/Users/bkolodziejek/Documents/BerryEsseen/research/b2-band-20261106/n5-b2-band/code/algebra.py": "f8c2fa3e36c6d142645745ff3dff70235114b39b8e723b21a4b3140c0400f3c4",
+    "/Users/bkolodziejek/Documents/BerryEsseen/research/b2-band-20261106/n5-b2-band/code/controls_b2_band.py": "10d5e726bca1b28b3fad4f3da01cea5652426471558746902b6203985568af6d",
+    "/Users/bkolodziejek/Documents/BerryEsseen/research/b2-band-20261106/n5-b2-band/code/discover_b2_band.py": "bda0cded71b77dc0e9772c2d1b2f3d92fb796f36f91d7d8acb1178f19d2b52a6",
+    "/Users/bkolodziejek/Documents/BerryEsseen/research/b2-band-20261106/n5-b2-band/code/gaussian_scalar.py": "725c82fc9a8bbd796229fc0baefedfb5798a0c7f2f955f97d8f57b74ea5a2c5b",
+    "/Users/bkolodziejek/Documents/BerryEsseen/research/b2-band-20261106/n5-b2-band/code/model_all_taylor.py": "6fa323578025c4d4d84c06700d2984b924a89ec55c09915533073a938e145b88",
+    "/Users/bkolodziejek/Documents/BerryEsseen/research/b2-band-20261106/n5-b2-band/code/native/finite_binomial_core.py": "939236711b080f9148ee3d3f7f6a0cd15b86cb24f3d2700f0e7127b2a345291f",
+    "/Users/bkolodziejek/Documents/BerryEsseen/research/b2-band-20261106/n5-b2-band/code/native/quartic_global.py": "0760d772b6cf1858ed139a1fe179490cb1e523a5d685a37a25271a10b349aa35",
+    "/Users/bkolodziejek/Documents/BerryEsseen/research/b2-band-20261106/n5-b2-band/code/native/quartic_sturm.py": "1f815ccb23692f78be98691a76a5fe0605f8995abdab5d9a3964f1625a4c2617",
+    "/Users/bkolodziejek/Documents/BerryEsseen/research/b2-band-20261106/n5-b2-band/code/selector.py": "254f9916a00e63c427f6b17d411ccb70b092550eb4573b7bbd172337b597e717",
+    "/Users/bkolodziejek/Documents/BerryEsseen/research/b2-band-20261106/n5-b2-band/contracts/CENSUS_295.json": "33193caa1a214ac84f938990c61468f269fdc1fb02cf7ed1781922bc2ccd4812",
+    "/Users/bkolodziejek/Documents/BerryEsseen/research/b2-band-20261106/n5-b2-band/objects/B2_S2_01_050_k3.json": "5343608608fe33d0ff80dd26ff96c4ef8b2d5f620df15c0cc70cf181fbe04baf",
+    "/Users/bkolodziejek/Documents/BerryEsseen/research/b2-band-20261106/n5-b2-band/portable.py": "a6366122c9cab06faca77e45642044611471bbb06439990f5ed83008109eb59a"
+  },
+  "runtime": {
+    "executable": "/Users/bkolodziejek/miniforge3/bin/python3",
+    "version": "3.12.12 | packaged by conda-forge | (main, Oct 22 2025, 23:34:53) [Clang 19.1.7 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "optimized": 0
+  },
+  "capture_driver_sha256": "48e67827d2eaca9f60c8877bc7113ff98a1c5e73bd2f5e69fe12efecbe8d7727"
+}

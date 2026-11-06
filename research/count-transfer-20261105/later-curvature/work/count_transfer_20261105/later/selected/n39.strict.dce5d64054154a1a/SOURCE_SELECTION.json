@@ -1,0 +1,77 @@
+{
+  "job_id": "n39.strict.dce5d64054154a1a",
+  "definition": {
+    "arguments": [
+      "38"
+    ],
+    "candidate": "candidate_38.json",
+    "conditional_on_exact_same_law_resource_acquisition": true,
+    "constructor": {
+      "arguments": [
+        "38"
+      ],
+      "script": "construct.py"
+    },
+    "expected_negative_controls": 19,
+    "index": 38,
+    "n": 39,
+    "original_source_paths": {
+      "accept_strict.py": "cutoff25_20261011/BE_cutoff35_release_20261007/work/below40_20261007/root/bridge39_compare/accept_strict.py",
+      "contract.json": "cutoff25_20261011/BE_cutoff35_release_20261007/work/below40_20261007/root/bridge39_compare/contract.json",
+      "exact_bridge_core.py": "cutoff25_20261011/BE_cutoff35_release_20261007/work/below40_20261007/root/bridge39_compare/exact_bridge_core.py",
+      "exact_count_core_v5.py": "cutoff25_20261011/BE_cutoff35_release_20261007/work/below40_20261007/root/bridge39_compare/exact_count_core_v5.py",
+      "finite_gaussian.py": "cutoff25_20261011/BE_cutoff35_release_20261007/work/below40_20261007/root/bridge39_compare/finite_gaussian.py",
+      "profile.py": "cutoff25_20261011/BE_cutoff35_release_20261007/work/below40_20261007/root/bridge39_compare/profile.py",
+      "variance_geometry.py": "cutoff25_20261011/BE_cutoff35_release_20261007/work/below40_20261007/root/bridge39_compare/variance_geometry.py"
+    },
+    "receipt": "accepted_strict_38.json",
+    "receipt_invariants": {
+      "K": "0",
+      "index": 38,
+      "n": 39,
+      "schema": "BRIDGE39_HYBRID_ACCEPTANCE_V1",
+      "status": "PASS"
+    },
+    "role": "current-C2639",
+    "script": "accept_strict.py",
+    "source": {
+      "PRODUCER-RECIPE.json": {
+        "bytes": 1500,
+        "sha256": "850c78d321c6ef439504e5f42e9fec866df0a275b5b54e30f0afcfaaa0d135e6"
+      },
+      "accept_strict.py": {
+        "bytes": 9017,
+        "sha256": "1770f0c7d4338d3d188fa4e96e1f6902f103150c215546dc060a6e37cac51dc0"
+      },
+      "construct.py": {
+        "bytes": 5926,
+        "sha256": "5e9f19ed80bc4e4779c0bfd93d9877eb0873a4eefcf89939d10a232837f2d4ab"
+      },
+      "contract.json": {
+        "bytes": 23939,
+        "sha256": "6e3ba2cef34cc577ef966ebe5708b83bccd33698b4388f8c0f652c239661f1c4"
+      },
+      "exact_bridge_core.py": {
+        "bytes": 9449,
+        "sha256": "b6c461d9216096d8ec016bbd3aaa13c2431c5565606a2269d6fc79fe47bf6138"
+      },
+      "exact_count_core_v5.py": {
+        "bytes": 7347,
+        "sha256": "a959e10e9b6e7cd0bc34046e2bb6a8e8e9680746a11ce04b04d53eec5b2219a0"
+      },
+      "finite_gaussian.py": {
+        "bytes": 3510,
+        "sha256": "939236711b080f9148ee3d3f7f6a0cd15b86cb24f3d2700f0e7127b2a345291f"
+      },
+      "profile.py": {
+        "bytes": 15814,
+        "sha256": "50dc5eb48ca96f7801dc0fc1df1e8b9b9417938e9f65774cd1d065629a76a0cf"
+      },
+      "variance_geometry.py": {
+        "bytes": 1673,
+        "sha256": "5ca1a6a7f82096df23daff61b888b4141e1070ca19a46c121128745cf4c21a0f"
+      }
+    }
+  },
+  "registry_sha256": "f5ddd40aefe85b5ce036b2c23fe540c2032997bf8a51f4999a08573e9a4c34f7"
+}

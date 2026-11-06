@@ -1,0 +1,355 @@
+{
+  "schema": "SOURCE_BOUND_N5_BN_P38_THRESHOLD_DOMAIN_V1",
+  "n": 5,
+  "band": "BN",
+  "index": 38,
+  "K": "0",
+  "mathematical_status": "Locally derived exact domain implication conditional on the original same-law acquired row; no quartic score or whole-row exclusion proved here.",
+  "source": {
+    "contract": "work/cutoff5_20261020/root/count5_prepare_v1/gamma16_01/n5/BN/panel038/contract.json",
+    "sha256": "2b3f626ba3a9e954e4700bf206cf7a364f44958bb901b463198249dda2f37e48",
+    "resource": "work/cutoff5_20261020/root/signed_gamma_paired5_v1/BN/panel038.json",
+    "resource_sha256": "7e1d1303ce8ec4888484ac52ec77af45972b77456d2ddb7d74f862d19384c8ab"
+  },
+  "original_contract_flags": {
+    "resource_verified": false,
+    "cutoff_proved": false
+  },
+  "all_original_hypotheses": {
+    "n": 5,
+    "K": "0",
+    "index": 38,
+    "p": [
+      "19/50",
+      "39/100"
+    ],
+    "rho_lower": "11/10",
+    "rho_upper": "23/20",
+    "D": "708023/250000",
+    "d0": "7691481/1000000",
+    "Lambda": "965647/125000",
+    "Hminus": "2051019/1000000",
+    "Hplus": "2051019/1000000",
+    "radius_minus": "19/10",
+    "radius_plus": "12/5",
+    "outer0": "82453/125000",
+    "outer1": "703209/1000000",
+    "binary_charge": "3727/250000",
+    "gap_charge": "366273/1000000",
+    "noise_charge": "14587/40000",
+    "quadratics": [
+      {
+        "A": "28793/25000",
+        "Fplus": "1258627/1000000",
+        "Fminus": "89723/62500",
+        "Qbudget": "475409/1000000"
+      },
+      {
+        "A": "601633/500000",
+        "Fplus": "1258627/1000000",
+        "Fminus": "89723/62500",
+        "Qbudget": "499649/1000000"
+      },
+      {
+        "A": "4609/4000",
+        "Fplus": "314691/250000",
+        "Fminus": "1436119/1000000",
+        "Qbudget": "475673/1000000"
+      },
+      {
+        "A": "601913/500000",
+        "Fplus": "314691/250000",
+        "Fminus": "1436119/1000000",
+        "Qbudget": "19997/40000"
+      },
+      {
+        "A": "1118437/1000000",
+        "Fplus": "1264629/1000000",
+        "Fminus": "1459669/1000000",
+        "Qbudget": "486959/1000000"
+      },
+      {
+        "A": "58437/50000",
+        "Fplus": "1264629/1000000",
+        "Fminus": "1459669/1000000",
+        "Qbudget": "127931/250000"
+      }
+    ],
+    "acquired_lambda_upper": "7687/25000",
+    "sign_premise": {
+      "schema": "ACTUAL_SIGN_CONDITIONED_MARGINAL_V1",
+      "resource_status": "ASSUMED_ACQUIRED_FOR_CONDITIONAL_TEST",
+      "conditional_means_zero": true,
+      "negative_endpoint_lower": "29529/1000000",
+      "positive_endpoint_lower": "9459/200000"
+    },
+    "acquired_beta": [
+      "-15293/500000",
+      "307221/1000000"
+    ],
+    "acquired_mean": [
+      "217391/500000",
+      "24569/50000"
+    ],
+    "acquired_scale_upper": "547171/1000000",
+    "acquired_gamma": [
+      "-14467/125000",
+      "636273/1000000"
+    ],
+    "geometry_gap_lower": "2345944499/20000000000",
+    "acquired_inward_upper": "471533/500000"
+  },
+  "orientation": "Positive closed-event score for the original sign-conditioned marginal. Negative discrepancies require the separately oriented reflected row/attainment reduction.",
+  "coordinate_identities": {
+    "X": "(B+U-p)/sqrt(w)",
+    "w": "p*(1-p)+lambda/n",
+    "raw_sum_threshold": "H",
+    "normal_argument": "H/sqrt(n)=(k+u-n*p)/sqrt(n*w)",
+    "bernoulli_threshold": "h=n*p+sqrt(w)*H=k+u",
+    "mean": "m=p*(1-p)/sqrt(w)"
+  },
+  "derived": {
+    "v": [
+      "589/2500",
+      "2379/10000"
+    ],
+    "exact_mean_scale_upper": "118950/217391",
+    "scale_upper": "547171/1000000",
+    "exact_mean_noise_upper": "29062228270101/94517693762000",
+    "noise_upper": "7687/25000",
+    "h": [
+      "777741882751/1000000000000",
+      "3072258117249/1000000000000"
+    ],
+    "nearest_indices": [
+      1,
+      2,
+      3
+    ],
+    "mixture_counts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "signed_phase_roots": [
+    {
+      "id": "k1.minus",
+      "nearest_k": 1,
+      "phase": [
+        "-222258117249/1000000000000",
+        "0"
+      ],
+      "probability": [
+        "19/50",
+        "39/100"
+      ],
+      "noise": [
+        "0",
+        "7687/25000"
+      ],
+      "closed": true
+    },
+    {
+      "id": "k1.plus",
+      "nearest_k": 1,
+      "phase": [
+        "0",
+        "1/2"
+      ],
+      "probability": [
+        "19/50",
+        "39/100"
+      ],
+      "noise": [
+        "0",
+        "7687/25000"
+      ],
+      "closed": true
+    },
+    {
+      "id": "k2.minus",
+      "nearest_k": 2,
+      "phase": [
+        "-1/2",
+        "0"
+      ],
+      "probability": [
+        "19/50",
+        "39/100"
+      ],
+      "noise": [
+        "0",
+        "7687/25000"
+      ],
+      "closed": true
+    },
+    {
+      "id": "k2.plus",
+      "nearest_k": 2,
+      "phase": [
+        "0",
+        "1/2"
+      ],
+      "probability": [
+        "19/50",
+        "39/100"
+      ],
+      "noise": [
+        "0",
+        "7687/25000"
+      ],
+      "closed": true
+    },
+    {
+      "id": "k3.minus",
+      "nearest_k": 3,
+      "phase": [
+        "-1/2",
+        "0"
+      ],
+      "probability": [
+        "19/50",
+        "39/100"
+      ],
+      "noise": [
+        "0",
+        "7687/25000"
+      ],
+      "closed": true
+    },
+    {
+      "id": "k3.plus",
+      "nearest_k": 3,
+      "phase": [
+        "0",
+        "72258117249/1000000000000"
+      ],
+      "probability": [
+        "19/50",
+        "39/100"
+      ],
+      "noise": [
+        "0",
+        "7687/25000"
+      ],
+      "closed": true
+    }
+  ],
+  "outer_polygon": {
+    "planes": [
+      [
+        "-1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "1",
+        "1",
+        "7687/125000"
+      ],
+      [
+        "-1307221/1000000",
+        "692779/1000000",
+        "207498759/10000000000"
+      ],
+      [
+        "484707/500000",
+        "-515293/500000",
+        "79687577/1250000000"
+      ]
+    ],
+    "beta_rhs_bernstein": [
+      [
+        "39593169/2500000000",
+        "130962833/7500000000",
+        "114599483/6000000000",
+        "207498759/10000000000"
+      ],
+      [
+        "79687577/1250000000",
+        "233984489/3750000000",
+        "183049939/3000000000",
+        "298072047/5000000000"
+      ]
+    ],
+    "vertices": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "207498759/6927790000"
+      ],
+      [
+        "5463315371/500000000000",
+        "25284684629/500000000000"
+      ],
+      [
+        "7687/125000",
+        "0"
+      ]
+    ],
+    "inward_caps": [
+      "39/100",
+      "31/50"
+    ],
+    "scope": "Fixed rational outer polygon and fixed inward endpoints on this p cell; includes every actual same-law variance pair. Extra tuples may be unrealizable."
+  },
+  "source_pins": {
+    "work/cutoff5_20261020/root/count5_prepare_v1/gamma16_01/n5/BN/panel038/contract.json": {
+      "bytes": 2709,
+      "sha256": "2b3f626ba3a9e954e4700bf206cf7a364f44958bb901b463198249dda2f37e48"
+    },
+    "work/cutoff5_20261020/root/signed_gamma_paired5_v1/BN/panel038.json": {
+      "bytes": 98135,
+      "sha256": "7e1d1303ce8ec4888484ac52ec77af45972b77456d2ddb7d74f862d19384c8ab"
+    },
+    "work/cutoff5_20261020/root/count5_prepare_v1/gamma16_01/n5/BN/panel038/contract_helpers.py": {
+      "bytes": 5625,
+      "sha256": "e3b7777b70184f7e0d7cef67a6f8a55eb867c53addaa847a8aff6340aa2b68d6"
+    },
+    "work/cutoff5_20261020/root/count5_prepare_v1/gamma16_01/n5/BN/panel038/mean_noise.py": {
+      "bytes": 890,
+      "sha256": "515686c5c5a86f9fdc5bf7474ad17a6e35bf4172edf3e871cde314a6f0e9fab8"
+    },
+    "work/cutoff5_20261020/root/count5_prepare_v1/gamma16_01/n5/BN/panel038/generalized_scope.py": {
+      "bytes": 2869,
+      "sha256": "0bbc0b9cf881bda73851324da689a60e879db1c467230c269e0d2006b6a46eec"
+    },
+    "work/cutoff5_20261020/root/count5_prepare_v1/gamma16_01/n5/BN/panel038/exact35_core.py": {
+      "bytes": 17197,
+      "sha256": "4c48e425e7e1c572f0c16f6f41a9aa7d2ed90e45866464683163c10c9c6ee402"
+    },
+    "work/cutoff5_20261020/audit/count5_readback_v1/common.py": {
+      "bytes": 10497,
+      "sha256": "9072968d73c168097df02f74338be0c004a46c9b6d9d481f56c6d71f09897396"
+    },
+    "work/cutoff5_20261020/audit/count5_readback_v1/check.py": {
+      "bytes": 15666,
+      "sha256": "89f7155f833cc9772e2d18a494d579e26f039ad514db5057b7317bcfce82b503"
+    },
+    "work/cutoff5_20261020/audit/resource5_readback_v4/BN_READBACK.json": {
+      "bytes": 116844,
+      "sha256": "03e4f34edd7d4a7762e70bb036fd936a695f959f23a6b8e106b9fe831d8fd8d0"
+    },
+    "work/cutoff5_20261020/audit/count5_readback_v1/n5_BN_COMPLETE.json": {
+      "bytes": 525441,
+      "sha256": "8edca34ee188a83732ce630f7b134c60445d9d6b2c4156b9bcd318453decba2d"
+    }
+  },
+  "remaining_obligations": [
+    "Exact global CDF majorants for all six mixture counts",
+    "Complete continuous p/phase/noise/common-moment score acceptance on the six declared roots or a proved complete subdivision",
+    "Retained original acquisition/contact/threshold premises; no new all-law n5 proof or automatic manuscript deletion"
+  ]
+}

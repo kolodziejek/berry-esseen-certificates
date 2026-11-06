@@ -1,0 +1,79 @@
+{
+  "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+  "row_id": "B0_50",
+  "contract_path": "work/cutoff5_20261020/root/count5_prepare_v1/pilots01/n5/B0/panel050/contract.json",
+  "contract_sha256": "2939dcca05896e1c6393c50944df8dd5e872efb26076a7304df45d9f6d07a93f",
+  "band": "B0",
+  "slab_family": "pilots01",
+  "index": 50,
+  "n": 5,
+  "K": "0",
+  "p": [
+    "1/2",
+    "51/100"
+  ],
+  "rho": [
+    "1",
+    "11/10"
+  ],
+  "beta": [
+    "-126629/1000000",
+    "159997/1000000"
+  ],
+  "roots": [
+    {
+      "k": 2,
+      "p": [
+        "1/2",
+        "51/100"
+      ],
+      "u": [
+        "-44943245351/125000000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "32813/125000"
+      ],
+      "leaves": 9,
+      "taylor_leaves": 9,
+      "baseline_leaves": 0,
+      "global_rays": 108,
+      "psd_coefficients": 279,
+      "tensor_coefficients": 17100,
+      "result_sha256": "98ccf28cc2adf730653c356032d8d01c50607d9f3274e8be91ac19692fc30396",
+      "object_sha256": "f62052c7698f4a1b975fac55c1c8dd4eddb2d94c766ce668a0ba1d62a4f8d684"
+    },
+    {
+      "k": 3,
+      "p": [
+        "1/2",
+        "51/100"
+      ],
+      "u": [
+        "-1/2",
+        "51193245351/125000000000"
+      ],
+      "noise": [
+        "0",
+        "32813/125000"
+      ],
+      "leaves": 2,
+      "taylor_leaves": 2,
+      "baseline_leaves": 0,
+      "global_rays": 24,
+      "psd_coefficients": 62,
+      "tensor_coefficients": 3600,
+      "result_sha256": "f63abd847e57ce6fcc57c704dd0b68cdae6778c682c91be36e2fd15042a32ce5",
+      "object_sha256": "cf7db109f3be642d39abeac752f651ba63c62e77d02410a9c495b590ed288004"
+    }
+  ],
+  "leaves": 11,
+  "taylor_leaves": 11,
+  "baseline_leaves": 0,
+  "global_rays": 132,
+  "psd_coefficients": 341,
+  "tensor_coefficients": 20700,
+  "old_checked_leaves": 212,
+  "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+}

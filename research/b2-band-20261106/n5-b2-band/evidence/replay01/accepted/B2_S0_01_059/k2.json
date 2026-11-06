@@ -1,0 +1,76 @@
+{
+  "status": "PASS_EXACT_ALL_TAYLOR_CLOSED_REGION",
+  "row_id": "B2_S0_01_059",
+  "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel059/contract.json",
+  "contract_sha256": "7f9fa566531c670c1d4aede62c63bf3adecaac6cae5828c60534d64b886fd961",
+  "band": "B2",
+  "slab_family": "B2_S0_01",
+  "series": "S0",
+  "index": 59,
+  "n": 5,
+  "k": 2,
+  "p": [
+    "59/100",
+    "3/5"
+  ],
+  "u": [
+    "1485045423/15625000000",
+    "1/2"
+  ],
+  "noise": [
+    "0",
+    "285001/1000000"
+  ],
+  "nodes": 1,
+  "leaves": [
+    {
+      "path": "",
+      "row_id": "B2_S0_01_059",
+      "contract_sha256": "7f9fa566531c670c1d4aede62c63bf3adecaac6cae5828c60534d64b886fd961",
+      "k": 2,
+      "p": [
+        "59/100",
+        "3/5"
+      ],
+      "u": [
+        "1485045423/15625000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "285001/1000000"
+      ],
+      "alpha": [
+        "0",
+        "1"
+      ],
+      "theta": "4835640277/10000000000",
+      "prices": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "vertices": 5,
+      "moment_pairs": 4,
+      "global_rays": 12,
+      "psd_coefficients": 31,
+      "psd_minima": [
+        "4919429249841650673717/15625000000000000000000",
+        "5815264310721/12207031250000",
+        "968590035229981893832737/11920928955078125000000000"
+      ],
+      "gaussian_noise_curvature_upper": "0",
+      "tensor_coefficients": 1000,
+      "cleared_margin": "5601734498666516471020582978681439222343455993573248743543279424513481536722332846267995170604368190216633641056517388659439594229505853733142131971672834293793340875529/3625048141757846745141474860067272638340799131687263229754079985000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "method": "gaussian_taylor_both_halves_4pair_v1"
+    }
+  ],
+  "taylor_leaves": 1,
+  "baseline_leaves": 0,
+  "global_rays": 12,
+  "psd_coefficients": 31,
+  "tensor_coefficients": 1000,
+  "object_sha256": "5ad6abeaaa671f384af666c2aae14e16f1dd74f1eb704ddc1be986c9c34e4cfb",
+  "seconds": 0.2990389580372721
+}

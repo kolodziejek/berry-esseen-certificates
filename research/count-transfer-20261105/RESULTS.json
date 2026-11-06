@@ -1,0 +1,372 @@
+{
+  "schema": "COUNT_TRANSFER_COMPLETED_RESULTS_V1",
+  "n5_rows": [
+    {
+      "row": "B0_50",
+      "mathematical_status": "Locally derived and checked conditional positive closed-score implication under original acquisition.",
+      "execution_status": "Fresh complete exact PASS",
+      "original_contract_sha256": "2939dcca05896e1c6393c50944df8dd5e872efb26076a7304df45d9f6d07a93f",
+      "result_sha256": "722ecb69e3bcac17206cc2035cd3f86802935bdd0cf9bb2d19eb590358099b9a",
+      "source_run": "runs/count_transfer_20261105/construct_B0_complete01",
+      "returncode": 0,
+      "seconds": 179.83274174999679,
+      "leaves": 383,
+      "global_rays": 4596,
+      "score_coefficients": 816750
+    },
+    {
+      "row": "B2_S3_34",
+      "mathematical_status": "Locally derived and checked conditional positive closed-score implication under original acquisition.",
+      "execution_status": "Fresh complete exact PASS",
+      "original_contract_sha256": "a9e2574fbb79e8d21d7bf6d5a9bc152ba6981878101c0dafd3eb7088233ba6d5",
+      "result_sha256": "dd6fde86aaad2ff58d7fdd89c039bf3cd3e31194622a4c802b2d83bb51b6b82d",
+      "source_run": "runs/count_transfer_20261105/construct_B2_complete01",
+      "returncode": 0,
+      "seconds": 23.870499707991257,
+      "leaves": 54,
+      "global_rays": 648,
+      "score_coefficients": 121500
+    },
+    {
+      "row": "BN39",
+      "mathematical_status": "Locally derived and checked conditional positive closed-score implication under original acquisition.",
+      "execution_status": "Fresh complete exact PASS",
+      "original_contract_sha256": "8d2a6ec51bf43b45a7ce2de62d5ed734a90498924cb60c833a3976394eef3d9a",
+      "result_sha256": "8f8752d58b5b630d0090980667465c7665122d6a5ffd458be252412b3946ee96",
+      "source_run": "runs/count_transfer_20261105/construct_BN39_mixed_complete01",
+      "returncode": 0,
+      "seconds": 417.8417020419729,
+      "leaves": 1126,
+      "global_rays": 13512,
+      "score_coefficients": 2116800
+    }
+  ],
+  "sharp39": {
+    "mathematical_status": "Locally derived and checked original acquired-row implication on full p, narrow phase, one count.",
+    "execution_status": "Fresh full two-cell PASS and full relocated PASS",
+    "n": 39,
+    "k": 15,
+    "p": [
+      "19/50",
+      "39/100"
+    ],
+    "u": [
+      "-1/100",
+      "1/100"
+    ],
+    "noise": [
+      "0",
+      "37/200"
+    ],
+    "score_coefficients": 11880,
+    "psd_coefficients": 3006,
+    "ray_checks": 160,
+    "result_sha256": "e6495b16fc3f7fadc236951f94e05142219d1e778f9aacdeafd7d125d8d8f8d4",
+    "relocated_result_sha256": "5447c4164c0096009f801927c45c266a15f35a96694ec330e889c52a09abe5df",
+    "full_original_row": false
+  },
+  "proof_note": {
+    "pages": 4,
+    "pdf_sha256": "a79ecc5774eb06842b00e9e0cd0085aebdbce1902d29d7f14083f102f887637c",
+    "tex_sha256": "0de6ced4d6683309d896cc84f3f6c3d13e241c5ad7148f4a90e49374195df8ab",
+    "build": "delivery-evidence/runs/count_transfer_20261105/root_build04",
+    "visual_review": "delivery-evidence/runs/count_transfer_20261105/root_visual04/RESULT.json"
+  },
+  "original_acquisition_replayed": false,
+  "selected_manuscript_unchanged": true,
+  "manuscript_pages": 86,
+  "all_n5_contracts": 295,
+  "complete_new_method_rows_including_previous_BN38": 7,
+  "remaining_n5_contracts": 288,
+  "formal_verification": false,
+  "external_referee_review": false,
+  "n5_all_taylor_7rows": {
+    "status": "COMPLETE_ORIGINAL_N5_ALL_TAYLOR_CURVATURE_7ROWS",
+    "mathematical_status": "Conditional positive closed-score implications under each original acquired row; original acquisition not replayed; no all-295 n5 claim.",
+    "execution_status": "Fresh complete 7-row exact PASS, 43 negative controls PASS, and independent PSD/Bernstein/selector audit PASS",
+    "package": "n5-all-taylor",
+    "completion_sha256": "de30e576c66865ee98f4e12b36ce3c0c5064c635ad741d3d76b9d78ed8d34e01",
+    "replay_result": "n5-all-taylor/evidence/replay01/accepted/RESULT.json",
+    "replay_result_sha256": "44abeb2d78e588d2dd308c3d255aa2448ff52eda18bbc5b93213c283ac3afc85",
+    "returncode": 0,
+    "seconds": 28.73209462495288,
+    "rows_verified": 7,
+    "leaves": 63,
+    "taylor_leaves": 63,
+    "baseline_leaves": 0,
+    "global_rays": 756,
+    "psd_coefficients": 1953,
+    "score_coefficients": 121500,
+    "old_checked_leaves": 2736,
+    "rows": [
+      {
+        "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+        "row_id": "BN39",
+        "contract_path": "work/cutoff5_20261020/root/count5_prepare_v1/gamma16_01/n5/BN/panel039/contract.json",
+        "contract_sha256": "8d2a6ec51bf43b45a7ce2de62d5ed734a90498924cb60c833a3976394eef3d9a",
+        "band": "BN",
+        "slab_family": "gamma16_01",
+        "index": 39,
+        "n": 5,
+        "K": "0",
+        "p": [
+          "39/100",
+          "2/5"
+        ],
+        "rho": [
+          "11/10",
+          "23/20"
+        ],
+        "beta": [
+          "-12801/250000",
+          "59677/200000"
+        ],
+        "leaves": 18,
+        "taylor_leaves": 18,
+        "baseline_leaves": 0,
+        "global_rays": 216,
+        "psd_coefficients": 558,
+        "tensor_coefficients": 32400,
+        "old_checked_leaves": 809,
+        "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+      },
+      {
+        "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+        "row_id": "B0_50",
+        "contract_path": "work/cutoff5_20261020/root/count5_prepare_v1/pilots01/n5/B0/panel050/contract.json",
+        "contract_sha256": "2939dcca05896e1c6393c50944df8dd5e872efb26076a7304df45d9f6d07a93f",
+        "band": "B0",
+        "slab_family": "pilots01",
+        "index": 50,
+        "n": 5,
+        "K": "0",
+        "p": [
+          "1/2",
+          "51/100"
+        ],
+        "rho": [
+          "1",
+          "11/10"
+        ],
+        "beta": [
+          "-126629/1000000",
+          "159997/1000000"
+        ],
+        "leaves": 11,
+        "taylor_leaves": 11,
+        "baseline_leaves": 0,
+        "global_rays": 132,
+        "psd_coefficients": 341,
+        "tensor_coefficients": 20700,
+        "old_checked_leaves": 212,
+        "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+      },
+      {
+        "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+        "row_id": "B2_S3_34",
+        "contract_path": "work/cutoff5_20261020/root/count5_prepare_v4/B2_S3_endpoint02/n5/B2/panel034/contract.json",
+        "contract_sha256": "a9e2574fbb79e8d21d7bf6d5a9bc152ba6981878101c0dafd3eb7088233ba6d5",
+        "band": "B2",
+        "slab_family": "B2_S3_endpoint02",
+        "index": 34,
+        "n": 5,
+        "K": "0",
+        "p": [
+          "17/50",
+          "7/20"
+        ],
+        "rho": [
+          "467/400",
+          "237/200"
+        ],
+        "beta": [
+          "1/5",
+          "8473/25000"
+        ],
+        "leaves": 7,
+        "taylor_leaves": 7,
+        "baseline_leaves": 0,
+        "global_rays": 84,
+        "psd_coefficients": 217,
+        "tensor_coefficients": 15750,
+        "old_checked_leaves": 731,
+        "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+      },
+      {
+        "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+        "row_id": "BN38",
+        "contract_path": "work/cutoff5_20261020/root/count5_prepare_v1/gamma16_01/n5/BN/panel038/contract.json",
+        "contract_sha256": "2b3f626ba3a9e954e4700bf206cf7a364f44958bb901b463198249dda2f37e48",
+        "band": "BN",
+        "slab_family": "gamma16_01",
+        "index": 38,
+        "n": 5,
+        "K": "0",
+        "p": [
+          "19/50",
+          "39/100"
+        ],
+        "rho": [
+          "11/10",
+          "23/20"
+        ],
+        "beta": [
+          "-15293/500000",
+          "307221/1000000"
+        ],
+        "leaves": 13,
+        "taylor_leaves": 13,
+        "baseline_leaves": 0,
+        "global_rays": 156,
+        "psd_coefficients": 403,
+        "tensor_coefficients": 23400,
+        "old_checked_leaves": 822,
+        "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+      },
+      {
+        "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+        "row_id": "B0_53",
+        "contract_path": "work/cutoff5_20261020/root/count5_prepare_v1/B0_BN_rest01/n5/B0/panel053/contract.json",
+        "contract_sha256": "3878f4e5c91437c4c554d4d0b324f6ca295c8899312dba0b33f5473cd8f86b41",
+        "band": "B0",
+        "slab_family": "B0_BN_rest01",
+        "index": 53,
+        "n": 5,
+        "K": "0",
+        "p": [
+          "53/100",
+          "27/50"
+        ],
+        "rho": [
+          "1",
+          "11/10"
+        ],
+        "beta": [
+          "-84419/500000",
+          "60401/500000"
+        ],
+        "leaves": 5,
+        "taylor_leaves": 5,
+        "baseline_leaves": 0,
+        "global_rays": 60,
+        "psd_coefficients": 155,
+        "tensor_coefficients": 9000,
+        "old_checked_leaves": 96,
+        "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+      },
+      {
+        "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+        "row_id": "B3_S0_59",
+        "contract_path": "work/cutoff5_20261020/root/count5_prepare_v4/B3_S0_01/n5/B3/panel059/contract.json",
+        "contract_sha256": "8a4952734e9cc1112231c39f80fdddd5acab6fa03baa97b718d268636c69c9dc",
+        "band": "B3",
+        "slab_family": "B3_S0_01",
+        "index": 59,
+        "n": 5,
+        "K": "0",
+        "p": [
+          "59/100",
+          "3/5"
+        ],
+        "rho": [
+          "237/200",
+          "477/400"
+        ],
+        "beta": [
+          "-149897/500000",
+          "4307/500000"
+        ],
+        "leaves": 4,
+        "taylor_leaves": 4,
+        "baseline_leaves": 0,
+        "global_rays": 48,
+        "psd_coefficients": 124,
+        "tensor_coefficients": 9000,
+        "old_checked_leaves": 32,
+        "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+      },
+      {
+        "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+        "row_id": "B3_S2_59",
+        "contract_path": "work/cutoff5_20261020/root/count5_prepare_v4/B3_S2_01/n5/B3/panel059/contract.json",
+        "contract_sha256": "77489856c154551a3a403584c01a6649e503a2c1dc3e2b344075396b1e961a9b",
+        "band": "B3",
+        "slab_family": "B3_S2_01",
+        "index": 59,
+        "n": 5,
+        "K": "0",
+        "p": [
+          "59/100",
+          "3/5"
+        ],
+        "rho": [
+          "477/400",
+          "6/5"
+        ],
+        "beta": [
+          "-305441/1000000",
+          "26187/1000000"
+        ],
+        "leaves": 5,
+        "taylor_leaves": 5,
+        "baseline_leaves": 0,
+        "global_rays": 60,
+        "psd_coefficients": 155,
+        "tensor_coefficients": 11250,
+        "old_checked_leaves": 34,
+        "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+      }
+    ],
+    "controls_result": "n5-all-taylor/evidence/controls01/accepted/RESULT.json",
+    "controls_result_sha256": "47663d7e08b42c863e26c26f23f7e6477235264be4599794fb7089faba363136",
+    "negative_controls": [
+      "ambiguous B3 panel 59 by (band,index) alone",
+      "ambiguous B2 panel 34 by (band,index) alone",
+      "ambiguous B2 panel 50 by (band,index,p)",
+      "ambiguous band only",
+      "empty selector dict",
+      "empty string selector",
+      "unknown string selector",
+      "unknown selector key",
+      "boolean panel index",
+      "noncanonical p interval",
+      "reversed rho interval",
+      "nonmatching contract query",
+      "unknown analytic method",
+      "boolean method",
+      "missing theta",
+      "stored PASS leaf",
+      "failed leaf marker",
+      "missing child",
+      "unknown split axis",
+      "wrong row_id",
+      "wrong contract_path",
+      "wrong contract_sha256",
+      "wrong n",
+      "boolean n",
+      "boolean k",
+      "changed p coverage",
+      "changed u coverage",
+      "changed noise coverage",
+      "noncanonical theta",
+      "negative theta",
+      "negative dual price",
+      "noncanonical dual price",
+      "wrong dual price count",
+      "missing mixture count",
+      "extra mixture count",
+      "bad closed atom at 0",
+      "negative leading quartic",
+      "corrupted curvature PSD tiny leading quartic",
+      "excessive negative squared numerator amin^2 > 3 dmin",
+      "probability outside (0,1)",
+      "negative noise in Gaussian",
+      "incomplete root selection dropping k=4 on B0_53",
+      "duplicate JSON key"
+    ],
+    "independent_review_result": "review/runs/count_transfer_20261105/review_all_taylor01/checked/RESULT.json",
+    "independent_review_result_sha256": "de48c0eac95091a7f8fa5f165c5a3518a823ff212e98d46bd7076df81d76202d",
+    "independent_review_process_sha256": "1985e783064fe99feac9a8d2c7ecd38634ab7b02467c257c964a5462a0cf9d7d",
+    "independent_review_seconds": 71.88597679138184
+  }
+}

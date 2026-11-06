@@ -1,0 +1,97 @@
+{
+  "schema": "BOUNDED_INDEPENDENT_TRANSFER_REVIEW_FILES_V3",
+  "previous_manifest_sha256": "40da890dd0209ff8ecb05ec49355c321b7873d71f697408a8bb7a9f10792e799",
+  "previous_files_unchanged": true,
+  "files": {
+    "work/count_transfer_20261105/review/ADDITIVE_PACKAGING_REVIEW.md": {
+      "bytes": 3080,
+      "sha256": "9088f250208c6035bf119665adcbefc1997ccf1350963f3d49dcc4aac3afb2cb"
+    },
+    "work/count_transfer_20261105/review/CURVATURE_COVER_REVIEW.md": {
+      "bytes": 6080,
+      "sha256": "b9b68a10db8dac1596ef4210816dcf0eaffd5de60527dae2265e73d1a7446d02"
+    },
+    "work/count_transfer_20261105/review/DUAL_PRICE_LICENSE.md": {
+      "bytes": 2789,
+      "sha256": "db273a079a867be1f1efc5d44295857476d8519488fec5a4ad176f3daca07dc9"
+    },
+    "work/count_transfer_20261105/review/DUAL_REVIEW.md": {
+      "bytes": 1844,
+      "sha256": "9043f86d787ffb339714f1ec34ae29b24aba2cdf9a104e241512b8e66f64ccb2"
+    },
+    "work/count_transfer_20261105/review/FILES01.json": {
+      "bytes": 2823,
+      "sha256": "8f4a4d9c04bc5d120e6de0073b06d6f4a39b1d196ad05c566ea77272809d1748"
+    },
+    "work/count_transfer_20261105/review/FILES02.json": {
+      "bytes": 3736,
+      "sha256": "40da890dd0209ff8ecb05ec49355c321b7873d71f697408a8bb7a9f10792e799"
+    },
+    "work/count_transfer_20261105/review/GAUSSIAN_TAYLOR_REVIEW.md": {
+      "bytes": 4757,
+      "sha256": "33622a1621ea724647e4381d3b269269219094925eed9880772027911459e838"
+    },
+    "work/count_transfer_20261105/review/GENERAL_SCALARS.md": {
+      "bytes": 5612,
+      "sha256": "a995b0523f2f8205b7ef6c140ac05dd9e92002f90dd0b486c0d50494ebc381ca"
+    },
+    "work/count_transfer_20261105/review/MIXED_TAYLOR_REVIEW.md": {
+      "bytes": 6679,
+      "sha256": "d243212c7740c238aade203e9936395330518e3c85d5351a696eedb5f857943c"
+    },
+    "work/count_transfer_20261105/review/POLYNOMIAL_ORIGIN.json": {
+      "bytes": 466,
+      "sha256": "f0c419357737924810cf5c30deb735950fc809e9c7c6a0f5d586df4b56216fb9"
+    },
+    "work/count_transfer_20261105/review/REVIEW.md": {
+      "bytes": 4461,
+      "sha256": "3beae222de3d226943deab429cafd8403d51354e8913b7b4cae5632c8d4d78aa"
+    },
+    "work/count_transfer_20261105/review/TANGENT_REVIEW.md": {
+      "bytes": 9341,
+      "sha256": "c851c44fe83288291a33917bb2ab13d2eed003206ff90fc4f45b55cba7ca2686"
+    },
+    "work/count_transfer_20261105/review/WHOLE_ROW_REVIEW.md": {
+      "bytes": 3369,
+      "sha256": "27ce1712ba3019e28a5c2f5597b929c9d2daa730aae214236c6d3246845b6885"
+    },
+    "work/count_transfer_20261105/review/check_curvature_cover.py": {
+      "bytes": 5906,
+      "sha256": "14d9534362734544dc6dffc559cbd48e6532ce9de682580ca380dffdcf957d4f"
+    },
+    "work/count_transfer_20261105/review/check_dual.py": {
+      "bytes": 4435,
+      "sha256": "9fe4bd9ba31e6540a0146df2566d909353ca1e2da2728fefa21ddc839b046187"
+    },
+    "work/count_transfer_20261105/review/check_general_laws.py": {
+      "bytes": 6947,
+      "sha256": "ee04dbb852c43c3abd243644b478006caf73ce933ddc5ac32814a340a4f7e9ae"
+    },
+    "work/count_transfer_20261105/review/check_model.py": {
+      "bytes": 4788,
+      "sha256": "f87c518a80ef48bd24412bd830c4a495c731061532aa58f17e1ee3862a76380a"
+    },
+    "work/count_transfer_20261105/review/check_tangent_rectangle_independent.py": {
+      "bytes": 13028,
+      "sha256": "7b3b71263c9b242ebccddd6418fba5a1240a726f759eedbbc755f17f52d7864a"
+    },
+    "work/count_transfer_20261105/review/check_taylor_transfer.py": {
+      "bytes": 4980,
+      "sha256": "1b5c86d7c144298abd999d6cc20ee56a4b99aa5330a94ffb16e3c7816d2d8ae5"
+    },
+    "work/count_transfer_20261105/review/independent_polys.py": {
+      "bytes": 1896,
+      "sha256": "43ab0a7bb54e00b19de6205d1ed624ef7b9c3fd8f1d132a6fbffe65a327aaebe"
+    }
+  },
+  "fresh_own_evidence_roots": [
+    "runs/count_transfer_20261105/review_general01",
+    "runs/count_transfer_20261105/review_model01",
+    "runs/count_transfer_20261105/review_dual01",
+    "runs/count_transfer_20261105/review_tangent_rectangle01",
+    "runs/count_transfer_20261105/review_taylor_transfer01",
+    "runs/count_transfer_20261105/review_curvature_cover01"
+  ],
+  "scope": "Adds independently derived and checked full-probability/narrow-phase two-cell curvature correction. Complete original sharp39 row not claimed. Prior conditional/mixed-row checkpoints unchanged.",
+  "mathematical_acceptance_from_manifest": false
+}

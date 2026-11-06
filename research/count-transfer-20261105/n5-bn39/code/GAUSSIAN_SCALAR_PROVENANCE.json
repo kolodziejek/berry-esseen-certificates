@@ -1,0 +1,12 @@
+{
+  "source": "work/count_transfer_20261105/later/gaussian_taylor01/check_broad.py",
+  "sha256": "01b169b84f1b5242fbaad9fd65ec54152a341a6f828caa9fb7b4d1d0eac65264",
+  "copied_function_names": [
+    "down",
+    "up",
+    "interval_mul",
+    "gaussian"
+  ],
+  "body_changes": false,
+  "routing": "m.need -> algebra.need; m.norm -> unchanged finite_binomial_core; m.normal -> algebra.normal_lower, same directed algorithm with extra lower range guard"
+}

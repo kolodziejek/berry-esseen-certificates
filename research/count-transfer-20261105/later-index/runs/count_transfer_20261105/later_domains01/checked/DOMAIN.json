@@ -1,0 +1,295 @@
+{
+  "status": "PASS_EXACT_SELECTED_SOURCE_DOMAIN_PROJECTION",
+  "scope": "Metadata and mathematical domain projection only; historical selected joins are located and byte-bound, not re-executed here.",
+  "rows": [
+    {
+      "job_id": "n6.BN.p38",
+      "actual_n": 6,
+      "K": "0",
+      "target": "C_E",
+      "rho_region": [
+        "11/10",
+        "23/20"
+      ],
+      "row": {
+        "n": 6,
+        "K": "0",
+        "index": 38,
+        "p": [
+          "19/50",
+          "39/100"
+        ],
+        "rho_lower": "11/10",
+        "rho_upper": "23/20",
+        "D": "2371331/1000000",
+        "d0": "57107/50000",
+        "Lambda": "1381373/1000000",
+        "Hminus": "455107/250000",
+        "Hplus": "455107/250000",
+        "radius_minus": "19/10",
+        "radius_plus": "12/5",
+        "outer0": "19669/31250",
+        "outer1": "332521/500000",
+        "binary_charge": "16287/1000000",
+        "gap_charge": "1030979/500000",
+        "noise_charge": "852429/500000",
+        "quadratics": [
+          {
+            "A": "8561/8000",
+            "Fplus": "477803/500000",
+            "Fminus": "59397/50000",
+            "Qbudget": "150003/1000000"
+          },
+          {
+            "A": "280377/250000",
+            "Fplus": "477803/500000",
+            "Fminus": "59397/50000",
+            "Qbudget": "6487/31250"
+          },
+          {
+            "A": "535301/500000",
+            "Fplus": "119457/125000",
+            "Fminus": "594189/500000",
+            "Qbudget": "150267/1000000"
+          },
+          {
+            "A": "224403/200000",
+            "Fplus": "119457/125000",
+            "Fminus": "594189/500000",
+            "Qbudget": "10393/50000"
+          },
+          {
+            "A": "103251/100000",
+            "Fplus": "239341/250000",
+            "Fminus": "1203441/1000000",
+            "Qbudget": "159353/1000000"
+          },
+          {
+            "A": "1082481/1000000",
+            "Fplus": "239341/250000",
+            "Fminus": "1203441/1000000",
+            "Qbudget": "217359/1000000"
+          }
+        ],
+        "acquired_lambda_upper": "33259/125000",
+        "sign_premise": {
+          "schema": "ACTUAL_SIGN_CONDITIONED_MARGINAL_V1",
+          "resource_status": "ASSUMED_ACQUIRED_FOR_CONDITIONAL_TEST",
+          "conditional_means_zero": true,
+          "negative_endpoint_lower": "156171/1000000",
+          "positive_endpoint_lower": "125773/500000"
+        },
+        "acquired_beta": [
+          "55523/1000000",
+          "289629/1000000"
+        ],
+        "acquired_mean": [
+          "447797/1000000",
+          "1951/4000"
+        ],
+        "acquired_scale_upper": "132817/250000",
+        "acquired_gamma": [
+          "41197/500000",
+          "606933/1000000"
+        ],
+        "geometry_gap_lower": "413443378401/500000000000",
+        "acquired_inward_upper": "598641/1000000"
+      },
+      "contract_schema": "ACTUAL6_MEAN_NOISE_BATCH_CONDITIONAL_RESOURCE_COUNT_CONTRACT",
+      "contract_source": "work/cutoff6_20261020/root/bn_count_batch_v1/BN/panel038/contract.json",
+      "contract_local": "work/count_transfer_20261105/later/selected/n6.BN.p38/contract.json",
+      "contract_sha256": "30957315d287cdae6aec2d933900c339b14d2cc0c4eae6487f44d3abafac6111",
+      "acquisition": "work/extension_20261030/foundations/finite69-cache-remaining01/work/cutoff6_20261018/root/resource6_BN_refined_batch_v1/BN/panel038.json",
+      "source_bound_selected_join": "runs/extension_20261030/foundations/finite69-final-join01/CURRENT_INTERFACES.json",
+      "scale_upper": "132817/250000",
+      "noise_upper": "33259/125000",
+      "unclamped_bernoulli_threshold": [
+        "82054053581/62500000000",
+        "206695946419/62500000000"
+      ],
+      "closed_nearest_roots": [
+        {
+          "k": 1,
+          "phase": [
+            "19554053581/62500000000",
+            "1/2"
+          ]
+        },
+        {
+          "k": 2,
+          "phase": [
+            "-1/2",
+            "1/2"
+          ]
+        },
+        {
+          "k": 3,
+          "phase": [
+            "-1/2",
+            "19195946419/62500000000"
+          ]
+        }
+      ],
+      "atom_endpoint_probes": 6,
+      "mixture_counts": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "p_degree_after_pq_squared": 10,
+      "phase_degree": 4,
+      "numerical_acquisition_replayed": false
+    },
+    {
+      "job_id": "n39.strict.dce5d64054154a1a",
+      "actual_n": 39,
+      "K": "0",
+      "target": "C_E",
+      "rho_region": [
+        "1",
+        "6/5"
+      ],
+      "row": {
+        "n": 39,
+        "index": 38,
+        "p": [
+          "19/50",
+          "39/100"
+        ],
+        "d0": "233/10000",
+        "Lambda": "37/200",
+        "D": "143/500",
+        "Hminus": "1301/1000",
+        "Hplus": "999/1000",
+        "radius_minus": "1401/1000",
+        "radius_plus": "2201/1000",
+        "outer0": "471/1000",
+        "outer1": "471/1000",
+        "binary_charge": "41/2000",
+        "gap_charge": "2857/250",
+        "noise_charge": "2879/2000",
+        "quadratics": [
+          {
+            "A": "6477/10000",
+            "Fplus": "11/1000",
+            "Fminus": "3599/10000",
+            "Qbudget": "3307/5000"
+          },
+          {
+            "A": "6859/10000",
+            "Fplus": "11/1000",
+            "Fminus": "3599/10000",
+            "Qbudget": "7123/10000"
+          },
+          {
+            "A": "3267/5000",
+            "Fplus": "39/5000",
+            "Fminus": "3639/10000",
+            "Qbudget": "1667/2500"
+          },
+          {
+            "A": "173/250",
+            "Fplus": "39/5000",
+            "Fminus": "3639/10000",
+            "Qbudget": "7179/10000"
+          }
+        ]
+      },
+      "contract_schema": "CONDITIONAL_BRIDGE39_HYBRID_V1",
+      "contract_source": "cutoff25_20261011/BE_cutoff35_release_20261007/work/below40_20261007/root/bridge39_compare/contract.json",
+      "contract_local": "work/count_transfer_20261105/later/selected/n39.strict.dce5d64054154a1a/contract.json",
+      "contract_sha256": "6e3ba2cef34cc577ef966ebe5708b83bccd33698b4388f8c0f652c239661f1c4",
+      "acquisition": "work/extension_20261030/finite/resource35_39-run01/capsule/work/below40_20261007/relative/bridge39_exact/acquisition/acquisition_proof.json",
+      "source_bound_selected_join": "work/extension_20261030/finite/actual3539-full-join20261104/RESULT.json",
+      "scale_upper": "49258866181/100000000000",
+      "noise_upper": "37/200",
+      "unclamped_bernoulli_threshold": [
+        "1417914215098519/100000000000000",
+        "1570209607314819/100000000000000"
+      ],
+      "closed_nearest_roots": [
+        {
+          "k": 14,
+          "phase": [
+            "17914215098519/100000000000000",
+            "1/2"
+          ]
+        },
+        {
+          "k": 15,
+          "phase": [
+            "-1/2",
+            "1/2"
+          ]
+        },
+        {
+          "k": 16,
+          "phase": [
+            "-1/2",
+            "-29790392685181/100000000000000"
+          ]
+        }
+      ],
+      "atom_endpoint_probes": 5,
+      "mixture_counts": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "p_degree_after_pq_squared": 43,
+      "phase_degree": 4,
+      "numerical_acquisition_replayed": false
+    }
+  ],
+  "source_pins": {
+    "work/unconditional_legacy_20261030/verification/count/count-pack-v2/MANIFEST.json": "f5ddd40aefe85b5ce036b2c23fe540c2032997bf8a51f4999a08573e9a4c34f7",
+    "runs/extension_20261030/foundations/finite69-final-join01/CURRENT_INTERFACES.json": "9ae55f9729bb3477051d7c99c2247e758e016da43ebcb0f29475a46e3a377ae7",
+    "work/extension_20261030/finite/actual3539-full-join20261104/RESULT.json": "0fcd5221a99e0f0a204c7197743b54669256e9f045ea25215ef670d1fb489faf",
+    "work/extension_20261030/foundations/finite69-cache-remaining01/work/cutoff6_20261018/root/resource6_BN_refined_batch_v1/BN/panel038.json": "e01b93fcf25d9f02e246520f7b80f507a2b76a2afc82701bd1da8b26e605eb48",
+    "work/count_transfer_20261105/later/selected/n6.BN.p38/contract.json": "30957315d287cdae6aec2d933900c339b14d2cc0c4eae6487f44d3abafac6111",
+    "work/extension_20261030/finite/resource35_39-run01/capsule/work/below40_20261007/relative/bridge39_exact/acquisition/acquisition_proof.json": "8c792287c6a96631ccab8639c6e233a8f5c9988860b99c8ba5cf3b0fae591c3d",
+    "work/count_transfer_20261105/later/selected/n39.strict.dce5d64054154a1a/contract.json": "6e3ba2cef34cc577ef966ebe5708b83bccd33698b4388f8c0f652c239661f1c4"
+  },
+  "script_sha256": "674485756e6bcd26921e65aefd7b6bc6ce7b50b706e837b62fc7bc8e30cd5973"
+}

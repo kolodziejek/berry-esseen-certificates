@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_transfer_20261105/later/gaussian_curvature01/check_controls.py", line 45, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_transfer_20261105/later/gaussian_curvature01/check_controls.py", line 43, in main
+    result=dict(status='PASS_CURVATURE_SCALAR_CONTROLS',scalar_domain_checks=checks,exact_derivative_identities=identities,rank_one_matrix_identities=matrix_checks,domain_rejections=rejected,reader_sha256=sha(HERE/'check_full_p.py'),source_sha256=sha(__file__),no_continuous_score_claim=True)
+                                                                                                                                                                                                                                                       ^^^^^^^^^^^^^
+  File "/Users/bkolodziejek/Downloads/BE_Codex_Handoff/work/count_transfer_20261105/later/gaussian_curvature01/check_controls.py", line 8, in sha
+    def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+                                     ^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'read_bytes'

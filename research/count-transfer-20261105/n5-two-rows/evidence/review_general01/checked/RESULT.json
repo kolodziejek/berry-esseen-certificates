@@ -1,0 +1,19 @@
+{
+  "status": "PASS_EXACT_GENERAL_SCALAR_AND_LAW_CONTROLS",
+  "scope": "Independent conditional scalar/semantic checks, not any new full row or acquisition.",
+  "counts": {
+    "scalar_tests": 36,
+    "endpoint_gaussian_tests": 14256,
+    "curvature_tests": 648,
+    "actual_pairs": 192,
+    "conditional_convolutions": 1152,
+    "full_mixture_identities": 192,
+    "reflection_identities": 192,
+    "collision_checks": 682,
+    "zero_components": 96,
+    "tiny_components": 192,
+    "mean_sign_caps": 192,
+    "negative_controls": 6
+  },
+  "source_sha256": "ee04dbb852c43c3abd243644b478006caf73ce933ddc5ac32814a340a4f7e9ae"
+}

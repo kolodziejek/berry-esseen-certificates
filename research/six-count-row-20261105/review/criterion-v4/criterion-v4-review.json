@@ -1,0 +1,16 @@
+{
+  "scope": "Read-only mathematical/source review; no new full numerical replay",
+  "source_sha256": {
+    "work/count_row_20261105/root/release02/six_count_reduction.tex": "0930622c15cc8a485292ffcac1dabfa9c1880a72efe6454a96cd448a7ddc238f",
+    "work/count_row_20261105/construct/model.py": "348e5a756dde9c556a31dae234adb810cf63c1edcee777b56a1f304f882469e3",
+    "work/count_row_20261105/construct/model_v4.py": "38576e0da4fe5663008b9268aea15ea2540045bda188c2a95737a46a73cd9a99",
+    "work/count_row_20261105/construct/accept_v4.py": "795fee4d0236ad3baa921f4ffdd92cd68583332ee59ce7bb0855140723640ba9",
+    "work/count_row_20261105/assembly/complete_v4.py": "4afe1afba7f11afbf5e6ebc69047b84d5857d5f997665635e0192fa51d5ad072",
+    "work/count_row_20261105/assembly/select_v4.py": "87c207568064ee0c873ca90ce379304ce5017c163340d87fb49bf18da30ae727"
+  },
+  "findings": [
+    "No mathematical or numerical-interface blocker identified.",
+    "Clarify that a_i<=d is retained before formula15.",
+    "Scope duplicated-object rejection to root selections; valid coefficient reuse across distinct cells is allowed."
+  ]
+}

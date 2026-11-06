@@ -1,0 +1,64 @@
+{
+  "status": "PASS_INDEPENDENT_TWO_CELL_CURVATURE_HESSIANS",
+  "n": 39,
+  "k": 15,
+  "p": [
+    "19/50",
+    "39/100"
+  ],
+  "u": [
+    "-1/100",
+    "1/100"
+  ],
+  "noise": [
+    "0",
+    "37/200"
+  ],
+  "complete_hessian_entry_arrays": 54,
+  "inverse_psd_coefficients": 3006,
+  "exact_scalar_checks": 54,
+  "sign_and_chain_factor_mutations": 18,
+  "scope": "All corrected Hessian arrays and PSD coefficient readbacks on both fixed closed cells; independent sparse variance-quadratic expansion. Shared scalar constants, score/kernel and majorant reader. No independent full score replay or complete original-row claim.",
+  "sources_unchanged": true,
+  "source_sha256_before": {
+    "work/count_transfer_20261105/review/check_curvature_cover.py": "14d9534362734544dc6dffc559cbd48e6532ce9de682580ca380dffdcf957d4f",
+    "work/count_transfer_20261105/review/check_tangent_rectangle_independent.py": "7b3b71263c9b242ebccddd6418fba5a1240a726f759eedbbc755f17f52d7864a",
+    "work/count_transfer_20261105/later/gaussian_curvature01/check_two_cells.py": "bc656fcd874e2e866fb2bd47e36b35a7dd76cb5374d27d58528b0ba78461cf47",
+    "work/count_transfer_20261105/later/gaussian_curvature01/TWO_CELL_SOURCE_PINS.json": "b6d9c94cd4826ee8fa4b38806df17f72a32c369ac9c6dd3cbb6d53195e604b8a",
+    "runs/count_transfer_20261105/later_gaussian_curvature_two01/checked/RESULT.json": "e6495b16fc3f7fadc236951f94e05142219d1e778f9aacdeafd7d125d8d8f8d4",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../analysis/pilot.py": "d3661f7f588dd525052427fa303dd89407effc5d44c4edd71ea16409b6a1ce21",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../analysis/native/PINS.json": "af7b3abff162f3eb993292a51d53282550d8c7d6fb09534dcee8d0349b959cd0",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../analysis/native/finite_binomial_core.py": "939236711b080f9148ee3d3f7f6a0cd15b86cb24f3d2700f0e7127b2a345291f",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../analysis/native/quartic_global.py": "0760d772b6cf1858ed139a1fe179490cb1e523a5d685a37a25271a10b349aa35",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../analysis/native/quartic_sturm.py": "1f815ccb23692f78be98691a76a5fe0605f8995abdab5d9a3964f1625a4c2617",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../selected/n6.BN.p38/contract.json": "30957315d287cdae6aec2d933900c339b14d2cc0c4eae6487f44d3abafac6111",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../selected/n39.strict.dce5d64054154a1a/contract.json": "6e3ba2cef34cc577ef966ebe5708b83bccd33698b4388f8c0f652c239661f1c4",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../analysis/tangent_pilot.py": "3d4898a89efb73aa421623b8089879c8742e113206e4a72a96779b4146d74a5d",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../analysis/strict_object.py": "419a186904cfd8fdffe2e39c87f06b6e6e28700586c23fcf5948c1a53e5bf9e4",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../analysis/check_tangent_rectangle.py": "68bb3ddf3d12355a0a957c11690dac9481ed8486b792b1078ab68e38233a0a2a",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../analysis/N39_TANGENT_CANDIDATE.json": "dffec8eb618e7390905c7aa5c93a0126c252c6616e0118cdc90cea0df28d0502",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../gaussian_taylor01/check_broad.py": "01b169b84f1b5242fbaad9fd65ec54152a341a6f828caa9fb7b4d1d0eac65264",
+    "work/count_transfer_20261105/later/gaussian_curvature01/check_full_p.py": "404ef6e66dbfe14a0d08dd6e9cc7be23023119449548df9b6b90d21d57d1b984"
+  },
+  "source_sha256_after": {
+    "work/count_transfer_20261105/review/check_curvature_cover.py": "14d9534362734544dc6dffc559cbd48e6532ce9de682580ca380dffdcf957d4f",
+    "work/count_transfer_20261105/review/check_tangent_rectangle_independent.py": "7b3b71263c9b242ebccddd6418fba5a1240a726f759eedbbc755f17f52d7864a",
+    "work/count_transfer_20261105/later/gaussian_curvature01/check_two_cells.py": "bc656fcd874e2e866fb2bd47e36b35a7dd76cb5374d27d58528b0ba78461cf47",
+    "work/count_transfer_20261105/later/gaussian_curvature01/TWO_CELL_SOURCE_PINS.json": "b6d9c94cd4826ee8fa4b38806df17f72a32c369ac9c6dd3cbb6d53195e604b8a",
+    "runs/count_transfer_20261105/later_gaussian_curvature_two01/checked/RESULT.json": "e6495b16fc3f7fadc236951f94e05142219d1e778f9aacdeafd7d125d8d8f8d4",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../analysis/pilot.py": "d3661f7f588dd525052427fa303dd89407effc5d44c4edd71ea16409b6a1ce21",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../analysis/native/PINS.json": "af7b3abff162f3eb993292a51d53282550d8c7d6fb09534dcee8d0349b959cd0",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../analysis/native/finite_binomial_core.py": "939236711b080f9148ee3d3f7f6a0cd15b86cb24f3d2700f0e7127b2a345291f",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../analysis/native/quartic_global.py": "0760d772b6cf1858ed139a1fe179490cb1e523a5d685a37a25271a10b349aa35",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../analysis/native/quartic_sturm.py": "1f815ccb23692f78be98691a76a5fe0605f8995abdab5d9a3964f1625a4c2617",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../selected/n6.BN.p38/contract.json": "30957315d287cdae6aec2d933900c339b14d2cc0c4eae6487f44d3abafac6111",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../selected/n39.strict.dce5d64054154a1a/contract.json": "6e3ba2cef34cc577ef966ebe5708b83bccd33698b4388f8c0f652c239661f1c4",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../analysis/tangent_pilot.py": "3d4898a89efb73aa421623b8089879c8742e113206e4a72a96779b4146d74a5d",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../analysis/strict_object.py": "419a186904cfd8fdffe2e39c87f06b6e6e28700586c23fcf5948c1a53e5bf9e4",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../analysis/check_tangent_rectangle.py": "68bb3ddf3d12355a0a957c11690dac9481ed8486b792b1078ab68e38233a0a2a",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../analysis/N39_TANGENT_CANDIDATE.json": "dffec8eb618e7390905c7aa5c93a0126c252c6616e0118cdc90cea0df28d0502",
+    "work/count_transfer_20261105/later/gaussian_curvature01/../gaussian_taylor01/check_broad.py": "01b169b84f1b5242fbaad9fd65ec54152a341a6f828caa9fb7b4d1d0eac65264",
+    "work/count_transfer_20261105/later/gaussian_curvature01/check_full_p.py": "404ef6e66dbfe14a0d08dd6e9cc7be23023119449548df9b6b90d21d57d1b984"
+  },
+  "full_original_row": false
+}

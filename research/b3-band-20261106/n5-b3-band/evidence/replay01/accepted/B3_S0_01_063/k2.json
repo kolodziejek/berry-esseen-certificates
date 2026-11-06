@@ -1,0 +1,76 @@
+{
+  "status": "PASS_EXACT_ALL_TAYLOR_CLOSED_REGION",
+  "row_id": "B3_S0_01_063",
+  "contract_path": "work/cutoff5_20261020/root/count5_prepare_v4/B3_S0_01/n5/B3/panel063/contract.json",
+  "contract_sha256": "a14cba36e26fdcbb519da8ecb70d2168cb0a2211d12d4ee21ae7577b2c113b97",
+  "band": "B3",
+  "slab_family": "B3_S0_01",
+  "series": "S0",
+  "index": 63,
+  "n": 5,
+  "k": 2,
+  "p": [
+    "63/100",
+    "16/25"
+  ],
+  "u": [
+    "52319687891/200000000000",
+    "1/2"
+  ],
+  "noise": [
+    "0",
+    "113379/1000000"
+  ],
+  "nodes": 1,
+  "leaves": [
+    {
+      "path": "",
+      "row_id": "B3_S0_01_063",
+      "contract_sha256": "a14cba36e26fdcbb519da8ecb70d2168cb0a2211d12d4ee21ae7577b2c113b97",
+      "k": 2,
+      "p": [
+        "63/100",
+        "16/25"
+      ],
+      "u": [
+        "52319687891/200000000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "113379/1000000"
+      ],
+      "alpha": [
+        "0",
+        "1"
+      ],
+      "theta": "1484470199/2000000000",
+      "prices": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "vertices": 5,
+      "moment_pairs": 4,
+      "global_rays": 12,
+      "psd_coefficients": 31,
+      "psd_minima": [
+        "55181564740054396234773/62500000000000000000000",
+        "119969436404344617/119209289550781250",
+        "23457216567057718973908574317860546957658161/156250000000000000000000000000000000000000000"
+      ],
+      "gaussian_noise_curvature_upper": "0",
+      "tensor_coefficients": 1000,
+      "cleared_margin": "4148686047609408769965226006436902781782619277750109955005232797925509416829628793875334826368597510392917251/656787647232937993298107434942723136908019985077104809722144488334655761718750000000000000000000000000000000000",
+      "method": "gaussian_taylor_both_halves_4pair_v1"
+    }
+  ],
+  "taylor_leaves": 1,
+  "baseline_leaves": 0,
+  "global_rays": 12,
+  "psd_coefficients": 31,
+  "tensor_coefficients": 1000,
+  "object_sha256": "3780ad2fc6d5e7d57c7eac6256f8792ae37dd1fe04bb7b611f217d5acc6e2c15",
+  "seconds": 0.2943438339862041
+}
