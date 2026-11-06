@@ -1,0 +1,76 @@
+{
+  "status": "PASS_EXACT_ALL_TAYLOR_CLOSED_REGION",
+  "row_id": "B0_045",
+  "contract_path": "work/cutoff5_20261020/root/count5_prepare_v1/gamma16_01/n5/B0/panel045/contract.json",
+  "contract_sha256": "4598cf29b2d3dca2a5e35bfd9d9d16c4bec5f8c370befd991a8b79693019013a",
+  "band": "B0",
+  "slab_family": "gamma16_01",
+  "series": "B0",
+  "index": 45,
+  "n": 5,
+  "k": 1,
+  "p": [
+    "9/20",
+    "23/50"
+  ],
+  "u": [
+    "165015466199/500000000000",
+    "1/2"
+  ],
+  "noise": [
+    "0",
+    "50241/200000"
+  ],
+  "nodes": 1,
+  "leaves": [
+    {
+      "path": "",
+      "row_id": "B0_045",
+      "contract_sha256": "4598cf29b2d3dca2a5e35bfd9d9d16c4bec5f8c370befd991a8b79693019013a",
+      "k": 1,
+      "p": [
+        "9/20",
+        "23/50"
+      ],
+      "u": [
+        "165015466199/500000000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "50241/200000"
+      ],
+      "alpha": [
+        "0",
+        "1"
+      ],
+      "theta": "1",
+      "prices": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "vertices": 5,
+      "moment_pairs": 4,
+      "global_rays": 12,
+      "psd_coefficients": 31,
+      "psd_minima": [
+        "74630946409866099/320000000000000000",
+        "28107358300907061777/48828125000000000000",
+        "917192858935512519353208753200817/25600000000000000000000000000000000"
+      ],
+      "gaussian_noise_curvature_upper": "0",
+      "tensor_coefficients": 1000,
+      "cleared_margin": "6916056261776643308325736550624028603977896189788955522344197289046050286984488068344932000027485967957480086893885417262481486697085777311766912275021314769893/3222764892316730902707649568017876968411099113091540533092586529402837222400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "method": "gaussian_taylor_both_halves_4pair_v1"
+    }
+  ],
+  "taylor_leaves": 1,
+  "baseline_leaves": 0,
+  "global_rays": 12,
+  "psd_coefficients": 31,
+  "tensor_coefficients": 1000,
+  "object_sha256": "e15d78190f594cd5a575d82ac06fe796a0e1bfc8998f447dd844c7e417a1c7f2",
+  "seconds": 0.28799870901275426
+}

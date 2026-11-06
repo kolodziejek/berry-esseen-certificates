@@ -1,0 +1,80 @@
+{
+  "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+  "row_id": "B0_048",
+  "contract_path": "work/cutoff5_20261020/root/count5_prepare_v1/B0_BN_rest01/n5/B0/panel048/contract.json",
+  "contract_sha256": "4f3d9b25504000dd42d5404a19499a57f746d8109dc02a146342329f07045bcb",
+  "band": "B0",
+  "slab_family": "B0_BN_rest01",
+  "series": "B0",
+  "index": 48,
+  "n": 5,
+  "K": "0",
+  "p": [
+    "12/25",
+    "49/100"
+  ],
+  "rho": [
+    "1",
+    "11/10"
+  ],
+  "beta": [
+    "-84419/1000000",
+    "84419/500000"
+  ],
+  "roots": [
+    {
+      "k": 2,
+      "p": [
+        "12/25",
+        "49/100"
+      ],
+      "u": [
+        "-240889725797/500000000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "130897/500000"
+      ],
+      "leaves": 9,
+      "taylor_leaves": 9,
+      "baseline_leaves": 0,
+      "global_rays": 108,
+      "psd_coefficients": 279,
+      "tensor_coefficients": 9400,
+      "result_sha256": "5353a6764a0d50520a7346827f7dd454f6ce7b368c74ac34ef7f86799c185c49",
+      "object_sha256": "d9236473206eb9b65f140e47fe10d51c78a0e7d53e15c083811ed7cc1767e0ef"
+    },
+    {
+      "k": 3,
+      "p": [
+        "12/25",
+        "49/100"
+      ],
+      "u": [
+        "-1/2",
+        "165889725797/500000000000"
+      ],
+      "noise": [
+        "0",
+        "130897/500000"
+      ],
+      "leaves": 1,
+      "taylor_leaves": 1,
+      "baseline_leaves": 0,
+      "global_rays": 12,
+      "psd_coefficients": 31,
+      "tensor_coefficients": 1000,
+      "result_sha256": "dc6fba1b3a4d7c74ef26a3dd9ccdb6b72fa84a90ce56e91040f0074556530218",
+      "object_sha256": "2c2ce4aa6c2bd7ed4bf0b50a5d3f2b087d7d835e49b98d458ce20c44a375eca4"
+    }
+  ],
+  "leaves": 10,
+  "taylor_leaves": 10,
+  "baseline_leaves": 0,
+  "global_rays": 120,
+  "psd_coefficients": 310,
+  "tensor_coefficients": 10400,
+  "old_checked_leaves": 260,
+  "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed."
+}

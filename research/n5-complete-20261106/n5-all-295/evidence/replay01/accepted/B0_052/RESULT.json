@@ -1,0 +1,80 @@
+{
+  "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+  "row_id": "B0_052",
+  "contract_path": "work/cutoff5_20261020/root/count5_prepare_v1/B0_BN_rest01/n5/B0/panel052/contract.json",
+  "contract_sha256": "ea296a40f09c9b2ff1b6f98202fa8acd05f4241bd1d2b80b2dbccd735d0c9b82",
+  "band": "B0",
+  "slab_family": "B0_BN_rest01",
+  "series": "B0",
+  "index": 52,
+  "n": 5,
+  "K": "0",
+  "p": [
+    "13/25",
+    "53/100"
+  ],
+  "rho": [
+    "1",
+    "11/10"
+  ],
+  "beta": [
+    "-129991/1000000",
+    "129991/1000000"
+  ],
+  "roots": [
+    {
+      "k": 2,
+      "p": [
+        "13/25",
+        "53/100"
+      ],
+      "u": [
+        "-217214501983/1000000000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "259667/1000000"
+      ],
+      "leaves": 3,
+      "taylor_leaves": 3,
+      "baseline_leaves": 0,
+      "global_rays": 36,
+      "psd_coefficients": 93,
+      "tensor_coefficients": 2400,
+      "result_sha256": "1090aedc8288c4925662ea1e935c9c5efea537ba496cb9e0aa307dfd8488bb20",
+      "object_sha256": "8a1035baca9e7b0be2a5ea2ed1626fa8a96139622371b9b4dc48dcd127a0b96f"
+    },
+    {
+      "k": 3,
+      "p": [
+        "13/25",
+        "53/100"
+      ],
+      "u": [
+        "-1/2",
+        "467214501983/1000000000000"
+      ],
+      "noise": [
+        "0",
+        "259667/1000000"
+      ],
+      "leaves": 2,
+      "taylor_leaves": 2,
+      "baseline_leaves": 0,
+      "global_rays": 24,
+      "psd_coefficients": 62,
+      "tensor_coefficients": 1600,
+      "result_sha256": "755630489a8f34c3a4211453ddb6705eb96aca96bba91339bac8845fc3227352",
+      "object_sha256": "5e46d0aa01ed0d7e10e2a294d5fc870135ecce272f48e805a8d085f868b293de"
+    }
+  ],
+  "leaves": 5,
+  "taylor_leaves": 5,
+  "baseline_leaves": 0,
+  "global_rays": 60,
+  "psd_coefficients": 155,
+  "tensor_coefficients": 4000,
+  "old_checked_leaves": 101,
+  "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed."
+}

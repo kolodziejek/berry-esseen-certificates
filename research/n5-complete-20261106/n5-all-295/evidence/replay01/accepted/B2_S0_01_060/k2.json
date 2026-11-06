@@ -1,0 +1,76 @@
+{
+  "status": "PASS_EXACT_ALL_TAYLOR_CLOSED_REGION",
+  "row_id": "B2_S0_01_060",
+  "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel060/contract.json",
+  "contract_sha256": "714eaac09fc0bffb2a1a70d00866e2374634bbbbd3f2c052a653441309dd2152",
+  "band": "B2",
+  "slab_family": "B2_S0_01",
+  "series": "S0",
+  "index": 60,
+  "n": 5,
+  "k": 2,
+  "p": [
+    "3/5",
+    "61/100"
+  ],
+  "u": [
+    "38583897229/250000000000",
+    "1/2"
+  ],
+  "noise": [
+    "0",
+    "178773/1000000"
+  ],
+  "nodes": 1,
+  "leaves": [
+    {
+      "path": "",
+      "row_id": "B2_S0_01_060",
+      "contract_sha256": "714eaac09fc0bffb2a1a70d00866e2374634bbbbd3f2c052a653441309dd2152",
+      "k": 2,
+      "p": [
+        "3/5",
+        "61/100"
+      ],
+      "u": [
+        "38583897229/250000000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "178773/1000000"
+      ],
+      "alpha": [
+        "0",
+        "1"
+      ],
+      "theta": "3089338139/5000000000",
+      "prices": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "vertices": 5,
+      "moment_pairs": 4,
+      "global_rays": 12,
+      "psd_coefficients": 31,
+      "psd_minima": [
+        "598128767991/1525878906250",
+        "11656571642146302509079/15625000000000000000000",
+        "120479005252915077051963/1862645149230957031250000"
+      ],
+      "gaussian_noise_curvature_upper": "0",
+      "tensor_coefficients": 1000,
+      "cleared_margin": "4883721432727843291254744448691567125559928679357537130922872279960590938524652440620880350517288293501548063999842249703654431787959995107994034316962906273/1225374100620835297061177438479791947745780245142327001416439259147644042968750000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "method": "gaussian_taylor_both_halves_4pair_v1"
+    }
+  ],
+  "taylor_leaves": 1,
+  "baseline_leaves": 0,
+  "global_rays": 12,
+  "psd_coefficients": 31,
+  "tensor_coefficients": 1000,
+  "object_sha256": "c45c0f4b8d32043ff9bce04abef4e9186c1a7e4b66bb7eafb2f772456d0d092e",
+  "seconds": 0.2957655829959549
+}

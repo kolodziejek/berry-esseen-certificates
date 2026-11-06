@@ -1,0 +1,76 @@
+{
+  "status": "PASS_EXACT_ALL_TAYLOR_CLOSED_REGION",
+  "row_id": "BN_065",
+  "contract_path": "work/cutoff5_20261020/root/count5_prepare_v1/B0_BN_rest01/n5/BN/panel065/contract.json",
+  "contract_sha256": "538b87c6aed8077665a7a0ecfefdfb3c5d919668bb43325563dd3192207fe480",
+  "band": "BN",
+  "slab_family": "B0_BN_rest01",
+  "series": "BN",
+  "index": 65,
+  "n": 5,
+  "k": 2,
+  "p": [
+    "13/20",
+    "33/50"
+  ],
+  "u": [
+    "400839473753/1000000000000",
+    "1/2"
+  ],
+  "noise": [
+    "0",
+    "317/125000"
+  ],
+  "nodes": 1,
+  "leaves": [
+    {
+      "path": "",
+      "row_id": "BN_065",
+      "contract_sha256": "538b87c6aed8077665a7a0ecfefdfb3c5d919668bb43325563dd3192207fe480",
+      "k": 2,
+      "p": [
+        "13/20",
+        "33/50"
+      ],
+      "u": [
+        "400839473753/1000000000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "317/125000"
+      ],
+      "alpha": [
+        "0",
+        "1"
+      ],
+      "theta": "1",
+      "prices": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "vertices": 3,
+      "moment_pairs": 4,
+      "global_rays": 12,
+      "psd_coefficients": 31,
+      "psd_minima": [
+        "16911384868101526803/800000000000000000",
+        "12908452617111952780011/976562500000000000000",
+        "40737762215103682062994408914885993/10240000000000000000000000000000000"
+      ],
+      "gaussian_noise_curvature_upper": "0",
+      "tensor_coefficients": 600,
+      "cleared_margin": "3375246105037031983176079264298722225657852386394679896251546801989545834209909728411583759407070855075442513018452068443987692674071/362855741033662418167343605862988132871504434607800662332817058593750000000000000000000000000000000000000000000000000000000000000000000",
+      "method": "gaussian_taylor_both_halves_4pair_v1"
+    }
+  ],
+  "taylor_leaves": 1,
+  "baseline_leaves": 0,
+  "global_rays": 12,
+  "psd_coefficients": 31,
+  "tensor_coefficients": 600,
+  "object_sha256": "e7d78fe9378633ad9fbffcefe2674f3bbb2fa97e5a52633c27a6f7823c717697",
+  "seconds": 0.1556964170304127
+}

@@ -1,0 +1,76 @@
+{
+  "status": "PASS_EXACT_ALL_TAYLOR_CLOSED_REGION",
+  "row_id": "B3_S0_01_059",
+  "contract_path": "work/cutoff5_20261020/root/count5_prepare_v4/B3_S0_01/n5/B3/panel059/contract.json",
+  "contract_sha256": "8a4952734e9cc1112231c39f80fdddd5acab6fa03baa97b718d268636c69c9dc",
+  "band": "B3",
+  "slab_family": "B3_S0_01",
+  "series": "S0",
+  "index": 59,
+  "n": 5,
+  "k": 2,
+  "p": [
+    "59/100",
+    "3/5"
+  ],
+  "u": [
+    "4601062439/125000000000",
+    "1/2"
+  ],
+  "noise": [
+    "0",
+    "390153/1000000"
+  ],
+  "nodes": 1,
+  "leaves": [
+    {
+      "path": "",
+      "row_id": "B3_S0_01_059",
+      "contract_sha256": "8a4952734e9cc1112231c39f80fdddd5acab6fa03baa97b718d268636c69c9dc",
+      "k": 2,
+      "p": [
+        "59/100",
+        "3/5"
+      ],
+      "u": [
+        "4601062439/125000000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "390153/1000000"
+      ],
+      "alpha": [
+        "0",
+        "1"
+      ],
+      "theta": "1849094133/5000000000",
+      "prices": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "vertices": 5,
+      "moment_pairs": 4,
+      "global_rays": 12,
+      "psd_coefficients": 31,
+      "psd_minima": [
+        "43179391059937079858883/125000000000000000000000",
+        "9087407882091/24414062500000",
+        "3171864926710628840347803/47683715820312500000000000"
+      ],
+      "gaussian_noise_curvature_upper": "0",
+      "tensor_coefficients": 1000,
+      "cleared_margin": "50711178663770985888611159552833572677418801443725037624615846746950897078799133444067976009998466490314484853021440894509820920743/160371803342910043307474025151493070465537407499755778208079323291015625000000000000000000000000000000000000000000000000000000000000000",
+      "method": "gaussian_taylor_both_halves_4pair_v1"
+    }
+  ],
+  "taylor_leaves": 1,
+  "baseline_leaves": 0,
+  "global_rays": 12,
+  "psd_coefficients": 31,
+  "tensor_coefficients": 1000,
+  "object_sha256": "a1476d98fde634af7fae6959b48caf34a0260b21f6e5fa20bdff9cf93620b1ed",
+  "seconds": 0.2884946659905836
+}
