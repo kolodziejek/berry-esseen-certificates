@@ -1,0 +1,76 @@
+{
+  "status": "PASS_EXACT_ALL_TAYLOR_CLOSED_REGION",
+  "row_id": "B3_S2_01_066",
+  "contract_path": "work/cutoff5_20261020/root/count5_prepare_v4/B3_S2_01/n5/B3/panel066/contract.json",
+  "contract_sha256": "a2eff045121ddae0ec62e481f3616a9635a87383acf5cbdc3b8876e0d7a86b26",
+  "band": "B3",
+  "slab_family": "B3_S2_01",
+  "series": "S2",
+  "index": 66,
+  "n": 5,
+  "k": 2,
+  "p": [
+    "33/50",
+    "67/100"
+  ],
+  "u": [
+    "429912212223/1000000000000",
+    "1/2"
+  ],
+  "noise": [
+    "0",
+    "9847/500000"
+  ],
+  "nodes": 1,
+  "leaves": [
+    {
+      "path": "",
+      "row_id": "B3_S2_01_066",
+      "contract_sha256": "a2eff045121ddae0ec62e481f3616a9635a87383acf5cbdc3b8876e0d7a86b26",
+      "k": 2,
+      "p": [
+        "33/50",
+        "67/100"
+      ],
+      "u": [
+        "429912212223/1000000000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "9847/500000"
+      ],
+      "alpha": [
+        "0",
+        "1"
+      ],
+      "theta": "1",
+      "prices": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "vertices": 3,
+      "moment_pairs": 4,
+      "global_rays": 12,
+      "psd_coefficients": 31,
+      "psd_minima": [
+        "2530013539905216921303/195312500000000000000",
+        "197534690541864250201341/25000000000000000000000",
+        "2823465385789823251943635211060774474526933411/625000000000000000000000000000000000000000000"
+      ],
+      "gaussian_noise_curvature_upper": "0",
+      "tensor_coefficients": 600,
+      "cleared_margin": "100731818426425503376291744725474625563078529693421638987261765758653343394647843419450050304614161038904282886413503578341509116194529743/10891972981594417969170819419259111086682808117675783190832557061500000000000000000000000000000000000000000000000000000000000000000000000000",
+      "method": "gaussian_taylor_both_halves_4pair_v1"
+    }
+  ],
+  "taylor_leaves": 1,
+  "baseline_leaves": 0,
+  "global_rays": 12,
+  "psd_coefficients": 31,
+  "tensor_coefficients": 600,
+  "object_sha256": "7bda47ba59790e67f7bd340fec7438e511047e44f3af35408efd10669e885abb",
+  "seconds": 0.17556029197294265
+}

@@ -1,0 +1,103 @@
+{
+  "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+  "row_id": "B3_S2_01_064",
+  "contract_path": "work/cutoff5_20261020/root/count5_prepare_v4/B3_S2_01/n5/B3/panel064/contract.json",
+  "contract_sha256": "cc2f636026c3b62c69316752f7b0ec7dcfd6c92f299d15c176ab41f6e9a69f8e",
+  "band": "B3",
+  "slab_family": "B3_S2_01",
+  "series": "S2",
+  "index": 64,
+  "n": 5,
+  "K": "0",
+  "p": [
+    "16/25",
+    "13/20"
+  ],
+  "rho": [
+    "477/400",
+    "6/5"
+  ],
+  "beta": [
+    "-330001/1000000",
+    "-112571/500000"
+  ],
+  "roots": [
+    {
+      "k": 2,
+      "p": [
+        "16/25",
+        "13/20"
+      ],
+      "u": [
+        "298322426163/1000000000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "24781/250000"
+      ],
+      "leaves": 1,
+      "taylor_leaves": 1,
+      "baseline_leaves": 0,
+      "global_rays": 12,
+      "psd_coefficients": 31,
+      "tensor_coefficients": 1000,
+      "result_sha256": "53ddda854030d1fcc5d0de5e7f684f6e5a15630c96d65788953266c61ad349ae",
+      "object_sha256": "041f36496f01a827a784c0b9f9c44ce5f42b40e106a4b350a5d35de8df84102c"
+    },
+    {
+      "k": 3,
+      "p": [
+        "16/25",
+        "13/20"
+      ],
+      "u": [
+        "-1/2",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "24781/250000"
+      ],
+      "leaves": 1,
+      "taylor_leaves": 1,
+      "baseline_leaves": 0,
+      "global_rays": 12,
+      "psd_coefficients": 31,
+      "tensor_coefficients": 1000,
+      "result_sha256": "b3f3300e30d2586e780622f81ef7685a07f141f46cbe2fcec5c2cc316ddf0251",
+      "object_sha256": "25ec3c92ad8dcba6b8629c15ba4d98925cf4435b284d4a46bcad1b16ba35e2bf"
+    },
+    {
+      "k": 4,
+      "p": [
+        "16/25",
+        "13/20"
+      ],
+      "u": [
+        "-1/2",
+        "151677573837/1000000000000"
+      ],
+      "noise": [
+        "0",
+        "24781/250000"
+      ],
+      "leaves": 1,
+      "taylor_leaves": 1,
+      "baseline_leaves": 0,
+      "global_rays": 12,
+      "psd_coefficients": 31,
+      "tensor_coefficients": 1000,
+      "result_sha256": "33ddbd416c76218117bb33b8134dc433a01c756fc7438a07cd6f3f694d6c2bda",
+      "object_sha256": "a1085cb5470f10f85785014dfd16001fa710e9de48dd4c58793ed9d3809ea20b"
+    }
+  ],
+  "leaves": 3,
+  "taylor_leaves": 3,
+  "baseline_leaves": 0,
+  "global_rays": 36,
+  "psd_coefficients": 93,
+  "tensor_coefficients": 3000,
+  "old_checked_leaves": 16,
+  "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+}

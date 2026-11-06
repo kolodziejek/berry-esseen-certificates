@@ -1,0 +1,24 @@
+{
+  "command": [
+    "python3",
+    "-I",
+    "-B",
+    "-S",
+    "research/b3-band-20261106/review/check_b3_band_v3.py",
+    "research/b3-band-20261106/n5-b3-band",
+    "research/b3-band-20261106/evidence/review03/checked"
+  ],
+  "cwd": "/Users/bkolodziejek/Documents/BerryEsseen",
+  "inputs": {
+    "/Users/bkolodziejek/Documents/BerryEsseen/research/b3-band-20261106/review/check_b3_band_v3.py": "d2c6685238606ee78d1b2def356f5dc31ff1157e9e2a88f3cb2294b0d549c52e",
+    "/Users/bkolodziejek/Documents/BerryEsseen/research/b3-band-20261106/review/independent_polys.py": "18f11a2c8a0bd3620cdebf71dad8c2f7a7880c8b8b9637ab792c0174b860c0c1",
+    "/Users/bkolodziejek/Documents/BerryEsseen/research/b3-band-20261106/n5-b3-band/FILES.json": "af9effaeb5ed9d23eaaecd6cd1bc034af70154ccdbcd29c24a1b658a79596ad0"
+  },
+  "runtime": {
+    "executable": "/Users/bkolodziejek/miniforge3/bin/python3",
+    "version": "3.12.12 | packaged by conda-forge | (main, Oct 22 2025, 23:34:53) [Clang 19.1.7 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "optimized": 0
+  },
+  "capture_driver_sha256": "48e67827d2eaca9f60c8877bc7113ff98a1c5e73bd2f5e69fe12efecbe8d7727"
+}

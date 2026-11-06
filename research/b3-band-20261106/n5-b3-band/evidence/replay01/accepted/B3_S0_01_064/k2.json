@@ -1,0 +1,76 @@
+{
+  "status": "PASS_EXACT_ALL_TAYLOR_CLOSED_REGION",
+  "row_id": "B3_S0_01_064",
+  "contract_path": "work/cutoff5_20261020/root/count5_prepare_v4/B3_S0_01/n5/B3/panel064/contract.json",
+  "contract_sha256": "5dbadfb8727cbf32ca8be0e18fa995be91ecee7639c5640a75fd23a8b1a91450",
+  "band": "B3",
+  "slab_family": "B3_S0_01",
+  "series": "S0",
+  "index": 64,
+  "n": 5,
+  "k": 2,
+  "p": [
+    "16/25",
+    "13/20"
+  ],
+  "u": [
+    "64377655143/200000000000",
+    "1/2"
+  ],
+  "noise": [
+    "0",
+    "86651/1000000"
+  ],
+  "nodes": 1,
+  "leaves": [
+    {
+      "path": "",
+      "row_id": "B3_S0_01_064",
+      "contract_sha256": "5dbadfb8727cbf32ca8be0e18fa995be91ecee7639c5640a75fd23a8b1a91450",
+      "k": 2,
+      "p": [
+        "16/25",
+        "13/20"
+      ],
+      "u": [
+        "64377655143/200000000000",
+        "1/2"
+      ],
+      "noise": [
+        "0",
+        "86651/1000000"
+      ],
+      "alpha": [
+        "0",
+        "1"
+      ],
+      "theta": "4420353221/5000000000",
+      "prices": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "vertices": 5,
+      "moment_pairs": 4,
+      "global_rays": 12,
+      "psd_coefficients": 31,
+      "psd_minima": [
+        "81596750741365032/59604644775390625",
+        "1031825371104718281/800000000000000000",
+        "35153581802106781849478484027348/142108547152020037174224853515625"
+      ],
+      "gaussian_noise_curvature_upper": "0",
+      "tensor_coefficients": 1000,
+      "cleared_margin": "41367839683477145529386749867764765066031665553287061842253767282377013580614544448552117395236426528638153190817334578479941057588733223986208348392560019188707201/5680849865486740985785827207913368199717498866255665421190835367000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "method": "gaussian_taylor_both_halves_4pair_v1"
+    }
+  ],
+  "taylor_leaves": 1,
+  "baseline_leaves": 0,
+  "global_rays": 12,
+  "psd_coefficients": 31,
+  "tensor_coefficients": 1000,
+  "object_sha256": "b18f6172dd9d137fe852e100a27275a5d76ab8aea69418dba6b1ab0969e3b75f",
+  "seconds": 0.3154172499780543
+}
