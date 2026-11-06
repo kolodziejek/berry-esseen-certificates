@@ -1,0 +1,3475 @@
+{
+  "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_B2_BAND",
+  "rows_verified": 104,
+  "roots_verified": 320,
+  "leaves": 1201,
+  "taylor_leaves": 1201,
+  "baseline_leaves": 0,
+  "global_rays": 14412,
+  "psd_coefficients": 37231,
+  "tensor_coefficients": 1048200,
+  "old_checked_leaves": 25970,
+  "band_join": {
+    "band": "B2",
+    "contracts_verified": 104,
+    "series": {
+      "S0": {
+        "contracts": 32,
+        "index_range": [
+          33,
+          64
+        ],
+        "p_union": [
+          "33/100",
+          "13/20"
+        ],
+        "rho_floor": "23/20",
+        "rho_ceiling_max": "467/400",
+        "contiguous_probability_joins": 31,
+        "roots": 98,
+        "leaves": 374,
+        "old_checked_leaves": 7604
+      },
+      "S1": {
+        "contracts": 18,
+        "index_range": [
+          33,
+          50
+        ],
+        "p_union": [
+          "33/100",
+          "51/100"
+        ],
+        "rho_floor": "23/20",
+        "rho_ceiling_max": "467/400",
+        "contiguous_probability_joins": 17,
+        "roots": 55,
+        "leaves": 100,
+        "old_checked_leaves": 2477
+      },
+      "S2": {
+        "contracts": 34,
+        "index_range": [
+          32,
+          65
+        ],
+        "p_union": [
+          "8/25",
+          "33/50"
+        ],
+        "rho_floor": "467/400",
+        "rho_ceiling_max": "237/200",
+        "contiguous_probability_joins": 33,
+        "roots": 104,
+        "leaves": 563,
+        "old_checked_leaves": 9751
+      },
+      "S3": {
+        "contracts": 20,
+        "index_range": [
+          32,
+          51
+        ],
+        "p_union": [
+          "8/25",
+          "13/25"
+        ],
+        "rho_floor": "467/400",
+        "rho_ceiling_max": "237/200",
+        "contiguous_probability_joins": 19,
+        "roots": 63,
+        "leaves": 164,
+        "old_checked_leaves": 6138
+      }
+    },
+    "contiguous_probability_joins": 100,
+    "beta_joins_s0_s1": 18,
+    "beta_joins_s2_s3": 20,
+    "cross_slab_family_and_half_joins": [
+      {
+        "series": "S0",
+        "join_p": "1/2",
+        "left_row": "B2_S0_01_049",
+        "left_family": "B2_S0_01",
+        "right_row": "B2_S0_01_050",
+        "right_family": "B2_S0_01"
+      },
+      {
+        "series": "S1",
+        "join_p": "1/2",
+        "left_row": "B2_S1_01_049",
+        "left_family": "B2_S1_01",
+        "right_row": "B2_S1_01_050",
+        "right_family": "B2_S1_01"
+      },
+      {
+        "series": "S2",
+        "join_p": "1/2",
+        "left_row": "B2_S2_01_049",
+        "left_family": "B2_S2_01",
+        "right_row": "B2_S2_01_050",
+        "right_family": "B2_S2_01"
+      },
+      {
+        "series": "S3",
+        "join_p": "7/20",
+        "left_row": "B2_S3_endpoint02_034",
+        "left_family": "B2_S3_endpoint02",
+        "right_row": "B2_S3_01_035",
+        "right_family": "B2_S3_01"
+      },
+      {
+        "series": "S3",
+        "join_p": "1/2",
+        "left_row": "B2_S3_01_049",
+        "left_family": "B2_S3_01",
+        "right_row": "B2_S3_01_050",
+        "right_family": "B2_S3_01"
+      }
+    ],
+    "roots_verified": 320
+  },
+  "rows": [
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_033",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel033/contract.json",
+      "contract_sha256": "3b0246aeb0ca112e9b20faa49b54c343e0a371cb24f64a1566f0dbded005be13",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 33,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "33/100",
+        "17/50"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "4461/50000",
+        "1/5"
+      ],
+      "leaves": 5,
+      "taylor_leaves": 5,
+      "baseline_leaves": 0,
+      "global_rays": 60,
+      "psd_coefficients": 155,
+      "tensor_coefficients": 3000,
+      "old_checked_leaves": 105,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_034",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel034/contract.json",
+      "contract_sha256": "5540ecca8bb1cfe564cd752774c4a23f5ace31cd98f0faea21b9bc5243ca223e",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 34,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "17/50",
+        "7/20"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "17277/250000",
+        "1/5"
+      ],
+      "leaves": 5,
+      "taylor_leaves": 5,
+      "baseline_leaves": 0,
+      "global_rays": 60,
+      "psd_coefficients": 155,
+      "tensor_coefficients": 3000,
+      "old_checked_leaves": 129,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_035",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel035/contract.json",
+      "contract_sha256": "42118bb3ac48fc5764f4d0e7bdb8d6d2af01e6143d55315b6e8740ffe2130067",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 35,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "7/20",
+        "9/25"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "7177/250000",
+        "1/5"
+      ],
+      "leaves": 5,
+      "taylor_leaves": 5,
+      "baseline_leaves": 0,
+      "global_rays": 60,
+      "psd_coefficients": 155,
+      "tensor_coefficients": 3000,
+      "old_checked_leaves": 147,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_036",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel036/contract.json",
+      "contract_sha256": "5853b039a5f1907f2f268c743f64abad80f5e745adde696873d92d70a4f653e3",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 36,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "9/25",
+        "37/100"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "25477/1000000",
+        "1/5"
+      ],
+      "leaves": 5,
+      "taylor_leaves": 5,
+      "baseline_leaves": 0,
+      "global_rays": 60,
+      "psd_coefficients": 155,
+      "tensor_coefficients": 4000,
+      "old_checked_leaves": 172,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_037",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel037/contract.json",
+      "contract_sha256": "2d7b7fdeb94dbc4890c4d0ffde8ad760c1588d429e29454797c5646f124c599c",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 37,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "37/100",
+        "19/50"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-3983/250000",
+        "1/5"
+      ],
+      "leaves": 6,
+      "taylor_leaves": 6,
+      "baseline_leaves": 0,
+      "global_rays": 72,
+      "psd_coefficients": 186,
+      "tensor_coefficients": 3600,
+      "old_checked_leaves": 193,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_038",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel038/contract.json",
+      "contract_sha256": "50ed16a29e93b2ea8c862a72c6abe70cfc526b495ddca75ee9b29c61e70e8cea",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 38,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "19/50",
+        "39/100"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-18153/1000000",
+        "1/5"
+      ],
+      "leaves": 7,
+      "taylor_leaves": 7,
+      "baseline_leaves": 0,
+      "global_rays": 84,
+      "psd_coefficients": 217,
+      "tensor_coefficients": 5600,
+      "old_checked_leaves": 226,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_039",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel039/contract.json",
+      "contract_sha256": "d76f08af0ca17e554cb1ce5a041ffcfe5c5b94a9c1955699fdb59ccdc0c91b27",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 39,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "39/100",
+        "2/5"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-18153/1000000",
+        "1/5"
+      ],
+      "leaves": 8,
+      "taylor_leaves": 8,
+      "baseline_leaves": 0,
+      "global_rays": 96,
+      "psd_coefficients": 248,
+      "tensor_coefficients": 6600,
+      "old_checked_leaves": 251,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_040",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel040/contract.json",
+      "contract_sha256": "222f9ede4bede918589d2970c15c5f487fd651b658fb9a92c1c38e9e390c7fa2",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 40,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "2/5",
+        "41/100"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-7723/125000",
+        "1/5"
+      ],
+      "leaves": 9,
+      "taylor_leaves": 9,
+      "baseline_leaves": 0,
+      "global_rays": 108,
+      "psd_coefficients": 279,
+      "tensor_coefficients": 9000,
+      "old_checked_leaves": 293,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_041",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel041/contract.json",
+      "contract_sha256": "bde8f9d6c3c02d7c5be38c4356bdca5d7763ba118dbc74291fe2800d7bc4971e",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 41,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "41/100",
+        "21/50"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-7723/125000",
+        "1/5"
+      ],
+      "leaves": 9,
+      "taylor_leaves": 9,
+      "baseline_leaves": 0,
+      "global_rays": 108,
+      "psd_coefficients": 279,
+      "tensor_coefficients": 9000,
+      "old_checked_leaves": 339,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_042",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel042/contract.json",
+      "contract_sha256": "9fd4dbb9e49c4f1f5b06bf98a44090999964c463ed419ddc3171e71ed0ea0a52",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 42,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "21/50",
+        "43/100"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-7723/125000",
+        "1/5"
+      ],
+      "leaves": 10,
+      "taylor_leaves": 10,
+      "baseline_leaves": 0,
+      "global_rays": 120,
+      "psd_coefficients": 310,
+      "tensor_coefficients": 10200,
+      "old_checked_leaves": 401,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_043",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel043/contract.json",
+      "contract_sha256": "369f4d477dea342e719f1cfbd46c26bc2289429bfe99843f16e8708482c43f93",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 43,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "43/100",
+        "11/25"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-7723/125000",
+        "1/5"
+      ],
+      "leaves": 11,
+      "taylor_leaves": 11,
+      "baseline_leaves": 0,
+      "global_rays": 132,
+      "psd_coefficients": 341,
+      "tensor_coefficients": 10600,
+      "old_checked_leaves": 420,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_044",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel044/contract.json",
+      "contract_sha256": "408e0cda274e0d9b96f8e72d8cbd94c8f53a47b9b310b6f228d4ea2e39e444c6",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 44,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "11/25",
+        "9/20"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-7723/125000",
+        "1/5"
+      ],
+      "leaves": 15,
+      "taylor_leaves": 15,
+      "baseline_leaves": 0,
+      "global_rays": 180,
+      "psd_coefficients": 465,
+      "tensor_coefficients": 14200,
+      "old_checked_leaves": 442,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_045",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel045/contract.json",
+      "contract_sha256": "3c2b31837a7bb30a3de5dfb572cbcef107164159c07e8b964e68d2d3520a619b",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 45,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "9/20",
+        "23/50"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-7723/125000",
+        "1/5"
+      ],
+      "leaves": 17,
+      "taylor_leaves": 17,
+      "baseline_leaves": 0,
+      "global_rays": 204,
+      "psd_coefficients": 527,
+      "tensor_coefficients": 15400,
+      "old_checked_leaves": 438,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_046",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel046/contract.json",
+      "contract_sha256": "452c118db256f250a39428416e8e2444c1c4b7089006842881a19cff55ed29f4",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 46,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "23/50",
+        "47/100"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-52707/500000",
+        "1/5"
+      ],
+      "leaves": 18,
+      "taylor_leaves": 18,
+      "baseline_leaves": 0,
+      "global_rays": 216,
+      "psd_coefficients": 558,
+      "tensor_coefficients": 16400,
+      "old_checked_leaves": 471,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_047",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel047/contract.json",
+      "contract_sha256": "a419dbede53a729f98aba425d24f55ed9e84cde50c97e5d8b5d09580be39aaec",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 47,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "47/100",
+        "12/25"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-52707/500000",
+        "1/5"
+      ],
+      "leaves": 21,
+      "taylor_leaves": 21,
+      "baseline_leaves": 0,
+      "global_rays": 252,
+      "psd_coefficients": 651,
+      "tensor_coefficients": 19200,
+      "old_checked_leaves": 460,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_048",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel048/contract.json",
+      "contract_sha256": "17d9965d614ef1a2e67c72fe70e6d303c2f78a072feba012b90abd6615810685",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 48,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "12/25",
+        "49/100"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-52707/500000",
+        "1/5"
+      ],
+      "leaves": 22,
+      "taylor_leaves": 22,
+      "baseline_leaves": 0,
+      "global_rays": 264,
+      "psd_coefficients": 682,
+      "tensor_coefficients": 19600,
+      "old_checked_leaves": 421,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_049",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel049/contract.json",
+      "contract_sha256": "b42e5bd5609258c474343d90c514aa7d725eb3f39201f273eb4f49aa80ff215f",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 49,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "49/100",
+        "1/2"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-29809/200000",
+        "1/5"
+      ],
+      "leaves": 23,
+      "taylor_leaves": 23,
+      "baseline_leaves": 0,
+      "global_rays": 276,
+      "psd_coefficients": 713,
+      "tensor_coefficients": 21000,
+      "old_checked_leaves": 474,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_050",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel050/contract.json",
+      "contract_sha256": "1070140353f7b3d4faa6a22ee171be5c432a94da77be80eb857b5244b417ab0f",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 50,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "1/2",
+        "51/100"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-29809/200000",
+        "1/5"
+      ],
+      "leaves": 24,
+      "taylor_leaves": 24,
+      "baseline_leaves": 0,
+      "global_rays": 288,
+      "psd_coefficients": 744,
+      "tensor_coefficients": 21400,
+      "old_checked_leaves": 438,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_051",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel051/contract.json",
+      "contract_sha256": "2c794bac96411bf6a9027783975b72584cc7b541702cf7d6811869880a8e6b93",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 51,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "51/100",
+        "13/25"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-183557/1000000",
+        "1/5"
+      ],
+      "leaves": 26,
+      "taylor_leaves": 26,
+      "baseline_leaves": 0,
+      "global_rays": 312,
+      "psd_coefficients": 806,
+      "tensor_coefficients": 24200,
+      "old_checked_leaves": 454,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_052",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel052/contract.json",
+      "contract_sha256": "147eda267a32aef4e117d4468325ee260cb08f2bd64bb60aefb8f5543cffe92c",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 52,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "13/25",
+        "53/100"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-7707/40000",
+        "1/5"
+      ],
+      "leaves": 25,
+      "taylor_leaves": 25,
+      "baseline_leaves": 0,
+      "global_rays": 300,
+      "psd_coefficients": 775,
+      "tensor_coefficients": 22600,
+      "old_checked_leaves": 357,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_053",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel053/contract.json",
+      "contract_sha256": "1ceb6ff2f6b93b62276e7d28646d48c3a454f83cf69abd181a1b743470e72753",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 53,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "53/100",
+        "27/50"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-7707/40000",
+        "1/5"
+      ],
+      "leaves": 25,
+      "taylor_leaves": 25,
+      "baseline_leaves": 0,
+      "global_rays": 300,
+      "psd_coefficients": 775,
+      "tensor_coefficients": 22000,
+      "old_checked_leaves": 357,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_054",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel054/contract.json",
+      "contract_sha256": "4bcf149cb7839f80bebca3b00b0cf094b0801662285a70c8ef62d01ef17eae30",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 54,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "27/50",
+        "11/20"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-56831/250000",
+        "9889/50000"
+      ],
+      "leaves": 20,
+      "taylor_leaves": 20,
+      "baseline_leaves": 0,
+      "global_rays": 240,
+      "psd_coefficients": 620,
+      "tensor_coefficients": 17200,
+      "old_checked_leaves": 236,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_055",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel055/contract.json",
+      "contract_sha256": "dd6d522c9b4781d45250e55e7ac98d9ca55929c11721f8a5c445606f3c3523e5",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 55,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "11/20",
+        "14/25"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-118153/500000",
+        "179953/1000000"
+      ],
+      "leaves": 15,
+      "taylor_leaves": 15,
+      "baseline_leaves": 0,
+      "global_rays": 180,
+      "psd_coefficients": 465,
+      "tensor_coefficients": 13400,
+      "old_checked_leaves": 114,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_056",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel056/contract.json",
+      "contract_sha256": "95b329b24e74cc4ffa2baf641da3d0e7a4a8d7260ea680310a05a17669948aac",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 56,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "14/25",
+        "57/100"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-118153/500000",
+        "32263/200000"
+      ],
+      "leaves": 15,
+      "taylor_leaves": 15,
+      "baseline_leaves": 0,
+      "global_rays": 180,
+      "psd_coefficients": 465,
+      "tensor_coefficients": 12800,
+      "old_checked_leaves": 100,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_057",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel057/contract.json",
+      "contract_sha256": "06bb7afb7a6e2be7b754686baea0fcf0e56e7d5e0e366b4a0d4fe0b71abc91ee",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 57,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "57/100",
+        "29/50"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-118153/500000",
+        "30169/1000000"
+      ],
+      "leaves": 5,
+      "taylor_leaves": 5,
+      "baseline_leaves": 0,
+      "global_rays": 60,
+      "psd_coefficients": 155,
+      "tensor_coefficients": 5000,
+      "old_checked_leaves": 33,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_058",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel058/contract.json",
+      "contract_sha256": "a35e9e5345772ef3070ec713dce056d60134b95f21e482df34d7327e7f97a9e6",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 58,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "29/50",
+        "59/100"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-4374/15625",
+        "17/2500"
+      ],
+      "leaves": 4,
+      "taylor_leaves": 4,
+      "baseline_leaves": 0,
+      "global_rays": 48,
+      "psd_coefficients": 124,
+      "tensor_coefficients": 4000,
+      "old_checked_leaves": 32,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_059",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel059/contract.json",
+      "contract_sha256": "7f9fa566531c670c1d4aede62c63bf3adecaac6cae5828c60534d64b886fd961",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 59,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "59/100",
+        "3/5"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-4374/15625",
+        "-22949/500000"
+      ],
+      "leaves": 4,
+      "taylor_leaves": 4,
+      "baseline_leaves": 0,
+      "global_rays": 48,
+      "psd_coefficients": 124,
+      "tensor_coefficients": 4000,
+      "old_checked_leaves": 25,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_060",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel060/contract.json",
+      "contract_sha256": "714eaac09fc0bffb2a1a70d00866e2374634bbbbd3f2c052a653441309dd2152",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 60,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "3/5",
+        "61/100"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-276869/1000000",
+        "-11251/100000"
+      ],
+      "leaves": 3,
+      "taylor_leaves": 3,
+      "baseline_leaves": 0,
+      "global_rays": 36,
+      "psd_coefficients": 93,
+      "tensor_coefficients": 3000,
+      "old_checked_leaves": 16,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_061",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel061/contract.json",
+      "contract_sha256": "05f00583df18f95dd3b201b05b07334b2ab692d9f63c4b8b8b64abe0221e2fa4",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 61,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "61/100",
+        "31/50"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-281759/1000000",
+        "-152967/1000000"
+      ],
+      "leaves": 3,
+      "taylor_leaves": 3,
+      "baseline_leaves": 0,
+      "global_rays": 36,
+      "psd_coefficients": 93,
+      "tensor_coefficients": 3000,
+      "old_checked_leaves": 20,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_062",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel062/contract.json",
+      "contract_sha256": "25e05d2446ff266ef12157f64bd2ac22912e529d78141a48ebe7efd628eafabe",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 62,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "31/50",
+        "63/100"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "-58671/200000",
+        "-184109/1000000"
+      ],
+      "leaves": 3,
+      "taylor_leaves": 3,
+      "baseline_leaves": 0,
+      "global_rays": 36,
+      "psd_coefficients": 93,
+      "tensor_coefficients": 3000,
+      "old_checked_leaves": 18,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_063",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel063/contract.json",
+      "contract_sha256": "99525b123a948a7d8fb8b4061503392451473c276fb0ade399f4c3561df381af",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 63,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "63/100",
+        "16/25"
+      ],
+      "rho": [
+        "23/20",
+        "115757/100000"
+      ],
+      "beta": [
+        "-74189/250000",
+        "-115339/500000"
+      ],
+      "leaves": 3,
+      "taylor_leaves": 3,
+      "baseline_leaves": 0,
+      "global_rays": 36,
+      "psd_coefficients": 93,
+      "tensor_coefficients": 2400,
+      "old_checked_leaves": 13,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S0_01_064",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S0_01/n5/B2/panel064/contract.json",
+      "contract_sha256": "796fc5ebb8baa4a4dac0dd625c1fc483f96675d32ee1413b19f881a80e11e72d",
+      "band": "B2",
+      "slab_family": "B2_S0_01",
+      "series": "S0",
+      "index": 64,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "16/25",
+        "13/20"
+      ],
+      "rho": [
+        "23/20",
+        "575667/500000"
+      ],
+      "beta": [
+        "-1521/5000",
+        "-851/3125"
+      ],
+      "leaves": 3,
+      "taylor_leaves": 3,
+      "baseline_leaves": 0,
+      "global_rays": 36,
+      "psd_coefficients": 93,
+      "tensor_coefficients": 1800,
+      "old_checked_leaves": 9,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S1_01_033",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S1_01/n5/B2/panel033/contract.json",
+      "contract_sha256": "1ab43897d92b7cddbae9a73770d5fe4064f58efb36b96c5267a9e6aa06331ab7",
+      "band": "B2",
+      "slab_family": "B2_S1_01",
+      "series": "S1",
+      "index": 33,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "33/100",
+        "17/50"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "1/5",
+        "323567/1000000"
+      ],
+      "leaves": 6,
+      "taylor_leaves": 6,
+      "baseline_leaves": 0,
+      "global_rays": 72,
+      "psd_coefficients": 186,
+      "tensor_coefficients": 6000,
+      "old_checked_leaves": 159,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S1_01_034",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S1_01/n5/B2/panel034/contract.json",
+      "contract_sha256": "509c6a11254364bd1aacb89cb0b0310a5e8de033990bf328bacda5448898d965",
+      "band": "B2",
+      "slab_family": "B2_S1_01",
+      "series": "S1",
+      "index": 34,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "17/50",
+        "7/20"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "1/5",
+        "323567/1000000"
+      ],
+      "leaves": 5,
+      "taylor_leaves": 5,
+      "baseline_leaves": 0,
+      "global_rays": 60,
+      "psd_coefficients": 155,
+      "tensor_coefficients": 5000,
+      "old_checked_leaves": 178,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S1_01_035",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S1_01/n5/B2/panel035/contract.json",
+      "contract_sha256": "05588ad4e5c19722a739b485163edfab266d72f91d18d75818bcdcdd7a0a63ff",
+      "band": "B2",
+      "slab_family": "B2_S1_01",
+      "series": "S1",
+      "index": 35,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "7/20",
+        "9/25"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "1/5",
+        "160229/500000"
+      ],
+      "leaves": 5,
+      "taylor_leaves": 5,
+      "baseline_leaves": 0,
+      "global_rays": 60,
+      "psd_coefficients": 155,
+      "tensor_coefficients": 5000,
+      "old_checked_leaves": 198,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S1_01_036",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S1_01/n5/B2/panel036/contract.json",
+      "contract_sha256": "ba19a3afff71d64df87b4efbc1c5c2798b501a971a6f780708a52b6ab8061c3d",
+      "band": "B2",
+      "slab_family": "B2_S1_01",
+      "series": "S1",
+      "index": 36,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "9/25",
+        "37/100"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "1/5",
+        "313269/1000000"
+      ],
+      "leaves": 5,
+      "taylor_leaves": 5,
+      "baseline_leaves": 0,
+      "global_rays": 60,
+      "psd_coefficients": 155,
+      "tensor_coefficients": 5000,
+      "old_checked_leaves": 214,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S1_01_037",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S1_01/n5/B2/panel037/contract.json",
+      "contract_sha256": "337b088cf2882dc024ec1cc196d5c29613e7bb51ded8ff098175ece692884877",
+      "band": "B2",
+      "slab_family": "B2_S1_01",
+      "series": "S1",
+      "index": 37,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "37/100",
+        "19/50"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "1/5",
+        "38993/125000"
+      ],
+      "leaves": 5,
+      "taylor_leaves": 5,
+      "baseline_leaves": 0,
+      "global_rays": 60,
+      "psd_coefficients": 155,
+      "tensor_coefficients": 5000,
+      "old_checked_leaves": 224,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S1_01_038",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S1_01/n5/B2/panel038/contract.json",
+      "contract_sha256": "b759f69ae620f3ad2608bdb83e47d22c2af176272430289078fd6ff3ebaf99f9",
+      "band": "B2",
+      "slab_family": "B2_S1_01",
+      "series": "S1",
+      "index": 38,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "19/50",
+        "39/100"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "1/5",
+        "75743/250000"
+      ],
+      "leaves": 5,
+      "taylor_leaves": 5,
+      "baseline_leaves": 0,
+      "global_rays": 60,
+      "psd_coefficients": 155,
+      "tensor_coefficients": 5000,
+      "old_checked_leaves": 219,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S1_01_039",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S1_01/n5/B2/panel039/contract.json",
+      "contract_sha256": "1dd5f918a116832310cf3734cc59a7327ba7d0dd32a17df31efdd1e6d0eba72e",
+      "band": "B2",
+      "slab_family": "B2_S1_01",
+      "series": "S1",
+      "index": 39,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "39/100",
+        "2/5"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "1/5",
+        "11707/40000"
+      ],
+      "leaves": 6,
+      "taylor_leaves": 6,
+      "baseline_leaves": 0,
+      "global_rays": 72,
+      "psd_coefficients": 186,
+      "tensor_coefficients": 6000,
+      "old_checked_leaves": 166,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S1_01_040",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S1_01/n5/B2/panel040/contract.json",
+      "contract_sha256": "b0387e2e18773813f86e76410e8c33b985951a5109820e2f446b2b4fa932bc36",
+      "band": "B2",
+      "slab_family": "B2_S1_01",
+      "series": "S1",
+      "index": 40,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "2/5",
+        "41/100"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "1/5",
+        "11707/40000"
+      ],
+      "leaves": 6,
+      "taylor_leaves": 6,
+      "baseline_leaves": 0,
+      "global_rays": 72,
+      "psd_coefficients": 186,
+      "tensor_coefficients": 4800,
+      "old_checked_leaves": 155,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S1_01_041",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S1_01/n5/B2/panel041/contract.json",
+      "contract_sha256": "f4171e445aa3cc312f85d6737210945a6237e7abfd577718ab371af0864ec08f",
+      "band": "B2",
+      "slab_family": "B2_S1_01",
+      "series": "S1",
+      "index": 41,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "41/100",
+        "21/50"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "1/5",
+        "141189/500000"
+      ],
+      "leaves": 7,
+      "taylor_leaves": 7,
+      "baseline_leaves": 0,
+      "global_rays": 84,
+      "psd_coefficients": 217,
+      "tensor_coefficients": 5600,
+      "old_checked_leaves": 158,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S1_01_042",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S1_01/n5/B2/panel042/contract.json",
+      "contract_sha256": "bbb3000bcf532e5ce15f97faa15cd76c90e8b3f632553f7b68c2f6731e044cf4",
+      "band": "B2",
+      "slab_family": "B2_S1_01",
+      "series": "S1",
+      "index": 42,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "21/50",
+        "43/100"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "1/5",
+        "272081/1000000"
+      ],
+      "leaves": 6,
+      "taylor_leaves": 6,
+      "baseline_leaves": 0,
+      "global_rays": 72,
+      "psd_coefficients": 186,
+      "tensor_coefficients": 4800,
+      "old_checked_leaves": 157,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S1_01_043",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S1_01/n5/B2/panel043/contract.json",
+      "contract_sha256": "36f1b86c652fac762d6938c4318aad6744351b52834d25ea343de6e8e3dc0d7e",
+      "band": "B2",
+      "slab_family": "B2_S1_01",
+      "series": "S1",
+      "index": 43,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "43/100",
+        "11/25"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "1/5",
+        "272081/1000000"
+      ],
+      "leaves": 6,
+      "taylor_leaves": 6,
+      "baseline_leaves": 0,
+      "global_rays": 72,
+      "psd_coefficients": 186,
+      "tensor_coefficients": 4800,
+      "old_checked_leaves": 166,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S1_01_044",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S1_01/n5/B2/panel044/contract.json",
+      "contract_sha256": "83f15a05fc21454ef2fa8b2f9befe59ff4102ff8ab15591a55b011b9af4917fd",
+      "band": "B2",
+      "slab_family": "B2_S1_01",
+      "series": "S1",
+      "index": 44,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "11/25",
+        "9/20"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "1/5",
+        "32723/125000"
+      ],
+      "leaves": 6,
+      "taylor_leaves": 6,
+      "baseline_leaves": 0,
+      "global_rays": 72,
+      "psd_coefficients": 186,
+      "tensor_coefficients": 4800,
+      "old_checked_leaves": 162,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S1_01_045",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S1_01/n5/B2/panel045/contract.json",
+      "contract_sha256": "81f1edef4b64c88394559b0a6992d94bf284e2b09241a6f3744596dc23f2997e",
+      "band": "B2",
+      "slab_family": "B2_S1_01",
+      "series": "S1",
+      "index": 45,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "9/20",
+        "23/50"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "1/5",
+        "125743/500000"
+      ],
+      "leaves": 6,
+      "taylor_leaves": 6,
+      "baseline_leaves": 0,
+      "global_rays": 72,
+      "psd_coefficients": 186,
+      "tensor_coefficients": 4800,
+      "old_checked_leaves": 125,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S1_01_046",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S1_01/n5/B2/panel046/contract.json",
+      "contract_sha256": "e0b4f27b0ab230b788f0066704df535f7159588f44ed118fe0afc3a1f039d3d9",
+      "band": "B2",
+      "slab_family": "B2_S1_01",
+      "series": "S1",
+      "index": 46,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "23/50",
+        "47/100"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "1/5",
+        "241189/1000000"
+      ],
+      "leaves": 6,
+      "taylor_leaves": 6,
+      "baseline_leaves": 0,
+      "global_rays": 72,
+      "psd_coefficients": 186,
+      "tensor_coefficients": 4800,
+      "old_checked_leaves": 98,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S1_01_047",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S1_01/n5/B2/panel047/contract.json",
+      "contract_sha256": "f2902f10188b5a1b10917399f886cc26ae3336763321e748d4306da7e15b6211",
+      "band": "B2",
+      "slab_family": "B2_S1_01",
+      "series": "S1",
+      "index": 47,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "47/100",
+        "12/25"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "1/5",
+        "241189/1000000"
+      ],
+      "leaves": 5,
+      "taylor_leaves": 5,
+      "baseline_leaves": 0,
+      "global_rays": 60,
+      "psd_coefficients": 155,
+      "tensor_coefficients": 3000,
+      "old_checked_leaves": 49,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S1_01_048",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S1_01/n5/B2/panel048/contract.json",
+      "contract_sha256": "5d21601ae1b412ec38edadb88326de8fd1d72179a490844f755ba89dc420c498",
+      "band": "B2",
+      "slab_family": "B2_S1_01",
+      "series": "S1",
+      "index": 48,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "12/25",
+        "49/100"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "1/5",
+        "57723/250000"
+      ],
+      "leaves": 5,
+      "taylor_leaves": 5,
+      "baseline_leaves": 0,
+      "global_rays": 60,
+      "psd_coefficients": 155,
+      "tensor_coefficients": 3000,
+      "old_checked_leaves": 37,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S1_01_049",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S1_01/n5/B2/panel049/contract.json",
+      "contract_sha256": "ac24849760c91c4e92f659b03ce037a3ada0accc7c7b7a8f7ff73cae32c080da",
+      "band": "B2",
+      "slab_family": "B2_S1_01",
+      "series": "S1",
+      "index": 49,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "49/100",
+        "1/2"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "1/5",
+        "44119/200000"
+      ],
+      "leaves": 6,
+      "taylor_leaves": 6,
+      "baseline_leaves": 0,
+      "global_rays": 72,
+      "psd_coefficients": 186,
+      "tensor_coefficients": 3600,
+      "old_checked_leaves": 6,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S1_01_050",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S1_01/n5/B2/panel050/contract.json",
+      "contract_sha256": "4fbba565ce25036b264700e25932a9cae60502785da1161aba0c9d753f544a34",
+      "band": "B2",
+      "slab_family": "B2_S1_01",
+      "series": "S1",
+      "index": 50,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "1/2",
+        "51/100"
+      ],
+      "rho": [
+        "23/20",
+        "467/400"
+      ],
+      "beta": [
+        "1/5",
+        "20649/100000"
+      ],
+      "leaves": 4,
+      "taylor_leaves": 4,
+      "baseline_leaves": 0,
+      "global_rays": 48,
+      "psd_coefficients": 124,
+      "tensor_coefficients": 2400,
+      "old_checked_leaves": 6,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_032",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel032/contract.json",
+      "contract_sha256": "64742cd09cce19f5255eaf6717bb0ec83a47514da3375a91942f2b9ef562fb6d",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 32,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "8/25",
+        "33/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "88207/1000000",
+        "1/5"
+      ],
+      "leaves": 5,
+      "taylor_leaves": 5,
+      "baseline_leaves": 0,
+      "global_rays": 60,
+      "psd_coefficients": 155,
+      "tensor_coefficients": 3000,
+      "old_checked_leaves": 102,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_033",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel033/contract.json",
+      "contract_sha256": "7c494ba3aa36af15167b5885ffc40c6c20d1ab51ea872cd3f25506b4eba0a6cd",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 33,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "33/100",
+        "17/50"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "6527/100000",
+        "1/5"
+      ],
+      "leaves": 5,
+      "taylor_leaves": 5,
+      "baseline_leaves": 0,
+      "global_rays": 60,
+      "psd_coefficients": 155,
+      "tensor_coefficients": 3000,
+      "old_checked_leaves": 138,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_034",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel034/contract.json",
+      "contract_sha256": "1a8fa1f95a92f303d7f02b4955e5e317f7571ca6f1edc83200ca9a40b5a982ce",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 34,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "17/50",
+        "7/20"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "3253/125000",
+        "1/5"
+      ],
+      "leaves": 5,
+      "taylor_leaves": 5,
+      "baseline_leaves": 0,
+      "global_rays": 60,
+      "psd_coefficients": 155,
+      "tensor_coefficients": 3000,
+      "old_checked_leaves": 181,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_035",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel035/contract.json",
+      "contract_sha256": "c6c51a41bd5f380dd8ec290b228f73601594d0878033c166ad549aea27c227a2",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 35,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "7/20",
+        "9/25"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "509/25000",
+        "1/5"
+      ],
+      "leaves": 6,
+      "taylor_leaves": 6,
+      "baseline_leaves": 0,
+      "global_rays": 72,
+      "psd_coefficients": 186,
+      "tensor_coefficients": 4800,
+      "old_checked_leaves": 209,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_036",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel036/contract.json",
+      "contract_sha256": "abd580dec1d3b70fb6d9cedaf49f0e368d25d0c129c093ec4f2a48df1938ca1f",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 36,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "9/25",
+        "37/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-19789/1000000",
+        "1/5"
+      ],
+      "leaves": 7,
+      "taylor_leaves": 7,
+      "baseline_leaves": 0,
+      "global_rays": 84,
+      "psd_coefficients": 217,
+      "tensor_coefficients": 4200,
+      "old_checked_leaves": 223,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_037",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel037/contract.json",
+      "contract_sha256": "3b1b1b5b84550d9b4e9ef831c071d080ed02c87797f323513abe6fadb4ec07ad",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 37,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "37/100",
+        "19/50"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-24031/1000000",
+        "1/5"
+      ],
+      "leaves": 7,
+      "taylor_leaves": 7,
+      "baseline_leaves": 0,
+      "global_rays": 84,
+      "psd_coefficients": 217,
+      "tensor_coefficients": 5600,
+      "old_checked_leaves": 230,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_038",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel038/contract.json",
+      "contract_sha256": "fcb0b227c11e3ee51aea007634995caf03317fc4dbd6bf57207b4d7e5a43b98a",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 38,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "19/50",
+        "39/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-491/20000",
+        "1/5"
+      ],
+      "leaves": 10,
+      "taylor_leaves": 10,
+      "baseline_leaves": 0,
+      "global_rays": 120,
+      "psd_coefficients": 310,
+      "tensor_coefficients": 8600,
+      "old_checked_leaves": 263,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_039",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel039/contract.json",
+      "contract_sha256": "897ad76ef51c1fee2c4799d30f6038ce336380b1519c1cbf5e067a5615281447",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 39,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "39/100",
+        "2/5"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-491/20000",
+        "1/5"
+      ],
+      "leaves": 10,
+      "taylor_leaves": 10,
+      "baseline_leaves": 0,
+      "global_rays": 120,
+      "psd_coefficients": 310,
+      "tensor_coefficients": 8600,
+      "old_checked_leaves": 276,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_040",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel040/contract.json",
+      "contract_sha256": "a3181b614dcceff0ddf8892d801a3808cd52d2b5173ec80125d05d5f6dba8e68",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 40,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "2/5",
+        "41/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-3473/50000",
+        "1/5"
+      ],
+      "leaves": 12,
+      "taylor_leaves": 12,
+      "baseline_leaves": 0,
+      "global_rays": 144,
+      "psd_coefficients": 372,
+      "tensor_coefficients": 12200,
+      "old_checked_leaves": 337,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_041",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel041/contract.json",
+      "contract_sha256": "43d0627eff1a2d68d1f73947ff3e9cb16d75464e859985c615dbbc26f56ebd94",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 41,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "41/100",
+        "21/50"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-3473/50000",
+        "1/5"
+      ],
+      "leaves": 11,
+      "taylor_leaves": 11,
+      "baseline_leaves": 0,
+      "global_rays": 132,
+      "psd_coefficients": 341,
+      "tensor_coefficients": 10600,
+      "old_checked_leaves": 378,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_042",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel042/contract.json",
+      "contract_sha256": "3382fff01c142319531c316198a5c12b261137760274bb266f28752d408d4d20",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 42,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "21/50",
+        "43/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-3473/50000",
+        "1/5"
+      ],
+      "leaves": 13,
+      "taylor_leaves": 13,
+      "baseline_leaves": 0,
+      "global_rays": 156,
+      "psd_coefficients": 403,
+      "tensor_coefficients": 12200,
+      "old_checked_leaves": 432,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_043",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel043/contract.json",
+      "contract_sha256": "c892b15fe095ed3c3e261b583018ba11de69cca233aeb901511ed96ac450368c",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 43,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "43/100",
+        "11/25"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-3473/50000",
+        "1/5"
+      ],
+      "leaves": 15,
+      "taylor_leaves": 15,
+      "baseline_leaves": 0,
+      "global_rays": 180,
+      "psd_coefficients": 465,
+      "tensor_coefficients": 14000,
+      "old_checked_leaves": 482,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_044",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel044/contract.json",
+      "contract_sha256": "fc29e51b1d05381034de76e0a968698c74b5495f9653492078d1391dbdf85970",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 44,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "11/25",
+        "9/20"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-3473/50000",
+        "1/5"
+      ],
+      "leaves": 18,
+      "taylor_leaves": 18,
+      "baseline_leaves": 0,
+      "global_rays": 216,
+      "psd_coefficients": 558,
+      "tensor_coefficients": 16800,
+      "old_checked_leaves": 495,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_045",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel045/contract.json",
+      "contract_sha256": "e27caae58a28176e1cebcd27e9b5c6c7b5375ef9c2693ac9c83b89ea8625d872",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 45,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "9/20",
+        "23/50"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-3473/50000",
+        "1/5"
+      ],
+      "leaves": 22,
+      "taylor_leaves": 22,
+      "baseline_leaves": 0,
+      "global_rays": 264,
+      "psd_coefficients": 682,
+      "tensor_coefficients": 19400,
+      "old_checked_leaves": 519,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_046",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel046/contract.json",
+      "contract_sha256": "e60779828bdba8ac0bd3a954a731d356eeebaceac6d0bf79f2232fd53f7d9786",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 46,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "23/50",
+        "47/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-11437/100000",
+        "1/5"
+      ],
+      "leaves": 26,
+      "taylor_leaves": 26,
+      "baseline_leaves": 0,
+      "global_rays": 312,
+      "psd_coefficients": 806,
+      "tensor_coefficients": 23400,
+      "old_checked_leaves": 598,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_047",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel047/contract.json",
+      "contract_sha256": "3e2c9586dac9c4155cc23188b9d82167015b1230b22c7bd1511591950c3c5405",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 47,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "47/100",
+        "12/25"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-11437/100000",
+        "1/5"
+      ],
+      "leaves": 26,
+      "taylor_leaves": 26,
+      "baseline_leaves": 0,
+      "global_rays": 312,
+      "psd_coefficients": 806,
+      "tensor_coefficients": 23600,
+      "old_checked_leaves": 565,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_048",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel048/contract.json",
+      "contract_sha256": "a3d5a6b545f282985e498182ace9559e41f73bf45ccff1f98fbeeb21ea2abf85",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 48,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "12/25",
+        "49/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-11437/100000",
+        "1/5"
+      ],
+      "leaves": 30,
+      "taylor_leaves": 30,
+      "baseline_leaves": 0,
+      "global_rays": 360,
+      "psd_coefficients": 930,
+      "tensor_coefficients": 26600,
+      "old_checked_leaves": 563,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_049",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel049/contract.json",
+      "contract_sha256": "35f0a2c2699e73d8f189d0749658fb985ac3fa3b42ea1d888f3dae0d4c414108",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 49,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "49/100",
+        "1/2"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-3169/20000",
+        "1/5"
+      ],
+      "leaves": 39,
+      "taylor_leaves": 39,
+      "baseline_leaves": 0,
+      "global_rays": 468,
+      "psd_coefficients": 1209,
+      "tensor_coefficients": 34400,
+      "old_checked_leaves": 571,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_050",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel050/contract.json",
+      "contract_sha256": "8942d91b58ede14970d2d7e337c17f00de777ec274a78c950ee1d1e212689e23",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 50,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "1/2",
+        "51/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-1991/12500",
+        "1/5"
+      ],
+      "leaves": 45,
+      "taylor_leaves": 45,
+      "baseline_leaves": 0,
+      "global_rays": 540,
+      "psd_coefficients": 1395,
+      "tensor_coefficients": 39200,
+      "old_checked_leaves": 544,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_051",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel051/contract.json",
+      "contract_sha256": "7781314656177e36cbd846fa19796f43ad85b03bab49266e45004ce1098bfd5f",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 51,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "51/100",
+        "13/25"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-1991/12500",
+        "1/5"
+      ],
+      "leaves": 44,
+      "taylor_leaves": 44,
+      "baseline_leaves": 0,
+      "global_rays": 528,
+      "psd_coefficients": 1364,
+      "tensor_coefficients": 38400,
+      "old_checked_leaves": 483,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_052",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel052/contract.json",
+      "contract_sha256": "5ed6cf882ff699b33a3e25290bb5634f0e137b9c47627b56ce1114cdc938dc51",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 52,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "13/25",
+        "53/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-1611/8000",
+        "1611/8000"
+      ],
+      "leaves": 44,
+      "taylor_leaves": 44,
+      "baseline_leaves": 0,
+      "global_rays": 528,
+      "psd_coefficients": 1364,
+      "tensor_coefficients": 40000,
+      "old_checked_leaves": 489,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_053",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel053/contract.json",
+      "contract_sha256": "c7145e736f2a38fb9a3858200af521c77d6aff85285a3d201ad357bbffc8e9d6",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 53,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "53/100",
+        "27/50"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-20419/100000",
+        "20419/100000"
+      ],
+      "leaves": 34,
+      "taylor_leaves": 34,
+      "baseline_leaves": 0,
+      "global_rays": 408,
+      "psd_coefficients": 1054,
+      "tensor_coefficients": 30600,
+      "old_checked_leaves": 418,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_054",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel054/contract.json",
+      "contract_sha256": "1e250221f87839f590f013a8950ffa64cb81864831e6cda3673f336b563cd041",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 54,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "27/50",
+        "11/20"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-20419/100000",
+        "20419/100000"
+      ],
+      "leaves": 33,
+      "taylor_leaves": 33,
+      "baseline_leaves": 0,
+      "global_rays": 396,
+      "psd_coefficients": 1023,
+      "tensor_coefficients": 29000,
+      "old_checked_leaves": 383,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_055",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel055/contract.json",
+      "contract_sha256": "0abb585a18d11e7ea95c919de6d6662ab6006dbe116094ec69aee4d6e6d86422",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 55,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "11/20",
+        "14/25"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-2491/10000",
+        "12651/62500"
+      ],
+      "leaves": 31,
+      "taylor_leaves": 31,
+      "baseline_leaves": 0,
+      "global_rays": 372,
+      "psd_coefficients": 961,
+      "tensor_coefficients": 26800,
+      "old_checked_leaves": 363,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_056",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel056/contract.json",
+      "contract_sha256": "b051c0fa51f7d24ef7d7bf9d23d1c0f631b558c55b23020b9717614850e6b948",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 56,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "14/25",
+        "57/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-2491/10000",
+        "184289/1000000"
+      ],
+      "leaves": 22,
+      "taylor_leaves": 22,
+      "baseline_leaves": 0,
+      "global_rays": 264,
+      "psd_coefficients": 682,
+      "tensor_coefficients": 18000,
+      "old_checked_leaves": 203,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_057",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel057/contract.json",
+      "contract_sha256": "51ea5c154e5de8afb2251d84c8cf8ac62d00b79ad81eea6de1d82abc4eebab49",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 57,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "57/100",
+        "29/50"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-2491/10000",
+        "165319/1000000"
+      ],
+      "leaves": 15,
+      "taylor_leaves": 15,
+      "baseline_leaves": 0,
+      "global_rays": 180,
+      "psd_coefficients": 465,
+      "tensor_coefficients": 12800,
+      "old_checked_leaves": 132,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_058",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel058/contract.json",
+      "contract_sha256": "e5caacfa12d773d234e597c4c7516f53e241ea3e83c5f2e30c613179abe2f635",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 58,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "29/50",
+        "59/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-140571/500000",
+        "28989/1000000"
+      ],
+      "leaves": 5,
+      "taylor_leaves": 5,
+      "baseline_leaves": 0,
+      "global_rays": 60,
+      "psd_coefficients": 155,
+      "tensor_coefficients": 5000,
+      "old_checked_leaves": 34,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_059",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel059/contract.json",
+      "contract_sha256": "568609a22f509d70e1c50d1669f1b1d265d0c8b306fbea9e87f82b8487ce9aee",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 59,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "59/100",
+        "3/5"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-29401/100000",
+        "3313/500000"
+      ],
+      "leaves": 4,
+      "taylor_leaves": 4,
+      "baseline_leaves": 0,
+      "global_rays": 48,
+      "psd_coefficients": 124,
+      "tensor_coefficients": 4000,
+      "old_checked_leaves": 33,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_060",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel060/contract.json",
+      "contract_sha256": "5aa5f602591b4dee1ad84abfada7be69b8a8cd5acec595af0a06f6bf935849f3",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 60,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "3/5",
+        "61/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-29401/100000",
+        "-16429/250000"
+      ],
+      "leaves": 4,
+      "taylor_leaves": 4,
+      "baseline_leaves": 0,
+      "global_rays": 48,
+      "psd_coefficients": 124,
+      "tensor_coefficients": 4000,
+      "old_checked_leaves": 25,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_061",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel061/contract.json",
+      "contract_sha256": "04eafbd7d7731904b569e97c9bd2d39ecab82f7f563ff6c448ce2f1e7e6d3eb2",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 61,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "61/100",
+        "31/50"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-29401/100000",
+        "-7939/62500"
+      ],
+      "leaves": 3,
+      "taylor_leaves": 3,
+      "baseline_leaves": 0,
+      "global_rays": 36,
+      "psd_coefficients": 93,
+      "tensor_coefficients": 3000,
+      "old_checked_leaves": 16,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_062",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel062/contract.json",
+      "contract_sha256": "e36e938f96ca3619e1ae85b7db224947fdde700cb198b0d658c3f16c67cb940a",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 62,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "31/50",
+        "63/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-300693/1000000",
+        "-42953/250000"
+      ],
+      "leaves": 3,
+      "taylor_leaves": 3,
+      "baseline_leaves": 0,
+      "global_rays": 36,
+      "psd_coefficients": 93,
+      "tensor_coefficients": 3000,
+      "old_checked_leaves": 21,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_063",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel063/contract.json",
+      "contract_sha256": "8ac4175bd19981d6c956be24366f818c5a2ac7cc344b9bd864a51b7a0af3e5ee",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 63,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "63/100",
+        "16/25"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-311803/1000000",
+        "-40869/200000"
+      ],
+      "leaves": 3,
+      "taylor_leaves": 3,
+      "baseline_leaves": 0,
+      "global_rays": 36,
+      "psd_coefficients": 93,
+      "tensor_coefficients": 3000,
+      "old_checked_leaves": 18,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_064",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel064/contract.json",
+      "contract_sha256": "97eb41fcf425e0c66759c7d75367c479effacd6e7dea13111b3c6a0307539219",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 64,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "16/25",
+        "13/20"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "-325097/1000000",
+        "-234109/1000000"
+      ],
+      "leaves": 3,
+      "taylor_leaves": 3,
+      "baseline_leaves": 0,
+      "global_rays": 36,
+      "psd_coefficients": 93,
+      "tensor_coefficients": 3000,
+      "old_checked_leaves": 15,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S2_01_065",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S2_01/n5/B2/panel065/contract.json",
+      "contract_sha256": "bd38c60f25b86410965aa117e122fb434307c8ec27c85a514a06369946f88280",
+      "band": "B2",
+      "slab_family": "B2_S2_01",
+      "series": "S2",
+      "index": 65,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "13/20",
+        "33/50"
+      ],
+      "rho": [
+        "467/400",
+        "1182649/1000000"
+      ],
+      "beta": [
+        "-41141/125000",
+        "-282549/1000000"
+      ],
+      "leaves": 3,
+      "taylor_leaves": 3,
+      "baseline_leaves": 0,
+      "global_rays": 36,
+      "psd_coefficients": 93,
+      "tensor_coefficients": 1800,
+      "old_checked_leaves": 12,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S3_endpoint02_032",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v4/B2_S3_endpoint02/n5/B2/panel032/contract.json",
+      "contract_sha256": "6c91100271764e0631b3b5724f257ea41b6dd6306cc0ba1dfbf6e40725d7bb48",
+      "band": "B2",
+      "slab_family": "B2_S3_endpoint02",
+      "series": "S3",
+      "index": 32,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "8/25",
+        "33/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "1/5",
+        "8473/25000"
+      ],
+      "leaves": 7,
+      "taylor_leaves": 7,
+      "baseline_leaves": 0,
+      "global_rays": 84,
+      "psd_coefficients": 217,
+      "tensor_coefficients": 5600,
+      "old_checked_leaves": 358,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S3_endpoint02_033",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v4/B2_S3_endpoint02/n5/B2/panel033/contract.json",
+      "contract_sha256": "28dec9f575d08014651c61efd80cb3f07bdc13caf12c459da4040234492cc4f9",
+      "band": "B2",
+      "slab_family": "B2_S3_endpoint02",
+      "series": "S3",
+      "index": 33,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "33/100",
+        "17/50"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "1/5",
+        "8473/25000"
+      ],
+      "leaves": 7,
+      "taylor_leaves": 7,
+      "baseline_leaves": 0,
+      "global_rays": 84,
+      "psd_coefficients": 217,
+      "tensor_coefficients": 7000,
+      "old_checked_leaves": 672,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S3_endpoint02_034",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v4/B2_S3_endpoint02/n5/B2/panel034/contract.json",
+      "contract_sha256": "a9e2574fbb79e8d21d7bf6d5a9bc152ba6981878101c0dafd3eb7088233ba6d5",
+      "band": "B2",
+      "slab_family": "B2_S3_endpoint02",
+      "series": "S3",
+      "index": 34,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "17/50",
+        "7/20"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "1/5",
+        "8473/25000"
+      ],
+      "leaves": 7,
+      "taylor_leaves": 7,
+      "baseline_leaves": 0,
+      "global_rays": 84,
+      "psd_coefficients": 217,
+      "tensor_coefficients": 7000,
+      "old_checked_leaves": 731,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S3_01_035",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S3_01/n5/B2/panel035/contract.json",
+      "contract_sha256": "d12259417344e85ac1dc26d85127a98408e7b46b85a077769908f365d6d1e78e",
+      "band": "B2",
+      "slab_family": "B2_S3_01",
+      "series": "S3",
+      "index": 35,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "7/20",
+        "9/25"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "1/5",
+        "41501/125000"
+      ],
+      "leaves": 7,
+      "taylor_leaves": 7,
+      "baseline_leaves": 0,
+      "global_rays": 84,
+      "psd_coefficients": 217,
+      "tensor_coefficients": 7000,
+      "old_checked_leaves": 495,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S3_01_036",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S3_01/n5/B2/panel036/contract.json",
+      "contract_sha256": "c1603258e306220705f8b9edf28cd4c96f90fff021b06c40a41899bc1270cd85",
+      "band": "B2",
+      "slab_family": "B2_S3_01",
+      "series": "S3",
+      "index": 36,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "9/25",
+        "37/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "1/5",
+        "327343/1000000"
+      ],
+      "leaves": 6,
+      "taylor_leaves": 6,
+      "baseline_leaves": 0,
+      "global_rays": 72,
+      "psd_coefficients": 186,
+      "tensor_coefficients": 6000,
+      "old_checked_leaves": 477,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S3_01_037",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S3_01/n5/B2/panel037/contract.json",
+      "contract_sha256": "10e35cd4dc11b0220a4b5abdb88f392bcee60334382c911c4457ce1ca003313e",
+      "band": "B2",
+      "slab_family": "B2_S3_01",
+      "series": "S3",
+      "index": 37,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "37/100",
+        "19/50"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "1/5",
+        "162907/500000"
+      ],
+      "leaves": 6,
+      "taylor_leaves": 6,
+      "baseline_leaves": 0,
+      "global_rays": 72,
+      "psd_coefficients": 186,
+      "tensor_coefficients": 6000,
+      "old_checked_leaves": 505,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S3_01_038",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S3_01/n5/B2/panel038/contract.json",
+      "contract_sha256": "d4717ccadc6ed093b23426bdb8f920972f74e7242b4b5208da2328d343aeee5d",
+      "band": "B2",
+      "slab_family": "B2_S3_01",
+      "series": "S3",
+      "index": 38,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "19/50",
+        "39/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "1/5",
+        "315767/1000000"
+      ],
+      "leaves": 6,
+      "taylor_leaves": 6,
+      "baseline_leaves": 0,
+      "global_rays": 72,
+      "psd_coefficients": 186,
+      "tensor_coefficients": 6000,
+      "old_checked_leaves": 462,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S3_01_039",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S3_01/n5/B2/panel039/contract.json",
+      "contract_sha256": "5a5a6c344cfc1d2309b08f9237127901fd13ded1eea87b87fb224c989218f3c0",
+      "band": "B2",
+      "slab_family": "B2_S3_01",
+      "series": "S3",
+      "index": 39,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "39/100",
+        "2/5"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "1/5",
+        "30419/100000"
+      ],
+      "leaves": 6,
+      "taylor_leaves": 6,
+      "baseline_leaves": 0,
+      "global_rays": 72,
+      "psd_coefficients": 186,
+      "tensor_coefficients": 6000,
+      "old_checked_leaves": 319,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S3_01_040",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S3_01/n5/B2/panel040/contract.json",
+      "contract_sha256": "ed90d30ce21c73d8f9afaffccbee4aec1032efdcccceed26b9003a6406d577be",
+      "band": "B2",
+      "slab_family": "B2_S3_01",
+      "series": "S3",
+      "index": 40,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "2/5",
+        "41/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "1/5",
+        "30419/100000"
+      ],
+      "leaves": 7,
+      "taylor_leaves": 7,
+      "baseline_leaves": 0,
+      "global_rays": 84,
+      "psd_coefficients": 217,
+      "tensor_coefficients": 5600,
+      "old_checked_leaves": 285,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S3_01_041",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S3_01/n5/B2/panel041/contract.json",
+      "contract_sha256": "1f0da1add2d25962eebde05ed2cd5cfdb45f4bd9eb2ea0e403db00b2568d0579",
+      "band": "B2",
+      "slab_family": "B2_S3_01",
+      "series": "S3",
+      "index": 41,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "41/100",
+        "21/50"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "1/5",
+        "292613/1000000"
+      ],
+      "leaves": 7,
+      "taylor_leaves": 7,
+      "baseline_leaves": 0,
+      "global_rays": 84,
+      "psd_coefficients": 217,
+      "tensor_coefficients": 5600,
+      "old_checked_leaves": 274,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S3_01_042",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S3_01/n5/B2/panel042/contract.json",
+      "contract_sha256": "77a9fc38a03b304e4ec74a66dced33ce24c22b0cffd4973069f651b5684ad423",
+      "band": "B2",
+      "slab_family": "B2_S3_01",
+      "series": "S3",
+      "index": 42,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "21/50",
+        "43/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "1/5",
+        "292613/1000000"
+      ],
+      "leaves": 8,
+      "taylor_leaves": 8,
+      "baseline_leaves": 0,
+      "global_rays": 96,
+      "psd_coefficients": 248,
+      "tensor_coefficients": 6600,
+      "old_checked_leaves": 284,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S3_01_043",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S3_01/n5/B2/panel043/contract.json",
+      "contract_sha256": "e835b6a18a5639bc78d47c934c5628bd0f74301dcf4d9d66026484ccfa445c74",
+      "band": "B2",
+      "slab_family": "B2_S3_01",
+      "series": "S3",
+      "index": 43,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "43/100",
+        "11/25"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "1/5",
+        "281037/1000000"
+      ],
+      "leaves": 7,
+      "taylor_leaves": 7,
+      "baseline_leaves": 0,
+      "global_rays": 84,
+      "psd_coefficients": 217,
+      "tensor_coefficients": 5800,
+      "old_checked_leaves": 272,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S3_01_044",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S3_01/n5/B2/panel044/contract.json",
+      "contract_sha256": "5c90203b6f29321db6034375891f6a51e3ea728a79e54b77171031edc1e2aae2",
+      "band": "B2",
+      "slab_family": "B2_S3_01",
+      "series": "S3",
+      "index": 44,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "11/25",
+        "9/20"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "1/5",
+        "13473/50000"
+      ],
+      "leaves": 8,
+      "taylor_leaves": 8,
+      "baseline_leaves": 0,
+      "global_rays": 96,
+      "psd_coefficients": 248,
+      "tensor_coefficients": 7000,
+      "old_checked_leaves": 265,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S3_01_045",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S3_01/n5/B2/panel045/contract.json",
+      "contract_sha256": "31aa365415cad97e2bf06650739aa10107ba6bf71f063378907d5fa35c5e05a7",
+      "band": "B2",
+      "slab_family": "B2_S3_01",
+      "series": "S3",
+      "index": 45,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "9/20",
+        "23/50"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "1/5",
+        "13473/50000"
+      ],
+      "leaves": 11,
+      "taylor_leaves": 11,
+      "baseline_leaves": 0,
+      "global_rays": 132,
+      "psd_coefficients": 341,
+      "tensor_coefficients": 10000,
+      "old_checked_leaves": 246,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S3_01_046",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S3_01/n5/B2/panel046/contract.json",
+      "contract_sha256": "de2254d39652b136daae30c2268865ca177a08adebc376560ad67e47fccb9370",
+      "band": "B2",
+      "slab_family": "B2_S3_01",
+      "series": "S3",
+      "index": 46,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "23/50",
+        "47/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "1/5",
+        "64471/250000"
+      ],
+      "leaves": 15,
+      "taylor_leaves": 15,
+      "baseline_leaves": 0,
+      "global_rays": 180,
+      "psd_coefficients": 465,
+      "tensor_coefficients": 12000,
+      "old_checked_leaves": 190,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S3_01_047",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S3_01/n5/B2/panel047/contract.json",
+      "contract_sha256": "f7ff0782e3166e2246ad05f0ca672e02453415bf8be9a731cf2df61fc7375c12",
+      "band": "B2",
+      "slab_family": "B2_S3_01",
+      "series": "S3",
+      "index": 47,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "47/100",
+        "12/25"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "1/5",
+        "246307/1000000"
+      ],
+      "leaves": 14,
+      "taylor_leaves": 14,
+      "baseline_leaves": 0,
+      "global_rays": 168,
+      "psd_coefficients": 434,
+      "tensor_coefficients": 11200,
+      "old_checked_leaves": 164,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S3_01_048",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S3_01/n5/B2/panel048/contract.json",
+      "contract_sha256": "7c80f550fab9841b1d8e63357e1cb0a56a34e4d6bbd96f3efc5d01167e484f6f",
+      "band": "B2",
+      "slab_family": "B2_S3_01",
+      "series": "S3",
+      "index": 48,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "12/25",
+        "49/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "1/5",
+        "246307/1000000"
+      ],
+      "leaves": 14,
+      "taylor_leaves": 14,
+      "baseline_leaves": 0,
+      "global_rays": 168,
+      "psd_coefficients": 434,
+      "tensor_coefficients": 9000,
+      "old_checked_leaves": 90,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S3_01_049",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S3_01/n5/B2/panel049/contract.json",
+      "contract_sha256": "65af40764de056c58c1a0b2643bcd0acad3c21c83207f26fffb74f0dd5569e0a",
+      "band": "B2",
+      "slab_family": "B2_S3_01",
+      "series": "S3",
+      "index": 49,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "49/100",
+        "1/2"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "1/5",
+        "23473/100000"
+      ],
+      "leaves": 8,
+      "taylor_leaves": 8,
+      "baseline_leaves": 0,
+      "global_rays": 96,
+      "psd_coefficients": 248,
+      "tensor_coefficients": 4800,
+      "old_checked_leaves": 37,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S3_01_050",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S3_01/n5/B2/panel050/contract.json",
+      "contract_sha256": "93548b649943484cbabf6ff2cc7cd2517b92e8a31b1a2f66af98061527079b0f",
+      "band": "B2",
+      "slab_family": "B2_S3_01",
+      "series": "S3",
+      "index": 50,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "1/2",
+        "51/100"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "1/5",
+        "111577/500000"
+      ],
+      "leaves": 7,
+      "taylor_leaves": 7,
+      "baseline_leaves": 0,
+      "global_rays": 84,
+      "psd_coefficients": 217,
+      "tensor_coefficients": 4200,
+      "old_checked_leaves": 6,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    },
+    {
+      "status": "PASS_FRESH_COMPLETE_ORIGINAL_N5_ALL_TAYLOR_ROW",
+      "row_id": "B2_S3_01_051",
+      "contract_path": "work/cutoff5_20261020/root/count5_prepare_v3/B2_S3_01/n5/B2/panel051/contract.json",
+      "contract_sha256": "38676bf03d1a379d1a51bc38654ab592abc9fe381179e08db46a0645b28ed8b3",
+      "band": "B2",
+      "slab_family": "B2_S3_01",
+      "series": "S3",
+      "index": 51,
+      "n": 5,
+      "K": "0",
+      "p": [
+        "51/100",
+        "13/25"
+      ],
+      "rho": [
+        "467/400",
+        "237/200"
+      ],
+      "beta": [
+        "1/5",
+        "211577/1000000"
+      ],
+      "leaves": 6,
+      "taylor_leaves": 6,
+      "baseline_leaves": 0,
+      "global_rays": 72,
+      "psd_coefficients": 186,
+      "tensor_coefficients": 3600,
+      "old_checked_leaves": 6,
+      "mathematical_status": "Conditional positive closed-score implication under this original acquired row; original acquisition not replayed; no all-n5 claim."
+    }
+  ],
+  "source_sha256": {
+    "code/algebra.py": "f8c2fa3e36c6d142645745ff3dff70235114b39b8e723b21a4b3140c0400f3c4",
+    "code/gaussian_scalar.py": "725c82fc9a8bbd796229fc0baefedfb5798a0c7f2f955f97d8f57b74ea5a2c5b",
+    "code/selector.py": "254f9916a00e63c427f6b17d411ccb70b092550eb4573b7bbd172337b597e717",
+    "code/model_all_taylor.py": "6fa323578025c4d4d84c06700d2984b924a89ec55c09915533073a938e145b88",
+    "code/accept_b2_band.py": "3c04c3579bc35dfa2305d51afb2ff969773c76da65b2ffcec15c9a310fa05bed",
+    "code/native/finite_binomial_core.py": "939236711b080f9148ee3d3f7f6a0cd15b86cb24f3d2700f0e7127b2a345291f",
+    "code/native/quartic_global.py": "0760d772b6cf1858ed139a1fe179490cb1e523a5d685a37a25271a10b349aa35",
+    "code/native/quartic_sturm.py": "1f815ccb23692f78be98691a76a5fe0605f8995abdab5d9a3964f1625a4c2617",
+    "contracts/CENSUS_295.json": "33193caa1a214ac84f938990c61468f269fdc1fb02cf7ed1781922bc2ccd4812"
+  },
+  "selection_sha256": "b098e2eba5bf9caa78204ea08e4a8a0e54b92a920663d4a17cdea6931f55f010",
+  "mathematical_status": "Complete 104-contract n=5 B2 band (S0, S1, S2, S3) positive closed-score implication retaining all original contract hypotheses with verified contiguous source-domain joins; original acquisition not replayed; no all-295 n5 claim."
+}
